@@ -1,0 +1,116 @@
+<FTL>
+<!--
+<sectorDescription name="STANDARD_SPACE" unique="false">
+    <nameList>
+        <name>Federation Space</name>
+    </nameList>
+    <trackList>
+        <track>civilian</track>
+        <track>cosmos</track>
+        <track>milkyway</track>
+        <track>lostship</track>
+    </trackList>
+    <rarityList>
+
+        <blueprint name="human" rarity="1"/>
+        <blueprint name="medic" rarity="5"/>
+        <blueprint name="engineer" rarity="0"/>
+        <blueprint name="soldier" rarity="0"/>
+
+        <blueprint name="engi" rarity="1"/>
+        <blueprint name="separatist" rarity="0"/>
+        <blueprint name="defend" rarity="0"/>
+
+        <blueprint name="energy" rarity="3"/>
+        <blueprint name="monk" rarity="0"/>
+        <blueprint name="bomber" rarity="0"/>
+        <blueprint name="peace" rarity="0"/>
+
+        <blueprint name="rock" rarity="0"/>
+        <blueprint name="outcast" rarity="0"/>
+        <blueprint name="commando" rarity="0"/>
+        <blueprint name="crusader" rarity="0"/>
+
+        <blueprint name="mantis" rarity="5"/>
+        <blueprint name="freemantis" rarity="4"/>
+        <blueprint name="suzerain" rarity="0"/>
+
+        <blueprint name="slug" rarity="0"/>
+        <blueprint name="sabo" rarity="0"/>
+
+        <blueprint name="crystal" rarity="5"/>
+        <blueprint name="sslg" rarity="0"/>
+        <blueprint name="sentinel" rarity="0"/>
+
+        <blueprint name="orchid" rarity="3"/>
+        <blueprint name="vampweed" rarity="5"/>
+
+        <blueprint name="leech" rarity="0"/>
+
+        <blueprint name="anaerobic" rarity="0"/>
+        <blueprint name="welder" rarity="0"/>
+
+        <blueprint name="phantom" rarity="0"/>
+
+        <blueprint name="LASER_BURST_3" rarity="0"/>
+        <blueprint name="LASER_HEAVY_3" rarity="0"/>
+        <blueprint name="LASER_HULL_3" rarity="0"/>
+        <blueprint name="LASER_PARTICLE_2" rarity="0"/>
+        <blueprint name="LASER_PIERCE_2" rarity="0"/>
+        <blueprint name="LASER_FROST_2" rarity="0"/>
+        <blueprint name="MISSILES_4" rarity="0"/>
+        <blueprint name="MISSILES_BURST_2" rarity="0"/>
+        <blueprint name="BEAM_3" rarity="0"/>
+        <blueprint name="BEAM_4" rarity="0"/>
+        <blueprint name="BEAM_HULL_2" rarity="0"/>
+        <blueprint name="BEAM_LONG_2" rarity="0"/>
+        <blueprint name="ION_4" rarity="0"/>
+        <blueprint name="ION_INSTANT" rarity="0"/>
+        <blueprint name="ENERGY_3" rarity="0"/>
+        <blueprint name="FOCUS_3" rarity="0"/>
+        <blueprint name="SHOTGUN_3" rarity="0"/>
+        <blueprint name="SHOTGUN_INSTANT" rarity="0"/>
+        <blueprint name="BEAM_FIRE_INSTANT" rarity="0"/>
+
+
+        <blueprint name="COMBAT_2_LASER" rarity="0"/>
+        <blueprint name="GUARDIAN_2_MISSILE" rarity="0"/>
+        <blueprint name="DEFENSE_3" rarity="0"/>
+    </rarityList>
+    <startEvent>START_BEACON</startEvent>
+    <event name="DROPPOINT_SUPPLY_DEPOT" min="3" max="3"/>
+    <event name="SYLVAN_DROPPOINT" min="1" max="1"/>
+    <event name="CURA_PROPOSITION" min="1" max="1"/>
+    <event name="TRASH_MEET" min="1" max="1"/>
+    <event name="NEMESIS_DROPPOINT" min="1" max="1"/>
+    <event name="STORELIST_DROPPOINT" min="2" max="2"/>
+    <event name="STORE_HOSTILE_START" min="1" max="1"/>
+    <event name="ITEMS_DROPPOINT" min="2" max="3"/>
+    <event name="NEUTRAL_DROPPOINT" min="4" max="5"/>
+    <event name="DISTRESS_DROPPOINT" min="1" max="2"/>
+    <event name="QUEST_DROPPOINT" min="0" max="1"/>
+    <event name="HOSTILE_DROPPOINT" min="10" max="10"	/>
+</sectorDescription>
+-->
+
+<mod:findName type="sectorDescription" name="STANDARD_SPACE">
+	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_FREEMANTIS">
+	<mod-append:priorityEvent name="FREEMANTIS_BOMB_FLAKS" min="0" max="1" priority="7"/>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_FREEMANTIS_UNIQUE">
+	<mod-append:priorityEvent name="FREEMANTIS_BOMB_FLAKS" min="1" max="1" priority="3"/>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_MANTIS_UNIQUE">
+	<mod-append:priorityEvent name="MANTIS_BOMB_FLAK_TRANSPORT" min="1" max="1" priority="3"/>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_MANTIS_SECRET">
+	<mod-append:priorityEvent name="MANTIS_BOMB_FLAK_TRANSPORT" min="1" max="1" priority="3"/>
+</mod:findName>
+
+</FTL>

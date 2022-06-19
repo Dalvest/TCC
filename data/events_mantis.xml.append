@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FTL>
+
+<event name="BOMB_FLAK_TRANSPORT_DESTROYED">
+	<text>You've succesfully destroyed the transport. Unfortunately, none of the Bomb Flaks survived the battle. Disappointing, but at least you can still scrap the remains of the ship.</text>
+	<autoReward level="MED">standard</autoReward>
+</event>
+
+<event name="BOMB_FLAK_TRANSPORT_CAPTURE">
+	<text>No more life-signs detected on the transport. You and your crew open the cargo bay, and inside, you find the Bomb Flaks. A particularly large Bomb Flak catches your attention. This must be the Bomb Flak Mark IV they were talking about! You and your crew carry it back to your ship, and then scrap the exterior.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<weapon name="TC_BOMB_SHOTGUN_4"/>
+</event>
+
+<event name="MANTIS_BOMB_FLAK_TRANSPORT">
+	<text>You notice a Mantis Transport nearby, emitting a system-wide hail. "Selling Bomb Flaks! Mark I, Mark II, Mark III, and even new Mark IV! Great killing annoying systems on Federation ships!" Considering their message, it's unlikely they'll be willing to sell to you, but maybe you'll get lucky?</text>
+	<ship load="SHIP_MANTIS_BOMB_FLAK_TRANSPORT" hostile="false"/>
+	<choice>
+		<text>Ask if you can buy a Bomb Flak.</text>
+		<event load="MANTIS_BOMB_FLAK_TRANSPORT_OUTCOME"/>
+	</choice>
+	<choice req="mantis">
+		<text>(Hive Mantis) Contact them with your Mantis.</text>
+		<event>
+			<text>"Mantis on Federation ship? You wanting Bomb Flaks?" The Mantis chuckles. "Hive disapprove selling to Federation, but I willing. After all, scrap scrap!" Even with your Mantis crewmember, you're surprised they're willing to sell to you. You take a look at their catalogue.</text>
+			<choice>
+				<text>Buy a Bomb Flak Mark I.</text>
+				<event>
+					<text>"Thanks business, but not coming back. Wouldn't want make Hive angry." You hope your new weapon is worth it.</text>
+					<item_modify>
+						<item type="scrap" min="-58" max="-71"/>
+					</item_modify>
+					<weapon name="TC_BOMB_SHOTGUN_1"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Buy a Bomb Flak Mark II.</text>
+				<event>
+					<text>"Thanks business, but not coming back. Wouldn't want make Hive angry." You hope your new weapon is worth it.</text>
+					<item_modify>
+						<item type="scrap" min="-67" max="-82"/>
+					</item_modify>
+					<weapon name="TC_BOMB_SHOTGUN_2"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Buy a Bomb Flak Mark III.</text>
+				<event>
+					<text>"Thanks business, but not coming back. Wouldn't want make Hive angry." You hope your new weapon is worth it.</text>
+					<item_modify>
+						<item type="scrap" min="-90" max="-110"/>
+					</item_modify>
+					<weapon name="TC_BOMB_SHOTGUN_3"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Buy a Bomb Flak Mark IV.</text>
+				<event>
+					<text>"You want Bomb Flak Mark IV? Heh, I should expected. Thanks business, but not coming back. Wouldn't want make Hive angry." You've never seen a Bomb Flak IV before. You hope your purchase was worth it.</text>
+					<item_modify>
+						<item type="scrap" min="-108" max="-132"/>
+					</item_modify>
+					<weapon name="TC_BOMB_SHOTGUN_4"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Attack them.</text>
+				<event>
+					<text>Despite the Mantis' willingness to sell to you, you decide to attack them anyway. You power on your weapons, and the Mantis responds. "Attacking us because not handling price? Ha! And Federation saying we the bad ones! You the evil ones!"</text>
+					<ship hostile="true"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Nevermind.</text>
+				<event>
+					<text>"You not handling price? Hmph, what waste of time. Don't daring come back." The Mantis shuts off communications.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="LIST_CREW_SUZERAIN">
+		<text>(Hive Elite) Contact them with your Elite Mantis.</text>
+		<event>
+			<text>You have your Hive Elite contact the Mantis. "I not knowing why on Federation ship, but must be important! Of course you may buying Bomb Flaks! Even having discount!" You look at the discounted catalogue.</text>
+			<choice>
+				<text>Buy a Bomb Flak Mark I.</text>
+				<event>
+					<text>"Thanks business, and good hunting!" You hope your new weapon is worth it.</text>
+					<item_modify>
+						<item type="scrap" min="-45" max="-52"/>
+					</item_modify>
+					<weapon name="TC_BOMB_SHOTGUN_1"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Buy a Bomb Flak Mark II.</text>
+				<event>
+					<text>"Thanks business, and good hunting!" You hope your new weapon is worth it.</text>
+					<item_modify>
+						<item type="scrap" min="-52" max="-60"/>
+					</item_modify>
+					<weapon name="TC_BOMB_SHOTGUN_2"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Buy a Bomb Flak Mark III.</text>
+				<event>
+					<text>"Thanks business, and good hunting!" You hope your new weapon is worth it.</text>
+					<item_modify>
+						<item type="scrap" min="-70" max="-80"/>
+					</item_modify>
+					<weapon name="TC_BOMB_SHOTGUN_3"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Buy a Bomb Flak Mark IV.</text>
+				<event>
+					<text>"You want Bomb Flak Mark IV? Heh, I should expected. Thanks business, and good hunting!" You've never seen a Bomb Flak IV before. You hope your purchase was worth it.</text>
+					<item_modify>
+						<item type="scrap" min="-84" max="-96"/>
+					</item_modify>
+					<weapon name="TC_BOMB_SHOTGUN_4"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Attack them.</text>
+				<event>
+					<text>Despite the Mantis' eagerness to sell to you, you decide to attack them anyway. You power on your weapons, and the Mantis responds. "Why attacking? Is price too high? I lower it! I give you-" You turn off communications and prepare to engage.</text>
+					<ship hostile="true"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Nevermind.</text>
+				<event>
+					<text>"You not liking offerings? Don't worry, we having better Bomb Flaks next time!" You shut off communications.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Just attack them.</text>
+		<event>
+			<text>Even if this ship isn't killing anyone directly, which you somewhat doubt, they are still selling dangerous weapons to other Mantis, and thus are a threat. As you move in, the transport hails you. "You thinking you can beat us? Ha! Other Bomb Flak transport attacked before, they weak, and lost. We not like them, we not lose against you!"</text>
+			<ship hostile="true"/>
+			<choice>
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Ignore the transport.</text>
+		<event>
+			<text>You decide it's best not to mess with the transport,</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="MANTIS_BOMB_FLAK_TRANSPORT_ACCEPTED">
+	<text>"Federation wanting Bomb Flaks?" The Mantis chuckles. "Hive disapprove, but I willing. After all, scrap scrap! But do not expecting discount." You're surprised they're willing to sell to you, but then you look at the prices. These are outrageous!</text>
+	<choice>
+		<text>Buy a Bomb Flak Mark I.</text>
+		<event>
+			<text>"Thanks business, but not coming back. Wouldn't want make Hive angry." It's a hard price to swallow, but you hope your new weapon is worth it.</text>
+			<item_modify>
+				<item type="scrap" min="-78" max="-85"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_1"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Bomb Flak Mark II.</text>
+		<event>
+			<text>"Thanks business, but not coming back. Wouldn't want make Hive angry." It's a hard price to swallow, but you hope your new weapon is worth it.</text>
+			<item_modify>
+				<item type="scrap" min="-90" max="-98"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_2"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Bomb Flak Mark III.</text>
+		<event>
+			<text>"Thanks business, but not coming back. Wouldn't want make Hive angry." It's a hard price to swallow, but you hope your new weapon is worth it.</text>
+			<item_modify>
+				<item type="scrap" min="-120" max="-130"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_3"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Bomb Flak Mark IV.</text>
+		<event>
+			<text>"You want Bomb Flak Mark IV? Heh, I should expected. Thanks business, but not coming back. Wouldn't want make Hive angry." You've never seen a Bomb Flak IV before. You hope your purchase was worth it.</text>
+			<item_modify>
+				<item type="scrap" min="-144" max="-156"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_4"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Attack!</text>
+		<event>
+			<text>This is just insulting! If you knew they were going to try to scam you like this, you would've just attacked them in the first place. You power on your weapons, and the Mantis responds. "Attacking us because not handling price? Ha! And Federation saying we the bad ones! You the evil ones!"</text>
+			<ship hostile="true"/>
+			<choice>
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Nevermind.</text>
+		<event>
+			<text>"You not handling price? Hmph, what waste of time. Don't daring come back." The Mantis shuts off communications.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="MANTIS_BOMB_FLAK_TRANSPORT_DENIED">
+	<text>"Federation wanting Bomb Flaks?" The Mantis chuckles. "How about taking Bomb Flak to FACE! You never getting Bomb Flaks from us!" The transport turns on its weapons and attacks!</text>
+	<ship hostile="true"/>
+	<choice>
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+<eventList name="MANTIS_BOMB_FLAK_TRANSPORT_OUTCOME">
+	<event load="MANTIS_BOMB_FLAK_TRANSPORT_ACCEPTED"/>
+	<event load="MANTIS_BOMB_FLAK_TRANSPORT_DENIED"/>
+</eventList>
+
+</FTL>

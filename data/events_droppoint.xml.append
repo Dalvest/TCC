@@ -1,0 +1,52 @@
+<FTL>
+<event name="TRASH_CALL">
+    <text>You notice a strange signal coming from a location on your map. </text>
+    <quest event="TRASH_MEET"/>
+</event>
+
+<event name="TRASH_MEET" unique="true">
+    <text>This Sector has nothing but an odd Lanius ship, of a design you've never seen before. Their weapons are still hot but powering down. They don't seem to want to engage you, and they aren't responding to hails. It's debateable if they can even understand you anyway. </text>
+    <beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>A strange ship is here.</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
+    </beaconType>
+    <ship load="TC_TRASH_COMPACTOR1" hostile="false"/>
+    <choice hidden="true">
+        <text>Get closer to the enemy ship...</text>
+        <event>
+            <text>The strange Lanius ship has collected some scrap from what appears to have been a Mantis pirate ship. Sensor scans show they have advanced flak weaponry on-board. They don't appear to have noticed you or are otherwise ignoring you. </text>
+            <choice hidden="true">
+                <text>Approach.</text>
+                <event>
+                    <text>The ship continues to ignore your presence while powering its engines. Shortly after it jumps away, leaving an odd contraption behind. You wonder if they'll want it back... </text>
+                    <choice hidden="false">
+                        <text>Grab it.</text>
+                        <event>
+                            <text>It seems to be a custom made transmitter - it can send a transport pod using fuel and/or droneparts. A screen shows the live location to what is presumably the Lanius ship from earlier alongside a strange message - "COME AND GET IT". Perhaps if you lure them with some scrap they will return? </text>
+                            <!--<augment name="SCRAP_TRANSMITTER"/>-->
+                            <hiddenAug>SCRAP_TRANSMITTER</hiddenAug>
+                            <instantEscape/>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>You're not interested in actual garbage.</text>
+                        <event>
+                            <text>It could be a trap, it could be trash. Lanius usually don't leave prey behind, even when said prey is a seemingly harmless machine. You decide to leave. </text>
+                            <instantEscape/>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+            <choice hidden="true">
+                <text>No thanks, we don't have time for this. </text>
+                <event>
+                    <text>The ship returns the favor by also jumping away. At least they didn't attack. </text>
+                    <instantEscape/>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+</FTL>

@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--    
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          BLUEPRINTS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
+
+<blueprintList name="LIST_CREW_SCRAPPER">
+	<name>scrapper</name>
+	<name>scrapper_soldier</name>
+	<name>scrapper_heavy</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_speed</name>
+	<name>scrapper_scavenger</name>
+</blueprintList>
+
+<blueprintList name="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE">
+	<name>scrapper</name>
+	<name>scrapper_soldier</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_speed</name>
+</blueprintList>
+
+<blueprintList name="LIST_BOMB_SHOTGUNS">
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_1_ENEMY</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_4</name>
+</blueprintList>
+
+<mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
+	<mod-append:name>trash_eater</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
+	<mod-append:name>trash_eater</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_ALIENS">
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>scrapper</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>scrapper</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CHECKCREW_LANIUS">
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>scrapper</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_UNIQUE_CRAPBUCKET">
+	<mod-append:name>trash_eater</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
+	<mod-append:name>TC_SHOTGUN_BOMB</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_UNSTABLE</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_LEAD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_GOLD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_BATTERY</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_HELL</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
+	<mod-append:name>TC_RAPTORS_OWN</mod-append:name>
+	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_1_ENEMY</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_4</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
+	<mod-append:name>TC_SHOTGUN_BOMB</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_UNSTABLE</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_LEAD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_GOLD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_BATTERY</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_HELL</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
+	<mod-append:name>TC_RAPTORS_OWN</mod-append:name>
+	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_4</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
+	<mod-append:name>TC_SHOTGUN_BOMB</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_UNSTABLE</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_LEAD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_GOLD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_BATTERY</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_HELL</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
+	<mod-append:name>TC_RAPTORS_OWN</mod-append:name>
+	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_DRONES_ALL">
+	<mod-append:name>TC_DRONE_GOLD_COMBAT</mod-append:name>
+	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
+	<mod-append:name>TC_DRONE_GOLD_COMBAT</mod-append:name>
+	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="SHOP_MANTIS_ITEM_WEAPONS_BOMB">
+	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="GIFTLIST_MANTIS">
+	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_MANTIS">
+	<mod-append:name>TC_BOMB_SHOTGUN_1_ENEMY</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_SUZERAIN">
+	<mod-append:name>TC_BOMB_SHOTGUN_1_ENEMY</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_COALITION">
+	<mod-append:name>TC_BOMB_SHOTGUN_1_ENEMY</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="JUDGELIST_ROCK_SPECIAL_LOOT">
+	<mod-append:name>TC_BOMB_SHOTGUN_4</mod-append:name>
+</mod:findName>
+
+<!--    
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          ENEMY SHIP BLUEPRINTS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
+
+<shipBlueprint name="TC_TRASH_COMPACTOR1" layout="tc__trash_compactor1" img="tc_trash_compactor1">
+	<class>Trash Compactor</class>
+	<minSector>1</minSector>
+	<maxSector>1</maxSector>
+	<systemList>
+		<clonebay power="1" max="1" room="4" start="true" />
+		<doors power="1" max="1" room="6" start="true" />
+		<engines power="1" max="1" room="3" start="true" />
+		<pilot power="1" max="1" room="0" start="true" />
+		<sensors power="1" max="1" room="12" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<weapons power="3" max="3" room="11" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="2">
+		<weapon name="TC_SHOTGUN_BOMB" />
+		<weapon name="TC_BOMB_SHOTGUN_2" />
+	</weaponList>
+	<droneList drones="0" count="0" />
+	<health amount="5" />
+	<maxPower amount="30" />
+	<crew>
+		<scrapper room="3"/>
+		<scrapper room="11"/>
+        <scrapper room="5"/>
+		<scrapper room="6"/>
+    </crew>
+	<crewCount amount="1" max="1" class="trash_eater" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR2" layout="tc__trash_compactor2" img="tc_trash_compactor2">
+	<class>Trash Compactor</class>
+	<minSector>1</minSector>
+	<maxSector>1</maxSector>
+	<systemList>
+		<cloaking power="1" max="1" room="7" start="true" />
+		<clonebay power="1" max="2" room="4" start="true" />
+		<doors power="2" max="2" room="6" start="true" />
+		<engines power="1" max="2" room="3" start="true" />
+		<pilot power="1" max="1" room="0" start="true" />
+		<sensors power="2" max="2" room="12" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<weapons power="4" max="6" room="11" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="3">
+		<weapon name="TC_SHOTGUN_UNSTABLE" />
+		<weapon name="TC_SHOTGUN_BOMB" />
+	</weaponList>
+	<droneList drones="0" count="0" />
+	<health amount="7" />
+	<maxPower amount="31" />
+	<crew>
+		<scrapper_engineer room="3"/>
+		<scrapper_speed room="5"/>
+		<scrapper_soldier room="11"/>
+		<scrapper room="4"/>
+    </crew>
+	<crewCount amount="1" max="1" class="trash_eater" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR3" layout="tc__trash_compactor3" img="tc_trash_compactor3">
+	<class>Trash Compactor</class>
+	<minSector>1</minSector>
+	<maxSector>1</maxSector>
+	<systemList>
+		<cloaking power="1" max="1" room="7" start="true" />
+		<clonebay power="1" max="2" room="4" start="true" />
+		<doors power="2" max="2" room="6" start="true" />
+		<engines power="1" max="2" room="3" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<sensors power="2" max="2" room="12" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<teleporter power="1" max="1" room="9" start="true" />
+		<weapons power="3" max="7" room="11" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="TC_SHOTGUN_LEAD" />
+		<weapon name="TC_SHOTGUN_UNSTABLE" />
+		<weapon name="TC_BOMB_SHOTGUN_2" />
+	</weaponList>
+	<droneList drones="0" count="0" />
+	<health amount="9" />
+	<maxPower amount="31" />
+	<crewLimit>9</crewLimit>
+	<crew>
+		<scrapper_engineer room="3"/>
+		<scrapper_engineer room="5"/>
+		<scrapper_speed room="11"/>
+		<scrapper_speed room="9"/>
+		<scrapper_soldier room="9"/>
+        <scrapper_scavenger room="0"/>
+        <trash_eater room="9" name="Trash Eater"/>
+    </crew>
+	<crewCount amount="1" max="1" class="scrapper" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR4" layout="tc_trash_compactor4" img="tc_trash_compactor4">
+	<class>Trash Compactor</class>
+	<minSector>1</minSector>
+	<maxSector>1</maxSector>
+	<systemList>
+		<cloaking power="1" max="2" room="12" start="true" />
+		<clonebay power="1" max="2" room="4" start="true" />
+		<doors power="2" max="2" room="13" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<sensors power="2" max="2" room="11" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<teleporter power="1" max="1" room="7" start="true" />
+		<weapons power="3" max="12" room="8" start="true" />
+	</systemList>
+	<weaponSlots>6</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="6">
+		<weapon name="TC_SHOTGUN_LEAD" />
+		<weapon name="TC_SHOTGUN_GOLD" />
+		<weapon name="TC_BOMB_SHOTGUN_3" />
+	</weaponList>
+	<droneList drones="0" count="0" />
+	<health amount="11" />
+	<maxPower amount="60" />
+	<crewLimit>12</crewLimit>
+	<crew>
+		<scrapper_heavy room="12"/>
+		<scrapper_speed room="13"/>
+		<scrapper_soldier room="5"/>
+		<scrapper_soldier room="8"/>
+	
+		<scrapper_engineer room="3"/>
+		<scrapper_heavy room="7"/>
+		<scrapper_soldier room="7"/>
+		
+		<scrapper_scavenger room="7"/>
+		<scrapper_engineer room="12"/>
+       
+        <trash_eater room="7" name="Trash Eater"/>
+    </crew>
+	<crewCount amount="1" max="1" class="scrapper_scavenger" />
+	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR5" layout="tc_trash_compactor5" img="tc_trash_compactor5">
+	<class>Trash Compactor</class>
+	<minSector>1</minSector>
+	<maxSector>1</maxSector>
+	<systemList>
+		<cloaking power="1" max="2" room="12" start="true" />
+		<clonebay power="1" max="2" room="4" start="true" />
+		<doors power="3" max="3" room="13" start="true" />
+		<drones power="2" max="2" room="10" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<sensors power="3" max="3" room="11" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<teleporter power="2" max="2" room="7" start="true" />
+		<weapons power="7" max="10" room="8" start="true" />
+	</systemList>
+	<weaponSlots>6</weaponSlots>
+	<droneSlots>1</droneSlots>
+	<weaponList missiles="0" count="6">
+		<weapon name="TC_SHOTGUN_BOMB" />
+		<weapon name="TC_SHOTGUN_UNSTABLE" />
+		<weapon name="TC_SHOTGUN_LEAD" />
+		<weapon name="TC_SHOTGUN_GOLD" />
+	</weaponList>
+	<droneList drones="999" count="1">
+		<drone name="TC_COMBAT_UNSTABLE" />
+	</droneList>
+	<health amount="13" />
+	<maxPower amount="60" />
+	<crewLimit>14</crewLimit>
+	<crew>
+		<scrapper_soldier room="12"/>
+		<scrapper_speed room="13"/>
+		<scrapper_speed room="11"/>
+		<scrapper_speed room="10"/>
+		<scrapper_engineer room="10"/>
+	
+		<scrapper_soldier room="7"/>
+		<scrapper_heavy room="8"/>
+		<scrapper_engineer room="3"/>
+		<scrapper_engineer room="5"/>
+       
+        <trash_eater room="7" name="Trash Eater"/>
+		<scrapper_scavenger room="7"/>
+    </crew>
+	<crewCount amount="1" max="1" class="scrapper_scavenger" />
+	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR6" layout="tc_trash_compactor6" img="tc_trash_compactor6">
+	<class>Trash Compactor</class>
+	<minSector>1</minSector>
+	<maxSector>1</maxSector>
+	<systemList>
+		<cloaking power="1" max="3" room="12" start="true" />
+		<clonebay power="1" max="3" room="4" start="true" />
+		<doors power="3" max="3" room="13" start="true" />
+		<drones power="3" max="3" room="10" start="true" />
+		<engines power="1" max="4" room="3" start="true" />
+		<pilot power="3" max="3" room="0" start="true" />
+		<sensors power="3" max="3" room="11" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<teleporter power="3" max="3" room="7" start="true" />
+		<weapons power="16" max="16" room="8" start="true" />
+	</systemList>
+	<weaponSlots>8</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="8">
+		<weapon name="TC_BOMB_SHOTGUN_4" />
+		<weapon name="TC_SHOTGUN_BOMB" />
+		<weapon name="TC_SHOTGUN_GOLD" />
+		<weapon name="TC_SHOTGUN_UNSTABLE" />
+	</weaponList>
+	<droneList drones="999" count="2">
+		<drone name="TC_COMBAT_UNSTABLE" />
+		<drone name="TC_COMBAT_GOLD" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="60" />
+	<crewLimit>16</crewLimit>
+	<crew>
+		<scrapper_scavenger room="12"/>
+		<scrapper_scavenger room="10"/>
+		<scrapper_scavenger room="10"/>
+	
+		<scrapper_scavenger room="7"/>
+		<scrapper_scavenger room="8"/>
+		<scrapper_scavenger room="3"/>
+		<scrapper_scavenger room="5"/>
+		
+		<scrapper_scavenger room="7"/>
+		<scrapper_scavenger room="5"/>
+		<scrapper_scavenger room="6"/>
+		<scrapper_scavenger room="1"/>
+       
+        <trash_eater room="7" name="Trash Eater"/>
+		<scrapper_scavenger room="7"/>
+    </crew>
+	<crewCount amount="1" max="1" class="scrapper_scavenger" />
+	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_MINER" layout="tc_trash_miner" img="tc_trash_miner">
+	<class>Trash Miner</class>
+	<minSector>1</minSector>
+	<maxSector>1</maxSector>
+	<systemList>
+		<artillery power="4" max="4" room="10" start="true" weapon="ARTILLERY_FLAK" />
+		<battery power="1" max="1" room="1" start="true" />
+		<cloaking power="4" max="4" room="16" start="true" />
+		<clonebay power="3" max="3" room="15" start="true" />
+		<doors power="2" max="3" room="3" start="true" />
+		<engines power="3" max="5" room="11" start="true" />
+		<oxygen power="1" max="2" room="14" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<teleporter power="2" max="3" room="12" start="true" />
+		<weapons power="7" max="8" room="5" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="TC_LASER_MARKSMAN" />
+		<weapon name="TC_RAPTORS_OWN" />
+		<weapon name="TC_BOMB_SHOTGUN_2" />
+	</weaponList>
+	<droneList drones="0" count="0" />
+	<health amount="11" />
+	<maxPower amount="30" />
+	<crew>
+            <zoltan_peacekeeper room="5" name="RAPTOR" />
+            <engi room="0" name="TRACKER" />
+            <human room="11" name="Cheese" />
+            <mantis_free room="12" name="Lancer" />
+	</crew>
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>

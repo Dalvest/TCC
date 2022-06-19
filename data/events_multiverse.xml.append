@@ -1,0 +1,980 @@
+<FTL>
+	
+	
+	<event name="SUMMON_TC">
+		<text>Contact the Trash Compactor? (WARNING - HIGH RISK, HIGH REWARD)</text>
+		<choice req="TC_DEAD" lvl="0" max_group="3" hidden="false" blue="false">
+			<text>Yes.</text>
+			<event>
+			<text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location. </text>
+				<item_modify>
+					<item type="scrap" min="-10" max="-10"/>
+					<item type="fuel" min="-1" max="-1"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC1"/>
+			</event>
+		</choice>
+		<choice req="TC_DEAD" lvl="1" max_group="3" hidden="false" blue="false">
+			<text>Yes.</text>
+			<event>
+				<text>You use some fuel and a long range transmission missile as well as your scrap. Shortly after, your map recieves coordinates of a ship's location - most likely the Scrappers from earlier. What do they want from you? </text>
+				<item_modify>
+					<item type="scrap" min="-25" max="-25"/>
+					<item type="fuel" min="-1" max="-1"/>
+					<item type="missiles" min="-1" max="-1"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC2"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="2" max_group="3" hidden="false" blue="false">
+			<text>Yes.</text>
+			<event>
+			<text>You send out a heavy cargo drone with the scrap. There must be more of these Scrappers, because you received another signal! Prey for you to hunt... </text>
+				<item_modify>
+					<item type="scrap" min="-30" max="-30"/>
+					<item type="drones" min="-2" max="-2"/>
+					<item type="fuel" min="-1" max="-1"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC3"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="3" max_group="3" hidden="false" blue="false">
+			<text>Yes.</text>
+			<event>
+			<text>You teleport as much as scrap as you can using the transmitter. The same song and dance as before - signal, Scrappers, murder. Fun. </text>
+				<item_modify>
+					<item type="scrap" min="-45" max="-45"/>
+					<item type="fuel" min="-3" max="-3"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC4"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="4" max_group="3" hidden="false" blue="false">
+			<text>Yes.</text>
+			<event>
+			<text>You manage to create and fully fuel a scrap transport pod, attracting the attention of a heavily armed, highly dangerous Scrapper ship. </text>
+				<item_modify>
+					<item type="scrap" min="-65" max="-65"/>
+					<item type="fuel" min="-3" max="-3"/>
+					<item type="missiles" min="-2" max="-2"/>
+					<item type="drones" min="-2" max="-2"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC5"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="5" max_group="3" hidden="false" blue="false">
+			<text>Yes.</text>
+			<event>
+			<text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location - most likely the Lanius from earlier. </text>
+				<item_modify>
+					<item type="scrap" min="-95" max="-95"/>
+					<item type="fuel" min="-7" max="-7"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC6"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="6" max_group="3" hidden="false" blue="false">
+			<text>Yes.</text>
+			<event>
+			<text>You send out a signal displaying the scrap using the transmitter. But nobody came.</text>
+				<choice>
+					<text>Continue...</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Nevermind.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+	</event>
+	
+	<FTL> <!--DESTROYED-->
+	<event name="TC1_DESTROY">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_BOMB"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC1_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC1_CREW">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_BOMB"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC1_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC2_DESTROY">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_UNSTABLE"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC2_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC2_CREW">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_UNSTABLE"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC2_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC3_DESTROY">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_LEAD"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC3_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC3_CREW">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_LEAD"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC3_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC4_DESTROY">
+		<text>The Lanius ship is now torn to shreds and the Kestrel Miner hails you. The protogen from earlier seems extremely excited at the prospect of being helped and has their ship mechanic beam you some ship schematics and extra scrap as thanks.</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_RAPTORS_OWN"/>
+		<unlockCustomShip>PLAYER_SHIP_TRASH_MINER</unlockCustomShip>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC4_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC4_CREW">
+		<text>The Lanius ship is now silent and the Kestrel Miner hails you. The protogen from earlier seems extremely excited at the prospect of being helped and has their ship mechanic beam you some ship schematics and extra scrap as thanks.</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_RAPTORS_OWN"/>
+		<unlockCustomShip>PLAYER_SHIP_TRASH_MINER</unlockCustomShip>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC4_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TCM_DESTROY">
+		<text>The Kestrel Miner is now in pieces. Whatever the crew's motivations or allegiances are, they're stardust now. The Trash Compactor hails you and, surprsingly enough, gives you a reward of your choice. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC4_DEAD</hiddenAug>
+		<choice>
+		<text>Request a weapon</text>
+		<event>
+			<text>You got a weapon - and it's made out of gold!</text>
+			<weapon name="TC_SHOTGUN_GOLD"/>
+			<event/>
+		</event>
+		</choice>
+		<choice>
+		<text>Request a drone</text>
+		<event>
+			<text>You got a drone - and it's made out of gold!</text>
+			<drone name="TC_COMBAT_GOLD"/>
+			<event/>
+		</event>
+		</choice>
+		<choice>
+		<text>Request a crewmember</text>
+		<event>
+			<text>The Trash Eater themselves beam onto your ship (although they also manage to consume some of your savings)!</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50"/>
+			</item_modify>
+			<crewMember amount="1" class="trash_eater" name="Trash Eater" all_skills="2"/>
+		</event>
+		</choice>
+	</event>
+	
+	<event name="TCM_CREW">
+		<text>The Kestrel Miner is now silent, and so is the abomination they carried on-board. Whatever the crew's motivations or allegiances are, they're stardust now. The Trash Compactor hails you and, surprsingly enough, gives you a reward of your choice. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC4_DEAD</hiddenAug>
+		<choice>
+		<text>Request a weapon</text>
+		<event>
+			<text>You got a weapon - and it's made out of gold!</text>
+			<weapon name="TC_SHOTGUN_GOLD"/>
+			<event/>
+		</event>
+		</choice>
+		<choice>
+		<text>You got a drone - and it's made out of gold!</text>
+		<event>
+			<text>You got a drone!</text>
+			<drone name="TC_COMBAT_GOLD"/>
+			<event/>
+		</event>
+		</choice>
+		<choice>
+		<text>Request a crewmember!</text>
+		<event>
+			<text>The Trash Eater themselves beam onto your ship (although they also manage to consume some of your savings)!</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50"/>
+			</item_modify>
+			<crewMember amount="1" class="trash_eater" name="Trash Eater" all_skills="2"/>
+		</event>
+		</choice>
+	</event>
+	
+	<event name="TC5_DESTROY">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_BATTERY"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC5_DEAD</hiddenAug>
+	</event>
+	
+	<event  name="TC5_CREW">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_BATTERY"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC5_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC6_DESTROY">
+		<text>The Trash Compactor has been laid to rest amongst the stars; the wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<augment name="COMPACTOR"/>
+		<unlockCustomShip>PLAYER_SHIP_SCRAPPER</unlockCustomShip>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC6_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC6_CREW">
+		<text>The Trash Compactor is now empty, forever. The wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<augment name="COMPACTOR"/>
+		<unlockCustomShip>PLAYER_SHIP_SCRAPPER</unlockCustomShip>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC6_DEAD</hiddenAug>
+	</event>
+
+	</FTL>
+	
+	<FTL> <!--GET FLAKS-->
+	<event name="FLAK_FORGE_VANILLA">
+	<text>What Flak weapon do you want to print?</text>
+			
+	<choice hidden="false" blue="false">
+		<text>Flak I</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			<weapon name="SHOTGUN_1"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="false">
+		<text>Flak II</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-65" max="-65"/>
+				</item_modify>
+			<weapon name="SHOTGUN_2"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="false">
+		<text>Flak III</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+				</item_modify>
+			<weapon name="SHOTGUN_3"/>
+		</event>
+	</choice>
+								
+	<choice hidden="false" blue="false">
+		<text>Flak IV</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<weapon name="SHOTGUN_4"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="true">
+		<text>Page 2</text>
+		<event load="FLAK_FORGE_VANILLA_2"/>
+	</choice>
+	</event>
+	
+	<event name="FLAK_FORGE_VANILLA_2">
+	<text>Choose flak:</text>
+			
+	<choice hidden="false" blue="false">
+		<text>Chain Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-75" max="-75"/>
+				</item_modify>
+			<weapon name="SHOTGUN_CHAIN"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="false">
+		<text>Charge Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<weapon name="SHOTGUN_CHARGE"/>
+		</event>
+	</choice>
+		
+	<choice hidden="false" blue="false">
+		<text>Pre-Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<weapon name="SHOTGUN_INSTANT"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="false">
+		<text>Fire Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-90" max="-90"/>
+				</item_modify>
+			<weapon name="SHOTGUN_FIRE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Page 3</text>
+		<event load="FLAK_FORGE_VANILLA_3"/>
+	</choice>
+	</event>
+	
+	<event name="FLAK_FORGE_VANILLA_3">
+	<text>Choose flak:</text>
+									
+	<choice hidden="false" blue="false">
+		<text>Ion Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-90" max="-90"/>
+				</item_modify>
+			<weapon name="SHOTGUN_ION"/>
+		</event>
+	</choice>
+						
+	<choice hidden="false" blue="false">
+		<text>Toxic Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-90" max="-90"/>
+				</item_modify>
+			<weapon name="SHOTGUN_TOXIC"/>
+		</event>
+	</choice>
+		
+	<choice hidden="false" blue="false">
+		<text>Toggle Fire Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-125" max="-125"/>
+				</item_modify>
+			<weapon name="SHOTGUN_TOGGLE_FIRE"/>
+		</event>
+	</choice>
+		
+	<choice hidden="false" blue="false">
+		<text>Toggle Ion Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-125" max="-125"/>
+				</item_modify>
+			<weapon name="SHOTGUN_TOGGLE_ION"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Page 4</text>
+		<event load="FLAK_FORGE_VANILLA_4"/>
+	</choice>
+	</event>
+	
+	<event name="FLAK_FORGE_VANILLA_4">
+	<text>Choose flak:</text>
+							
+	<choice hidden="false" blue="false">
+		<text>Toggle Toxic Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-125" max="-125"/>
+				</item_modify>
+			<weapon name="SHOTGUN_TOGGLE_TOXIC"/>
+		</event>
+	</choice>
+				
+	<choice hidden="false" blue="false">
+		<text>Gold Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-150" max="-150"/>
+				</item_modify>
+			<weapon name="SHOTGUN_GOLD"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="false">
+		<text>Gold III Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-200" max="-200"/>
+				</item_modify>
+			<weapon name="SHOTGUN_GOLD_3"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="false">
+		<text>Steel Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<weapon name="SHOTGUN_STEEL"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Page 5</text>
+	<event load="FLAK_FORGE_VANILLA_5"/>
+	</choice>
+	</event>
+		
+	<event name="FLAK_FORGE_VANILLA_5">
+	<text>Choose flak:</text>
+			
+	<choice hidden="false" blue="false">
+		<text>Crystal Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<weapon name="CRYSTAL_SHOTGUN"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="false">
+		<text>Elite Crystal Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-125" max="-125"/>
+				</item_modify>
+			<weapon name="CRYSTAL_SHOTGUN_RED"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	</event>
+	
+	<event name="FLAK_FORGE_CUSTOM">
+	<text>Choose flak:</text>
+
+	<choice hidden="false" blue="false">
+		<text>Explosive</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_BOMB"/>
+		</event>
+	</choice>
+		
+	<choice hidden="false" blue="false">
+		<text>Unstable</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_UNSTABLE"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="false">
+		<text>Lead</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-125" max="-125"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_LEAD"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Gold</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-150" max="-150"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_GOLD"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="true">
+		<text>Page 2</text>
+		<event load="FLAK_FORGE_CUSTOM_2"/>
+	</choice>
+	</event>
+	
+	<event name="FLAK_FORGE_CUSTOM_2">
+	<text>Choose flak:</text>
+	
+	<choice hidden="false" blue="false">
+		<text>Battery</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-75" max="-75"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_BATTERY"/>
+		</event>
+	</choice>
+		
+	<choice hidden="false" blue="true">
+		<text>OMEGA</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-400" max="-400"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_OMEGA"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="true">
+		<text>Flakking Hell</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_HELL"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	</event>
+	</FTL>
+	
+	<FTL>
+
+<event name="FLAK_FORGE_BOMB">
+	<text>What Bomb Flak weapon do you want to print?</text>
+			
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak I</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_1"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak II</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-75" max="-75"/>
+				</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_2"/>
+		</event>
+	</choice>
+			
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak III</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-90" max="-90"/>
+				</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_3"/>
+		</event>
+	</choice>
+								
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak IV</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-110" max="-110"/>
+				</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_4"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+</event>
+
+<event name="FLAK_FORGE_DRONE">
+	<text>Choose flak:</text>
+	
+	<choice hidden="false" blue="false">
+		<text>AMP</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-40" max="-40"/>
+				</item_modify>
+			<drone name="FLAK_1_AMP2"/>
+		</event>
+	</choice>
+		
+	<choice hidden="false" blue="true">
+		<text>Gold</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<drone name="TC_COMBAT_GOLD"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="true">
+		<text>Unstable</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+				</item_modify>
+			<drone name="TC_COMBAT_UNSTABLE"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	</event>
+	</FTL>
+	
+	<FTL>
+	<eventList name="SCRAP_COMPACT">
+		<event load="SCRAP_COMPACT_FAIL"/>
+		<event load="SCRAP_COMPACT_FAIL"/>
+		<event load="SCRAP_COMPACT_SUCCESS"/>
+		<event load="SCRAP_COMPACT_SUCCESS_BETTER"/>
+		<event load="SCRAP_COMPACT_SUCCESS_BETTER2"/>
+	</eventList>
+	
+	<event name="SCRAP_COMPACT_FAIL">
+	<text>It failed</text>
+	<item_modify>
+		<item type="scrap" min="30" max="40"/>
+	</item_modify>
+	</event>
+	
+	<event name="SCRAP_COMPACT_SUCCESS">
+	<text>A flak weapon has been created</text>
+	<weapon name="SHOTGUN_2"/>
+	</event>
+	
+	<event name="SCRAP_COMPACT_SUCCESS_BETTER">
+	<text>A new, strange flak weapon has been created</text>
+	<weapon name="TC_SHOTGUN_HELL"/>
+	</event>
+	
+	<event name="SCRAP_COMPACT_SUCCESS_BETTER2">
+	<text>A new, strange flak weapon has been created</text>
+	<weapon name="TC_SCRAPFLAK"/>
+	</event>
+	</FTL>
+	
+<event name="ENCOUNTER_TC1">
+<text>You've arrived at the coordinates, only to be met with the same Lanius ship from before. This looks like a trap, but they aren't attacking you... yet.</text>
+<choice req="TC1_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+	<text>Attempt to hail them.</text>
+	<event>
+		<text>The strange lanius ship descends in your view, scoops up the scrap you sent them and attacks!</text>
+		<ship load="TC_TRASH_COMPACTOR1" hostile="true"/>
+		<choice hidden="true">
+			<text>Prepare for battle!</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+	</event>
+</choice>
+<choice req="TC1_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+	<text>Weird deja vu, but you feel like you've done this all before.</text>
+	<event load="OPTION_INVALID"/>
+</choice>
+<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+	<text>Attempt to sneak away from the Lanius.</text>
+	<event>
+		<text>You manage to leave succesfully, with the opportunity of having done something on-board.</text>
+		<choice>
+			<text>Do something onboard the ship.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+		<choice>
+			<text>Do nothing.</text>
+			<event/>
+		</choice>
+	</event>
+</choice>
+</event>
+
+<event name="ENCOUNTER_TC2">
+<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+<choice req="TC2_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+	<text>Attack.</text>
+	<event>
+	<text>The strange lanius ship descends in your view and powers up weapons. This time they have some welders on board!</text>
+		<ship load="TC_TRASH_COMPACTOR2" hostile="true"/>
+		<choice hidden="true">
+			<text>Prepare for battle.</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+	</event>
+</choice>
+<choice req="TC2_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+	<text>Weird deja vu, but you feel like you've done this all before.</text>
+	<event load="OPTION_INVALID"/>
+</choice>
+<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+	<text>Nope. Nope. Nope. Nope.</text>
+	<event>
+		<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+		<choice>
+			<text>Do something onboard the ship.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+		<choice>
+			<text>Do nothing.</text>
+			<event/>
+		</choice>
+	</event>
+</choice>
+</event>
+
+<event name="ENCOUNTER_TC3">
+	<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+	<choice req="TC3_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+		<text>Attack.</text>
+		<event>
+			<text>The Trash Compactor was waiting for you, seemingly having anticipated your movements - they seem to have gained the Lanius king's support!</text>
+			<ship load="TC_TRASH_COMPACTOR3" hostile="true"/>
+			<choice hidden="true">
+				<text>Prepare for battle.</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC3_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+		<text>Weird deja vu, but you feel like you've done this all before.</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+		<text>Nope. Nope. Nope. Nope.</text>
+		<event>
+			<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+<event name="ENCOUNTER_TC4">
+	<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+	<choice req="TC4_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+		<text>Try to intervene.</text>
+		<event>
+			<text>You receive a transmission from a mining ship - a green colored Kestrel. A protogen appears on the communications console. "I'm TRACKER, Federation pilot. Pleased to meet you and everything. These bast- I mean, rude fellows are trying to kill us, and I don't know how much longer we'll hold. Help."</text>
+			<choice>
+				<text>Help TRACKER!</text>
+				<event>
+					<text>The strange lanius ship descends in your view once again (how does it keep coming back?) and prepares to end you once and for all. They have recieved support from another lanius swarm, and are not joking around anymore!</text>
+					<ship load="TC_TRASH_COMPACTOR4" hostile="true"/>
+					<choice hidden="true">
+						<text>Attack!</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Help the Lanius!</text>
+				<event>
+					<text>"Hey, what have WE done to deserve this? Ah, right, I remember now. So be it." As the protogen closes the communication and powers up all of his ship's weapons, you prepare to fight them.</text>
+					<ship load="TC_TRASH_MINER" hostile="true"/>
+					<choice hidden="true">
+						<text>Attack!S</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC4_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+		<text>Weird deja vu, but you feel like you've done this all before.</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+		<text>Nope. Nope. Nope. Nope.</text>
+		<event>
+			<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+	
+<!--<event name="ENCOUNTER_TC4">
+	<text>You receive a transmission from a mining ship - a green colored Kestrel. A protogen appears on the communications console. "I'm TRACKER, Federation pilot. Pleased to meet you and everything. These bast- I mean, rude fellows are trying to kill us, and I don't know how much longer we'll hold. Help."</text>
+	<choice>
+		<text>Help TRACKER!</text>
+		<event>
+			<text>The strange lanius ship descends in your view once again (how does it keep coming back?) and prepares to end you once and for all. They have recieved support from another lanius swarm, and are not joking around anymore!</text>
+			<ship load="TC_TRASH_COMPACTOR4" hostile="true"/>
+			<choice hidden="true">
+				<text>Attack!</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Help the Lanius!</text>
+		<event>
+			<text>"Hey, what have WE done to deserve this? Ah, right, I remember now. So be it." As the protogen closes the communication and powers up all of his ship's weapons, you prepare to fight them.</text>
+			<ship load="TC_TRASH_MINER" hostile="true"/>
+			<choice hidden="true">
+				<text>Attack!S</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+</event>-->
+
+<event name="ENCOUNTER_TC5">
+	<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+	<choice req="TC5_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+		<text>Attack.</text>
+		<event>
+			<text>Yep, it's back again. They have the Anointed on-board now. Let's end this already!</text>
+			<ship load="TC_TRASH_COMPACTOR5" hostile="true"/>
+			<choice hidden="true">
+				<text>Attack!</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC5_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+		<text>Weird deja vu, but you feel like you've done this all before.</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+		<text>Nope. Nope. Nope. Nope.</text>
+		<event>
+			<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+
+	<event name="ENCOUNTER_TC6">
+		<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+		<choice req="TC6_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+			<text>Attack.</text>
+			<event>
+				<text>The Universe 0 version of the Lanius ship is here. You will not survive. Good luck.</text>
+				<ship load="TC_TRASH_COMPACTOR6" hostile="true"/>
+				<choice hidden="true">
+					<text>Attack!</text>
+					<event load="COMBAT_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="TC6_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+			<text>Weird deja vu, but you feel like you've done this all before.</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+			<text>Nope. Nope. Nope. Nope.</text>
+			<event>
+				<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+				<choice>
+					<text>Do something onboard the ship.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+				<choice>
+					<text>Do nothing.</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+		</event>
+
+<!--<event name="ENCOUNTER_IMPOSTER">
+	<text>You are an idiot.</text>
+	<ship load="SUS_DEATH" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>-->
+
+</FTL>
