@@ -65,7 +65,7 @@
 		<choice  req="TC_DEAD" lvl="5" max_group="3" hidden="false" blue="false">
 			<text>Yes.</text>
 			<event>
-			<text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location - most likely the Lanius from earlier. </text>
+			<text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location - most likely the Scrapper ship from earlier. </text>
 				<item_modify>
 					<item type="scrap" min="-95" max="-95"/>
 					<item type="fuel" min="-7" max="-7"/>
