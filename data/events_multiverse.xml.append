@@ -91,7 +91,7 @@
 	
 	<FTL> <!--DESTROYED-->
 	<event name="TC1_DESTROY">
-		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
+		<text> Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else... </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_BOMB"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -99,7 +99,7 @@
 	</event>
 	
 	<event name="TC1_CREW">
-		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
+		<text>Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else... </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_BOMB"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -123,7 +123,7 @@
 	</event>
 	
 	<event name="TC3_DESTROY">
-		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
+		<text>This time, they've alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_LEAD"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -131,7 +131,7 @@
 	</event>
 	
 	<event name="TC3_CREW">
-		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
+		<text>This time, they've alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_LEAD"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -139,18 +139,17 @@
 	</event>
 	
 	<event name="TC4_DESTROY">
-		<text>The Lanius ship is now torn to shreds and the Kestrel Miner hails you. The protogen from earlier seems extremely excited at the prospect of being helped and has their ship mechanic beam you some ship schematics and extra scrap as thanks.</text>
+		<text>The Lanius ship is now torn to shreds and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!". You also manage to scoop up some scrap from the enemy ship.</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_RAPTORS_OWN"/>
+		<weapon name="TC_SCRAPFLAK"/>
 		<unlockCustomShip>PLAYER_SHIP_TRASH_MINER</unlockCustomShip>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC4_DEAD</hiddenAug>
 	</event>
 	
-	<event name="TC4_CREW">
-		<text>The Lanius ship is now silent and the Kestrel Miner hails you. The protogen from earlier seems extremely excited at the prospect of being helped and has their ship mechanic beam you some ship schematics and extra scrap as thanks.</text>
+		<text>The Lanius ship is now silent and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!". You also manage to scoop up some scrap from the enemy ship.</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_RAPTORS_OWN"/>
+		<weapon name="TC_SCRAPFLAK"/>
 		<unlockCustomShip>PLAYER_SHIP_TRASH_MINER</unlockCustomShip>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC4_DEAD</hiddenAug>
@@ -182,7 +181,7 @@
 		<event>
 			<text>The Trash Eater themselves beam onto your ship (although they also manage to consume some of your savings)!</text>
 			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
+				<item type="scrap" min="-20" max="-20"/>
 			</item_modify>
 			<crewMember amount="1" class="trash_eater" name="Trash Eater" all_skills="2"/>
 		</event>
@@ -223,7 +222,7 @@
 	</event>
 	
 	<event name="TC5_DESTROY">
-		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
+		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_BATTERY"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -231,7 +230,7 @@
 	</event>
 	
 	<event  name="TC5_CREW">
-		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
+		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_BATTERY"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -729,7 +728,7 @@
 	</FTL>
 	
 <event name="ENCOUNTER_TC1">
-<text>You've arrived at the coordinates, only to be met with the same Lanius ship from before. This looks like a trap, but they aren't attacking you... yet.</text>
+<text>You've arrived at the coordinates, only to be met with the same Lanius ship from before. This looks like a trap, but they aren't attacking you, nor are their weapons on... yet.</text>
 <choice req="TC1_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 	<text>Attempt to hail them.</text>
 	<event>
@@ -748,7 +747,7 @@
 <choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
 	<text>Attempt to sneak away from the Lanius.</text>
 	<event>
-		<text>You manage to leave succesfully, with the opportunity of having done something on-board.</text>
+		<text>You manage to leave succesfully, with the opportunity of doing something on-board.</text>
 		<choice>
 			<text>Do something onboard the ship.</text>
 			<event load="STORAGE_CHECK"/>
@@ -762,11 +761,11 @@
 </event>
 
 <event name="ENCOUNTER_TC2">
-<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+<text>You've arrived at the new coordinates. It's a ship similar to the one from earlier. It is unclear if they're the same guys from before, or if they just came out of another universe...</text>
 <choice req="TC2_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
-	<text>Attack.</text>
+	<text>Attack them.</text>
 	<event>
-	<text>The strange lanius ship descends in your view and powers up weapons. This time they have some welders on board!</text>
+	<text>The strange lanius ship descends in your view and powers up weapons.s</text>
 		<ship load="TC_TRASH_COMPACTOR2" hostile="true"/>
 		<choice hidden="true">
 			<text>Prepare for battle.</text>
@@ -795,11 +794,11 @@
 </event>
 
 <event name="ENCOUNTER_TC3">
-	<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+	<text>Hold on, we just killed these guys. How and why are they back? They... they seem to have learned from the previous engagements, as this time they've got you cornered.</text>
 	<choice req="TC3_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 		<text>Attack.</text>
 		<event>
-			<text>The Trash Compactor was waiting for you, seemingly having anticipated your movements - they seem to have gained the Lanius king's support!</text>
+			<text>The Trash Compactor was waiting for you, seemingly having anticipated your movements. Let's end this. Again.</text>
 			<ship load="TC_TRASH_COMPACTOR3" hostile="true"/>
 			<choice hidden="true">
 				<text>Prepare for battle.</text>
@@ -827,29 +826,29 @@
 	</choice>
 </event>
 <event name="ENCOUNTER_TC4">
-	<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+	<text>Hey, there's a second ship here. And it's not hostile. In fact, it's not even a Scrapper. It's a scavenger of some kind, judging by their terribly aged and dirty hull. Clearly a garbage disposal ship.</text>
 	<choice req="TC4_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 		<text>Try to intervene.</text>
 		<event>
-			<text>You receive a transmission from a mining ship - a green colored Kestrel. A protogen appears on the communications console. "I'm TRACKER, Federation pilot. Pleased to meet you and everything. These bast- I mean, rude fellows are trying to kill us, and I don't know how much longer we'll hold. Help."</text>
+			<text>You receive a transmission from the Kestrel. A protogen appears on the communications console. "I'm TRACKER, Federation pilot. Pleased to meet you and everything. These bast- I mean, rude fellows are trying to kill us, and I don't know how much longer we'll hold. Help. I will make sure you get proper compens-AH, THEY GOT A BREACH HERE!"</text>
 			<choice>
 				<text>Help TRACKER!</text>
 				<event>
-					<text>The strange lanius ship descends in your view once again (how does it keep coming back?) and prepares to end you once and for all. They have recieved support from another lanius swarm, and are not joking around anymore!</text>
+					<text>The strange lanius ship descends in your view once again (how does it keep coming back?) and prepares to end you once and for all. Despite being hit, the Kestrel is still in the fight too!</text>
 					<ship load="TC_TRASH_COMPACTOR4" hostile="true"/>
 					<choice hidden="true">
-						<text>Attack!</text>
+						<text>Let's do this.</text>
 						<event load="COMBAT_CHECK"/>
 					</choice>
 				</event>
 			</choice>
 			<choice>
-				<text>Help the Lanius!</text>
+				<text>Help the Scrappers!</text>
 				<event>
 					<text>"Hey, what have WE done to deserve this? Ah, right, I remember now. So be it." As the protogen closes the communication and powers up all of his ship's weapons, you prepare to fight them.</text>
 					<ship load="TC_TRASH_MINER" hostile="true"/>
 					<choice hidden="true">
-						<text>Attack!S</text>
+						<text>Let's hope the Scrapper don't attack us after this.</text>
 						<event load="COMBAT_CHECK"/>
 					</choice>
 				</event>
@@ -875,39 +874,13 @@
 		</event>
 	</choice>
 	</event>
-	
-<!--<event name="ENCOUNTER_TC4">
-	<text>You receive a transmission from a mining ship - a green colored Kestrel. A protogen appears on the communications console. "I'm TRACKER, Federation pilot. Pleased to meet you and everything. These bast- I mean, rude fellows are trying to kill us, and I don't know how much longer we'll hold. Help."</text>
-	<choice>
-		<text>Help TRACKER!</text>
-		<event>
-			<text>The strange lanius ship descends in your view once again (how does it keep coming back?) and prepares to end you once and for all. They have recieved support from another lanius swarm, and are not joking around anymore!</text>
-			<ship load="TC_TRASH_COMPACTOR4" hostile="true"/>
-			<choice hidden="true">
-				<text>Attack!</text>
-				<event load="COMBAT_CHECK"/>
-			</choice>
-		</event>
-	</choice>
-	<choice>
-		<text>Help the Lanius!</text>
-		<event>
-			<text>"Hey, what have WE done to deserve this? Ah, right, I remember now. So be it." As the protogen closes the communication and powers up all of his ship's weapons, you prepare to fight them.</text>
-			<ship load="TC_TRASH_MINER" hostile="true"/>
-			<choice hidden="true">
-				<text>Attack!S</text>
-				<event load="COMBAT_CHECK"/>
-			</choice>
-		</event>
-	</choice>
-</event>-->
 
 <event name="ENCOUNTER_TC5">
-	<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+	<text>This one's stronger. Faster. Better. Shiny, even. Let's reduce them to dust.</text>
 	<choice req="TC5_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 		<text>Attack.</text>
 		<event>
-			<text>Yep, it's back again. They have the Anointed on-board now. Let's end this already!</text>
+			<text>We've got lock-on, fire up all weapons!</text>
 			<ship load="TC_TRASH_COMPACTOR5" hostile="true"/>
 			<choice hidden="true">
 				<text>Attack!</text>
@@ -936,14 +909,14 @@
 	</event>
 
 	<event name="ENCOUNTER_TC6">
-		<text>You've arrived at the new coordinates, only to be met with the same Lanius ship from before. It is unclear if they're the same guys from before, or if they just came out of another universe..</text>
+		<text>This is the first Trash Compactor. The prince of the Scrappers, the Trash Eater, is here. His conquest to take over the world starts with your ship. Let's make sure his plans crash and burn.</text>
 		<choice req="TC6_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 			<text>Attack.</text>
 			<event>
-				<text>The Universe 0 version of the Lanius ship is here. You will not survive. Good luck.</text>
+				<text>The Universe 0 version of the Scrapper ship is the strongest enemy so far. You will not survive. Good luck.</text>
 				<ship load="TC_TRASH_COMPACTOR6" hostile="true"/>
 				<choice hidden="true">
-					<text>Attack!</text>
+					<text>...</text>
 					<event load="COMBAT_CHECK"/>
 				</choice>
 			</event>
@@ -967,14 +940,5 @@
 			</event>
 		</choice>
 		</event>
-
-<!--<event name="ENCOUNTER_IMPOSTER">
-	<text>You are an idiot.</text>
-	<ship load="SUS_DEATH" hostile="true"/>
-	<choice hidden="true">
-		<text>Continue...</text>
-		<event load="COMBAT_CHECK"/>
-	</choice>
-</event>-->
 
 </FTL>
