@@ -12,7 +12,7 @@
 	<weapon name="TC_BOMB_SHOTGUN_4"/>
 </event>
 
-<event name="MANTIS_BOMB_FLAK_TRANSPORT">
+<event name="MANTIS_BOMB_FLAK_TRANSPORT" unused="true">
 	<text>You notice a Mantis Transport nearby, emitting a system-wide hail. "Selling Bomb Flaks! Mark I, Mark II, Mark III, and even new Mark IV! Great killing annoying systems on Federation ships!" Considering their message, it's unlikely they'll be willing to sell to you, but maybe you'll get lucky?</text>
 	<ship load="SHIP_MANTIS_BOMB_FLAK_TRANSPORT" hostile="false"/>
 	<choice>
