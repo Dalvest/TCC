@@ -2766,7 +2766,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="13" count="4" />
 	<health amount="15" />
 	<maxPower amount="8" />
-	<crewCount amount="1" class="human_technician" />
+	<crewCount amount="1" class="rsa_technician" />
 	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="1" class="scrapper" />
 	<crewCount amount="1" class="kiviekith" />
@@ -3267,5 +3267,38 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	 <power>:Learns skills slower</power>
    </powerList>
  </crewBlueprint>
+
+ <crewBlueprint name="rsa_technician">
+	<desc>Elite RSA Technician crew. Oddly creative, oddly combative, totally radical. They may not be particularly common, but they certainly pack a punch, and their scout drones do too.</desc>
+	<cost>70</cost>
+	<title>RSA Technician</title>
+	<short>RSA Techie</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Active Ability: Summons a highly unstable Scout Drone that is only able to attack (to a maximum of 5 drones each engagement.) </power>
+		<power>1.25x repair speed. Gains an additional 50% boost to repairs in any of the following systems: Engines, Piloting, Shields, Weapons, or Drone Control.</power>
+	</powerList>
+	<colorList>
+		<layer> <!--skin-->
+			<color r="255" g="150" b="150" a="0.4" /> <!--white-->
+			<color r="90" g="60" b="40" a="0.7" /> <!--black-->
+			<color r="255" g="124" b="89" a="0" /> <!--other white-->
+			<color r="255" g="255" b="255" a="0.2" /> <!--yellow-->
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+<crewBlueprint name="rsa_technician_drone">
+	<desc>Do I really have to say it...? Alright. YOU SHOULD NEVER SEE THIS.</desc>
+	<cost>40</cost>
+	<title>RSA Scout Drone</title>
+	<short>RSA Scout Drone</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Max Health is 70, x2 movement speed</power>
+		<power>Fights and sabotages with x2 strength</power>
+		<power>Cannot repair, extinguish, or man systems</power>
+	</powerList>
+</crewBlueprint>
 
 </FTL>

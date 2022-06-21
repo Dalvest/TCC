@@ -556,7 +556,159 @@
 		<defaultSkillLevel>0</defaultSkillLevel>
 		<cloneLoseSkills>true</cloneLoseSkills>
 	</mod-append:race>
-	
+
+	<mod-append:race name="rsa_technician">
+		<repairSpeed>1.25</repairSpeed>
+		<canFight>true</canFight>
+		<canSabotage>true</canSabotage>
+		<suffocationModifier>0.83</suffocationModifier>
+		<fireDamageMultiplier>0.83</fireDamageMultiplier>
+		<passiveStatBoosts>  
+			<statBoost name="repairSpeed">
+				<boostType>FLAT</boostType>
+				<amount>0.50</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<affectsSelf>true</affectsSelf>
+				<maxStacks>1</maxStacks>
+				<whiteList>
+					<human_technician/>
+				</whiteList>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<engines/>
+					<pilot/>
+					<shields/>
+					<weapons/>
+					<drones/>
+				</systemList>
+			</statBoost>
+		</passiveStatBoosts>
+		<animBase>human</animBase>
+		<deathSounds>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>death1</deathSound>
+			<deathSound>death2</deathSound>
+			<deathSound>humanDeathSpecial</deathSound>
+		</deathSounds>
+		<skills>
+			<piloting req="13"/>
+			<engines req="13"/>
+			<shields req="50"/>
+			<weapons req="58"/>
+			<repair req="12"/>
+			<combat req="7"/>
+		</skills>
+		<powerEffect>
+			<cooldown>5</cooldown>
+			<jumpCooldown>full</jumpCooldown>
+			<powerSounds>
+				<powerSound>droneLaunch</powerSound>
+			</powerSounds>
+			<req type="enemy">
+				<enemyInRoom/>
+			</req>
+			<buttonText>DRONE</buttonText>
+			<tooltip>Ready: Spawns a temporary drone scout which can fight and sabotage but not repair or man systems. Lasts 15 seconds.</tooltip>
+			<cooldownColor r="185" g="185" b="185"/>
+			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+			<powerCharges>5</powerCharges>
+			<initialCharges>5</initialCharges>
+			<chargesPerJump>1</chargesPerJump>
+			<spawnCrew>
+				<number>1</number>
+				<race>rsa_technician_drone</race>
+				<lifetime>15</lifetime>
+				<statBoosts>
+					<statBoost name="noClone">
+						<boostType>SET</boostType>
+						<value>true</value>
+						<shipTarget>ALL</shipTarget>
+						<crewTarget>ALL</crewTarget>
+						<priority>999999</priority>
+					</statBoost>
+				</statBoosts>
+			</spawnCrew>
+		</powerEffect>
+	</mod-append:race>
+
+	<mod-append:race name="rsa_technician_drone">
+		<maxHealth>50</maxHealth>
+		<noSlot>true</noSlot>
+		<damageMultiplier>2.0</damageMultiplier>
+		<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+		<moveSpeedMultiplier>2.0</moveSpeedMultiplier>
+		<resistsMindControl>true</resistsMindControl>	<!-- CURA event -->
+		<canMan>false</canMan>
+		<canRepair>false</canRepair>
+		<noClone>true</noClone>
+		<canBurn>false</canBurn>
+		<canSuffocate>false</canSuffocate>
+		<deathSounds>
+			<deathSound>explosion1</deathSound>
+			<deathSound>explosion2</deathSound>
+			<deathSound>explosion3</deathSound>
+			<deathSound>explosion4</deathSound>
+		</deathSounds>
+		<powerEffect>
+			<cooldown>0</cooldown>
+			<jumpCooldown>full</jumpCooldown>
+			<buttonText>EXPIRATION</buttonText>
+			<tooltip>You shouldn't see this. Shows how long is left in its lifespan.</tooltip>
+			<cooldownColor r="185" g="185" b="185"/>
+			<activateWhenReady>true</activateWhenReady>
+			<temporaryEffect>
+				<duration>25</duration>
+				<cooldownColor r="185" g="185" b="185"/>
+				<powerSounds>
+					<powerSound>shieldsDown</powerSound>
+				</powerSounds>
+			</temporaryEffect>
+		</powerEffect>
+	</mod-append:race>
 </mod:findLike>
 <!-- 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
