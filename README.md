@@ -9,9 +9,9 @@ Lead Devs: Zuggo, Dalvest
 
 Coders: Zandoware, Choosechee
 
-Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee, Wabbles, ConMan
+Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee, Wabbles, ConMan, Skye
 
-Playtesters/bug reporters: marcrusian, DemonFusionGamer, Kommandant_Julk, The Ghost Hugger, Lex
+Playtesters/bug reporters: marcrusian, DemonFusionGamer, Kommandant_Julk, The Ghost Hugger, Lex, Vertaalfout
 
 (thats a lot of people wow)
 Special Thanks to Cyrus106 for inspiring me to do this and helping me begin my journey!
