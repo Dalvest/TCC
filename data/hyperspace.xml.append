@@ -188,7 +188,7 @@
 		<crewLimit>11</crewLimit>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
         <crew>
-            <human_engineer room="0" name="Dalvest" />
+            <rsa_engineer room="0" name="Dalvest" />
 		</crew>
 	</mod-append:customShip>
 
@@ -213,8 +213,8 @@
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crewLimit>9</crewLimit>
 		<crew>
-			<human_soldier room="0" name="VHS" />
-			<human_technician room="11" name="Delta-Tech" />
+			<human_soldier room="0" />
+			<rsa_technician room="11" />
 			<human_engineer room="1" name="Choosechee" />
 		</crew>
 	</mod-append:customShip>
@@ -223,7 +223,7 @@
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crewLimit>9</crewLimit>
 		<crew>
-			<human_soldier room="0" name="VHS" />
+			<human_mfk room="0" name="VHS" />
 		</crew>
 	</mod-append:customShip>
 
@@ -248,7 +248,7 @@
 		<crew>
 			<slug_hektar room="0" name="SLUGTON" />
 			<mantis_free room="1" name="Businessmantis" />
-			<slug_hektar room="7" name="Enchanter" />
+			<slug_hektar room="7" />
 			<slug_hektar room="6" name="ConMan" />
 		</crew>
 	</mod-append:customShip>
@@ -259,7 +259,7 @@
 		<crew>
 			<kiviekith room="0" name="Krieg" />
 			<kiviekith room="6" name="Pietre" />
-			<human_engineer room="1" name="Diego" />
+			<rsa_engineer room="1" name="Diego" />
 		</crew>
 	</mod-append:customShip>
 
@@ -268,12 +268,12 @@
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
 			<human room="0" name="Cheese" />
-			<engi_defender room="1" name="Zenith" />
+			<rsa_technician room="1" name="Nitron" />
 			<zoltan_peacekeeper room="7" name="RAPTOR" />
-			<human_soldier room="6" name="Sierra-2" />
-			<human_rebel room="6" name="Andrew" />
-			<human_mfk room="6" name="VHS" />
-			<human_medic room="6" name="Sierra-Med" />
+			<mantis_free room="6" name="Lancer" />
+			<human_rebel room="6" />
+			<human_mfk room="6" />
+			<human_medic room="6" />
 		</crew>
 	</mod-append:customShip>
 
@@ -299,9 +299,9 @@
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
 			<kiviekith room="2" name="Orvech Vonor" />
-			<kiviekith room="7" name="Sergiu" />
+			<kiviekith room="7" />
 			<kiviekith room="0" name="Altan" />
-			<kiviekith room="15" name="Kolechia" />
+			<kiviekith room="15" />
 		</crew>
 	</mod-append:customShip>
 
