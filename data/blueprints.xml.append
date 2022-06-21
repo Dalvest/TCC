@@ -1981,7 +1981,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones max="8" power="4" room="7" start="true" img="room_drones" />
+		<drones power="4" room="7" start="true" img="room_drones" />
 		<engines power="6" room="3" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
@@ -2146,7 +2146,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="3" room="7" start="true" img="room_drones" />
+		<drones power="3" max="8" room="7" start="true" img="room_drones" />
 		<engines power="1" max="8" room="13" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
@@ -2221,7 +2221,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" room="7" start="false" img="room_drones" />
+		<drones power="1" max="8" room="7" start="false" img="room_drones" />
 		<engines power="2" max="8" room="13" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
@@ -2363,8 +2363,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<drones power="1" room="3" start="true" img="room_drones_14_medevac" />
-		<engines power="1" room="5" start="true" img="room_engines_dromaius">
+		<drones power="1" max="8" room="3" start="true" img="room_drones_14_medevac" />
+		<engines power="1" max="8" room="5" start="true" img="room_engines_dromaius">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -2385,14 +2385,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="6" start="false" img="room_shields_11">
+		<shields power="2" max="8" room="6" start="false" img="room_shields_11">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
 			</slot>
 		</shields>
 		<teleporter power="2" room="0" start="true" />
-		<weapons power="3" room="4" start="true" img="room_weapons_ogre_long">
+		<weapons power="3" max="8" room="4" start="true" img="room_weapons_ogre_long">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -2428,7 +2428,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</doors>
 		<drones power="2" max="8" room="7" start="false" img="room_drones" />
-		<engines power="2" room="8" start="true" img="room_engines">
+		<engines power="2" max="8" room="8" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -2503,8 +2503,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="2" room="8" start="true" img="room_drones_2_alt" />
-		<engines power="1" room="5" start="true" img="room_engines_10">
+		<drones power="2" max="8" room="8" start="true" img="room_drones_2_alt" />
+		<engines power="1" max="8" room="5" start="true" img="room_engines_10">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -2530,14 +2530,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="3" start="false" img="room_shields_2.s__c__">
+		<shields power="2" max="6" room="3" start="false" img="room_shields_2.s__c__">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="2" start="false" />
-		<weapons power="5" room="1" start="true" img="room_weapons_7">
+		<weapons power="5" max="10" room="1" start="true" img="room_weapons_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -2574,8 +2574,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" room="8" start="false" img="room_drones_2_alt" />
-		<engines power="1" room="5" start="true" img="room_engines_10">
+		<drones power="1" max="8" room="8" start="false" img="room_drones_2_alt" />
+		<engines power="1" max="8" room="5" start="true" img="room_engines_10">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -2601,14 +2601,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="3" start="true" img="room_shields_2.s__c__">
+		<shields power="2" max="6" room="3" start="true" img="room_shields_2.s__c__">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="2" start="false" />
-		<weapons power="3" room="1" start="true" img="room_weapons_7">
+		<weapons power="3" max="10" room="1" start="true" img="room_weapons_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -2629,7 +2629,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP_3" layout="player_ship_tc_armored_wasp_3" img="player_ship_tc_armored_wasp_3">
 	<class>"Gladiator" Corvette</class>
 	<name>Steel Dawn</name>
-	<desc>This ship is a highly stealthy one - try not to get hit, though.</desc>
+	<desc>This ship is a highly stealthy one - try not to get hit, though. Cramped but agile, strong yet fragile. </desc>
 	<systemList>
 		<cloaking power="2" room="7" start="true" img="room_cloaking_2_1x1" />
 		<clonebay power="1" room="6" start="true">
@@ -2643,8 +2643,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="2" room="8" start="true" img="room_drones_2_alt" />
-		<engines power="1" room="5" start="true" img="room_engines_10">
+		<drones power="2" max="8" room="8" start="true" img="room_drones_2_alt" />
+		<engines power="1" max="8" room="5" start="true" img="room_engines_10">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -2670,14 +2670,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="3" start="false" img="room_shields_2.s__c__">
+		<shields power="2" max="6" room="3" start="false" img="room_shields_2.s__c__">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="2" start="false" />
-		<weapons power="3" room="1" start="true" img="room_weapons_7">
+		<weapons power="3" max="12" room="1" start="true" img="room_weapons_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -2716,7 +2716,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" room="9" start="false" img="room_drones_13" />
+		<drones power="1" max="8" room="9" start="false" img="room_drones_13" />
 		<engines power="4" max="8" room="22" start="true" img="room_engines_7">
 			<slot>
 				<direction>right</direction>
@@ -2743,14 +2743,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="6" start="true" img="room_shields">
+		<shields power="2" max="6" room="6" start="true" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="19" start="false" />
-		<weapons power="2" max="8" room="15" start="true" img="room_weapons">
+		<weapons power="2" max="10" room="15" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -2792,8 +2792,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" room="12" start="false" img="room_drones_2" />
-		<engines power="2" room="1" start="true" img="room_engines_chaoticgood">
+		<drones power="1" max="8" room="12" start="false" img="room_drones_2" />
+		<engines power="2" max="8" room="1" start="true" img="room_engines_chaoticgood">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -2819,14 +2819,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="7" start="true" img="room_shields_5">
+		<shields power="2" max="8" room="7" start="true" img="room_shields_5">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="16" start="false" />
-		<weapons power="3" room="6" start="true" img="room_weapons_4">
+		<weapons power="3" max="8" room="6" start="true" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -2864,8 +2864,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" room="12" start="false" img="room_drones_2" />
-		<engines power="2" room="1" start="true" img="room_engines_chaoticgood">
+		<drones power="1" max="8" room="12" start="false" img="room_drones_2" />
+		<engines power="2" max="8" room="1" start="true" img="room_engines_chaoticgood">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -2891,14 +2891,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="7" start="false" img="room_shields_5">
+		<shields power="2" max="8" room="7" start="false" img="room_shields_5">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="16" start="false" />
-		<weapons power="5" room="6" start="true" img="room_weapons_4">
+		<weapons power="5" max="8" room="6" start="true" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -2935,8 +2935,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="3" room="11" start="true" img="room_drones_2" />
-		<engines power="3" room="1" start="true" img="room_engines_chaoticgood">
+		<drones power="3" max="8" room="11" start="true" img="room_drones_2" />
+		<engines power="3" max="8" room="1" start="true" img="room_engines_chaoticgood">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -2962,7 +2962,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="18" start="false" img="room_shields_2.s__c__ComputerAtTopRight">
+		<shields power="2" max="8" room="18" start="false" img="room_shields_2.s__c__ComputerAtTopRight">
 			<slot>
 				<direction>right</direction>
 				<number>0</number>
@@ -2995,8 +2995,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" room="11" start="false" img="room_drones_2_alt" />
-		<engines power="3" room="7" start="true" img="room_engines_7">
+		<drones power="1" max="8" room="11" start="false" img="room_drones_2_alt" />
+		<engines power="3" max="8" room="7" start="true" img="room_engines_7">
 			<slot>
 				<direction>right</direction>
 				<number>3</number>
@@ -3022,14 +3022,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="9" start="true" img="room_shields_4">
+		<shields power="2" max="8" room="9" start="true" img="room_shields_4">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="12" start="false" />
-		<weapons power="5" room="6" start="true" img="room_weapons">
+		<weapons power="5" max="8" room="6" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3065,8 +3065,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="3" room="6" start="true" img="room_drones_4" />
-		<engines power="1" room="2" start="true" img="room_engines_8">
+		<drones power="3" max="8" room="6" start="true" img="room_drones_4" />
+		<engines power="1" max="8" room="2" start="true" img="room_engines_8">
 			<slot>
 				<direction>left</direction>
 				<number>2</number>
@@ -3092,14 +3092,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="5" start="true" img="room_shields_scrapper">
+		<shields power="2" max="8" room="5" start="true" img="room_shields_scrapper">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="3" start="true" />
-		<weapons power="2" room="15" start="true" img="room_weapons_8">
+		<weapons power="2" max="8" oom="15" start="true" img="room_weapons_8">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
