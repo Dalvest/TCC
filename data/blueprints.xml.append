@@ -1746,6 +1746,78 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_DRONE_HEAVY_COMBAT">
+	<type>BURST</type>
+	<title>Heavy Flak</title>
+	<drone_targetable>1</drone_targetable>
+	<damage>4</damage>
+	<radius>100</radius>
+	<shots>1</shots>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+	</projectiles>
+	<spin>360</spin>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>7</breachChance>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_shotgun_gold</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_DRONE_BOMB_COMBAT">
+	<type>BURST</type>
+	<title>Bomb Flak</title>
+	<drone_targetable>1</drone_targetable>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<radius>50</radius>
+	<shots>1</shots>
+	<projectiles>
+		<projectile count="5" fake="false">bomb1</projectile>
+	</projectiles>
+	<spin>720</spin>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>smallExplosion</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_shotgun_gold</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <droneBlueprint name="TC_COMBAT_GOLD">
     <type>COMBAT</type>
     <tip>tip_flak</tip>
@@ -1776,8 +1848,44 @@
     <speed>75</speed>
     <cost>100</cost>
     <bp>3</bp>
-    <droneImage>drone_flak</droneImage>
+    <droneImage>unstable_drone</droneImage>
     <weaponBlueprint>TC_DRONE_UNSTABLE_COMBAT</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="TC_COMBAT_HEAVY">
+    <type>COMBAT</type>
+    <tip>tip_flak</tip>
+    <title>Heavy Flak Combat Drone</title>
+    <short>Heavy Flak</short>
+    <desc>Heavy Flak Drone</desc>
+    <power>3</power>
+    <cooldown>1</cooldown>
+    <dodge>0</dodge>
+    <speed>10</speed>
+    <cost>100</cost>
+    <bp>3</bp>
+    <droneImage>heavy_flak_drone</droneImage>
+    <weaponBlueprint>TC_DRONE_HEAVY_COMBAT</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="TC_COMBAT_BOMB">
+    <type>COMBAT</type>
+    <tip>tip_flak</tip>
+    <title>Unstable Flak Combat Drone</title>
+    <short>Unstable Flak</short>
+    <desc>Unstable Flak Drone</desc>
+    <power>3</power>
+    <cooldown>3</cooldown>
+    <dodge>0</dodge>
+    <speed>75</speed>
+    <cost>100</cost>
+    <bp>3</bp>
+    <droneImage>bomb_flak_drone</droneImage>
+    <weaponBlueprint>TC_DRONE_BOMB_COMBAT</weaponBlueprint>
     <rarity>0</rarity>
     <iconImage>combat</iconImage>
 </droneBlueprint>

@@ -144,10 +144,6 @@
 		<autoReward level="MED">scrap</autoReward>
 	</event>
 	<event>
-		<text>SUCCESS</text>
-		<autoReward level="MED">scrap</autoReward>
-	</event>
-	<event>
 		<text>GREAT SUCCESS</text>
 		<event load="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE"/>
 	</event>
@@ -173,7 +169,7 @@
 	<text>Request that the Eater makes a drone.</text>
 	<event>
 		<text>You got a drone!</text>
-		<drone name="TC_COMBAT_GOLD"/>
+		<drone name="TC_COMBAT_HEAVY"/>
 		<event/>
 	</event>
 	</choice>
