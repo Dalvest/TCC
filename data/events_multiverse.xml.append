@@ -771,7 +771,7 @@
 <choice req="TC2_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 	<text>Attack them.</text>
 	<event>
-	<text>The strange lanius ship descends in your view and powers up weapons.s</text>
+	<text>The strange lanius ship descends in your view and powers up weapons.</text>
 		<ship load="TC_TRASH_COMPACTOR2" hostile="true"/>
 		<choice hidden="true">
 			<text>Prepare for battle.</text>
@@ -780,13 +780,13 @@
 	</event>
 </choice>
 <choice req="TC2_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
-	<text>Weird deja vu, but you feel like you've done this all before.</text>
+	<text>They're gone. Right? ...right?</text>
 	<event load="OPTION_INVALID"/>
 </choice>
 <choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
-	<text>Nope. Nope. Nope. Nope.</text>
+	<text>Not every fight is our fight.</text>
 	<event>
-		<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+		<text>You manage to sneak away by distracting the Scrappers - it seems the old "Rusting locomotives in your area" still works.</text>
 		<choice>
 			<text>Do something onboard the ship.</text>
 			<event load="STORAGE_CHECK"/>
@@ -819,7 +819,7 @@
 	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
 		<text>Nope. Nope. Nope. Nope.</text>
 		<event>
-			<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+			<text>Why are these guys coming back? Well... we won't.</text>
 			<choice>
 				<text>Do something onboard the ship.</text>
 				<event load="STORAGE_CHECK"/>
@@ -862,13 +862,13 @@
 		</event>
 	</choice>
 	<choice req="TC4_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
-		<text>Weird deja vu, but you feel like you've done this all before.</text>
+		<text>The Scrap Transmitter's lights flicker wildly. It seems that it's receiving a massive signal... It was a trap all along. It's acting as a multiversal lure. Interesting... Maybe the hunter will become the hunted.</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
-		<text>Nope. Nope. Nope. Nope.</text>
+		<text>Let's blow this popsicle stand.</text>
 		<event>
-			<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+			<text>It seems that TRACKER is... dealing with the problem, somehow. You manage to leave them fight.</text>
 			<choice>
 				<text>Do something onboard the ship.</text>
 				<event load="STORAGE_CHECK"/>
@@ -895,13 +895,13 @@
 		</event>
 	</choice>
 	<choice req="TC5_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
-		<text>Weird deja vu, but you feel like you've done this all before.</text>
+		<text>The Scrap Transmitter is audibly groaning, like a ship being torn apart. You've heard a lot of that recently. Maybe you can set one last trap...</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
-		<text>Nope. Nope. Nope. Nope.</text>
+		<text>This one's different - common logic dictates that it's stronger. Let's run.</text>
 		<event>
-			<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+			<text>Somehow, you manage to sneak away. Or perhaps it's sparing you? Strange... You don't have too much time to dwell on it, however.</text>
 			<choice>
 				<text>Do something onboard the ship.</text>
 				<event load="STORAGE_CHECK"/>
@@ -919,7 +919,7 @@
 		<choice req="TC6_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 			<text>Attack.</text>
 			<event>
-				<text>The Universe 0 version of the Scrapper ship is the strongest enemy so far. You will not survive. Good luck.</text>
+				<text>The Universe 0 version of the Scrapper ship is the strongest enemy you've faced so far. You will not survive. Good luck.</text>
 				<ship load="TC_TRASH_COMPACTOR6" hostile="true"/>
 				<choice hidden="true">
 					<text>...</text>
@@ -928,13 +928,13 @@
 			</event>
 		</choice>
 		<choice req="TC6_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
-			<text>Weird deja vu, but you feel like you've done this all before.</text>
+			<text>This is over. Finally. The last Scrapper is fully silent. You feel as if you've saved plenty of renegades from these guys. You're not sure what their plan was - if they even had a plan in the first place.</text>
 			<event load="OPTION_INVALID"/>
 		</choice>
 		<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
-			<text>Nope. Nope. Nope. Nope.</text>
+			<text>We can't do this.</text>
 			<event>
-				<text>You hurry away, not wanting to find out what these Lanius want from you.</text>
+				<text>You manage to leave; you're not exactly sure how.</text>
 				<choice>
 					<text>Do something onboard the ship.</text>
 					<event load="STORAGE_CHECK"/>
