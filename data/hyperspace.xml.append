@@ -1,780 +1,794 @@
+<FTL><!--appending to Inferno-Core-->
+	<events>
+		<variable name="tcc_called_compactor" op="set" val="0"/>
+		<req name="TCC_CAN_CALL_COMPACTOR" type="all">
+			<req>
+				<name>SCRAP_TRANSMITTER</name>
+			</req>
+			<req lvl="0" max_lvl="0">
+				<name>tcc_called_compactor</name>
+			</req>
+		</req>
+	</events>
+	<mod:findLike type="events">
+		<mod:findName type="req" name="FMCORE_LIST_JUMPSPACE_EQUIPMENT">
+			<mod-append:name>FORGEMASTER_PHONE</mod-append:name>
+		</mod:findName>
+	</mod:findLike>
+</FTL>
 <FTL>
-<mod:findLike type="events">
-	<mod:findName type="event" name="START_BEACON">
-		<mod-append:hiddenAug>ADDON_INSTALLED_TCC</mod-append:hiddenAug>
-	</mod:findName>
-</mod:findLike>
-
-<req name="SCAVENGER_REQ" type="all">
-	<name>ADVANCED_SCRAP_REQ</name>
-	<name>LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE</name>
-</req>
-
-
-<req name="ADVANCED_SCRAP_REQ" type="any">
-	<name>ADVANCED_SCRAP</name>
-	<name>trash_eater</name>
-</req>
-
-<!-- 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-							SHIPS
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
--->
-
-<mod:findLike type="ships">
-
-<!--///////SCRAPPER DREADNOUGHT//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
-
-		<unlock variant="a" silent="false">
-		<type>4</type>
-		</unlock>
-		<unlock variant="b" silent="false">
-			<type>2</type>
-		</unlock>
-
-	</mod-append:ship>
-	<mod-append:customShip name="PLAYER_SHIP_SCRAPPER">
-		<crewLimit>8</crewLimit>
-		<hiddenAug>SHIP_LANIUS</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-            <scrapper_scavenger room="0" name="Zuggo" />
-            <scrapper_heavy room="5" />
-            <scrapper_engineer room="2" name="Ash" />
-            <scrapper room="15"/>
-		</crew>
-	</mod-append:customShip>
-	<mod-append:customShip name="PLAYER_SHIP_SCRAPPER_2">
-		<crewLimit>10</crewLimit>
-		<hiddenAug>SHIP_LANIUS</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-            <scrapper_engineer room="0"/>
-            <scrapper_heavy room="1"/>
-            <scrapper room="1"/>
-            <scrapper room="1"/>
-			<scrapper room="1"/>
-			<scrapper room="2"/>
-		</crew>
-	</mod-append:customShip>
-
-<!--///////SCRAPPER OP SHIP//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD" b="false" c="false" unused="true">
-
-	<unlock variant="a" silent="false">
-		<type>4</type>
-		</unlock>
-
-	</mod-append:ship>
-	<mod-append:customShip name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD">
-		<crewLimit>16</crewLimit>
-		<hiddenAug>SHIP_LANIUS</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-            <trash_eater room="0" name="Trash Eater" />
-            <scrapper room="5" name="Zuggo" />
-            <scrapper room="2" name="Ash" />
-		</crew>
-		<customReactor maxLevel="50"/>
-	</mod-append:customShip>
-
-<!--///////KESTREL MINER//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true" unused="true">
-
-		<arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
-		<unlock variant="a" silent="false">
-		<type>4</type>
-		</unlock>
-
-	</mod-append:ship>
-	<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER">
-		<crewLimit>11</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-	    <crew>
-            <zoltan_peacekeeper room="11" name="RAPTOR" />
-            <engi room="0" name="TRACKER" />
-            <human room="13" name="Cheese" />
-            <mantis_free room="15" name="Lancer" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_2">
-		<crewLimit>11</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
- 	    <crew>
-            <zoltan_peacekeeper room="12" name="RAPTOR" />
-            <engi room="0" name="TRACKER" />
-            <human room="13" name="Cheese" />
-            <mantis_free room="6" name="Lancer" />
-			<rock_commando room="6" name="Lex" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_3">
-		<crewLimit>11</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
- 	    <crew>
-            <kiviekith room="11" name="Stolas" />
-			<kiviekith room="13" name="Alastor" />
-			<kiviekith room="0" name="Blitzo" />
-		</crew>
-	</mod-append:customShip>
+	<mod:findLike type="events">
+		<mod:findName type="event" name="START_BEACON">
+			<mod-append:hiddenAug>ADDON_INSTALLED_TCC</mod-append:hiddenAug>
+		</mod:findName>
+	</mod:findLike>
+	<events><!--i am 99% sure that those reqs couldn't work bc missing <events>-->
+		<req name="SCAVENGER_REQ" type="all">
+			<name>ADVANCED_SCRAP_REQ</name>
+			<name>LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE</name>
+		</req>
 
 
-<!--///////TRASH REACTOR//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="false" c="false" unused="true">
-
-		<arrow variant="a" direction="down" tooltip="ship_unlock_victory" image="arrow_v_down.png" unlockedImage="arrow_v_down_on.png">PLAYER_SHIP_SDM</arrow>
-		<unlock variant="a" silent="false">
-        <type>2</type>
-
-        <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
-        </unlock>
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR">
-		<crewLimit>12</crewLimit>
-		<customReactor maxLevel="50"/>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-        <crew>
-            <human_soldier room="12" name="Kanyo" />
-            <zoltan_peacekeeper room="14" name="RAPTOR" />
-            <engi room="1" name="TRACKER" />
-            <human room="11" name="Cheese" />
-            <mantis_free room="3" name="Lancer" />
-			<scrapper room="6" name="01010011" />
-            <engi_defender room="2" name="Zenith" />
-		</crew>
-	</mod-append:customShip>
-
-<!--///////SIZE DOESN'T MATTER//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
-
-		<unlock variant="a" silent="false">
-		<type>2</type>
-		<shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
-	</unlock>
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_SDM">
-		<crewLimit>9</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-        <crew>
-            <human_mfk room="0" name="Echo-Cap" />
-            <human_soldier room="0" name="Echo-1" />
-            <human_soldier room="0" name="Echo-2" />
-            <human_soldier room="0" name="Echo-3" />
-            <human_soldier room="0" name="Echo-4" />
-            <human_soldier room="0" name="Echo-5" />
-            <human_engineer room="7" name="Echo-Sup" />
-            <human_medic room="0" name="Echo-Med" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_SDM_2">
-		<crewLimit>11</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-        <crew>
-            <rsa_engineer room="0" name="Dalvest" />
-		</crew>
-	</mod-append:customShip>
-
-<!--///////ARMORED WASP//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP">
-		<crewLimit>9</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-			<trash_eater room="11" name="Trash Eater" />
-			<mantis_free room="0" name="Lancer" />
-			<human_legion_pyro room="1" name="Dalvest" />
-			<human room="5" name="Cheese" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_2">
-		<hiddenAug>SHIP_FEDERATION</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crewLimit>9</crewLimit>
-		<crew>
-			<human_soldier room="0" />
-			<rsa_technician room="11" />
-			<human_engineer room="1" name="Choosechee" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_3">
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crewLimit>9</crewLimit>
-		<crew>
-			<human_mfk room="0" name="VHS" />
-		</crew>
-	</mod-append:customShip>
-
-<!--///////COROSSUS//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_COROSSUS" b="false" c="false" unused="true">
-	</mod-append:ship>
-	
-	<mod-append:customShip name="PLAYER_SHIP_COROSSUS">
-		<crewLimit>12</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-	</mod-append:customShip>
-
-<!--///////RENT-A-FLAGSHIP//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_SLUGTON">
-		<crewLimit>20</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-			<slug_hektar room="0" name="SLUGTON" />
-			<mantis_free room="1" name="Businessmantis" />
-			<slug_hektar room="7" />
-			<slug_hektar room="6" name="ConMan" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_SLUGTON_2">
-		<crewLimit>20</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-			<kiviekith room="0" name="Krieg" />
-			<kiviekith room="6" name="Pietre" />
-			<rsa_engineer room="1" name="Diego" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_SLUGTON_3">
-		<crewLimit>20</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-			<human room="0" name="Cheese" />
-			<rsa_technician room="1" name="Nitron" />
-			<zoltan_peacekeeper room="7" name="RAPTOR" />
-			<mantis_free room="6" name="Lancer" />
-			<human_rebel room="6" />
-			<human_mfk room="6" />
-			<human_medic room="6" />
-		</crew>
-	</mod-append:customShip>
-
-	<!--///////EXTRA ELITE SHIP PACK//////-->
-
-	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
-		<crewLimit>20</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-			<scrapper room="2" />
-			<scrapper room="9" name="Zog" />
-			<trash_eater room="0" name="Trash Eater" />
-			<scrapper_engineer room="7" />
-			<scrapper_heavy room="6" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
-		<crewLimit>10</crewLimit>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crew>
-			<kiviekith room="2" name="Orvech Vonor" />
-			<kiviekith room="7" />
-			<kiviekith room="0" name="Altan" />
-			<kiviekith room="15" />
-		</crew>
-	</mod-append:customShip>
-
-</mod:findLike>
+		<req name="ADVANCED_SCRAP_REQ" type="any">
+			<name>ADVANCED_SCRAP</name>
+			<name>trash_eater</name>
+		</req>
+	</events>
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	SHIPS
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
 
 
-<!-- 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-						SHIP HANGAR ORDER
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
--->
+	<mod:findLike type="ships">
 
-<mod:findLike type="ships">
-    <mod:findLike type="shipOrder">
-        <mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship>
-        <mod-append:ship>PLAYER_SHIP_TRASH_COMPACTOR_GOOD</mod-append:ship>
-        <mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship>
-		<mod-append:ship>PLAYER_SHIP_TRASH_REACTOR</mod-append:ship>
-        <mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship>
-        <mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship>
-		<mod-append:ship>PLAYER_SHIP_COROSSUS</mod-append:ship>
-		<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship>
-        <mod-append:empty/>
-		<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship>
-    </mod:findLike>
-</mod:findLike>
+		<!--///////SCRAPPER DREADNOUGHT//////-->
 
+		<mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
 
-<!-- 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-							CREW
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
--->
+			<unlock variant="a" silent="false">
+				<type>4</type>
+			</unlock>
+			<unlock variant="b" silent="false">
+				<type>2</type>
+			</unlock>
 
-<!--///////UNIQUE//////-->
+		</mod-append:ship>
+		<mod-append:customShip name="PLAYER_SHIP_SCRAPPER">
+			<crewLimit>8</crewLimit>
+			<hiddenAug>SHIP_LANIUS</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<scrapper_scavenger room="0" name="Zuggo" />
+				<scrapper_heavy room="5" />
+				<scrapper_engineer room="2" name="Ash" />
+				<scrapper room="15"/>
+			</crew>
+		</mod-append:customShip>
+		<mod-append:customShip name="PLAYER_SHIP_SCRAPPER_2">
+			<crewLimit>10</crewLimit>
+			<hiddenAug>SHIP_LANIUS</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<scrapper_engineer room="0"/>
+				<scrapper_heavy room="1"/>
+				<scrapper room="1"/>
+				<scrapper room="1"/>
+				<scrapper room="1"/>
+				<scrapper room="2"/>
+			</crew>
+		</mod-append:customShip>
 
-<mod:findLike type="crew">
-	<mod-append:race name="trash_eater">
-		<maxHealth>200</maxHealth>
-		<controllable>true</controllable>
-		<canSuffocate>false</canSuffocate>
-		<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
-		<oxygenChangeSpeed>-0.525</oxygenChangeSpeed>
-		<animBase>lanius</animBase>
-		<deathSounds>
-			<deathSound>shrikeDeath</deathSound>
-		</deathSounds>
-		<repairSounds>
-		  <repairSound>shrikeRepair</repairSound>
-		</repairSounds>
-		<powerEffect>
-			<cooldown>25</cooldown>
-			<jumpCooldown>full</jumpCooldown>
-			<powerSounds>
-				<powerSound>lockdown1</powerSound>
-				<powerSound>lockdown2</powerSound>
-			</powerSounds>
-			<req type="enemy">
-				<!--<enemyShip/>-->
-				<minHealth>15</minHealth>
-				<maxHealth>25</maxHealth>
-			</req>
-			<damage>1</damage>
-			<persDamage>-1</persDamage>
-			<sysDamage>-1</sysDamage>
-			<breachChance>10</breachChance>
-			<friendlyFire>true</friendlyFire>
-			<shipFriendlyFire>true</shipFriendlyFire>
-			<buttonText>COMPACT</buttonText>
-			<tooltip>Ready: Heal to full health, gain 50 health and deal 1 hull damage to the current room</tooltip>
-			<cooldownColor r="3" g="145" b="0"/>
-			<effectAnim>explosion_random</effectAnim>
-			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-			<temporaryEffect>
-				<duration>15</duration>
-				<cooldownColor r="0" g="255" b="6"/>
-				<finishSounds>
-					<finishSound>mindControlEnd</finishSound>
-				</finishSounds>
-				<statBoosts>
-                    <statBoost name="maxHealth">
-                        <boostType>FLAT</boostType>
-                        <amount>50</amount>
-                        <shipTarget>CURRENT_ROOM</shipTarget>
-                        <crewTarget>ALLIES</crewTarget>
-                        <affectsSelf>true</affectsSelf>
-                        <priority>999999</priority>
-                        <duration>15</duration>
-                        <whiteList>
-                        <trash_eater/>
-                        </whiteList>
-                    </statBoost>                
-                </statBoosts>
-				<animSheet baseVisible="true">anointed_glow</animSheet>
-			</temporaryEffect>
-		<selfHealth>999</selfHealth>
-		</powerEffect>
-	</mod-append:race>
+		<!--///////SCRAPPER OP SHIP//////-->
 
-<!--///////GENERIC//////-->
+		<mod-append:ship name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD" b="false" c="false" unused="true">
 
-    <mod-append:race name="scrapper">
-		<maxHealth>125</maxHealth>
-        <oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
-        <canSuffocate>false</canSuffocate>
-		<repairSpeed>1.5</repairSpeed>
-		<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
-		<fireDamageMultiplier>0.75</fireDamageMultiplier>
-        <repairSounds>
-            <repairSound>shrikeRepair</repairSound>
-        </repairSounds>
-        <deathSounds>
-            <deathSound>shrikeDeath</deathSound>
-        </deathSounds>
-    </mod-append:race>
-	
-	<mod-append:race name="scrapper_soldier">
-		<maxHealth>125</maxHealth>
-        <oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
-        <canSuffocate>false</canSuffocate>
-		<repairSpeed>1</repairSpeed>
-		<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
-		<fireDamageMultiplier>0.75</fireDamageMultiplier>
-		<damageMultiplier>2</damageMultiplier>
-		<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
-        <repairSounds>
-            <repairSound>shrikeRepair</repairSound>
-        </repairSounds>
-        <deathSounds>
-            <deathSound>shrikeDeath</deathSound>
-        </deathSounds>
-    </mod-append:race>
-	
-	<mod-append:race name="scrapper_heavy">
-		<maxHealth>200</maxHealth>
-        <oxygenChangeSpeed>-0.2625</oxygenChangeSpeed>
-        <canSuffocate>false</canSuffocate>
-		<repairSpeed>0.5</repairSpeed>
-		<moveSpeedMultiplier>0.25</moveSpeedMultiplier>
-		<fireDamageMultiplier>0.5</fireDamageMultiplier>
-		<damageMultiplier>2</damageMultiplier>
-		<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
-        <repairSounds>
-            <repairSound>shrikeRepair</repairSound>
-        </repairSounds>
-        <deathSounds>
-            <deathSound>shrikeDeath</deathSound>
-        </deathSounds>
-    </mod-append:race>
-	
-	<mod-append:race name="scrapper_engineer">
-		<maxHealth>125</maxHealth>
-        <oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
-        <canSuffocate>false</canSuffocate>
-		<repairSpeed>3</repairSpeed>
-		<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
-		<fireDamageMultiplier>0.75</fireDamageMultiplier>
-		<damageMultiplier>0.75</damageMultiplier>
-		<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
-        <repairSounds>
-            <repairSound>shrikeRepair</repairSound>
-        </repairSounds>
-        <deathSounds>
-            <deathSound>shrikeDeath</deathSound>
-        </deathSounds>
-    </mod-append:race>
+			<unlock variant="a" silent="false">
+				<type>4</type>
+			</unlock>
 
-	<mod-append:race name="scrapper_speed">
-		<maxHealth>125</maxHealth>
-        <oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
-        <canSuffocate>false</canSuffocate>
-		<repairSpeed>1.5</repairSpeed>
-		<moveSpeedMultiplier>2</moveSpeedMultiplier>
-		<fireDamageMultiplier>0.75</fireDamageMultiplier>
-        <repairSounds>
-            <repairSound>shrikeRepair</repairSound>
-        </repairSounds>
-        <deathSounds>
-            <deathSound>shrikeDeath</deathSound>
-        </deathSounds>
-    </mod-append:race>
-	
-	<mod-append:race name="scrapper_scavenger">
-		<maxHealth>150</maxHealth>
-        <oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
-        <canSuffocate>false</canSuffocate>
-		<repairSpeed>2</repairSpeed>
-		<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
-		<fireDamageMultiplier>0.5</fireDamageMultiplier>
-		<damageMultiplier>2</damageMultiplier>
-		<sabotageSpeedMultiplier>2.5</sabotageSpeedMultiplier>
-        <repairSounds>
-            <repairSound>shrikeRepair</repairSound>
-        </repairSounds>
-        <deathSounds>
-            <deathSound>shrikeDeath</deathSound>
-        </deathSounds>
-    </mod-append:race>
+		</mod-append:ship>
+		<mod-append:customShip name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD">
+			<crewLimit>16</crewLimit>
+			<hiddenAug>SHIP_LANIUS</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<trash_eater room="0" name="Trash Eater" />
+				<scrapper room="5" name="Zuggo" />
+				<scrapper room="2" name="Ash" />
+			</crew>
+			<customReactor maxLevel="50"/>
+		</mod-append:customShip>
+
+		<!--///////KESTREL MINER//////-->
+
+		<mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true" unused="true">
+
+			<arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
+			<unlock variant="a" silent="false">
+				<type>4</type>
+			</unlock>
+
+		</mod-append:ship>
+		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER">
+			<crewLimit>11</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<zoltan_peacekeeper room="11" name="RAPTOR" />
+				<engi room="0" name="TRACKER" />
+				<human room="13" name="Cheese" />
+				<mantis_free room="15" name="Lancer" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_2">
+			<crewLimit>11</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<zoltan_peacekeeper room="12" name="RAPTOR" />
+				<engi room="0" name="TRACKER" />
+				<human room="13" name="Cheese" />
+				<mantis_free room="6" name="Lancer" />
+				<rock_commando room="6" name="Lex" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_3">
+			<crewLimit>11</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<kiviekith room="11" name="Stolas" />
+				<kiviekith room="13" name="Alastor" />
+				<kiviekith room="0" name="Blitzo" />
+			</crew>
+		</mod-append:customShip>
 
 
-	<mod-append:race name="kiviekith">
-		<maxHealth>100</maxHealth>
-		<repairSpeed>1</repairSpeed>
-		<canFight>true</canFight>
-		<canRepair>true</canRepair>
-		<canSabotage>true</canSabotage>
-		<canSuffocate>true</canSuffocate>
-		<suffocationModifier>0.5</suffocationModifier>
-		<fireDamageMultiplier>0.5</fireDamageMultiplier>
-		<canMan>true</canMan>
-		<noClone>false</noClone>
-		<noSlot>false</noSlot>
-		<controllable>true</controllable>
-		<canPhaseThroughDoors>false</canPhaseThroughDoors>
-		<moveSpeedMultiplier>1</moveSpeedMultiplier>
-		<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
-		<damageMultiplier>1</damageMultiplier>
-		<damageTakenMultiplier>1</damageTakenMultiplier> 
-		<animBase>human</animBase>
-		<deathSounds>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-		</deathSounds>
-		<shootingSounds>
-			<shootingSound>crewLaser1</shootingSound>
-		</shootingSounds>
-		<repairSounds animSoundFrame="-1">
-			<repairSound>repair</repairSound>
-		</repairSounds>
-		<healSpeed>1.0</healSpeed>
-		<skills>
-			<piloting req="20"/>
-			<engines req="20"/>
-			<shields req="74"/>
-			<weapons req="74"/>
-			<repair req="26"/>
-			<combat req="14"/>
-		</skills>
-		<defaultSkillLevel>0</defaultSkillLevel>
-		<cloneLoseSkills>true</cloneLoseSkills>
-	</mod-append:race>
+		<!--///////TRASH REACTOR//////-->
 
-	<mod-append:race name="rsa_technician">
-		<repairSpeed>1.25</repairSpeed>
-		<canFight>true</canFight>
-		<canSabotage>true</canSabotage>
-		<suffocationModifier>0.83</suffocationModifier>
-		<fireDamageMultiplier>0.83</fireDamageMultiplier>
-		<passiveStatBoosts>  
-			<statBoost name="repairSpeed">
-				<boostType>FLAT</boostType>
-				<amount>0.50</amount>
-				<shipTarget>CURRENT_ROOM</shipTarget>
-				<crewTarget>ALLIES</crewTarget>
-				<affectsSelf>true</affectsSelf>
-				<maxStacks>1</maxStacks>
-				<whiteList>
-					<human_technician/>
-				</whiteList>
-				<systemRoomTarget>ALL</systemRoomTarget>
-				<systemList>
-					<engines/>
-					<pilot/>
-					<shields/>
-					<weapons/>
-					<drones/>
-				</systemList>
-			</statBoost>
-		</passiveStatBoosts>
-		<animBase>human</animBase>
-		<deathSounds>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>death1</deathSound>
-			<deathSound>death2</deathSound>
-			<deathSound>humanDeathSpecial</deathSound>
-		</deathSounds>
-		<skills>
-			<piloting req="13"/>
-			<engines req="13"/>
-			<shields req="50"/>
-			<weapons req="58"/>
-			<repair req="12"/>
-			<combat req="7"/>
-		</skills>
-		<powerEffect>
-			<cooldown>5</cooldown>
-			<jumpCooldown>full</jumpCooldown>
-			<powerSounds>
-				<powerSound>droneLaunch</powerSound>
-			</powerSounds>
-			<req type="enemy">
-				<enemyInRoom/>
-			</req>
-			<buttonText>DRONE</buttonText>
-			<tooltip>Ready: Spawns a temporary drone scout which can fight and sabotage but not repair or man systems. Lasts 15 seconds.</tooltip>
-			<cooldownColor r="185" g="185" b="185"/>
-			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-			<powerCharges>5</powerCharges>
-			<initialCharges>5</initialCharges>
-			<chargesPerJump>1</chargesPerJump>
-			<spawnCrew>
-				<number>1</number>
-				<race>rsa_technician_drone</race>
-				<lifetime>15</lifetime>
-				<statBoosts>
-					<statBoost name="noClone">
-						<boostType>SET</boostType>
-						<value>true</value>
-						<shipTarget>ALL</shipTarget>
-						<crewTarget>ALL</crewTarget>
-						<priority>999999</priority>
-					</statBoost>
-				</statBoosts>
-			</spawnCrew>
-		</powerEffect>
-	</mod-append:race>
+		<mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="false" c="false" unused="true">
 
-	<mod-append:race name="rsa_technician_drone">
-		<maxHealth>50</maxHealth>
-		<noSlot>true</noSlot>
-		<damageMultiplier>2.0</damageMultiplier>
-		<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
-		<moveSpeedMultiplier>2.0</moveSpeedMultiplier>
-		<resistsMindControl>true</resistsMindControl>	<!-- CURA event -->
-		<canMan>false</canMan>
-		<canRepair>false</canRepair>
-		<noClone>true</noClone>
-		<canBurn>false</canBurn>
-		<canSuffocate>false</canSuffocate>
-		<deathSounds>
-			<deathSound>explosion1</deathSound>
-			<deathSound>explosion2</deathSound>
-			<deathSound>explosion3</deathSound>
-			<deathSound>explosion4</deathSound>
-		</deathSounds>
-		<powerEffect>
-			<cooldown>0</cooldown>
-			<jumpCooldown>full</jumpCooldown>
-			<buttonText>EXPIRATION</buttonText>
-			<tooltip>You shouldn't see this. Shows how long is left in its lifespan.</tooltip>
-			<cooldownColor r="185" g="185" b="185"/>
-			<activateWhenReady>true</activateWhenReady>
-			<temporaryEffect>
-				<duration>25</duration>
-				<cooldownColor r="185" g="185" b="185"/>
+			<arrow variant="a" direction="down" tooltip="ship_unlock_victory" image="arrow_v_down.png" unlockedImage="arrow_v_down_on.png">PLAYER_SHIP_SDM</arrow>
+			<unlock variant="a" silent="false">
+				<type>2</type>
+
+				<shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
+			</unlock>
+		</mod-append:ship>
+
+		<mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR">
+			<crewLimit>12</crewLimit>
+			<customReactor maxLevel="50"/>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<human_soldier room="12" name="Kanyo" />
+				<zoltan_peacekeeper room="14" name="RAPTOR" />
+				<engi room="1" name="TRACKER" />
+				<human room="11" name="Cheese" />
+				<mantis_free room="3" name="Lancer" />
+				<scrapper room="6" name="01010011" />
+				<engi_defender room="2" name="Zenith" />
+			</crew>
+		</mod-append:customShip>
+
+		<!--///////SIZE DOESN'T MATTER//////-->
+
+		<mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
+
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
+			</unlock>
+		</mod-append:ship>
+
+		<mod-append:customShip name="PLAYER_SHIP_SDM">
+			<crewLimit>9</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<human_mfk room="0" name="Echo-Cap" />
+				<human_soldier room="0" name="Echo-1" />
+				<human_soldier room="0" name="Echo-2" />
+				<human_soldier room="0" name="Echo-3" />
+				<human_soldier room="0" name="Echo-4" />
+				<human_soldier room="0" name="Echo-5" />
+				<human_engineer room="7" name="Echo-Sup" />
+				<human_medic room="0" name="Echo-Med" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_SDM_2">
+			<crewLimit>11</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<rsa_engineer room="0" name="Dalvest" />
+			</crew>
+		</mod-append:customShip>
+
+		<!--///////ARMORED WASP//////-->
+
+		<mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
+		</mod-append:ship>
+
+		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP">
+			<crewLimit>9</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<trash_eater room="11" name="Trash Eater" />
+				<mantis_free room="0" name="Lancer" />
+				<human_legion_pyro room="1" name="Dalvest" />
+				<human room="5" name="Cheese" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_2">
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crewLimit>9</crewLimit>
+			<crew>
+				<human_soldier room="0" />
+				<rsa_technician room="11" />
+				<human_engineer room="1" name="Choosechee" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_3">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crewLimit>9</crewLimit>
+			<crew>
+				<human_mfk room="0" name="VHS" />
+			</crew>
+		</mod-append:customShip>
+
+		<!--///////COROSSUS//////-->
+
+		<mod-append:ship name="PLAYER_SHIP_COROSSUS" b="false" c="false" unused="true">
+		</mod-append:ship>
+
+		<mod-append:customShip name="PLAYER_SHIP_COROSSUS">
+			<crewLimit>12</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		</mod-append:customShip>
+
+		<!--///////RENT-A-FLAGSHIP//////-->
+
+		<mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
+		</mod-append:ship>
+
+		<mod-append:customShip name="PLAYER_SHIP_SLUGTON">
+			<crewLimit>20</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<slug_hektar room="0" name="SLUGTON" />
+				<mantis_free room="1" name="Businessmantis" />
+				<slug_hektar room="7" />
+				<slug_hektar room="6" name="ConMan" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_SLUGTON_2">
+			<crewLimit>20</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<kiviekith room="0" name="Krieg" />
+				<kiviekith room="6" name="Pietre" />
+				<rsa_engineer room="1" name="Diego" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_SLUGTON_3">
+			<crewLimit>20</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<human room="0" name="Cheese" />
+				<rsa_technician room="1" name="Nitron" />
+				<zoltan_peacekeeper room="7" name="RAPTOR" />
+				<mantis_free room="6" name="Lancer" />
+				<human_rebel room="6" />
+				<human_mfk room="6" />
+				<human_medic room="6" />
+			</crew>
+		</mod-append:customShip>
+
+		<!--///////EXTRA ELITE SHIP PACK//////-->
+
+		<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
+		</mod-append:ship>
+
+		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
+			<crewLimit>20</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<scrapper room="2" />
+				<scrapper room="9" name="Zog" />
+				<trash_eater room="0" name="Trash Eater" />
+				<scrapper_engineer room="7" />
+				<scrapper_heavy room="6" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
+			<crewLimit>10</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<kiviekith room="2" name="Orvech Vonor" />
+				<kiviekith room="7" />
+				<kiviekith room="0" name="Altan" />
+				<kiviekith room="15" />
+			</crew>
+		</mod-append:customShip>
+
+	</mod:findLike>
+
+
+
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	SHIP HANGAR ORDER
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	<mod:findLike type="ships">
+		<mod:findLike type="shipOrder">
+			<mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_TRASH_COMPACTOR_GOOD</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_TRASH_REACTOR</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_COROSSUS</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship>
+			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship>
+		</mod:findLike>
+	</mod:findLike>
+
+
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	CREW
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	<!--///////UNIQUE//////-->
+
+	<mod:findLike type="crew">
+		<mod-append:race name="trash_eater">
+			<maxHealth>200</maxHealth>
+			<controllable>true</controllable>
+			<canSuffocate>false</canSuffocate>
+			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+			<oxygenChangeSpeed>-0.525</oxygenChangeSpeed>
+			<animBase>lanius</animBase>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<powerEffect>
+				<cooldown>25</cooldown>
+				<jumpCooldown>full</jumpCooldown>
 				<powerSounds>
-					<powerSound>shieldsDown</powerSound>
+					<powerSound>lockdown1</powerSound>
+					<powerSound>lockdown2</powerSound>
 				</powerSounds>
-			</temporaryEffect>
-		</powerEffect>
-	</mod-append:race>
-</mod:findLike>
-<!-- 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-						AUGMENTS
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
--->
+				<req type="enemy">
+					<!--<enemyShip/>-->
+					<minHealth>15</minHealth>
+					<maxHealth>25</maxHealth>
+				</req>
+				<damage>1</damage>
+				<persDamage>-1</persDamage>
+				<sysDamage>-1</sysDamage>
+				<breachChance>10</breachChance>
+				<friendlyFire>true</friendlyFire>
+				<shipFriendlyFire>true</shipFriendlyFire>
+				<buttonText>COMPACT</buttonText>
+				<tooltip>Ready: Heal to full health, gain 50 health and deal 1 hull damage to the current room</tooltip>
+				<cooldownColor r="3" g="145" b="0"/>
+				<effectAnim>explosion_random</effectAnim>
+				<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+				<temporaryEffect>
+					<duration>15</duration>
+					<cooldownColor r="0" g="255" b="6"/>
+					<finishSounds>
+						<finishSound>mindControlEnd</finishSound>
+					</finishSounds>
+					<statBoosts>
+						<statBoost name="maxHealth">
+							<boostType>FLAT</boostType>
+							<amount>50</amount>
+							<shipTarget>CURRENT_ROOM</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>true</affectsSelf>
+							<priority>999999</priority>
+							<duration>15</duration>
+							<whiteList>
+								<trash_eater/>
+							</whiteList>
+						</statBoost>
+					</statBoosts>
+					<animSheet baseVisible="true">anointed_glow</animSheet>
+				</temporaryEffect>
+				<selfHealth>999</selfHealth>
+			</powerEffect>
+		</mod-append:race>
 
-<augments>
-	<aug name="LOCKED_SCRAP_ARMOR">
-		<function name="ROCK_ARMOR" value="0.25" useForReqs="false"/>
-		<function name="SCRAP_COLLECTOR" value="-0.25"/>
-		<locked/>
-    </aug>
-</augments>
-<mod:findLike type="events">
-<mod:findName name="LIST_CHECK_AUGMENTS">
-    <mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
-    <mod-append:name>COMPACTOR</mod-append:name>
-    <mod-append:name>SCRAP_COMPACTOR</mod-append:name>
-</mod:findName>
-</mod:findLike>
+		<!--///////GENERIC//////-->
 
-<!-- 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-						BOSSES
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
--->
+		<mod-append:race name="scrapper">
+			<maxHealth>125</maxHealth>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>1.5</repairSpeed>
+			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.75</fireDamageMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
 
-<bossShip>TC_TRASH_COMPACTOR1</bossShip>
-<bossShip>TC_TRASH_COMPACTOR2</bossShip>
-<bossShip>TC_TRASH_COMPACTOR3</bossShip>
-<bossShip>TC_TRASH_COMPACTOR4</bossShip>
-<bossShip>TC_TRASH_COMPACTOR5</bossShip>
-<bossShip>TC_TRASH_COMPACTOR6</bossShip>
-<bossShip>TC_TRASH_MINER</bossShip>
+		<mod-append:race name="scrapper_soldier">
+			<maxHealth>125</maxHealth>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>1</repairSpeed>
+			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.75</fireDamageMultiplier>
+			<damageMultiplier>2</damageMultiplier>
+			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
 
-<!-- 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-						SURGE
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
--->
+		<mod-append:race name="scrapper_heavy">
+			<maxHealth>200</maxHealth>
+			<oxygenChangeSpeed>-0.2625</oxygenChangeSpeed>
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>0.5</repairSpeed>
+			<moveSpeedMultiplier>0.25</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.5</fireDamageMultiplier>
+			<damageMultiplier>2</damageMultiplier>
+			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
 
-  <surgeDrones name="FLAK_CREATE">
-        <!--EASY-->
-        <drone difficulty="0" name="DEFENSE_1" count="40"/>
-        <!--MEDIUM-->
-        <drone difficulty="1" name="DEFENSE_1" count="40"/>
-        <!--HARD-->
-        <drone difficulty="2" name="DEFENSE_1" count="40"/>
-</surgeDrones>
+		<mod-append:race name="scrapper_engineer">
+			<maxHealth>125</maxHealth>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>3</repairSpeed>
+			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.75</fireDamageMultiplier>
+			<damageMultiplier>0.75</damageMultiplier>
+			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
+
+		<mod-append:race name="scrapper_speed">
+			<maxHealth>125</maxHealth>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>1.5</repairSpeed>
+			<moveSpeedMultiplier>2</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.75</fireDamageMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
+
+		<mod-append:race name="scrapper_scavenger">
+			<maxHealth>150</maxHealth>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>2</repairSpeed>
+			<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.5</fireDamageMultiplier>
+			<damageMultiplier>2</damageMultiplier>
+			<sabotageSpeedMultiplier>2.5</sabotageSpeedMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
+
+
+		<mod-append:race name="kiviekith">
+			<maxHealth>100</maxHealth>
+			<repairSpeed>1</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>true</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>true</canSuffocate>
+			<suffocationModifier>0.5</suffocationModifier>
+			<fireDamageMultiplier>0.5</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>1</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
+			<damageMultiplier>1</damageMultiplier>
+			<damageTakenMultiplier>1</damageTakenMultiplier>
+			<animBase>human</animBase>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>crewLaser1</shootingSound>
+			</shootingSounds>
+			<repairSounds animSoundFrame="-1">
+				<repairSound>repair</repairSound>
+			</repairSounds>
+			<healSpeed>1.0</healSpeed>
+			<skills>
+				<piloting req="20"/>
+				<engines req="20"/>
+				<shields req="74"/>
+				<weapons req="74"/>
+				<repair req="26"/>
+				<combat req="14"/>
+			</skills>
+			<defaultSkillLevel>0</defaultSkillLevel>
+			<cloneLoseSkills>true</cloneLoseSkills>
+		</mod-append:race>
+
+		<mod-append:race name="rsa_technician">
+			<repairSpeed>1.25</repairSpeed>
+			<canFight>true</canFight>
+			<canSabotage>true</canSabotage>
+			<suffocationModifier>0.83</suffocationModifier>
+			<fireDamageMultiplier>0.83</fireDamageMultiplier>
+			<passiveStatBoosts>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.50</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>true</affectsSelf>
+					<maxStacks>1</maxStacks>
+					<whiteList>
+						<human_technician/>
+					</whiteList>
+					<systemRoomTarget>ALL</systemRoomTarget>
+					<systemList>
+						<engines/>
+						<pilot/>
+						<shields/>
+						<weapons/>
+						<drones/>
+					</systemList>
+				</statBoost>
+			</passiveStatBoosts>
+			<animBase>human</animBase>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+				<deathSound>humanDeathSpecial</deathSound>
+			</deathSounds>
+			<skills>
+				<piloting req="13"/>
+				<engines req="13"/>
+				<shields req="50"/>
+				<weapons req="58"/>
+				<repair req="12"/>
+				<combat req="7"/>
+			</skills>
+			<powerEffect>
+				<cooldown>5</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<powerSounds>
+					<powerSound>droneLaunch</powerSound>
+				</powerSounds>
+				<req type="enemy">
+					<enemyInRoom/>
+				</req>
+				<buttonText>DRONE</buttonText>
+				<tooltip>Ready: Spawns a temporary drone scout which can fight and sabotage but not repair or man systems. Lasts 15 seconds.</tooltip>
+				<cooldownColor r="185" g="185" b="185"/>
+				<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+				<powerCharges>5</powerCharges>
+				<initialCharges>5</initialCharges>
+				<chargesPerJump>1</chargesPerJump>
+				<spawnCrew>
+					<number>1</number>
+					<race>rsa_technician_drone</race>
+					<lifetime>15</lifetime>
+					<statBoosts>
+						<statBoost name="noClone">
+							<boostType>SET</boostType>
+							<value>true</value>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALL</crewTarget>
+							<priority>999999</priority>
+						</statBoost>
+					</statBoosts>
+				</spawnCrew>
+			</powerEffect>
+		</mod-append:race>
+
+		<mod-append:race name="rsa_technician_drone">
+			<maxHealth>50</maxHealth>
+			<noSlot>true</noSlot>
+			<damageMultiplier>2.0</damageMultiplier>
+			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+			<moveSpeedMultiplier>2.0</moveSpeedMultiplier>
+			<resistsMindControl>true</resistsMindControl>	<!-- CURA event -->
+			<canMan>false</canMan>
+			<canRepair>false</canRepair>
+			<noClone>true</noClone>
+			<canBurn>false</canBurn>
+			<canSuffocate>false</canSuffocate>
+			<deathSounds>
+				<deathSound>explosion1</deathSound>
+				<deathSound>explosion2</deathSound>
+				<deathSound>explosion3</deathSound>
+				<deathSound>explosion4</deathSound>
+			</deathSounds>
+			<powerEffect>
+				<cooldown>0</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<buttonText>EXPIRATION</buttonText>
+				<tooltip>You shouldn't see this. Shows how long is left in its lifespan.</tooltip>
+				<cooldownColor r="185" g="185" b="185"/>
+				<activateWhenReady>true</activateWhenReady>
+				<temporaryEffect>
+					<duration>25</duration>
+					<cooldownColor r="185" g="185" b="185"/>
+					<powerSounds>
+						<powerSound>shieldsDown</powerSound>
+					</powerSounds>
+				</temporaryEffect>
+			</powerEffect>
+		</mod-append:race>
+	</mod:findLike>
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	AUGMENTS
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	<augments>
+		<aug name="LOCKED_SCRAP_ARMOR">
+			<function name="ROCK_ARMOR" value="0.25" useForReqs="false"/>
+			<function name="SCRAP_COLLECTOR" value="-0.25"/>
+			<locked/>
+		</aug>
+	</augments>
+	<mod:findLike type="events">
+		<mod:findName name="LIST_CHECK_AUGMENTS">
+			<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
+			<mod-append:name>COMPACTOR</mod-append:name>
+			<mod-append:name>SCRAP_COMPACTOR</mod-append:name>
+		</mod:findName>
+	</mod:findLike>
+
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	BOSSES
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	<bossShip>TC_TRASH_COMPACTOR1</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR2</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR3</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR4</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR5</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR6</bossShip>
+	<bossShip>TC_TRASH_MINER</bossShip>
+
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	SURGE
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	<surgeDrones name="FLAK_CREATE">
+		<!--EASY-->
+		<drone difficulty="0" name="DEFENSE_1" count="40"/>
+		<!--MEDIUM-->
+		<drone difficulty="1" name="DEFENSE_1" count="40"/>
+		<!--HARD-->
+		<drone difficulty="2" name="DEFENSE_1" count="40"/>
+	</surgeDrones>
 </FTL>

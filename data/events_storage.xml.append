@@ -1,675 +1,675 @@
 <FTL>
-<!-- AUGMENT USAGE MENU -->
+  <!-- AUGMENT USAGE MENU -->
 
-<mod:findName type="event" name="STORAGE_CHECK_AUG">
+  <mod:findName type="event" name="STORAGE_CHECK_AUG">
 
-<mod-append:choice req="SCRAP_TRANSMITTER">
-    <text>Contact the Trash Compactor.</text>
-    <event load="SUMMON_TC"/>
-</mod-append:choice>
+    <mod-append:choice req="SCRAP_TRANSMITTER">
+      <text>Contact the Trash Compactor.</text>
+      <event load="SUMMON_TC"/>
+    </mod-append:choice>
 
-<mod-append:choice req="COMPACTOR">
-    <text>(Compactor) Print a custom flak weapon.</text>
-    <event load="FLAK_FORGE"/>
-</mod-append:choice>
+    <mod-append:choice req="COMPACTOR">
+      <text>(Compactor) Print a custom flak weapon.</text>
+      <event load="FLAK_FORGE"/>
+    </mod-append:choice>
 
-<mod-append:choice req="SCRAP_COMPACTOR">
-    <text>(Scrap Compactor) Print a custom flak weapon.</text>
-	<event>
-	<text>You start the process...</text>
-	<item_modify>
-			<item type="scrap" min="-50" max="-50"/>
-		</item_modify>
-	<choice>
-	<text>Continue...</text>
-		<event load="SCRAP_COMPACT"/>
-		</choice>
-	</event>
-</mod-append:choice>
+    <mod-append:choice req="SCRAP_COMPACTOR">
+      <text>(Scrap Compactor) Print a custom flak weapon.</text>
+      <event>
+        <text>You start the process...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <choice>
+          <text>Continue...</text>
+          <event load="SCRAP_COMPACT"/>
+        </choice>
+      </event>
+    </mod-append:choice>
 
-<!-- Move other menus example options to the bottom -->
- <mod:findWithChildLike type="choice" child-type="text">
-    <mod:selector>Nevermind, do something else.</mod:selector>
-        <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+    <!-- Move other menus example options to the bottom -->
+    <mod:findWithChildLike type="choice" child-type="text">
+      <mod:selector>Nevermind, do something else.</mod:selector>
+      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
     </mod:findWithChildLike>
-</mod:findName>
+  </mod:findName>
 
-<mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
+  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
 
-<mod-append:choice req="trash_eater" blue="false" hidden="true">
-	<text>Look for The Trash Eater.</text>
-	<event load="STORAGE_CHECK_CREW_TRASH"/>
-</mod-append:choice>
+    <mod-append:choice req="trash_eater" blue="false" hidden="true">
+      <text>Look for The Trash Eater.</text>
+      <event load="STORAGE_CHECK_CREW_TRASH"/>
+    </mod-append:choice>
 
- <mod:findWithChildLike type="choice" child-type="text">
-    <mod:selector>Nevermind, do something else.</mod:selector>
-        <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+    <mod:findWithChildLike type="choice" child-type="text">
+      <mod:selector>Nevermind, do something else.</mod:selector>
+      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
     </mod:findWithChildLike>
-</mod:findName>
+  </mod:findName>
 
-<event name="FLAK_FORGE">
-	<text>You fire up the Compactor - it hums with power as you stare at the weapon select screen  it seems that you've got quite a few blueprints available. What would you like to create?</text>
-	<choice>
-		<text>Generic Flak Blueprints</text>
-		<event load="FLAK_FORGE_VANILLA"/>
-	</choice>
-	<choice>
-		<text>Trash Eater's Blueprints</text>
-		<event load="FLAK_FORGE_CUSTOM"/>
-	</choice>
-	<choice>
-		<text>Bomb Flak Blueprints</text>
-		<event load="FLAK_FORGE_BOMB"/>
-	</choice>
-	<choice>
-		<text>Flak-Based Drones</text>
-		<event load="FLAK_FORGE_DRONE"/>
-	</choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_TRASH">
-	<text>What do you want to do with The Trash Eater?</text>
-	<choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-	<choice hidden="true">
-		<text id="talk_to_crew"/>
-		<event load="STORAGE_CHECK_CREW_TRASH_TALK"/>
-	</choice>
-	<choice hidden="true">
-		<text id="scan_crew"/>
-		<event load="STORAGE_CHECK_CREW_TRASH_SCAN"/>
-	</choice>
-</event>
-<event name="STORAGE_CHECK_CREW_TRASH_SCAN">
-	<text>TRASH EATER DETAILS
-	SPECIES? [Lanius] SUBTYPE? [Yes]
-	Subtype Details: Unique
-	Stats: 200 Health, x1.5 sabotage damage, instantly drains oxygen
-	Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-	Can consume beacons when there is an opportunity for it. This will usually provide a large amount of additional scrap and has a 10% chance of compacting a crew, weapon or done, but has a 10% chance of backfiring and leaving you stranded, boosting the fleet by a jump.
-	Ability (25s cooldown, 15s duration): Does 1 hull damage, and creates a breach in the current room (can damage player ship as well). Heals back to full health immediately. Gains 50 health temporarily. 
-	Ability cooldown type: Refills on jump.</text>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
-<event name="STORAGE_CHECK_CREW_TRASH_TALK">
-	<text load="TEXT_CREW_TALK_TRASH"/>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
-<textList name="TEXT_CREW_TALK_TRASH">
-	<text>The Trash Eater is checking the ship for garbage to consume - trash to eat, if you will.</text>
-	<text>The Trash Eater is wondering how many tin cans one would need to create an entire ship from scratch - you fear the answer may be terrifying and decide not to push further.</text>
-	<text>The Trash Eater has finally said something in your language, but it sounds nonsensical - "Can I get it in beige?" What does that even mean?</text>
-	<text>You catch Trash Eater trying to eat flak. You fail at several attempts to stop them.</text>
-	<text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.</text>
-	<text>The Trash Eater insinuates that they would like to taste the piloting room of your ship - you convince him it has a really bad taste.</text>
-	<text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
-</textList>
-
-<mod:findName type="event" name="STORAGE_CHECK_JOB">
-
-<mod-append:choice req="trash_eater" blue="false" hidden="true">
-	<text>Send out the Trash Eater to compact some floating debris.</text>
-	<event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
-</mod-append:choice>
-
- <mod:findWithChildLike type="choice" child-type="text">
-    <mod:selector>Nevermind, do something else.</mod:selector>
-        <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-    </mod:findWithChildLike>
-</mod:findName>
-
-<eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
-	<event>
-		<text>SUCCESS</text>
-		<autoReward level="MED">scrap</autoReward>
-	</event>
-	<event>
-		<text>SUCCESS</text>
-		<autoReward level="MED">scrap</autoReward>
-	</event>
-	<event>
-		<text>SUCCESS</text>
-		<autoReward level="MED">scrap</autoReward>
-	</event>
-	<event>
-		<text>SUCCESS</text>
-		<autoReward level="MED">scrap</autoReward>
-	</event>
-	<event>
-		<text>SUCCESS</text>
-		<autoReward level="MED">scrap</autoReward>
-	</event>
-	<event>
-		<text>GREAT SUCCESS</text>
-		<event load="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE"/>
-	</event>
-	<event>
-		<text>FAIL</text>
-		<modifyPursuit amount="1"/>
-		<autoReward level="LOW">scrap</autoReward>  
-	</event>
-</eventList>
-
-<event name="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE">
-	<text>The Trash Eater returns victoriously - They've found some extra electronics and scrap around and asks you what you want it to make.</text>
-
-	<choice>
-	<text>Request that the Eater makes a weapon.</text>
-	<event>
-		<text>You got a weapon!</text>
-		<weapon name="TC_SCRAPFLAK"/>
-		<event/>
-	</event>
-	</choice>
-	<choice>
-	<text>Request that the Eater makes a drone.</text>
-	<event>
-		<text>You got a drone!</text>
-		<drone name="TC_COMBAT_GOLD"/>
-		<event/>
-	</event>
-	</choice>
-	<choice>
-	<text>Request that the Eater forges a Scrapper.</text>
-	<event>
-		<text>You got extra crew!</text>
-		<crew amount="1" class="scrapper" name="Scrapface"/>
-	</event>
-	</choice>
-	<choice>
-	<text>Disassemble it all into usable materials.</text>
-	<event>
-		<text>You take all of it - there's no such as problem as too much scrap.</text>
-		<autoReward level="HIGH">stuff</autoReward>
-	</event>
-	</choice>
-</event>
-	
-<mod:findName type = "event" name = "COMBAT_CHECK_REAL">
-
-<mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602" hidden="true" blue="true">
-	<text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it might damage your hull. [Costs: 10~]</text>
-        <event load="COMBAT_CHECK_RAMMING_SCRAP"/>
-</mod-append:choice>
-
-<!--<mod-append:choice req="FLAK_ARMOR" lvl="1" max_group="603" hidden="true" blue="true">
-	<text>Mek armour</text>
-	<event>
-	<triggeredEvent event="FLAK_ARMOR_CREATE" seeded="false" loops="0" thisFight="true" time="0"/>
-	</event>
-</mod-append:choice>-->
-
-<!-- Move other menus example options to the bottom -->
- <mod:findWithChildLike type="choice" child-type="text">
-	<mod:selector>Nevermind..</mod:selector>
-        <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-    </mod:findWithChildLike>
-</mod:findName>
-
-<event name="COMBAT_CHECK_RAMMING_SCRAP">
-	<text>Are you sure?</text>
-	<choice>
-	<text>Yes.</text>
-	<event>
-	<text>You divert full power to your engines, ramming into the enemy vessel as hard as you can.</text>
-		<item_modify>
-			<item type="scrap" min="-10" max="-10"/>
-		</item_modify>
-	<enemyDamage amount="5" system="engines" effect="fire"/>
-	<choice>
-		<text>Continue to the fight!</text>
-		<event/>
-	</choice>
-	</event>
-	</choice>
-	<choice>
-	<text>Nevermind.</text>
-	<event>
-		<loadEvent>COMBAT_CHECK_REAL</loadEvent>
-	</event>
-	</choice>
-</event>
-
-
-<mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
-	<mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" hidden="true">
-		<text>Look for your Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER"/>
-	</mod-append:choice>
-</mod:findName>
-
-<event name="STORAGE_CHECK_CREW_SCRAPPER">
-	<text>What do you want to do with your Scrapper?</text>
-	<choice>
-		<text id="talk_to_crew"/>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TALK"/>
-	</choice>
-	<choice hidden="true">
-		<text id="scan_crew"/>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_MENU"/>
-	</choice>
-	<choice>
-		<text>Add some scrap to your Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE"/>
-	</choice>
-	<choice>
-		    <text>Nevermind, do something else.</text>
-		    <event load="STORAGE_CHECK"/>
+  <event name="FLAK_FORGE">
+    <text>You fire up the Compactor - it hums with power as you stare at the weapon select screen  it seems that you've got quite a few blueprints available. What would you like to create?</text>
+    <choice>
+      <text>Generic Flak Blueprints</text>
+      <event load="FLAK_FORGE_VANILLA"/>
     </choice>
-</event>
+    <choice>
+      <text>Trash Eater's Blueprints</text>
+      <event load="FLAK_FORGE_CUSTOM"/>
+    </choice>
+    <choice>
+      <text>Bomb Flak Blueprints</text>
+      <event load="FLAK_FORGE_BOMB"/>
+    </choice>
+    <choice>
+      <text>Flak-Based Drones</text>
+      <event load="FLAK_FORGE_DRONE"/>
+    </choice>
+  </event>
 
-<!--<event name="STORAGE_CHECK_CREW_SCRAPPER_TALK_MENU"> SOMETHING I STARTED MAKING BUT THEN REALISED I WAS DUMB
-	<text>Who do you want to talk to?</text>
-	<choice req="scrapper" lvl="1" max_group="1" blue="false">
-		<text>Talk to your Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TALK"/>
-	</choice>
-	<choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
-		<text>Talk to your Scrapper Soldier.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SOLDIER_TALK"/>
-	</choice>
-	<choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
-		<text>Talk to your Scrapper Engineer.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_ENGINEER_TALK"/>
-	</choice>
-	<choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
-		<text>Talk to your Scrapper Speedster.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SPEED_TALK"/>
-	</choice>
-	<choice req="scrapper_heavy" lvl="1" max_group="5" blue="false">
-		<text>Talk to your Heavy Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_HEAVY_TALK"/>
-	</choice>
-	<choice req="scrapper_scavenger" lvl="1" max_group="6" blue="false">
-		<text>Talk to your Scavenger.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SCAVENGER_TALK"/>
-	</choice>
-</event>-->
+  <event name="STORAGE_CHECK_CREW_TRASH">
+    <text>What do you want to do with The Trash Eater?</text>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+    <choice hidden="true">
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_TRASH_TALK"/>
+    </choice>
+    <choice hidden="true">
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_TRASH_SCAN"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_TRASH_SCAN">
+    <text>TRASH EATER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Unique
+      Stats: 200 Health, x1.5 sabotage damage, instantly drains oxygen
+      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+      Can consume beacons when there is an opportunity for it. This will usually provide a large amount of additional scrap and has a 10% chance of compacting a crew, weapon or done, but has a 10% chance of backfiring and leaving you stranded, boosting the fleet by a jump.
+      Ability (25s cooldown, 15s duration): Does 1 hull damage, and creates a breach in the current room (can damage player ship as well). Heals back to full health immediately. Gains 50 health temporarily.
+      Ability cooldown type: Refills on jump.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_TRASH_TALK">
+    <text load="TEXT_CREW_TALK_TRASH"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_TRASH">
+    <text>The Trash Eater is checking the ship for garbage to consume - trash to eat, if you will.</text>
+    <text>The Trash Eater is wondering how many tin cans one would need to create an entire ship from scratch - you fear the answer may be terrifying and decide not to push further.</text>
+    <text>The Trash Eater has finally said something in your language, but it sounds nonsensical - "Can I get it in beige?" What does that even mean?</text>
+    <text>You catch Trash Eater trying to eat flak. You fail at several attempts to stop them.</text>
+    <text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.</text>
+    <text>The Trash Eater insinuates that they would like to taste the piloting room of your ship - you convince him it has a really bad taste.</text>
+    <text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
+  </textList>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_TALK">
-	<text load="TEXT_CREW_TALK_SCRAPPER"/>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
-<textList name="TEXT_CREW_TALK_SCRAPPER">
-	<text>Your Scrapper notices a magazine with pictures of rusty locomotives - they immediately take it and run with it to their quarters.</text>
-	<text>Your Scrapper is making weird noises - you fear it's a mating call, then realize it's just humming a tune.</text>
-	<text>The Scrapper is trying to hide a broken coffee maker machine in their quarters, but given that it's bigger than anything else in the room, it's standing out too much.</text>
-	<text>The Scrapper is wondering what he would need to eat in order to become a Scavenger - you have no clue what to tell them.</text>
-</textList>
+  <mod:findName type="event" name="STORAGE_CHECK_JOB">
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_MENU">
-	<text>Who do you want to scan?</text>
-	<choice req="scrapper" lvl="1" max_group="1" blue="false">
-		<text>Scan your Scrapper</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_BASE"/>
-	</choice>
-	<choice req="scrapper_soldier" lvl="1" max_group="1" blue="false">
-		<text>Scan your Scrapper Soldier</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SOLDIER"/>
-	</choice>
-	<choice req="scrapper_engineer" lvl="1" max_group="2" blue="false">
-		<text>Scan your Scrapper Engineer</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_ENGINEER"/>
-	</choice>
-	<choice req="scrapper_speed" lvl="1" max_group="3" blue="false">
-		<text>Scan your Scrapper Speedster</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SPEED"/>
-	</choice>
-	<choice req="scrapper_heavy" lvl="1" max_group="4" blue="false">
-		<text>Scan your Heavy Scrapper</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_HEAVY"/>
-	</choice>
-	<choice req="scrapper_scavenger" lvl="1" max_group="5" blue="false">
-		<text>Scan your Scrapper Scavenger</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SCAVENGER"/>
-	</choice>
-	<choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
-</choice>
-</event>
+    <mod-append:choice req="trash_eater" blue="false" hidden="true">
+      <text>Send out the Trash Eater to compact some floating debris.</text>
+      <event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
+    </mod-append:choice>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_BASE">
-	<text>SCRAPPER DETAILS
-	SPECIES? [Lanius] SUBTYPE? [Yes]
-	Subtype Details: Genetic, Standard
-	Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage. 
-	Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-	Can be upgraded by adding scrap to its body. </text>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
+    <mod:findWithChildLike type="choice" child-type="text">
+      <mod:selector>Nevermind, do something else.</mod:selector>
+      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+    </mod:findWithChildLike>
+  </mod:findName>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SOLDIER">
-	<text>SCRAPPER DETAILS
-	SPECIES? [Lanius] SUBTYPE? [Yes]
-	Subtype Details: Genetic, Standard
-	Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage. 
-	Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-	Can be upgraded by adding scrap to its body. </text>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
+  <eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
+    <event>
+      <text>SUCCESS</text>
+      <autoReward level="MED">scrap</autoReward>
+    </event>
+    <event>
+      <text>SUCCESS</text>
+      <autoReward level="MED">scrap</autoReward>
+    </event>
+    <event>
+      <text>SUCCESS</text>
+      <autoReward level="MED">scrap</autoReward>
+    </event>
+    <event>
+      <text>SUCCESS</text>
+      <autoReward level="MED">scrap</autoReward>
+    </event>
+    <event>
+      <text>SUCCESS</text>
+      <autoReward level="MED">scrap</autoReward>
+    </event>
+    <event>
+      <text>GREAT SUCCESS</text>
+      <event load="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE"/>
+    </event>
+    <event>
+      <text>FAIL</text>
+      <modifyPursuit amount="1"/>
+      <autoReward level="LOW">scrap</autoReward>
+    </event>
+  </eventList>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_ENGINEER">
-	<text>SCRAPPER DETAILS
-	SPECIES? [Lanius] SUBTYPE? [Yes]
-	Subtype Details: Genetic, Standard
-	Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage. 
-	Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-	Can be upgraded by adding scrap to its body. </text>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
+  <event name="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE">
+    <text>The Trash Eater returns victoriously - They've found some extra electronics and scrap around and asks you what you want it to make.</text>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SPEED">
-	<text>SCRAPPER DETAILS
-	SPECIES? [Lanius] SUBTYPE? [Yes]
-	Subtype Details: Genetic, Standard
-	Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage. 
-	Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-	Can be upgraded by adding scrap to its body. </text>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
+    <choice>
+      <text>Request that the Eater makes a weapon.</text>
+      <event>
+        <text>You got a weapon!</text>
+        <weapon name="TC_SCRAPFLAK"/>
+        <event/>
+      </event>
+    </choice>
+    <choice>
+      <text>Request that the Eater makes a drone.</text>
+      <event>
+        <text>You got a drone!</text>
+        <drone name="TC_COMBAT_GOLD"/>
+        <event/>
+      </event>
+    </choice>
+    <choice>
+      <text>Request that the Eater forges a Scrapper.</text>
+      <event>
+        <text>You got extra crew!</text>
+        <crew amount="1" class="scrapper" name="Scrapface"/>
+      </event>
+    </choice>
+    <choice>
+      <text>Disassemble it all into usable materials.</text>
+      <event>
+        <text>You take all of it - there's no such as problem as too much scrap.</text>
+        <autoReward level="HIGH">stuff</autoReward>
+      </event>
+    </choice>
+  </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_HEAVY">
-	<text>SCRAPPER DETAILS
-	SPECIES? [Lanius] SUBTYPE? [Yes]
-	Subtype Details: Genetic, Standard
-	Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage. 
-	Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-	Can be upgraded by adding scrap to its body. </text>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
+  <mod:findName type = "event" name = "COMBAT_CHECK_REAL">
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SCAVENGER">
-	<text>SCRAPPER DETAILS
-	SPECIES? [Lanius] SUBTYPE? [Yes]
-	Subtype Details: Genetic, Standard
-	Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage. 
-	Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-	Can be upgraded by adding scrap to its body. </text>
-	<choice>
-		<text>Continue...</text>
-		<event load="STORAGE_CHECK"/>
-	</choice>
-</event>
+    <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602" hidden="true" blue="true">
+        <text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it might damage your hull. [Costs: 10~]</text>
+        <event load="COMBAT_CHECK_RAMMING_SCRAP"/>
+      </mod-append:choice>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE">
-	<text>You've got a Scrapper you can upgrade - with some basic tools and tools, you may upgrade a Scrapper into one of the following:</text>
-	<choice req="scrapper" lvl="1" max_group="1" blue="false">
-		<text>Make a Scrapper Soldier</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
-	</choice>
-	<choice req="scrapper" lvl="1" max_group="2" blue="false">
-		<text>Make a Scrapper Engineer</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
-	</choice>
-	<choice req="scrapper" lvl="1" max_group="3" blue="false">
-		<text>Make a Scrapper Speedster</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED"/>
-	</choice>
-	<choice req="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE" lvl="1" max_group="4" blue="false">
-		<text>Make a Heavy Scrapper</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU"/>
-	</choice>
-	<choice req="SCAVENGER_REQ" lvl="1" max_group="5" blue="false">
-		<text>Make a Scrapper Scavenger</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU"/>
-	</choice>
-	<choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
-</choice>
-</event>
+    <!--<mod-append:choice req="FLAK_ARMOR" lvl="1" max_group="603" hidden="true" blue="true">
+      <text>Mek armour</text>
+      <event>
+        <triggeredEvent event="FLAK_ARMOR_CREATE" seeded="false" loops="0" thisFight="true" time="0"/>
+      </event>
+    </mod-append:choice>-->
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU">
-	<text>Who do you want to upgrade?</text>
-	<choice req="scrapper" lvl="1" max_group="1" blue="false">
-		<text>Upgrade your Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE"/>
-	</choice>
-	<choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
-		<text>Upgrade your Scrapper Soldier.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER"/>
-	</choice>
-	<choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
-		<text>Upgrade your Scrapper Engineer.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER"/>
-	</choice>
-	<choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
-		<text>Upgrade your Scrapper Speedster.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED"/>
-	</choice>
-	<choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
-</choice>
-</event>
+    <!-- Move other menus example options to the bottom -->
+    <mod:findWithChildLike type="choice" child-type="text">
+      <mod:selector>Nevermind..</mod:selector>
+      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+    </mod:findWithChildLike>
+  </mod:findName>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU">
-	<text>Who do you want to upgrade?</text>
-	<choice req="scrapper" lvl="1" max_group="1" blue="false">
-		<text>Upgrade your Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE"/>
-	</choice>
-	<choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
-		<text>Upgrade your Scrapper Soldier.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER"/>
-	</choice>
-	<choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
-		<text>Upgrade your Scrapper Engineer.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER"/>
-	</choice>
-	<choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
-		<text>Upgrade your Scrapper Speedster.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED"/>
-	</choice>
-	<choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
-</choice>
-</event>
+  <event name="COMBAT_CHECK_RAMMING_SCRAP">
+    <text>Are you sure?</text>
+    <choice>
+      <text>Yes.</text>
+      <event>
+        <text>You divert full power to your engines, ramming into the enemy vessel as hard as you can.</text>
+        <item_modify>
+          <item type="scrap" min="-10" max="-10"/>
+        </item_modify>
+        <enemyDamage amount="5" system="engines" effect="fire"/>
+        <choice>
+          <text>Continue to the fight!</text>
+          <event/>
+        </choice>
+      </event>
+    </choice>
+    <choice>
+      <text>Nevermind.</text>
+      <event>
+        <loadEvent>COMBAT_CHECK_REAL</loadEvent>
+      </event>
+    </choice>
+  </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
-	<text>Will add some scrap to the fists.
-[x1.5 repair -> x1.0 repair speed 
-x1.0 damage -> x2.0 damage]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-25" max="-25"/>
-			</item_modify>
-			<transformRace class="scrapper">scrapper_soldier</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
-	<text>Will add some scrap to the hands.
-[x1.5 repair -> x3.0 repair speed 
-x1.0 damage -> x0.75 damage
-x1.0 sabotage speed -> x1.5 sabotage speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-25" max="-25"/>
-			</item_modify>
-			<transformRace class="scrapper">scrapper_engineer</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
+    <mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" hidden="true">
+      <text>Look for your Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER"/>
+    </mod-append:choice>
+  </mod:findName>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
-	<text>Will add some scrap to the legs.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-25" max="-25"/>
-			</item_modify>
-			<transformRace class="scrapper">scrapper_speed</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER">
+    <text>What do you want to do with your Scrapper?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_TALK"/>
+    </choice>
+    <choice hidden="true">
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_MENU"/>
+    </choice>
+    <choice>
+      <text>Add some scrap to your Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE">
-	<text>Will cover the body in a thick layer of scrap.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<transformRace class="scrapper">scrapper_heavy</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <!--<event name="STORAGE_CHECK_CREW_SCRAPPER_TALK_MENU"> SOMETHING I STARTED MAKING BUT THEN REALISED I WAS DUMB
+    <text>Who do you want to talk to?</text>
+    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+      <text>Talk to your Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_TALK"/>
+    </choice>
+    <choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
+      <text>Talk to your Scrapper Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SOLDIER_TALK"/>
+    </choice>
+    <choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
+      <text>Talk to your Scrapper Engineer.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_ENGINEER_TALK"/>
+    </choice>
+    <choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
+      <text>Talk to your Scrapper Speedster.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SPEED_TALK"/>
+    </choice>
+    <choice req="scrapper_heavy" lvl="1" max_group="5" blue="false">
+      <text>Talk to your Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_HEAVY_TALK"/>
+    </choice>
+    <choice req="scrapper_scavenger" lvl="1" max_group="6" blue="false">
+      <text>Talk to your Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAVENGER_TALK"/>
+    </choice>
+  </event>-->
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER">
-	<text>Will cover the body in a thick layer of scrap.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<transformRace class="scrapper_soldier">scrapper_heavy</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_TALK">
+    <text load="TEXT_CREW_TALK_SCRAPPER"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_SCRAPPER">
+    <text>Your Scrapper notices a magazine with pictures of rusty locomotives - they immediately take it and run with it to their quarters.</text>
+    <text>Your Scrapper is making weird noises - you fear it's a mating call, then realize it's just humming a tune.</text>
+    <text>The Scrapper is trying to hide a broken coffee maker machine in their quarters, but given that it's bigger than anything else in the room, it's standing out too much.</text>
+    <text>The Scrapper is wondering what he would need to eat in order to become a Scavenger - you have no clue what to tell them.</text>
+  </textList>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER">
-	<text>Will cover the body in a thick layer of scrap.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<transformRace class="scrapper_engineer">scrapper_heavy</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_MENU">
+    <text>Who do you want to scan?</text>
+    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+      <text>Scan your Scrapper</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_BASE"/>
+    </choice>
+    <choice req="scrapper_soldier" lvl="1" max_group="1" blue="false">
+      <text>Scan your Scrapper Soldier</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SOLDIER"/>
+    </choice>
+    <choice req="scrapper_engineer" lvl="1" max_group="2" blue="false">
+      <text>Scan your Scrapper Engineer</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_ENGINEER"/>
+    </choice>
+    <choice req="scrapper_speed" lvl="1" max_group="3" blue="false">
+      <text>Scan your Scrapper Speedster</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SPEED"/>
+    </choice>
+    <choice req="scrapper_heavy" lvl="1" max_group="4" blue="false">
+      <text>Scan your Heavy Scrapper</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_HEAVY"/>
+    </choice>
+    <choice req="scrapper_scavenger" lvl="1" max_group="5" blue="false">
+      <text>Scan your Scrapper Scavenger</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SCAVENGER"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED">
-	<text>Will cover the body in a thick laer of scrap.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<transformRace class="scrapper_speed">scrapper_heavy</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_BASE">
+    <text>SCRAPPER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Genetic, Standard
+      Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
+      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+      Can be upgraded by adding scrap to its body. </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE">
-	<text>Will cover the body in a layer of elite scrap.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<transformRace class="scrapper">scrapper_scavenger</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SOLDIER">
+    <text>SCRAPPER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Genetic, Standard
+      Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
+      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+      Can be upgraded by adding scrap to its body. </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER">
-	<text>Will cover the body in a layer of elite scrap.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<transformRace class="scrapper_soldier">scrapper_scavenger</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_ENGINEER">
+    <text>SCRAPPER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Genetic, Standard
+      Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
+      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+      Can be upgraded by adding scrap to its body. </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER">
-	<text>Will cover the body in a layer of elite scrap.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<transformRace class="scrapper_engineer">scrapper_scavenger</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SPEED">
+    <text>SCRAPPER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Genetic, Standard
+      Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
+      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+      Can be upgraded by adding scrap to its body. </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED">
-	<text>Will cover the body in a layer of elite scrap.
-[x0.9 movement speed -> x2.0 movement speed]</text>
-	<choice hidden="true">
-		<text>Do it.</text>
-		<event>
-			<text>Your Scrapper undergoes the transformation...</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<transformRace class="scrapper_speed">scrapper_scavenger</transformRace>
-		</event>
-	</choice>
-	<choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_HEAVY">
+    <text>SCRAPPER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Genetic, Standard
+      Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
+      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+      Can be upgraded by adding scrap to its body. </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SCAVENGER">
+    <text>SCRAPPER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Genetic, Standard
+      Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
+      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+      Can be upgraded by adding scrap to its body. </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE">
+    <text>You've got a Scrapper you can upgrade - with some basic tools and tools, you may upgrade a Scrapper into one of the following:</text>
+    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+      <text>Make a Scrapper Soldier</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="2" blue="false">
+      <text>Make a Scrapper Engineer</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="3" blue="false">
+      <text>Make a Scrapper Speedster</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED"/>
+    </choice>
+    <choice req="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE" lvl="1" max_group="4" blue="false">
+      <text>Make a Heavy Scrapper</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU"/>
+    </choice>
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="5" blue="false">
+      <text>Make a Scrapper Scavenger</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU">
+    <text>Who do you want to upgrade?</text>
+    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+      <text>Upgrade your Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE"/>
+    </choice>
+    <choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
+      <text>Upgrade your Scrapper Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER"/>
+    </choice>
+    <choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
+      <text>Upgrade your Scrapper Engineer.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER"/>
+    </choice>
+    <choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
+      <text>Upgrade your Scrapper Speedster.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU">
+    <text>Who do you want to upgrade?</text>
+    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+      <text>Upgrade your Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE"/>
+    </choice>
+    <choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
+      <text>Upgrade your Scrapper Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER"/>
+    </choice>
+    <choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
+      <text>Upgrade your Scrapper Engineer.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER"/>
+    </choice>
+    <choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
+      <text>Upgrade your Scrapper Speedster.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
+    <text>Will add some scrap to the fists.
+      [x1.5 repair -> x1.0 repair speed
+      x1.0 damage -> x2.0 damage]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-25" max="-25"/>
+        </item_modify>
+        <transformRace class="scrapper">scrapper_soldier</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
+    <text>Will add some scrap to the hands.
+      [x1.5 repair -> x3.0 repair speed
+      x1.0 damage -> x0.75 damage
+      x1.0 sabotage speed -> x1.5 sabotage speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-25" max="-25"/>
+        </item_modify>
+        <transformRace class="scrapper">scrapper_engineer</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
+    <text>Will add some scrap to the legs.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-25" max="-25"/>
+        </item_modify>
+        <transformRace class="scrapper">scrapper_speed</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE">
+    <text>Will cover the body in a thick layer of scrap.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper">scrapper_heavy</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER">
+    <text>Will cover the body in a thick layer of scrap.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_soldier">scrapper_heavy</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER">
+    <text>Will cover the body in a thick layer of scrap.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_engineer">scrapper_heavy</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED">
+    <text>Will cover the body in a thick laer of scrap.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_speed">scrapper_heavy</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE">
+    <text>Will cover the body in a layer of elite scrap.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper">scrapper_scavenger</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER">
+    <text>Will cover the body in a layer of elite scrap.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_soldier">scrapper_scavenger</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER">
+    <text>Will cover the body in a layer of elite scrap.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_engineer">scrapper_scavenger</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED">
+    <text>Will cover the body in a layer of elite scrap.
+      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <choice hidden="true">
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_speed">scrapper_scavenger</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
 </FTL>

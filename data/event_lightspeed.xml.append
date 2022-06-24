@@ -1,0 +1,195 @@
+
+<FTL><!--appending to Inferno-Core (uncomment later)-->
+	<!--<mod:findName type="event" name="FMCORE_ATLAS_EQUIPMENT" panic="true">
+		<mod-append:choice req="TCC_CAN_CALL_COMPACTOR" blue="false">
+			<text>Contact the Trash Compactor.</text>
+			<event>
+				<loadEvent>SUMMON_TC</loadEvent>
+				<variable name="tcc_called_compactor" op="set" val="1"/>
+			</event>
+		</mod-append:choice>
+		<mod-append:choice hidden="true" req="tcc_called_compactor" blue="false">
+			<text>You have already contacted the Trash Compactor.</text>
+			<event load="OPTION_INVALID"/>
+		</mod-append:choice>
+	</mod:findName>
+  <mod:findName type="event" name="LOAD_ATLAS_MARKER">
+  	<mod-append:variable name="tcc_called_compactor" op="set" val="0"/>
+  </mod:findName>
+  <mod:findName type="event" name="FMCORE_SPAWNER">
+		<mod-append:queueEvent>TC_SPAWNER</mod-append:queueEvent>
+	</mod:findName>-->
+</FTL>
+<FTL><!--Calling the Trash Compactor-->
+  <!--<event name="SUMMON_TC">
+    <text>Contact the Trash Compactor? (WARNING - HIGH RISK, HIGH REWARD)</text>
+    <choice req="TC_DEAD" lvl="0" max_group="3" hidden="false" blue="false">
+      <text>Yes.</text>
+      <event>
+        <text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location in the next sector. </text>
+        <item_modify>
+          <item type="scrap" min="-10" max="-10"/>
+          <item type="fuel" min="-1" max="-1"/>
+        </item_modify>
+        <variable name="tc_call_marker" op="add" val="1"/>
+        <choice>
+          <text>Continue...</text>
+          <event>
+            <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
+          </event>
+        </choice>
+      </event>
+    </choice>
+    <choice req="TC_DEAD" lvl="1" max_group="3" hidden="false" blue="false">
+      <text>Yes.</text>
+      <event>
+        <text>You use some fuel and a long range transmission missile as well as your scrap. Shortly after, your map recieves coordinates of a ship's location - most likely the Scrappers from earlier. What do they want from you? </text>
+        <item_modify>
+          <item type="scrap" min="-25" max="-25"/>
+          <item type="fuel" min="-1" max="-1"/>
+          <item type="missiles" min="-1" max="-1"/>
+        </item_modify>
+        <variable name="tc_call_marker" op="add" val="1"/>
+        <choice>
+          <text>Continue...</text>
+          <event>
+            <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
+          </event>
+        </choice>
+      </event>
+    </choice>
+    <choice  req="TC_DEAD" lvl="2" max_group="3" hidden="false" blue="false">
+      <text>Yes.</text>
+      <event>
+        <text>You send out a heavy cargo drone with the scrap. There must be more of these Scrappers, because you received another signal! Prey for you to hunt... </text>
+        <item_modify>
+          <item type="scrap" min="-30" max="-30"/>
+          <item type="drones" min="-2" max="-2"/>
+          <item type="fuel" min="-1" max="-1"/>
+        </item_modify>
+        <variable name="tc_call_marker" op="add" val="1"/>
+        <choice>
+          <text>Continue...</text>
+          <event>
+            <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
+          </event>
+        </choice>
+      </event>
+    </choice>
+    <choice  req="TC_DEAD" lvl="3" max_group="3" hidden="false" blue="false">
+      <text>Yes.</text>
+      <event>
+        <text>You teleport as much as scrap as you can using the transmitter. The same song and dance as before - signal, Scrappers, murder. Fun. </text>
+        <item_modify>
+          <item type="scrap" min="-45" max="-45"/>
+          <item type="fuel" min="-3" max="-3"/>
+        </item_modify>
+        <variable name="tc_call_marker" op="add" val="1"/>
+        <choice>
+          <text>Continue...</text>
+          <event>
+            <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
+          </event>
+        </choice>
+      </event>
+    </choice>
+    <choice  req="TC_DEAD" lvl="4" max_group="3" hidden="false" blue="false">
+      <text>Yes.</text>
+      <event>
+        <text>You manage to create and fully fuel a scrap transport pod, attracting the attention of a heavily armed, highly dangerous Scrapper ship. </text>
+        <item_modify>
+          <item type="scrap" min="-65" max="-65"/>
+          <item type="fuel" min="-3" max="-3"/>
+          <item type="missiles" min="-2" max="-2"/>
+          <item type="drones" min="-2" max="-2"/>
+        </item_modify>
+        <variable name="tc_call_marker" op="add" val="1"/>
+        <choice>
+          <text>Continue...</text>
+          <event>
+            <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
+          </event>
+        </choice>
+      </event>
+    </choice>
+    <choice  req="TC_DEAD" lvl="5" max_group="3" hidden="false" blue="false">
+      <text>Yes.</text>
+      <event>
+        <text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location - most likely the Scrapper ship from earlier. </text>
+        <item_modify>
+          <item type="scrap" min="-95" max="-95"/>
+          <item type="fuel" min="-7" max="-7"/>
+        </item_modify>
+        <variable name="tc_call_marker" op="add" val="1"/>
+        <choice>
+          <text>Continue...</text>
+          <event>
+            <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
+          </event>
+        </choice>
+      </event>
+    </choice>
+    <choice  req="TC_DEAD" lvl="6" max_group="3" hidden="false" blue="false">
+      <text>Yes.</text>
+      <event>
+        <text>You send out a signal displaying the scrap using the transmitter. But nobody came.</text>
+        <choice>
+          <text>Continue...</text>
+          <event>
+            <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
+          </event>
+        </choice>
+      </event>
+    </choice>
+    <choice>
+      <text>Nevermind.</text>
+      <event>
+        <variable name="fm_called_forgemaster" op="set" val="0"/>
+        <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
+      </event>
+    </choice>
+  </event>
+  <event name="TC_SPAWNER">
+    <loadEventList>
+      <event name="TC_SPAWNER_2" req="tc_call_marker">
+        <loadEventList first="true" default="TRUENOTHING">
+          <event load="TRUENOTHING" req="SEC SECRET_SYLVAN"/>
+          <event load="TRUENOTHING" req="SEC SECRET_TWISTED"/>
+          <event req="TC_DEAD" lvl="6">
+            <variable name="tc_call_marker" op="set" val="0"/>
+          </event>
+          <event req="TC_DEAD" lvl="5">
+            <quest event="ENCOUNTER_TC6"/>
+            <variable name="tc_call_marker" op="add" val="-1"/>
+            <loadEvent>TRUENOTHING</loadEvent>
+          </event>
+          <event req="TC_DEAD" lvl="4">
+            <quest event="ENCOUNTER_TC5"/>
+            <variable name="tc_call_marker" op="add" val="-1"/>
+            <loadEvent>TRUENOTHING</loadEvent>
+          </event>
+          <event req="TC_DEAD" lvl="3">
+            <quest event="ENCOUNTER_TC4"/>
+            <variable name="tc_call_marker" op="add" val="-1"/>
+            <loadEvent>TRUENOTHING</loadEvent>
+          </event>
+          <event req="TC_DEAD" lvl="2">
+            <quest event="ENCOUNTER_TC3"/>
+            <variable name="tc_call_marker" op="add" val="-1"/>
+            <loadEvent>TRUENOTHING</loadEvent>
+          </event>
+          <event req="TC_DEAD" lvl="1">
+            <quest event="ENCOUNTER_TC2"/>
+            <variable name="tc_call_marker" op="add" val="-1"/>
+            <loadEvent>TRUENOTHING</loadEvent>
+          </event>
+          <event>
+            <quest event="ENCOUNTER_TC1"/>
+            <variable name="tc_call_marker" op="add" val="-1"/>
+            <loadEvent>TRUENOTHING</loadEvent>
+          </event>
+        </loadEventList>
+      </event>
+    </loadEventList>
+  </event>-->
+</FTL>

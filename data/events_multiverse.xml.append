@@ -1,10 +1,10 @@
 <FTL>
-	
-	<!--    
+
+	<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           TRASH COMPACTOR SUMMON EVENT
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
--->
+	-->
 
 	<event name="SUMMON_TC">
 		<text>Contact the Trash Compactor? (WARNING - HIGH RISK, HIGH REWARD)</text>
@@ -93,7 +93,7 @@
 			<event load="STORAGE_CHECK"/>
 		</choice>
 	</event>
-	
+
 	<FTL> <!--DESTROYED-->
 	<event name="TC1_DESTROY">
 		<text> Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else... </text>
@@ -102,7 +102,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC1_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC1_CREW">
 		<text>Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else... </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -110,7 +110,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC1_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC2_DESTROY">
 		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -118,7 +118,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC2_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC2_CREW">
 		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -126,7 +126,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC2_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC3_DESTROY">
 		<text>This time, they've alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -134,7 +134,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC3_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC3_CREW">
 		<text>This time, they've alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -142,7 +142,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC3_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC4_DESTROY">
 		<text>The Lanius ship is now torn to shreds and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!". You also manage to scoop up some scrap from the enemy ship.</text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -151,7 +151,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC4_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC4_CREW">
 		<text>The Lanius ship is now silent and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!". You also manage to scoop up some scrap from the enemy ship.</text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -160,7 +160,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC4_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TCM_DESTROY">
 		<text>The Kestrel Miner is now in pieces. Whatever the crew's motivations or allegiances are, they're stardust now. The Trash Compactor hails you and, surprsingly enough, gives you a reward of your choice. </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -193,7 +193,7 @@
 		</event>
 		</choice>
 	</event>
-	
+
 	<event name="TCM_CREW">
 		<text>The Kestrel Miner is now silent, and so is the abomination they carried on-board. Whatever the crew's motivations or allegiances are, they're stardust now. The Trash Compactor hails you and, surprsingly enough, gives you a reward of your choice. </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -226,7 +226,7 @@
 		</event>
 		</choice>
 	</event>
-	
+
 	<event name="TC5_DESTROY">
 		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -234,7 +234,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC5_DEAD</hiddenAug>
 	</event>
-	
+
 	<event  name="TC5_CREW">
 		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -242,7 +242,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC5_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC6_DESTROY">
 		<text>The Trash Compactor has been laid to rest amongst the stars; the wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -251,7 +251,7 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC6_DEAD</hiddenAug>
 	</event>
-	
+
 	<event name="TC6_CREW">
 		<text>The Trash Compactor is now empty, forever. The wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -262,11 +262,11 @@
 	</event>
 
 	</FTL>
-	
+
 	<FTL> <!--GET FLAKS-->
 	<event name="FLAK_FORGE_VANILLA">
 	<text>What Flak weapon do you want to print?</text>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Flak I</text>
 		<event>
@@ -277,7 +277,7 @@
 			<weapon name="SHOTGUN_1"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Flak II</text>
 		<event>
@@ -288,7 +288,7 @@
 			<weapon name="SHOTGUN_2"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Flak III</text>
 		<event>
@@ -299,7 +299,7 @@
 			<weapon name="SHOTGUN_3"/>
 		</event>
 	</choice>
-								
+
 	<choice hidden="false" blue="false">
 		<text>Flak IV</text>
 		<event>
@@ -310,16 +310,16 @@
 			<weapon name="SHOTGUN_4"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="true">
 		<text>Page 2</text>
 		<event load="FLAK_FORGE_VANILLA_2"/>
 	</choice>
 	</event>
-	
+
 	<event name="FLAK_FORGE_VANILLA_2">
 	<text>Choose flak:</text>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Chain Flak</text>
 		<event>
@@ -330,7 +330,7 @@
 			<weapon name="SHOTGUN_CHAIN"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Charge Flak</text>
 		<event>
@@ -341,7 +341,7 @@
 			<weapon name="SHOTGUN_CHARGE"/>
 		</event>
 	</choice>
-		
+
 	<choice hidden="false" blue="false">
 		<text>Pre-Flak</text>
 		<event>
@@ -352,7 +352,7 @@
 			<weapon name="SHOTGUN_INSTANT"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Fire Flak</text>
 		<event>
@@ -369,10 +369,10 @@
 		<event load="FLAK_FORGE_VANILLA_3"/>
 	</choice>
 	</event>
-	
+
 	<event name="FLAK_FORGE_VANILLA_3">
 	<text>Choose flak:</text>
-									
+
 	<choice hidden="false" blue="false">
 		<text>Ion Flak</text>
 		<event>
@@ -383,7 +383,7 @@
 			<weapon name="SHOTGUN_ION"/>
 		</event>
 	</choice>
-						
+
 	<choice hidden="false" blue="false">
 		<text>Toxic Flak</text>
 		<event>
@@ -394,7 +394,7 @@
 			<weapon name="SHOTGUN_TOXIC"/>
 		</event>
 	</choice>
-		
+
 	<choice hidden="false" blue="false">
 		<text>Toggle Fire Flak</text>
 		<event>
@@ -405,7 +405,7 @@
 			<weapon name="SHOTGUN_TOGGLE_FIRE"/>
 		</event>
 	</choice>
-		
+
 	<choice hidden="false" blue="false">
 		<text>Toggle Ion Flak</text>
 		<event>
@@ -422,10 +422,10 @@
 		<event load="FLAK_FORGE_VANILLA_4"/>
 	</choice>
 	</event>
-	
+
 	<event name="FLAK_FORGE_VANILLA_4">
 	<text>Choose flak:</text>
-							
+
 	<choice hidden="false" blue="false">
 		<text>Toggle Toxic Flak</text>
 		<event>
@@ -436,7 +436,7 @@
 			<weapon name="SHOTGUN_TOGGLE_TOXIC"/>
 		</event>
 	</choice>
-				
+
 	<choice hidden="false" blue="false">
 		<text>Gold Flak</text>
 		<event>
@@ -447,7 +447,7 @@
 			<weapon name="SHOTGUN_GOLD"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Gold III Flak</text>
 		<event>
@@ -458,7 +458,7 @@
 			<weapon name="SHOTGUN_GOLD_3"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Steel Flak</text>
 		<event>
@@ -475,10 +475,10 @@
 	<event load="FLAK_FORGE_VANILLA_5"/>
 	</choice>
 	</event>
-		
+
 	<event name="FLAK_FORGE_VANILLA_5">
 	<text>Choose flak:</text>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Crystal Flak</text>
 		<event>
@@ -489,7 +489,7 @@
 			<weapon name="CRYSTAL_SHOTGUN"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Elite Crystal Flak</text>
 		<event>
@@ -506,7 +506,7 @@
 		<event load="STORAGE_CHECK"/>
 	</choice>
 	</event>
-	
+
 	<event name="FLAK_FORGE_CUSTOM">
 	<text>Choose flak:</text>
 
@@ -520,7 +520,7 @@
 			<weapon name="TC_SHOTGUN_BOMB"/>
 		</event>
 	</choice>
-		
+
 	<choice hidden="false" blue="false">
 		<text>Unstable</text>
 		<event>
@@ -531,7 +531,7 @@
 			<weapon name="TC_SHOTGUN_UNSTABLE"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Lead</text>
 		<event>
@@ -553,16 +553,16 @@
 			<weapon name="TC_SHOTGUN_GOLD"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="true">
 		<text>Page 2</text>
 		<event load="FLAK_FORGE_CUSTOM_2"/>
 	</choice>
 	</event>
-	
+
 	<event name="FLAK_FORGE_CUSTOM_2">
 	<text>Choose flak:</text>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Battery</text>
 		<event>
@@ -573,7 +573,7 @@
 			<weapon name="TC_SHOTGUN_BATTERY"/>
 		</event>
 	</choice>
-		
+
 	<choice hidden="false" blue="true">
 		<text>OMEGA</text>
 		<event>
@@ -584,7 +584,7 @@
 			<weapon name="TC_SHOTGUN_OMEGA"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="true">
 		<text>Flakking Hell</text>
 		<event>
@@ -595,19 +595,19 @@
 			<weapon name="TC_SHOTGUN_HELL"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="true">
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK"/>
 	</choice>
 	</event>
 	</FTL>
-	
+
 	<FTL>
 
 <event name="FLAK_FORGE_BOMB">
 	<text>What Bomb Flak weapon do you want to print?</text>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Bomb Flak I</text>
 		<event>
@@ -618,7 +618,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_1"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Bomb Flak II</text>
 		<event>
@@ -629,7 +629,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_2"/>
 		</event>
 	</choice>
-			
+
 	<choice hidden="false" blue="false">
 		<text>Bomb Flak III</text>
 		<event>
@@ -640,7 +640,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_3"/>
 		</event>
 	</choice>
-								
+
 	<choice hidden="false" blue="false">
 		<text>Bomb Flak IV</text>
 		<event>
@@ -651,7 +651,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_4"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="true">
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK"/>
@@ -660,7 +660,7 @@
 
 <event name="FLAK_FORGE_DRONE">
 	<text>Choose flak:</text>
-	
+
 	<choice hidden="false" blue="false">
 		<text>AMP</text>
 		<event>
@@ -671,7 +671,7 @@
 			<drone name="FLAK_1_AMP2"/>
 		</event>
 	</choice>
-		
+
 	<choice hidden="false" blue="true">
 		<text>Gold</text>
 		<event>
@@ -682,7 +682,7 @@
 			<drone name="TC_COMBAT_GOLD"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="true">
 		<text>Unstable</text>
 		<event>
@@ -693,14 +693,14 @@
 			<drone name="TC_COMBAT_UNSTABLE"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="true">
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK"/>
 	</choice>
 	</event>
 	</FTL>
-	
+
 	<FTL>
 	<eventList name="SCRAP_COMPACT">
 		<event load="SCRAP_COMPACT_FAIL"/>
@@ -709,30 +709,30 @@
 		<event load="SCRAP_COMPACT_SUCCESS_BETTER"/>
 		<event load="SCRAP_COMPACT_SUCCESS_BETTER2"/>
 	</eventList>
-	
+
 	<event name="SCRAP_COMPACT_FAIL">
 	<text>It failed</text>
 	<item_modify>
 		<item type="scrap" min="30" max="40"/>
 	</item_modify>
 	</event>
-	
+
 	<event name="SCRAP_COMPACT_SUCCESS">
 	<text>A flak weapon has been created</text>
 	<weapon name="SHOTGUN_2"/>
 	</event>
-	
+
 	<event name="SCRAP_COMPACT_SUCCESS_BETTER">
 	<text>A new, strange flak weapon has been created</text>
 	<weapon name="TC_SHOTGUN_HELL"/>
 	</event>
-	
+
 	<event name="SCRAP_COMPACT_SUCCESS_BETTER2">
 	<text>A new, strange flak weapon has been created</text>
 	<weapon name="TC_SCRAPFLAK"/>
 	</event>
 	</FTL>
-	
+
 <event name="ENCOUNTER_TC1">
 <text>You've arrived at the coordinates, only to be met with the same Lanius ship from before. This looks like a trap, but they aren't attacking you, nor are their weapons on... yet.</text>
 <choice req="TC1_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
