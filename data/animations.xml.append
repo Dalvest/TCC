@@ -602,7 +602,6 @@
 
 <!--///////////////FUNNY TRASH DUDE///////////////-->
 
-<FTL>
 <animSheet name="trash_eater" w="280" h="490" fw="35" fh="35">people/trash_eater_base.png</animSheet>
 <anim name="trash_eater_clone">
 	<sheet>trash_eater</sheet>
@@ -724,9 +723,8 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
-</FTL>
 
-<!--///////////////SCRAPPER///////////////-->
+<!--///////////////SCRAPPER BASE///////////////-->
 
 <animSheet name="scrapper" w="280" h="490" fw="35" fh="35">people/scrapper_base.png</animSheet>
 <anim name="scrapper_clone">
@@ -850,7 +848,7 @@
 	<time>1</time>
 </anim>
 
-<!--///////////////scrapper_soldier///////////////-->
+<!--///////////////SCRAPPER SOLDIER///////////////-->
 
 <animSheet name="scrapper_soldier" w="280" h="490" fw="35" fh="35">people/scrapper_soldier_base.png</animSheet>
 <anim name="scrapper_soldier_clone">
@@ -974,7 +972,7 @@
 	<time>1</time>
 </anim>
 
-<!--///////////////scrapper_heavy///////////////-->
+<!--///////////////SCRAPPER HEAVY///////////////-->
 
 <animSheet name="scrapper_heavy" w="280" h="490" fw="35" fh="35">people/scrapper_heavy_base.png</animSheet>
 <anim name="scrapper_heavy_clone">
@@ -1098,7 +1096,7 @@
 	<time>1</time>
 </anim>
 
-<!--///////////////scrapper_engineer///////////////-->
+<!--///////////////SCRAPPER ENGINEER///////////////-->
 
 <animSheet name="scrapper_engineer" w="280" h="490" fw="35" fh="35">people/scrapper_engineer_base.png</animSheet>
 <anim name="scrapper_engineer_clone">
@@ -1222,7 +1220,7 @@
 	<time>1</time>
 </anim>
 
-<!--///////////////scrapper_speed///////////////-->
+<!--///////////////SCRAPPER SPEEDSTER///////////////-->
 
 <animSheet name="scrapper_speed" w="280" h="490" fw="35" fh="35">people/scrapper_speed_base.png</animSheet>
 <anim name="scrapper_speed_clone">
@@ -1346,7 +1344,7 @@
 	<time>1</time>
 </anim>
 
-<!--///////////////scrapper_scavenger///////////////-->
+<!--///////////////SCRAPPER SCAVENGER///////////////-->
 
 <animSheet name="scrapper_scavenger" w="280" h="490" fw="35" fh="35">people/scrapper_scavenger_base.png</animSheet>
 <anim name="scrapper_scavenger_clone">
@@ -1470,6 +1468,7 @@
 	<time>1</time>
 </anim>
 
+<!--///////////////RSA KIVIE GRUNT//////////////-->
 
 <animSheet name="kiviekith" w="315" h="455" fw="35" fh="35">people/kiviekith_base.png</animSheet>
 <anim name="kiviekith_clone">
@@ -1613,43 +1612,39 @@
 	<time>1</time>
 </anim>
 
-<!-- 
-*********************************************************************************************************
-                   RSA TECHNICIAN
-*********************************************************************************************************
--->
-<FTL>
-	<animSheet name="rsa_technician" w="315" h="455" fw="35" fh="35">people/rsa_technician_base.png</animSheet>
-	<anim name="rsa_technician_clone">
-		<sheet>rsa_technician</sheet>
-		<desc length="6" x="0" y="2"/>
-		<time>0.75</time>
-	</anim>
-	<anim name="rsa_technician_death_right">
-		<sheet>rsa_technician</sheet>
-		<desc length="5" x="3" y="0"/>
-		<time>0.75</time>
-	</anim>
-	<anim name="rsa_technician_death_left">
-		<sheet>rsa_technician</sheet>
-		<desc length="5" x="0" y="2"/>
-		<time>0.75</time>
-	</anim>
-	<anim name="rsa_technician_walk_down">
-		<sheet>rsa_technician</sheet>
-		<desc length="4" x="0" y="12"/>
-		<time>1.0</time>
-	</anim>
-	<anim name="rsa_technician_walk_right">
-		<sheet>rsa_technician</sheet>
-		<desc length="4" x="4" y="12"/>
-		<time>1.0</time>
-	</anim>
-	<anim name="rsa_technician_walk_up">
-		<sheet>rsa_technician</sheet>
-		<desc length="4" x="0" y="11"/>
-		<time>1.0</time>
-	</anim>
+<!--///////////////RSA TECHNICIAN AND DRONE//////////////-->
+
+
+<animSheet name="rsa_technician" w="315" h="455" fw="35" fh="35">people/rsa_technician_base.png</animSheet>
+<anim name="rsa_technician_clone">
+	<sheet>rsa_technician</sheet>
+	<desc length="6" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rsa_technician_death_right">
+	<sheet>rsa_technician</sheet>
+	<desc length="5" x="3" y="0"/>
+	<time>0.75</time>
+</anim>
+<anim name="rsa_technician_death_left">
+	<sheet>rsa_technician</sheet>
+	<desc length="5" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rsa_technician_walk_down">
+	<sheet>rsa_technician</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>	</anim>
+<anim name="rsa_technician_walk_right">
+	<sheet>rsa_technician</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rsa_technician_walk_up">
+	<sheet>rsa_technician</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
 	<anim name="rsa_technician_walk_left">
 		<sheet>rsa_technician</sheet>
 		<desc length="4" x="4" y="11"/>

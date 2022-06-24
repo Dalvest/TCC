@@ -1101,7 +1101,7 @@
 	<type>LASER</type>
 	<title>'RAPTOR' LMG Autocannon</title>
 	<short>R.L.AC.</short>
-	<desc>It may surprise you, but RAPTOR fought during the Federation-Mantis war. He welded his LMG to the side of his ship - and it worked.</desc>
+	<desc>It may surprise you, but RAPTOR fought during the Federation-Mantis war. He welded his LMG to the side of his ship - and it worked surprsingly well.</desc>
 	<tooltip>4 shot 1 damage weapon, 45% chance to not use ammo, 10% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>45</freeMissileChance>
@@ -1307,8 +1307,9 @@
 </weaponBlueprint>
 
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->
+<!--/////// yes, they clobber stuff, but i swear it's fine! //////-->
 
-<!--<weaponBlueprint name="SHOTGUN_INSTANT">
+<weaponBlueprint name="SHOTGUN_INSTANT">
 	<type>BURST</type>
 	<flavorType>Preemptive Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
@@ -1551,7 +1552,7 @@
 	</missSounds>
 	<weaponArt>instant_revolver</weaponArt> 
 	<iconImage>ion_chain</iconImage>
-</weaponBlueprint> -->
+</weaponBlueprint>
 
 <!--◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
                AUGMENTS
@@ -1602,7 +1603,7 @@
 
 <augBlueprint name="TC1_DEAD">
     <title>Trash Compactor 1 is dead.</title>
-    <desc>How can you see this</desc>
+    <desc>DALVY WAS HERE (real)</desc>
     <cost>10</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
@@ -1625,8 +1626,8 @@
 </augBlueprint>
 
 <augBlueprint name="TC4_DEAD">
-    <title>Trash Compactor 4 is dead.</title>
-    <desc>How can you see this</desc>
+    <title>Trash Compactor 4 is dead...</title>
+    <desc>...clearly a skill issue.</desc>
     <cost>10</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
@@ -1634,7 +1635,7 @@
 
 <augBlueprint name="TC5_DEAD">
     <title>Trash Compactor 5 is dead.</title>
-    <desc>How can you see this</desc>
+    <desc>Never gonna give you up</desc>
     <cost>10</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
@@ -1642,7 +1643,7 @@
 
 <augBlueprint name="TC6_DEAD">
     <title>Trash Compactor 6 is dead.</title>
-    <desc>How can you see this</desc>
+    <desc>Never gonna let you down</desc>
     <cost>10</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
@@ -1659,7 +1660,7 @@
 
 <augBlueprint name="FLAK_ARMOR">
 	<title>Flak Plating</title>
-	<desc>hello</desc>
+	<desc>This highly unstable plating is actively falling apart. Interesting, eh?</desc>
 	<cost>10</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -3249,7 +3250,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
     </mod:findLike>
 </mod:findName>
 
-<!--/////////////////////CREW//////////////////////////-->
+<!--    
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          CREW
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
 
 <!--///////UNIQUE//////-->
 
@@ -3266,7 +3271,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
-<!--///////GENERIC//////-->
+<!--///////GENERIC - SCRAPPERS//////-->
 
 <crewBlueprint name="scrapper">
 	<title>Scrapper</title>  
@@ -3369,6 +3374,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
+<!--///////GENERIC - RSA//////-->
+
 <crewBlueprint name="kiviekith">
 	<desc>After years of genetic tampering, these former humans are forced to wear their bulky suits in order to survive. The RSA gladly accepted these misfits into their ranks.</desc>
 	<title>RSA Kivie Grunt</title>
@@ -3403,7 +3410,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </crewBlueprint>
 
 <crewBlueprint name="rsa_technician_drone">
-	<desc>Do I really have to say it...? Alright. YOU SHOULD NEVER SEE THIS.</desc>
+	<desc>A very cool drone! I think.</desc>
 	<cost>40</cost>
 	<title>RSA Scout Drone</title>
 	<short>RSA Scout Drone</short>
