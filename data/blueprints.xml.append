@@ -827,6 +827,9 @@
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<image>tc_singularity</image>
+	<launchSounds>
+		<sound>Singularity</sound>
+	</launchSounds>
 	<explosion>tc_singularity</explosion>
 	<weaponArt>tc_singularity_projector</weaponArt>
 </weaponBlueprint>
@@ -857,7 +860,7 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="1" fake="false">missile_burst</projectile>
+		<projectile count="1" fake="false">missile_bio</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>smallMissile1</sound>
@@ -945,7 +948,7 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="1" fake="false">missile_flak</projectile>
+		<projectile count="1" fake="false">missile_heavy_3</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>smallMissile1</sound>
@@ -1098,7 +1101,7 @@
 	<type>LASER</type>
 	<title>'RAPTOR' LMG Autocannon</title>
 	<short>R.L.AC.</short>
-	<desc>It may surprise you, but RAPTOR fought during the Federation-Mantis war. He welded his LMG to the side of his ship - and it worked.</desc>
+	<desc>It may surprise you, but RAPTOR fought during the Federation-Mantis war. He welded his LMG to the side of his ship - and it worked surprsingly well.</desc>
 	<tooltip>4 shot 1 damage weapon, 45% chance to not use ammo, 10% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>45</freeMissileChance>
@@ -1237,6 +1240,12 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<image>tc_tear_gas</image>
+	<launchSounds>
+		<sound>Lance_AP</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>tear_gas</sound>
+	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
 		<sound>hitShield2</sound>
@@ -1301,6 +1310,7 @@
 </weaponBlueprint>
 
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->
+<!--/////// yes, they clobber stuff, but i swear it's fine! //////-->
 
 <weaponBlueprint name="SHOTGUN_INSTANT">
 	<type>BURST</type>
@@ -1596,7 +1606,7 @@
 
 <augBlueprint name="TC1_DEAD">
     <title>Trash Compactor 1 is dead.</title>
-    <desc>How can you see this</desc>
+    <desc>DALVY WAS HERE (real)</desc>
     <cost>10</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
@@ -1619,8 +1629,8 @@
 </augBlueprint>
 
 <augBlueprint name="TC4_DEAD">
-    <title>Trash Compactor 4 is dead.</title>
-    <desc>How can you see this</desc>
+    <title>Trash Compactor 4 is dead...</title>
+    <desc>...clearly a skill issue.</desc>
     <cost>10</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
@@ -1628,7 +1638,7 @@
 
 <augBlueprint name="TC5_DEAD">
     <title>Trash Compactor 5 is dead.</title>
-    <desc>How can you see this</desc>
+    <desc>Never gonna give you up</desc>
     <cost>10</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
@@ -1636,7 +1646,7 @@
 
 <augBlueprint name="TC6_DEAD">
     <title>Trash Compactor 6 is dead.</title>
-    <desc>How can you see this</desc>
+    <desc>Never gonna let you down</desc>
     <cost>10</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
@@ -1653,7 +1663,7 @@
 
 <augBlueprint name="FLAK_ARMOR">
 	<title>Flak Plating</title>
-	<desc>hello</desc>
+	<desc>This highly unstable plating is actively falling apart. Interesting, eh?</desc>
 	<cost>10</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -1672,7 +1682,7 @@
 
 <weaponBlueprint name="TC_DRONE_GOLD_COMBAT">
 	<type>BURST</type>
-	<title>Dense Gold Flak</title>
+	<title>Gold Flak Drone</title>
 	<drone_targetable>1</drone_targetable>
 	<damage>1</damage>
 	<radius>50</radius>
@@ -1710,7 +1720,7 @@
 
 <weaponBlueprint name="TC_DRONE_UNSTABLE_COMBAT">
 	<type>BURST</type>
-	<title>Dense Gold Flak</title>
+	<title>Dense Metal Flak</title>
 	<drone_targetable>1</drone_targetable>
 	<damage>1</damage>
 	<radius>300</radius>
@@ -1738,6 +1748,78 @@
 		<sound>hitShield1</sound>
 		<sound>hitShield2</sound>
 		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_shotgun_gold</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_DRONE_HEAVY_COMBAT">
+	<type>BURST</type>
+	<title>Heavy Flak Drone</title>
+	<drone_targetable>1</drone_targetable>
+	<damage>4</damage>
+	<radius>100</radius>
+	<shots>1</shots>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+	</projectiles>
+	<spin>360</spin>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>7</breachChance>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_shotgun_gold</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_DRONE_BOMB_COMBAT">
+	<type>BURST</type>
+	<title>Bomb Flak Drone</title>
+	<drone_targetable>1</drone_targetable>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<radius>50</radius>
+	<shots>1</shots>
+	<projectiles>
+		<projectile count="5" fake="false">bomb1</projectile>
+	</projectiles>
+	<spin>720</spin>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>smallExplosion</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>miss</sound>
@@ -1776,8 +1858,44 @@
     <speed>75</speed>
     <cost>100</cost>
     <bp>3</bp>
-    <droneImage>drone_flak</droneImage>
+    <droneImage>unstable_drone</droneImage>
     <weaponBlueprint>TC_DRONE_UNSTABLE_COMBAT</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="TC_COMBAT_HEAVY">
+    <type>COMBAT</type>
+    <tip>tip_flak</tip>
+    <title>Heavy Flak Combat Drone</title>
+    <short>Heavy Flak</short>
+    <desc>Heavy Flak Drone</desc>
+    <power>3</power>
+    <cooldown>1</cooldown>
+    <dodge>0</dodge>
+    <speed>10</speed>
+    <cost>100</cost>
+    <bp>3</bp>
+    <droneImage>heavy_flak_drone</droneImage>
+    <weaponBlueprint>TC_DRONE_HEAVY_COMBAT</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="TC_COMBAT_BOMB">
+    <type>COMBAT</type>
+    <tip>tip_flak</tip>
+    <title>Unstable Flak Combat Drone</title>
+    <short>Unstable Flak</short>
+    <desc>Unstable Flak Drone</desc>
+    <power>3</power>
+    <cooldown>3</cooldown>
+    <dodge>0</dodge>
+    <speed>75</speed>
+    <cost>100</cost>
+    <bp>3</bp>
+    <droneImage>bomb_flak_drone</droneImage>
+    <weaponBlueprint>TC_DRONE_BOMB_COMBAT</weaponBlueprint>
     <rarity>0</rarity>
     <iconImage>combat</iconImage>
 </droneBlueprint>
@@ -3140,7 +3258,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
     </mod:findLike>
 </mod:findName>
 
-<!--/////////////////////CREW//////////////////////////-->
+<!--    
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          CREW
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
 
 <!--///////UNIQUE//////-->
 
@@ -3157,7 +3279,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
-<!--///////GENERIC//////-->
+<!--///////GENERIC - SCRAPPERS//////-->
 
 <crewBlueprint name="scrapper">
 	<title>Scrapper</title>
@@ -3260,6 +3382,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
+<!--///////GENERIC - RSA//////-->
+
 <crewBlueprint name="kiviekith">
 	<desc>After years of genetic tampering, these former humans are forced to wear their bulky suits in order to survive. The RSA gladly accepted these misfits into their ranks.</desc>
 	<title>RSA Kivie Grunt</title>
@@ -3294,7 +3418,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </crewBlueprint>
 
 <crewBlueprint name="rsa_technician_drone">
-	<desc>Do I really have to say it...? Alright. YOU SHOULD NEVER SEE THIS.</desc>
+	<desc>A very cool drone! I think.</desc>
 	<cost>40</cost>
 	<title>RSA Scout Drone</title>
 	<short>RSA Scout Drone</short>

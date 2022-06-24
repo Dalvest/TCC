@@ -227,7 +227,7 @@
 	<crew>
 		<scrapper_engineer room="3"/>
 		<scrapper_speed room="5"/>
-		<scrapper_soldier room="11"/>
+		<scrapper_heavy room="11"/>
 		<scrapper room="4"/>
     </crew>
 	<crewCount amount="1" max="1" class="trash_eater" />
@@ -265,7 +265,7 @@
 		<scrapper_engineer room="5"/>
 		<scrapper_speed room="11"/>
 		<scrapper_speed room="9"/>
-		<scrapper_soldier room="9"/>
+		<scrapper_heavy room="9"/>
         <scrapper_scavenger room="0"/>
         <trash_eater room="9" name="Trash Eater"/>
     </crew>
@@ -292,7 +292,7 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="0" count="6">
 		<weapon name="TC_SHOTGUN_LEAD" />
-		<weapon name="TC_SHOTGUN_GOLD" />
+		<weapon name="TC_UNSCRAPFLAK" />
 		<weapon name="TC_BOMB_SHOTGUN_3" />
 	</weaponList>
 	<droneList drones="0" count="0" />
@@ -302,12 +302,9 @@
 	<crew>
 		<scrapper_heavy room="12"/>
 		<scrapper_speed room="13"/>
-		<scrapper_soldier room="5"/>
-		<scrapper_soldier room="8"/>
+		<scrapper_heavy room="5"/>
 	
 		<scrapper_engineer room="3"/>
-		<scrapper_heavy room="7"/>
-		<scrapper_soldier room="7"/>
 		
 		<scrapper_scavenger room="7"/>
 		<scrapper_engineer room="12"/>
@@ -319,7 +316,7 @@
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_COMPACTOR5" layout="tc_trash_compactor5" img="tc_trash_compactor5">
-	<class>Trash Compactor</class>
+	<class>(Shiny) Trash Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
 	<systemList>
@@ -339,7 +336,6 @@
 	<weaponList missiles="0" count="6">
 		<weapon name="TC_SHOTGUN_BOMB" />
 		<weapon name="TC_SHOTGUN_UNSTABLE" />
-		<weapon name="TC_SHOTGUN_LEAD" />
 		<weapon name="TC_SHOTGUN_GOLD" />
 	</weaponList>
 	<droneList drones="999" count="1">
@@ -349,13 +345,11 @@
 	<maxPower amount="60" />
 	<crewLimit>14</crewLimit>
 	<crew>
-		<scrapper_soldier room="12"/>
+		<scrapper_heavy room="12"/>
 		<scrapper_speed room="13"/>
-		<scrapper_speed room="11"/>
 		<scrapper_speed room="10"/>
 		<scrapper_engineer room="10"/>
 	
-		<scrapper_soldier room="7"/>
 		<scrapper_heavy room="8"/>
 		<scrapper_engineer room="3"/>
 		<scrapper_engineer room="5"/>
@@ -368,7 +362,7 @@
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_COMPACTOR6" layout="tc_trash_compactor6" img="tc_trash_compactor6">
-	<class>Trash Compactor</class>
+	<class>Universe 0 Trash Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
 	<systemList>
@@ -388,11 +382,9 @@
 	<weaponList missiles="0" count="8">
 		<weapon name="TC_BOMB_SHOTGUN_4" />
 		<weapon name="TC_SHOTGUN_BOMB" />
-		<weapon name="TC_SHOTGUN_GOLD" />
 		<weapon name="TC_SHOTGUN_UNSTABLE" />
 	</weaponList>
 	<droneList drones="999" count="2">
-		<drone name="TC_COMBAT_UNSTABLE" />
 		<drone name="TC_COMBAT_GOLD" />
 	</droneList>
 	<health amount="15" />
@@ -403,18 +395,15 @@
 		<scrapper_scavenger room="10"/>
 		<scrapper_scavenger room="10"/>
 	
-		<scrapper_scavenger room="7"/>
 		<scrapper_scavenger room="8"/>
 		<scrapper_scavenger room="3"/>
 		<scrapper_scavenger room="5"/>
 		
-		<scrapper_scavenger room="7"/>
 		<scrapper_scavenger room="5"/>
 		<scrapper_scavenger room="6"/>
 		<scrapper_scavenger room="1"/>
        
         <trash_eater room="7" name="Trash Eater"/>
-		<scrapper_scavenger room="7"/>
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
 	<boardingAI>invasion</boardingAI>

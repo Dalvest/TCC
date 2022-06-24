@@ -127,76 +127,77 @@
   </mod:findName>
 
   <eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
-    <event>
-      <text>SUCCESS</text>
-      <autoReward level="MED">scrap</autoReward>
-    </event>
-    <event>
-      <text>SUCCESS</text>
-      <autoReward level="MED">scrap</autoReward>
-    </event>
-    <event>
-      <text>SUCCESS</text>
-      <autoReward level="MED">scrap</autoReward>
-    </event>
-    <event>
-      <text>SUCCESS</text>
-      <autoReward level="MED">scrap</autoReward>
-    </event>
-    <event>
-      <text>SUCCESS</text>
-      <autoReward level="MED">scrap</autoReward>
-    </event>
-    <event>
-      <text>GREAT SUCCESS</text>
-      <event load="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE"/>
-    </event>
-    <event>
-      <text>FAIL</text>
-      <modifyPursuit amount="1"/>
-      <autoReward level="LOW">scrap</autoReward>
-    </event>
+  	<event>
+  		<text>The Trash Eater returns carrying several piles of garbage. You're not sure what their origin is but you don't really care either.</text>
+  		<autoReward level="MED">scrap_only</autoReward>
+  	</event>
+  	<event>
+  		<text>It would seem a wrecked pirate ship was nearby, judging by the purple marks on most of the metal that's been brought back.</text>
+  		<autoReward level="MED">scrap_only</autoReward>
+  	</event>
+  	<event>
+  		<text>Getting more salvage doesn't hurt at all. It doesn't this time either. You do wonder why the Trash Eater has brought several protogen figurines back with them, though. Maybe they thought they weere neat.</text>
+  		<autoReward level="MED">scrap_only</autoReward>
+  	</event>
+  	<event>
+  		<text>You're starting to wonder wether the Trash Eater will even return after setting them free, but it seems they're back. And they've brought scrap! What a sensible gift.</text>
+  		<autoReward level="MED">scrap_only</autoReward>
+  	</event>
+  	<event>
+  		<text>The Trash Eater seems to have found so much machinery that he'd be able to make something for you; what exactly do you want?</text>
+  		<event load="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE"/>
+  	</event>
+  	<event>
+  		<text>The Trash Eater returneed extremely late and brought very little with them. Even worse, you're sure the Fleet is creeping closer by the second.</text>
+  		<modifyPursuit amount="1"/>
+  		<autoReward level="LOW">scrap_only</autoReward>
+  	</event>
+  	<event>
+  		<text>The Trash Eater returneed extremely late and brought very little with them. Even worse, you're sure the Fleet is creeping closer by the second.</text>
+  		<modifyPursuit amount="1"/>
+  		<autoReward level="LOW">scrap_only</autoReward>
+  	</event>
   </eventList>
 
   <event name="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE">
-    <text>The Trash Eater returns victoriously - They've found some extra electronics and scrap around and asks you what you want it to make.</text>
+  	<text>The Trash Eater returns victoriously - They've found some extra electronics and scrap around and asks you what you want it to make.</text>
 
-    <choice>
-      <text>Request that the Eater makes a weapon.</text>
-      <event>
-        <text>You got a weapon!</text>
-        <weapon name="TC_SCRAPFLAK"/>
-        <event/>
-      </event>
-    </choice>
-    <choice>
-      <text>Request that the Eater makes a drone.</text>
-      <event>
-        <text>You got a drone!</text>
-        <drone name="TC_COMBAT_GOLD"/>
-        <event/>
-      </event>
-    </choice>
-    <choice>
-      <text>Request that the Eater forges a Scrapper.</text>
-      <event>
-        <text>You got extra crew!</text>
-        <crew amount="1" class="scrapper" name="Scrapface"/>
-      </event>
-    </choice>
-    <choice>
-      <text>Disassemble it all into usable materials.</text>
-      <event>
-        <text>You take all of it - there's no such as problem as too much scrap.</text>
-        <autoReward level="HIGH">stuff</autoReward>
-      </event>
-    </choice>
+  	<choice>
+  	<text>Request that the Eater makes a weapon.</text>
+  	<event>
+  		<text>You got a weapon!</text>
+  		<weapon name="TC_SCRAPFLAK"/>
+  		<event/>
+  	</event>
+  	</choice>
+  	<choice>
+  	<text>Request that the Eater makes a drone.</text>
+  	<event>
+  		<text>You got a drone!</text>
+  		<drone name="TC_COMBAT_HEAVY"/>
+  		<event/>
+  	</event>
+  	</choice>
+  	<choice>
+  	<text>Request that the Eater forges a Scrapper.</text>
+  	<event>
+  		<text>You got extra crew!</text>
+  		<crew amount="1" class="scrapper" name="Scrapface"/>
+  	</event>
+  	</choice>
+  	<choice>
+  	<text>Disassemble it all into usable materials.</text>
+  	<event>
+  		<text>You take all of it - there's no such as problem as too much scrap.</text>
+  		<autoReward level="HIGH">stuff</autoReward>
+  	</event>
+  	</choice>
   </event>
 
   <mod:findName type = "event" name = "COMBAT_CHECK_REAL">
 
-    <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602" hidden="true" blue="true">
-        <text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it might damage your hull. [Costs: 10~]</text>
+  <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602" hidden="true" blue="true">
+  	<text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it might damage your hull. [Costs: 10~]</text>
         <event load="COMBAT_CHECK_RAMMING_SCRAP"/>
       </mod-append:choice>
 

@@ -1,11 +1,11 @@
 <FTL>
 <event name="TRASH_CALL">
-    <text>You notice a strange signal coming from a location on your map. </text>
+    <text>You notice a strange signal coming from a location on your map. We should check it out.</text>
     <quest event="TRASH_MEET"/>
 </event>
 
 <event name="TRASH_MEET" unique="true">
-    <text>This Sector has nothing but an odd Lanius ship, of a design you've never seen before. Their weapons are still hot but powering down. They don't seem to want to engage you, and they aren't responding to hails. It's debateable if they can even understand you anyway. </text>
+    <text>This beacon is empty save for an odd Lanius ship of a design that doesn't appear on any records. Their weapons, once humming with life, power down when you enter the vicinity. It seems they don't want to fight. Although they aren't responding to hails, you're not sure they'd understand anyway. </text>
     <beaconType id="map_icon_trash" global="true">
         <color r="110" g="32" b="9" a="1.0"/>
         <unvisitedTooltip>A strange ship is here.</unvisitedTooltip>
@@ -14,7 +14,7 @@
     </beaconType>
     <ship load="TC_TRASH_COMPACTOR1" hostile="false"/>
     <choice hidden="true">
-        <text>Get closer to the enemy ship...</text>
+        <text>Get closer to the unknown Lanius vessel...</text>
         <event>
             <text>The strange Lanius ship has collected some scrap from what appears to have been a Mantis pirate ship. Sensor scans show they have advanced flak weaponry on-board. They don't appear to have noticed you or are otherwise ignoring you. </text>
             <choice hidden="true">
