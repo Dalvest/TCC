@@ -705,30 +705,32 @@
 	<eventList name="SCRAP_COMPACT">
 		<event load="SCRAP_COMPACT_FAIL"/>
 		<event load="SCRAP_COMPACT_FAIL"/>
+		<event load="SCRAP_COMPACT_FAIL"/>
+		<event load="SCRAP_COMPACT_SUCCESS"/>
 		<event load="SCRAP_COMPACT_SUCCESS"/>
 		<event load="SCRAP_COMPACT_SUCCESS_BETTER"/>
 		<event load="SCRAP_COMPACT_SUCCESS_BETTER2"/>
 	</eventList>
 	
 	<event name="SCRAP_COMPACT_FAIL">
-	<text>It failed</text>
+	<text>You attempt to configure the machine in order to create something useful, but after a few minutes of bootlooping, it seems all you've made is a protogen figurine. Or in other words, scrap.</text>
 	<item_modify>
-		<item type="scrap" min="30" max="40"/>
+		<item type="scrap" min="25" max="35"/>
 	</item_modify>
 	</event>
 	
 	<event name="SCRAP_COMPACT_SUCCESS">
-	<text>A flak weapon has been created</text>
+	<text>You fire up the machine. After some complicated troubleshooting and every single screen on it turning blue, you manage to get it to create something. A Flak II! How... competent.</text>
 	<weapon name="SHOTGUN_2"/>
 	</event>
 	
 	<event name="SCRAP_COMPACT_SUCCESS_BETTER">
-	<text>A new, strange flak weapon has been created</text>
+	<text>You've created... something hellish. The Compactor is visbily smoking. Let's get the enemy ships on fire too.</text>
 	<weapon name="TC_SHOTGUN_HELL"/>
 	</event>
 	
 	<event name="SCRAP_COMPACT_SUCCESS_BETTER2">
-	<text>A new, strange flak weapon has been created</text>
+	<text>The Compactor throws up several errors at you, most of them being 719: MATERIAL INCORRECT. A loud ping signals that something has indeed been created though...</text>
 	<weapon name="TC_SCRAPFLAK"/>
 	</event>
 	</FTL>

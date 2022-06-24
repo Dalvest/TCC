@@ -128,27 +128,32 @@
 
 <eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
 	<event>
-		<text>SUCCESS</text>
+		<text>The Trash Eater returns carrying several piles of garbage. You're not sure what their origin is but you don't really care either.</text>
 		<autoReward level="MED">scrap_only</autoReward>
 	</event>
 	<event>
-		<text>SUCCESS</text>
+		<text>It would seem a wrecked pirate ship was nearby, judging by the purple marks on most of the metal that's been brought back.</text>
 		<autoReward level="MED">scrap_only</autoReward>
 	</event>
 	<event>
-		<text>SUCCESS</text>
+		<text>Getting more salvage doesn't hurt at all. It doesn't this time either. You do wonder why the Trash Eater has brought several </text>
 		<autoReward level="MED">scrap_only</autoReward>
 	</event>
 	<event>
-		<text>SUCCESS</text>
+		<text>You're starting to wonder wether the Trash Eater will even return after setting them free, but it seems they're back. And they've brought scrap! What a sensible gift.</text>
 		<autoReward level="MED">scrap_only</autoReward>
 	</event>
 	<event>
-		<text>GREAT SUCCESS</text>
+		<text>The Trash Eater seems to have found so much machinery that he'd be able to make something for you; what exactly do you want?</text>
 		<event load="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE"/>
 	</event>
 	<event>
-		<text>FAIL</text>
+		<text>The Trash Eater returneed extremely late and brought very little with them. Even worse, you're sure the Fleet is creeping closer by the second.</text>
+		<modifyPursuit amount="1"/>
+		<autoReward level="LOW">scrap</autoReward>  
+	</event>
+	<event>
+		<text>The Trash Eater returneed extremely late and brought very little with them. Even worse, you're sure the Fleet is creeping closer by the second.</text>
 		<modifyPursuit amount="1"/>
 		<autoReward level="LOW">scrap</autoReward>  
 	</event>
