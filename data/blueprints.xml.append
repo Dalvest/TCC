@@ -8,9 +8,9 @@
 	<stackable>false</stackable>
 	<bp>0</bp>
 </augBlueprint>
-	
 
-<!--    
+
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           WEAPON BLUEPRINTS
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -21,7 +21,7 @@
 
 
 
-<weaponBlueprint name="TC_SHOTGUN_OMEGA"> 
+<weaponBlueprint name="TC_SHOTGUN_OMEGA">
 	<type>BURST</type>
 	<title>Omega Amalgam Flak</title>
 	<short>Omega Flak</short>
@@ -75,7 +75,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="TC_SHOTGUN_GOLD"> 
+<weaponBlueprint name="TC_SHOTGUN_GOLD">
 	<type>BURST</type>
 	<title>Dense Gold Flak</title>
 	<short>Gold Flak</short>
@@ -122,7 +122,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="TC_SHOTGUN_LEAD"> 
+<weaponBlueprint name="TC_SHOTGUN_LEAD">
 	<type>BURST</type>
 	<title>Lead Flak</title>
 	<short>Leak Flak</short>
@@ -169,7 +169,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="TC_SHOTGUN_BOMB"> 
+<weaponBlueprint name="TC_SHOTGUN_BOMB">
 	<type>BURST</type>
 	<title>Explosive Flak</title>
 	<short>Explosive Flak</short>
@@ -211,7 +211,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="TC_SHOTGUN_UNSTABLE"> 
+<weaponBlueprint name="TC_SHOTGUN_UNSTABLE">
 	<type>BURST</type>
 	<title>Unstable Flak</title>
 	<short>Unstable Flak</short>
@@ -258,7 +258,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="TC_SHOTGUN_BATTERY"> 
+<weaponBlueprint name="TC_SHOTGUN_BATTERY">
 	<type>BURST</type>
 	<title>Battery Flak</title>
 	<short>Battery Flak</short>
@@ -305,7 +305,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="TC_SHOTGUN_HELL"> 
+<weaponBlueprint name="TC_SHOTGUN_HELL">
 	<type>BURST</type>
 	<title>Flakking Hell</title>
 	<short>Flakking Hell</short>
@@ -534,7 +534,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_1</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_1</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -579,7 +579,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_1</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_1</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -624,7 +624,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_2</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_2</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -669,7 +669,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_3</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_3</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -714,7 +714,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_4</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_4</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -759,7 +759,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_laser_marksman</weaponArt> 
+	<weaponArt>tc_laser_marksman</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="TC_LASER_CHARGER">
@@ -801,12 +801,12 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_laser_charger</weaponArt> 
+	<weaponArt>tc_laser_charger</weaponArt>
 </weaponBlueprint>
 
 <!--//////////////////////////////////////////////////SINGULARITY////////////////////////////////////////////////////-->
 
-<weaponBlueprint name="SINGULARITY_PROJECTOR_1"> 
+<weaponBlueprint name="SINGULARITY_PROJECTOR_1">
 	<type>BOMB</type>
 	<title>Singularity Projector 'Event Horizon'</title>
 	<short>S. Proj 'EHorizon'</short>
@@ -828,7 +828,7 @@
 	<rarity>0</rarity>
 	<image>tc_singularity</image>
 	<explosion>tc_singularity</explosion>
-	<weaponArt>tc_singularity_projector</weaponArt> 
+	<weaponArt>tc_singularity_projector</weaponArt>
 </weaponBlueprint>
 
 <!--/////////////////////////////////////////////////////MISSILES/////////////////////////////////////////////////////////-->
@@ -918,7 +918,7 @@
 		<projectile count="2" fake="true">tc_stolen_battery_shot_7</projectile>
 		<projectile count="2" fake="true">tc_stolen_battery_shot_8</projectile>
 	</projectiles>
-	<weaponArt>tc_stolen_battery</weaponArt> 
+	<weaponArt>tc_stolen_battery</weaponArt>
 	<iconImage>tc_stolen_battery</iconImage>
 </weaponBlueprint>
 
@@ -1351,7 +1351,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>instant_shotgun</weaponArt> 
+	<weaponArt>instant_shotgun</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1405,7 +1405,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>instant_ion</weaponArt> 
+	<weaponArt>instant_ion</weaponArt>
 	<iconImage>ion_chain</iconImage>
 </weaponBlueprint>
 
@@ -1489,7 +1489,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>instant_ion_math</weaponArt> 
+	<weaponArt>instant_ion_math</weaponArt>
 	<iconImage>ion_chain</iconImage>
 </weaponBlueprint>
 
@@ -1543,7 +1543,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>instant_revolver</weaponArt> 
+	<weaponArt>instant_revolver</weaponArt>
 	<iconImage>ion_chain</iconImage>
 </weaponBlueprint>
 
@@ -1662,7 +1662,7 @@
 
 
 
-<!--    
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
               DRONES
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -1804,7 +1804,7 @@
 </droneBlueprint>-->
 
 
-<!--    
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
                 SHIPS
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -1817,6 +1817,7 @@
 	<name>Fiare Vechi</name>
 	<desc>The most capable Scrapper combat vessel... available to us, at least.&#xD;
 The Compactor onboard can be used to recycle and 3D print scrap into various types of items.</desc>
+	<unlock id="text_PLAYER_SHIP_SCRAPPER_unlock"/>
 	<systemList>
 		<battery power="1" max="2" room="16" start="false" img="room_battery_scrapper" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking" />
@@ -1892,6 +1893,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Scrapper Dreadnought</class>
 	<name>Razormind</name>
 	<desc>This ship can board like no other - but in the haste to construct the gigantic teleporter room, the Scrappers have forgotten to install all of the weapon slots. Not as if you'll be using them, anyway.</desc>
+	<unlock id="text_PLAYER_SHIP_SCRAPPER_2_unlock"/>
 	<systemList>
 		<artillery power="1" room="3" start="false" weapon="ARTILLERY_FED" img="room_temporal_3" />
 		<battery power="1" max="2" room="14" start="false" img="room_battery_scrapper" />
@@ -2057,6 +2059,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Kestrel Miner</class>
 	<name>Garbage Compactor</name>
 	<desc>An old Kestrel class ship intended for light asteroid mining and garbage removal. Refitted for combat by the Sergal Engineer Cheese, who was joined by the Protogen TRACKER and Primagen RAPTOR. A malfunction in the clonebay's DNA Backup created Lancer.</desc>
+	<unlock id="text_PLAYER_SHIP_TRASH_MINER_unlock"/>
 	<systemList>
 		<artillery power="1" room="16" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_doubledeal" />
 		<battery power="1" max="2" room="17" start="true" img="room_battery_8" />
@@ -2281,6 +2284,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Customized Kestrel Miner</class>
 	<name>Reactive Compactor</name>
 	<desc>Rebuilt from the Garbage Compactor, and the remains of a Zoltan and Hektar ship - the Hektar ship was carrying very odd exoskeleton pieces - we could use them to our benefit. The paintjob was rushed but it looks the part.</desc>
+	<unlock id="text_PLAYER_SHIP_TRASH_REACTOR_unlock"/>
 	<systemList>
 		<artillery power="2" room="0" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_6" />
 		<battery power="1" max="2" room="17" start="false" img="room_battery_10" />
@@ -2706,6 +2710,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>RSA Dropship</class>
 	<name>Corossus</name>
 	<desc>An old, rusting amalgmation constructed out of the remains of several other ships. The Reclaim and Salvage Association staffed it with a diverse crew, including a captured Scrapper.</desc>
+	<unlock id="text_PLAYER_SHIP_COROSSUS_unlock"/>
 	<systemList>
 		<artillery power="1" room="10" start="true" weapon="TC_RESCRAPFLAK" img="room_artillery" />
 		<battery power="1" max="2" room="24" start="false" img="room_battery_nightowl" />
@@ -3140,12 +3145,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--///////UNIQUE//////-->
 
 <crewBlueprint name="trash_eater">
-	<title>Trash Eater</title>  
+	<title>Trash Eater</title>
 	<short>T.Eater</short>
 	<desc>The Trash Eater himself. A greedy but interesting Lanius.</desc>
-	<cost>120</cost>      
-	<bp>2</bp>	         
-	<rarity>0</rarity>	 
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
 	<powerList>
 		<power>Exists!</power>
 		<power>Pretty cool</power>
@@ -3155,12 +3160,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--///////GENERIC//////-->
 
 <crewBlueprint name="scrapper">
-	<title>Scrapper</title>  
+	<title>Scrapper</title>
 	<short>Scrapper</short>
 	<desc>A Lanius that is a part of the Scrapper faction, extremely adept at both repairing and breaking systems.</desc>
-	<cost>50</cost>      
-	<bp>2</bp>	         
-	<rarity>0</rarity>	 
+	<cost>50</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
 	<powerList>
 		<power>Slower oxygen drain</power>
 		<power>0.75x fire damage taken</power>
@@ -3171,12 +3176,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </crewBlueprint>
 
 <crewBlueprint name="scrapper_soldier">
-	<title>Scrapper Soldier</title>  
+	<title>Scrapper Soldier</title>
 	<short>Soldier</short>
 	<desc>A Lanius Scrapper given hammer-like fists to shred through anything in its path.</desc>
-	<cost>60</cost>      
-	<bp>2</bp>	         
-	<rarity>0</rarity>	 
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
 	<powerList>
 		<power>Slower oxygen drain</power>
 		<power>0.75x fire damage taken</power>
@@ -3190,9 +3195,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<title>Heavy Scrapper</title>
 	<short>Heavy</short>
 	<desc>A Lanius Scrapper covered in a thick crust of scrap for protection.</desc>
-	<cost>60</cost>      
-	<bp>2</bp>	         
-	<rarity>0</rarity>	 
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
 	<powerList>
 		<power>0.5x fire damage taken</power>
 		<power>2x damage</power>
@@ -3207,8 +3212,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<title>Scrapper Engineer</title>
 	<short>Engineer</short>
 	<desc>A Lanius Scrapper, given sharp hands that can quickly shape themselves into various tools.</desc>
-	<cost>60</cost>      
-	<bp>2</bp>	         
+	<cost>60</cost>
+	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
 		<power>Slower oxygen drain</power>
@@ -3225,8 +3230,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<title>Scrapper Speedster</title>
 	<short>Speedster</short>
 	<desc>A Lanius Scrapper, given strong legs and a lighter body.</desc>
-	<cost>60</cost>      
-	<bp>2</bp>	         
+	<cost>60</cost>
+	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
 		<power>Slower oxygen drain</power>
@@ -3242,8 +3247,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<title>Scrapper Scavenger</title>
 	<short>Scavenger</short>
 	<desc>A Lanius Scrapper with a unique scrap plating created by the Trash Eater himself.</desc>
-	<cost>80</cost>      
-	<bp>2</bp>	         
+	<cost>80</cost>
+	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
 		<power>Slower oxygen drain</power>
