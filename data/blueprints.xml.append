@@ -1312,250 +1312,36 @@
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->
 <!--/////// yes, they clobber stuff, but i swear it's fine! //////-->
 
-<weaponBlueprint name="SHOTGUN_INSTANT">
-	<type>BURST</type>
-	<flavorType>Preemptive Projectile Blast</flavorType>
-	<drone_targetable>1</drone_targetable>
-	<title>Pre-emptive Flak</title>
-	<tip>tip_flak</tip>
-	<short>Pre-Flak</short>
-	<desc>This shotgun weapon uses no power, charges instantly, and fires a burst of 7 flak projectiles at once. However, it can only be shot once per battle.</desc>
-	<tooltip>Fires a blast of debris across a random area doing up to 7 damage.</tooltip>
-	<radius>100</radius>
-	<damage>1</damage>
-	<shots>1</shots>
-	<sp>0</sp>
-	<spin>720</spin>
-	<fireChance>0</fireChance>
-	<breachChance>1</breachChance>
-	<cooldown>1</cooldown>
-	<power>0</power>
-	<cost>100</cost>
-	<bp>10</bp>
-	<speed>26</speed>
-	<rarity>5</rarity>
-	<boost>
-		<type>cooldown</type>
-		<amount>2</amount>
-		<count>2</count>
-	</boost>
-	<projectiles>
-		<projectile count="4" fake="false">debris_large</projectile>
-		<projectile count="3" fake="false">debris_med</projectile>
-		<projectile count="3" fake="true">debris_small</projectile>
-	</projectiles>
-	<launchSounds>
+<mod:findName type="weaponBlueprint" name="SHOTGUN_INSTANT">
+	<mod-overwrite:launchsounds>
 		<sound>instant_shotgun</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>flakImpact1</sound>
-		<sound>flakImpact2</sound>
-		<sound>flakImpact3</sound>
-		<sound>flakImpact4</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>instant_shotgun</weaponArt>
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="ION_INSTANT">
-	<type>BEAM</type>
-	<title>Preemptive Ion Blast</title>
-	<short>Pre-Ion</short>
-	<locked>1</locked>
-	<tip>tip_preemptive</tip>
-	<desc>This Ion weapon uses no power, charges instantly, and fires a strong ion beam capable of taking out enemy shields very effectively. However, it can only be shot once per battle.</desc>
-	<tooltip>Fires a single beam that does 6 ion damage. Can hit and disable shields as well as systems.</tooltip>
-	<damage>0</damage>
-	<ionBeamFix>true</ionBeamFix>
-	<ion>6</ion>
-	<speed>5</speed>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
-	<stunChance>0</stunChance>
-	<cooldown>1</cooldown>
-	<power>0</power>
-	<cost>65</cost>
-	<bp>3</bp>
-	<rarity>5</rarity>
-	<color>
-		<r>133</r>
-		<g>231</g>
-		<b>237</b>
-	</color>
-	<boost>
-		<type>cooldown</type>
-		<amount>2</amount>
-		<count>2</count>
-	</boost>
-	<length>2</length>
-	<image>explosion_small_ion</image>
-	<launchSounds>
+	</mod-overwrite:launchsounds>
+	<mod-overwrite:weaponArt>instant_shotgun</mod-overwrite:weaponArt>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="ION_INSTANT">
+	<mod-overwrite:launchsounds>
 		<sound>instant_ion</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>ionShields1</sound>
-		<sound>ionShields2</sound>
-		<sound>ionShields3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>instant_ion</weaponArt>
-	<iconImage>ion_chain</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="BEAM_FIRE_INSTANT">
-	<type>BEAM</type>
-	<tip>tip_preemptive</tip>
-	<title>Pre-emptive 'Torch'</title>
-	<short>Pre-'Torch'</short>
-	<desc>A rapidly charging Pre-Emptive weapon that pierces all shields and lights the enemy ship ablaze. Has a slow moving beam but starts a fire on every tile it hits.</desc>
-	<tooltip>Beam weapon that starts fires.</tooltip>
-	<damage>0</damage>
-	<sp>11</sp>
-	<fireChance>10</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>1</cooldown>
-	<power>0</power>
-	<cost>100</cost>
-	<boost>
-		<type>cooldown</type>
-		<amount>2</amount>
-		<count>2</count>
-	</boost>
-	<bp>6</bp>
-	<rarity>5</rarity>
-	<speed>1</speed>
-	<length>60</length>
-	<image>beam_contact</image>
-	<launchSounds>
+	</mod-overwrite:launchsounds>
+	<mod-overwrite:weaponArt>instant_ion</mod-overwrite:weaponArt>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="BEAM_FIRE_INSTANT">
+	<mod-overwrite:launchsounds>
 		<sound>instant_torch</sound>
-	</launchSounds>
-	<weaponArt>instant_torch</weaponArt>
-	<iconImage>beam</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="LOOT_MATH_5">
-	<type>BEAM</type>
-	<title>'Equalizer'</title>
-	<short>'Equalizer'</short>
-	<tip>loot_math_5</tip>
-	<desc>Special loot weapon. See tooltip in the storage menu for special stats.</desc>
-	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
-	<damage>0</damage>
-	<ion>7</ion>
-	<ionBeamFix>true</ionBeamFix>
-	<speed>5</speed>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>10</fireChance>
-	<breachChance>0</breachChance>
-	<stunChance>9</stunChance>
-	<cooldown>15</cooldown>
-	<power>0</power>
-	<cost>65</cost>
-	<bp>3</bp>
-	<rarity>0</rarity>
-	<color>
-		<r>133</r>
-		<g>231</g>
-		<b>237</b>
-	</color>
-	<boost>
-		<type>cooldown</type>
-		<amount>16</amount>
-		<count>2</count>
-	</boost>
-	<length>2</length>
-	<image>explosion_small_ion</image>
-	<launchSounds>
+	</mod-overwrite:launchsounds>
+	<mod-overwrite:weaponArt>instant_torch</mod-overwrite:weaponArt>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="LOOT_MATH_5">
+	<mod-overwrite:launchsounds>
 		<sound>instant_ion</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>ionShields1</sound>
-		<sound>ionShields2</sound>
-		<sound>ionShields3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>instant_ion_math</weaponArt>
-	<iconImage>ion_chain</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="BIG_ION">
-	<type>BEAM</type>
-	<title>'Big Ion'</title>
-	<short>Big I.</short>
-	<locked>1</locked>
-	<tip>tip_preemptive</tip>
-	<desc>A pre-emptive Ion weapon that charges so fast it can be used right at the start of battle, but can only be fired once per combat. Does immense Bio and Ion damage and never misses. Texas Red won't be getting up after this one.</desc>
-	<tooltip>Boss Loot.</tooltip>
-	<damage>0</damage>
-	<persDamage>999999</persDamage>
-	<ionBeamFix>true</ionBeamFix>
-	<ion>5</ion>
-	<speed>5</speed>
-	<shots>1</shots>
-	<sp>10</sp>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>1</cooldown>
-	<power>0</power>
-	<cost>80</cost>
-	<bp>3</bp>
-	<rarity>0</rarity>
-	<color>
-		<r>255</r>
-		<g>8</g>
-		<b>200</b>
-	</color>
-	<boost>
-		<type>cooldown</type>
-		<amount>2</amount>
-		<count>2</count>
-	</boost>
-	<length>2</length>
-	<image>explosion_small_ion</image>
-	<launchSounds>
+	</mod-overwrite:launchsounds>
+	<mod-overwrite:weaponArt>instant_ion_math</mod-overwrite:weaponArt>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="BIG_ION">
+	<mod-overwrite:launchsounds>
 		<sound>instant_revolver</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>ionShields1</sound>
-		<sound>ionShields2</sound>
-		<sound>ionShields3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>instant_revolver</weaponArt>
-	<iconImage>ion_chain</iconImage>
-</weaponBlueprint>
+	</mod-overwrite:launchsounds>
+	<mod-overwrite:weaponArt>instant_revolver</mod-overwrite:weaponArt>
+</mod:findName>
 
 <!--◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
                AUGMENTS
@@ -1935,7 +1721,7 @@
 	<name>Fiare Vechi</name>
 	<desc>The most capable Scrapper combat vessel... available to us, at least.&#xD;
 The Compactor onboard can be used to recycle and 3D print scrap into various types of items.</desc>
-	<unlock id="text_PLAYER_SHIP_SCRAPPER_unlock"/>
+	<unlock id="ship_PLAYER_SHIP_SCRAPPER_unlock"/>
 	<systemList>
 		<battery power="1" max="2" room="16" start="false" img="room_battery_scrapper" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking" />
@@ -2011,7 +1797,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Scrapper Dreadnought</class>
 	<name>Razormind</name>
 	<desc>This ship can board like no other - but in the haste to construct the gigantic teleporter room, the Scrappers have forgotten to install all of the weapon slots. Not as if you'll be using them, anyway.</desc>
-	<unlock id="text_PLAYER_SHIP_SCRAPPER_2_unlock"/>
+	<unlock id="ship_PLAYER_SHIP_SCRAPPER_2_unlock"/>
 	<systemList>
 		<artillery power="1" room="3" start="false" weapon="ARTILLERY_FED" img="room_temporal_3" />
 		<battery power="1" max="2" room="14" start="false" img="room_battery_scrapper" />
@@ -2177,7 +1963,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Kestrel Miner</class>
 	<name>Garbage Compactor</name>
 	<desc>An old Kestrel class ship intended for light asteroid mining and garbage removal. Refitted for combat by the Sergal Engineer Cheese, who was joined by the Protogen TRACKER and Primagen RAPTOR. A malfunction in the clonebay's DNA Backup created Lancer.</desc>
-	<unlock id="text_PLAYER_SHIP_TRASH_MINER_unlock"/>
+	<unlock id="ship_PLAYER_SHIP_TRASH_MINER_unlock"/>
 	<systemList>
 		<artillery power="1" room="16" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_doubledeal" />
 		<battery power="1" max="2" room="17" start="true" img="room_battery_8" />
@@ -2402,7 +2188,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Customized Kestrel Miner</class>
 	<name>Reactive Compactor</name>
 	<desc>Rebuilt from the Garbage Compactor, and the remains of a Zoltan and Hektar ship - the Hektar ship was carrying very odd exoskeleton pieces - we could use them to our benefit. The paintjob was rushed but it looks the part.</desc>
-	<unlock id="text_PLAYER_SHIP_TRASH_REACTOR_unlock"/>
+	<unlock id="ship_PLAYER_SHIP_TRASH_REACTOR_unlock"/>
 	<systemList>
 		<artillery power="2" room="0" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_6" />
 		<battery power="1" max="2" room="17" start="false" img="room_battery_10" />
@@ -2478,6 +2264,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Transport Dropship</class>
 	<name>Size Doesn't Matter</name>
 	<desc>This small enforcer dropship was once a Federation Kestrel - then it became a Mercenary dropship, and now... it's in the hands of the Federation once again. After all, allegiance doesn't matter. It's who you use it against.</desc>
+	<unlock id="ship_PLAYER_SHIP_SDM_unlock"/>
 	<systemList>
 		<cloaking power="1" room="8" start="false" img="room_cloaking_2_1x1" />
 		<clonebay power="2" room="1" start="true">
@@ -2828,7 +2615,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>RSA Dropship</class>
 	<name>Corossus</name>
 	<desc>An old, rusting amalgmation constructed out of the remains of several other ships. The Reclaim and Salvage Association staffed it with a diverse crew, including a captured Scrapper.</desc>
-	<unlock id="text_PLAYER_SHIP_COROSSUS_unlock"/>
+	<unlock id="ship_PLAYER_SHIP_COROSSUS_unlock"/>
 	<systemList>
 		<artillery power="1" room="10" start="true" weapon="TC_RESCRAPFLAK" img="room_artillery" />
 		<battery power="1" max="2" room="24" start="false" img="room_battery_nightowl" />
@@ -3111,7 +2898,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<name>The Neopolitan</name>
 	<desc>This ship looks tasty. Maybe that's why so many Scrappers are on it?</desc>
 	<systemList>
+		<battery power="1" room="3" start="false" img="room_battery_2" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking_orchid_3" />
+		<clonebay power="1" room="5" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="2" start="true" img="room_doors_4">
 			<slot>
 				<direction>right</direction>
@@ -3171,7 +2964,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="player_ship_extraelite_2" img="player_ship_extraelite_2">
-	<class>Tiwsted Scrapper Dreadnought</class>
+	<class>Twisted Scrapper Dreadnought</class>
 	<name>The Inspector</name>
 	<desc>Submit yourself to an inspection, or face the consequences. Or face them regardless. We don't care either way. Glory to the Federation!</desc>
 	<systemList>
@@ -3195,14 +2988,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="12" start="false" img="empty" />
+		<hacking power="1" room="12" start="false" img="room_hacking_8" />
 		<medbay power="1" room="10" start="false" img="room_medbay">
 			<slot>
 				<number>1</number>
 			</slot>
 		</medbay>
 		<mind power="1" room="8" start="false" img="room_mind" />
-		<oxygen power="1" room="9" start="true" img="empty" />
+		<oxygen power="1" room="9" start="true" img="room_oxygen_TCC" />
 		<pilot power="1" room="0" start="true" img="room_pilot">
 			<slot>
 				<direction>right</direction>
@@ -3215,14 +3008,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="5" start="true" img="room_shields_scrapper">
+		<shields power="2" max="8" room="5" start="true" img="room_shields_TCC">
 			<slot>
-				<direction>down</direction>
-				<number>2</number>
+				<direction>up</direction>
+				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="3" start="true" />
-		<weapons power="2" max="8" oom="15" start="true" img="room_weapons_8">
+		<weapons power="2" max="8" room="15" start="true" img="room_weapons_8">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3258,7 +3051,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
     </mod:findLike>
 </mod:findName>
 
-<!--    
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           CREW
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
