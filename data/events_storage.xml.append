@@ -5,7 +5,7 @@
 
     <mod-append:choice req="SCRAP_TRANSMITTER">
       <text>Contact the Trash Compactor.</text>
-      <event load="SUMMON_TC"/>
+      <event load="SUMMON_TC_STORAGE"/>
     </mod-append:choice>
 
     <mod-append:choice req="COMPACTOR">

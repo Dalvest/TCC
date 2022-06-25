@@ -12,7 +12,7 @@
 	</events>
 	<mod:findLike type="events">
 		<mod:findName type="req" name="FMCORE_LIST_JUMPSPACE_EQUIPMENT">
-			<mod-append:name>FORGEMASTER_PHONE</mod-append:name>
+			<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
 		</mod:findName>
 	</mod:findLike>
 </FTL>
@@ -57,7 +57,9 @@
 				<type>4</type>
 			</unlock>
 			<unlock variant="b" silent="false">
-				<type>2</type>
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
+				<value>5</value>
 			</unlock>
 
 		</mod-append:ship>
@@ -158,7 +160,6 @@
 			<arrow variant="a" direction="down" tooltip="ship_unlock_victory" image="arrow_v_down.png" unlockedImage="arrow_v_down_on.png">PLAYER_SHIP_SDM</arrow>
 			<unlock variant="a" silent="false">
 				<type>2</type>
-
 				<shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
 			</unlock>
 		</mod-append:ship>

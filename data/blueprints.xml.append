@@ -1763,10 +1763,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="5" start="true" img="room_shields_scrapper">
+		<shields power="2" max="8" room="5" start="true" img="room_shields_TCC">
 			<slot>
-				<direction>down</direction>
-				<number>2</number>
+				<direction>up</direction>
+				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="3" start="true" />
@@ -1807,7 +1807,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>3</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="10" start="true" img="room_doors">
+		<doors power="1" room="12" start="true" img="room_doors_5">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -1834,7 +1834,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="12" start="true" img="room_sensors_orchid_2">
+		<sensors power="1" room="10" start="true" img="room_sensors_orchid_2">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -1869,16 +1869,16 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<unlock id="ship_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_unlock"/>
 	<desc>YOU ARE NOT SUPPOSED TO SEE THIS YET!</desc>
 	<systemList>
-		<battery max="2" power="1" room="13" start="false" img="room_battery" />
+		<battery max="2" power="1" room="13" start="false" img="room_battery_scrapper" />
 		<cloaking power="3" room="12" start="true" img="room_cloaking" />
 		<clonebay max="3" power="3" room="9" start="true">
 			<slot>
 				<number>0</number>
 			</slot>
 		</clonebay>
-		<medbay max="3" power="3" room="9" start="false">
+		<medbay max="3" power="3" room="9" start="false" img="room_medbay_2">
 			<slot>
-				<number>0</number>
+				<number>-1</number>
 			</slot>
 		</medbay>
 		<doors power="3" room="11" start="true" img="room_doors">
@@ -1887,15 +1887,15 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="4" room="7" start="true" img="room_drones" />
-		<engines power="6" room="3" start="true" img="room_engines">
+		<drones power="4" room="7" start="true" img="room_drones_4" />
+		<engines power="6" room="3" start="true" img="room_engines_8">
 			<slot>
-				<direction>down</direction>
+				<direction>left</direction>
 				<number>2</number>
 			</slot>
 		</engines>
 		<hacking power="1" room="1" start="false" img="room_hacking" />
-		<mind power="1" room="2" start="false" img="room_mind" />
+		<mind power="1" room="2" start="false" img="room_mind_9" />
 		<pilot power="3" room="0" start="true" img="room_pilot">
 			<slot>
 				<direction>right</direction>
@@ -1904,7 +1904,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</pilot>
 		<sensors power="1" room="6" start="true" img="room_sensors">
 			<slot>
-				<direction>up</direction>
+				<direction>down</direction>
 				<number>1</number>
 			</slot>
 		</sensors>
@@ -1916,10 +1916,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</shields>
 		<teleporter power="3" room="4" start="true" />
 		<temporal power="1" room="11" start="false" img="" />
-		<weapons max="20" power="20" room="5" start="true" img="room_weapons">
+		<weapons max="20" power="20" room="5" start="true" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
-				<number>1</number>
+				<number>0</number>
 			</slot>
 		</weapons>
 	</systemList>
@@ -1965,7 +1965,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<desc>An old Kestrel class ship intended for light asteroid mining and garbage removal. Refitted for combat by the Sergal Engineer Cheese, who was joined by the Protogen TRACKER and Primagen RAPTOR. A malfunction in the clonebay's DNA Backup created Lancer.</desc>
 	<unlock id="ship_PLAYER_SHIP_TRASH_MINER_unlock"/>
 	<systemList>
-		<artillery power="1" room="16" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_doubledeal" />
+		<artillery power="1" room="16" start="true" weapon="ARTILLERY_FLAK" img="room_artillery" />
 		<battery power="1" max="2" room="17" start="true" img="room_battery_8" />
 		<cloaking power="1" room="4" start="true" img="room_cloaking_11" />
 		<clonebay power="1" room="5" start="true">
@@ -1986,7 +1986,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="3" start="false" img="room_hacking" />
+		<hacking power="1" room="3" start="false" img="room_hacking_3" />
 		<medbay power="1" room="5" start="false" img="room_medbay_4">
 			<slot>
 				<number>0</number>
@@ -2038,8 +2038,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Kestrel Miner</class>
 	<name>Ice Cool Ion</name>
 	<desc>Ice Ice Ion. Lancer had way too much fun remaking the Garbage Compactor to suit his weird needs, and has made the ultimate boarding ship - as long as you ignore the tiny size of the teleporter. Ice Ice Ion.</desc>
+	<unlock id="ship_PLAYER_SHIP_TRASH_MINER_2_unlock"/>
 	<systemList>
-		<artillery power="1" room="16" start="true" weapon="CRYSTAL_FREEZER" img="room_artillery_doubledeal" />
+		<artillery power="1" room="16" start="true" weapon="CRYSTAL_FREEZER" img="room_artillery" />
 		<battery power="1" max="2" room="17" start="false" img="room_battery_8" />
 		<cloaking power="1" room="4" start="false" img="room_cloaking_11" />
 		<clonebay power="1" room="5" start="true">
@@ -2060,7 +2061,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="3" start="false" img="room_hacking" />
+		<hacking power="1" room="3" start="false" img="room_hacking_3" />
 		<medbay power="1" room="5" start="true" img="room_medbay_4">
 			<slot>
 				<number>0</number>
@@ -2113,8 +2114,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Kestrel Miner</class>
 	<name>Morningstar</name>
 	<desc>Three certain RSA Grunts took over this ship, and decided to modify it a little. Kill your enemies in a blitz of fire with this helluva ship.</desc>
+	<unlock id="ship_PLAYER_SHIP_TRASH_MINER_3_unlock"/>
 	<systemList>
-		<artillery power="2" room="16" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_doubledeal" />
+		<artillery power="2" room="16" start="true" weapon="ARTILLERY_FLAK" img="room_artillery" />
 		<battery power="1" max="2" room="17" start="false" img="room_battery_8" />
 		<cloaking power="1" room="4" start="true" img="room_cloaking_11" />
 		<clonebay power="1" room="5" start="true">
@@ -2135,7 +2137,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="3" start="false" img="room_hacking" />
+		<hacking power="1" room="3" start="false" img="room_hacking_3" />
 		<medbay power="1" room="5" start="false" img="room_medbay_4">
 			<slot>
 				<number>0</number>
@@ -2280,6 +2282,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking power="1" room="9" start="true" img="room_hacking_spot" />
+		<medbay power="2" room="1" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
 		<mind power="1" room="10" start="false" img="room_mind_1x1" />
 		<oxygen power="1" room="2" start="true" img="room_oxygen" />
 		<pilot power="1" room="7" start="true" img="room_pilot_2">
@@ -2327,6 +2334,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Construction Crew Kestrel</class>
 	<name>The Original</name>
 	<desc>This is a completely functional version of the Kestrel Miner from the time it was actually used for mining - before TRACKER and the gang got it.</desc>
+	<unlock id="ship_PLAYER_SHIP_SDM_2_unlock"/>
 	<systemList>
 		<battery power="1" max="2" room="5" start="false" img="room_battery_6" />
 		<cloaking power="1" room="6" start="false" img="room_cloaking_9" />
@@ -2604,8 +2612,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="15" />
 	<maxPower amount="10" />
-	<aug name="CLOAK_RELOADER" />
-	<aug name="CLOAK_FIRE" />
+	<aug name="EX_AUTO_COOLDOWN" />
+	<aug name="EX_CLOAK_FIRE" />
 </shipBlueprint>
 
 

@@ -6,7 +6,7 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 	-->
 
-	<event name="SUMMON_TC">
+	<event name="SUMMON_TC_STORAGE">
 		<text>Contact the Trash Compactor? (WARNING - HIGH RISK, HIGH REWARD)</text>
 		<choice req="TC_DEAD" lvl="0" max_group="3" hidden="false" blue="false">
 			<text>Yes.</text>
