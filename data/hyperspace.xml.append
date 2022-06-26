@@ -90,10 +90,12 @@
 
 		<!--///////SCRAPPER OP SHIP//////-->
 
-		<mod-append:ship name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD" b="false" c="false" unused="true">
+		<mod-append:ship name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD" b="false" c="false" unused="true" noAppend="true">
 
 			<unlock variant="a" silent="false">
-				<type>4</type>
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_LIMIT_3</shipReq>
+				<value>50</value>
 			</unlock>
 
 		</mod-append:ship>
@@ -117,7 +119,20 @@
 			<unlock variant="a" silent="false">
 				<type>4</type>
 			</unlock>
-
+			<unlock variant="b" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
+				<value>5</value>
+			</unlock>
+			<unlock variant="c" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_TRASH_MINER_2</shipReq>
+				<value>5</value>
+			</unlock>
+			<unlock variant="c" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
+			</unlock>
 		</mod-append:ship>
 		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER">
 			<crewLimit>11</crewLimit>
@@ -162,6 +177,14 @@
 				<type>2</type>
 				<shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
 			</unlock>
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_TRASH_MINER_2</shipReq>
+			</unlock>
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_TRASH_MINER_3</shipReq>
+			</unlock>
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR">
@@ -183,9 +206,15 @@
 
 		<mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
 
+			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_TC_ARMORED_WASP</arrow>
 			<unlock variant="a" silent="false">
 				<type>2</type>
 				<shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
+			</unlock>
+			<unlock variant="b" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_SDM</shipReq>
+				<value>5</value>
 			</unlock>
 		</mod-append:ship>
 
@@ -215,6 +244,29 @@
 		<!--///////ARMORED WASP//////-->
 
 		<mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
+			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_COROSSUS</arrow>
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_SDM</shipReq>
+			</unlock>
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_SDM_2</shipReq>
+			</unlock>
+			<unlock variant="b" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
+				<value>5</value>
+			</unlock>
+			<unlock variant="c" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
+				<value>5</value>
+			</unlock>
+			<unlock variant="c" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
+			</unlock>
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP">
@@ -250,6 +302,18 @@
 		<!--///////COROSSUS//////-->
 
 		<mod-append:ship name="PLAYER_SHIP_COROSSUS" b="false" c="false" unused="true">
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
+			</unlock>
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
+			</unlock>
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
+			</unlock>
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_COROSSUS">
@@ -325,8 +389,15 @@
 			</crew>
 		</mod-append:customShip>
 
-	</mod:findLike>
+		<!--///////STALWART DEFENCE//////-->
 
+		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" />
+		<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
+			<hiddenAug>SHIP_SPLICE</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+	</mod:findLike>
 
 
 	<!--
@@ -343,14 +414,15 @@
 	<mod:findLike type="ships">
 		<mod:findLike type="shipOrder">
 			<mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_TRASH_COMPACTOR_GOOD</mod-append:ship>
+			<!--<mod-append:ship>PLAYER_SHIP_TRASH_COMPACTOR_GOOD</mod-append:ship>-->
+			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship>
 			<mod-append:ship>PLAYER_SHIP_TRASH_REACTOR</mod-append:ship>
 			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship>
 			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship>
 			<mod-append:ship>PLAYER_SHIP_COROSSUS</mod-append:ship>
 			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship>
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship>
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship>
 		</mod:findLike>
 	</mod:findLike>

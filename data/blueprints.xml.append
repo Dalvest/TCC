@@ -2407,6 +2407,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>"Gladiator" Corvette</class>
 	<name>Armored Wasp</name>
 	<desc>This ship was rebuilt out of junk to be Lancer's personal shuttle - now it's a fast and extremely combat capable ship, although it's a bit cramped and fragile.</desc>
+	<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_unlock"/>
 	<systemList>
 		<cloaking power="1" room="7" start="false" img="room_cloaking_2_1x1" />
 		<clonebay power="1" room="6" start="true">
@@ -2478,6 +2479,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>"Gladiator" Corvette</class>
 	<name>Starsector</name>
 	<desc>This Corvette is agile and swift - it's been refit for the Federation Army's scouting and light assault division.</desc>
+	<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_2_unlock"/>
 	<systemList>
 		<cloaking power="1" room="7" start="false" img="room_cloaking_2_1x1" />
 		<clonebay power="1" room="6" start="true">
@@ -2547,6 +2549,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>"Gladiator" Corvette</class>
 	<name>Steel Dawn</name>
 	<desc>This ship is a highly stealthy one - try not to get hit, though. Cramped but agile, strong yet fragile. </desc>
+	<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_3_unlock"/>
 	<systemList>
 		<cloaking power="2" room="7" start="true" img="room_cloaking_2_1x1" />
 		<clonebay power="1" room="6" start="true">
@@ -3044,6 +3047,84 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="COMPACTOR" />
 	<aug name="ADVANCED_SCRAP" />
 </shipBlueprint>
+
+<!--/////////////////////STALWART DEFENCE//////////////////////////-->
+<shipBlueprint name="PLAYER_SHIP_DEFENSE" layout="defense" img="defense">
+	<class>Salvaged Federation Cruiser</class>
+	<name>Stalwart Defense</name>
+	<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The combined nature of the craft makes it hard to manoeuvre and impossible to cloak.</desc>
+	<systemList>
+		<artillery power="2" room="5" start="true" weapon="ARTILLERY_BEAM" img="room_artillery" />
+		<battery power="1" room="12" start="true" img="room_battery_6" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="1" start="false" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="8" power="2" room="4" start="true" img="room_drones_3" />
+		<engines max="4" power="1" room="11" start="true" img="room_engines_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="7" start="false" img="room_hacking_3" />
+		<medbay power="1" room="2" start="true" img="room_medbay_5">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<oxygen power="1" room="3" start="true" img="room_oxygen" />
+		<pilot power="1" room="10" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="6" start="false" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="16" power="2" room="0" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="8" start="false" />
+		<weapons max="8" power="1" room="9" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="3">
+		<weapon name="LASER_CHAINGUN_2" />
+		<weapon name="BOMB_HEAL_SYSTEM" />
+	</weaponList>
+	<droneList drones="5" count="2">
+		<drone name="DEFENSE_1" />
+	</droneList>
+	<health amount="46" /><!-- math based on ship hulls used, first number is highest for that class (the actual value taking that specific variant into account/missing pieces)((calculation with least efficency)): 14(10)+12(9)+9((4))+11=46(39)((34))-->
+	<maxPower amount="2" />
+	<crewCount amount="1" class="rock_crusader" />
+	<crewCount amount="1" class="zoltan_peacekeeper" />
+	<aug name="ANCIENT_SHIELD" />
+	<aug name="PALADIN_ARMOR" />
+	<aug name="SYSTEM_CASING_NEW" />
+</shipBlueprint>
+
 
 <!--/////////////////////JULK'S SYSTEM CAP EXPANDER CODE//////////////////////////-->
 
