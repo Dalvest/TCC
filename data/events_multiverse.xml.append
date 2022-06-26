@@ -94,6 +94,8 @@
 		</choice>
 	</event>
 
+<!--//////////////////////////////////////////////////////////TC IS DOWN/////////////////////////////////////////////////////////-->
+
 	<FTL> <!--DESTROYED-->
 	<event name="TC1_DESTROY">
 		<text> Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else... </text>
@@ -262,6 +264,8 @@
 	</event>
 
 	</FTL>
+
+<!--///////////////////////////////////////FLAK MAKING///////////////////////////////////////////////////////////////-->
 
 	<FTL> <!--GET FLAKS-->
 	<event name="FLAK_FORGE_VANILLA">
@@ -698,6 +702,8 @@
 	<weapon name="TC_SCRAPFLAK"/>
 	</event>
 	</FTL>
+
+<!--/////////////////////////////////////////ENCOUNTER TEXT//////////////////////////////////////////////-->
 
 <event name="ENCOUNTER_TC1">
 <text>You've arrived at the coordinates, only to be met with the same Lanius ship from before. This looks like a trap, but they aren't attacking you, nor are their weapons on... yet.</text>
