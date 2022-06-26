@@ -311,15 +311,6 @@
 		</event>
 	</choice>
 
-	<choice hidden="false" blue="true">
-		<text>Page 2</text>
-		<event load="FLAK_FORGE_VANILLA_2"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_VANILLA_2">
-	<text>Choose flak:</text>
-
 	<choice hidden="false" blue="false">
 		<text>Chain Flak</text>
 		<event>
@@ -363,15 +354,6 @@
 			<weapon name="SHOTGUN_FIRE"/>
 		</event>
 	</choice>
-
-	<choice hidden="false" blue="true">
-		<text>Page 3</text>
-		<event load="FLAK_FORGE_VANILLA_3"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_VANILLA_3">
-	<text>Choose flak:</text>
 
 	<choice hidden="false" blue="false">
 		<text>Ion Flak</text>
@@ -417,15 +399,6 @@
 		</event>
 	</choice>
 
-	<choice hidden="false" blue="true">
-		<text>Page 4</text>
-		<event load="FLAK_FORGE_VANILLA_4"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_VANILLA_4">
-	<text>Choose flak:</text>
-
 	<choice hidden="false" blue="false">
 		<text>Toggle Toxic Flak</text>
 		<event>
@@ -469,15 +442,6 @@
 			<weapon name="SHOTGUN_STEEL"/>
 		</event>
 	</choice>
-
-	<choice hidden="false" blue="true">
-		<text>Page 5</text>
-	<event load="FLAK_FORGE_VANILLA_5"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_VANILLA_5">
-	<text>Choose flak:</text>
 
 	<choice hidden="false" blue="false">
 		<text>Crystal Flak</text>
