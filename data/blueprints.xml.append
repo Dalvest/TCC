@@ -3233,4 +3233,37 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
+<!--///////PROTOGEN ZONE (DANGER: FURRIES AHEAD)//////-->
+<!--/////// http://www.unit-conversion.info/texttools/replace-text/ //////-->
+<!--/////// ^^ i used the above thingy when renaming ^^ //////-->
+
+<crewBlueprint name="protogen">
+	<desc>Fluffy, cute, dangerous, powerful. These genetically and cybernetically augmented anthropomorhic creatures are one of the best choices for spacefaring crew.</desc>
+	<cost>60</cost>
+	<title>Protogen</title>
+	<short>Protogen</short>
+	<rarity>1</rarity>
+	<powerList>
+		<power>x1.2 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
+		<power>x0.8 movement speed.</power>
+		<power>Can provide a bar of power to the current system.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="protogen_tracker">
+	<desc>TRACKER ONLINE! Badass but lazy, this protogen ship captain probably knows what he's doing... sometimes.</desc>
+	<cost>80</cost>
+	<title>TRACKER</title>
+	<short>TRACKER</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Highly armed and highly dangerous - will deal 2x damage in combat.</power>
+		<power>Normal movement speed due to improved training.</power>
+		<power>Can provide a bar of power to the current system.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+		<power>Fingerclaws make it harder to repair systems (0.6 speed).</power>
+	</powerList>
+</crewBlueprint>
+
 </FTL>
