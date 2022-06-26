@@ -139,7 +139,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
 				<zoltan_peacekeeper room="11" name="RAPTOR" />
-				<engi room="0" name="TRACKER" />
+				<protogen_tracker room="0" name="TRACKER" />
 				<human room="13" name="Cheese" />
 				<mantis_free room="15" name="Lancer" />
 			</crew>
@@ -150,7 +150,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
 				<zoltan_peacekeeper room="12" name="RAPTOR" />
-				<engi room="0" name="TRACKER" />
+				<protogen_tracker room="0" name="TRACKER" />
 				<human room="13" name="Cheese" />
 				<mantis_free room="6" name="Lancer" />
 				<rock_commando room="6" name="Lex" />
@@ -194,11 +194,11 @@
 			<crew>
 				<human_soldier room="12" name="Kanyo" />
 				<zoltan_peacekeeper room="14" name="RAPTOR" />
-				<engi room="1" name="TRACKER" />
+				<protogen_tracker room="1" name="TRACKER" />
 				<human room="11" name="Cheese" />
 				<mantis_free room="3" name="Lancer" />
 				<scrapper room="6" name="01010011" />
-				<engi_defender room="2" name="Zenith" />
+				<protogen room="2" name="Zenith" />
 			</crew>
 		</mod-append:customShip>
 
@@ -273,9 +273,9 @@
 			<crewLimit>9</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
-				<trash_eater room="11" name="Trash Eater" />
+				<scrapper_scavenger room="11" name="Scrappy McScrapton" />
 				<mantis_free room="0" name="Lancer" />
-				<human_legion_pyro room="1" name="Dalvest" />
+				<protogen room="1" name="Dalvest" />
 				<human room="5" name="Cheese" />
 			</crew>
 		</mod-append:customShip>
@@ -295,7 +295,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crewLimit>9</crewLimit>
 			<crew>
-				<human_mfk room="0" name="VHS" />
+				<protogen room="0" name="VHS" />
 			</crew>
 		</mod-append:customShip>
 
@@ -383,7 +383,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
 				<kiviekith room="2" name="Orvech Vonor" />
-				<kiviekith room="7" />
+				<protogen room="7" />
 				<kiviekith room="0" name="Altan" />
 				<kiviekith room="15" />
 			</crew>
@@ -646,6 +646,96 @@
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>true</cloneLoseSkills>
 		</mod-append:race>
+
+		<!--///////PROTOGEN ZONE (DANGER: FURRIES AHEAD)//////-->
+
+		<mod-append:race name="protogen">
+			<maxHealth>110</maxHealth>
+			<repairSpeed>1.1</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>true</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>true</canSuffocate>
+			<suffocationModifier>0.5</suffocationModifier>
+			<fireDamageMultiplier>1</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>0.8</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>1.2</sabotageSpeedMultiplier>
+			<damageMultiplier>1.2</damageMultiplier>
+			<damageTakenMultiplier>1</damageTakenMultiplier>
+			<animBase>human</animBase>
+			<bonusPower>1</bonusPower>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>crewLaser1</shootingSound>
+			</shootingSounds>
+			<repairSounds animSoundFrame="-1">
+				<repairSound>repair</repairSound>
+			</repairSounds>
+			<healSpeed>1.2</healSpeed>
+			<skills>
+				<piloting req="20"/>
+				<engines req="20"/>
+				<shields req="74"/>
+				<weapons req="74"/>
+				<repair req="26"/>
+				<combat req="14"/>
+			</skills>
+			<defaultSkillLevel>0</defaultSkillLevel>
+			<cloneLoseSkills>false</cloneLoseSkills>
+		</mod-append:race>
+
+		<mod-append:race name="protogen_tracker">
+			<maxHealth>130</maxHealth>
+			<repairSpeed>0.6</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>true</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>true</canSuffocate>
+			<suffocationModifier>0.5</suffocationModifier>
+			<fireDamageMultiplier>0.75</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>1</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>1.4</sabotageSpeedMultiplier>
+			<damageMultiplier>2</damageMultiplier>
+			<damageTakenMultiplier>0.9</damageTakenMultiplier>
+			<animBase>human</animBase>
+			<bonusPower>1</bonusPower>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>crewLaser1</shootingSound>
+			</shootingSounds>
+			<repairSounds animSoundFrame="-1">
+				<repairSound>repair</repairSound>
+			</repairSounds>
+			<healSpeed>1.2</healSpeed>
+			<skills>
+				<piloting req="20"/>
+				<engines req="20"/>
+				<shields req="74"/>
+				<weapons req="74"/>
+				<repair req="26"/>
+				<combat req="14"/>
+			</skills>
+			<defaultSkillLevel>0</defaultSkillLevel>
+			<cloneLoseSkills>false</cloneLoseSkills>
+		</mod-append:race>
+
+		<!--///////RSA TECCHIE//////-->
 
 		<mod-append:race name="rsa_technician">
 			<repairSpeed>1.25</repairSpeed>

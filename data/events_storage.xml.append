@@ -270,8 +270,8 @@
     </choice>
   </event>
 
-  <!--<event name="STORAGE_CHECK_CREW_SCRAPPER_TALK_MENU"> SOMETHING I STARTED MAKING BUT THEN REALISED I WAS DUMB
-    <text>Who do you want to talk to?</text>
+  <!--<event name="STORAGE_CHECK_CREW_SCRAPPER_TALK_MENU"> SOMETHING I STARTED MAKING BUT THEN REALISED I WAS DUMB - Zuggo
+    <text>Who do you want to talk to?</text> HAPPENS EVERY TIME MY DUDE - Dalvest
     <choice req="scrapper" lvl="1" max_group="1" blue="false">
       <text>Talk to your Scrapper.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_TALK"/>
@@ -311,6 +311,8 @@
     <text>The Scrapper is trying to hide a broken coffee maker machine in their quarters, but given that it's bigger than anything else in the room, it's standing out too much.</text>
     <text>The Scrapper is wondering what he would need to eat in order to become a Scavenger - you have no clue what to tell them.</text>
   </textList>
+
+  <!--//////////////////////////////////////////////////////////SCRAAPPER SCAN TEXT////////////////////////////////////////////////////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_MENU">
     <text>Who do you want to scan?</text>
@@ -422,8 +424,10 @@
     </choice>
   </event>
 
+<!--//////////////////////////////////////////////////////////SCRAAPPER UPGRADE CHECKER////////////////////////////////////////////////////////-->
+
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE">
-    <text>You've got a Scrapper you can upgrade - with some basic tools and tools, you may upgrade a Scrapper into one of the following:</text>
+    <text>You've got a Scrapper you can upgrade - with some basic tools and machinery, you may upgrade a Scrapper into one of the following:</text>
     <choice req="scrapper" lvl="1" max_group="1" blue="false">
       <text>Make a Scrapper Soldier</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
@@ -498,8 +502,10 @@
     </choice>
   </event>
 
+  <!--//////////////////////////////////////////////////////////SCRAAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
-    <text>Will add some scrap to the fists.
+    <text>You can upgrade your Scrapper's combat ability by adding extra scrap to their arms, although this would reduce their repair speed.
       [x1.5 repair -> x1.0 repair speed
       x1.0 damage -> x2.0 damage]</text>
     <choice hidden="true">
@@ -516,7 +522,7 @@
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
-    <text>Will add some scrap to the hands.
+    <text>This upgrade will generally improve your Scrapper's ability to repair ship systems.
       [x1.5 repair -> x3.0 repair speed
       x1.0 damage -> x0.75 damage
       x1.0 sabotage speed -> x1.5 sabotage speed]</text>
@@ -534,7 +540,7 @@
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
-    <text>Will add some scrap to the legs.
+    <text>By molding the legs into a more efficient shape, your Scrapper can achieve greater sprinting speeds.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice hidden="true">
       <text>Do it.</text>
@@ -550,8 +556,13 @@
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE">
-    <text>Will cover the body in a thick layer of scrap.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
+      [125 health -> 200 health
+      3/4 oxygen drain -> 1/2 oxygen drain
+      x1.5 repair speed -> x0.5 repair speed
+      x0.9 movement speed -> x0.25 movement speed
+      x0.75 fire damage -> x0.5 fire damage
+      x1 damage -> x2 damage]</text>
     <choice hidden="true">
       <text>Do it.</text>
       <event>
@@ -567,7 +578,11 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER">
     <text>Will cover the body in a thick layer of scrap.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
+      [125 health -> 200 health
+      3/4 oxygen drain -> 1/2 oxygen drain
+      x1 repair speed -> x0.5 repair speed
+      x0.9 movement speed -> x0.25 movement speed
+      x0.75 fire damage -> x0.5 fire damage]</text>
     <choice hidden="true">
       <text>Do it.</text>
       <event>
@@ -583,7 +598,13 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER">
     <text>Will cover the body in a thick layer of scrap.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
+      [125 health -> 200 health
+      3/4 oxygen drain -> 1/2 oxygen drain
+      x3 repair speed -> x0.5 repair speed
+      x0.9 movement speed -> x0.25 movement speed
+      x0.75 fire damage -> x0.5 fire damage
+      x0.75 damage -> x2 damage
+      x1.5 sabotage speed -> 2x sabotage speed]</text>
     <choice hidden="true">
       <text>Do it.</text>
       <event>
@@ -599,7 +620,12 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED">
     <text>Will cover the body in a thick laer of scrap.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
+      [125 health -> 200 health
+      3/4 oxygen drain -> 1/2 oxygen drain
+      x1.5 repair speed -> x0.5 repair speed
+      x2 movement speed -> x0.25 movement speed
+      x0.75 fire damage -> x0.5 fire damage
+      x1 damage -> x2 damage]</text>
     <choice hidden="true">
       <text>Do it.</text>
       <event>
@@ -615,7 +641,12 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE">
     <text>Will cover the body in a layer of elite scrap.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
+      [125 health -> 150 health
+      x1.5 repair speed -> x2 repair speed
+      x0.9 movement speed -> x1.5 movement speed
+      x0.75 fire damage -> x0.5 fire damage
+      x1 damage -> x2 damage
+      x1 sabotage speed -> x2.5 sabotage speed]</text>
     <choice hidden="true">
       <text>Do it.</text>
       <event>

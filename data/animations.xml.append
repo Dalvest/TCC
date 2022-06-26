@@ -1805,4 +1805,249 @@
 		<time>1</time>
 	</anim>
 	
+
+	<animSheet name="protogen" w="315" h="455" fw="35" fh="35">people/protogen_base.png</animSheet>
+	<anim name="protogen_clone">
+		<sheet>protogen</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_death_right">
+		<sheet>protogen</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_death_left">
+		<sheet>protogen</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_walk_down">
+		<sheet>protogen</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_walk_right">
+		<sheet>protogen</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_walk_up">
+		<sheet>protogen</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_walk_left">
+		<sheet>protogen</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_shoot_down">
+		<sheet>protogen</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_shoot_right">
+		<sheet>protogen</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_shoot_up">
+		<sheet>protogen</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_shoot_left">
+		<sheet>protogen</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_fire_down">
+		<sheet>protogen</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_fire_right">
+		<sheet>protogen</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_fire_up">
+		<sheet>protogen</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_fire_left">
+		<sheet>protogen</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_repair">
+		<sheet>protogen</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_punch_up">
+		<sheet>protogen</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_punch_down">
+		<sheet>protogen</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_teleport">
+		<sheet>protogen</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="protogen_type_right">
+		<sheet>protogen</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_type_left">
+		<sheet>protogen</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_type_up">
+		<sheet>protogen</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_type_down">
+		<sheet>protogen</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_portrait">
+		<sheet>protogen</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<animSheet name="protogen_tracker" w="315" h="455" fw="35" fh="35">people/protogen_tracker_base.png</animSheet>
+	<anim name="protogen_tracker_clone">
+		<sheet>protogen_tracker</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_tracker_death_right">
+		<sheet>protogen_tracker</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_tracker_death_left">
+		<sheet>protogen_tracker</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_tracker_walk_down">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_walk_right">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_walk_up">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_walk_left">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_shoot_down">
+		<sheet>protogen_tracker</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_shoot_right">
+		<sheet>protogen_tracker</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_shoot_up">
+		<sheet>protogen_tracker</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_shoot_left">
+		<sheet>protogen_tracker</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_fire_down">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_fire_right">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_fire_up">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_fire_left">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_repair">
+		<sheet>protogen_tracker</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_punch_up">
+		<sheet>protogen_tracker</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_punch_down">
+		<sheet>protogen_tracker</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_tracker_teleport">
+		<sheet>protogen_tracker</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="protogen_tracker_type_right">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_tracker_type_left">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_tracker_type_up">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_tracker_type_down">
+		<sheet>protogen_tracker</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_tracker_portrait">
+		<sheet>protogen_tracker</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+	
 </FTL>

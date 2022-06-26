@@ -94,6 +94,8 @@
 		</choice>
 	</event>
 
+<!--//////////////////////////////////////////////////////////TC IS DOWN/////////////////////////////////////////////////////////-->
+
 	<FTL> <!--DESTROYED-->
 	<event name="TC1_DESTROY">
 		<text> Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else... </text>
@@ -263,6 +265,8 @@
 
 	</FTL>
 
+<!--///////////////////////////////////////FLAK MAKING///////////////////////////////////////////////////////////////-->
+
 	<FTL> <!--GET FLAKS-->
 	<event name="FLAK_FORGE_VANILLA">
 	<text>What Flak weapon do you want to print?</text>
@@ -311,15 +315,6 @@
 		</event>
 	</choice>
 
-	<choice hidden="false" blue="true">
-		<text>Page 2</text>
-		<event load="FLAK_FORGE_VANILLA_2"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_VANILLA_2">
-	<text>Choose flak:</text>
-
 	<choice hidden="false" blue="false">
 		<text>Chain Flak</text>
 		<event>
@@ -363,15 +358,6 @@
 			<weapon name="SHOTGUN_FIRE"/>
 		</event>
 	</choice>
-
-	<choice hidden="false" blue="true">
-		<text>Page 3</text>
-		<event load="FLAK_FORGE_VANILLA_3"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_VANILLA_3">
-	<text>Choose flak:</text>
 
 	<choice hidden="false" blue="false">
 		<text>Ion Flak</text>
@@ -417,15 +403,6 @@
 		</event>
 	</choice>
 
-	<choice hidden="false" blue="true">
-		<text>Page 4</text>
-		<event load="FLAK_FORGE_VANILLA_4"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_VANILLA_4">
-	<text>Choose flak:</text>
-
 	<choice hidden="false" blue="false">
 		<text>Toggle Toxic Flak</text>
 		<event>
@@ -469,15 +446,6 @@
 			<weapon name="SHOTGUN_STEEL"/>
 		</event>
 	</choice>
-
-	<choice hidden="false" blue="true">
-		<text>Page 5</text>
-	<event load="FLAK_FORGE_VANILLA_5"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_VANILLA_5">
-	<text>Choose flak:</text>
 
 	<choice hidden="false" blue="false">
 		<text>Crystal Flak</text>
@@ -553,15 +521,6 @@
 			<weapon name="TC_SHOTGUN_GOLD"/>
 		</event>
 	</choice>
-
-	<choice hidden="false" blue="true">
-		<text>Page 2</text>
-		<event load="FLAK_FORGE_CUSTOM_2"/>
-	</choice>
-	</event>
-
-	<event name="FLAK_FORGE_CUSTOM_2">
-	<text>Choose flak:</text>
 
 	<choice hidden="false" blue="false">
 		<text>Battery</text>
@@ -695,6 +654,28 @@
 	</choice>
 
 	<choice hidden="false" blue="true">
+		<text>Heavy</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<drone name="TC_COMBAT_HEAVY"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Bomb</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<drone name="TC_COMBAT_HEAVY"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK"/>
 	</choice>
@@ -734,6 +715,8 @@
 	<weapon name="TC_SCRAPFLAK"/>
 	</event>
 	</FTL>
+
+<!--/////////////////////////////////////////ENCOUNTER TEXT//////////////////////////////////////////////-->
 
 <event name="ENCOUNTER_TC1">
 <text>You've arrived at the coordinates, only to be met with the same Lanius ship from before. This looks like a trap, but they aren't attacking you, nor are their weapons on... yet.</text>
