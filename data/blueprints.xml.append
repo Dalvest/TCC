@@ -3325,7 +3325,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>Protogen</short>
 	<rarity>1</rarity>
 	<powerList>
-		<power>x1.2 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
+		<power>x1.1 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
 		<power>x0.8 movement speed.</power>
 		<power>Can provide a bar of power to the current system.</power>
 		<power>Internal Database makes skills unable to degrade.</power>
@@ -3339,11 +3339,40 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>TRACKER</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Highly armed and highly dangerous - will deal 2x damage in combat.</power>
+		<power>Highly armed and highly dangerous - will deal 1.5x damage in combat.</power>
 		<power>Normal movement speed due to improved training.</power>
-		<power>Can provide a bar of power to the current system.</power>
 		<power>Internal Database makes skills unable to degrade.</power>
 		<power>Fingerclaws make it harder to repair systems (0.6 speed).</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="primagen_raptor">
+	<desc>This primagen (not protogen!) is TRACKER's highly augmented friend. He's an excellent weapon technician and a highly dangerous soldier.</desc>
+	<cost>80</cost>
+	<title>RAPTOR</title>
+	<short>RAPTOR</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Extremely well armed - will deal 2x damage in combat.</power>
+		<power>Normal movement speed due to improved training and leg augments.</power>
+		<power>Provides two bars of power to the current system thanks to his highly efficient onboard power generator.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+		<power>Heavy armor mitigates incoming damage (x0.6 damage taken).</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="clonefail_lancer">
+	<desc>The abhorrent abomination that... looks like a protogen, i guess, is Lancer. He's a... clonefail, probably? His tongue is probably the most dangerous weapon he has.</desc>
+	<cost>80</cost>
+	<title>RAPTOR</title>
+	<short>RAPTOR</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Extremely well armed - will deal 2x damage in combat.</power>
+		<power>Normal movement speed due to improved training and leg augments.</power>
+		<power>Provides two bars of power to the current system thanks to his highly efficient onboard power generator.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+		<power>Heavy armor mitigates incoming damage (x0.6 damage taken).</power>
 	</powerList>
 </crewBlueprint>
 

@@ -138,7 +138,7 @@
 			<crewLimit>11</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
-				<zoltan_peacekeeper room="11" name="RAPTOR" />
+				<primagen_raptor room="11" name="RAPTOR" />
 				<protogen_tracker room="0" name="TRACKER" />
 				<human room="13" name="Cheese" />
 				<mantis_free room="15" name="Lancer" />
@@ -149,7 +149,7 @@
 			<crewLimit>11</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
-				<zoltan_peacekeeper room="12" name="RAPTOR" />
+				<primagen_raptor room="12" name="RAPTOR" />
 				<protogen_tracker room="0" name="TRACKER" />
 				<human room="13" name="Cheese" />
 				<mantis_free room="6" name="Lancer" />
@@ -193,7 +193,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
 				<human_soldier room="12" name="Kanyo" />
-				<zoltan_peacekeeper room="14" name="RAPTOR" />
+				<primagen_raptor room="14" name="RAPTOR" />
 				<protogen_tracker room="1" name="TRACKER" />
 				<human room="11" name="Cheese" />
 				<mantis_free room="3" name="Lancer" />
@@ -353,7 +353,7 @@
 			<crew>
 				<human room="0" name="Cheese" />
 				<rsa_technician room="1" name="Nitron" />
-				<zoltan_peacekeeper room="7" name="RAPTOR" />
+				<primagen_raptor room="7" name="RAPTOR" />
 				<mantis_free room="6" name="Lancer" />
 				<human_rebel room="6" />
 				<human_mfk room="6" />
@@ -664,8 +664,8 @@
 			<controllable>true</controllable>
 			<canPhaseThroughDoors>false</canPhaseThroughDoors>
 			<moveSpeedMultiplier>0.8</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1.2</sabotageSpeedMultiplier>
-			<damageMultiplier>1.2</damageMultiplier>
+			<sabotageSpeedMultiplier>1.1</sabotageSpeedMultiplier>
+			<damageMultiplier>1.1</damageMultiplier>
 			<damageTakenMultiplier>1</damageTakenMultiplier>
 			<animBase>human</animBase>
 			<bonusPower>1</bonusPower>
@@ -708,10 +708,9 @@
 			<canPhaseThroughDoors>false</canPhaseThroughDoors>
 			<moveSpeedMultiplier>1</moveSpeedMultiplier>
 			<sabotageSpeedMultiplier>1.4</sabotageSpeedMultiplier>
-			<damageMultiplier>2</damageMultiplier>
+			<damageMultiplier>1.5</damageMultiplier>
 			<damageTakenMultiplier>0.9</damageTakenMultiplier>
 			<animBase>human</animBase>
-			<bonusPower>1</bonusPower>
 			<deathSounds>
 				<deathSound>death1</deathSound>
 				<deathSound>death2</deathSound>
@@ -734,6 +733,50 @@
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
+
+		<mod-append:race name="primagen_raptor">
+			<maxHealth>130</maxHealth>
+			<repairSpeed>1.1</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>true</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>true</canSuffocate>
+			<suffocationModifier>0.5</suffocationModifier>
+			<fireDamageMultiplier>0.5</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>1</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+			<damageMultiplier>2</damageMultiplier>
+			<damageTakenMultiplier>0.6</damageTakenMultiplier>
+			<animBase>human</animBase>
+			<bonusPower>2</bonusPower>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>crewLaser1</shootingSound>
+			</shootingSounds>
+			<repairSounds animSoundFrame="-1">
+				<repairSound>repair</repairSound>
+			</repairSounds>
+			<healSpeed>1.2</healSpeed>
+			<skills>
+				<piloting req="20"/>
+				<engines req="20"/>
+				<shields req="74"/>
+				<weapons req="74"/>
+				<repair req="26"/>
+				<combat req="14"/>
+			</skills>
+			<defaultSkillLevel>0</defaultSkillLevel>
+			<cloneLoseSkills>false</cloneLoseSkills>
+		</mod-append:race>
+
 
 		<!--///////RSA TECCHIE//////-->
 

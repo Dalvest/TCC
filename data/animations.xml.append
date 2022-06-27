@@ -1928,6 +1928,8 @@
 		<time>1</time>
 	</anim>
 
+	<!--/////// TRACKER //////-->
+
 	<animSheet name="protogen_tracker" w="315" h="455" fw="35" fh="35">people/protogen_tracker_base.png</animSheet>
 	<anim name="protogen_tracker_clone">
 		<sheet>protogen_tracker</sheet>
@@ -2050,4 +2052,128 @@
 		<time>1</time>
 	</anim>
 	
+	<!--/////// RAPTOR //////-->
+
+	<animSheet name="primagen_raptor" w="315" h="455" fw="35" fh="35">people/primagen_raptor_base.png</animSheet>
+	<anim name="primagen_raptor_clone">
+		<sheet>primagen_raptor</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="primagen_raptor_death_right">
+		<sheet>primagen_raptor</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="primagen_raptor_death_left">
+		<sheet>primagen_raptor</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="primagen_raptor_walk_down">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_walk_right">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_walk_up">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_walk_left">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_shoot_down">
+		<sheet>primagen_raptor</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_shoot_right">
+		<sheet>primagen_raptor</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_shoot_up">
+		<sheet>primagen_raptor</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_shoot_left">
+		<sheet>primagen_raptor</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_fire_down">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_fire_right">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_fire_up">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_fire_left">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_repair">
+		<sheet>primagen_raptor</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_punch_up">
+		<sheet>primagen_raptor</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_punch_down">
+		<sheet>primagen_raptor</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="primagen_raptor_teleport">
+		<sheet>primagen_raptor</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="primagen_raptor_type_right">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="primagen_raptor_type_left">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="primagen_raptor_type_up">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="primagen_raptor_type_down">
+		<sheet>primagen_raptor</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="primagen_raptor_portrait">
+		<sheet>primagen_raptor</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
 </FTL>
