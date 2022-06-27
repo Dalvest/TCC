@@ -974,6 +974,38 @@
 				</temporaryEffect>
 			</powerEffect>
 		</mod-append:race>
+
+		<mod-append:race name="tcc_generic_crewjank">
+        <maxHealth>0</maxHealth>
+        <repairSpeed>0</repairSpeed>
+        <canFight>false</canFight>
+        <canRepair>false</canRepair>
+        <canSabotage>false</canSabotage>
+        <canSuffocate>false</canSuffocate>
+        <fireDamageMultiplier>0</fireDamageMultiplier>
+        <resistsMindControl>true</resistsMindControl>
+        <canMan>false</canMan>
+        <noClone>true</noClone>
+        <canTeleport>false</canTeleport>
+        <noSlot>true</noSlot>
+        <noAI>true</noAI>
+        <controllable>false</controllable>
+        <selectable>false</selectable>
+        <canPhaseThroughDoors>true</canPhaseThroughDoors>
+        <moveSpeedMultiplier>0.00</moveSpeedMultiplier>
+        <sabotageSpeedMultiplier>0.0</sabotageSpeedMultiplier>
+        <damageMultiplier>0</damageMultiplier>
+        <damageTakenMultiplier>0.0</damageTakenMultiplier>
+        <animBase>mantis</animBase>
+        <deathSounds>
+            <deathSound>silence</deathSound>
+        </deathSounds>
+        <shootingSounds>
+            <shootingSound>mantisSpit1</shootingSound>
+            <shootingSound>mantisSpit2</shootingSound>
+            <shootingSound>mantisSpit3</shootingSound>
+        </shootingSounds>
+    </mod-append:race>
 	</mod:findLike>
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////

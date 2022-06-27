@@ -804,6 +804,91 @@
 	<weaponArt>tc_laser_charger</weaponArt>
 </weaponBlueprint>
 
+<weaponBlueprint name="TCC_DEBUFF_SLOW_1">
+	<type>LASER</type>
+	<title>WIP Slowing Laser</title>
+	<short>WIP</short>
+	<tip>Tip Thingy Thing!</tip>
+	<desc>This laser halves the speed of all enemy crew on the enemy ship. Stacks infinitely for now.</desc>
+	<tooltip>WIP Laser, no damage, cannot miss, 1 second cooldown, 10 shield pierce, slow.</tooltip>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+
+	<!--STATBOOST THINGS-->
+
+	<spawnCrew>
+		<race>tcc_generic_crewjank</race>
+		<number>1</number>
+		<enemy>true</enemy><!--So you don't ever see the crew-->
+		<lifetime>0</lifetime>
+		<noSlot>true</noSlot>
+		<statBoosts>
+
+			<statBoost name="deathEffect"><!--This modifies the stat of the crew, so that the same crew can be used for multiple weapons-->
+				<boostType>SET</boostType>
+
+
+				<deathEffect><!--When template crew dies (on weapon impact) these statBoosts are applied -->
+					<statBoosts>
+						<statBoost name="moveSpeedMultiplier"><!--Speed stat-->
+							<boostType>MULT</boostType><!--MULT and 0.5 multiplies the value of the stat by 0.5, so crew speed is halved-->
+							<amount>0.5</amount>
+							<shipTarget>CURRENT_ALL</shipTarget><!--Affects all rooms in the current ship-->
+							<crewTarget>ORIGINAL_ALLIES</crewTarget><!--Targets allies OF THE SPAWNED CREW, so your enemeis. ORIGINAL_ALLIES ignores mind control-->
+							<duration>5</duration><!--This statBoost lingers for 5 seconds-->
+							<boostAnim>bio_poison</boostAnim><!--The bio_poison anim will play over all affected crew-->
+							<maxStacks id="tcc_lingering_slow_1">999</maxStacks><!--The ID makes it so the stacks of THIS boost are counted, so even if stacks are limited it can still stack with OTHER speed-altering affects-->
+							<!--999 means it can self-stack 999 times, so effectively infintely. I left this in however, so the value can be changed later.-->
+							<blackList><!--To prevent the animation from playing over the template crew-->
+								<tcc_generic_crewjank/>
+							</blackList>
+						</statBoost>
+					</statBoosts>
+				</deathEffect>
+
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>9999999</priority>
+			</statBoost>
+
+
+		</statBoosts>
+	</spawnCrew>
+
+
+
+
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>0.2</cooldown>
+	<power>1</power>
+	<cost>999</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_frost</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_bio</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <!--//////////////////////////////////////////////////SINGULARITY////////////////////////////////////////////////////-->
 
 <weaponBlueprint name="SINGULARITY_PROJECTOR_1">
@@ -3373,6 +3458,26 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>TRACKER's Internal Database makes skills unable to degrade.</power>
 		<power>Lancer doesn't know how to repair systems, nor is he able to learn how to.</power>
 	</powerList>
+</crewBlueprint>
+
+
+<!--///////Functional crew//////-->
+<crewBlueprint name="tcc_generic_crewjank">
+	<desc>Jank</desc>
+	<title>Jank</title>
+	<short>Jank</short>
+	<cost>50</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Hi, you probably shouldn't be seeing this</power>
+		<power>You should look behind you before it's too late</power>
+	</powerList>
+	<colorList>
+		<layer>
+			<color r="17" g="255" b="0" a="0.7"/>
+		</layer>
+	</colorList>
 </crewBlueprint>
 
 </FTL>
