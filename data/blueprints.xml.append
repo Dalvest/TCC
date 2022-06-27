@@ -3339,7 +3339,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>TRACKER</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Highly armed and highly dangerous - will deal 1.5x damage in combat.</power>
+		<power>Highly armed and highly dangerous - will deal 1.4x damage in combat.</power>
 		<power>Normal movement speed due to improved training.</power>
 		<power>Internal Database makes skills unable to degrade.</power>
 		<power>Fingerclaws make it harder to repair systems (0.6 speed).</power>
@@ -3353,7 +3353,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>RAPTOR</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Extremely well armed - will deal 2x damage in combat.</power>
+		<power>Extremely well armed - will deal 1.7x damage in combat.</power>
 		<power>Normal movement speed due to improved training and leg augments.</power>
 		<power>Provides two bars of power to the current system thanks to his highly efficient onboard power generator.</power>
 		<power>Internal Database makes skills unable to degrade.</power>
@@ -3362,17 +3362,16 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </crewBlueprint>
 
 <crewBlueprint name="clonefail_lancer">
-	<desc>The abhorrent abomination that... looks like a protogen, i guess, is Lancer. He's a... clonefail, probably? His tongue is probably the most dangerous weapon he has.</desc>
+	<desc>The abhorrent half-protogen and half-sergal failed DNA splice that... i guess, is Lancer. He's a... clonefail, probably? His tongue is probably the most dangerous weapon he has.</desc>
 	<cost>80</cost>
-	<title>RAPTOR</title>
-	<short>RAPTOR</short>
+	<title>Lancer</title>
+	<short>Lancer</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Extremely well armed - will deal 2x damage in combat.</power>
-		<power>Normal movement speed due to improved training and leg augments.</power>
-		<power>Provides two bars of power to the current system thanks to his highly efficient onboard power generator.</power>
-		<power>Internal Database makes skills unable to degrade.</power>
-		<power>Heavy armor mitigates incoming damage (x0.6 damage taken).</power>
+		<power>Using his mutated tongue and highly adaptive combat skills, Lancer can deal 2x damage in combat.</power>
+		<power>1.3x speed owing to his unstable and light frame (60hp, x1.2 damage taken)</power>
+		<power>TRACKER's Internal Database makes skills unable to degrade.</power>
+		<power>Lancer doesn't know how to repair systems, nor is he able to learn how to.</power>
 	</powerList>
 </crewBlueprint>
 

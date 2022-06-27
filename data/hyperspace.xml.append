@@ -141,7 +141,7 @@
 				<primagen_raptor room="11" name="RAPTOR" />
 				<protogen_tracker room="0" name="TRACKER" />
 				<human room="13" name="Cheese" />
-				<mantis_free room="15" name="Lancer" />
+				<clonefail_lancer room="15" name="Lancer" />
 			</crew>
 		</mod-append:customShip>
 
@@ -152,7 +152,7 @@
 				<primagen_raptor room="12" name="RAPTOR" />
 				<protogen_tracker room="0" name="TRACKER" />
 				<human room="13" name="Cheese" />
-				<mantis_free room="6" name="Lancer" />
+				<clonefail_lancer room="6" name="Lancer" />
 				<rock_commando room="6" name="Lex" />
 			</crew>
 		</mod-append:customShip>
@@ -196,7 +196,7 @@
 				<primagen_raptor room="14" name="RAPTOR" />
 				<protogen_tracker room="1" name="TRACKER" />
 				<human room="11" name="Cheese" />
-				<mantis_free room="3" name="Lancer" />
+				<clonefail_lancer room="3" name="Lancer" />
 				<scrapper room="6" name="01010011" />
 				<protogen room="2" name="Zenith" />
 			</crew>
@@ -274,7 +274,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
 				<scrapper_scavenger room="11" name="Scrappy McScrapton" />
-				<mantis_free room="0" name="Lancer" />
+				<clonefail_lancer room="0" name="Lancer" />
 				<protogen room="1" name="Dalvest" />
 				<human room="5" name="Cheese" />
 			</crew>
@@ -354,7 +354,7 @@
 				<human room="0" name="Cheese" />
 				<rsa_technician room="1" name="Nitron" />
 				<primagen_raptor room="7" name="RAPTOR" />
-				<mantis_free room="6" name="Lancer" />
+				<clonefail_lancer room="6" name="Lancer" />
 				<human_rebel room="6" />
 				<human_mfk room="6" />
 				<human_medic room="6" />
@@ -708,7 +708,7 @@
 			<canPhaseThroughDoors>false</canPhaseThroughDoors>
 			<moveSpeedMultiplier>1</moveSpeedMultiplier>
 			<sabotageSpeedMultiplier>1.4</sabotageSpeedMultiplier>
-			<damageMultiplier>1.5</damageMultiplier>
+			<damageMultiplier>1.4</damageMultiplier>
 			<damageTakenMultiplier>0.9</damageTakenMultiplier>
 			<animBase>human</animBase>
 			<deathSounds>
@@ -749,11 +749,53 @@
 			<controllable>true</controllable>
 			<canPhaseThroughDoors>false</canPhaseThroughDoors>
 			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
-			<damageMultiplier>2</damageMultiplier>
+			<sabotageSpeedMultiplier>1.7</sabotageSpeedMultiplier>
+			<damageMultiplier>1.7</damageMultiplier>
 			<damageTakenMultiplier>0.6</damageTakenMultiplier>
 			<animBase>human</animBase>
 			<bonusPower>2</bonusPower>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>crewLaser1</shootingSound>
+			</shootingSounds>
+			<repairSounds animSoundFrame="-1">
+				<repairSound>repair</repairSound>
+			</repairSounds>
+			<healSpeed>1.2</healSpeed>
+			<skills>
+				<piloting req="20"/>
+				<engines req="20"/>
+				<shields req="74"/>
+				<weapons req="74"/>
+				<repair req="26"/>
+				<combat req="14"/>
+			</skills>
+			<defaultSkillLevel>0</defaultSkillLevel>
+			<cloneLoseSkills>false</cloneLoseSkills>
+		</mod-append:race>
+
+		<mod-append:race name="clonefail_lancer">
+			<maxHealth>60</maxHealth>
+			<repairSpeed>0.1</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>false</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>false</canSuffocate>
+			<suffocationModifier>0.1</suffocationModifier>
+			<fireDamageMultiplier>0.5</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>1.3</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+			<damageMultiplier>2</damageMultiplier>
+			<damageTakenMultiplier>1.2</damageTakenMultiplier>
+			<animBase>human</animBase>
 			<deathSounds>
 				<deathSound>death1</deathSound>
 				<deathSound>death2</deathSound>
