@@ -3252,7 +3252,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<desc>A Lanius that is a part of the Scrapper faction, extremely adept at both repairing and breaking systems.</desc>
 	<cost>50</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<powerList>
 		<power>Slower oxygen drain</power>
 		<power>0.75x fire damage taken</power>
@@ -3350,6 +3350,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </crewBlueprint>
 
 <!--///////GENERIC - RSA//////-->
+<!--///////REMEMBER, MOST UNCOMMON IS 5//////-->
 
 <crewBlueprint name="kiviekith">
 	<desc>After years of genetic tampering, these former humans are forced to wear their bulky suits in order to survive. The RSA gladly accepted these misfits into their ranks.</desc>
@@ -3357,7 +3358,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>RSA Kith</short>
 	<cost>45</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>4</rarity>
    <powerList>
 	 <power>:Half damage from hazards</power>
 	 <power>:Learns skills slower</power>
@@ -3369,7 +3370,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<cost>70</cost>
 	<title>RSA Technician</title>
 	<short>RSA Techie</short>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<powerList>
 		<power>Active Ability: Summons a highly unstable Scout Drone that is only able to attack (to a maximum of 5 drones each engagement.) </power>
 		<power>1.25x repair speed. Gains an additional 50% boost to repairs in any of the following systems: Engines, Piloting, Shields, Weapons, or Drone Control.</power>
@@ -3406,7 +3407,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<cost>60</cost>
 	<title>Protogen</title>
 	<short>Protogen</short>
-	<rarity>1</rarity>
+	<rarity>4</rarity>
 	<powerList>
 		<power>x1.1 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
 		<power>x0.8 movement speed.</power>

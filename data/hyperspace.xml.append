@@ -650,7 +650,7 @@
 		<!--///////PROTOGEN ZONE (DANGER: FURRIES AHEAD)//////-->
 
 		<mod-append:race name="protogen">
-			<maxHealth>110</maxHealth>
+			<maxHealth>90</maxHealth>
 			<repairSpeed>1.1</repairSpeed>
 			<canFight>true</canFight>
 			<canRepair>true</canRepair>
@@ -693,7 +693,7 @@
 		</mod-append:race>
 
 		<mod-append:race name="protogen_tracker">
-			<maxHealth>130</maxHealth>
+			<maxHealth>110</maxHealth>
 			<repairSpeed>0.6</repairSpeed>
 			<canFight>true</canFight>
 			<canRepair>true</canRepair>
@@ -711,6 +711,7 @@
 			<damageMultiplier>1.4</damageMultiplier>
 			<damageTakenMultiplier>0.9</damageTakenMultiplier>
 			<animBase>human</animBase>
+			<defaultSkillLevel>1</defaultSkillLevel>
 			<deathSounds>
 				<deathSound>death1</deathSound>
 				<deathSound>death2</deathSound>
@@ -735,7 +736,7 @@
 		</mod-append:race>
 
 		<mod-append:race name="primagen_raptor">
-			<maxHealth>130</maxHealth>
+			<maxHealth>90</maxHealth>
 			<repairSpeed>1.1</repairSpeed>
 			<canFight>true</canFight>
 			<canRepair>true</canRepair>
@@ -753,6 +754,7 @@
 			<damageMultiplier>1.7</damageMultiplier>
 			<damageTakenMultiplier>0.6</damageTakenMultiplier>
 			<animBase>human</animBase>
+			<defaultSkillLevel>1</defaultSkillLevel>
 			<bonusPower>2</bonusPower>
 			<deathSounds>
 				<deathSound>death1</deathSound>
@@ -803,6 +805,35 @@
 			<shootingSounds>
 				<shootingSound>crewLaser1</shootingSound>
 			</shootingSounds>
+			<powerEffect>
+				<cooldown>17</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<powerSounds>
+					<finishSound>mantisSplat1</finishSound>
+					<finishSound>mantisSplat2</finishSound>
+					<finishSound>mantisSplat3</finishSound>
+				</powerSounds>
+				<req type="enemy">
+					<minHealth>10</minHealth>
+					<enemyInRoom/>
+				</req>
+				<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+				<buttonText>OVERDRIVE</buttonText>
+				<tooltip>Ready: Increase movement speed to 3x and crew damage to 2.5x for 7 seconds. Does NOT increase damage taken from hazards.</tooltip>
+				<cooldownColor r="171" g="223" b="255"/>
+				<temporaryEffect>
+					<duration>7</duration>
+					<cooldownColor r="215" g="126" b="195"/>
+					<finishSounds>
+						<finishSound>mantisSplat1</finishSound>
+						<finishSound>mantisSplat2</finishSound>
+						<finishSound>mantisSplat3</finishSound>
+					</finishSounds>
+					<effectAnim>pheromones_f</effectAnim>
+					<moveSpeedMultiplier>3</moveSpeedMultiplier>
+					<damageMultiplier>2.5</damageMultiplier>
+				</temporaryEffect>
+			</powerEffect>
 			<repairSounds animSoundFrame="-1">
 				<repairSound>repair</repairSound>
 			</repairSounds>
