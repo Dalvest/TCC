@@ -144,14 +144,14 @@
     <choice>
       <text>Nevermind.</text>
       <event>
-        <variable name="fm_called_forgemaster" op="set" val="0"/>
+        <variable name="tcc_called_compactor" op="set" val="0"/>
         <loadEvent>FMCORE_ATLAS_EQUIPMENT</loadEvent>
       </event>
     </choice>
   </event>
   <event name="TC_SPAWNER">
     <loadEventList>
-      <event name="TC_SPAWNER_2" req="tc_call_marker">
+      <event req="tc_call_marker">
         <loadEventList first="true" default="TRUENOTHING">
           <event load="TRUENOTHING" req="SEC SECRET_SYLVAN"/>
           <event load="TRUENOTHING" req="SEC SECRET_TWISTED"/>
