@@ -804,18 +804,18 @@
 	<weaponArt>tc_laser_charger</weaponArt>
 </weaponBlueprint>
 
+<!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
+
 <weaponBlueprint name="TCC_DEBUFF_SLOW_1">
 	<type>LASER</type>
-	<title>WIP Slowing Laser</title>
-	<short>WIP</short>
-	<tip>Tip Thingy Thing!</tip>
+	<title>Debuffer (Movement)</title>
+	<short>Debuffer (M)</short>
+	<tip>Slows down movement of all enemy crew for 5 seconds with a cooldown of 10 seconds.</tip>
 	<desc>This laser halves the speed of all enemy crew on the enemy ship. Stacks infinitely for now.</desc>
 	<tooltip>WIP Laser, no damage, cannot miss, 1 second cooldown, 10 shield pierce, slow.</tooltip>
 	<damage>0</damage>
 	<accuracyMod>100</accuracyMod>
-
 	<!--STATBOOST THINGS-->
-
 	<spawnCrew>
 		<race>tcc_generic_crewjank</race>
 		<number>1</number>
@@ -855,19 +855,16 @@
 		</statBoosts>
 	</spawnCrew>
 
-
-
-
 	<shots>1</shots>
 	<sp>10</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>0.2</cooldown>
+	<cooldown>10</cooldown>
 	<power>1</power>
-	<cost>999</cost>
+	<cost>40</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
-	<image>laser_frost</image>
+	<image>tc_debuffer_slow_1</image>
 	<launchSounds>
 		<sound>lightLaser1</sound>
 		<sound>lightLaser2</sound>

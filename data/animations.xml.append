@@ -173,6 +173,18 @@
 	<mountPoint x="3" y="45"/>
 </weaponAnim>
 
+<!--/////////////////// DEBUFFER //////////////////-->
+
+<animSheet name="tc_debuffer_slow_1" w="145" h="35" fw="29" fh="35">weapon_debuffer/tc_debuffer_mk1.png</animSheet>
+<weaponAnim name="tc_debuffer_slow_1">
+	<sheet>tc_debuffer_slow_1</sheet>
+	<desc length="5" x="0" y="0"/>
+	<chargedFrame>2</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="15" y="2"/>
+	<mountPoint x="2" y="25"/>
+</weaponAnim>
+
 <!--/////////////////// MISSILES //////////////////-->
 
 <animSheet name="rsa_biohazard" w="75" h="63" fw="25" fh="63">weapon_missile/rsa_biohazard.png</animSheet>
