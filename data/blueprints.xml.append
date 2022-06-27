@@ -125,7 +125,7 @@
 <weaponBlueprint name="TC_SHOTGUN_LEAD">
 	<type>BURST</type>
 	<title>Lead Flak</title>
-	<short>Leak Flak</short>
+	<short>Lead Flak</short>
 	<tip>tip_flak</tip>
 	<desc>A lead flak cannon that fires dense chunks of lead. Its projectiles are quite heavy and sluggish. </desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 5 damage.</tooltip>
@@ -802,6 +802,88 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>tc_laser_charger</weaponArt>
+</weaponBlueprint>
+
+<!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
+
+<weaponBlueprint name="TCC_DEBUFF_SLOW_1">
+	<type>LASER</type>
+	<title>Debuffer (Movement)</title>
+	<short>Debuffer (M)</short>
+	<tip>Slows down movement of all enemy crew for 5 seconds with a cooldown of 10 seconds.</tip>
+	<desc>This laser halves the speed of all enemy crew on the enemy ship. Stacks infinitely for now.</desc>
+	<tooltip>WIP Laser, no damage, cannot miss, 1 second cooldown, 10 shield pierce, slow.</tooltip>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<!--STATBOOST THINGS-->
+	<spawnCrew>
+		<race>tcc_generic_crewjank</race>
+		<number>1</number>
+		<enemy>true</enemy><!--So you don't ever see the crew-->
+		<lifetime>0</lifetime>
+		<noSlot>true</noSlot>
+		<statBoosts>
+
+			<statBoost name="deathEffect"><!--This modifies the stat of the crew, so that the same crew can be used for multiple weapons-->
+				<boostType>SET</boostType>
+
+
+				<deathEffect><!--When template crew dies (on weapon impact) these statBoosts are applied -->
+					<statBoosts>
+						<statBoost name="moveSpeedMultiplier"><!--Speed stat-->
+							<boostType>MULT</boostType><!--MULT and 0.5 multiplies the value of the stat by 0.5, so crew speed is halved-->
+							<amount>0.5</amount>
+							<shipTarget>CURRENT_ALL</shipTarget><!--Affects all rooms in the current ship-->
+							<crewTarget>ORIGINAL_ALLIES</crewTarget><!--Targets allies OF THE SPAWNED CREW, so your enemeis. ORIGINAL_ALLIES ignores mind control-->
+							<duration>5</duration><!--This statBoost lingers for 5 seconds-->
+							<boostAnim>bio_poison</boostAnim><!--The bio_poison anim will play over all affected crew-->
+							<maxStacks id="tcc_lingering_slow_1">999</maxStacks><!--The ID makes it so the stacks of THIS boost are counted, so even if stacks are limited it can still stack with OTHER speed-altering affects-->
+							<!--999 means it can self-stack 999 times, so effectively infintely. I left this in however, so the value can be changed later.-->
+							<blackList><!--To prevent the animation from playing over the template crew-->
+								<tcc_generic_crewjank/>
+							</blackList>
+						</statBoost>
+					</statBoosts>
+				</deathEffect>
+
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>9999999</priority>
+			</statBoost>
+
+
+		</statBoosts>
+	</spawnCrew>
+
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>tc_debuffer_slow_1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_bio</weaponArt>
+	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
 <!--//////////////////////////////////////////////////SINGULARITY////////////////////////////////////////////////////-->
@@ -3151,13 +3233,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="trash_eater">
 	<title>Trash Eater</title>
 	<short>T.Eater</short>
-	<desc>The Trash Eater himself. A greedy but interesting Lanius.</desc>
+	<desc>The Prince of Lanius has returned to eat again - leading his half-cult half-association of Scrappers, he's on a quest to acquire enough mass to engulf an universe and overthrow the King...</desc>
 	<cost>120</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Exists!</power>
-		<power>Pretty cool</power>
+		<power>Owing to his durable body, he has 200hp.</power>
+		<power>His Ability of COMPACT allows him to deal one hull damage to the current room as well as giving him HP back.</power>
+		<power>Does 1.5x sabotage damage.</power>
 	</powerList>
 </crewBlueprint>
 
@@ -3169,7 +3252,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<desc>A Lanius that is a part of the Scrapper faction, extremely adept at both repairing and breaking systems.</desc>
 	<cost>50</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<powerList>
 		<power>Slower oxygen drain</power>
 		<power>0.75x fire damage taken</power>
@@ -3267,6 +3350,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </crewBlueprint>
 
 <!--///////GENERIC - RSA//////-->
+<!--///////REMEMBER, MOST UNCOMMON IS 5//////-->
 
 <crewBlueprint name="kiviekith">
 	<desc>After years of genetic tampering, these former humans are forced to wear their bulky suits in order to survive. The RSA gladly accepted these misfits into their ranks.</desc>
@@ -3274,7 +3358,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>RSA Kith</short>
 	<cost>45</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>4</rarity>
    <powerList>
 	 <power>:Half damage from hazards</power>
 	 <power>:Learns skills slower</power>
@@ -3286,7 +3370,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<cost>70</cost>
 	<title>RSA Technician</title>
 	<short>RSA Techie</short>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<powerList>
 		<power>Active Ability: Summons a highly unstable Scout Drone that is only able to attack (to a maximum of 5 drones each engagement.) </power>
 		<power>1.25x repair speed. Gains an additional 50% boost to repairs in any of the following systems: Engines, Piloting, Shields, Weapons, or Drone Control.</power>
@@ -3323,9 +3407,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<cost>60</cost>
 	<title>Protogen</title>
 	<short>Protogen</short>
-	<rarity>1</rarity>
+	<rarity>4</rarity>
 	<powerList>
-		<power>x1.2 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
+		<power>x1.1 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
 		<power>x0.8 movement speed.</power>
 		<power>Can provide a bar of power to the current system.</power>
 		<power>Internal Database makes skills unable to degrade.</power>
@@ -3339,12 +3423,60 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>TRACKER</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Highly armed and highly dangerous - will deal 2x damage in combat.</power>
+		<power>Highly armed and highly dangerous - will deal 1.4x damage in combat.</power>
 		<power>Normal movement speed due to improved training.</power>
-		<power>Can provide a bar of power to the current system.</power>
 		<power>Internal Database makes skills unable to degrade.</power>
 		<power>Fingerclaws make it harder to repair systems (0.6 speed).</power>
 	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="primagen_raptor">
+	<desc>This primagen (not protogen!) is TRACKER's highly augmented friend. He's an excellent weapon technician and a highly capable soldier.</desc>
+	<cost>80</cost>
+	<title>RAPTOR</title>
+	<short>RAPTOR</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Extremely well armed - will deal 1.7x damage in combat.</power>
+		<power>Normal movement speed due to improved training and leg augments.</power>
+		<power>Provides two bars of power to the current system thanks to his highly efficient onboard power generator.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+		<power>Heavy armor mitigates incoming damage (x0.6 damage taken).</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="clonefail_lancer">
+	<desc>The abhorrent half-protogen and half-sergal failed DNA splice that... i guess, is Lancer. He's a... clonefail, probably? His tongue is probably the most dangerous weapon he has.</desc>
+	<cost>80</cost>
+	<title>Lancer</title>
+	<short>Lancer</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Using his mutated tongue and highly adaptive combat skills, Lancer can deal 2x damage in combat.</power>
+		<power>1.3x speed owing to his unstable and light frame (60hp, x1.2 damage taken)</power>
+		<power>TRACKER's Internal Database makes skills unable to degrade.</power>
+		<power>Lancer doesn't know how to repair systems, nor is he able to learn how to.</power>
+	</powerList>
+</crewBlueprint>
+
+
+<!--///////Functional crew//////-->
+<crewBlueprint name="tcc_generic_crewjank">
+	<desc>Jank</desc>
+	<title>Jank</title>
+	<short>Jank</short>
+	<cost>50</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Hi, you probably shouldn't be seeing this</power>
+		<power>You should look behind you before it's too late</power>
+	</powerList>
+	<colorList>
+		<layer>
+			<color r="17" g="255" b="0" a="0.7"/>
+		</layer>
+	</colorList>
 </crewBlueprint>
 
 </FTL>

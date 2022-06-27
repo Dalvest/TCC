@@ -32,6 +32,9 @@
 
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
 	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>protogen_tracker</mod-append:name>
+	<mod-append:name>primagen_raptor</mod-append:name>
+	<mod-append:name>clonefail_lancer</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
@@ -46,6 +49,10 @@
 	<mod-append:name>scrapper_engineer</mod-append:name>
 	<mod-append:name>scrapper_speed</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>protogen</mod-append:name>
+	<mod-append:name>protogen_tracker</mod-append:name>
+	<mod-append:name>primagen_raptor</mod-append:name>
+	<mod-append:name>clonefail_lancer</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
@@ -72,6 +79,9 @@
 
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE_CRAPBUCKET">
 	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>protogen_tracker</mod-append:name>
+	<mod-append:name>primagen_raptor</mod-append:name>
+	<mod-append:name>clonefail_lancer</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
@@ -89,6 +99,20 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_4</mod-append:name>
+	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
+	<mod-append:name>ION_CHARGER_1</mod-append:name>
+	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
+	<mod-append:name>RSA_MINICANNON</mod-append:name>
+	<mod-append:name>RSA_TAGGER</mod-append:name>
+	<mod-append:name>TC_TEAR_GAS</mod-append:name>
+	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
+	<mod-append:name>TC_SINEWAVE</mod-append:name>
+	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
+	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
+	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
+	<mod-append:name>TC_LASER_CHARGER</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -105,6 +129,22 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_4</mod-append:name>
+	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
+	<mod-append:name>ION_CHARGER_1</mod-append:name>
+	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
+	<mod-append:name>RSA_MINICANNON</mod-append:name>
+	<mod-append:name>RSA_TAGGER</mod-append:name>
+	<mod-append:name>TC_TEAR_GAS</mod-append:name>
+	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
+	<mod-append:name>TC_SINEWAVE</mod-append:name>
+	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_UNSCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_SCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
+	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
+	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
+	<mod-append:name>TC_LASER_CHARGER</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
@@ -117,6 +157,7 @@
 	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
 	<mod-append:name>TC_RAPTORS_OWN</mod-append:name>
 	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
+	<mod-append:name>TC_SCRAPFLAK</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
@@ -437,10 +478,10 @@
 	<health amount="11" />
 	<maxPower amount="30" />
 	<crew>
-            <zoltan_peacekeeper room="5" name="RAPTOR" />
-            <engi room="0" name="TRACKER" />
+            <primagen_raptor room="5" name="RAPTOR" />
+            <protogen_tracker room="0" name="TRACKER" />
             <human room="11" name="Cheese" />
-            <mantis_free room="12" name="Lancer" />
+            <clonefail_lancer room="12" name="Lancer" />
 	</crew>
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
