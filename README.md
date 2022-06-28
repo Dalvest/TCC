@@ -9,7 +9,7 @@ Lead Devs: Zuggo, Dalvest
 
 Coders: Zandoware, Choosechee
 
-Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee, Wabbles, ConMan, Skye
+Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee, Wabbles, ConMan, Skye, Typerim
 
 Playtesters/bug reporters: marcrusian, DemonFusionGamer, Kommandant_Julk, The Ghost Hugger, Lex, Vertaalfout
 
