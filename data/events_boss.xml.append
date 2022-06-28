@@ -2,60 +2,60 @@
 
 	<mod:findName type="event" name="TRUE_LAST_STAND_START">
 		<mod:findLike type="choice"><mod:selector lvl="0" />
-		<mod:findLike type="event">
-			<mod-append:choice hidden="true" max_group="1" req="SHIP_SCRAPPER" blue="false">
-				<text>Contact Federation command.</text>
-				<event>
-					<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "What in the- you Scrappers were hostile to us, weren't you? Why did you... nevermind. Just end the Flagship, please."</text>
+			<mod:findLike type="event">
+				<mod-append:choice hidden="true" max_group="1" req="SHIP_SCRAPPER" blue="false">
+					<text>Contact Federation command.</text>
+					<event>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "What in the- you Scrappers were hostile to us, weren't you? Why did you... nevermind. Just end the Flagship, please."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
 							</choice>
-				</event>
-			</mod-append:choice>
-            <mod-append:choice hidden="true" max_group="1" req="SHIP_TRASH" blue="false">
-				<text>Contact Federation command.</text>
-				<event>
-					<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "I've been waiting for someone to come and clean my private quarters- what, you're a military ship. You don't look the part, although I'm guessing that's a camouflage tactic."</text>
+					</event>
+				</mod-append:choice>
+				<mod-append:choice hidden="true" max_group="1" req="SHIP_TRASH" blue="false">
+					<text>Contact Federation command.</text>
+					<event>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "I've been waiting for someone to come and clean my private quarters- what, you're a military ship. You don't look the part, although I'm guessing that's a camouflage tactic."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
 							</choice>
-				</event>
-			</mod-append:choice>
-            <mod-append:choice hidden="true" max_group="1" req="SHIP_GARBAGE_COMPACTOR" blue="false">
-				<text>Contact Federation command.</text>
-				<event>
-					<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "It would seem the Protogen project has been succesful, considering the fact you made it all the way here. Captain, we need urgent help. You're our last hope."</text>
+					</event>
+				</mod-append:choice>
+				<mod-append:choice hidden="true" max_group="1" req="SHIP_GARBAGE_COMPACTOR" blue="false">
+					<text>Contact Federation command.</text>
+					<event>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "It would seem the Protogen project has been succesful, considering the fact you made it all the way here. Captain, we need urgent help. You're our last hope."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
 							</choice>
-				</event>
-			</mod-append:choice>
-            <mod-append:choice hidden="true" max_group="1" req="SHIP_ARMOREDWASP" blue="false">
-				<text>Contact Federation command.</text>
-				<event>
-					<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "That's an... uh... slug... Lanius... Mantis... What is that ship? ...Well, hopefully, this ship will be the end of the Rebellion."</text>
+					</event>
+				</mod-append:choice>
+				<mod-append:choice hidden="true" max_group="1" req="SHIP_ARMOREDWASP" blue="false">
+					<text>Contact Federation command.</text>
+					<event>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "That's an... uh... slug... Lanius... Mantis... What is that ship? ...Well, hopefully, this ship will be the end of the Rebellion."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
 							</choice>
-				</event>
-			</mod-append:choice>
-            <mod-append:choice hidden="true" max_group="1" req="SHIP_RSA" blue="false">
-				<text>Contact Federation command.</text>
-				<event>
-					<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "The RECLAIM and SALVAGE ASSOCIATION... or was it RECYCLING? Anyway, I know about the dealings between the Federation and your association, and while I do not approve of morally grey companies, it'd seem we have one big transaction to take care of - get rid of the Flagship."</text>
+					</event>
+				</mod-append:choice>
+				<mod-append:choice hidden="true" max_group="1" req="SHIP_RSA" blue="false">
+					<text>Contact Federation command.</text>
+					<event>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "The RECLAIM and SALVAGE ASSOCIATION... or was it RECYCLING? Anyway, I know about the dealings between the Federation and your association, and while I do not approve of morally grey companies, it'd seem we have one big transaction to take care of - get rid of the Flagship."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
 							</choice>
-				</event>
-			</mod-append:choice>
-        </mod:findLike>
-	    </mod:findLike>
-    </mod:findName>
+					</event>
+				</mod-append:choice>
+			</mod:findLike>
+		</mod:findLike>
+	</mod:findName>
 
             
 
