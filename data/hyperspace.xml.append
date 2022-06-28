@@ -266,7 +266,7 @@
 			</unlock>
 			<unlock variant="c" silent="false">
 				<type>2</type>
-				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
+				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
 			</unlock>
 		</mod-append:ship>
 
@@ -382,6 +382,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
 			<crewLimit>10</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_LANIUS</hiddenAug>
 			<crew>
 				<kiviekith room="2" name="Orvech Vonor" />
 				<protogen room="7" />
