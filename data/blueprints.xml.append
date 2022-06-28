@@ -3414,6 +3414,53 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Can provide a bar of power to the current system.</power>
 		<power>Internal Database makes skills unable to degrade.</power>
 	</powerList>
+	<colorList>
+        <layer> <!-- fur -->
+            <color r="255" g="255" b="255" a="0"/> <!--default purple-->
+            <color r="255" g="255" b="255" a="0.8"/> <!--desaturated purple-->
+            <color r="84" g="0" b="255" a="0.6"/> <!--blue-->
+            <color r="0" g="156" b="255" a="0.7"/> <!--light blue-->
+            <color r="0" g="234" b="255" a="0.8"/> <!--light blue-->
+            <color r="255" g="0" b="120" a="0.7"/> <!--pink-->
+            <color r="255" g="0" b="36" a="0.6"/> <!--red-->
+            <color r="0" g="255" b="168" a="0.6"/> <!--cyan-->
+        </layer>
+        <layer> <!-- visor -->
+            <color r="255" g="255" b="255" a="1"/> <!--red-->
+            <color r="24" g="255" b="0" a="1"/> <!--green-->
+            <color r="255" g="90" b="0" a="1"/> <!--orange-->
+            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+        </layer>
+		<layer> <!-- outer ear bits -->
+            <color r="255" g="255" b="255" a="1"/> <!--red-->
+            <color r="24" g="255" b="0" a="1"/> <!--green-->
+            <color r="255" g="90" b="0" a="1"/> <!--orange-->
+            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+        </layer>
+		<layer> <!-- inner ear bits -->
+            <color r="255" g="255" b="255" a="1"/> <!--red-->
+            <color r="24" g="255" b="0" a="1"/> <!--green-->
+            <color r="255" g="90" b="0" a="1"/> <!--orange-->
+            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+        </layer>
+		<layer> <!-- armor bits -->
+            <color r="255" g="255" b="255" a="1"/> <!--red-->
+            <color r="24" g="255" b="0" a="1"/> <!--green-->
+            <color r="255" g="90" b="0" a="1"/> <!--orange-->
+            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+        </layer>
+		<layer> <!-- LEDs -->
+            <color r="255" g="255" b="255" a="1"/> <!--red-->
+            <color r="24" g="255" b="0" a="1"/> <!--green-->
+            <color r="255" g="90" b="0" a="1"/> <!--orange-->
+            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+        </layer>
+		<layer> <!-- eyes -->
+            <color r="255" g="255" b="255" a="1"/> <!--red-->
+            <color r="24" g="255" b="0" a="1"/> <!--green-->
+            <color r="255" g="90" b="0" a="1"/> <!--orange-->
+        </layer>
+    </colorList>
 </crewBlueprint>
 
 <crewBlueprint name="protogen_tracker">
