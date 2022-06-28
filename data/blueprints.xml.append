@@ -3423,42 +3423,89 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
             <color r="0" g="234" b="255" a="0.8"/> <!--light blue-->
             <color r="255" g="0" b="120" a="0.7"/> <!--pink-->
             <color r="255" g="0" b="36" a="0.6"/> <!--red-->
-            <color r="0" g="255" b="168" a="0.6"/> <!--cyan-->
+            <color r="0" g="255" b="170" a="0.3"/> <!--cyan-->
+			<color r="158" g="105" b="105" a="1"/> <!--red-->
+			<color r="255" g="90" b="0" a="1" /> <!--redorange-->
+			<color r="255" g="120" b="0" a="1" /> <!--orange-->
+			<color r="255" g="215" b="0" a="1" /> <!--yellow-->
+			<color r="205" g="255" b="0" a="1" /> <!--yellowgreen-->
+			<color r="0" g="255" b="0" a="0.5"/> <!--green-->
+			<color r="0" g="125" b="255" a="1" /> <!--blue-->
+			<color r="0" g="255" b="245" a="1" /> <!--cyan-->
+			<color r="221" g="21" b="178" a="1"/> <!--purple-->
+			<color r="165" g="0" b="255" a="1" /> <!--alt purple-->
+			<color r="255" g="0" b="240" a="1" /> <!--magenta-->
+			<color r="255" g="0" b="136" a="0.6"/> <!--pink-->
         </layer>
         <layer> <!-- visor -->
-            <color r="255" g="255" b="255" a="1"/> <!--red-->
-            <color r="24" g="255" b="0" a="1"/> <!--green-->
-            <color r="255" g="90" b="0" a="1"/> <!--orange-->
-            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+            <color r="0" g="0" b="0" a="1"/> <!--red-->
+            <color r="11" g="14" b="168" a="1"/> <!--green-->
+            <color r="10" g="11" b="71" a="1"/> <!--orange-->
+            <color r="61" g="69" b="185" a="1"/> <!--yellow-->
+			<color r="49" g="49" b="49" a="1"/> <!--red-->
+            <color r="133" g="133" b="133" a="1"/> <!--green-->
+            <color r="82" g="82" b="82" a="1"/> <!--orange-->
+            <color r="84" g="109" b="161" a="1"/> <!--yellow-->
         </layer>
 		<layer> <!-- outer ear bits -->
-            <color r="255" g="255" b="255" a="1"/> <!--red-->
-            <color r="24" g="255" b="0" a="1"/> <!--green-->
-            <color r="255" g="90" b="0" a="1"/> <!--orange-->
-            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+            <color r="255" g="255" b="255" a="0"/> <!--default purple-->
+            <color r="255" g="255" b="255" a="0.8"/> <!--desaturated purple-->
+            <color r="84" g="0" b="255" a="0.6"/> <!--blue-->
+            <color r="0" g="156" b="255" a="0.7"/> <!--light blue-->
+            <color r="0" g="234" b="255" a="0.8"/> <!--light blue-->
+            <color r="255" g="0" b="120" a="0.7"/> <!--pink-->
+            <color r="255" g="0" b="36" a="0.6"/> <!--red-->
+            <color r="0" g="255" b="170" a="0.3"/> <!--cyan-->
+			<color r="158" g="105" b="105" a="1"/> <!--red-->
+			<color r="255" g="90" b="0" a="1" /> <!--redorange-->
+			<color r="255" g="120" b="0" a="1" /> <!--orange-->
+			<color r="255" g="215" b="0" a="1" /> <!--yellow-->
+			<color r="205" g="255" b="0" a="1" /> <!--yellowgreen-->
+			<color r="0" g="255" b="0" a="0.5"/> <!--green-->
+			<color r="0" g="125" b="255" a="1" /> <!--blue-->
+			<color r="0" g="255" b="245" a="1" /> <!--cyan-->
+			<color r="221" g="21" b="178" a="1"/> <!--purple-->
+			<color r="165" g="0" b="255" a="1" /> <!--alt purple-->
+			<color r="255" g="0" b="240" a="1" /> <!--magenta-->
+			<color r="255" g="0" b="136" a="0.6"/> <!--pink-->
         </layer>
 		<layer> <!-- inner ear bits -->
-            <color r="255" g="255" b="255" a="1"/> <!--red-->
-            <color r="24" g="255" b="0" a="1"/> <!--green-->
-            <color r="255" g="90" b="0" a="1"/> <!--orange-->
-            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+            <color r="255" g="255" b="255" a="0"/> <!--default purple-->
+            <color r="255" g="255" b="255" a="0.8"/> <!--desaturated purple-->
+            <color r="84" g="0" b="255" a="0.6"/> <!--blue-->
+            <color r="0" g="156" b="255" a="0.7"/> <!--light blue-->
+            <color r="0" g="234" b="255" a="0.8"/> <!--light blue-->
+            <color r="255" g="0" b="120" a="0.7"/> <!--pink-->
+            <color r="255" g="0" b="36" a="0.6"/> <!--red-->
+            <color r="0" g="255" b="170" a="0.3"/> <!--cyan-->
+			<color r="158" g="105" b="105" a="1"/> <!--red-->
+			<color r="255" g="90" b="0" a="1" /> <!--redorange-->
+			<color r="255" g="120" b="0" a="1" /> <!--orange-->
+			<color r="255" g="215" b="0" a="1" /> <!--yellow-->
+			<color r="205" g="255" b="0" a="1" /> <!--yellowgreen-->
+			<color r="0" g="255" b="0" a="0.5"/> <!--green-->
+			<color r="0" g="125" b="255" a="1" /> <!--blue-->
+			<color r="0" g="255" b="245" a="1" /> <!--cyan-->
+			<color r="221" g="21" b="178" a="1"/> <!--purple-->
+			<color r="165" g="0" b="255" a="1" /> <!--alt purple-->
+			<color r="255" g="0" b="240" a="1" /> <!--magenta-->
+			<color r="255" g="0" b="136" a="0.6"/> <!--pink-->
         </layer>
 		<layer> <!-- armor bits -->
-            <color r="255" g="255" b="255" a="1"/> <!--red-->
-            <color r="24" g="255" b="0" a="1"/> <!--green-->
-            <color r="255" g="90" b="0" a="1"/> <!--orange-->
-            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
+            <color r="0" g="0" b="0" a="1"/> <!--red-->
+            <color r="65" g="65" b="65" a="1"/> <!--green-->
+            <color r="165" g="165" b="165" a="1"/> <!--orange-->
+            <color r="207" g="207" b="207" a="1"/> <!--yellow-->
+			<color r="124" g="113" b="113" a="1"/> <!--orange-->
+            <color r="46" g="41" b="41" a="1"/> <!--yellow-->
+			<color r="194" g="196" b="189" a="1"/> <!--orange-->
+            <color r="175" g="87" b="32" a="1"/> <!--yellow-->
         </layer>
 		<layer> <!-- LEDs -->
             <color r="255" g="255" b="255" a="1"/> <!--red-->
-            <color r="24" g="255" b="0" a="1"/> <!--green-->
+            <color r="0" g="217" b="255" a="1"/> <!--green-->
             <color r="255" g="90" b="0" a="1"/> <!--orange-->
-            <color r="255" g="234" b="0" a="1"/> <!--yellow-->
-        </layer>
-		<layer> <!-- eyes -->
-            <color r="255" g="255" b="255" a="1"/> <!--red-->
-            <color r="24" g="255" b="0" a="1"/> <!--green-->
-            <color r="255" g="90" b="0" a="1"/> <!--orange-->
+            <color r="255" g="238" b="46" a="1"/> <!--yellow-->
         </layer>
     </colorList>
 </crewBlueprint>
