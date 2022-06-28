@@ -66,7 +66,7 @@
 		</mod-append:ship>
 		<mod-append:customShip name="PLAYER_SHIP_SCRAPPER">
 			<crewLimit>8</crewLimit>
-			<hiddenAug>SHIP_LANIUS</hiddenAug>
+			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
 				<scrapper_scavenger room="0" name="Zuggo" />
@@ -77,7 +77,7 @@
 		</mod-append:customShip>
 		<mod-append:customShip name="PLAYER_SHIP_SCRAPPER_2">
 			<crewLimit>10</crewLimit>
-			<hiddenAug>SHIP_LANIUS</hiddenAug>
+			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
 				<scrapper_engineer room="0"/>
@@ -102,7 +102,7 @@
 		</mod-append:ship>
 		<mod-append:customShip name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD">
 			<crewLimit>16</crewLimit>
-			<hiddenAug>SHIP_LANIUS</hiddenAug>
+			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crew>
 				<trash_eater room="0" name="Trash Eater" />
