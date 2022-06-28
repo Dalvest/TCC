@@ -1,6 +1,7 @@
 <FTL><!--appending to Inferno-Core-->
 	<events>
 		<variable name="tcc_called_compactor" op="set" val="0"/>
+		<variable name="tc_call_marker" op="set" val="0"/>
 		<req name="TCC_CAN_CALL_COMPACTOR" type="all">
 			<req>
 				<name>SCRAP_TRANSMITTER</name>
