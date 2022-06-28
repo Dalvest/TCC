@@ -138,6 +138,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER">
 			<crewLimit>11</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_GARBAGE_COMPACTOR</hiddenAug>
 			<crew>
 				<primagen_raptor room="11" name="RAPTOR" />
 				<protogen_tracker room="0" name="TRACKER" />
@@ -149,6 +150,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_2">
 			<crewLimit>11</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_TRASH</hiddenAug>
 			<crew>
 				<primagen_raptor room="12" name="RAPTOR" />
 				<protogen_tracker room="0" name="TRACKER" />
@@ -161,6 +163,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_3">
 			<crewLimit>11</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_TRASH</hiddenAug>
 			<crew>
 				<kiviekith room="11" name="Stolas" />
 				<kiviekith room="13" name="Alastor" />
@@ -192,6 +195,7 @@
 			<crewLimit>12</crewLimit>
 			<customReactor maxLevel="50"/>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_TRASH</hiddenAug>
 			<crew>
 				<human_soldier room="12" name="Kanyo" />
 				<primagen_raptor room="14" name="RAPTOR" />
@@ -222,6 +226,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_SDM">
 			<crewLimit>9</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
 			<crew>
 				<human_mfk room="0" name="Echo-Cap" />
 				<human_soldier room="0" name="Echo-1" />
@@ -237,8 +242,9 @@
 		<mod-append:customShip name="PLAYER_SHIP_SDM_2">
 			<crewLimit>11</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_CIVILIAN</hiddenAug>
 			<crew>
-				<rsa_engineer room="0" name="Dalvest" />
+				<rsa_engineer room="0" />
 			</crew>
 		</mod-append:customShip>
 
@@ -273,11 +279,12 @@
 		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP">
 			<crewLimit>9</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_ARMOREDWASP</hiddenAug>
 			<crew>
 				<scrapper_scavenger room="11" name="Scrappy McScrapton" />
 				<clonefail_lancer room="0" name="Lancer" />
-				<protogen room="1" name="Dalvest" />
-				<human room="5" name="Cheese" />
+				<protogen room="1" />
+				<protogen room="5" />
 			</crew>
 		</mod-append:customShip>
 
@@ -293,6 +300,7 @@
 		</mod-append:customShip>
 
 		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_3">
+			<hiddenAug>SHIP_STEALTH</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crewLimit>9</crewLimit>
 			<crew>
@@ -320,6 +328,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_COROSSUS">
 			<crewLimit>12</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_RSA</hiddenAug>
 		</mod-append:customShip>
 
 		<!--///////RENT-A-FLAGSHIP//////-->
@@ -330,6 +339,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_SLUGTON">
 			<crewLimit>20</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_SLUG</hiddenAug>
 			<crew>
 				<slug_hektar room="0" name="SLUGTON" />
 				<mantis_free room="1" name="Businessmantis" />
@@ -341,6 +351,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_SLUGTON_2">
 			<crewLimit>20</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_PIRATE</hiddenAug>
 			<crew>
 				<kiviekith room="0" name="Krieg" />
 				<kiviekith room="6" name="Pietre" />
@@ -351,6 +362,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_SLUGTON_3">
 			<crewLimit>20</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_TRASH</hiddenAug>
 			<crew>
 				<human room="0" name="Cheese" />
 				<rsa_technician room="1" name="Nitron" />
@@ -370,6 +382,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
 			<crewLimit>20</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_SLUG</hiddenAug>
 			<crew>
 				<scrapper room="2" />
 				<scrapper room="9" name="Zog" />
@@ -382,6 +395,7 @@
 		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
 			<crewLimit>10</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_RSA</hiddenAug>
 			<crew>
 				<kiviekith room="2" name="Orvech Vonor" />
 				<protogen room="7" />
