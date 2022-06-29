@@ -1471,7 +1471,7 @@
 	<mod:findLike type="statBoosts">
 		<mod-append:statBoost name="transformRace">
 			<boostType>SET</boostType>
-			<race>LIST_CREW_SCRAPPER</race>
+			<race>scrapper_soldier</race>
 			<shipTarget>ALL</shipTarget>
 			<crewTarget>ALLIES</crewTarget>
 			<droneTarget>CREW</droneTarget>
@@ -1479,7 +1479,23 @@
 			<duration>15</duration>
 			<boostAnim>pheromones</boostAnim>
 			<whiteList>
-				<unique_leah/>
+				<scrapper/>
+			</whiteList>
+		</mod-append:statBoost>
+
+		<mod-append:statBoost name="transformRace">
+			<boostType>SET</boostType>
+			<race>scrapper_scavenger</race>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>15</duration>
+			<boostAnim>pheromones</boostAnim>
+			<whiteList>
+				<scrapper_soldier/>
+				<scrapper_speed/>
+				<scrapper_engineer>
 			</whiteList>
 		</mod-append:statBoost>
 	</mod:findLike>
