@@ -404,13 +404,22 @@
 			</crew>
 		</mod-append:customShip>
 
-		<!--///////STALWART DEFENCE//////-->
+		<!--///////Ported ships//////-->
 
 		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" />
 		<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
 			<hiddenAug>SHIP_SPLICE</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+
+		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="false" c="false" />
+		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crewLimit>8</crewLimit>
+			<customReactor maxLevel="60"/>
 		</mod-append:customShip>
 	</mod:findLike>
 
@@ -439,6 +448,17 @@
 			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship>
 			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship>
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship>
+			<!--Page 2-->
+			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
 		</mod:findLike>
 	</mod:findLike>
 
