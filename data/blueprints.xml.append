@@ -3217,7 +3217,79 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="SYSTEM_CASING_NEW" />
 </shipBlueprint>
 
-
+<shipBlueprint name="PLAYER_SHIP_POTENTIAL" layout="potential" img="potential">
+	<class>Potential</class>
+	<name>Potential</name>
+	<desc>Using the potential field between white and black holes in the engine core, this ship can power anything you can attach to it.</desc>
+	<systemList>
+		<artillery power="1" room="5" start="false" img="room_artillery_2" />
+		<battery power="1" room="10" start="false" img="room_battery_17" />
+		<cloaking power="1" room="4" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="12" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="15" start="true" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="10" power="2" room="0" start="false" img="room_drones_orchid" />
+		<engines power="1" room="19" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="16" start="false" img="room_hacking_6" />
+		<medbay power="1" room="12" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="7" start="false" img="room_mind" />
+		<oxygen power="1" room="13" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="2" start="true" img="room_pilot_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="3" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="12" room="1" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="14" start="false" />
+		<weapons max="16" power="1" room="9" start="true" img="room_weapons_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<temporal power="1" room="6" start="false" img="room_temporal_3" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="LASER_BURST_2" />
+		<weapon name="BEAM_1" />
+	</weaponList>
+	<droneList drones="0" count="3" />
+	<health amount="30" />
+	<maxPower amount="60" />
+	<crewCount amount="1" class="human" />
+	<crewCount amount="1" class="engi" />
+</shipBlueprint>
 <!--/////////////////////JULK'S SYSTEM CAP EXPANDER CODE//////////////////////////-->
 
 <mod:findName type="systemBlueprint" name="weapons">
