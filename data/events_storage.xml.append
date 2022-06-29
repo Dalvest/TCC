@@ -242,6 +242,52 @@
     </choice>
   </event>
 
+  <event name="STORAGE_CHECK_CREW_PROTOGEN">
+    <text>What do you want to do with your Protogen?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_PROTOGEN_SCAN">
+    <text>TRASH EATER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Unique
+      Stats: 200 Health, x1.5 sabotage damage, instantly drains oxygen
+      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+      Can consume beacons when there is an opportunity for it. This will usually provide a large amount of additional scrap and has a 10% chance of compacting a crew, weapon or done, but has a 10% chance of backfiring and leaving you stranded, boosting the fleet by a jump.
+      Ability (25s cooldown, 15s duration): Does 1 hull damage, and creates a breach in the current room (can damage player ship as well). Heals back to full health immediately. Gains 50 health temporarily.
+      Ability cooldown type: Refills on jump.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_PROTOGEN_TALK">
+    <text load="TEXT_CREW_TALK_PROTOGEN"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_PROTOGEN">
+    <text>The Trash Eater is checking the ship for garbage to consume - trash to eat, if you will.</text>
+    <text>The Trash Eater is wondering how many tin cans one would need to create an entire ship from scratch - you fear the answer may be terrifying and decide not to push further.</text>
+    <text>The Trash Eater has finally said something in your language, but it sounds nonsensical - "Can I get it in beige?" What does that even mean?</text>
+    <text>You catch Trash Eater trying to eat flak. You fail at several attempts to stop them.</text>
+    <text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.</text>
+    <text>The Trash Eater insinuates that they would like to taste the piloting room of your ship - you convince him it has a really bad taste.</text>
+    <text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
+  </textList>
 
   <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
     <mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" >
@@ -652,7 +698,7 @@
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <transformRace class="scrapper">scrapper_scavenger</transformRace>
       </event>
@@ -668,7 +714,7 @@
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <transformRace class="scrapper_soldier">scrapper_scavenger</transformRace>
       </event>
@@ -684,7 +730,7 @@
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <transformRace class="scrapper_engineer">scrapper_scavenger</transformRace>
       </event>
@@ -700,7 +746,7 @@
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-75" max="-75"/>
         </item_modify>
         <transformRace class="scrapper_speed">scrapper_scavenger</transformRace>
       </event>
