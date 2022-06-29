@@ -36,7 +36,7 @@
 
   <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
 
-    <mod-append:choice req="trash_eater" blue="false" hidden="true">
+    <mod-append:choice req="trash_eater" blue="false" >
       <text>Look for The Trash Eater.</text>
       <event load="STORAGE_CHECK_CREW_TRASH"/>
     </mod-append:choice>
@@ -73,11 +73,11 @@
       <text>Nevermind, do something else.</text>
       <event load="STORAGE_CHECK"/>
     </choice>
-    <choice hidden="true">
+    <choice>
       <text id="talk_to_crew"/>
       <event load="STORAGE_CHECK_CREW_TRASH_TALK"/>
     </choice>
-    <choice hidden="true">
+    <choice>
       <text id="scan_crew"/>
       <event load="STORAGE_CHECK_CREW_TRASH_SCAN"/>
     </choice>
@@ -115,7 +115,7 @@
 
   <mod:findName type="event" name="STORAGE_CHECK_JOB">
 
-    <mod-append:choice req="trash_eater" blue="false" hidden="true">
+    <mod-append:choice req="trash_eater" blue="false" >
       <text>Send out the Trash Eater to compact some floating debris.</text>
       <event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
     </mod-append:choice>
@@ -199,12 +199,12 @@
 
   <mod:findName type = "event" name = "COMBAT_CHECK_REAL">
 
-  <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602" hidden="true" blue="true">
+  <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602"  blue="true">
   	<text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it might damage your hull. [Costs: 10~]</text>
         <event load="COMBAT_CHECK_RAMMING_SCRAP"/>
       </mod-append:choice>
 
-    <!--<mod-append:choice req="FLAK_ARMOR" lvl="1" max_group="603" hidden="true" blue="true">
+    <!--<mod-append:choice req="FLAK_ARMOR" lvl="1" max_group="603"  blue="true">
       <text>Mek armour</text>
       <event>
         <triggeredEvent event="FLAK_ARMOR_CREATE" seeded="false" loops="0" thisFight="true" time="0"/>
@@ -244,7 +244,7 @@
 
 
   <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
-    <mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" hidden="true">
+    <mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" >
       <text>Look for your Scrapper.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER"/>
     </mod-append:choice>
@@ -256,7 +256,7 @@
       <text id="talk_to_crew"/>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_TALK"/>
     </choice>
-    <choice hidden="true">
+    <choice>
       <text id="scan_crew"/>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_MENU"/>
     </choice>
@@ -508,7 +508,7 @@
     <text>You can upgrade your Scrapper's combat ability by adding extra scrap to their arms, although this would reduce their repair speed.
       [x1.5 repair -> x1.0 repair speed
       x1.0 damage -> x2.0 damage]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -526,7 +526,7 @@
       [x1.5 repair -> x3.0 repair speed
       x1.0 damage -> x0.75 damage
       x1.0 sabotage speed -> x1.5 sabotage speed]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -542,7 +542,7 @@
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
     <text>By molding the legs into a more efficient shape, your Scrapper can achieve greater sprinting speeds.
       [x0.9 movement speed -> x2.0 movement speed]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -563,7 +563,7 @@
       x0.9 movement speed -> x0.25 movement speed
       x0.75 fire damage -> x0.5 fire damage
       x1 damage -> x2 damage]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -583,7 +583,7 @@
       x1 repair speed -> x0.5 repair speed
       x0.9 movement speed -> x0.25 movement speed
       x0.75 fire damage -> x0.5 fire damage]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -605,7 +605,7 @@
       x0.75 fire damage -> x0.5 fire damage
       x0.75 damage -> x2 damage
       x1.5 sabotage speed -> 2x sabotage speed]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -626,7 +626,7 @@
       x2 movement speed -> x0.25 movement speed
       x0.75 fire damage -> x0.5 fire damage
       x1 damage -> x2 damage]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -647,7 +647,7 @@
       x0.75 fire damage -> x0.5 fire damage
       x1 damage -> x2 damage
       x1 sabotage speed -> x2.5 sabotage speed]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -663,7 +663,7 @@
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -679,7 +679,7 @@
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
@@ -695,7 +695,7 @@
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
-    <choice hidden="true">
+    <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>

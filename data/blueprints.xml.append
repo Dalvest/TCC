@@ -541,7 +541,7 @@
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark I</title>
-	<short>B. Flak I</short>
+	<short>Bomb Flak I</short>
 	<tip>tip_flak</tip>
 	<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
@@ -586,7 +586,7 @@
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark II</title>
-	<short>B. Flak II</short>
+	<short>Bomb Flak II</short>
 	<tip>tip_flak</tip>
 	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devestating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
@@ -631,7 +631,7 @@
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark III</title>
-	<short>B. Flak III</short>
+	<short>Bomb Flak III</short>
 	<tip>tip_flak</tip>
 	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 5 hull damage, and 10 system damage. Great at devestating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 5 damage, and 10 system damage.</tooltip>
@@ -676,7 +676,7 @@
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark IV</title>
-	<short>B. Flak IV</short>
+	<short>Bomb Flak IV</short>
 	<tip>tip_flak</tip>
 	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 8 hull damage, and 16 system damage. Great at annihilating systems but very hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 8 damage, and 16 system damage.</tooltip>
@@ -713,6 +713,51 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>tc_bomb_shotgun_4</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_BOMB_SHOTGUN_CONSERVATIVE">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Conservative Bomb Flak Gun</title>
+	<short>C. Bomb Flak</short>
+	<tip>tip_conservative</tip>
+	<desc>A small, lower power flak cannon reconfigured to shoot bombs instead of flak, ideal for devestating systems. Requires a missile to launch, but does not pierce any shields.</desc>
+	<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
+	<radius>42</radius>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>0</power>
+	<cost>65</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">bomb1</projectile>
+	</projectiles>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>smallExplosion</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_conservative_bomb_shotgun</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -3336,7 +3381,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>1.5x repair speed</power>
 		<power>2x move speed</power>
 		<power>125 health</power>
-		<power>Slower oxygen drain</power>
 	</powerList>
 </crewBlueprint>
 
@@ -3351,11 +3395,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Slower oxygen drain</power>
 		<power>0.5x fire damage taken</power>
 		<power>2x damage</power>
-		<power>2.5x damage</power>
+		<power>2.5x sabotage speed</power>
 		<power>2x repair speed</power>
 		<power>1.5x move speed</power>
 		<power>150 health</power>
-		<power>Slower oxygen drain</power>
 	</powerList>
 </crewBlueprint>
 

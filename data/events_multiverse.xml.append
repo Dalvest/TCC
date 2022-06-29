@@ -610,6 +610,17 @@
 			<weapon name="TC_BOMB_SHOTGUN_4"/>
 		</event>
 	</choice>
+	
+	<choice hidden="false" blue="false">
+		<text>Conservative Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE"/>
+		</event>
+	</choice>
 
 	<choice hidden="false" blue="true">
 		<text>Nevermind.</text>
