@@ -202,8 +202,8 @@
 				<protogen_tracker room="1" name="TRACKER" />
 				<human room="11" name="Cheese" />
 				<clonefail_lancer room="3" name="Lancer" />
-				<scrapper room="6" name="01010011" />
-				<protogen room="2" name="Zenith" />
+				<scrapper_engineer room="6" />
+				<protogen room="2" />
 			</crew>
 		</mod-append:customShip>
 
@@ -384,7 +384,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_SLUG</hiddenAug>
 			<crew>
-				<scrapper room="2" />
+				<scrapper room="2" name="Mochi" />
 				<scrapper room="9" name="Zog" />
 				<trash_eater room="0" name="Trash Eater" />
 				<scrapper_engineer room="7" />
@@ -437,27 +437,27 @@
 
 	<mod:findLike type="ships">
 		<mod:findLike type="shipOrder">
-			<mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship> <!--Scrapper Dreadnought-->
 			<!--<mod-append:ship>PLAYER_SHIP_TRASH_COMPACTOR_GOOD</mod-append:ship>-->
 			<mod-append:empty/>
-			<mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_TRASH_REACTOR</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_COROSSUS</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship> <!--Kestrel Miner-->
+			<mod-append:ship>PLAYER_SHIP_TRASH_REACTOR</mod-append:ship> <!--Reactive Compactor-->
+			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship> <!--SDM-->
+			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship> <!--Armored Wasp-->
+			<mod-append:ship>PLAYER_SHIP_COROSSUS</mod-append:ship> <!--CorosSUS-->
+			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship> <!--RENT-A-FLAGSHIP-->
+			<mod-append:empty/>
+			<mod-append:empty/>
 			<!--Page 2-->
-			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship> <!--(lack of) Potential-->
+			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!--Stalwart Defense-->
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
 			<mod-append:empty/>
 		</mod:findLike>
 	</mod:findLike>
