@@ -6,7 +6,7 @@
 				<mod-append:choice hidden="true" max_group="1" req="SHIP_SCRAPPER" blue="false">
 					<text>Contact Federation command.</text>
 					<event>
-						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "What in the- you Scrappers were hostile to us, weren't you? Why did you... nevermind. Just end the Flagship, please."</text>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "Aren't Scrappers incredibly territorial? It's ironic that you've been a thorn in the Federation's side only to become our potential savior. Good luck.</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
