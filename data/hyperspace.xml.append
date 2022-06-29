@@ -342,7 +342,7 @@
 			<hiddenAug>SHIP_SLUG</hiddenAug>
 			<crew>
 				<slug_hektar room="0" name="SLUGTON" />
-				<mantis_free room="1" name="Businessmantis" />
+				<mantis_freebusiness room="1" name="Businessmantis" />
 				<slug_hektar room="7" />
 				<slug_hektar room="6" name="ConMan" />
 			</crew>
@@ -1036,6 +1036,51 @@
 					<powerSounds>
 						<powerSound>shieldsDown</powerSound>
 					</powerSounds>
+				</temporaryEffect>
+			</powerEffect>
+		</mod-append:race>
+
+		<mod-append:race name="mantis_freebusiness">
+			<maxHealth>100</maxHealth>
+			<repairSpeed>0.5</repairSpeed>
+			<moveSpeedMultiplier>1.3</moveSpeedMultiplier>
+			<damageMultiplier>1.2</damageMultiplier>
+			<animBase>mantis</animBase>
+			<deathSounds>
+				<deathSound>mantisDeath</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>mantisSpit1</shootingSound>
+				<shootingSound>mantisSpit2</shootingSound>
+				<shootingSound>mantisSpit3</shootingSound>
+			</shootingSounds>
+			<powerEffect>
+				<cooldown>17</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<powerSounds>
+					<finishSound>mantisSplat1</finishSound>
+					<finishSound>mantisSplat2</finishSound>
+					<finishSound>mantisSplat3</finishSound>
+				</powerSounds>
+				<req type="enemy">
+					<minHealth>10</minHealth>
+					<enemyInRoom/>
+				</req>
+				<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+				<buttonText>PHEROMONE</buttonText>
+				<tooltip>Ready: Increase movement speed to 3x and crew damage to 2.2x for 7 seconds. Does NOT increase damage taken from hazards.</tooltip>
+				<cooldownColor r="171" g="223" b="255"/>
+				<temporaryEffect>
+					<duration>7</duration>
+					<cooldownColor r="215" g="126" b="195"/>
+					<finishSounds>
+						<finishSound>mantisSplat1</finishSound>
+						<finishSound>mantisSplat2</finishSound>
+						<finishSound>mantisSplat3</finishSound>
+					</finishSounds>
+					<effectAnim>pheromones_f</effectAnim>
+					<moveSpeedMultiplier>3</moveSpeedMultiplier>
+					<damageMultiplier>2.2</damageMultiplier>
 				</temporaryEffect>
 			</powerEffect>
 		</mod-append:race>

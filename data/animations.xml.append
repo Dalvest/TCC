@@ -151,6 +151,17 @@
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_4_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="tc_conservative_bomb_shotgun" w="261" h="45" fw="29" fh="45">weapon_bomb_flak/tc_conservative_bomb_shotgun.png</animSheet>
+<weaponAnim name="tc_conservative_bomb_shotgun">
+	<sheet>tc_conservative_bomb_shotgun</sheet>
+	<desc length="9" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="14" y="7"/>
+	<mountPoint x="4" y="21"/>
+	<chargeImage>weapon_bomb_flak/tc_conservative_bomb_shotgun.png</chargeImage>
+</weaponAnim>
+
 <!--/////////////////// LASER //////////////////-->
 
 <animSheet name="tc_laser_marksman" w="392" h="95" fw="28" fh="95">weapon_laser/tc_laser_marksman.png</animSheet>
@@ -1816,7 +1827,133 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
-	
+
+<!--/////////////// FREEBUSINESSMANTIS //////////////-->
+
+<animSheet name="mantis_freebusiness" w="350" h="490" fw="35" fh="35">people/mantis_freebusiness_base.png</animSheet>
+<anim name="mantis_freebusiness_clone">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="6" x="0" y="2"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_freebusiness_death_left">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="7" x="0" y="1"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_freebusiness_death_right">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="7" x="0" y="1"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_freebusiness_walk_down">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="5" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_walk_right">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="5" x="5" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_walk_up">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="5" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_walk_left">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="5" x="5" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_shoot_down">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_shoot_right">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="4" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_shoot_up">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="2" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_shoot_left">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="6" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_fire_down">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_fire_right">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="4" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_fire_up">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_fire_left">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_repair">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="9" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_punch_up">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="10" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_punch_down">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="10" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_freebusiness_teleport">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="9" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="mantis_freebusiness_type_right">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_freebusiness_type_left">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_freebusiness_type_up">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_freebusiness_type_down">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_freebusiness_portrait">
+	<sheet>mantis_freebusiness</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<!--/////////////////////////////////////////////////// PROTOGEN ZONE ////////////////////////////////////////////////////-->
+<!--///////////////GENERIC PROTOGEN//////////////-->
 
 	<animSheet name="protogen" w="315" h="455" fw="35" fh="35">people/protogen_base.png</animSheet>
 	<anim name="protogen_clone">
@@ -2187,6 +2324,8 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
+
+	<!--/////////////// LANCER //////////////-->
 
 	<animSheet name="clonefail_lancer" w="315" h="455" fw="35" fh="35">people/clonefail_lancer_base.png</animSheet>
 	<anim name="clonefail_lancer_clone">
