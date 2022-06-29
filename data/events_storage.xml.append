@@ -173,7 +173,7 @@
     <choice>
       <text>Request that the Eater makes a weapon.</text>
       <event>
-        <text>You got a weapon!</text>
+        <text>The Trash Eater nods and starts his work - a complex tango of rust and machinery, a veritable ballad of screws and bolts. You got an abomination of a weapon!</text>
         <weapon name="TC_SCRAPFLAK"/>
         <event/>
       </event>
@@ -181,7 +181,7 @@
     <choice>
       <text>Request that the Eater makes a drone.</text>
       <event>
-        <text>You got a drone!</text>
+        <text>The Trash Eater starts bashing togehter pieces of machinery and electronics, managing to create a fully functional combat drone!</text>
         <drone name="TC_COMBAT_HEAVY"/>
         <event/>
       </event>
@@ -189,14 +189,14 @@
     <choice>
       <text>Request that the Eater forges a Scrapper.</text>
       <event>
-        <text>You got extra crew!</text>
-        <crewMember amount="1" class="scrapper">Scrapface</crewMember>
+        <text>The Trash Eater nods and starts carving a Lanius-esque figure in metal. You attempt to explain you don't need a decorative statue, but suddenly, it springs to life!</text>
+        <crewMember amount="1" class="scrapper">Scrapface Statueman</crewMember>
       </event>
     </choice>
     <choice>
       <text>Disassemble it all into usable materials.</text>
       <event>
-        <text>You take all of it - there's no such as problem as too much scrap.</text>
+        <text>You take all of it - there's no such as problem as too much scrap. The Trash Eater helps you get every single gram of metal.</text>
         <autoReward level="HIGH">stuff</autoReward>
       </event>
     </choice>
