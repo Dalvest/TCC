@@ -115,7 +115,7 @@
 
   <mod:findName type="event" name="STORAGE_CHECK_JOB">
 
-    <mod-append:choice req="trash_eater" blue="false" >
+    <mod-append:choice req="trash_eater" blue="false" hidden="true">
       <text>Send out the Trash Eater to compact some floating debris.</text>
       <event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
     </mod-append:choice>
