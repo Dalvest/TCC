@@ -474,23 +474,27 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE">
     <text>You've got a Scrapper you can upgrade - with some basic tools and machinery, you may upgrade a Scrapper into one of the following:</text>
-    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+    <choice req="pilot" lvl="1" max_group="1" blue="true">
+      <text>[Scrapper Guide]</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="2" blue="false">
       <text>Make a Scrapper Soldier</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
     </choice>
-    <choice req="scrapper" lvl="1" max_group="2" blue="false">
+    <choice req="scrapper" lvl="1" max_group="3" blue="false">
       <text>Make a Scrapper Engineer</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
     </choice>
-    <choice req="scrapper" lvl="1" max_group="3" blue="false">
+    <choice req="scrapper" lvl="1" max_group="4" blue="false">
       <text>Make a Scrapper Speedster</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED"/>
     </choice>
-    <choice req="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE" lvl="1" max_group="4" blue="false">
+    <choice req="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE" lvl="1" max_group="5" blue="false">
       <text>Make a Heavy Scrapper</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU"/>
     </choice>
-    <choice req="SCAVENGER_REQ" lvl="1" max_group="5" blue="false">
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="6" blue="false">
       <text>Make a Scrapper Scavenger</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU"/>
     </choice>
@@ -548,7 +552,18 @@
     </choice>
   </event>
 
-  <!--//////////////////////////////////////////////////////////SCRAAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+  <!--//////////////////////////////////////////////////////////SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE">
+  <text>Scrappers are unique in the fact that they can upgrade into many other specialised designs. There are 3 tiers of scrappers; Base, Upgraded and Elite. 
+    Base: Scrapper
+    Upgraded: Soldier, Engineer, Speedster
+    Elite: Heavy, Scavenger
+    You can upgrade Scrappers to higher tiers for scrap. Some elites also require a form of Advanced Scrap to upgrade. 
+  </text>
+  <choice><text>Continue...</text><event load="STORAGE_CHECK"/></choice>
+
+</event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
     <text>You can upgrade your Scrapper's combat ability by adding extra scrap to their arms, although this would reduce their repair speed.
