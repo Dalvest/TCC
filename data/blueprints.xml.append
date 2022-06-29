@@ -936,16 +936,15 @@
 	<title>Singularity Projector 'Event Horizon'</title>
 	<short>S. Proj 'EHorizon'</short>
 	<locked>1</locked>
-	<desc>Got trash? Well... now you don't. Uses singularity projection to... gently remove things from existence.</desc>
-	<tooltip>Creates a small black-hole in the affected room, causing massive damage to systems, hull and personnel as well as breaches. This weapon does not require ammunition.</tooltip>
+	<desc>Got trash? Well... now you don't. Uses singularity projection tech to... gently remove things from existence.</desc>
+	<tooltip>Creates a small bomb-like black-hole in the affected room, causing massive damage to systems, hull and personnel as well as breaches. This weapon does not require ammunition.</tooltip>
 	<damage>4</damage>
 	<persDamage>5</persDamage>
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
-	<breachChance>10</breachChance>
-	<hullBust>1</hullBust>
+	<breachChance>7</breachChance>
 	<cooldown>20</cooldown>
 	<power>3</power>
 	<cost>90</cost>
@@ -3448,6 +3447,22 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Max Health is 70, x2 movement speed</power>
 		<power>Fights and sabotages with x2 strength</power>
 		<power>Cannot repair, extinguish, or man systems</power>
+	</powerList>
+</crewBlueprint>
+
+<!--///////FREE BUSINESS MAN(TIS)//////-->
+
+<crewBlueprint name="mantis_freebusiness">
+	<desc>Slugton's ultraliberal Free Mantis sidekick, armed with two sharp claws, a love for jogging and an iconic faceplate scar from RAPTOR's claws.</desc>
+	<title>Free Business Mantis</title>
+	<short>Businessmantis</short>
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Active Ability: Temporarily greatly increases speed and damage</power>
+		<power>Inflicts 1.2x damage in combat</power>
+		<power>Movement speed is 1.3x</power>
 	</powerList>
 </crewBlueprint>
 
