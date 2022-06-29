@@ -574,14 +574,14 @@
 		</mod-append:race>
 
 		<mod-append:race name="scrapper_heavy">
-			<maxHealth>200</maxHealth>
+			<maxHealth>250</maxHealth>
 			<oxygenChangeSpeed>-0.2625</oxygenChangeSpeed>
 			<canSuffocate>false</canSuffocate>
 			<repairSpeed>0.5</repairSpeed>
 			<moveSpeedMultiplier>0.25</moveSpeedMultiplier>
 			<fireDamageMultiplier>0.5</fireDamageMultiplier>
-			<damageMultiplier>2</damageMultiplier>
-			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+			<damageMultiplier>2.5</damageMultiplier>
+			<sabotageSpeedMultiplier>2.5</sabotageSpeedMultiplier>
 			<repairSounds>
 				<repairSound>shrikeRepair</repairSound>
 			</repairSounds>
