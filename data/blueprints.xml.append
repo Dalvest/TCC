@@ -1469,6 +1469,36 @@
 
 <mod:findName type="weaponBlueprint" name="BOMB_ELITE">
 	<mod:findLike type="statBoosts">
+		<!--<mod-append:statBoost name="statBoost">
+			<boostType>FLAT</boostType>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>15</duration>
+			<boostAnim>pheromones</boostAnim>
+			<whiteList>
+				<scrapper/>
+			</whiteList>
+
+
+			<statBoost name="transformRace">
+				<boostType>SET</boostType>
+				<race>LIST_SCRAPPER_TIER_2</race>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>SELF</crewTarget>
+				<boostAnim>bio_poison</boostAnim>
+				<blackList>
+					<LIST_SCRAPPER_TIER_2/>
+				</blackList>
+			</statBoost>
+
+
+
+		</mod-append:statBoost>-->
+
+
+
 		<mod-append:statBoost name="transformRace">
 			<boostType>SET</boostType>
 			<race>scrapper_soldier</race>
@@ -1492,11 +1522,7 @@
 			<affectsSelf>true</affectsSelf>
 			<duration>15</duration>
 			<boostAnim>pheromones</boostAnim>
-			<whiteList>
-				<scrapper_soldier/>
-				<scrapper_speed/>
-				<scrapper_engineer/>
-			</whiteList>
+			<whiteList load="LIST_SCRAPPER_TIER_2"/>
 		</mod-append:statBoost>
 	</mod:findLike>
 </mod:findName>
