@@ -723,7 +723,7 @@
 	<title>Conservative Bomb Flak Gun</title>
 	<short>C. Bomb Flak</short>
 	<tip>tip_conservative</tip>
-	<desc>A small, lower power flak cannon reconfigured to shoot bombs instead of flak, ideal for devestating systems. Requires a missile to launch, but does not pierce any shields.</desc>
+	<desc>Slow charging 2 shot bomb flak. Conservative weapons use no power but require another weapon to be powered.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
 	<radius>42</radius>
 	<damage>1</damage>
@@ -735,7 +735,7 @@
 	<spin>720</spin>
 	<fireChance>1</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>10</cooldown>
+	<cooldown>13</cooldown>
 	<power>0</power>
 	<cost>65</cost>
 	<bp>10</bp>
