@@ -1467,6 +1467,25 @@
 	<mod-overwrite:weaponArt>instant_revolver</mod-overwrite:weaponArt>
 </mod:findName>
 
+<mod:findName type="weaponBlueprint" name="BOMB_ELITE">
+	<mod:findLike type="statBoosts">
+		<mod-append:statBoost name="transformRace">
+			<boostType>SET</boostType>
+			<race>LIST_CREW_SCRAPPER</race>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>15</duration>
+			<boostAnim>pheromones</boostAnim>
+			<whiteList>
+				<unique_leah/>
+			</whiteList>
+		</mod-append:statBoost>
+	</mod:findLike>
+</mod:findName>
+
+
 <!--◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
                AUGMENTS
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
