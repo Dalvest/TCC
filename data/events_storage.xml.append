@@ -185,7 +185,7 @@
       <text>Request that the Eater forges a Scrapper.</text>
       <event>
         <text>You got extra crew!</text>
-        <crew amount="1" class="scrapper" name="Scrapface"/>
+        <crewMember amount="1" class="scrapper">Scrapface</crewMember>
       </event>
     </choice>
     <choice>
