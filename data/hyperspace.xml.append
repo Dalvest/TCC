@@ -682,7 +682,8 @@
 			<cloneLoseSkills>true</cloneLoseSkills>
 		</mod-append:race>
 
-		<!--///////PROTOGEN ZONE (DANGER: FURRIES AHEAD)//////-->
+		<!--////////////////////////PROTOGEN ZONE (DANGER: FURRIES AHEAD)//////////////////////-->
+		<!--///////PROTOGEN////////-->
 
 		<mod-append:race name="protogen">
 			<maxHealth>90</maxHealth>
@@ -725,6 +726,8 @@
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
+
+		<!--//////TRACKER////////-->
 
 		<mod-append:race name="protogen_tracker">
 			<maxHealth>110</maxHealth>
@@ -769,6 +772,8 @@
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
 
+		<!--//////RAPTOR////////-->
+
 		<mod-append:race name="primagen_raptor">
 			<maxHealth>90</maxHealth>
 			<repairSpeed>1.1</repairSpeed>
@@ -812,6 +817,8 @@
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
+
+		<!--//////CLONE////FAIL////////-->
 
 		<mod-append:race name="clonefail_lancer">
 			<maxHealth>60</maxHealth>

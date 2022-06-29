@@ -67,6 +67,7 @@
     </choice>
   </event>
 
+  <!--//////TRASH EATER DIALOGUE////////-->
   <event name="STORAGE_CHECK_CREW_TRASH">
     <text>What do you want to do with The Trash Eater?</text>
     <choice>
@@ -112,6 +113,10 @@
     <text>The Trash Eater insinuates that they would like to taste the piloting room of your ship - you convince him it has a really bad taste.</text>
     <text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
   </textList>
+
+
+  <!--/////////////////TRASH EATER STORAGE ABILITY THINGY//////////////////-->
+
 
   <mod:findName type="event" name="STORAGE_CHECK_JOB">
 
@@ -258,15 +263,14 @@
     </choice>
   </event>
 
+  <!--//////PROTOGEN DIALOGUE////////-->
+
   <event name="STORAGE_CHECK_CREW_PROTOGEN_SCAN">
-    <text>TRASH EATER DETAILS
-      SPECIES? [Lanius] SUBTYPE? [Yes]
-      Subtype Details: Unique
-      Stats: 200 Health, x1.5 sabotage damage, instantly drains oxygen
-      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-      Can consume beacons when there is an opportunity for it. This will usually provide a large amount of additional scrap and has a 10% chance of compacting a crew, weapon or done, but has a 10% chance of backfiring and leaving you stranded, boosting the fleet by a jump.
-      Ability (25s cooldown, 15s duration): Does 1 hull damage, and creates a breach in the current room (can damage player ship as well). Heals back to full health immediately. Gains 50 health temporarily.
-      Ability cooldown type: Refills on jump.</text>
+    <text>PROTOGEN DETAILS
+      SPECIES? [Protogen] SUBTYPE? [No]
+      Stats: 90 Health, x1.1 repair speed, half suffocation damage, x1.1 damage and sabotage, cannot lose skills
+      Protogens are genetically modified anthropomorphic creatures that rely on their cybernetic augmentations to serve their designated purpose.
+      The Protogen Project was kickstarted by the Federation in an effort to gain an upper hand against the rebels - as such, most protogens are now soldiers of the Federation.</text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -280,14 +284,128 @@
     </choice>
   </event>
   <textList name="TEXT_CREW_TALK_PROTOGEN">
-    <text>The Trash Eater is checking the ship for garbage to consume - trash to eat, if you will.</text>
-    <text>The Trash Eater is wondering how many tin cans one would need to create an entire ship from scratch - you fear the answer may be terrifying and decide not to push further.</text>
-    <text>The Trash Eater has finally said something in your language, but it sounds nonsensical - "Can I get it in beige?" What does that even mean?</text>
-    <text>You catch Trash Eater trying to eat flak. You fail at several attempts to stop them.</text>
-    <text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.</text>
-    <text>The Trash Eater insinuates that they would like to taste the piloting room of your ship - you convince him it has a really bad taste.</text>
-    <text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
+    <text>You catch your protogen flirting with the microwave again...</text>
+    <text>Your protogen appears to have made the great misfortune of discovering just how effective an electric razor is against fur. You try your best to comfort them during these trying times.</text>
+    <text>You ask your protogen why people call it a toaster... they beep defensively before changing the subject.</text>
+    <text>Your protogen emphasizes that they have nothing to do with mamagens. You have no clue what they're reffering to, nor do you want to find out.</text>
+    <text>The protogen is trying to get a boop. You boop the protogen on the visor, making it light up in a wonderful pattern. All is well in the world now.</text>
+    <text>Your protogen just ate several mainframe components - when you ask what happened to said computer parts, the protogen just burps.</text>
+    <text>You ask your protogen if it is sentient. It answers defensively, attempting to explain that life is relative.</text>
+    <text>Your protogen emphasizes the fact that they are "cute and huggable". It doesn't exactly help the mission in any way, but you agree such traits are necessary in a crewmember.</text>
   </textList>
+
+  <event name="STORAGE_CHECK_CREW_PROTOGEN">
+    <text>What do you want to do with your Protogen?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <!--//////TRACKER DIALOGUE////////-->
+
+  <event name="STORAGE_CHECK_CREW_PROTOGEN_TRACKER_SCAN">
+    <text>TRACKER'S DETAILS
+      SPECIES? [Protogen] UNIQUE? [Yes]
+      Unique Traits: This particular protogen has a tendency for extreme brutality and unmoderated cuteness.
+      Stats: 110 Health, x0.6 repair speed, half suffocation damage, x1.4 damage and sabotage, cannot lose skills
+      TRACKER is a former infantryman - through a weird promotion after two millenia of hard work in service of the Federation, he became a Captain.
+      TRACKER is directly at fault for creating Lancer, an abhorrent creature that is a mix of his DNA and Cheese's.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_PROTOGEN_TRACKER_TALK">
+    <text load="TEXT_CREW_TALK_PROTOGEN_TRACKER"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_PROTOGEN_TRACKER">
+    <text>TRACKER complains about the noodles, saying that the meat tasted poor. You wonder if you should ask for the source of it, but change your mind.</text>
+    <text>TRACKER is examnining a dissected rotary phone, the analog kind. It's surprisingly complex. You see that he's done some kind of modification to it, too.</text>
+    <text>You find TRACKER polishing his assault rifle and you kind of wish he never found it at all... its ammo is just too hard to find.</text>
+    <text>TRACKER is unsure how many "hot male protogens" are in the sector. You don't know what to answer.</text>
+    <text>TRACKER has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them.</text>
+    <text>You are suddenly hugged by TRACKER. You ask why, and are told "Mental support." You nod and thank him.</text>
+    <text>You ask TRACKER where his names comes from. He explains it's a nickname from the time in the Federation Ground Infantry - he no longer remembers his original name. To be fair, several thousands of years have passed since then.</text>
+    <text>You ask TRACKER how old he is. He does an eye rolling animation on the visor and says "Chronologically or biologically?".</text>
+    <text>You ask TRACKER why he made Lancer. He answers with a curt "Yes.". You decide not to press further.</text>
+  </textList>
+
+  <!--//////RAPTOR DIALOGUE////////-->
+
+  <event name="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR_SCAN">
+    <text>RAPTOR'S DETAILS
+      SPECIES? [Primagen] UNIQUE? [Yes]
+      Unique Traits: This particular primagen is covered in layer after layer of armor - 5 in total, all individually machined by himself and integrated into his body.
+      Stats: 90 Health, x0.6 damage taken, half suffocation damage, x1.7 damage and sabotage, cannot lose skills
+      RAPTOR is TRACKER's best friend and Cheese's lover. He may be almost entirely machine, but his biological heart keeps beating for the pink sergal.
+      RAPTOR carries highly advanced machinery inside his torso, including an ammo replicator and an internal generator that can be used to power systems.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR_TALK">
+    <text load="TEXT_CREW_TALK_PRIMAGEN_RAPTOR"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_PRIMAGEN_RAPTOR">
+    <text>RAPTOR just finished an hour-long rant about old human ammunition calibers - he wanted to start talking about flak weapons too but you've stopped him right in time.</text>
+    <text>You ask RAPTOR if he ever ate anything, as you've only seen him charge using a power cord. He answers with "Yeah. Coffee.".</text>
+    <text>RAPTOR is trying to fix a coffee vending machine in order to "Relive the good old times.".</text>
+    <text>RAPTOR is reloading all of his weapons by putting junk in his chest cavity, compacting it and fabricating ammo. It's highly fascinating!</text>
+    <text>RAPTOR saw you enter his room and yelled "TANGO CONTACT!" reflexively. It seems even machines make mistakes.</text>
+  </textList>
+
+<!--//////LANCER DIALOGUE////////-->
+
+  <event name="STORAGE_CHECK_CREW_CLONEFAIL_LANCER_SCAN">
+    <text>LANCE-ERRR'S DETAILS
+      SPECIES? [CLONE//FAIL] UNIQUE? [CLONE//FAIL]
+      Unique Traits: The tongue is a misshapen sergal tail, placed upside down through his body - mostly stored in the visor. The internals are messed up, it is unclear how much the specimen can survive exposure to atmosphere, gravity and... mere existence.
+      Stats: 60 Health, x2 damage taken, no suffocation damage, x1.3 movement speed, Lancer Overdrive ability that increases movement speed to 3x and damage to 2.5x for 7 seconds. Cannot lose skills, a trait inherited from TRACKER's augments.
+      Lancer carries the DNA of Cheese the Sergal and TRACKER the Protogen - this failed clone is an abhorrent and voraciously hungry monster, willing to do anything to taste flesh yet again.
+      Lancer has a broken voice box and is unable to talk with his mouth, so he uses a tape recorder with prerecorded voicelines instead.
+      Lancer's tongue, an upside down tail that grows and writhes within his body, is usually used as a weapon, despite it being useful in other applications as well.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_CLONEFAIL_LANCER_TALK">
+    <text load="TEXT_CREW_TALK_CLONEFAIL_LANCER"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_CLONEFAIL_LANCER">
+    <text>Lancer seems to be stuck in a loop of canned voice lines - he's continuously repeating "PLEASE DON'T LEAVE YOUR BAGS UNATTENDED IN THE TERMINAL".</text>
+    <text>Lancer is eating what seems to have been a slug. He's using his lance as a fork. It's quite fascinating, if not disgusting...</text>
+    <text>Lancer is maniacally munching on an empty coffee bag, whining, moaning and screaming, punching walls randomly. You decide to let him be.</text>
+    <text>Lancer asks you what time it is. You have a hunch he wasn't reffering to chronology.</text>
+    <text>The misshapen clonefail asks you "PLEASE CHECK YOUR SEATBELT BEFORE TAKE-OFF.". Fascinating.</text>
+    <text>Lancer is falling apart into a puddle. A Lancer-puddle. Interesting.</text>
+    <text>You ask Lancer what he uses the tongue for - he answers by grabbing a ration hidden on top of a tall shelf and shoving it directly into his mouth, munching through the packaging.</text>
+    <text>Lancer quips at you happily using his tape recorder "PLEASE KEEP YOUR HANDS IN THE RIDE (whir) YOU- (whir) ARE IN A HARDHAT AREA (whir)". How cute of him!</text>
+  </textList>
+
+  <!--//////CHECK CREW LIST SHEISSE////////-->
 
   <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
     <mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" >
@@ -343,6 +461,8 @@
       <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAVENGER_TALK"/>
     </choice>
   </event>-->
+
+  <!--//////SCRAPPER DIALOGUE////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_TALK">
     <text load="TEXT_CREW_TALK_SCRAPPER"/>
