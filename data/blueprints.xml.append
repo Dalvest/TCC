@@ -402,8 +402,8 @@
 	<title>SCRAPFLAK</title>
 	<short>Scrapflak</short>
 	<tip>tip_flak</tip>
-	<desc>This custom 3D-printed cannon throws ship parts at enemy ships - with a terrible accuracy, but without the need to down shields first.</desc>
-	<tooltip>Fires a blast of debris across a huge area doing medium damage, as well as having a medium chance of causing breaches.</tooltip>
+	<desc>This custom 3D-printed cannon throws ship parts at enemy ships - with a terrible accuracy, however.</desc>
+	<tooltip>Fires a blast of debris across a huge area doing up to 6 damage, as well as having a medium chance of causing breaches.</tooltip>
 	<radius>95</radius>
 	<damage>1</damage>
 	<spin>720</spin>
@@ -418,9 +418,9 @@
 	<speed>35</speed>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="5" fake="false">debris_large</projectile>
-		<projectile count="5" fake="true">debris_large</projectile>
-		<projectile count="4" fake="false">debris_med</projectile>
+		<projectile count="4" fake="false">tc_gibs_2</projectile>
+		<projectile count="4" fake="true">tc_gibs</projectile>
+		<projectile count="7" fake="false">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>flak</sound>
