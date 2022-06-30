@@ -508,36 +508,34 @@
 				<persDamage>-1</persDamage>
 				<sysDamage>-1</sysDamage>
 				<breachChance>10</breachChance>
+				<selfHealth>999</selfHealth>
 				<friendlyFire>true</friendlyFire>
 				<shipFriendlyFire>true</shipFriendlyFire>
 				<buttonText>COMPACT</buttonText>
-				<tooltip>Ready: Heal to full health, gain 50 health and deal 1 hull damage to the current room</tooltip>
-				<cooldownColor r="3" g="145" b="0"/>
+				<tooltip>Ready: Overheal by 50 health and deal 1 hull damage to the current room while halving movement speed and tripling combat damage for 10 seconds.</tooltip>
+				<cooldownColor r="77" g="20" b="23"/>
 				<effectAnim>explosion_random</effectAnim>
 				<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 				<temporaryEffect>
-					<duration>15</duration>
-					<cooldownColor r="0" g="255" b="6"/>
-					<finishSounds>
-						<finishSound>mindControlEnd</finishSound>
-					</finishSounds>
+					<duration>10</duration>
+					<damageMultiplier>3</damageMultiplier>
+					<moveSpeedMultiplier>0.5</moveSpeedMultiplier>
 					<statBoosts>
 						<statBoost name="maxHealth">
 							<boostType>FLAT</boostType>
 							<amount>50</amount>
-							<shipTarget>CURRENT_ROOM</shipTarget>
-							<crewTarget>ALLIES</crewTarget>
-							<affectsSelf>true</affectsSelf>
-							<priority>999999</priority>
-							<duration>15</duration>
-							<whiteList>
-								<trash_eater/>
-							</whiteList>
+							<shipTarget>ALL</shipTarget><!--set it this way because SELF means it should only ever affect the crew casting the boost anyway-->
+							<crewTarget>SELF</crewTarget>
+							<priority>-100</priority><!--Set this way so the boost is added AFTER all other affects, so it's always +50 hp-->
+							<duration>10</duration>
 						</statBoost>
 					</statBoosts>
-					<animSheet baseVisible="true">anointed_glow</animSheet>
+					<cooldownColor r="146" g="74" b="72"/>
+					<finishSounds>
+						<finishSound>mindControlEnd</finishSound>
+					</finishSounds>
+					<animSheet baseVisible="true">trash_eater_glow</animSheet>
 				</temporaryEffect>
-				<selfHealth>999</selfHealth>
 			</powerEffect>
 		</mod-append:race>
 
@@ -545,7 +543,7 @@
 
 		<mod-append:race name="scrapper">
 			<maxHealth>125</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 			<canSuffocate>false</canSuffocate>
 			<repairSpeed>1.5</repairSpeed>
 			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
@@ -560,7 +558,7 @@
 
 		<mod-append:race name="scrapper_soldier">
 			<maxHealth>125</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 			<canSuffocate>false</canSuffocate>
 			<repairSpeed>1</repairSpeed>
 			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
@@ -594,7 +592,7 @@
 
 		<mod-append:race name="scrapper_engineer">
 			<maxHealth>125</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 			<canSuffocate>false</canSuffocate>
 			<repairSpeed>3</repairSpeed>
 			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
@@ -611,7 +609,7 @@
 
 		<mod-append:race name="scrapper_speed">
 			<maxHealth>125</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 			<canSuffocate>false</canSuffocate>
 			<repairSpeed>1.5</repairSpeed>
 			<moveSpeedMultiplier>2</moveSpeedMultiplier>
@@ -626,7 +624,7 @@
 
 		<mod-append:race name="scrapper_scavenger">
 			<maxHealth>150</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 			<canSuffocate>false</canSuffocate>
 			<repairSpeed>2</repairSpeed>
 			<moveSpeedMultiplier>1.5</moveSpeedMultiplier>

@@ -1543,6 +1543,11 @@
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
 	<weaponArt>tc_deconstructor</weaponArt>
 	<iconImage>beam</iconImage>
 	<iconScale>0.80</iconScale>
@@ -1569,6 +1574,11 @@
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
 	<weaponArt>tc_resolver</weaponArt>
 	<iconImage>beam</iconImage>
 	<iconScale>0.80</iconScale>
@@ -1594,6 +1604,11 @@
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
 	<weaponArt>tc_sinewave</weaponArt>
 	<iconImage>beam</iconImage>
 	<iconScale>0.80</iconScale>
@@ -3604,9 +3619,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Owing to his durable body, he has 200hp.</power>
-		<power>Active Ability: COMPACT. Comsumes part of the ship, healing the Trash Eater back to full health while doing one hull damage to the current ship.</power>
-		<power>Does 1.5x sabotage damage.</power>
+		<power>Max Health is increased to 200</power>
+		<power>Active Ability: Comsumes part of the ship, overhealing the Trash Eater by 50 health while doing one hull damage</power>
+		<power>While ability is active, moves at half speed and does 3x combat damage</power>
+		<power>Does 1.5x sabotage damage</power>
 	</powerList>
 </crewBlueprint>
 
@@ -3620,7 +3636,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<bp>2</bp>
 	<rarity>5</rarity>
 	<powerList>
-		<power>Slower oxygen drain</power>
+		<power>0.75x oxygen drain</power>
 		<power>0.75x fire damage taken</power>
 		<power>1.5x repair speed</power>
 		<power>0.9x move speed</power>
@@ -3636,7 +3652,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Slower oxygen drain</power>
+		<power>0.75x oxygen drain</power>
 		<power>0.75x fire damage taken</power>
 		<power>2x damage</power>
 		<power>0.9x move speed</power>
@@ -3657,7 +3673,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>0.5x repair speed</power>
 		<power>0.25x move speed</power>
 		<power>250 health</power>
-		<power>Significantly slower oxygen drain</power>
+		<power>0.5x oxygen drain</power>
 	</powerList>
 </crewBlueprint>
 
@@ -3669,7 +3685,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Slower oxygen drain</power>
+		<power>0.5x oxygen drain</power>
 		<power>0.75x fire damage taken</power>
 		<power>0.75x damage</power>
 		<power>1.5x sabotage speed</power>
@@ -3687,7 +3703,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Slower oxygen drain</power>
+		<power>0.5x oxygen drain</power>
 		<power>0.75x fire damage taken</power>
 		<power>1.5x repair speed</power>
 		<power>2x move speed</power>
@@ -3703,7 +3719,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Slower oxygen drain</power>
+		<power>0.5x oxygen drain</power>
 		<power>0.5x fire damage taken</power>
 		<power>2x damage</power>
 		<power>2.5x sabotage speed</power>
