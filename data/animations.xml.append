@@ -285,6 +285,16 @@
 	<mountPoint x="3" y="47" />
 </weaponAnim>
 
+<animSheet name="tc_minigun_mk1" w="180" h="49" fw="18" fh="49">weapon_autocannon/tc_minigun_mk1.png</animSheet>
+<weaponAnim name="tc_minigun_mk1">
+	<sheet>tc_minigun_mk1</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="12" y="13" />
+	<mountPoint x="2" y="36" />
+</weaponAnim>
+
 <animSheet name="RSA_MINICANNON" w="192" h="59" fw="24" fh="59">weapon_autocannon/rsa_minicannon.png</animSheet>
 <weaponAnim name="RSA_MINICANNON">
 	<sheet>RSA_MINICANNON</sheet>

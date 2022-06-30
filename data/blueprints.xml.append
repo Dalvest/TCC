@@ -1304,6 +1304,51 @@
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_MINIGUN_MK1">
+	<type>LASER</type>
+	<title>Minigun Mark I</title>
+	<short>Minigun Mk.1</short>
+	<desc>A relic from the Federation-Hive war - an autocannon minigun! It uses caseless ammunition which can be replicated using missiles.</desc>
+	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>95</freeMissileChance>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<radius>40</radius>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<boost>
+		<type>cooldown</type>
+		<amount>2</amount>
+		<count>5</count>
+	</boost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<cost>50</cost>
+	<image>GB_shot_light</image>
+	<launchSounds>
+		<sound>GB_cannonLight1</sound>
+		<sound>GB_cannonLight2</sound>
+		<sound>GB_cannonLight3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_minigun_mk1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="RSA_MINICANNON">
 	<type>LASER</type>
 	<title>RSA Minicannon</title>
@@ -3216,8 +3261,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="player_ship_extraelite_2" img="player_ship_extraelite_2">
 	<class>Twisted Scrapper Dreadnought</class>
-	<name>The Inspector</name>
-	<desc>Submit yourself to an inspection, or face the consequences. Or face them regardless. We don't care either way. Glory to the Federation!</desc>
+	<name>Carpenter</name>
+	<desc>The ultimate ship for assassination hits - destroy your multiversal enemies with the varied arsenal on this ship. A true bounty hunter, loyal to whoemever pays the best.</desc>
 	<systemList>
 		<battery power="1" room="16" start="false" img="room_battery_scrapper" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking" />
@@ -3226,13 +3271,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="2" room="7" start="true" img="room_doors">
+		<doors power="3" room="7" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="3" max="8" room="6" start="true" img="room_drones_4" />
+		<drones power="4" max="8" room="6" start="true" img="room_drones_4" />
 		<engines power="1" max="8" room="2" start="true" img="room_engines_8">
 			<slot>
 				<direction>left</direction>
@@ -3265,7 +3310,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="3" start="true" />
+		<teleporter power="1" room="3" start="false" />
 		<weapons power="2" max="8" room="15" start="true" img="room_weapons_8">
 			<slot>
 				<direction>up</direction>
@@ -3276,11 +3321,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="4" count="4">
-		<weapon name="TC_SCRAPFLAK" />
+		<weapon name="TC_MINIGUN_MK1" />
 		<weapon name="SHOTGUN_INSTANT" />
 	</weaponList>
 	<droneList drones="8" count="4">
-		<drone name="COMBAT_1_BEAM" />
+		<drone name="DEFENSE_3" />
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="9" />
