@@ -739,12 +739,12 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [125 health -> 200 health
+      [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
       x1.5 repair speed -> x0.5 repair speed
       x0.9 movement speed -> x0.25 movement speed
       x0.75 fire damage -> x0.5 fire damage
-      x1 damage -> x2 damage]</text>
+      x1 damage -> x2.5 damage]</text>
     <choice>
       <text>Do it.</text>
       <event>
@@ -760,11 +760,12 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [125 health -> 200 health
+      [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
       x1 repair speed -> x0.5 repair speed
       x0.9 movement speed -> x0.25 movement speed
-      x0.75 fire damage -> x0.5 fire damage]</text>
+      x0.75 fire damage -> x0.5 fire damage
+      x2 damage -> x2.5 damage]</text>
     <choice>
       <text>Do it.</text>
       <event>
@@ -780,13 +781,13 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [125 health -> 200 health
+      [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
       x3 repair speed -> x0.5 repair speed
       x0.9 movement speed -> x0.25 movement speed
       x0.75 fire damage -> x0.5 fire damage
-      x0.75 damage -> x2 damage
-      x1.5 sabotage speed -> 2x sabotage speed]</text>
+      x0.75 damage -> x2.5 damage
+      x1.5 sabotage speed -> x2.5 sabotage speed]</text>
     <choice>
       <text>Do it.</text>
       <event>
@@ -802,12 +803,12 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [125 health -> 200 health
+      [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
       x1.5 repair speed -> x0.5 repair speed
       x2 movement speed -> x0.25 movement speed
       x0.75 fire damage -> x0.5 fire damage
-      x1 damage -> x2 damage]</text>
+      x1 damage -> x2.5 damage]</text>
     <choice>
       <text>Do it.</text>
       <event>

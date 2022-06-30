@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--    
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           BLUEPRINTS
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -15,8 +15,13 @@
 	<name>scrapper_scavenger</name>
 </blueprintList>
 
+<blueprintList name="LIST_SCRAPPER_TIER_2">
+	<name>scrapper_soldier</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_speed</name>
+</blueprintList>
+
 <blueprintList name="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE">
-	<name>scrapper</name>
 	<name>scrapper_soldier</name>
 	<name>scrapper_engineer</name>
 	<name>scrapper_speed</name>
@@ -208,7 +213,7 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_4</mod-append:name>
 </mod:findName>
 
-<!--    
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           ENEMY SHIP BLUEPRINTS
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -348,12 +353,12 @@
 		<scrapper_heavy room="12"/>
 		<scrapper_speed room="13"/>
 		<scrapper_heavy room="5"/>
-	
+
 		<scrapper_engineer room="3"/>
-		
+
 		<scrapper_scavenger room="7"/>
 		<scrapper_engineer room="12"/>
-       
+
         <trash_eater room="7" name="Trash Eater"/>
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
@@ -394,11 +399,11 @@
 		<scrapper_speed room="13"/>
 		<scrapper_speed room="10"/>
 		<scrapper_engineer room="10"/>
-	
+
 		<scrapper_heavy room="8"/>
 		<scrapper_engineer room="3"/>
 		<scrapper_engineer room="5"/>
-       
+
         <trash_eater room="7" name="Trash Eater"/>
 		<scrapper_scavenger room="7"/>
     </crew>
@@ -439,15 +444,15 @@
 		<scrapper_scavenger room="12"/>
 		<scrapper_scavenger room="10"/>
 		<scrapper_scavenger room="10"/>
-	
+
 		<scrapper_scavenger room="8"/>
 		<scrapper_scavenger room="3"/>
 		<scrapper_scavenger room="5"/>
-		
+
 		<scrapper_scavenger room="5"/>
 		<scrapper_scavenger room="6"/>
 		<scrapper_scavenger room="1"/>
-       
+
         <trash_eater room="7" name="Trash Eater"/>
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
