@@ -174,6 +174,16 @@
 	<mountPoint x="8" y="75"/>
 </weaponAnim>
 
+<animSheet name="tc_laser_legion" w="392" h="95" fw="28" fh="95">weapon_laser/tc_laser_legion.png</animSheet>
+<weaponAnim name="tc_laser_legion">
+	<sheet>tc_laser_legion</sheet>
+	<desc length="14" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint  x="18" y="8"/>
+	<mountPoint x="8" y="75"/>
+</weaponAnim>
+
 <animSheet name="tc_laser_charger" w="1344" h="62" fw="28" fh="62">weapon_laser/tc_laser_charger.png</animSheet>
 <weaponAnim name="tc_laser_charger">
 	<sheet>tc_laser_charger</sheet>

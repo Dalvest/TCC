@@ -777,9 +777,9 @@
 	<breachChance>3</breachChance>
 	<cooldown>13</cooldown>
 	<power>2</power>
-	<cost>75</cost>
+	<cost>60</cost>
 	<bp>6</bp>
-	<rarity>0</rarity>
+	<rarity>4</rarity>
 	<image>tc_laser_shot_shot</image>
 	<boost>
 		<type>damage</type>
@@ -803,6 +803,49 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>tc_laser_marksman</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_LASER_LEGION">
+	<type>LASER</type>
+	<tip>tip_chain_laser</tip>
+	<title>"LEGION" Laser</title>
+	<short>LEGION L.</short>
+	<desc>This heavily upgraded Militia laser is ready to tear through ships, destroying anything that stands in its path.</desc>
+	<tooltip>Fires 1 shot that causes 1 damage that does hullbust and has a medium chance to breach; it also increases in strength each time it fires (up to 10).</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>75</cost>
+	<bp>6</bp>
+	<hullbust>6</hullbust>
+	<rarity>4</rarity>
+	<image>tc_laser_shot_shot</image>
+	<boost>
+		<type>damage</type>
+		<amount>2</amount>
+		<count>10</count>
+	</boost>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_laser_legion</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="TC_LASER_CHARGER">
@@ -3161,8 +3204,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="7" count="4">
-		<weapon name="LANCE_1" />
+		<weapon name="TC_LASER_LEGION" />
 		<weapon name="RSA_TAGGER" />
+		<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE" />
 	</weaponList>
 	<droneList drones="8" count="4" />
 	<health amount="30" />
@@ -3232,7 +3276,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="4" count="4">
-		<weapon name="TC_BOMB_SHOTGUN_1" />
+		<weapon name="TC_SCRAPFLAK" />
 		<weapon name="SHOTGUN_INSTANT" />
 	</weaponList>
 	<droneList drones="8" count="4">
