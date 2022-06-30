@@ -81,7 +81,8 @@
 		<choice  req="TC_DEAD" lvl="6" max_group="3" hidden="false" blue="false">
 			<text>Yes.</text>
 			<event>
-			<text>You send out a signal displaying the scrap using the transmitter. But nobody came.</text>
+			<text>You send out a signal displaying the scrap using the transmitter. 
+				But nobody came.</text>
 				<choice>
 					<text>Continue...</text>
 					<event load="STORAGE_CHECK"/>
@@ -731,6 +732,12 @@
 
 <event name="ENCOUNTER_TC1">
 <text>You've arrived at the coordinates, only to be met with the same Lanius ship from before. This looks like a trap, but they aren't attacking you, nor are their weapons on... yet.</text>
+<beaconType id="map_icon_trash" global="true">
+	<color r="110" g="32" b="9" a="1.0"/>
+	<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+	<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+</beaconType>
 <choice req="TC1_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 	<text>Attempt to hail them.</text>
 	<event>
@@ -764,6 +771,12 @@
 
 <event name="ENCOUNTER_TC2">
 <text>You've arrived at the new coordinates. It's a ship similar to the one from earlier. It is unclear if they're the same guys from before, or if they just came out of another universe...</text>
+<beaconType id="map_icon_trash" global="true">
+	<color r="110" g="32" b="9" a="1.0"/>
+	<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+	<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+</beaconType>
 <choice req="TC2_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 	<text>Attack them.</text>
 	<event>
@@ -797,6 +810,12 @@
 
 <event name="ENCOUNTER_TC3">
 	<text>Hold on, we just killed these guys. How and why are they back? They... they seem to have learned from the previous engagements, as this time they've got you cornered.</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+    </beaconType>
 	<choice req="TC3_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 		<text>Attack.</text>
 		<event>
@@ -829,6 +848,12 @@
 </event>
 <event name="ENCOUNTER_TC4">
 	<text>Hey, there's a second ship here. And it's not hostile. In fact, it's not even a Scrapper. It's a scavenger of some kind, judging by their terribly aged and dirty hull. Clearly a garbage disposal ship.</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+    </beaconType>
 	<choice req="TC4_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 		<text>Try to intervene.</text>
 		<event>
@@ -879,6 +904,12 @@
 
 <event name="ENCOUNTER_TC5">
 	<text>This one's stronger. Faster. Better. Shiny, even. Let's reduce them to dust.</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+    </beaconType>
 	<choice req="TC5_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 		<text>Attack.</text>
 		<event>
@@ -912,6 +943,12 @@
 
 	<event name="ENCOUNTER_TC6">
 		<text>This is the first Trash Compactor. The prince of the Scrappers, the Trash Eater, is here. His conquest to take over the world starts with your ship. Let's make sure his plans crash and burn.</text>
+		<beaconType id="map_icon_trash" global="true">
+			<color r="110" g="32" b="9" a="1.0"/>
+			<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+			<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+			<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+		</beaconType>
 		<choice req="TC6_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 			<text>Attack.</text>
 			<event>
