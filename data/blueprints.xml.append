@@ -402,25 +402,25 @@
 	<title>SCRAPFLAK</title>
 	<short>Scrapflak</short>
 	<tip>tip_flak</tip>
-	<desc>Why did you make this? This custom 3D-printed cannon throws ship parts at enemy ships - with a terrible accuracy, but without the need to down shields first.</desc>
+	<desc>This custom 3D-printed cannon throws ship parts at enemy ships - with a terrible accuracy, but without the need to down shields first.</desc>
 	<tooltip>Fires a blast of debris across a huge area doing medium damage, as well as having a medium chance of causing breaches.</tooltip>
-	<radius>175</radius>
-	<damage>2</damage>
+	<radius>95</radius>
+	<damage>1</damage>
 	<spin>720</spin>
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>5</breachChance>
-	<cooldown>22</cooldown>
+	<cooldown>15</cooldown>
 	<power>3</power>
 	<cost>100</cost>
 	<bp>10</bp>
 	<speed>35</speed>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="3" fake="false">debris_large</projectile>
-		<projectile count="9" fake="true">debris_large</projectile>
-		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="5" fake="false">debris_large</projectile>
+		<projectile count="5" fake="true">debris_large</projectile>
+		<projectile count="4" fake="false">debris_med</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>flak</sound>
@@ -450,7 +450,7 @@
 	<tip>tip_flak</tip>
 	<desc>Why did the Militia upgrade this design? We might never know, but this thing is quite a bit more accurate now.</desc>
 	<tooltip>Fires a blast of debris across a large area doing up to 4 damage, as well as having a high chance of causing breaches.</tooltip>
-	<radius>105</radius>
+	<radius>75</radius>
 	<damage>1</damage>
 	<spin>720</spin>
 	<shots>1</shots>
