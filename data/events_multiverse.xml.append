@@ -573,7 +573,7 @@
 			<text>Done!</text>
 			<item_modify>
 					<item type="scrap" min="-60" max="-60"/>
-				</item_modify>
+			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_1"/>
 		</event>
 	</choice>
@@ -584,7 +584,7 @@
 			<text>Done!</text>
 			<item_modify>
 					<item type="scrap" min="-75" max="-75"/>
-				</item_modify>
+			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_2"/>
 		</event>
 	</choice>
@@ -595,7 +595,7 @@
 			<text>Done!</text>
 			<item_modify>
 					<item type="scrap" min="-90" max="-90"/>
-				</item_modify>
+			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_3"/>
 		</event>
 	</choice>
@@ -606,7 +606,7 @@
 			<text>Done!</text>
 			<item_modify>
 					<item type="scrap" min="-110" max="-110"/>
-				</item_modify>
+			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_4"/>
 		</event>
 	</choice>
@@ -617,8 +617,19 @@
 			<text>Done!</text>
 			<item_modify>
 					<item type="scrap" min="-60" max="-60"/>
-				</item_modify>
+			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="false">
+		<text>Pre-emptive Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_INSTANT"/>
 		</event>
 	</choice>
 
