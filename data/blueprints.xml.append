@@ -864,7 +864,7 @@
 	<power>2</power>
 	<cost>70</cost>
 	<bp>6</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<image>tc_laser_shot_shot</image>
 	<boost>
 		<type>cooldown</type>
@@ -992,7 +992,7 @@
 	<power>3</power>
 	<cost>90</cost>
 	<bp>4</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<image>tc_singularity</image>
 	<launchSounds>
 		<sound>Singularity</sound>
@@ -1200,7 +1200,7 @@
 	<speed>70</speed>
 	<cost>80</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<image>tc_ion_2</image>
 	<launchSounds>
 		<sound>ionShoot1</sound>
@@ -1365,7 +1365,7 @@
 	<cooldown>7</cooldown>
 	<power>1</power>
 	<bp>4</bp>
-	<rarity>0</rarity>
+	<rarity>4</rarity>
 	<cost>40</cost>
 	<image>GB_shot_light</image>
 	<launchSounds>
@@ -1405,7 +1405,7 @@
 	<cooldown>14</cooldown>
 	<power>2</power>
 	<bp>4</bp>
-	<rarity>0</rarity>
+	<rarity>4</rarity>
 	<cost>60</cost>
 	<image>GB_shot_light</image>
 	<launchSounds>
@@ -1450,7 +1450,7 @@
 	<speed>50</speed>
 	<cost>60</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<image>tc_tear_gas</image>
 	<launchSounds>
 		<sound>Lance_AP</sound>
@@ -1487,7 +1487,7 @@
 	<power>3</power>
 	<cost>80</cost>
 	<bp>7</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<length>160</length>
 	<launchSounds>
 		<sound>beam2</sound>
@@ -1511,7 +1511,7 @@
 	<power>2</power>
 	<cost>70</cost>
 	<bp>7</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<length>70</length>
 	<launchSounds>
 		<sound>beam2</sound>
@@ -1554,6 +1554,8 @@
 	</mod-overwrite:launchsounds>
 	<mod-overwrite:weaponArt>instant_revolver</mod-overwrite:weaponArt>
 </mod:findName>
+
+<!--////////// TRANSFORM RACE STUFF //////////-->
 
 <mod:findName type="weaponBlueprint" name="BOMB_ELITE">
 	<mod:findLike type="statBoosts">
@@ -2524,7 +2526,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
-	<systemLimit>9</systemLimit>
+	<systemLimit>10</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="7" count="4">
@@ -2596,6 +2598,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="23" count="2">
@@ -2670,6 +2673,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="16" count="4">
@@ -2743,6 +2747,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="12" count="4">
@@ -2815,6 +2820,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="9" count="4">
@@ -2885,6 +2891,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="8" count="4">
@@ -2959,7 +2966,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
-	<systemLimit>9</systemLimit>
+	<systemLimit>10</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="14" count="4">
@@ -3035,6 +3042,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="18" count="4">
@@ -3107,6 +3115,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="18" count="4">
@@ -3173,6 +3182,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</shields>
 		<teleporter power="1" room="6" start="true" />
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>0</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="0" count="0" />
@@ -3219,7 +3229,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</medbay>
 		<mind power="1" room="14" start="true" img="room_mind_4" />
-		<oxygen power="1" room="8" start="true" img="room_oxygen_20" />
+		<oxygen power="1" room="8" start="false" img="room_oxygen_20" />
 		<pilot power="1" room="0" start="true" img="room_pilot">
 			<slot>
 				<direction>right</direction>
@@ -3239,19 +3249,19 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="12" start="false" />
-		<weapons power="5" max="8" room="6" start="true" img="room_weapons">
+		<weapons power="4" max="8" room="6" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>12</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="7" count="4">
 		<weapon name="TC_LASER_LEGION" />
 		<weapon name="RSA_TAGGER" />
-		<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE" />
 	</weaponList>
 	<droneList drones="8" count="4" />
 	<health amount="30" />
@@ -3271,7 +3281,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="3" room="7" start="true" img="room_doors">
+		<doors power="2" room="7" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3290,7 +3300,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</medbay>
-		<mind power="1" room="8" start="false" img="room_mind" />
+		<mind power="1" room="8" start="true" img="room_mind" />
 		<oxygen power="1" room="9" start="true" img="room_oxygen_TCC" />
 		<pilot power="1" room="0" start="true" img="room_pilot">
 			<slot>
@@ -3304,7 +3314,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="5" start="true" img="room_shields_TCC">
+		<shields power="1" max="8" room="5" start="true" img="room_shields_TCC">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -3318,11 +3328,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="4" count="4">
 		<weapon name="TC_MINIGUN_MK1" />
 		<weapon name="SHOTGUN_INSTANT" />
+		<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE" />
 	</weaponList>
 	<droneList drones="8" count="4">
 		<drone name="DEFENSE_3" />
@@ -3331,6 +3343,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="9" />
 	<aug name="COMPACTOR" />
 	<aug name="ADVANCED_SCRAP" />
+	<aug name="NANOBOT_DEFENSE_SYSTEM" />
 </shipBlueprint>
 
 <!--/////////////////////STALWART DEFENCE//////////////////////////-->
