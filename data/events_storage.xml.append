@@ -91,7 +91,9 @@
       Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
       Can consume beacons when there is an opportunity for it. This will usually provide a large amount of additional scrap and has a 10% chance of compacting a crew, weapon or done, but has a 10% chance of backfiring and leaving you stranded, boosting the fleet by a jump.
       Ability (25s cooldown, 15s duration): Does 1 hull damage, and creates a breach in the current room (can damage player ship as well). Heals back to full health immediately. Gains 50 health temporarily.
-      Ability cooldown type: Refills on jump.</text>
+      Ability cooldown type: Refills on jump.
+      The Trash Eater is the prince of Lanius, not to be confused with his Beacon Eater brethren. His plan to take over the world consists in absorbing their entire universe and perhaps even the Multiverse itself, creating one gigantic symbiotic World Feeder.
+    </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -519,7 +521,7 @@
       Subtype Details: Genetic, Standard
       Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
       Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-      Can be upgraded by adding scrap to its body. </text>
+      The Scrappers were originally regular Lanius under the Trash Eater's command - after encountering the Garbage Compactor's crew and the remains of the Rent-A-Flagship, they started consuming Xenon-Ion reactors, an act which physically changed them. This is the simplest version of a Scrapper and can be upgraded by adding scrap to its body. </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -532,7 +534,7 @@
       Subtype Details: Genetic, Standard
       Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
       Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-      Can be upgraded by adding scrap to its body. </text>
+      This version of the Scrapper has blades on its arms that can be used to attack - these have been inspired by Lancer the Clonefail during a skirmish between him and the Scrappers. </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -545,7 +547,7 @@
       Subtype Details: Genetic, Standard
       Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
       Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-      Can be upgraded by adding scrap to its body. </text>
+      The Engineer is highly adept repairing things and salvagining ships, something this is highly necessary in order to help the Scrapper race survive. </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -558,7 +560,7 @@
       Subtype Details: Genetic, Standard
       Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
       Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-      Can be upgraded by adding scrap to its body. </text>
+      The Scrapper speedsters are extremely agile. That's about it. They can get from point A to point C in no time flat. </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -571,7 +573,7 @@
       Subtype Details: Genetic, Standard
       Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
       Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-      Can be upgraded by adding scrap to its body. </text>
+      This is an elite variant of a Scrapper, modified so heavily and bluntly that it's essentially a tank -  a slow, tough, damage resistant tank. </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -584,7 +586,7 @@
       Subtype Details: Genetic, Standard
       Stats: 125 Health, x1.5 repair speed, x0.9 move speed, x0.75 fire damage.
       Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-      Can be upgraded by adding scrap to its body. </text>
+      The most advanced Scrapper so far - fast, strong and intelligent, a veritable threat in any situation. Luckily, this one is on your side, captain. </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
