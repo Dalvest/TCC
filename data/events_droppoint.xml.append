@@ -8,9 +8,9 @@
     <text>This beacon is empty save for an odd Lanius ship of a design that doesn't appear on any records. Their weapons, once humming with life, power down when you enter the vicinity. It seems they don't want to fight. Although they aren't responding to hails, you're not sure they'd understand anyway. </text>
     <beaconType id="map_icon_trash" global="true">
         <color r="110" g="32" b="9" a="1.0"/>
-        <unvisitedTooltip>A strange ship is here.</unvisitedTooltip>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
         <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
-        <undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
     </beaconType>
     <ship load="TC_TRASH_COMPACTOR1" hostile="false"/>
     <choice hidden="true">
@@ -40,7 +40,7 @@
                 </event>
             </choice>
             <choice hidden="true">
-                <text>No thanks, we don't have time for this. </text>
+                <text>Come on, we don't have time for this. </text>
                 <event>
                     <text>The ship returns the favor by also jumping away. At least they didn't attack. </text>
                     <instantEscape/>
