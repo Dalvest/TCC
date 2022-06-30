@@ -628,6 +628,15 @@
 	<time>1</time>
 </anim>
 
+<!--////////////////// ELECTRON PROJECTILES /////////////////-->
+
+<animSheet name="tc_electron_explosion" w="288" h="32" fw="32" fh="32">projectiles/tc_electron_explosion.png</animSheet>
+<anim name="tc_electron_explosion">
+	<sheet>tc_electron_explosion</sheet>
+	<desc length="9" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 <!--////////////////// ION PROJECTILES /////////////////-->
 
 <animSheet name="Ion_Charger_projectile" w="87" h="3" fw="29" fh="3">projectiles/tc_ion.png</animSheet>

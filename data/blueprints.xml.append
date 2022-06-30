@@ -169,20 +169,20 @@
 
 <weaponBlueprint name="TC_SHOTGUN_BOMB">
 	<type>BURST</type>
-	<title>Explosive Flak</title>
-	<short>Explosive Flak</short>
+	<title>High-Explosive Flak</title>
+	<short>HE Flak</short>
 	<tip>tip_flak</tip>
-	<desc>An explosive flak cannon that fires bombs. Its projectiles do a massive amount of damage to the hull, however it needs some help getting there. </desc>
-	<tooltip>Fires 3 bombs across a random area doing a large amount of hull damage.</tooltip>
+	<desc>An explosive flak cannon that fires HE charges - not to be confused with a Minelauncher or a Bomb Flak.</desc>
+	<tooltip>Fires 3 bombs across a random area doing a huge amount of hull damage.</tooltip>
 	<drone_targetable>1</drone_targetable>
-	<damage>3</damage>
+	<damage>2</damage>
 	<sysDamage>-3</sysDamage>
 	<radius>60</radius>
 	<shots>1</shots>
 	<projectiles>
 		<projectile count="3" fake="false">tc_bomb</projectile>
 	</projectiles>
-	<explosion>explosion_random</explosion>
+	<explosion>tc_electron_explosion</explosion>
 	<spin>180</spin>
 	<sp>0</sp>
 	<fireChance>5</fireChance>
