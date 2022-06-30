@@ -159,7 +159,7 @@
 	<fireFrame>3</fireFrame>
 	<firePoint  x="14" y="7"/>
 	<mountPoint x="4" y="21"/>
-	<chargeImage>weapon_bomb_flak/tc_conservative_bomb_shotgun.png</chargeImage>
+	<chargeImage>weapon_bomb_flak/tc_conservative_bomb_shotgun_glow.png</chargeImage>
 </weaponAnim>
 
 <!--/////////////////// LASER //////////////////-->
@@ -337,6 +337,16 @@
 	<fireFrame>2</fireFrame>
 	<firePoint x="22" y="20" />
 	<mountPoint x="6" y="110" />
+</weaponAnim>
+
+<animSheet name="tc_resolver" w="261" h="45" fw="29" fh="45">weapon_beam/tc_resolver.png</animSheet>
+<weaponAnim name="tc_resolver">
+	<sheet>tc_resolver</sheet>
+	<desc length="9" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="13" y="1" />
+	<mountPoint x="2" y="31" />
 </weaponAnim>
 
 <animSheet name="tc_sinewave" w="286" h="83" fw="26" fh="83">weapon_beam/tc_sinewave.png</animSheet>
@@ -615,6 +625,15 @@
 <anim name="tc_singularity">
 	<sheet>tc_singularity</sheet>
 	<desc length="6" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<!--////////////////// ELECTRON PROJECTILES /////////////////-->
+
+<animSheet name="tc_electron_explosion" w="288" h="32" fw="32" fh="32">projectiles/tc_electron_explosion.png</animSheet>
+<anim name="tc_electron_explosion">
+	<sheet>tc_electron_explosion</sheet>
+	<desc length="9" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
