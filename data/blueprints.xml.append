@@ -1479,7 +1479,7 @@
 	<title>Deconstructor Beam</title>
 	<short>Deconstructor</short>
 	<desc>This combination of a bomb flak shell and a mining beam is surprsingly powerful - it deals 1 damage while also piercing one shield layer.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, 1 shield pierce.</tooltip>
+	<tooltip>Beam weapon, 1 damage to hull, 160 beam length</tooltip>
 	<damage>1</damage>
 	<sp>1</sp>
 	<breachChance>2</breachChance>
@@ -1497,13 +1497,38 @@
 	<iconScale>0.80</iconScale>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_RESOLVER">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Resolver Beam</title>
+	<short>Resolver</short>
+	<desc>This beam weapon was made out of an emptied out bomb flak - the innards of the bomb flaks are perfect to gut and replace with other weapons' parts.</desc>
+	<tooltip>Beam weapon, 1 damage to hull, 40 beam length, does double damage on systemless rooms</tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<hullbust>1</hullbust>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<length>40</length>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>tc_resolver</weaponArt>
+	<iconImage>beam</iconImage>
+	<iconScale>0.80</iconScale>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_SINEWAVE">
 	<type>BEAM</type>
 	<tip>tip_beams</tip>
 	<title>Sinewave Beam</title>
 	<short>Sinewave</short>
 	<desc>A nimble and strong laser - efficient, fast and fun.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, low chance to breach.</tooltip>
+	<tooltip>Beam weapon, 1 damage to hull, low chance to breach, 70 length</tooltip>
 	<damage>1</damage>
 	<sp>0</sp>
 	<breachChance>2</breachChance>
@@ -3261,7 +3286,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="7" count="4">
 		<weapon name="TC_LASER_LEGION" />
-		<weapon name="RSA_TAGGER" />
+		<weapon name="TC_RESOLVER" />
 	</weaponList>
 	<droneList drones="8" count="4" />
 	<health amount="30" />

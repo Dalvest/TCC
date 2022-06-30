@@ -339,6 +339,16 @@
 	<mountPoint x="6" y="110" />
 </weaponAnim>
 
+<animSheet name="tc_resolver" w="261" h="45" fw="29" fh="45">weapon_beam/tc_resolver.png</animSheet>
+<weaponAnim name="tc_resolver">
+	<sheet>tc_resolver</sheet>
+	<desc length="9" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="13" y="1" />
+	<mountPoint x="2" y="31" />
+</weaponAnim>
+
 <animSheet name="tc_sinewave" w="286" h="83" fw="26" fh="83">weapon_beam/tc_sinewave.png</animSheet>
 <weaponAnim name="tc_sinewave">
 	<sheet>tc_sinewave</sheet>
