@@ -2518,7 +2518,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking power="1" room="9" start="true" img="room_hacking_spot" />
-		<medbay power="2" room="1" start="true" img="room_medbay">
+		<medbay power="2" room="1" start="false" img="room_medbay">
 			<slot>
 				<number>1</number>
 			</slot>
