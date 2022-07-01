@@ -1141,6 +1141,64 @@
 			<function name="SCRAP_COLLECTOR" value="-0.25"/>
 			<locked/>
 		</aug>
+		<aug name="ANTI_ANAEROBIC_GRID">
+		<statBoosts>
+			<statBoost name="trueHealAmount">
+				<boostType>FLAT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<whiteList>
+					<engi_separatist_nano/>
+					<orchid_chieftain/>
+					<LIST_CREW_GHOST/>
+					<LIST_CREW_LANIUS/>
+					<LIST_CREW_ANCIENT/>
+					<LIST_CREW_SCRAPPER/>
+					<LIST_CREW_MORPH/>
+				</whiteList>
+				<amount>-2</amount>
+				<priority>0</priority>
+				<systemPowerDependency>
+					<oxygen/>
+				</systemPowerDependency>
+				<systemPowerScaling>
+						<noSys>0</noSys>
+						<noPwr>2</noPwr>
+						<onePwr>3</onePwr>
+						<twoPwr>4</twoPwr>
+						<threePwr>5</threePwr>
+						<fourPwr>6</fourPwr>
+						<fivePwr>7</fivePwr>
+						<sixPwr>8</sixPwr>
+						<sevenPwr>9</sevenPwr>
+						<eightPwr>10</eightPwr>
+						<ninePwr>11</ninePwr>
+						<tenPwr>12</tenPwr>
+						<elevenPwr>13</elevenPwr>
+						<twelvePwr>14</twelvePwr>
+						<thirteenPwr>15</thirteenPwr>
+						<fourteenPwr>16</fourteenPwr>
+						<fifteenPwr>17</fifteenPwr>
+						<sixteenPwr>18</sixteenPwr>
+						<seventeenPwr>19</seventeenPwr>
+						<eighteenPwr>20</eighteenPwr>
+						<nineteenPwr>21</nineteenPwr>
+						<twentyPwr>22</twentyPwr>
+						<twentyonePwr>23</twentyonePwr>
+						<twentytwoPwr>24</twentytwoPwr>
+						<twentythreePwr>25</twentythreePwr>
+						<twentyfourPwr>26</twentyfourPwr>
+						<twentyfivePwr>27</twentyfivePwr>
+						<twentysixPwr>28</twentysixPwr>
+						<twentysevenPwr>29</twentysevenPwr>
+						<twentyeightPwr>30</twentyeightPwr>
+						<twentyninePwr>31</twentyninePwr>
+						<thirtyPwr>32</thirtyPwr>
+				</systemPowerScaling>
+			</statBoost>
+		</statBoosts>
+    </aug>
 	</augments>
 	<mod:findLike type="events">
 		<mod:findName name="LIST_CHECK_AUGMENTS">
