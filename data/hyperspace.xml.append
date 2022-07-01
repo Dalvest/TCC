@@ -1272,6 +1272,14 @@
 				<amount>1.05</amount>
 				<priority>-100</priority>
 			</statBoost>
+			<statBoost name="maxHealth">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.05</amount>
+				<priority>-100</priority>
+			</statBoost>
 		</statBoosts>
  	</aug>
 
@@ -1286,6 +1294,14 @@
 				<priority>-100</priority>
 			</statBoost>
 			<statBoost name="damageMultiplier">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.02</amount>
+				<priority>-100</priority>
+			</statBoost>
+			<statBoost name="maxHealth">
 				<boostType>MULT</boostType>
 				<shipTarget>ORIGINAL_SHIP</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
