@@ -323,7 +323,7 @@
 				<type>2</type>
 				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
 			</unlock>
-			
+
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_COROSSUS">
@@ -1255,7 +1255,25 @@
 	</aug>
 
 	<aug name="NOODLE_RATIONS">
-		<function name="REPAIR_ARM" value="-0.10" useForReqs="false"/>
+
+		<statBoosts>
+			<statBoost name="moveSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.05</amount>
+				<priority>-100</priority>
+			</statBoost>
+			<statBoost name="damageMultiplier">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.05</amount>
+				<priority>-100</priority>
+			</statBoost>
+		</statBoosts>
  	</aug>
 
 
