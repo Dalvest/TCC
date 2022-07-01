@@ -1856,6 +1856,7 @@
 </augBlueprint>
 
 <!--/////////////////////ARMOR//////////////////////////-->
+
 <augBlueprint name="LOCKED_SCRAP_ARMOR">
 	<title>Scrap Plating</title>
 	<desc>The hull of this ship is modified with a magnetic alloy - it absorbs 25% of the scrap it comes in contact with, but also gives a chance of 25% to resist damage. It can also ram enemies using its hull while also taking minor damage.</desc>
@@ -1881,7 +1882,25 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
+<!--///////////////////// GOLD DRONE //////////////////////////-->
 
+<droneBlueprint name="TC_COMBAT_GOLD">
+    <type>COMBAT</type>
+    <tip>tip_flak</tip>
+    <title>Golden Flak Combat Drone</title>
+    <short>Gold Flak</short>
+    <desc>Golden Flak Drone</desc>
+    <power>3</power>
+    <cooldown>0.05</cooldown>
+    <dodge>0</dodge>
+    <speed>25</speed>
+    <cost>75</cost>
+    <bp>3</bp>
+    <droneImage>drone_flak_gold</droneImage>
+    <weaponBlueprint>TC_DRONE_GOLD_COMBAT</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
 
 <weaponBlueprint name="TC_DRONE_GOLD_COMBAT">
 	<type>BURST</type>
@@ -1921,6 +1940,26 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<!--///////////////////// UNSTABLE DRONE //////////////////////////-->
+
+<droneBlueprint name="TC_COMBAT_UNSTABLE">
+    <type>COMBAT</type>
+    <tip>tip_flak</tip>
+    <title>Unstable Flak Combat Drone</title>
+    <short>Unstable Flak</short>
+    <desc>Unstable Flak Drone</desc>
+    <power>3</power>
+    <cooldown>3</cooldown>
+    <dodge>0</dodge>
+    <speed>75</speed>
+    <cost>100</cost>
+    <bp>3</bp>
+    <droneImage>unstable_drone</droneImage>
+    <weaponBlueprint>TC_DRONE_UNSTABLE_COMBAT</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
 <weaponBlueprint name="TC_DRONE_UNSTABLE_COMBAT">
 	<type>BURST</type>
 	<title>Dense Metal Flak</title>
@@ -1959,6 +1998,26 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<!--///////////////////// HEAVY  DRONE //////////////////////////-->
+
+<droneBlueprint name="TC_COMBAT_HEAVY">
+    <type>COMBAT</type>
+    <tip>tip_flak</tip>
+    <title>Heavy Flak Combat Drone</title>
+    <short>Heavy Flak</short>
+    <desc>This drone shoots a pair of heavy flak projectiles with a high chance to breach, dealing 2 damage each</desc>
+    <power>3</power>
+    <cooldown>1</cooldown>
+    <dodge>0</dodge>
+    <speed>10</speed>
+    <cost>100</cost>
+    <bp>3</bp>
+    <droneImage>heavy_flak_drone</droneImage>
+    <weaponBlueprint>TC_DRONE_HEAVY_COMBAT</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
 <weaponBlueprint name="TC_DRONE_HEAVY_COMBAT">
 	<type>BURST</type>
 	<title>Heavy Flak Drone</title>
@@ -1996,6 +2055,26 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<!--///////////////////// BOMB FLAK DRONE //////////////////////////-->
+
+<droneBlueprint name="TC_COMBAT_BOMB">
+    <type>COMBAT</type>
+    <tip>tip_flak</tip>
+    <title>Unstable Flak Combat Drone</title>
+    <short>Unstable Flak</short>
+    <desc>Unstable Flak Drone</desc>
+    <power>3</power>
+    <cooldown>3</cooldown>
+    <dodge>0</dodge>
+    <speed>75</speed>
+    <cost>150</cost>
+    <bp>3</bp>
+    <droneImage>bomb_flak_drone</droneImage>
+    <weaponBlueprint>TC_DRONE_BOMB_COMBAT</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
 <weaponBlueprint name="TC_DRONE_BOMB_COMBAT">
 	<type>BURST</type>
 	<title>Bomb Flak Drone</title>
@@ -2030,100 +2109,6 @@
 	<weaponArt>tc_shotgun_gold</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
-
-<droneBlueprint name="TC_COMBAT_GOLD">
-    <type>COMBAT</type>
-    <tip>tip_flak</tip>
-    <title>Golden Flak Combat Drone</title>
-    <short>Gold Flak</short>
-    <desc>Golden Flak Drone</desc>
-    <power>3</power>
-    <cooldown>0.05</cooldown>
-    <dodge>0</dodge>
-    <speed>25</speed>
-    <cost>75</cost>
-    <bp>3</bp>
-    <droneImage>drone_flak_gold</droneImage>
-    <weaponBlueprint>TC_DRONE_GOLD_COMBAT</weaponBlueprint>
-    <rarity>0</rarity>
-    <iconImage>combat</iconImage>
-</droneBlueprint>
-
-<droneBlueprint name="TC_COMBAT_UNSTABLE">
-    <type>COMBAT</type>
-    <tip>tip_flak</tip>
-    <title>Unstable Flak Combat Drone</title>
-    <short>Unstable Flak</short>
-    <desc>Unstable Flak Drone</desc>
-    <power>3</power>
-    <cooldown>3</cooldown>
-    <dodge>0</dodge>
-    <speed>75</speed>
-    <cost>100</cost>
-    <bp>3</bp>
-    <droneImage>unstable_drone</droneImage>
-    <weaponBlueprint>TC_DRONE_UNSTABLE_COMBAT</weaponBlueprint>
-    <rarity>0</rarity>
-    <iconImage>combat</iconImage>
-</droneBlueprint>
-
-<droneBlueprint name="TC_COMBAT_HEAVY">
-    <type>COMBAT</type>
-    <tip>tip_flak</tip>
-    <title>Heavy Flak Combat Drone</title>
-    <short>Heavy Flak</short>
-    <desc>This drone shoots a pair of heavy flak projectiles with a high chance to breach, dealing 2 damage each</desc>
-    <power>3</power>
-    <cooldown>1</cooldown>
-    <dodge>0</dodge>
-    <speed>10</speed>
-    <cost>100</cost>
-    <bp>3</bp>
-    <droneImage>heavy_flak_drone</droneImage>
-    <weaponBlueprint>TC_DRONE_HEAVY_COMBAT</weaponBlueprint>
-    <rarity>0</rarity>
-    <iconImage>combat</iconImage>
-</droneBlueprint>
-
-<droneBlueprint name="TC_COMBAT_BOMB">
-    <type>COMBAT</type>
-    <tip>tip_flak</tip>
-    <title>Unstable Flak Combat Drone</title>
-    <short>Unstable Flak</short>
-    <desc>Unstable Flak Drone</desc>
-    <power>3</power>
-    <cooldown>3</cooldown>
-    <dodge>0</dodge>
-    <speed>75</speed>
-    <cost>150</cost>
-    <bp>3</bp>
-    <droneImage>bomb_flak_drone</droneImage>
-    <weaponBlueprint>TC_DRONE_BOMB_COMBAT</weaponBlueprint>
-    <rarity>0</rarity>
-    <iconImage>combat</iconImage>
-</droneBlueprint>
-
-<!--    <droneBlueprint name="TC_DEFENSE_1">
-	<type>DEFENSE</type>
-	<level>1</level>
-	<target>ALL</target>
-	<tip>tip_defense</tip>
-	<title>Defender Drone Mk. I</title>
-	<short>Defense I</short>
-	<desc>Defense drone capable of targeting lasers or solid projectiles.
-	Reload: 400 MS</desc>
-	<power>2</power>
-	<cooldown>400</cooldown>
-	<dodge>0</dodge>
-	<speed>8</speed>
-	<cost>55</cost>
-	<bp>2</bp>
-	<droneImage>drone_defense_1</droneImage>
-	<weaponBlueprint>TC_DRONE_GOLD_COMBAT</weaponBlueprint>
-	<iconImage>defense</iconImage>
-	<rarity>1</rarity>
-</droneBlueprint>-->
-
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
