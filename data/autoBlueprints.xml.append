@@ -43,6 +43,7 @@
 	<mod-append:name>protogen_tracker</mod-append:name>
 	<mod-append:name>primagen_raptor</mod-append:name>
 	<mod-append:name>clonefail_lancer</mod-append:name>
+	<mod-append:name>kora</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
@@ -72,6 +73,13 @@
 	<mod-append:name>scrapper_engineer</mod-append:name>
 	<mod-append:name>scrapper_speed</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_PROTOGEN">
+	<mod-append:name>protogen</mod-append:name>
+	<mod-append:name>protogen_tracker</mod-append:name>
+	<mod-append:name>primagen_raptor</mod-append:name>
+	<mod-append:name>clonefail_lancer</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CHECKCREW_LANIUS">
@@ -123,6 +131,7 @@
 	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
 	<mod-append:name>TC_LASER_CHARGER</mod-append:name>
+	<mod-append:name>TC_MINIGUN_MK1</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -157,6 +166,7 @@
 	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
 	<mod-append:name>TC_LASER_CHARGER</mod-append:name>
+	<mod-append:name>TC_MINIGUN_MK1</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
