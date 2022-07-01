@@ -396,6 +396,22 @@
 		<!--///////EXTRA ELITE SHIP PACK//////-->
 
 		<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
+			<unlock variant="a" silent="false">
+        <type>3</type>
+		    <otherUnlocks>
+					<ship>PLAYER_SHIP_SCRAPPER</ship>
+					<ship>PLAYER_SHIP_TRASH_MINER</ship>
+		      <ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+					<ship>PLAYER_SHIP_SDM</ship>
+					<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
+					<ship>PLAYER_SHIP_COROSSUS</ship>
+					<ship>PLAYER_SHIP_SLUGTON</ship>
+		    </otherUnlocks>
+    	</unlock>
+			<unlock variant="b" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
+      </unlock>
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
