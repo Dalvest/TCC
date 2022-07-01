@@ -323,6 +323,7 @@
 				<type>2</type>
 				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
 			</unlock>
+			
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_COROSSUS">
@@ -334,6 +335,24 @@
 		<!--///////RENT-A-FLAGSHIP//////-->
 
 		<mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
+			<unlock variant="a" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_COROSSUS</shipReq>
+			</unlock>
+			<unlock variant="b" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_SLUGTON</shipReq>
+				<value>5</value>
+			</unlock>
+			<unlock variant="c" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_SLUGTON_2</shipReq>
+				<value>5</value>
+			</unlock>
+			<unlock variant="c" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_SLUGTON</shipReq>
+			</unlock>
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_SLUGTON">
