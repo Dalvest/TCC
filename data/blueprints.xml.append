@@ -1963,11 +1963,11 @@
 	<type>BURST</type>
 	<title>Heavy Flak Drone</title>
 	<drone_targetable>1</drone_targetable>
-	<damage>4</damage>
+	<damage>2</damage>
 	<radius>100</radius>
 	<shots>1</shots>
 	<projectiles>
-		<projectile count="1" fake="false">debris_large</projectile>
+		<projectile count="2" fake="false">debris_large</projectile>
 	</projectiles>
 	<spin>360</spin>
 	<sp>0</sp>
@@ -2072,7 +2072,7 @@
     <tip>tip_flak</tip>
     <title>Heavy Flak Combat Drone</title>
     <short>Heavy Flak</short>
-    <desc>Heavy Flak Drone</desc>
+    <desc>This drone shoots a pair of heavy flak projectiles with a high chance to breach, dealing 2 damage each</desc>
     <power>3</power>
     <cooldown>1</cooldown>
     <dodge>0</dodge>
