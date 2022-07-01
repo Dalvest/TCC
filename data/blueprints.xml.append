@@ -3388,9 +3388,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="player_ship_extraelite_2" img="player_ship_extraelite_2">
-	<class>Twisted Scrapper Dreadnought</class>
+	<class>Scrapper Dreadnought Hunter</class>
 	<name>Carpenter</name>
-	<desc>The ultimate ship for assassination hits - destroy your multiversal enemies with the varied arsenal on this ship. A true bounty hunter, loyal to whoemever pays the best.</desc>
+	<desc>The ultimate ship for killing rogue Scrapper renegades - destroy your anaerobic enemies with the varied arsenal on this ship. A true bounty hunter, loyal to whoemever pays the best.</desc>
 	<systemList>
 		<battery power="1" room="16" start="false" img="room_battery_scrapper" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking" />
@@ -3459,7 +3459,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="9" />
-	<aug name="NANOBOT_DEFENSE_SYSTEM" />
+	<aug name="ANTI_ANAEROBIC_GRID" />
+	<aug name="ADVANCED_SCRAP" />
+	<aug name="COMPACTOR" />
 </shipBlueprint>
 
 <!--/////////////////////STALWART DEFENCE//////////////////////////-->
