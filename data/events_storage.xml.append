@@ -254,21 +254,9 @@
     </choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_PROTOGEN">
-    <text>What do you want to do with your Protogen?</text>
-    <choice>
-      <text id="talk_to_crew"/>
-      <event load="STORAGE_CHECK_CREW_PROTOGEN_TALK"/>
-    </choice>
-    <choice>
-      <text id="scan_crew"/>
-      <event load="STORAGE_CHECK_CREW_PROTOGEN_SCAN"/>
-    </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
-  </event>
+
+
+
 
   <!--/////////////////STORAGE CHECK AUGMENTS AND NOODLES//////////////////-->
   <mod:findName type = "event" name = "STORAGE_CHECK_AUG">
@@ -393,6 +381,115 @@
 
   </event>
 
+  <!--//////////////////CREW TALK STUFF//////////////////-->
+  <mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
+
+    <mod-append:choice req="LIST_CREW_PROTOGEN" lvl="1" blue="false" hidden="true">
+      <text>Look for Protogen crew.</text>
+      <event load="STORAGE_CHECK_CREW_LIST_PROTOGEN"/>
+    </mod-append:choice>
+
+    <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
+      <mod:selector>Nevermind, do something else.</mod:selector>
+      <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
+    </mod:findWithChildLike>
+  </mod:findName>
+
+  <event name="STORAGE_CHECK_CREW_LIST_PROTOGEN">
+    <text>You look around for some crew to talk to.</text>
+
+  <choice req="protogen" blue="false" hidden="true">
+    <text>Look for your Protogen.</text>
+    <event load="STORAGE_CHECK_CREW_PROTOGEN"/>
+  </choice>
+
+  <choice req="protogen_tracker" blue="false" hidden="true">
+    <text>Look for TRACKER.</text>
+    <event load="STORAGE_CHECK_CREW_TRACKER"/>
+  </choice>
+
+  <choice req="primagen_raptor" blue="false" hidden="true">
+    <text>Look for Raptor.</text>
+    <event load="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR"/>
+  </choice>
+
+  <choice req="clonefail_lancer" blue="false" hidden="true">
+    <text>Look for Lancer.</text>
+    <event load="STORAGE_CHECK_CREW_CLONEFAIL_LANCER"/>
+  </choice>
+
+  <choice>
+    <text>Nevermind, do something else.</text>
+    <event load="STORAGE_CHECK_CREW"/>
+  </choice>
+
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_PROTOGEN">
+    <text>What do you want to do with your Protogen?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_TRACKER">
+    <text>What do you want to do with TRACKER?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_TRACKER_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_TRACKER_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR">
+    <text>What do you want to do with Raptor?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_CLONEFAIL_LANCER">
+    <text>What do you want to do with Lancer?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_CLONEFAIL_LANCER_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_CLONEFAIL_LANCER_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+
   <!--//////PROTOGEN DIALOGUE////////-->
 
   <event name="STORAGE_CHECK_CREW_PROTOGEN_SCAN">
@@ -425,21 +522,6 @@
     <text>Your protogen emphasizes the fact that they are "cute and huggable". It doesn't exactly help the mission in any way, but you agree such traits are necessary in a crewmember.</text>
   </textList>
 
-  <event name="STORAGE_CHECK_CREW_PROTOGEN">
-    <text>What do you want to do with your Protogen?</text>
-    <choice>
-      <text id="talk_to_crew"/>
-      <event load="STORAGE_CHECK_CREW_PROTOGEN_TALK"/>
-    </choice>
-    <choice>
-      <text id="scan_crew"/>
-      <event load="STORAGE_CHECK_CREW_PROTOGEN_SCAN"/>
-    </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
-  </event>
 
   <!--//////TRACKER DIALOGUE////////-->
 

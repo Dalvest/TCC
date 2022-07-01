@@ -66,7 +66,6 @@
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
 	<mod-append:name>trash_eater</mod-append:name>
-	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>scrapper</mod-append:name>
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
@@ -75,12 +74,12 @@
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="LIST_CREW_PROTOGEN">
-	<mod-append:name>protogen</mod-append:name>
-	<mod-append:name>protogen_tracker</mod-append:name>
-	<mod-append:name>primagen_raptor</mod-append:name>
-	<mod-append:name>clonefail_lancer</mod-append:name>
-</mod:findName>
+<blueprintList name="LIST_CREW_PROTOGEN">
+	<name>protogen</name>
+	<name>protogen_tracker</name>
+	<name>primagen_raptor</name>
+	<name>clonefail_lancer</name>
+</blueprintList>
 
 <mod:findName type="blueprintList" name="LIST_CHECKCREW_LANIUS">
 	<mod-append:name>trash_eater</mod-append:name>
