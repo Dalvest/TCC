@@ -1723,6 +1723,8 @@
     <stackable>true</stackable>
 </augBlueprint>
 
+<!--/////////////////////FUNCTIONAL AUGS//////////////////////////-->
+
 <augBlueprint name="COMPACTOR">
     <title>Compactor</title>
     <desc>A heavy machine that makes compact bricks of scrap which is then used by a specialized 3D printer to craft one of the pre-selected items.</desc>
@@ -1788,6 +1790,7 @@
 	<stackable>true</stackable>
 </augBlueprint>
 
+<!--/////////////////////WHAT IS THIS//////////////////////////-->
 <augBlueprint name="SHIP_SCRAPPER">
 	<title>Scrapper Cruiser</title>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
@@ -1796,6 +1799,7 @@
 	<stackable>false</stackable>
 	<bp>0</bp>
 </augBlueprint>
+
 
 <!--/////////////////////QUEST AUGS//////////////////////////-->
 
@@ -1855,6 +1859,7 @@
     <stackable>true</stackable>
 </augBlueprint>
 
+
 <!--/////////////////////ARMOR//////////////////////////-->
 
 <augBlueprint name="LOCKED_SCRAP_ARMOR">
@@ -1874,8 +1879,6 @@
 </augBlueprint>
 
 
-
-
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
               DRONES
@@ -1889,12 +1892,12 @@
     <tip>tip_flak</tip>
     <title>Golden Flak Combat Drone</title>
     <short>Gold Flak</short>
-    <desc>Golden Flak Drone</desc>
-    <power>3</power>
+    <desc> Slow and sluggish, shiny and fragile. This will keep shields down but won't do much else. </desc>
+    <power>2</power>
     <cooldown>0.05</cooldown>
     <dodge>0</dodge>
     <speed>25</speed>
-    <cost>75</cost>
+    <cost>40</cost>
     <bp>3</bp>
     <droneImage>drone_flak_gold</droneImage>
     <weaponBlueprint>TC_DRONE_GOLD_COMBAT</weaponBlueprint>
@@ -1910,8 +1913,8 @@
 	<radius>50</radius>
 	<shots>1</shots>
 	<projectiles>
-		<projectile count="2" fake="false">tc_debris_large_gold</projectile>
-		<projectile count="2" fake="false">tc_debris_med_gold</projectile>
+		<projectile count="1" fake="false">tc_debris_large_gold</projectile>
+		<projectile count="1" fake="false">tc_debris_med_gold</projectile>
 	</projectiles>
 	<spin>720</spin>
 	<sp>0</sp>
@@ -1947,7 +1950,7 @@
     <tip>tip_flak</tip>
     <title>Unstable Flak Combat Drone</title>
     <short>Unstable Flak</short>
-    <desc>Unstable Flak Drone</desc>
+    <desc> Like all other Unstable weapons, this thing is prone to not working as intended. In this case, good luck hitting your target. </desc>
     <power>3</power>
     <cooldown>3</cooldown>
     <dodge>0</dodge>
@@ -1962,7 +1965,7 @@
 
 <weaponBlueprint name="TC_DRONE_UNSTABLE_COMBAT">
 	<type>BURST</type>
-	<title>Dense Metal Flak</title>
+	<title>Unstable Flak Drone</title>
 	<drone_targetable>1</drone_targetable>
 	<damage>1</damage>
 	<radius>300</radius>
@@ -2005,7 +2008,7 @@
     <tip>tip_flak</tip>
     <title>Heavy Flak Combat Drone</title>
     <short>Heavy Flak</short>
-    <desc>This drone shoots a pair of heavy flak projectiles with a high chance to breach, dealing 2 damage each</desc>
+    <desc> This drone shoots a pair of heavy flak projectiles with a high chance to breach, dealing 2 damage each. Against an enemy without shields, this thing is brutal. </desc>
     <power>3</power>
     <cooldown>1</cooldown>
     <dodge>0</dodge>
@@ -2060,9 +2063,9 @@
 <droneBlueprint name="TC_COMBAT_BOMB">
     <type>COMBAT</type>
     <tip>tip_flak</tip>
-    <title>Unstable Flak Combat Drone</title>
-    <short>Unstable Flak</short>
-    <desc>Unstable Flak Drone</desc>
+    <title>Bomb Flak Combat Drone</title>
+    <short>Bomb Flak</short>
+    <desc>Bombs are fun, and when you can't hurl bombs with a shipside weapon, you hurl them with a drone. </desc>
     <power>3</power>
     <cooldown>3</cooldown>
     <dodge>0</dodge>
@@ -2085,7 +2088,7 @@
 	<radius>50</radius>
 	<shots>1</shots>
 	<projectiles>
-		<projectile count="5" fake="false">bomb1</projectile>
+		<projectile count="2" fake="false">bomb1</projectile>
 	</projectiles>
 	<spin>720</spin>
 	<sp>0</sp>
