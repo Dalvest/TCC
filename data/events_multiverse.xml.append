@@ -81,7 +81,7 @@
 		<choice  req="TC_DEAD" lvl="6" max_group="3" hidden="false" blue="false">
 			<text>Yes.</text>
 			<event>
-			<text>You send out a signal displaying the scrap using the transmitter. 
+			<text>You send out a signal displaying the scrap using the transmitter.
 				But nobody came.</text>
 				<choice>
 					<text>Continue...</text>
@@ -611,7 +611,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_4"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Conservative Bomb Flak</text>
 		<event>
@@ -622,7 +622,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Pre-emptive Bomb Flak</text>
 		<event>
@@ -644,7 +644,7 @@
 	<text>Choose flak:</text>
 
 	<choice hidden="false" blue="false">
-		<text>AMP</text>
+		<text>Amp</text>
 		<event>
 			<text>Done!</text>
 			<item_modify>
@@ -694,7 +694,7 @@
 			<item_modify>
 					<item type="scrap" min="-100" max="-100"/>
 				</item_modify>
-			<drone name="TC_COMBAT_HEAVY"/>
+			<drone name="TC_COMBAT_BOMB"/>
 		</event>
 	</choice>
 
