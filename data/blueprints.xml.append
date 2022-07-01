@@ -1747,20 +1747,13 @@
     <stackable>true</stackable>
 </augBlueprint>
 
-<augBlueprint name="SALVAGE_ARRAY">
-    <title>Salvage Array</title>
-    <desc>[silly Dalvest]</desc>
-    <cost>75</cost>
-    <rarity>0</rarity>
-    <stackable>false</stackable>
-</augBlueprint>
-
-<augBlueprint name="ICE_CREAM_GEL">
-	<title>Ice Cream Slug Fluid</title>
-	<desc>[heheheha you fool]</desc>
-	<cost>80</cost>
-	<rarity>0</rarity>
-	<stackable>false</stackable>
+<augBlueprint name="ANTI_ANAEROBIC_GRID">
+	    <title>Aerointolerance Grid</title>
+	    <desc>If an Oxygen system is present, all enemy anaerobic crew will take a base damage of 4hp/s with an extra 2hp for each bar of power in the Oxygen system.</desc>
+	    <cost>80</cost>
+	    <bp>12</bp>
+	    <rarity>0</rarity>
+	    <stackable>true</stackable>
 </augBlueprint>
 
 <augBlueprint name="SHIP_SCRAPPER">
@@ -3088,7 +3081,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="1" class="scrapper" />
 	<crewCount amount="1" class="kiviekith" />
-	<aug name="SALVAGE_ARRAY" />
+	<aug name="COMPACTOR" />
 </shipBlueprint>
 
 <!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
@@ -3375,7 +3368,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="8" count="4" />
 	<health amount="30" />
 	<maxPower amount="12" />
-	<aug name="ICE_CREAM_GEL" />
+	<aug name="HEKTAR_GEL" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="player_ship_extraelite_2" img="player_ship_extraelite_2">

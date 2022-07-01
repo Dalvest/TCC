@@ -1160,39 +1160,65 @@
 			<function name="SCRAP_COLLECTOR" value="-0.25"/>
 			<locked/>
 		</aug>
-	</augments>
-	<aug name="SALVAGE_ARRAY">
-    	<function name="REPAIR_ARM" value="-0.10" useForReqs="false"/>
-    </aug>
-	<aug name="ICE_CREAM_GEL">
-    	<function name="SLUG_GEL" value="0.50" useForReqs="false"/>
-		<function name="NANO_MEDBAY" value="0" useForReqs="true" warning="false"/>
+		<aug name="ANTI_ANAEROBIC_GRID">
 		<statBoosts>
-			<statBoost name="healAmount">
+			<statBoost name="trueHealAmount">
 				<boostType>FLAT</boostType>
 				<shipTarget>ORIGINAL_SHIP</shipTarget>
-				<crewTarget>ALLIES</crewTarget>
+				<crewTarget>ENEMIES</crewTarget>
 				<droneTarget>CREW</droneTarget>
-				<amount>1.6</amount>
+				<whiteList>
+					<engi_separatist_nano/>
+					<orchid_chieftain/>
+					<LIST_CREW_GHOST/>
+					<LIST_CREW_LANIUS/>
+					<LIST_CREW_ANCIENT/>
+					<LIST_CREW_SCRAPPER/>
+					<LIST_CREW_MORPH/>
+				</whiteList>
+				<amount>-2</amount>
 				<priority>0</priority>
 				<systemPowerDependency>
-					<medbay/>
+					<oxygen/>
 				</systemPowerDependency>
 				<systemPowerScaling>
-					<noSys>0</noSys>
-					<noPwr>0</noPwr>
-					<onePwr>1</onePwr>
-					<twoPwr>1.5</twoPwr>
-					<threePwr>3</threePwr>
-					<fourPwr>6</fourPwr>
+						<noSys>0</noSys>
+						<noPwr>2</noPwr>
+						<onePwr>3</onePwr>
+						<twoPwr>4</twoPwr>
+						<threePwr>5</threePwr>
+						<fourPwr>6</fourPwr>
+						<fivePwr>7</fivePwr>
+						<sixPwr>8</sixPwr>
+						<sevenPwr>9</sevenPwr>
+						<eightPwr>10</eightPwr>
+						<ninePwr>11</ninePwr>
+						<tenPwr>12</tenPwr>
+						<elevenPwr>13</elevenPwr>
+						<twelvePwr>14</twelvePwr>
+						<thirteenPwr>15</thirteenPwr>
+						<fourteenPwr>16</fourteenPwr>
+						<fifteenPwr>17</fifteenPwr>
+						<sixteenPwr>18</sixteenPwr>
+						<seventeenPwr>19</seventeenPwr>
+						<eighteenPwr>20</eighteenPwr>
+						<nineteenPwr>21</nineteenPwr>
+						<twentyPwr>22</twentyPwr>
+						<twentyonePwr>23</twentyonePwr>
+						<twentytwoPwr>24</twentytwoPwr>
+						<twentythreePwr>25</twentythreePwr>
+						<twentyfourPwr>26</twentyfourPwr>
+						<twentyfivePwr>27</twentyfivePwr>
+						<twentysixPwr>28</twentysixPwr>
+						<twentysevenPwr>29</twentysevenPwr>
+						<twentyeightPwr>30</twentyeightPwr>
+						<twentyninePwr>31</twentyninePwr>
+						<thirtyPwr>32</thirtyPwr>
 				</systemPowerScaling>
-				<systemRoomTarget>NONE</systemRoomTarget>
-				<systemList>
-					<medbay/>
-				</systemList>
 			</statBoost>
 		</statBoosts>
     </aug>
+	</augments>
 	<mod:findLike type="events">
 		<mod:findName name="LIST_CHECK_AUGMENTS">
 			<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
