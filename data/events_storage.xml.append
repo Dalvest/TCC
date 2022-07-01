@@ -133,6 +133,11 @@
     </mod:findWithChildLike>
   </mod:findName>
 
+
+
+
+
+
   <eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
   	<event>
   		<text>The Trash Eater returns carrying several piles of garbage. You're not sure what their origin is but you don't really care either.</text>
@@ -263,6 +268,129 @@
       <text>Nevermind, do something else.</text>
       <event load="STORAGE_CHECK"/>
     </choice>
+  </event>
+
+  <!--/////////////////STORAGE CHECK AUGMENTS AND NOODLES//////////////////-->
+  <mod:findName type = "event" name = "STORAGE_CHECK_AUG">
+    <mod-append:choice req="NOODLE_RATIONS" blue="false" hidden="true">
+      <text>Make some instant noodles.</text>
+      <event load="STORAGE_CHECK_NOODLES"/>
+    </mod-append:choice>
+
+    <!-- Move other menus example options to the bottom -->
+    <mod:findWithChildLike type="choice" child-type="text">
+      <mod:selector>Nevermind, do something else.</mod:selector>
+      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+    </mod:findWithChildLike>
+  </mod:findName>
+
+  <event name="STORAGE_CHECK_NOODLES">
+    <text>What would you like to do?</text>
+    <choice req="NOODLE_RATIONS_UPGRADE" lvl="0" max_lvl="0" blue="false" hidden="true">
+			<text>Noodle Rations (Base)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+    <choice req="NOODLE_RATIONS_UPGRADE" lvl="1" max_lvl="1" blue="false" hidden="true">
+			<text>Noodle Rations (Level 1)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="2" max_lvl="2" blue="false" hidden="true">
+			<text>Noodle Rations (Level 2)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="3" max_lvl="3" blue="false" hidden="true">
+			<text>Noodle Rations (Level 3)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="4" max_lvl="4" blue="false" hidden="true">
+			<text>Noodle Rations (Level 4)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="5" max_lvl="5" blue="false" hidden="true">
+			<text>Noodle Rations (Level 5)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="6" max_lvl="6" blue="false" hidden="true">
+			<text>Noodle Rations (Level 6)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="7" max_lvl="7" blue="false" hidden="true">
+			<text>Noodle Rations (Level 7)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="8" max_lvl="8" blue="false" hidden="true">
+			<text>Noodle Rations (Level 8)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="9" max_lvl="9" blue="false" hidden="true">
+			<text>Noodle Rations (Level 9)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="10" max_lvl="10" blue="false" hidden="true">
+			<text>Noodle Rations (Level 10)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="11" max_lvl="11" blue="false" hidden="true">
+			<text>Noodle Rations (Level 11)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="12" max_lvl="12" blue="false" hidden="true">
+			<text>Noodle Rations (Level 12)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="13" max_lvl="13" blue="false" hidden="true">
+			<text>Noodle Rations (Level 13)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="14" max_lvl="14" blue="false" hidden="true">
+			<text>Noodle Rations (Level 14)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="15" max_lvl="15" blue="false" hidden="true">
+			<text>Noodle Rations (Level 15)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="16" max_lvl="16" blue="false" hidden="true">
+			<text>Noodle Rations (Level 16)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="17" max_lvl="17" blue="false" hidden="true">
+			<text>Noodle Rations (Level 17)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="18" max_lvl="18" blue="false" hidden="true">
+			<text>Noodle Rations (Level 18)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="19" max_lvl="19" blue="false" hidden="true">
+			<text>Noodle Rations (Level 19)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="NOODLE_RATIONS_UPGRADE" lvl="20" max_lvl="20" blue="false" hidden="true">
+			<text>Noodle Rations (Level 20, Maxed)</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+
+    <choice req="NOODLE_RATIONS_UPGRADE" lvl="0" max_lvl="20" blue="false">
+      <text>Upgrade your Noodle Rations to give an additional 1.02x multiplier to movement speed and combat damage</text>
+      <event>
+        <text>You upgrade your Noodle Rations</text>
+        <hiddenAug>NOODLE_RATIONS_UPGRADE</hiddenAug>
+        <item_modify>
+				  <item type="fuel" min="-1" max="-1"/>
+			  </item_modify>
+        <choice hidden="true">
+    		  <text>Continue...</text>
+    		  <event load="STORAGE_CHECK"/>
+    	  </choice>
+      </event>
+    <choice>
+
+    <choice hidden="true">
+		  <text>Do nothing.</text>
+		  <event load="STORAGE_CHECK"/>
+	  </choice>
+
   </event>
 
   <!--//////PROTOGEN DIALOGUE////////-->
