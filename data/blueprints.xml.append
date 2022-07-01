@@ -1664,7 +1664,6 @@
 				<scrapper/>
 			</whiteList>
 
-
 			<statBoost name="transformRace">
 				<boostType>SET</boostType>
 				<race>LIST_SCRAPPER_TIER_2</race>
@@ -1676,11 +1675,7 @@
 				</blackList>
 			</statBoost>
 
-
-
 		</mod-append:statBoost>-->
-
-
 
 		<mod-append:statBoost name="transformRace">
 			<boostType>SET</boostType>
@@ -1790,7 +1785,8 @@
 	<stackable>true</stackable>
 </augBlueprint>
 
-<!--/////////////////////WHAT IS THIS//////////////////////////-->
+<!--//////////////////////// SHIP ATTRIBUTION //////////////////////////-->
+
 <augBlueprint name="SHIP_SCRAPPER">
 	<title>Scrapper Cruiser</title>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
@@ -1800,6 +1796,41 @@
 	<bp>0</bp>
 </augBlueprint>
 
+<augBlueprint name="SHIP_TRASH">
+	<title>Trash Cruiser</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<bp>0</bp>
+</augBlueprint>
+
+<augBlueprint name="SHIP_RSA">
+	<title>RSA Cruiser</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<bp>0</bp>
+</augBlueprint>
+
+<augBlueprint name="SHIP_ARMOREDWASP">
+	<title>Armored Wasp Variant Cruiser</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<bp>0</bp>
+</augBlueprint>
+
+<augBlueprint name="SHIP_GARBAGE_COMPACTOR">
+	<title>Garbage Compactor Cruiser</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<bp>0</bp>
+</augBlueprint>
 
 <!--/////////////////////QUEST AUGS//////////////////////////-->
 
@@ -1858,7 +1889,6 @@
     <rarity>0</rarity>
     <stackable>true</stackable>
 </augBlueprint>
-
 
 <!--/////////////////////ARMOR//////////////////////////-->
 
