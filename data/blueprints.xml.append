@@ -1749,15 +1749,15 @@
 
 <augBlueprint name="SALVAGE_ARRAY">
     <title>Salvage Array</title>
-    <desc>[silly Dalvest]</desc>
+    <desc>This is a combined modular arm that is both repairing the hull and collecting bits of extra scrap. Though rusty and old, you're pretty sure this array will hold out for long enough.</desc>
     <cost>75</cost>
     <rarity>0</rarity>
     <stackable>false</stackable>
 </augBlueprint>
 
 <augBlueprint name="ICE_CREAM_GEL">
-	<title>Ice Cream Slug Fluid</title>
-	<desc>[heheheha you fool]</desc>
+	<title>Ice Cream Slug Substance</title>
+	<desc>A strange, ice cream like substance is coating every single room of this ship - you are not sure how and why it works, but it seems to keep the properties of Slug Gel while also providing 1.6hp/s regeneration for all allied crew.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -3442,7 +3442,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="13" count="4">
 		<weapon name="TC_MINIGUN_MK1" />
-		<weapon name="SHOTGUN_INSTANT" />
+		<weapon name="TC_BOMB_SHOTGUN_INSTANT" />
 		<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE" />
 	</weaponList>
 	<droneList drones="6" count="4">
@@ -3450,8 +3450,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="9" />
-	<aug name="COMPACTOR" />
-	<aug name="ADVANCED_SCRAP" />
 	<aug name="NANOBOT_DEFENSE_SYSTEM" />
 </shipBlueprint>
 
