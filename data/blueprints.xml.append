@@ -1756,6 +1756,22 @@
 	    <stackable>true</stackable>
 </augBlueprint>
 
+<augBlueprint name="SALVAGE_ARRAY">
+    <title>Salvage Array</title>
+    <desc>[silly Dalvest]</desc>
+    <cost>75</cost>
+    <rarity>0</rarity>
+    <stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="ICE_CREAM_GEL">
+	<title>Ice Cream Slug Fluid</title>
+	<desc>[heheheha you fool]</desc>
+	<cost>80</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
 <augBlueprint name="SHIP_SCRAPPER">
 	<title>Scrapper Cruiser</title>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
@@ -3081,7 +3097,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="1" class="scrapper" />
 	<crewCount amount="1" class="kiviekith" />
-	<aug name="COMPACTOR" />
+	<aug name="SALVAGE_ARRAY" />
 </shipBlueprint>
 
 <!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
@@ -3368,7 +3384,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="8" count="4" />
 	<health amount="30" />
 	<maxPower amount="12" />
-	<aug name="HEKTAR_GEL" />
+	<aug name="ICE_CREAM_GEL" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="player_ship_extraelite_2" img="player_ship_extraelite_2">
