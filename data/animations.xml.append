@@ -162,12 +162,12 @@
 	<chargeImage>weapon_bomb_flak/tc_conservative_bomb_shotgun_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="tc_instant_bomb_shotgun" w="261" h="45" fw="29" fh="45">weapon_bomb_flak/tc_instant_bomb_shotgun.png</animSheet>
+<animSheet name="tc_instant_bomb_shotgun" w="360" h="55" fw="45" fh="55">weapon_bomb_flak/tc_instant_bomb_shotgun.png</animSheet>
 <weaponAnim name="tc_instant_bomb_shotgun">
 	<sheet>tc_instant_bomb_shotgun</sheet>
-	<desc length="9" x="0" y="0"/>
+	<desc length="8" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
-	<fireFrame>3</fireFrame>
+	<fireFrame>2</fireFrame>
 	<firePoint  x="14" y="7"/>
 	<mountPoint x="4" y="30"/>
 	<chargeImage>weapon_bomb_flak/tc_instant_bomb_shotgun_glow.png</chargeImage>
