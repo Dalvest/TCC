@@ -1774,7 +1774,7 @@
 
 <augBlueprint name="NOODLE_RATIONS">
 	<title>Instant-Noodle Rations</title>
-	<desc>[Dalvy Walvy is a Pepperoni]</desc>
+	<desc> 100 Percent Protein Insta-Noodles: Provides Stackable Movement Speed, Max Health and Damage Values! Warning - may contain traces of Rebel Scum. </desc>
 	<cost>40</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -3831,6 +3831,21 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Active Ability: Temporarily greatly increases speed and damage</power>
 		<power>Inflicts 1.2x damage in combat</power>
 		<power>Movement speed is 1.3x</power>
+	</powerList>
+</crewBlueprint>
+
+<!--///////UNIQUES//////-->
+
+<crewBlueprint name="kora">
+	<desc>A multiversal traveler from a highly different world - one with cosmic horrors and magic, but similar war crimes to ours. This albino "Nireshirai" is as dangerous as he is stubborn.</desc>
+	<cost>90</cost>
+	<title>Kora</title>
+	<short>Kora</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Armed and dangerous - will deal 1.2x damage in combat.</power>
+		<power>Strength allows him to soak up damage taken, taking only 0.8x.</power>
+		<power>Less fire resistance, higher suffocation damage, 120hp.</power>
 	</powerList>
 </crewBlueprint>
 

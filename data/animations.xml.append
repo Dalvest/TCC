@@ -2016,6 +2016,130 @@
 	<time>1</time>
 </anim>
 
+<!--/////////////// KORA //////////////-->
+
+<animSheet name="kora" w="315" h="455" fw="35" fh="35">people/kora_base.png</animSheet>
+	<anim name="kora_clone">
+		<sheet>kora</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="kora_death_right">
+		<sheet>kora</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="kora_death_left">
+		<sheet>kora</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="kora_walk_down">
+		<sheet>kora</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_walk_right">
+		<sheet>kora</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_walk_up">
+		<sheet>kora</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_walk_left">
+		<sheet>kora</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_shoot_down">
+		<sheet>kora</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_shoot_right">
+		<sheet>kora</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_shoot_up">
+		<sheet>kora</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_shoot_left">
+		<sheet>kora</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_fire_down">
+		<sheet>kora</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_fire_right">
+		<sheet>kora</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_fire_up">
+		<sheet>kora</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_fire_left">
+		<sheet>kora</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_repair">
+		<sheet>kora</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_punch_up">
+		<sheet>kora</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_punch_down">
+		<sheet>kora</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="kora_teleport">
+		<sheet>kora</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="kora_type_right">
+		<sheet>kora</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="kora_type_left">
+		<sheet>kora</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="kora_type_up">
+		<sheet>kora</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="kora_type_down">
+		<sheet>kora</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="kora_portrait">
+		<sheet>kora</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
 <!--/////////////////////////////////////////////////// PROTOGEN ZONE ////////////////////////////////////////////////////-->
 <!--///////////////GENERIC PROTOGEN//////////////-->
 
