@@ -311,6 +311,7 @@
 		<!--///////COROSSUS//////-->
 
 		<mod-append:ship name="PLAYER_SHIP_COROSSUS" b="false" c="false" unused="true">
+			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_SLUGTON</arrow>
 			<unlock variant="a" silent="false">
 				<type>2</type>
 				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
