@@ -1747,6 +1747,15 @@
     <stackable>true</stackable>
 </augBlueprint>
 
+<augBlueprint name="ANTI_ANAEROBIC_GRID">
+	    <title>Aerointolerance Grid</title>
+	    <desc>If an Oxygen system is present, all enemy anaerobic crew will take a base damage of 4hp/s with an extra 2hp for each bar of power in the Oxygen system.</desc>
+	    <cost>80</cost>
+	    <bp>12</bp>
+	    <rarity>0</rarity>
+	    <stackable>true</stackable>
+</augBlueprint>
+
 <augBlueprint name="SALVAGE_ARRAY">
     <title>Salvage Array</title>
     <desc>This is a combined modular arm that is both repairing the hull and collecting bits of extra scrap. Though rusty and old, you're pretty sure this array will hold out for long enough.</desc>
