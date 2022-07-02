@@ -3141,6 +3141,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Rent-a-Flagship</class>
 	<name>RENT-A-FLAGSHIP</name>
 	<desc>WELCOME TO [TRIAL VERSION] OF [moderate difficulty ship]!!! PLAY NOW PLAY NOW - BECOME [bigshot]! ACQUIRE [UWU]!</desc>
+	<unlock id="ship_PLAYER_SHIP_SLUGTON_unlock"/>
 	<systemList>
 		<cloaking power="1" room="14" start="false" img="room_cloaking 2x1 01-00-00" />
 		<clonebay power="1" room="11" start="false">
@@ -3213,6 +3214,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Rent-a-Flagship</class>
 	<name>Bandit Exordium</name>
 	<desc>This ship belonged to the Slug Kleptocracy - unsurprisingly, it's now a bandit ship preying on civilians.</desc>
+	<unlock id="ship_PLAYER_SHIP_SLUGTON_2_unlock"/>
 	<systemList>
 		<battery power="1" room="2" start="true" img="room_battery" />
 		<cloaking power="1" room="14" start="false" img="room_cloaking 2x1 01-00-00" />
@@ -3285,6 +3287,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Rent-a-Flagship</class>
 	<name>J4NK-3R</name>
 	<desc>Why did Cheese remake this ship and bring it into the Federation Fleet? That's a good question!</desc>
+	<unlock id="ship_PLAYER_SHIP_SLUGTON_3_unlock"/>
 	<systemList>
 		<artillery power="1" room="17" start="true" weapon="TC_LIGHT_SHOW" img="room_artillery_5" />
 		<battery power="1" room="2" start="false" img="room_battery" />
