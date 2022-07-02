@@ -1240,7 +1240,7 @@
     </aug>
 
 	<aug name="SALVAGE_ARRAY">
-	   	<function name="REPAIR_ARM" value="0.1" useForReqs="false"/>
+	   	<function name="REPAIR_ARM" value="0.1" useForReqs="false" warning="false"/>
 		<function name="SCRAP_COLLECTOR" value="0.3" useForReqs="false"/>
 	</aug>
 
