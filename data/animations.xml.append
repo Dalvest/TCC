@@ -1,7 +1,7 @@
 <FTL>
 
 
-<!--    
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           WEAPONS
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -207,15 +207,22 @@
 
 <!--/////////////////// DEBUFFER //////////////////-->
 
-<animSheet name="tc_debuffer_slow_1" w="145" h="35" fw="29" fh="35">weapon_debuffer/tc_debuffer_mk1.png</animSheet>
-<weaponAnim name="tc_debuffer_slow_1">
-	<sheet>tc_debuffer_slow_1</sheet>
+<animSheet name="tcc_debuff_slow_1" w="145" h="35" fw="29" fh="35">weapon_debuffer/tc_debuffer_mk1.png</animSheet>
+<weaponAnim name="tcc_debuff_slow_1">
+	<sheet>tcc_debuff_slow_1</sheet>
 	<desc length="5" x="0" y="0"/>
 	<chargedFrame>2</chargedFrame>
 	<fireFrame>3</fireFrame>
 	<firePoint  x="15" y="2"/>
 	<mountPoint x="2" y="25"/>
 </weaponAnim>
+
+<animSheet name="tc_debuffer_projection" w="93" h="36" fw="31" fh="36">projectiles/tc_debuffer_projection.png</animSheet>
+<anim name="tc_debuffer_projection">
+	<sheet>tc_debuffer_projection</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>0.3</time>
+</anim>
 
 <!--/////////////////// MISSILES //////////////////-->
 
@@ -467,7 +474,7 @@
 	<boost>instant_shotgun_chainglow</boost>
 </weaponAnim>
 
-<!--    
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           PROJECTILES
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -681,7 +688,7 @@
 	<time>0.1</time>
 </anim>
 
-<!--    
+<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           CREW
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -1822,7 +1829,7 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
-	
+
 	<!--drone-->
 	<animSheet name="rsa_technician_drone" w="385" h="175" fw="35" fh="35">people/rsa_technician_drone_base.png</animSheet>
 	<animSheet name="rsa_technician_drone_death" w="320" h="32" fh="32" fw="32">effects/explosion1_strip10.png</animSheet>
@@ -2388,7 +2395,7 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
-	
+
 	<!--/////// RAPTOR //////-->
 
 	<animSheet name="primagen_raptor" w="315" h="455" fw="35" fh="35">people/primagen_raptor_base.png</animSheet>
@@ -2636,5 +2643,5 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
-	
+
 </FTL>
