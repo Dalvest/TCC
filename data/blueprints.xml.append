@@ -3068,6 +3068,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<artillery power="1" room="10" start="true" weapon="TC_RESCRAPFLAK" img="room_artillery" />
 		<battery power="1" max="2" room="24" start="false" img="room_battery_nightowl" />
 		<cloaking power="1" room="5" start="false" img="room_cloaking" />
+		<clonebay power="1" room="20" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="12" start="true" img="room_doors_13">
 			<slot>
 				<direction>up</direction>
