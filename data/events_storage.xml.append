@@ -381,7 +381,14 @@
 
   </event>
 
-  <!--//////////////////CREW TALK STUFF//////////////////-->
+<!--
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+              CREW TALK AND SCAN OPTIONS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
+
+  <!--//////////////////PROTOGEN//////////////////-->
+
   <mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
 
     <mod-append:choice req="LIST_CREW_PROTOGEN" lvl="1" blue="false" hidden="true">
@@ -425,8 +432,10 @@
 
   </event>
 
+    <!--//////////////////STOARGE CHECK STUFF//////////////////-->
+
   <event name="STORAGE_CHECK_CREW_PROTOGEN">
-    <text>What do you want to do with your Protogen?</text>
+    <text>What do you want to do with your Protogen?</text>   <!--I'll tell you when you're older...-->
     <choice>
       <text id="talk_to_crew"/>
       <event load="STORAGE_CHECK_CREW_PROTOGEN_TALK"/>
@@ -618,7 +627,38 @@
     <text>Lancer quips at you happily using his tape recorder "PLEASE KEEP YOUR HANDS IN THE RIDE (whir) YOU- (whir) ARE IN A HARDHAT AREA (whir)". How cute of him!</text>
   </textList>
 
-  <!--//////CHECK CREW LIST SHEISSE////////-->
+  
+  <!--////// KORA'S DIALOGUE ////////-->
+
+  <event name="STORAGE_CHECK_CREW_KORA_SCAN">
+    <text>TRACKER'S DETAILS
+      SPECIES? [Nireshirai] UNIQUE? [Yes]
+      Unique Traits: Tall, strong and stubborn, this creature is a surprsingly good spacefaring soldier.
+      Stats: 120 Health, x1.3 suffocation damage, x1.2 asphyxiation damage, x1.1 damage and sabotage, x0.8 damage taken
+      Kora is a bandit, murderer, backstabber and even former royalty. Exactly the type of crew we'd want.
+      We're not sure what kind of multiversal trickery made him appear in our crew, though.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_KORA_TALK">
+    <text load="TEXT_CREW_TALK_KORA"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_KORA">
+    <text>Kora is complaining about the noodles, stating he has eaten enough of them "in the place he comes from".</text>
+    <text>Kora keeps asking about his brother. You didn't know he had a brother.</text>
+    <text>Kora is cleaning his combat knife - you're not sure why it's dirty as he never uses it.</text>
+    <text>You ask Kora where exactly he comes from. He responds by breaking into laughter.</text>
+    <text>Kora is crying in a corner. You give him a hug and tell him everything will be fine.</text>
+  </textList>
+
+  
+  <!--////// SCRAPPER STORAGE CHECK STUFF ////////-->
 
   <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
     <mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" >
