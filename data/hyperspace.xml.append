@@ -1246,7 +1246,7 @@
 
 	<aug name="ICE_CREAM_GEL">
 		<function name="SLUG_GEL" value="0.50" useForReqs="false"/>
-		<function name="NANO_MEDBAY" value="0" useForReqs="true" warning="false"/>
+
 		<statBoosts>
 			<statBoost name="healAmount">
 				<boostType>FLAT</boostType>
@@ -1255,21 +1255,6 @@
 				<droneTarget>CREW</droneTarget>
 				<amount>1.6</amount>
 				<priority>0</priority>
-				<systemPowerDependency>
-					<medbay/>
-				</systemPowerDependency>
-				<systemPowerScaling>
-					<noSys>0</noSys>
-					<noPwr>0</noPwr>
-					<onePwr>1</onePwr>
-					<twoPwr>1.5</twoPwr>
-					<threePwr>3</threePwr>
-					<fourPwr>6</fourPwr>
-				</systemPowerScaling>
-				<systemRoomTarget>NONE</systemRoomTarget>
-				<systemList>
-					<medbay/>
-				</systemList>
 			</statBoost>
 		</statBoosts>
 	</aug>
