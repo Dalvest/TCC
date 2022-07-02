@@ -3,7 +3,7 @@ Trash Compactor Collection Add-On for the popular game FTL: Multiverse. These ar
 
 Current Version: 1.1
 
-Developed By: 
+-------DEVELOPERS-------------------------------------------------------------------------------------------------------
 
 Lead Devs: Zuggo, Dalvest
 
@@ -16,22 +16,33 @@ Playtesters/bug reporters: marcrusian, DemonFusionGamer, Kommandant_Julk, The Gh
 (thats a lot of people wow)
 Special Thanks to Cyrus106 for inspiring me to do this and helping me begin my journey!
 
+-------DESCRIPTION-------------------------------------------------------------------------------------------------------
 
-Adds lots of new flak weapons, new ships, a new questline and new races - plenty of stories are to be found in the abandoned sectors of the Multiverse.
+Adds lots of new weapons, amazing ships, diverse races and variations and a new questline - plenty of things are waiting to be found in the abandoned sectors of the Multiverse.
 TRACKER sends his regards.
 
-Changes:
-- Adds the scrapper race, a new race of lanius that you can attach scrap to to upgrade them (just talk to them!). 
-- Revamped a lot of old ships and weapons.
-- Added a bunch more weapons, drones and ships. 
-- The Trash Eater works properly now!
-- Balanced the Trash Compactor boss.
-- The Transmitter is now a hidden aug! There is now NO reason you shouldn't get it (please).
-- Removed the imposter regrettably. 
-- The Trash Compactor ship is currently in a transitional period and is not unlockable at the moment. 
-- Probably more stuff too that I forgot
+- Adds the Scrapper race, a new race of lanius that you can attach scrap to to upgrade them. (just talk to them!)
+- Custom made ships such as the "Fiare Vechi", "Corossus" and "Reactive Compactor". 
+- Reccuring Trash Compactor boss fight with cool new loot and increasing rewards for each fight. Once you get a certain augment in the first sector, you can summon the TC whenever at a storage check.
+- The Transmitter is now a hidden aug! There is now NO reason you shouldn't get it (please!)
+- PROTOGENS! FTL always needed cool floofy robots!
+
+Coming soon: a second questline, the RECLAIM & SALVAGE ASSOCIATION, Black Rose the android renegade, Scrapper Graveyard and more!
+P.S. The protogen spritesheet exists as an outline - if you wish to fill it in and include it in the mod, please give Dalvest a DM. Thanks! 
+
+There's a lore doc in mod-appendix too, btw.
 
 Good Luck! Don't get compacted!
 
-Works with Multiverse 5.2.3
-Use Hyperspace beta
+-------HOW TO INSTALL-------------------------------------------------------------------------------------------------------
+
+1.  Make sure you have the latest FTL Multiverse version, right now that is 5.2.3.
+2.  Make sure you have the latest Hyperspace beta .dll and lua .dll taken from the FTL Multiverse discord.
+(OPTIONAL) If you have Forgemaster and/or Inferno-Core, please patch them before the TCC!
+3.  Compress the 4 folders (audio/,img/,data/ and mod-appendix/) into a zip file then rename the extension to .ftl (not necessary if you're using a pre-compiled version)
+4.  Place it in your mods/ folder and patch it using Slipstream. Make sure the load order is correct (first MV, then Forgemaster and Inferno-Core IF you have them, then the TCC, then other mods you might have).
+5.  Have fun (this is mandatory)
+
+-------CONTACT-------------------------------------------------------------------------------------------------------
+
+Feel free to DM @Dalvest on the FTL: Multiverse discord with any issue you might have.
