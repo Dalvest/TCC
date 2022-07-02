@@ -691,9 +691,9 @@
 			<controllable>true</controllable>
 			<canPhaseThroughDoors>false</canPhaseThroughDoors>
 			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
-			<damageMultiplier>1</damageMultiplier>
-			<damageTakenMultiplier>1</damageTakenMultiplier>
+			<sabotageSpeedMultiplier>1.2</sabotageSpeedMultiplier>
+			<damageMultiplier>1.2</damageMultiplier>
+			<damageTakenMultiplier>0.8</damageTakenMultiplier>
 			<animBase>human</animBase>
 			<deathSounds>
 				<deathSound>death1</deathSound>
@@ -748,14 +748,6 @@
 				<repairSound>repair</repairSound>
 			</repairSounds>
 			<healSpeed>1.2</healSpeed>
-			<skills>
-				<piloting req="20"/>
-				<engines req="20"/>
-				<shields req="74"/>
-				<weapons req="74"/>
-				<repair req="26"/>
-				<combat req="14"/>
-			</skills>
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
@@ -793,14 +785,6 @@
 				<repairSound>repair</repairSound>
 			</repairSounds>
 			<healSpeed>1.2</healSpeed>
-			<skills>
-				<piloting req="20"/>
-				<engines req="20"/>
-				<shields req="74"/>
-				<weapons req="74"/>
-				<repair req="26"/>
-				<combat req="14"/>
-			</skills>
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
@@ -838,14 +822,6 @@
 				<repairSound>repair</repairSound>
 			</repairSounds>
 			<healSpeed>1.2</healSpeed>
-			<skills>
-				<piloting req="20"/>
-				<engines req="20"/>
-				<shields req="74"/>
-				<weapons req="74"/>
-				<repair req="26"/>
-				<combat req="14"/>
-			</skills>
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
@@ -884,14 +860,6 @@
 				<repairSound>repair</repairSound>
 			</repairSounds>
 			<healSpeed>1.2</healSpeed>
-			<skills>
-				<piloting req="20"/>
-				<engines req="20"/>
-				<shields req="74"/>
-				<weapons req="74"/>
-				<repair req="26"/>
-				<combat req="14"/>
-			</skills>
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
@@ -938,7 +906,7 @@
 				</req>
 				<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 				<buttonText>OVERDRIVE</buttonText>
-				<tooltip>Ready: Increase movement speed to 3x and crew damage to 2.5x for 7 seconds. Does NOT increase damage taken from hazards.</tooltip>
+				<tooltip>Ready: Increase movement speed to 3x and crew damage to 2.3x for 7 seconds. Does NOT increase damage taken from hazards.</tooltip>
 				<cooldownColor r="171" g="223" b="255"/>
 				<temporaryEffect>
 					<duration>7</duration>
@@ -950,21 +918,13 @@
 					</finishSounds>
 					<effectAnim>pheromones_f</effectAnim>
 					<moveSpeedMultiplier>3</moveSpeedMultiplier>
-					<damageMultiplier>2.5</damageMultiplier>
+					<damageMultiplier>2.3</damageMultiplier>
 				</temporaryEffect>
 			</powerEffect>
 			<repairSounds animSoundFrame="-1">
 				<repairSound>repair</repairSound>
 			</repairSounds>
 			<healSpeed>1.2</healSpeed>
-			<skills>
-				<piloting req="20"/>
-				<engines req="20"/>
-				<shields req="74"/>
-				<weapons req="74"/>
-				<repair req="26"/>
-				<combat req="14"/>
-			</skills>
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
