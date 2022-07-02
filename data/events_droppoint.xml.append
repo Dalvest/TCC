@@ -24,8 +24,10 @@
                     <choice hidden="false">
                         <text>Grab it.</text>
                         <event>
-                            <text>It seems to be a custom made transmitter - it can send a transport pod using fuel and/or droneparts. A screen shows the live location to what is presumably the Lanius ship from earlier alongside a strange message - "COME AND GET IT". Perhaps if you lure them with some scrap they will return? </text>
-                            <!--<augment name="SCRAP_TRANSMITTER"/>-->
+                            <text>It seems to be a custom made transmitter - it can send a transport pod using fuel and/or droneparts. A screen shows the live location to what is presumably the Lanius ship from earlier alongside a strange message - "COME AND GET IT". Perhaps if you lure them with some scrap they will return? 
+
+                                [Use it at a storage check]
+                            </text>
                             <hiddenAug>SCRAP_TRANSMITTER</hiddenAug>
                             <instantEscape/>
                         </event>

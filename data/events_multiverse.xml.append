@@ -415,61 +415,6 @@
 		</event>
 	</choice>
 
-	<choice hidden="false" blue="false">
-		<text>Gold Flak</text>
-		<event>
-			<text>Done!</text>
-			<item_modify>
-					<item type="scrap" min="-150" max="-150"/>
-				</item_modify>
-			<weapon name="SHOTGUN_GOLD"/>
-		</event>
-	</choice>
-
-	<choice hidden="false" blue="false">
-		<text>Gold III Flak</text>
-		<event>
-			<text>Done!</text>
-			<item_modify>
-					<item type="scrap" min="-200" max="-200"/>
-				</item_modify>
-			<weapon name="SHOTGUN_GOLD_3"/>
-		</event>
-	</choice>
-
-	<choice hidden="false" blue="false">
-		<text>Steel Flak</text>
-		<event>
-			<text>Done!</text>
-			<item_modify>
-					<item type="scrap" min="-100" max="-100"/>
-				</item_modify>
-			<weapon name="SHOTGUN_STEEL"/>
-		</event>
-	</choice>
-
-	<choice hidden="false" blue="false">
-		<text>Crystal Flak</text>
-		<event>
-			<text>Done!</text>
-			<item_modify>
-					<item type="scrap" min="-100" max="-100"/>
-				</item_modify>
-			<weapon name="CRYSTAL_SHOTGUN"/>
-		</event>
-	</choice>
-
-	<choice hidden="false" blue="false">
-		<text>Elite Crystal Flak</text>
-		<event>
-			<text>Done!</text>
-			<item_modify>
-					<item type="scrap" min="-125" max="-125"/>
-				</item_modify>
-			<weapon name="CRYSTAL_SHOTGUN_RED"/>
-		</event>
-	</choice>
-
 	<choice hidden="false" blue="true">
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK"/>
