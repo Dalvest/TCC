@@ -595,6 +595,7 @@
     <text>RAPTOR just finished an hour-long rant about old human ammunition calibers - he wanted to start talking about flak weapons too but you've stopped him right in time.</text>
     <text>You ask RAPTOR if he ever ate anything, as you've only seen him charge using a power cord. He answers with "Yeah. Coffee.".</text>
     <text>RAPTOR is trying to fix a coffee vending machine in order to "Relive the good old times.".</text>
+    <text>RAPTOR is debating whether a tabaxi or a sergal would be fluffier. You fear the debate may take hours.</text>
     <text>RAPTOR is reloading all of his weapons by putting junk in his chest cavity, compacting it and fabricating ammo. It's highly fascinating!</text>
     <text>RAPTOR saw you enter his room and yelled "TANGO CONTACT!" reflexively. It seems even machines make mistakes.</text>
   </textList>
@@ -657,6 +658,8 @@
   <textList name="TEXT_CREW_TALK_KORA">
     <text>Kora is complaining about the noodles, stating he has eaten enough of them "in the place he comes from".</text>
     <text>Kora keeps asking about his brother. You didn't know he had a brother.</text>
+    <text>Kora asks what an Avali is - you respond by trying to explain what would happen if cuteness and a bird stepped into a Pleasure Barge.</text>
+    <text>Kora asks you if you brought in the sushi supplies he keeps ordering from the dark web; you tell him nothing arrived yet and move on.</text>
     <text>Kora is cleaning his combat knife - you're not sure why it's dirty as he never uses it.</text>
     <text>You ask Kora where exactly he comes from. He responds by breaking into laughter.</text>
     <text>Kora is crying in a corner. You give him a hug and tell him everything will be fine.</text>
@@ -694,7 +697,8 @@
   	<text>AVALI DETAILS
   	SPECIES? [Avali] SUBTYPE? [None]
   	Subtype Details: Genetic, Standard
-  	Stats: Learns skills 5% faster. Takes twice as much fire damage and extinguishes at half speed. Moves at 1.5x speed. Has 70 HP. Repairs at 1.2x speed. Deals 0.8x melee damage and 1.5x ranged.</text>
+  	Stats: Learns skills 5% faster. Takes twice as much fire damage and extinguishes at half speed. Moves at 1.5x speed. Has 70 HP. Repairs at 1.2x speed. Deals 0.8x melee damage and 1.5x ranged.
+    Dislikes high temperatures. Keep away from all fire sources. They get stronger the more Avalis you have - this swarm tactic seems to be triggered by protogens as well.</text>
   	<choice>
   		<text>Continue...</text>
   		<event load="STORAGE_CHECK" />
@@ -709,14 +713,14 @@
   </event>
   <!--need to rewrite and add more-->
   <textList name="TEXT_CREW_TALK_AVALI">
-  	<text>Your Avali complains that the ship is much too hot.</text>
+  	<text>Your Avali complains that the ship is much too hot. You pretend to lower the temperature - this apparently fixes the problem.</text>
+    <text>Your Avali desires to host a convention and invite protogens - you tell them that's a wonderful idea.</text>
   	<text>Your Avali thinks that your consoles are "primitive".</text>
-  	<text>Your Avali hopes that you have extinguishers. A Rockman would work too.</text>
-  	<!--not quite satisfied with these
-  	<text>Your Avali wishes that you'd install a "Nexus Link", when asked what that is they spout something about quantum entanglement and the "world wide web". Then glare at you when you don't understand.</text>
-  	<text>Your Avali calls the orchids a bunch of "uninspired knock-off Avali".</text>-->
-  	<text>Your Avali wishes they could turn invisible.</text>
-  	<text>Your Avali complains that their sprite is too small.</text>
+  	<text>Your Avali hopes that you have extinguishers. A Rockman would work too. You reassure them fire shouldn't be a problem.</text>
+  	<text>Your Avali wishes that you'd install a "Nexus Link", when asked what that is they spout something about quantum entanglement and the "world wide web". They glare at you, and then shrug.</text>
+  	<text>Your Avali calls Orchids a bunch of "uninspired knock-off Avali". You don't know whether to agree or not.</text>
+  	<text>Your Avali wishes they could turn invisible. You respond with "Same.".</text>
+  	<text>Your Avali complains that their sprite is too small. You wonder what that is supposed to mean.</text>
   	<text>Your Avali complains about having to wear a cloak 24/7, when you tell them to just take it off they mutter something about "looking better with it on" and "sprite being hard to make otherwise"</text>
   </textList>
   <mod:findName type="event" name="STORAGE_CHECK_LAB">
