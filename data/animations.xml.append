@@ -2147,6 +2147,14 @@
 		<time>1</time>
 	</anim>
 
+	<!--KORA TELEPORT STATBOOST EFFECT-->
+	<animSheet name="tele_effect" w="352" h="32" fw="32" fh="32">effects/tele_effect.png</animSheet>
+	<anim name="tele_effect">
+		<sheet>tele_effect</sheet>
+		<desc length="11" x="0" y="0"/>
+		<time>1.0</time>
+	</anim>
+
 <!--/////////////////////////////////////////////////// PROTOGEN ZONE ////////////////////////////////////////////////////-->
 <!--///////////////GENERIC PROTOGEN//////////////-->
 

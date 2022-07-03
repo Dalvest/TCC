@@ -886,7 +886,7 @@
 
 			<!--Teleporter thingy-->
 			<powerEffect>
-				<cooldown>6</cooldown>
+				<cooldown>20</cooldown>
 				<jumpCooldown>full</jumpCooldown>
 				<powerCharges>2</powerCharges>
 				<initialCharges>2</initialCharges>
@@ -899,7 +899,7 @@
 				<temporaryEffect>
 					<duration>3</duration>
 					<cooldownColor r="120" g="20" b="255"/>
-					<animSheet baseVisible="false">unique_slocknog_power</animSheet><!--PLACEHOLDER FOR SURE-->
+					<animSheet baseVisible="true">kora_glow</animSheet><!--PLACEHOLDER FOR SURE-->
 					<finishSounds enemy="true">
 							<finishSound>decloak</finishSound>
 					</finishSounds>
@@ -910,7 +910,7 @@
 							<shipTarget>ALL</shipTarget>
 							<crewTarget>ALLIES</crewTarget>
 							<affectsSelf>false</affectsSelf><!--So the boostanim doesn't play over Kora-->
-							<boostAnim>pheromones_f</boostAnim>
+							<boostAnim>tele_effect</boostAnim>
 						</statBoost>
 						<statBoost name="teleportMoveOtherShip"><!-- Crew can teleport to the other ship on their own (without the system). Right click with selected crew to teleport. -->
 							<boostType>SET</boostType>
