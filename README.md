@@ -14,7 +14,7 @@ Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee,
 Playtesters: marcrusian, DemonFusionGamer, The Ghost Hugger, Lex
 
 Special Thanks to Cyrus106 for inspiring me to do this and helping me begin my journey! Thank you for everyone involved, we never thought this mod would become as big as it did!
-s
+
 # FEATURED MODS
 
 A "side quest" of ours is to try and compile similar mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair and Avali!
@@ -55,16 +55,16 @@ Good Luck! Don't get compacted!
 # CHANGELOG
 
 ### Update 1.1
-- GITHUB page (link's up above!)
 - SCRAPPERS! A new subfaction of Lanius with a pretty fun backstory.
 - The RAPTOR's Right Hand flak, Raptor LMG, Lance Antipersonnel, SCRAPFLAK, Unscrapflak, Rescrapflak, RSA TAGGER and MINICANNON and Deconstructor Beam + a few others I can't recall rn;
 - Loads of playable ships such as the hastily put-together Corossus, the civilian-spec The Original and the boarding madness of Razormind
 - Fixed several animations such as the singularity and the tear gas. Yes, I added tear gas to FTL. Fight me. (I've got tear gas, I'll win.)
-- Merged with the Bomb Flaks mod, bringing said bomb flaks (+ a new bomb flak 3 sprite as well as a conservative b. flak and a drone b. flak) and their related events into this mod - the old bomb flak was rebranded into Explosive Flak.
+- Merged with Bomb Flaks, bringing said bomb flaks (+ a new bomb flak 3 sprite as well as a conservative b. flak, pre-emptive b. flak and a drone b. flak) and their related events into this mod - the old bomb flak was rebranded into Explosive Flak.
 - Merged with Kivie Takeover, bringing in the Kivies as RSA Kivie Grunts, as well as the Laser Centrifuge weapon (so far!). Stay tuned for more Kivie Takeover stuff.
 - Merged with Avali, adding cute floofy birbs - removed GB dependency, removed weird bugs related to load order, added Avalis to multiple TCC ships that didn't have 'em before.
 - Removed the impostor, regrettably... Added sus_death.png in the img/ folder to compensate for the loss of sus-ness.
 - Added remade sprites for ships such as the Armored Wasp, The Original and Reactive Compactor thanks to ConMan.
+- Soft-Merged with Instant Flair
 
 Update 1.09.5
 - remade the Reactive Compactor sprite with a new miniship and cloak image
