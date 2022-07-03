@@ -946,7 +946,6 @@
 	<type>LASER</type>
 	<title>Debuffer (Movement)</title>
 	<short>Debuffer (M)</short>
-	<tip>Slows down movement of all enemy crew for 5 seconds with a cooldown of 10 seconds.</tip>
 	<desc>This laser halves the speed of all enemy crew on the enemy ship. Stacks infinitely for now.</desc>
 	<tooltip>WIP Laser, no damage, cannot miss, 1 second cooldown, 10 shield pierce, slow.</tooltip>
 	<damage>0</damage>
@@ -1751,14 +1750,14 @@
 <augBlueprint name="ADVANCED_SCRAP">
     <title>Advanced Scrap Plating</title>
     <desc>An advanced scrap plating created by the Trash Eater himself. Bits of it may be used to upgrade some scrappers into their elite variants. </desc>
-    <cost>200</cost>
+    <cost>100</cost>
     <rarity>0</rarity>
     <stackable>true</stackable>
 </augBlueprint>
 
 <augBlueprint name="ANTI_ANAEROBIC_GRID">
-	    <title>Aerointolerance Grid</title>
-	    <desc>If an Oxygen system is present, all enemy anaerobic crew will take a base damage of 4hp/s with an extra 2hp for each bar of power in the Oxygen system.</desc>
+	    <title>Aero-Intolerance Grid</title>
+	    <desc>If an Oxygen system is present, all enemy anaerobic crew boarding your ship will take 4HP/s of damage with an extra 2HP/s for each bar of power in your Oxygen system. Science mumbo-jumbo has never been so satisfying to use!</desc>
 	    <cost>80</cost>
 	    <bp>12</bp>
 	    <rarity>0</rarity>
@@ -1768,7 +1767,7 @@
 <augBlueprint name="SALVAGE_ARRAY">
     <title>Salvage Array</title>
     <desc>This is a combined modular arm that is both repairing the hull and collecting bits of extra scrap. Though rusty and old, you're pretty sure this array will hold out for long enough. Repairs the hull and increases scrap rewards by 30%, taking 10% for repairs if necessary.</desc>
-    <cost>75</cost>
+    <cost>80</cost>
     <rarity>0</rarity>
     <stackable>false</stackable>
 </augBlueprint>
@@ -1776,16 +1775,16 @@
 <augBlueprint name="ICE_CREAM_GEL">
 	<title>Ice Cream Slug Substance</title>
 	<desc>A strange, ice cream like substance is coating every single room of this ship - you are not sure how and why it works, but it seems to keep the properties of Slug Gel while also providing 1.6hp/s regeneration for all allied crew.</desc>
-	<cost>80</cost>
+	<cost>60</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
 
 <augBlueprint name="NOODLE_RATIONS">
-	<title>Instant-Noodle Rations</title>
-	<desc> 100 Percent Protein Insta-Noodles: Provides Stackable Movement Speed, Max Health and Damage Bonuses! Warning - may contain traces of Rebel Scum. Grants a 5% multiplicative boost at base level, with another 1.02x multiplier per level.</desc>
-	<cost>40</cost>
-	<rarity>0</rarity>
+	<title>Insta-Noodle Rations</title>
+	<desc> 100 Percent Protein Insta-Noodles: Provides Stackable Movement Speed, Max Health and Damage Bonuses! Warning - may contain traces of Rebel Scum. Grants a 5% multiplicative boost at base level, with a 1.02x multiplier per upgrade level.</desc>
+	<cost>50</cost>
+	<rarity>5</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
 
@@ -1843,6 +1842,15 @@
 	<stackable>false</stackable>
 	<bp>0</bp>
 </augBlueprint>
+
+<augBlueprint name="SHIP_AVALI">
+	<title>Avali Cruiser</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
 
 <!--/////////////////////QUEST AUGS//////////////////////////-->
 
@@ -1948,13 +1956,6 @@
 	<title>Enhanced Cybernetics</title>
 	<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
 	<cost>40</cost>
-	<rarity>0</rarity>
-	<stackable>false</stackable>
-</augBlueprint>
-<augBlueprint name="SHIP_AVALI">
-	<title>Avali</title>
-	<desc>Avali upgrade installed.</desc>
-	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
@@ -3733,7 +3734,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Avali Cruiser</class>
 	<name>Oryzivora</name>
 	<unlock id="ship_PLAYER_SHIP_AVALI_unlock" />
-	<desc>This powerful Avali-made cruiser comes with one critical weakness; it does not have shields.</desc>
+	<desc>This powerful Avali-made cruiser comes with one critical weakness; it does not have shields. Hopefully, its powerful weapons are enough to compensate.</desc>
 	<systemList>
 		<battery power="1" room="17" max="2" start="false" img="room_battery_15" />
 		<cloaking power="1" room="14" start="true" img="room_cloaking_orchid_2" />
@@ -3793,7 +3794,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="7" count="3">
 		<weapon name="LASER_HEAVY_1" />
-		<weapon name="LASER_CHAINGUN" />
+		<weapon name="TC_SINEWAVE" />
 	</weaponList>
 	<droneList drones="9" count="3">
 		<drone name="FOCUS_1_AMP2" />
@@ -3806,11 +3807,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="avali" />
 	<aug name="PRE_SCANNER" />
 </shipBlueprint>
+
 <shipBlueprint name="PLAYER_SHIP_AVALI_2" layout="avali_cruiser_B" img="avali_cruiser_B">
 	<class>Avali Cruiser</class>
 	<name>Trochilidae</name>
 	<unlock id="ship_PLAYER_SHIP_AVALI_2_unlock" />
-	<desc>This cruiser, while lacking shields and cloaking, has a powerful arsenal of drones,</desc>
+	<desc>This cruiser, while lacking shields and cloaking, has a powerful arsenal of drones and an extremely capable drone system.</desc>
 	<systemList>
 		<battery power="1" room="8" max="2" start="false" img="room_battery" />
 		<cloaking power="1" room="3" start="false" img="room_cloaking_orchid_3" />
@@ -3869,7 +3871,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="8" count="2">
-		<weapon name="GATLING_ANCIENT" />
+		<weapon name="RSA_MINICANNON" />
 	</weaponList>
 	<droneList drones="15" count="4">
 		<drone name="HELLRAISER_HULL" />
@@ -4026,9 +4028,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="8" count="4">
-		<weapon name="RUSTY_LASER_BURST_5" />
-		<weapon name="LASER_CHARGEGUN_2" />
-		<weapon name="ANCIENT_HAVOC" />
+		<weapon name="RSA_MINICANNON" />
+		<weapon name="RSA_MINICANNON" />
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<aug name="STORE_BEACON" />

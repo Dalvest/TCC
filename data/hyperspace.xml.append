@@ -187,7 +187,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_TRASH</hiddenAug>
 			<crew>
-				<kiviekith room="11" name="Stolas" />
+				<avali room="11" name="Stolas" />
 				<kiviekith room="13" name="Alastor" />
 				<kiviekith room="0" name="Blitzo" />
 			</crew>
@@ -219,13 +219,12 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_TRASH</hiddenAug>
 			<crew>
-				<human_soldier room="12" name="Kanyo" />
+				<kora room="12" name="Kora" />
 				<primagen_raptor room="14" name="RAPTOR" />
 				<protogen_tracker room="1" name="TRACKER" />
 				<human room="11" name="Cheese" />
 				<clonefail_lancer room="3" name="Lancer" />
-				<scrapper_engineer room="6" />
-				<protogen room="2" />
+				<avali room="2" name="Dalia" />
 			</crew>
 		</mod-append:customShip>
 
@@ -306,7 +305,7 @@
 				<scrapper_scavenger room="11" name="Scrappy McScrapton" />
 				<clonefail_lancer room="0" name="Lancer" />
 				<protogen room="1" />
-				<protogen room="5" />
+				<avali room="5" />
 			</crew>
 		</mod-append:customShip>
 
@@ -316,8 +315,8 @@
 			<crewLimit>9</crewLimit>
 			<crew>
 				<human_soldier room="0" />
-				<rsa_technician room="11" />
-				<human_engineer room="1" name="Choosechee" />
+				<avali room="11" />
+				<rsa_technician room="1" name="Choosechee" />
 			</crew>
 		</mod-append:customShip>
 
@@ -396,7 +395,7 @@
 			<hiddenAug>SHIP_PIRATE</hiddenAug>
 			<crew>
 				<kiviekith room="0" name="Krieg" />
-				<kiviekith room="6" name="Pietre" />
+				<avali room="6" name="Jessica" />
 				<rsa_engineer room="1" name="Diego" />
 			</crew>
 		</mod-append:customShip>
@@ -415,6 +414,93 @@
 				<human_medic room="6" />
 			</crew>
 		</mod-append:customShip>
+
+	<!--/////// PORTED SHIPS //////-->
+
+		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true"/>
+		<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
+			<hiddenAug>SHIP_SPLICE</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+
+		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="false" c="false" unused="true"/>
+		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crewLimit>8</crewLimit>
+			<customReactor maxLevel="60"/>
+		</mod-append:customShip>
+
+
+	<!--/////////////////// AVALI ZONE //////////////// -->
+
+		<mod-append:customShip name="MU_BOSS_ENGINEER_C">
+			<shipIcons>
+				<shipIcon>icon_droneboost</shipIcon>
+			</shipIcons>
+			<crew>
+				<engineer room="0" name="Doctor M." />
+				<!--piloting-->
+				<weaver room="14" />
+				<!--engines-->
+				<technomanning room="10" name="1812" />
+				<!--weapons-->
+				<technomanning room="13" />
+				<!--shields-->
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true">
+			<unlock variant="b" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_AVALI</shipReq>
+				<value>5</value>
+				<silent>false</silent>
+			</unlock>
+			<unlock variant="c" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_AVALI_2</shipReq>
+				<value>5</value>
+				<silent>false</silent>
+			</unlock>
+			<unlock variant="c" silent="false">
+				<type>2</type>
+				<shipReq>PLAYER_SHIP_AVALI</shipReq>
+				<silent>false</silent>
+			</unlock>
+		</mod-append:ship>
+
+		<mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" />
+
+			<mod-append:customShip name="PLAYER_SHIP_AVALI">
+				<hiddenAug>SHIP_AVALI</hiddenAug>
+				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+				<crewLimit>12</crewLimit>
+			</mod-append:customShip>
+
+			<mod-append:customShip name="PLAYER_SHIP_AVALI_2">
+				<hiddenAug>SHIP_AVALI</hiddenAug>
+				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+				<crewLimit>12</crewLimit>
+			</mod-append:customShip>
+
+			<mod-append:customShip name="PLAYER_SHIP_AVALI_3">
+				<hiddenAug>SHIP_AVALI</hiddenAug>
+				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+				<crewLimit>12</crewLimit>
+			</mod-append:customShip>
+
+		<!--/////////////////// AVALI SLOT 2 //////////////// -->
+
+		<mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" />
+
+			<mod-append:customShip name="PLAYER_SHIP_AVALI_SLOT2">
+				<hiddenAug>SHIP_AVALI</hiddenAug>
+				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+				<crewLimit>12</crewLimit>
+			</mod-append:customShip>
 
 		<!--///////EXTRA ELITE SHIP PACK//////-->
 
@@ -463,83 +549,7 @@
 			</crew>
 		</mod-append:customShip>
 
-		<!--/////// Ported ships //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" />
-		<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
-			<hiddenAug>SHIP_SPLICE</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
-
-
-		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="false" c="false" />
-		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
-			<hiddenAug>SHIP_FEDERATION</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crewLimit>8</crewLimit>
-			<customReactor maxLevel="60"/>
-		</mod-append:customShip>
-
-
-		<!--//////////////// AVALI ////////////// -->
-		<mod-append:customShip name="MU_BOSS_ENGINEER_C">
-			<shipIcons>
-				<shipIcon>icon_droneboost</shipIcon>
-			</shipIcons>
-			<crew>
-				<engineer room="0" name="Doctor M." />
-				<!--piloting-->
-				<weaver room="14" />
-				<!--engines-->
-				<technomanning room="10" name="1812" />
-				<!--weapons-->
-				<technomanning room="13" />
-				<!--shields-->
-			</crew>
-		</mod-append:customShip>
-
-		<mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true">
-			<unlock variant="b" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_AVALI</shipReq>
-				<value>5</value>
-				<silent>false</silent>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_AVALI_2</shipReq>
-				<value>5</value>
-				<silent>false</silent>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_AVALI</shipReq>
-				<silent>false</silent>
-			</unlock>
-		</mod-append:ship>
-		<mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" />
-			<mod-append:customShip name="PLAYER_SHIP_AVALI">
-				<hiddenAug>SHIP_AVALI</hiddenAug>
-				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-				<crewLimit>12</crewLimit>
-			</mod-append:customShip>
-			<mod-append:customShip name="PLAYER_SHIP_AVALI_2">
-				<hiddenAug>SHIP_AVALI</hiddenAug>
-				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-				<crewLimit>12</crewLimit>
-			</mod-append:customShip>
-			<mod-append:customShip name="PLAYER_SHIP_AVALI_3">
-				<hiddenAug>SHIP_AVALI</hiddenAug>
-				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-				<crewLimit>12</crewLimit>
-			</mod-append:customShip>
-		<mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" />
-			<mod-append:customShip name="PLAYER_SHIP_AVALI_SLOT2">
-				<hiddenAug>SHIP_AVALI</hiddenAug>
-				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-				<crewLimit>12</crewLimit>
-			</mod-append:customShip>
 	</mod:findLike>
 
 
@@ -570,28 +580,14 @@
 			<!--Page 2-->
 			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship> <!--(lack of) Potential-->
 			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!--Stalwart Defense-->
-			<mod-append:empty/>
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
 			<mod-append:empty/>
-
-			<!--Page 3, Avali -->
-
-			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship>
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-
 
 		</mod:findLike>
 	</mod:findLike>
