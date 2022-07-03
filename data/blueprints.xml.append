@@ -3325,7 +3325,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="3" start="false" img="room_sensors">
+		<sensors power="1" room="3" start="true" img="room_sensors">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
@@ -4271,7 +4271,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<cost>60</cost>
 	<title>Protogen</title>
 	<short>Protogen</short>
-	<rarity>4</rarity>
+	<rarity>5</rarity>
 	<powerList>
 		<power>x1.1 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
 		<power>x0.8 movement speed.</power>
@@ -4368,13 +4368,15 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
-<!--///////////////BIRB BRIBRBIIBRIBRB BIRB//////////////////////-->
+<!--/////////////// BIRB BRIBRBIIBRIBRB BIRB BIRBBIRBBIRBIRB//////////////////////-->
+<!--/////////////// SEE: AVALI //////////////////////-->
+
 <crewBlueprint name="avali">
 	<desc>Rather social avian creatures, best when paired with more of their kind. Considered cute by most.</desc>
 	<cost>40</cost>
 	<title>Avali</title>
 	<short>Avali</short>
-	<rarity>3</rarity>
+	<rarity>5</rarity>
 	<powerList>
 		<power>Moves at 1.5x speed, repairs at 1.2x.</power>
 		<power>Takes 2x damage from fire - extinguishes them at half speed.</power>
