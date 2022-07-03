@@ -13,10 +13,10 @@
 	<eventList name="AVALI_EVENT_NEUTRAL"></eventList>
 	<eventList name="AVALI_REBEL_LIST">
 		<event load="ENCOUNTER_REBEL_AVALI" />
-		<event load="ENCOUNTER_REBEl" />
+		<event load="ENCOUNTER_REBEL" />
 		<event load="ENCOUNTER_REBEL_AVALI" />
-		<event load="ENCOUNTER_REBEl" />
-		<event load="ENCOUNTER_REBEl_SPY" />
+		<event load="ENCOUNTER_REBEL" />
+		<event load="ENCOUNTER_REBEL_SPY" />
 	</eventList>
 	<event name="AVALI_FIGHT">
 		<text load="TEXT_AVALI_FIGHT" />
@@ -181,6 +181,7 @@
 		<choice req="UPG_TECH_EXTINGUISHERS" lvl="0" blue="false" max_group="1">
 			<text>text</text>
 			<event>
+				<text>text</text>
 				<hiddenAug>UPG_TECH_EXTINGUISHERS</hiddenAug>
 				<choice>
 					<text>text</text>

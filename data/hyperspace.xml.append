@@ -187,7 +187,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_TRASH</hiddenAug>
 			<crew>
-				<kiviekith room="11" name="Stolas" />
+				<avali room="11" name="Stolas" />
 				<kiviekith room="13" name="Alastor" />
 				<kiviekith room="0" name="Blitzo" />
 			</crew>
@@ -219,13 +219,12 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_TRASH</hiddenAug>
 			<crew>
-				<human_soldier room="12" name="Kanyo" />
+				<kora room="12" name="Kora" />
 				<primagen_raptor room="14" name="RAPTOR" />
 				<protogen_tracker room="1" name="TRACKER" />
 				<human room="11" name="Cheese" />
 				<clonefail_lancer room="3" name="Lancer" />
-				<scrapper_engineer room="6" />
-				<protogen room="2" />
+				<avali room="2" name="Dalia" />
 			</crew>
 		</mod-append:customShip>
 
@@ -306,7 +305,7 @@
 				<scrapper_scavenger room="11" name="Scrappy McScrapton" />
 				<clonefail_lancer room="0" name="Lancer" />
 				<protogen room="1" />
-				<protogen room="5" />
+				<avali room="5" />
 			</crew>
 		</mod-append:customShip>
 
@@ -316,8 +315,8 @@
 			<crewLimit>9</crewLimit>
 			<crew>
 				<human_soldier room="0" />
-				<rsa_technician room="11" />
-				<human_engineer room="1" name="Choosechee" />
+				<avali room="11" />
+				<rsa_technician room="1" name="Choosechee" />
 			</crew>
 		</mod-append:customShip>
 
@@ -396,7 +395,7 @@
 			<hiddenAug>SHIP_PIRATE</hiddenAug>
 			<crew>
 				<kiviekith room="0" name="Krieg" />
-				<kiviekith room="6" name="Pietre" />
+				<avali room="6" name="Jessica" />
 				<rsa_engineer room="1" name="Diego" />
 			</crew>
 		</mod-append:customShip>
@@ -462,10 +461,9 @@
 				<scrapper room="15" />
 			</crew>
 		</mod-append:customShip>
+	<!--/////// PORTED SHIPS //////-->
 
-		<!--/////// Ported ships //////-->
-
-		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" />
+		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true"/>
 		<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
 			<hiddenAug>SHIP_SPLICE</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -473,7 +471,7 @@
 		</mod-append:customShip>
 
 
-		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="false" c="false" />
+		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="false" c="false" unused="true"/>
 		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
 			<hiddenAug>SHIP_FEDERATION</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -482,7 +480,8 @@
 		</mod-append:customShip>
 
 
-		<!--//////////////// AVALI ////////////// -->
+	<!--/////////////////// AVALI ZONE //////////////// -->
+
 		<mod-append:customShip name="MU_BOSS_ENGINEER_C">
 			<shipIcons>
 				<shipIcon>icon_droneboost</shipIcon>
@@ -518,28 +517,85 @@
 				<silent>false</silent>
 			</unlock>
 		</mod-append:ship>
+
 		<mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" />
+
 			<mod-append:customShip name="PLAYER_SHIP_AVALI">
 				<hiddenAug>SHIP_AVALI</hiddenAug>
 				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 				<crewLimit>12</crewLimit>
 			</mod-append:customShip>
+
 			<mod-append:customShip name="PLAYER_SHIP_AVALI_2">
 				<hiddenAug>SHIP_AVALI</hiddenAug>
 				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 				<crewLimit>12</crewLimit>
 			</mod-append:customShip>
+
 			<mod-append:customShip name="PLAYER_SHIP_AVALI_3">
 				<hiddenAug>SHIP_AVALI</hiddenAug>
 				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 				<crewLimit>12</crewLimit>
 			</mod-append:customShip>
-		<mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" />
+
+		<!--/////////////////// AVALI SLOT 2 //////////////// -->
+
+		<mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" />
+
 			<mod-append:customShip name="PLAYER_SHIP_AVALI_SLOT2">
 				<hiddenAug>SHIP_AVALI</hiddenAug>
 				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 				<crewLimit>12</crewLimit>
 			</mod-append:customShip>
+
+		<!--///////EXTRA ELITE SHIP PACK//////-->
+
+		<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
+			<unlock variant="a" silent="false">
+        <type>3</type>
+		    <otherUnlocks>
+					<ship>PLAYER_SHIP_SCRAPPER</ship>
+					<ship>PLAYER_SHIP_TRASH_MINER</ship>
+		      		<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+					<ship>PLAYER_SHIP_SDM</ship>
+					<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
+					<ship>PLAYER_SHIP_COROSSUS</ship>
+					<ship>PLAYER_SHIP_SLUGTON</ship>
+		    </otherUnlocks>
+    	</unlock>
+			<unlock variant="b" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
+      </unlock>
+		</mod-append:ship>
+
+		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
+			<crewLimit>20</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_SLUG</hiddenAug>
+			<crew>
+				<scrapper room="2" name="Mochi" />
+				<scrapper room="9" name="Zog" />
+				<trash_eater room="0" name="Trash Eater" />
+				<scrapper_engineer room="7" />
+				<scrapper_heavy room="6" />
+			</crew>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
+			<crewLimit>10</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
+			<crew>
+				<protogen room="2" />
+				<kiviekith room="7" name="Orvech Vonor" />
+				<kiviekith room="14" name="Altan" />
+				<kora room="0" name="Kora" />
+				<scrapper room="15" />
+			</crew>
+		</mod-append:customShip>
+
+
 	</mod:findLike>
 
 
@@ -570,28 +626,14 @@
 			<!--Page 2-->
 			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship> <!--(lack of) Potential-->
 			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!--Stalwart Defense-->
-			<mod-append:empty/>
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship>
+			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
 			<mod-append:empty/>
-
-			<!--Page 3, Avali -->
-
-			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship>
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-			<mod-append:empty />
-
 
 		</mod:findLike>
 	</mod:findLike>
@@ -823,7 +865,7 @@
 			<canSabotage>true</canSabotage>
 			<canSuffocate>true</canSuffocate>
 			<suffocationModifier>1.2</suffocationModifier>
-			<fireDamageMultiplier>1.3</fireDamageMultiplier>
+			<fireDamageMultiplier>1.2</fireDamageMultiplier>
 			<canMan>true</canMan>
 			<noClone>false</noClone>
 			<noSlot>false</noSlot>
@@ -831,7 +873,7 @@
 			<canPhaseThroughDoors>false</canPhaseThroughDoors>
 			<moveSpeedMultiplier>1</moveSpeedMultiplier>
 			<sabotageSpeedMultiplier>1.2</sabotageSpeedMultiplier>
-			<damageMultiplier>1.1</damageMultiplier>
+			<damageMultiplier>1.2</damageMultiplier>
 			<damageTakenMultiplier>0.8</damageTakenMultiplier>
 			<animBase>human</animBase>
 			<deathSounds>
@@ -841,6 +883,54 @@
 			<shootingSounds>
 				<shootingSound>crewLaser1</shootingSound>
 			</shootingSounds>
+
+			<!--Teleporter thingy-->
+			<powerEffect>
+				<cooldown>6</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<powerCharges>2</powerCharges>
+				<initialCharges>2</initialCharges>
+				<powerSounds>
+					<powerSound>cloak</powerSound>
+				</powerSounds>
+				<buttonText>UPLIFT</buttonText>
+				<tooltip>Ready: Makes all friendly crew able to teleport for 3 seconds.</tooltip>
+				<cooldownColor r="60" g="80" b="200"/>
+				<temporaryEffect>
+					<duration>3</duration>
+					<cooldownColor r="120" g="20" b="255"/>
+					<animSheet baseVisible="false">unique_slocknog_power</animSheet><!--PLACEHOLDER FOR SURE-->
+					<finishSounds enemy="true">
+							<finishSound>decloak</finishSound>
+					</finishSounds>
+					<statBoosts>
+						<statBoost name="teleportMove"><!-- Crew can move within the ship by teleporting. -->
+							<boostType>SET</boostType>
+							<value>true</value>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>false</affectsSelf><!--So the boostanim doesn't play over Kora-->
+							<boostAnim>pheromones_f</boostAnim>
+						</statBoost>
+						<statBoost name="teleportMoveOtherShip"><!-- Crew can teleport to the other ship on their own (without the system). Right click with selected crew to teleport. -->
+							<boostType>SET</boostType>
+							<value>true</value>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>true</affectsSelf>
+						</statBoost>
+
+						<statBoost name="teleportMove"><!-- So Kora still gets the boost -->
+							<boostType>SET</boostType>
+							<value>true</value>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>SELF</crewTarget>
+						</statBoost>
+					</statBoosts>
+				</temporaryEffect>
+			</powerEffect>
+
+
 			<repairSounds animSoundFrame="-1">
 				<repairSound>repair</repairSound>
 			</repairSounds>
@@ -870,6 +960,94 @@
 			<sabotageSpeedMultiplier>1.1</sabotageSpeedMultiplier>
 			<damageMultiplier>1.1</damageMultiplier>
 			<damageTakenMultiplier>1</damageTakenMultiplier>
+
+			<passiveStatBoosts><!--Buffs Avali-->
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>5</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.05</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.15</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.1</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+			</passiveStatBoosts>
+
 			<animBase>human</animBase>
 			<deathSounds>
 				<deathSound>death1</deathSound>
@@ -908,6 +1086,94 @@
 			<damageTakenMultiplier>0.9</damageTakenMultiplier>
 			<animBase>human</animBase>
 			<defaultSkillLevel>1</defaultSkillLevel>
+
+			<passiveStatBoosts><!--Buffs Avali-->
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>5</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.05</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.15</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.1</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+			</passiveStatBoosts>
+
 			<deathSounds>
 				<deathSound>death1</deathSound>
 				<deathSound>death2</deathSound>
@@ -946,6 +1212,94 @@
 			<animBase>human</animBase>
 			<defaultSkillLevel>1</defaultSkillLevel>
 			<bonusPower>2</bonusPower>
+
+			<passiveStatBoosts><!--Buffs Avali-->
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>5</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.05</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.15</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.1</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+			</passiveStatBoosts>
+
 			<deathSounds>
 				<deathSound>death1</deathSound>
 				<deathSound>death2</deathSound>
@@ -1018,6 +1372,94 @@
 					<damageMultiplier>2.3</damageMultiplier>
 				</temporaryEffect>
 			</powerEffect>
+
+			<passiveStatBoosts><!--Buffs Avali-->
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>5</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.05</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.15</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.1</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+			</passiveStatBoosts>
+
 			<repairSounds animSoundFrame="-1">
 				<repairSound>repair</repairSound>
 			</repairSounds>

@@ -48,8 +48,7 @@
 </blueprintList>
 <!--just a list of the weapons ariadne can get you-->
 <blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH">
-	<name>MISSILES_FIRE</name>
-	<name>MINES_FIRE</name>
+	<name>LIST_WEAPONS_LOSTSUN</name>
 </blueprintList>
 <blueprintList name="LIST_DRONES_MADOK">
 	<name>REPAIR</name>
@@ -60,7 +59,7 @@
 	<name>BATTLETOG2_DEFEND</name>
 </blueprintList>
 <blueprintList name="SHIP_AVALI_FIGHT">
-	<name>avail_illuminate_skrimisher</name>
+	<name>AVALI_SKIRMISHER</name>
 </blueprintList>
 <blueprintList name="LIST_DRONES_AVALI">
 	<name>REPAIR</name>
@@ -72,11 +71,11 @@
 	<name>COMBAT_1_BEAM</name>
 	<name>COMBAT_2_LASER</name>
 	<name>COMBAT_2_BEAM</name>
-	<name>PEST_BREACH</name>
-	<name>ION_1_AMP1_ENEMY</name>
+	<name>PEST_RAD_ENEMY</name>
+	<name>ION_1_AMP3_ENEMY</name>
 	<name>ION_1_AMP2_ENEMY</name>
-	<name>ENERGY_1_AMP1_ENEMY</name>
-	<name>BATTLETOG1_BOARDER</name>
+	<name>ENERGY_1_AMP2_ENEMY</name>
+	<name>BATTLETOG2_BOARDER</name>
 </blueprintList>
 <blueprintList name="LIST_WEAPONS_AVALI">
 	<name>LASER_BURST_1</name>
@@ -89,8 +88,8 @@
 	<name>ION_CHAINGUN</name>
 	<name>MISSILES_2_ENEMY</name>
 	<name>MISSILES_1</name>
-	<name>GB_COIL_1_ENEMY</name>
-	<name>GB_COIL_2_ENEMY</name>
+	<name>TC_SINEWAVE</name>
+	<name>TC_MINIGUN_MK1</name>
 	<name>LASER_CHAINGUN_DAMAGE</name>
 	<name>LASER_LIGHT</name>
 </blueprintList>
@@ -569,7 +568,7 @@
 
 
 <!--/////////////////////AVALI ENEMY SHIP BLUEPRINTS/////////////////-->
-<shipBlueprint name="avali_illuminate_skirmisher" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
+<shipBlueprint name="AVALI_SKIRMISHER" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
 	<class>Avali Skirmisher</class>
 	<minSector>1</minSector>
 	<maxSector>8</maxSector>
