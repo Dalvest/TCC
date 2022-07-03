@@ -1097,7 +1097,7 @@
 </weaponBlueprint>
 
 <weaponBlueprint name="TC_MFK_BATTERY">
-	<type>MISSILES</type>
+	<type>BURST</type>
 	<title>Stolen MFK Battery Artillery</title>
 	<tip>tip_missiles</tip>
 	<short>MFK Battery Arty</short>
@@ -1136,6 +1136,22 @@
 		<projectile count="2" fake="true">tc_stolen_battery_shot_7</projectile>
 		<projectile count="2" fake="true">tc_stolen_battery_shot_8</projectile>
 	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<explosion>explosion_random</explosion>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
 	<weaponArt>tc_stolen_battery</weaponArt>
 	<iconImage>tc_stolen_battery</iconImage>
 </weaponBlueprint>
