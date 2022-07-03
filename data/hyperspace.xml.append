@@ -38,24 +38,24 @@
 
 		<!--///////////////AVALI EVENT STUFF/////////-->
 		<event name="INSTALL_LAB_AVALI_DENSEFLUFF">
-		<hiddenAug>LAB_AVALI_DENSEFLUFF</hiddenAug>
-		<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-		<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-	</event>
-	<event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
-		<hiddenAug>LAB_AVALI_FLAMECLOAKS</hiddenAug>
-		<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-		<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-	</event>
-	<event name="INSTALL_LAB_AVALI_CYBERNETIC">
-		<!--pardon the naming scheme, enhanced cybernetics used to be a lab, and no clone XP was an exclusive aug to avali C, but now its external enhanced cybernetics-->
-		<hiddenAug>LAB_AVALI_NOCLONEXP</hiddenAug>
-		<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-		<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-	</event>
-	<bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
-	<!--sector stuff-->
-	<eventFile>avali</eventFile>
+			<hiddenAug>LAB_AVALI_DENSEFLUFF</hiddenAug>
+			<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
+			<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
+		</event>
+		<event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
+			<hiddenAug>LAB_AVALI_FLAMECLOAKS</hiddenAug>
+			<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
+			<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
+		</event>
+		<event name="INSTALL_LAB_AVALI_CYBERNETIC">
+			<!--pardon the naming scheme, enhanced cybernetics used to be a lab, and no clone XP was an exclusive aug to avali C, but now its external enhanced cybernetics-->
+			<hiddenAug>LAB_AVALI_NOCLONEXP</hiddenAug>
+			<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
+			<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
+		</event>
+		<bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
+		<!--sector stuff-->
+		<eventFile>avali</eventFile>
 	</events>
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -424,7 +424,7 @@
 		    <otherUnlocks>
 					<ship>PLAYER_SHIP_SCRAPPER</ship>
 					<ship>PLAYER_SHIP_TRASH_MINER</ship>
-		      		<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+					<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
 					<ship>PLAYER_SHIP_SDM</ship>
 					<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
 					<ship>PLAYER_SHIP_COROSSUS</ship>
