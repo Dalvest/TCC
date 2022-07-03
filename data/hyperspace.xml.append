@@ -104,8 +104,8 @@
 			<crew>
 				<scrapper_engineer room="0"/>
 				<scrapper_heavy room="1"/>
-				<scrapper room="1"/>
-				<scrapper room="1"/>
+				<scrapper_soldier room="1"/>
+				<scrapper_soldier room="1"/>
 				<scrapper room="1"/>
 				<scrapper room="2"/>
 			</crew>
@@ -445,7 +445,7 @@
 				<scrapper room="9" name="Zog" />
 				<trash_eater room="0" name="Trash Eater" />
 				<scrapper_engineer room="7" />
-				<scrapper_heavy room="6" />
+				<scrapper_soldier room="6" />
 			</crew>
 		</mod-append:customShip>
 
@@ -578,7 +578,7 @@
 				<scrapper room="9" name="Zog" />
 				<trash_eater room="0" name="Trash Eater" />
 				<scrapper_engineer room="7" />
-				<scrapper_heavy room="6" />
+				<scrapper_soldier room="6" />
 			</crew>
 		</mod-append:customShip>
 
@@ -733,6 +733,8 @@
 
 		<mod-append:race name="scrapper_soldier">
 			<maxHealth>125</maxHealth>
+			<canRepair>false</canRepair>
+			<canMan>false</canMan>
 			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 			<canSuffocate>false</canSuffocate>
 			<repairSpeed>1</repairSpeed>
