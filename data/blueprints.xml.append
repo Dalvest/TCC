@@ -1920,6 +1920,58 @@
 	<stackable>false</stackable>
 </augBlueprint>
 
+<!--//////////////////////// AVALI AUGMENTS ////////////////////-->
+<!--old adv cybernetics? cringe
+	<augBlueprint name="LAB_AVALI_CYBERNETIC">
+		<title>Enhanced Cybernetics</title>
+		<desc>Avali gain increased movement speed and melee damage, and reduced fire damage and healing speed.</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>-->
+<augBlueprint name="LAB_AVALI_FLAMECLOAKS">
+	<!--descs of these ones dont matter, theyre internals-->
+	<title>Flame Retardent Cloaks</title>
+	<desc>Avali take less damage from fire, and extinguish them faster.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="LAB_AVALI_DENSEFLUFF">
+	<title>Dense Fluff</title>
+	<desc>Avali move slower, take more fire damage, and less combat damage.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="LAB_AVALI_NOCLONEXP">
+	<title>Enhanced Cybernetics</title>
+	<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
+	<cost>40</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="SHIP_AVALI">
+	<title>Avali</title>
+	<desc>Avali upgrade installed.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="LAB_AVALI_INSTALLED">
+	<title>Avali</title>
+	<desc>Avali upgrade installed.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="EX_LAB_AVALI_NOCLONEXP">
+	<title>Enhanced Cybernetics [L]</title>
+	<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
+	<cost>40</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -3674,6 +3726,319 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="human" />
 	<crewCount amount="1" class="engi" />
 </shipBlueprint>
+
+<!--//////////////////AVALI SHIPS//////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_AVALI" layout="avali_cruiser_A" img="avali_cruiser_A">
+	<class>Avali Cruiser</class>
+	<name>Oryzivora</name>
+	<unlock id="ship_PLAYER_SHIP_AVALI_unlock" />
+	<desc>This powerful Avali-made cruiser comes with one critical weakness; it does not have shields.</desc>
+	<systemList>
+		<battery power="1" room="17" max="2" start="false" img="room_battery_15" />
+		<cloaking power="1" room="14" start="true" img="room_cloaking_orchid_2" />
+		<clonebay power="1" room="9" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="13" start="true" img="room_doors_2">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="5" max="8" start="true" img="room_drones_3" />
+		<engines power="2" room="15" start="true" img="room_engines_4">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="6" start="false" img="room_hacking_2" />
+		<medbay power="1" room="9" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="3" start="false" img="room_mind_5" />
+		<oxygen power="1" room="2" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="12" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="8" max="8" start="false" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="16" start="false" />
+		<weapons power="3" room="1" max="8" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="7" count="3">
+		<weapon name="LASER_HEAVY_1" />
+		<weapon name="LASER_CHAINGUN" />
+	</weaponList>
+	<droneList drones="9" count="3">
+		<drone name="FOCUS_1_AMP2" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<aug name="PRE_SCANNER" />
+</shipBlueprint>
+<shipBlueprint name="PLAYER_SHIP_AVALI_2" layout="avali_cruiser_B" img="avali_cruiser_B">
+	<class>Avali Cruiser</class>
+	<name>Trochilidae</name>
+	<unlock id="ship_PLAYER_SHIP_AVALI_2_unlock" />
+	<desc>This cruiser, while lacking shields and cloaking, has a powerful arsenal of drones,</desc>
+	<systemList>
+		<battery power="1" room="8" max="2" start="false" img="room_battery" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking_orchid_3" />
+		<clonebay power="1" room="6" start="false">
+			<slot>
+				<number>2</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="7" start="true" img="room_doors_2">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="5" room="0" max="8" start="true" img="room_drones_avali_2" />
+		<engines power="2" room="5" start="true" img="room_engines_4">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="9" start="false" img="room_hacking_9" />
+		<medbay power="1" room="6" start="true" img="room_medbay_7">
+			<slot>
+				<number>2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="10" start="false" img="room_mind_3" />
+		<oxygen power="1" room="16" start="true" img="room_oxygen_9" />
+		<pilot power="1" room="2" start="true" img="room_pilot_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="12" start="true" img="room_sensors_4">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="1" room="1" max="8" start="true" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="15" start="false" />
+		<weapons power="1" room="11" max="8" start="true" img="room_weapons_11">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="8" count="2">
+		<weapon name="GATLING_ANCIENT" />
+	</weaponList>
+	<droneList drones="15" count="4">
+		<drone name="HELLRAISER_HULL" />
+		<drone name="COMBAT_1_LASER" />
+		<drone name="DEFENSE_1" />
+		<drone name="COMBAT_CONSERVATIVE_LASER" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="8" />
+	<aug name="DRONE_RECOVERY" />
+	<aug name="COMBAT_SHIELDS_JAMMER" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="engi_separatist" />
+</shipBlueprint>
+<shipBlueprint name="PLAYER_SHIP_AVALI_3" layout="avali_cruiser_C" img="avali_cruiser_c">
+	<class>Avali Cruiser</class>
+	<name>Cathartes Aura</name>
+	<unlock id="ship_PLAYER_SHIP_AVALI_3_unlock" />
+	<desc>This cruiser, whilst struggling to get through shields, specializes in disrupting and manipulating the enemy crew in a variety of ways.</desc>
+	<systemList>
+		<battery power="1" room="2" max="2" start="false" img="room_battery_6" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="6" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="7" start="true" img="room_doors_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="10" max="8" start="true" img="room_drones_4" />
+		<engines power="2" room="9" start="true" img="room_engines_4">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="0" start="false" img="room_hacking_7" />
+		<medbay power="1" room="6" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="4" start="true" img="room_mind_7" />
+		<oxygen power="1" room="11" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="13" start="true" img="room_pilot_5">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="3" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="1" max="8" start="true" img="room_shields_6">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="12" start="false" />
+		<weapons power="3" room="5" max="8" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="15" count="3">
+		<weapon name="ION_FIRE" />
+		<weapon name="BOMB_LOCK" />
+	</weaponList>
+	<droneList drones="15" count="3">
+		<drone name="PEST_RAD" />
+		<drone name="PEST_DEBUFF" />
+	</droneList>
+	<crewCount amount="1" class="phantom" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<aug name="DRONE_RECOVERY" />
+	<health amount="30" />
+	<maxPower amount="8" />
+</shipBlueprint>
+<shipBlueprint name="PLAYER_SHIP_AVALI_SLOT2" layout="avali_cruiser_D" img="avali_cruiser_D">
+	<class>Avali Cruiser</class>
+	<name>Accipitridae</name>
+	<desc>This merchant cruiser was halfway through loading with junk to sell before it was pushed into military service. Luckily it's cargo teleporter can serve as an offense.</desc>
+	<systemList>
+		<battery power="1" room="17" start="false" img="room_battery_6" />
+		<cloaking power="1" room="9" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="1" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="12" start="true" img="room_doors_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="8" start="false" img="room_drones_rand_4" />
+		<engines power="2" room="5" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="7" start="false" img="room_hacking_2" />
+		<medbay power="1" room="1" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="10" start="false" img="room_mind_5" />
+		<oxygen power="1" room="6" start="true" img="room_oxygen_3" />
+		<pilot power="2" room="2" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="11" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="4" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="0" start="true" />
+		<weapons power="2" room="3" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="8" count="4">
+		<weapon name="RUSTY_LASER_BURST_5" />
+		<weapon name="LASER_CHARGEGUN_2" />
+		<weapon name="ANCIENT_HAVOC" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<aug name="STORE_BEACON" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="avali" />
+	<crewCount amount="1" class="rock_outcast" />
+</shipBlueprint>
 <!--/////////////////////JULK'S SYSTEM CAP EXPANDER CODE//////////////////////////-->
 
 <mod:findName type="systemBlueprint" name="weapons">
@@ -4001,6 +4366,95 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
+<!--///////////////BIRB BRIBRBIIBRIBRB BIRB//////////////////////-->
+<crewBlueprint name="avali">
+	<desc>Rather social avian creatures, best when paired with more of their kind. Considered cute by most.</desc>
+	<cost>40</cost>
+	<title>Avali</title>
+	<short>Avali</short>
+	<rarity>3</rarity>
+	<powerList>
+		<power>Moves at 1.5x speed, repairs at 1.2x.</power>
+		<power>Takes 2x damage from fire - extinguishes them at half speed.</power>
+		<power>Has 70 HP, deals 0.8x damage.</power>
+		<power>Buffs all friendly Avali on the ship, giving them +5 HP, +10% repair speed and +5% combat damage.</power>
+		<power>Additionally, buffs all friendly Avali in the room, giving them +10 HP, +15% repair and +10% combat damage. Stacks with the ship wide buffs.</power>
+	</powerList>
+	<colorList>
+		<layer>
+			<!--fluff-->
+			<color r="255" g="255" b="255" a="0.8" />
+			<!--lightened-->
+			<color r="90" g="60" b="40" a="0.8" />
+			<!--darkened-->
+			<color r="255" g="124" b="89" a="0" />
+			<!--base-->
+		</layer>
+		<layer>
+			<!--cloak-->
+			<color r="255" g="255" b="255" a="0" />
+			<!--base-->
+			<color r="255" g="255" b="255" a="0.9" />
+			<!--white-->
+			<color r="255" g="255" b="255" a="0.2" />
+			<!--yellow-->
+			<color r="140" g="140" b="255" a="0.7" />
+			<!--blue-->
+			<color r="255" g="200" b="130" a="0.6" />
+			<!--tan-->
+			<color r="255" g="145" b="130" a="0.7" />
+			<!--red-->
+			<color r="255" g="138" b="0" a="0.7" />
+			<!--orange-->
+		</layer>
+		<layer>
+			<!--plummage-->
+			<color r="61" g="59" b="53" a="0" />
+			<!--base-->
+			<color r="0" g="0" b="0" a="0.8" />
+			<!--darkened-->
+			<color r="201" g="127" b="11" a="0.7" />
+			<!--orange-->
+			<color r="255" g="0" b="0" a="0.8" />
+			<!--red-->
+			<color r="46" g="200" b="60" a="0.7" />
+			<!--green-->
+			<color r="255" g="0" b="174" a="0.9" />
+			<!--pink-->
+			<color r="113" g="57" b="205" a="0.8" />
+			<!--purple-->
+		</layer>
+	</colorList>
+</crewBlueprint>
+<crewBlueprint name="illuminant">
+	<desc>Elite Avali Crew. The highest ranks of the Illuminate's military, and an inspiring leader for their fellow avians.</desc>
+	<cost>120</cost>
+	<title>Avali Illuminant</title>
+	<short>Illuminant</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>YOU SHOULD NEVER SEE THIS</power>
+		<power>Moves at 2x speed.</power>
+		<power>Takes 1.5x damage from fire - extinguishes them at 0.8x speed.</power>
+		<power>Has 90 HP, deals normal damage.</power>
+		<power>Buffs all friendly Avali on the ship, granting them +5% combat damage resistance, +0.5x movespeed, +10 HP and +10% damage dealt.</power>
+		<power>Additionally, buffs all friendly Avali in the room, giving them +10 HP, +10% combat damage resistance and +15% damage dealt. Stacks with the ship wide buffs.</power>
+	</powerList>
+</crewBlueprint>
+<crewBlueprint name="technician">
+	<desc>repair birds or whatever</desc>
+	<cost>70</cost>
+	<title>Avali Technician</title>
+	<short>Illuminant</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>YOU SHOULD NEVER SEE THIS</power>
+		<power>1.5x repair speed</power>
+		<power>Deals 0.7x combat damage</power>
+		<power>Takes 1.4x damage from fire - extinguishes them at half speed.</power>
+		<power>Suffocates 20% slower</power>
+	</powerList>
+</crewBlueprint>
 
 <!--///////Functional crew//////-->
 <crewBlueprint name="tcc_generic_crewjank">

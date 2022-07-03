@@ -38,6 +38,63 @@
 	<name>TC_BOMB_SHOTGUN_INSTANT</name>
 </blueprintList>
 
+<!--//////////AVALI BLUEPRINT LISTS////////////-->
+
+<blueprintList name="LIST_CHECKCREW_AVALI">
+	<name>avali</name>
+</blueprintList>
+<blueprintList name="LIST_CREW_AVALI">
+	<name>avali</name>
+</blueprintList>
+<!--just a list of the weapons ariadne can get you-->
+<blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH">
+	<name>MISSILES_FIRE</name>
+	<name>MINES_FIRE</name>
+</blueprintList>
+<blueprintList name="LIST_DRONES_MADOK">
+	<name>REPAIR</name>
+	<!--placeholders until loot versions added-->
+	<name>ION_1_AMP2</name>
+	<name>HELLRAISER_HULL</name>
+	<name>MANNING</name>
+	<name>BATTLETOG2_DEFEND</name>
+</blueprintList>
+<blueprintList name="SHIP_AVALI_FIGHT">
+	<name>avail_illuminate_skrimisher</name>
+</blueprintList>
+<blueprintList name="LIST_DRONES_AVALI">
+	<name>REPAIR</name>
+	<name>GUARDIAN_1_DRONE</name>
+	<name>GUARDIAN_1_MISSILE</name>
+	<name>DEFENSE_1_ENEMY</name>
+	<name>AMPHI_COMBAT</name>
+	<name>COMBAT_1_LASER</name>
+	<name>COMBAT_1_BEAM</name>
+	<name>COMBAT_2_LASER</name>
+	<name>COMBAT_2_BEAM</name>
+	<name>PEST_BREACH</name>
+	<name>ION_1_AMP1_ENEMY</name>
+	<name>ION_1_AMP2_ENEMY</name>
+	<name>ENERGY_1_AMP1_ENEMY</name>
+	<name>BATTLETOG1_BOARDER</name>
+</blueprintList>
+<blueprintList name="LIST_WEAPONS_AVALI">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2_ENEMY</name>
+	<name>LASER_HEAVY_CHAINGUN</name>
+	<name>LASER_CHAINGUN_ENEMY</name>
+	<name>LASER_CHAINGUN_2</name>
+	<name>ION_FIRE</name>
+	<name>ION_STUN</name>
+	<name>ION_CHAINGUN</name>
+	<name>MISSILES_2_ENEMY</name>
+	<name>MISSILES_1</name>
+	<name>GB_COIL_1_ENEMY</name>
+	<name>GB_COIL_2_ENEMY</name>
+	<name>LASER_CHAINGUN_DAMAGE</name>
+	<name>LASER_LIGHT</name>
+</blueprintList>
+
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
 	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>protogen_tracker</mod-append:name>
@@ -508,4 +565,61 @@
             <clonefail_lancer room="12" name="Lancer" />
 	</crew>
 	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+
+<!--/////////////////////AVALI ENEMY SHIP BLUEPRINTS/////////////////-->
+<shipBlueprint name="avali_illuminate_skirmisher" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
+	<class>Avali Skirmisher</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<cloaking power="1" max="3" room="2" start="true" />
+		<drones power="1" max="6" room="6" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<oxygen power="1" max="1" room="5" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="7" room="3" start="false" />
+		<weapons power="2" max="7" room="4" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="7" count="3" load="LIST_WEAPONS_AVALI" />
+	<droneList drones="7" count="2" load="LIST_DRONES_AVALI" />
+	<crewCount amount="2" max="4" class="avali" />
+	<health amount="6" />
+	<maxPower amount="10" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+<shipBlueprint name="MU_BOSS_ENGINEER_C" layout="MU_BOSS_ENGINEER_C" img="MU_BOSS_ENGINEER_C">
+	<class>Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<clonebay power="3" max="3" room="3" start="true" />
+		<doors power="3" max="3" room="25" start="true" />
+		<drones power="10" max="10" room="9" start="true" />
+		<engines power="2" max="2" room="14" start="true" />
+		<oxygen power="2" max="2" room="18" start="true" />
+		<pilot power="3" max="3" room="0" start="true" />
+		<shields power="3" max="9" room="13" start="true" />
+		<weapons power="4" max="4" room="10" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>5</droneSlots>
+	<weaponList missiles="0" count="2">
+		<weapon name="LASER_BURST_3" />
+		<weapon name="ION_STUN_2" />
+	</weaponList>
+	<droneList drones="20" count="4">
+		<drone name="ION_1_AMP2_ENEMY" />
+		<drone name="HELLRAISER_HULL" />
+		<drone name="BATTLETOG2_DEFEND" />
+		<drone name="REPAIR" />
+	</droneList>
+	<crewCount amount="1" max="1" class="technomanning" />
+	<health amount="15" />
+	<maxPower amount="30" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="EX_DRONE_SPEED" />
 </shipBlueprint>

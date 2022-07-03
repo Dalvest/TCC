@@ -53,6 +53,17 @@
 							</choice>
 					</event>
 				</mod-append:choice>
+				<!--//////////////AVALI SHIP THINGY, ACTUALLY ADD SOMETHING HERE//////////////-->
+				<mod-append:choice hidden="true" max_group="1" req="SHIP_AVALI" blue="false">
+				<text>Contact Federation command.</text>
+				<event>
+					<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. He recoils in shock at the sight of your ship. "holy shitr bird reference"</text>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="LAST_STAND_START_2"/>
+					</choice>
+				</event>
+			</mod-append:choice>
 			</mod:findLike>
 		</mod:findLike>
 	</mod:findName>

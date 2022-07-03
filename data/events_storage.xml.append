@@ -387,14 +387,19 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-  <!--//////////////////PROTOGEN//////////////////-->
+
 
   <mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
-
+      <!--//////////////////PROTOGEN//////////////////-->
     <mod-append:choice req="LIST_CREW_PROTOGEN" lvl="1" blue="false" hidden="true">
       <text>Look for Protogen crew.</text>
       <event load="STORAGE_CHECK_CREW_LIST_PROTOGEN"/>
     </mod-append:choice>
+      <!--//////////////////AVALI//////////////////-->
+    <mod-append:choice req="LIST_CHECKCREW_AVALI" blue="false" hidden="true">
+		   <text>Look for Avali crew</text>
+		   <event load="STORAGE_CHECK_CREW_LIST_AVALI" />
+	  </mod-append:choice>
 
     <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
       <mod:selector>Nevermind, do something else.</mod:selector>
@@ -627,7 +632,7 @@
     <text>Lancer quips at you happily using his tape recorder "PLEASE KEEP YOUR HANDS IN THE RIDE (whir) YOU- (whir) ARE IN A HARDHAT AREA (whir)". How cute of him!</text>
   </textList>
 
-  
+
   <!--////// KORA'S DIALOGUE ////////-->
 
   <event name="STORAGE_CHECK_CREW_KORA_SCAN">
@@ -657,7 +662,207 @@
     <text>Kora is crying in a corner. You give him a hug and tell him everything will be fine.</text>
   </textList>
 
-  
+  <!--//////////////AVALI TALK OPTIONS AND LABS AND STUFF///////////////////-->
+  <event name="STORAGE_CHECK_CREW_LIST_AVALI">
+  	<text>You look around for some crew to talk to.</text>
+  	<choice req="avali" blue="false" hidden="true">
+  		<text>Look for your Avali.</text>
+  		<event load="STORAGE_CHECK_CREW_AVALI" />
+  	</choice>
+  	<choice>
+  		<text>Nevermind, do something else.</text>
+  		<event load="STORAGE_CHECK_CREW" />
+  	</choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_AVALI">
+  	<text>What do you want to do with your Avali?</text>
+  	<choice>
+  		<text>Nevermind, do something else.</text>
+  		<event load="STORAGE_CHECK" />
+  	</choice>
+  	<choice hidden="true">
+  		<text id="talk_to_crew" />
+  		<event load="STORAGE_CHECK_CREW_AVALI_TALK" />
+  	</choice>
+  	<choice hidden="true">
+  		<text id="scan_crew" />
+  		<event load="STORAGE_CHECK_CREW_AVALI_SCAN" />
+  	</choice>
+  </event>
+  <!--gah, so outdated-->
+  <event name="STORAGE_CHECK_CREW_AVALI_SCAN">
+  	<text>AVALI DETAILS
+  	SPECIES? [Avali] SUBTYPE? [None]
+  	Subtype Details: Genetic, Standard
+  	Stats: Learns skills 5% faster. Takes twice as much fire damage and extinguishes at half speed. Moves at 1.5x speed. Has 70 HP. Repairs at 1.2x speed. Deals 0.8x melee damage and 1.5x ranged.</text>
+  	<choice>
+  		<text>Continue...</text>
+  		<event load="STORAGE_CHECK" />
+  	</choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_AVALI_TALK">
+  	<text load="TEXT_CREW_TALK_AVALI" />
+  	<choice>
+  		<text>Continue...</text>
+  		<event load="STORAGE_CHECK" />
+  	</choice>
+  </event>
+  <!--need to rewrite and add more-->
+  <textList name="TEXT_CREW_TALK_AVALI">
+  	<text>Your Avali complains that the ship is much too hot.</text>
+  	<text>Your Avali thinks that your consoles are "primitive".</text>
+  	<text>Your Avali hopes that you have extinguishers. A Rockman would work too.</text>
+  	<!--not quite satisfied with these
+  	<text>Your Avali wishes that you'd install a "Nexus Link", when asked what that is they spout something about quantum entanglement and the "world wide web". Then glare at you when you don't understand.</text>
+  	<text>Your Avali calls the orchids a bunch of "uninspired knock-off Avali".</text>-->
+  	<text>Your Avali wishes they could turn invisible.</text>
+  	<text>Your Avali complains that their sprite is too small.</text>
+  	<text>Your Avali complains about having to wear a cloak 24/7, when you tell them to just take it off they mutter something about "looking better with it on" and "sprite being hard to make otherwise"</text>
+  </textList>
+  <mod:findName type="event" name="STORAGE_CHECK_LAB">
+  	<mod-append:choice req="LIST_CREW_AVALI" blue="false" hidden="true" max_group="581">
+  		<text>Avali.</text>
+  		<event load="STORAGE_CHECK_LAB_AVALI" />
+  	</mod-append:choice>
+  </mod:findName>
+  <mod:findName type="event" name="STORAGE_CHECK_LAB">
+  	<mod:findWithChildLike type="choice" child-type="text">
+  		<mod:selector>Nevermind.</mod:selector>
+  		<mod:setAttributes max_group="582" />
+  	</mod:findWithChildLike>
+  </mod:findName>
+  <event name="STORAGE_CHECK_LAB_AVALI">
+  	<text>You are viewing the lab menu for: [AVALI]</text>
+  	<choice req="LAB_AVALI_NOCLONEXP" lvl="1" max_group="0" blue="false" hidden="true">
+  		<text>Currently Installed: Avian Interdependancy.
+  		[Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_FLAMECLOAKS" lvl="1" max_group="0" blue="false" hidden="true">
+  		<text>Currently Installed: Flame Retardent Cloaks.
+  		[Avali crew take 35% less damage from fire, and extinguish them 80% faster.]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_DENSEFLUFF" lvl="1" max_group="0" blue="false" hidden="true">
+  		<text>Currently Installed: Dense Fluff.
+  		[Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
+  		<text>Currently Installed: None</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="1" blue="false" hidden="true">
+  		<text>Pri: Avian Interdependancy. [An upgrade is already installed]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="1" blue="false" hidden="true">
+  		<text>Pri: Avian Interdependancy.</text>
+  		<event load="STORAGE_CHECK_LAB_AVALI_CYBERNETIC" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="2" blue="false" hidden="true">
+  		<text>Pri: Flame Retardant Cloaks. [An upgrade is already installed]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="2" blue="false" hidden="true">
+  		<text>Pri: Flame Retardant Cloaks.</text>
+  		<event load="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="3" blue="false" hidden="true">
+  		<text>Pri: Dense Fluff. [An upgrade is already installed]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="3" blue="false" hidden="true">
+  		<text>Pri: Dense Fluff.</text>
+  		<event load="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF" />
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="4" blue="false" hidden="true">
+  		<text>Go back.</text>
+  		<event load="STORAGE_CHECK_LAB_LOAD" />
+  	</choice>
+  </event>
+  <event name="STORAGE_CHECK_LAB_AVALI_CYBERNETIC">
+  	<text>You are about to install the Avian Interdependancy modification.
+  	[Effects: Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]
+  	(small note from dev; yes, future varients will boost different stats)
+
+  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
+  	<choice hidden="true">
+  		<text>Install the modification. [Cost: 30~ 3|]</text>
+  		<event>
+  			<text>You install the modification.</text>
+  			<item_modify>
+  				<item type="drones" min="-3" max="-3" />
+  				<item type="scrap" min="-20" max="-20" />
+  			</item_modify>
+  			<choice hidden="true">
+  				<text>Continue...</text>
+  				<event load="INSTALL_LAB_AVALI_CYBERNETIC" />
+  			</choice>
+  		</event>
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+  		<text>Nevermind.</text>
+  		<event load="STORAGE_CHECK_LAB_LOAD" />
+  	</choice>
+  </event>
+  <event name="INSTALL_LAB_AVALI_CYBERNETIC">
+  	<event />
+  </event>
+  <event name="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS">
+  	<text>You are about to install the Flame Retardent Cloaks modification.
+  	[Effects: Avali crew take 35% less damage from fire, and extinguish them 80% faster.]
+
+  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
+  	<choice hidden="true">
+  		<text>Install the modification. [Cost: 6{]</text>
+  		<event>
+  			<text>You install the modification.</text>
+  			<item_modify>
+  				<item type="fuel" min="-6" max="-6" />
+  			</item_modify>
+  			<choice hidden="true">
+  				<text>Continue...</text>
+  				<event load="INSTALL_LAB_AVALI_FLAMECLOAKS" />
+  			</choice>
+  		</event>
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+  		<text>Nevermind.</text>
+  		<event load="STORAGE_CHECK_LAB_LOAD" />
+  	</choice>
+  </event>
+  <event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
+  	<event />
+  </event>
+  <event name="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF">
+  	<text>You are about to perform the Dense Fluff modification.
+  	[Effects: Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]
+
+  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
+  	<choice hidden="true">
+  		<text>Install the modification. [Cost: 3{]</text>
+  		<event>
+  			<text>You install the modification.</text>
+  			<item_modify>
+  				<item type="fuel" min="-3" max="-3" />
+  			</item_modify>
+  			<choice hidden="true">
+  				<text>Continue...</text>
+  				<event load="INSTALL_LAB_AVALI_DENSEFLUFF" />
+  			</choice>
+  		</event>
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+  		<text>Nevermind.</text>
+  		<event load="STORAGE_CHECK_LAB_LOAD" />
+  	</choice>
+  </event>
+  <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
+  	<event />
+  </event>
+
+
   <!--////// SCRAPPER STORAGE CHECK STUFF ////////-->
 
   <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
