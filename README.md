@@ -54,7 +54,7 @@ Good Luck! Don't get compacted!
 
 # CHANGELOG
 
-# Update 1.1
+### Update 1.1
 - GITHUB page (link's up above!)
 - SCRAPPERS! A new subfaction of Lanius with a pretty fun backstory.
 - The RAPTOR's Right Hand flak, Raptor LMG, Lance Antipersonnel, SCRAPFLAK, Unscrapflak, Rescrapflak, RSA TAGGER and MINICANNON and Deconstructor Beam + a few others I can't recall rn;
