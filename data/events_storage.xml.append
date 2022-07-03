@@ -732,7 +732,7 @@
   <mod:findName type="event" name="STORAGE_CHECK_LAB">
   	<mod:findWithChildLike type="choice" child-type="text">
   		<mod:selector>Nevermind.</mod:selector>
-  		<mod:setAttributes max_group="582" />
+  		<mod:setAttributes max_group="582" req="pilot" lvl="1" blue="false"/>
   	</mod:findWithChildLike>
   </mod:findName>
   <event name="STORAGE_CHECK_LAB_AVALI">
