@@ -4098,11 +4098,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="scrapper_soldier">
 	<title>Scrapper Soldier</title>
 	<short>Soldier</short>
-	<desc>A Lanius Scrapper given hammer-like fists to shred through anything in its path.</desc>
+	<desc>A Lanius Scrapper with scythe-like fists to shred through anything in its path. This makes extinguishing, manning and repairing impossible, but at least this scrapper is highly combat effective.</desc>
 	<cost>60</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
+		<power>Cannot man, repair and extinguish systems</power>
 		<power>0.75x oxygen drain</power>
 		<power>0.75x fire damage taken</power>
 		<power>2x damage</power>
