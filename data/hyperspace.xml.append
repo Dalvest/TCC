@@ -436,31 +436,6 @@
       </unlock>
 		</mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
-			<crewLimit>20</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_SLUG</hiddenAug>
-			<crew>
-				<scrapper room="2" name="Mochi" />
-				<scrapper room="9" name="Zog" />
-				<trash_eater room="0" name="Trash Eater" />
-				<scrapper_engineer room="7" />
-				<scrapper_soldier room="6" />
-			</crew>
-		</mod-append:customShip>
-
-		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
-			<crewLimit>10</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
-			<crew>
-				<protogen room="2" />
-				<kiviekith room="7" name="Orvech Vonor" />
-				<kiviekith room="14" name="Altan" />
-				<kora room="0" name="Kora" />
-				<scrapper room="15" />
-			</crew>
-		</mod-append:customShip>
 	<!--/////// PORTED SHIPS //////-->
 
 		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true"/>
@@ -518,7 +493,7 @@
 			</unlock>
 		</mod-append:ship>
 
-		<mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" />
+
 
 			<mod-append:customShip name="PLAYER_SHIP_AVALI">
 				<hiddenAug>SHIP_AVALI</hiddenAug>
@@ -556,7 +531,7 @@
 		    <otherUnlocks>
 					<ship>PLAYER_SHIP_SCRAPPER</ship>
 					<ship>PLAYER_SHIP_TRASH_MINER</ship>
-		      		<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+					<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
 					<ship>PLAYER_SHIP_SDM</ship>
 					<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
 					<ship>PLAYER_SHIP_COROSSUS</ship>
