@@ -412,6 +412,22 @@
     </mod:findWithChildLike>
   </mod:findName>
 
+
+
+  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_HUMAN">
+    <mod-append:choice req="kora" lvl="1" blue="false" hidden="true">
+      <text>Look for Kora.</text>
+      <event load="STORAGE_CHECK_CREW_KORA"/>
+    </mod-append:choice>
+
+    <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
+      <mod:selector>Nevermind, do something else.</mod:selector>
+      <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
+    </mod:findWithChildLike>
+
+
+  </mod:findName>
+
 <!--///////////////PROTOGEN TALK TO CREW//////////////-->
 
   <event name="STORAGE_CHECK_CREW_LIST_PROTOGEN">
@@ -704,6 +720,23 @@
   </textList>
 
   <!--////// KORA'S DIALOGUE ////////-->
+
+  <event name="STORAGE_CHECK_CREW_KORA">
+    <text>What do you want to do with Kora?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_KORA_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_KORA_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
 
   <event name="STORAGE_CHECK_CREW_KORA_SCAN">
     <text>TRACKER'S DETAILS
