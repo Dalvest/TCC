@@ -2155,6 +2155,130 @@
 		<time>1.0</time>
 	</anim>
 
+<!--/////////////// SERGALS //////////////-->
+
+<animSheet name="sergal_cheese" w="315" h="455" fw="35" fh="35">people/sergal_cheese_base.png</animSheet>
+	<anim name="sergal_cheese_clone">
+		<sheet>sergal_cheese</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="sergal_cheese_death_right">
+		<sheet>sergal_cheese</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="sergal_cheese_death_left">
+		<sheet>sergal_cheese</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="sergal_cheese_walk_down">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_walk_right">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_walk_up">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_walk_left">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_shoot_down">
+		<sheet>sergal_cheese</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_shoot_right">
+		<sheet>sergal_cheese</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_shoot_up">
+		<sheet>sergal_cheese</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_shoot_left">
+		<sheet>sergal_cheese</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_fire_down">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_fire_right">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_fire_up">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_fire_left">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_repair">
+		<sheet>sergal_cheese</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_punch_up">
+		<sheet>sergal_cheese</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_punch_down">
+		<sheet>sergal_cheese</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="sergal_cheese_teleport">
+		<sheet>sergal_cheese</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="sergal_cheese_type_right">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="sergal_cheese_type_left">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="sergal_cheese_type_up">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="sergal_cheese_type_down">
+		<sheet>sergal_cheese</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="sergal_cheese_portrait">
+		<sheet>sergal_cheese</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+	
 <!--/////////////////////////////////////////////////// PROTOGEN ZONE ////////////////////////////////////////////////////-->
 <!--///////////////GENERIC PROTOGEN//////////////-->
 
