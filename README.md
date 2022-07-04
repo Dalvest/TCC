@@ -9,7 +9,7 @@ Lead Devs: Zuggo, Dalvest
 
 Coders: Zandoware, Choosechee, Vertaalfout, Kommandant_Julk
 
-Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee, Wabbles, ConMan, Skye, Typerim
+Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee, Wabbles, ConMan, Skye, Typerim, Pedrosian96
 
 Playtesters: marcrusian, DemonFusionGamer, The Ghost Hugger, Lex
 
@@ -17,7 +17,9 @@ Special Thanks to Cyrus106 for inspiring me to do this and helping me begin my j
 
 # FEATURED MODS
 
-A "side quest" of ours is to try and compile similar mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair and Avali!
+A "side quest" of ours is to try and compile similar high quality mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair, Avali and FEDERATION SPECIAL FORCES! 
+
+We also ported several ships to Hyperspace, such as the Potential and Stalwart Defense!
 
 ### LOAD ORDER SHENANIGANS
 
