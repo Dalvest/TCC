@@ -541,7 +541,7 @@
 			<unlock variant="b" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
-      </unlock>
+    	</unlock>
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
@@ -570,6 +570,124 @@
 			</crew>
 		</mod-append:customShip>
 
+		<!--/////// FSF BLACK OPS //////-->
+
+		<mod-append:ship name="PLAYER_SHIP_BLACKOPS" b="true" c="true" />
+
+		<mod-append:customShip name="PLAYER_SHIP_BLACKOPS">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_STEALTH</hiddenAug>
+			<crewLimit>4</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_HARD_BLACKOPS_2">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_STEALTH</hiddenAug>
+			<crewLimit>4</crewLimit>
+		</mod-append:customShip>	
+
+		<mod-append:customShip name="PLAYER_SHIP_HARD_BLACKOPS_3">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_STEALTH</hiddenAug>
+			<crewLimit>4</crewLimit>
+		</mod-append:customShip>
+
+		<!--/////// FSF MINESWEEPER //////-->
+
+		<mod-append:ship name="PLAYER_SHIP_MINESWEEPER" b="true" c="true" />
+
+		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FED</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER_2">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER_3">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+
+
+			<rooms>
+			<room id="10"> <!--doors-->
+				<roomAnim renderLayer="0">resist_2x1</roomAnim>
+				<roomAnim renderLayer="3">resist_icon</roomAnim>
+				<sysDamageResistChance>100</sysDamageResistChance>
+			</room>
+			<room id="21"> <!--engines-->
+				<roomAnim renderLayer="0">resist_2x1</roomAnim>
+				<roomAnim renderLayer="3">resist_icon</roomAnim>
+				<sysDamageResistChance>100</sysDamageResistChance>
+			</room>
+			<room id="0"> <!--pilot-->
+				<roomAnim renderLayer="0">resist_2x2</roomAnim>
+				<roomAnim renderLayer="3">resist_icon</roomAnim>
+				<sysDamageResistChance>100</sysDamageResistChance>
+			</room>
+			<room id="9"> <!--sensors-->
+				<roomAnim renderLayer="0">resist_2x1</roomAnim>
+				<roomAnim renderLayer="3">resist_icon</roomAnim>
+				<sysDamageResistChance>100</sysDamageResistChance>
+			</room>
+			<room id="6"> <!--weapons-->
+				<roomAnim renderLayer="0">resist_2x1</roomAnim>
+				<roomAnim renderLayer="3">resist_icon</roomAnim>
+				<sysDamageResistChance>100</sysDamageResistChance>
+			</room>
+			</rooms>
+
+		</mod-append:customShip>
+
+		<!--/////// FSF CYBERWARFARE //////-->
+
+		<mod-append:ship name="PLAYER_SHIP_CYBER" b="true" c="true" />
+
+		<mod-append:customShip name="PLAYER_SHIP_CYBER">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_CYBER_2">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_CYBER_3">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<autoShipForce>true</autoShipForce>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<!--/////// FSF NBC //////-->
+
+		<mod-append:ship name="PLAYER_SHIP_NBC" b="true" c="true" />
+
+		<mod-append:customShip name="PLAYER_SHIP_NBC">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_NBC_2">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_NBC_3">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
 
 	</mod:findLike>
 
@@ -601,12 +719,12 @@
 			<!--Page 2-->
 			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship> <!--(lack of) Potential-->
 			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!--Stalwart Defense-->
-			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship>
-			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship>
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
+			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
+			<mod-append:ship>PLAYER_SHIP_BLACKOPS</mod-append:ship> <!-- Call of Duty: Black Ops II -->
+			<mod-append:ship>PLAYER_SHIP_MINESWEEPER</mod-append:ship> <!-- Windows Minesweeeper -->
+			<mod-append:ship>PLAYER_SHIP_CYBER</mod-append:ship> <!-- Cyberwarfare (Malwarebytes???) -->
+			<mod-append:ship>PLAYER_SHIP_NBC</mod-append:ship> <!-- NBC -->
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
 			<mod-append:empty/>
 
