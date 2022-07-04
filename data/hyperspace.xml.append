@@ -1,3 +1,8 @@
+<mod:findLike type="version"><!--Adjusts version check, remove later or adjust as necessary-->
+  <mod:setValue>^1.2.0</mod:setValue>
+</mod:findLike>
+
+
 <FTL><!--appending to Inferno-Core-->
 	<events>
 		<variable name="tcc_called_compactor" op="set" val="0"/>
@@ -584,7 +589,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_STEALTH</hiddenAug>
 			<crewLimit>4</crewLimit>
-		</mod-append:customShip>	
+		</mod-append:customShip>
 
 		<mod-append:customShip name="PLAYER_SHIP_HARD_BLACKOPS_3">
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -1034,9 +1039,9 @@
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
-		
+
 		<!--///////SERGALS////////-->
-		
+
 		<mod-append:race name="sergal_cheese">
 			<maxHealth>80</maxHealth>
 			<repairSpeed>1.7</repairSpeed>
