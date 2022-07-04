@@ -5015,9 +5015,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--///////////////////// FEDERATION CARRIER //////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER" layout="federation_carrier" img="federation_carrier">
-	<class id="text_PLAYER_SHIP_FEDERATION_CARRIER_class">Federation Carrier</class>
-	<name id="text_PLAYER_SHIP_FEDERATION_CARRIER_name">Star Sovereign</name>
-	<desc id="text_PLAYER_SHIP_FEDERATION_CARRIER_desc">This is a highly drone-focused Federation Fleet Support carrier - it's got some pretty old spec equipment, but it'll do...</desc>
+	<class>Federation Carrier</class>
+	<name>Star Sovereign</name>
+	<desc>This is a highly drone-focused Federation Fleet Support carrier - it's got some pretty old spec equipment, but it'll do...</desc>
 	<systemList>
 		<battery power="1" room="9" start="true" img="room_battery_9" />
 		<cloaking power="1" room="18" start="false" img="room_cloaking" />
@@ -5073,6 +5073,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="3" count="2">
@@ -5081,17 +5082,17 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="15" count="4">
 		<drone name="COMBAT_ION_NEW" />
 	</droneList>
-	<health amount="30" />
-	<maxPower amount="10" />
+	<health amount="45" />
+	<maxPower amount="9" />
 	<crewCount amount="1" class="protogen" />
 	<crewCount amount="1" class="rock_commando" />
 	<crewCount amount="2" class="human_soldier" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_2" layout="federation_carrier_2" img="federation_carrier_2">
-	<class id="text_PLAYER_SHIP_FEDERATION_CARRIER_2_class">Federation Carrier</class>
-	<name id="text_PLAYER_SHIP_FEDERATION_CARRIER_2_name">The Scylla</name>
-	<desc id="text_PLAYER_SHIP_FEDERATION_CARRIER_2_desc">This ship was modified by a militia group and features a chain ion artillery as well as a minigun.</desc>
+	<class>Federation Carrier</class>
+	<name>The Scylla</name>
+	<desc>This heavily armored and highly armed ship was modified by a militia group - it features a chain ion artillery as well as a minigun.</desc>
 	<systemList>
 		<artillery power="2" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
 		<battery power="1" room="2" start="false" img="room_battery_7" />
@@ -5140,14 +5141,15 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="11" start="false" />
-		<weapons max="12" power="3" room="10" start="true" img="room_weapons_7">
+		<teleporter power="1" room="11" start="true" />
+		<weapons max="12" power="2" room="10" start="true" img="room_weapons_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="17" count="3">
@@ -5158,14 +5160,15 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="10" />
 	<crewCount amount="1" class="human_engineer" />
 	<crewCount amount="1" class="mantis_free" />
-	<crewCount amount="2" class="avali" />
+	<crewCount amount="1" class="mantis" />
+	<crewCount amount="1" class="avali" />
 	<aug name="ADV_SCANNERS" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_3" layout="federation_carrier_3" img="federation_carrier_3">
-	<class id="text_PLAYER_SHIP_FEDERATION_CARRIER_3_class">Federation Carrier</class>
-	<name id="text_PLAYER_SHIP_FEDERATION_CARRIER_3_name">The Interceptor</name>
-	<desc id="text_PLAYER_SHIP_FEDERATION_CARRIER_3_desc">This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured by the Federation and quickly refit to get back into battle.</desc>
+	<class>Federation Carrier</class>
+	<name>The Interceptor</name>
+	<desc>This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured by the Federation and quickly refit to get back into battle.</desc>
 	<systemList>
 		<battery power="1" room="14" start="false" img="room_battery_14" />
 		<cloaking power="1" room="18" start="false" img="room_cloaking" />
@@ -5181,7 +5184,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</doors>
 		<drones max="8" power="3" room="19" start="true" img="room_drones_8" />
-		<engines max="8" power="2" room="6" start="true" img="room_engines_5">
+		<engines max="12" power="2" room="6" start="true" img="room_engines_5">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -5221,6 +5224,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="3" count="2">
