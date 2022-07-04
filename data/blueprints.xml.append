@@ -1199,6 +1199,55 @@
 
 <!--/////////////////////////////////////////////////////ION/////////////////////////////////////////////////////////-->
 
+<weaponBlueprint name="IONARTILLERY">
+	<type>LASER</type>
+	<title>Chain Ion Artillery</title>
+	<short>Ion Art.</short>
+	<locked>1</locked>
+	<tip>tip_chain_ion</tip>
+	<desc>This ion artillery decreases in cooldown the more it fires. After 3 bursts it reaches its maximum firering rate.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>8</cooldown>
+	<power>3</power>
+	<cost>55</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_2_shot</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>1.5</amount>
+		<count>3</count>
+	</boost>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ionartillery</weaponArt> 
+	<iconImage>ion_chain</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="CRYSTAL_FREEZER">
 	<type>LASER</type>
 	<flavorType>Crystalline Tech</flavorType>
@@ -1979,6 +2028,60 @@
               DRONES
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
+
+<!--///////////////////// BARRAGE ION DRONE //////////////////////////-->
+<droneBlueprint name="COMBAT_ION_NEW">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>'Barrage' Ion Drone</title>
+	<short>Ion Drone</short>
+	<desc>Slow moving drone that repeatedly attacks the enemy ship with ion blasts</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+
+	<speed>7</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_ion</droneImage>
+	<weaponBlueprint>DRONE_ION</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<weaponBlueprint name="DRONE_ION_NEW">
+	<type>LASER</type>
+	<title>Ion Blast</title>
+	<short>Ion Blast</short>
+	<tip>tip_ion</tip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>20</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt> 
+</weaponBlueprint>
 
 <!--///////////////////// GOLD DRONE //////////////////////////-->
 
@@ -3674,7 +3777,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</doors>
 		<drones max="10" power="2" room="0" start="false" img="room_drones_orchid" />
-		<engines power="1" room="19" start="true" img="room_engines_2">
+		<engines max="8" power="1" room="19" start="true" img="room_engines_2">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -3749,8 +3852,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="2" room="5" max="8" start="true" img="room_drones_3" />
-		<engines power="2" room="15" start="true" img="room_engines_4">
+		<drones max="8" power="2" room="5" max="8" start="true" img="room_drones_3" />
+		<engines max="8" power="2" room="15" start="true" img="room_engines_4">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -3776,14 +3879,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="8" max="8" start="false" img="room_shields">
+		<shields max="8" power="2" room="8" max="8" start="false" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="16" start="false" />
-		<weapons power="3" room="1" max="8" start="true" img="room_weapons">
+		<weapons max="8" power="3" room="1" max="8" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3827,8 +3930,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="5" room="0" max="8" start="true" img="room_drones_avali_2" />
-		<engines power="2" room="5" start="true" img="room_engines_4">
+		<drones max="8" power="5" room="0" max="8" start="true" img="room_drones_avali_2" />
+		<engines max="8" power="2" room="5" start="true" img="room_engines_4">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -3854,14 +3957,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="1" room="1" max="8" start="true" img="room_shields_5">
+		<shields max="8" power="1" room="1" max="8" start="true" img="room_shields_5">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="15" start="false" />
-		<weapons power="1" room="11" max="8" start="true" img="room_weapons_11">
+		<weapons max="8" power="1" room="11" max="8" start="true" img="room_weapons_11">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -3907,8 +4010,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="2" room="10" max="8" start="true" img="room_drones_4" />
-		<engines power="2" room="9" start="true" img="room_engines_4">
+		<drones max="8" power="2" room="10" max="8" start="true" img="room_drones_4" />
+		<engines max="8" power="2" room="9" start="true" img="room_engines_4">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -3934,14 +4037,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="1" max="8" start="true" img="room_shields_6">
+		<shields max="8" power="2" room="1" max="8" start="true" img="room_shields_6">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="12" start="false" />
-		<weapons power="3" room="5" max="8" start="true" img="room_weapons">
+		<weapons max="8" power="3" room="5" max="8" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3966,6 +4069,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="30" />
 	<maxPower amount="8" />
 </shipBlueprint>
+
 <shipBlueprint name="PLAYER_SHIP_AVALI_SLOT2" layout="avali_cruiser_D" img="avali_cruiser_D">
 	<class>Avali Cruiser</class>
 	<name>Accipitridae</name>
@@ -3984,8 +4088,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="2" room="8" start="false" img="room_drones_rand_4" />
-		<engines power="2" room="5" start="true" img="room_engines_2">
+		<drones max="8" power="2" room="8" start="false" img="room_drones_rand_4" />
+		<engines max="8" power="2" room="5" start="true" img="room_engines_2">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -4011,14 +4115,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="4" start="true" img="room_shields_4">
+		<shields max="8" power="2" room="4" start="true" img="room_shields_4">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="0" start="true" />
-		<weapons power="2" room="3" start="true" img="room_weapons">
+		<weapons max="8" power="2" room="3" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4113,7 +4217,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="EX_CLOAK_FIRE" />
 	<aug name="ENERGY_SHIELD" />
 </shipBlueprint>
-<?xml version="1.0" encoding="UTF-8"?>
 
 <shipBlueprint name="PLAYER_SHIP_BLACKOPS_2" layout="BlackopsB" img="BlackopsB">
 	<class>Black Ops</class>
@@ -4185,7 +4288,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="EX_CLOAK_FIRE" />
 	<aug name="ENERGY_SHIELD" />
 </shipBlueprint>
-<?xml version="1.0" encoding="UTF-8"?>
 
 <shipBlueprint name="PLAYER_SHIP_BLACKOPS_3" layout="Blackops3" img="Blackops3">
 	<class>Black Ops</class>
@@ -4335,7 +4437,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="RECYCLER" />
 	<aug name="SUPER_ARMOR" />
 </shipBlueprint>
-<?xml version="1.0" encoding="UTF-8"?>
 
 <shipBlueprint name="PLAYER_SHIP_MINESWEEPER_2" layout="MinesweeperB" img="MinesweeperB">
 	<class>Minesweeper Cruiser</class>
@@ -4406,7 +4507,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="EX_PAYLOAD_CREATOR" />
 	<aug name="COMBAT_EXPLOSIVE" />
 </shipBlueprint>
-<?xml version="1.0" encoding="UTF-8"?>
 
 <shipBlueprint name="PLAYER_SHIP_MINESWEEPER_3" layout="MinesweeperC" img="MinesweeperC">
 	<class>Minesweeper Cruiser</class>
@@ -4433,9 +4533,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</engines>
-		<hacking max="2"power="1" room="12" start="false" img="room_hacking" />
-		<mind max="2"power="1" room="14" start="false" img="room_mind_3" />
-		<oxygen max="2"power="1" room="4" start="true" img="room_oxygen_6" />
+		<hacking max="2" power="1" room="12" start="false" img="room_hacking" />
+		<mind max="2" power="1" room="14" start="false" img="room_mind_3" />
+		<oxygen max="2" power="1" room="4" start="true" img="room_oxygen_6" />
 		<pilot power="1" room="0" start="true" img="room_pilot_5">
 			<slot>
 				<direction>right</direction>
@@ -4912,7 +5012,236 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="COMBAT_OXYGEN_UNSTABLE" />
 </shipBlueprint>
 
-<!--/////////////////////JULK'S SYSTEM CAP EXPANDER CODE//////////////////////////-->
+<!--///////////////////// FEDERATION CARRIER //////////////////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER" layout="federation_carrier" img="federation_carrier">
+	<class id="text_PLAYER_SHIP_FEDERATION_CARRIER_class">Federation Carrier</class>
+	<name id="text_PLAYER_SHIP_FEDERATION_CARRIER_name">Star Sovereign</name>
+	<desc id="text_PLAYER_SHIP_FEDERATION_CARRIER_desc">This is a highly drone-focused Federation Fleet Support carrier - it's got some pretty old spec equipment, but it'll do...</desc>
+	<systemList>
+		<battery power="1" room="9" start="true" img="room_battery_9" />
+		<cloaking power="1" room="18" start="false" img="room_cloaking" />
+		<clonebay power="1" room="13" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="14" start="true" img="room_doors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="12" power="3" room="1" start="true" img="room_drones" />
+		<engines max="8" power="3" room="10" start="true" img="room_engines_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="12" start="false" img="room_hacking_5" />
+		<medbay power="1" room="13" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="16" start="false" img="room_mind_12" />
+		<oxygen power="1" room="0" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="7" start="true" img="room_pilot_4_thrusters">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="3" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields max="12" power="2" room="17" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="11" start="true" />
+		<weapons max="4" power="3" room="19" start="true" img="room_weapons_2">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="3" count="2">
+		<weapon name="MINELAUNCHER_2" />
+	</weaponList>
+	<droneList drones="15" count="4">
+		<drone name="COMBAT_ION_NEW" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="10" />
+	<crewCount amount="1" class="protogen" />
+	<crewCount amount="1" class="rock_commando" />
+	<crewCount amount="2" class="human_soldier" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_2" layout="federation_carrier_2" img="federation_carrier_2">
+	<class id="text_PLAYER_SHIP_FEDERATION_CARRIER_2_class">Federation Carrier</class>
+	<name id="text_PLAYER_SHIP_FEDERATION_CARRIER_2_name">The Scylla</name>
+	<desc id="text_PLAYER_SHIP_FEDERATION_CARRIER_2_desc">This ship was modified by a militia group and features a chain ion artillery as well as a minigun.</desc>
+	<systemList>
+		<artillery power="2" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
+		<battery power="1" room="2" start="false" img="room_battery_7" />
+		<cloaking power="1" room="14" start="false" img="room_cloaking" />
+		<clonebay power="1" room="13" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="8" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="6" power="2" room="3" start="false" img="room_drones_7" />
+		<engines max="8" power="2" room="7" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="16" start="false" img="room_hacking" />
+		<medbay power="1" room="13" start="true" img="room_medbay_9">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="18" start="false" img="room_mind_5" />
+		<oxygen power="1" room="1" start="true" img="room_oxygen_9" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2_thrusters">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="9" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="5" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="11" start="false" />
+		<weapons max="12" power="3" room="10" start="true" img="room_weapons_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="17" count="3">
+		<weapon name="TC_MINIGUN_MK1" />
+	</weaponList>
+	<droneList drones="3" count="3" />
+	<health amount="45" />
+	<maxPower amount="10" />
+	<crewCount amount="1" class="human_engineer" />
+	<crewCount amount="1" class="mantis_free" />
+	<crewCount amount="2" class="avali" />
+	<aug name="ADV_SCANNERS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_3" layout="federation_carrier_3" img="federation_carrier_3">
+	<class id="text_PLAYER_SHIP_FEDERATION_CARRIER_3_class">Federation Carrier</class>
+	<name id="text_PLAYER_SHIP_FEDERATION_CARRIER_3_name">The Interceptor</name>
+	<desc id="text_PLAYER_SHIP_FEDERATION_CARRIER_3_desc">This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured by the Federation and quickly refit to get back into battle.</desc>
+	<systemList>
+		<battery power="1" room="14" start="false" img="room_battery_14" />
+		<cloaking power="1" room="18" start="false" img="room_cloaking" />
+		<clonebay power="1" room="1" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="9" start="true" img="room_doors_2">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones max="8" power="3" room="19" start="true" img="room_drones_8" />
+		<engines max="8" power="2" room="6" start="true" img="room_engines_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="16" start="false" img="room_hacking_6" />
+		<medbay power="1" room="1" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="12" start="false" img="room_mind_12" />
+		<oxygen power="1" room="3" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="7" start="true" img="room_pilot_4_thrusters">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="0" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="17" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="13" start="false" />
+		<weapons max="8" power="1" room="10" start="true" img="room_weapons_10">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="3" count="2">
+		<weapon name="LASER_BURST_2" />
+	</weaponList>
+	<droneList drones="8" count="3">
+		<drone name="COMBAT_ION_NEW" />
+	</droneList>
+	<health amount="45" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="rock_outcast" />
+	<crewCount amount="1" class="rsa_technician" />
+	<crewCount amount="1" class="engi_separatist" />
+	<aug name="RAMMING_SPEED" />
+</shipBlueprint>
+
+<!--
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          JULK'S EXPANDCODE
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
 
 <mod:findName type="systemBlueprint" name="weapons">
     <mod:findLike type="maxPower">
@@ -5078,7 +5407,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<rarity>5</rarity>
 	<powerList>
 		<power>Active Ability: Summons a highly unstable Scout Drone that is only able to attack (to a maximum of 5 drones each engagement.) </power>
-		<power>1.25x repair speed. Gains an additional 50% boost to repairs in any of the following systems: Engines, Piloting, Shields, Weapons, or Drone Control.</power>
+		<power>1.15x repair speed. Gains an additional 50% boost to repairs in any of the following systems: Engines, Piloting, Shields, Weapons, or Drone Control.</power>
 	</powerList>
 	<colorList>
 		<layer> <!--skin-->

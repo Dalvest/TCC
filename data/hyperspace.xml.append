@@ -598,7 +598,7 @@
 
 		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER">
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_FED</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
 			<crewLimit>8</crewLimit>
 		</mod-append:customShip>
 
@@ -689,6 +689,28 @@
 			<crewLimit>8</crewLimit>
 		</mod-append:customShip>
 
+		<!--/////// FEDERATION CARRIER //////-->
+
+		<mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="true" c="true"/>
+
+		<mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER_2">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER_3">
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<crewLimit>8</crewLimit>
+		</mod-append:customShip>
+
 	</mod:findLike>
 
 
@@ -727,7 +749,7 @@
 			<mod-append:ship>PLAYER_SHIP_MINESWEEPER</mod-append:ship> <!-- Windows Minesweeeper -->
 			<mod-append:ship>PLAYER_SHIP_BLACKOPS</mod-append:ship> <!-- Call of Duty: Black Ops II -->
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_FEDERATION_CARRIER</mod-append:ship> <!-- Federation Carrier -->
 
 		</mod:findLike>
 	</mod:findLike>
@@ -1692,7 +1714,7 @@
 		<!--///////RSA TECCHIE//////-->
 
 		<mod-append:race name="rsa_technician">
-			<repairSpeed>1.25</repairSpeed>
+			<repairSpeed>1.15</repairSpeed>
 			<canFight>true</canFight>
 			<canSabotage>true</canSabotage>
 			<suffocationModifier>0.83</suffocationModifier>

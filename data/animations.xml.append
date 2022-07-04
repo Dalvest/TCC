@@ -279,6 +279,25 @@
 	<chargeImage>weapon_ion/Ion_Charger_1_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="ionartillery_charge" w="108" h="62" fw="36" fh="62">weapon_ion/ionartillery_chargeglow.png</animSheet>
+<anim name="ionartillery_charge">
+	<sheet>ionartillery_charge</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="ionartillery" w="288" h="62" fw="36" fh="62">weapon_ion/ionartillery_strip8.png</animSheet>
+<weaponAnim name="ionartillery">
+	<sheet>ionartillery</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="17" y="17"/>
+	<mountPoint x="5" y="45"/>
+	<chargeImage>weapon_ion/ionartillery_glow.png</chargeImage>
+	<boost>ionartillery_charge</boost>
+</weaponAnim>
+
 <!--/////////////////// SINGULARITY //////////////////-->
 
 <animSheet name="tc_singularity_projector" w="612" h="60" fw="51" fh="60">weapon_singularity/tc_singularity_projector.png</animSheet>
@@ -686,6 +705,26 @@
 	<sheet>tc_laser_shot</sheet>
 	<desc length="4" x="0" y="0"/>
 	<time>0.1</time>
+</anim>
+
+<!--
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          OTHERS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
+
+<animSheet name="federation_carrier_thrusters_on" w="144" h="51" fw="36" fh="51">effects/federation_carrier_thrusters_on.png</animSheet>
+<anim name="federation_carrier_thrusters_on">
+	<sheet>federation_carrier_thrusters_on</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
+<animSheet name="federation_carrier_thrusters_on_mirrored" w="144" h="51" fw="36" fh="51">effects/federation_carrier_thrusters_on_mirrored.png</animSheet>
+<anim name="federation_carrier_thrusters_on_mirrored">
+	<sheet>federation_carrier_thrusters_on_mirrored</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.5</time>
 </anim>
 
 <!--
