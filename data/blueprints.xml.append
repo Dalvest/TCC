@@ -3852,7 +3852,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones max="8" power="2" room="5" max="8" start="true" img="room_drones_3" />
+		<drones power="2" room="5" max="8" start="true" img="room_drones_3" />
 		<engines max="8" power="2" room="15" start="true" img="room_engines_4">
 			<slot>
 				<direction>down</direction>
@@ -3879,14 +3879,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</sensors>
-		<shields max="8" power="2" room="8" max="8" start="false" img="room_shields">
+		<shields power="2" room="8" max="8" start="false" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="16" start="false" />
-		<weapons max="8" power="3" room="1" max="8" start="true" img="room_weapons">
+		<weapons power="3" room="1" max="8" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3930,7 +3930,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones max="8" power="5" room="0" max="8" start="true" img="room_drones_avali_2" />
+		<drones power="5" room="0" max="8" start="true" img="room_drones_avali_2" />
 		<engines max="8" power="2" room="5" start="true" img="room_engines_4">
 			<slot>
 				<direction>down</direction>
@@ -3957,14 +3957,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields max="8" power="1" room="1" max="8" start="true" img="room_shields_5">
+		<shields power="1" room="1" max="8" start="true" img="room_shields_5">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="15" start="false" />
-		<weapons max="8" power="1" room="11" max="8" start="true" img="room_weapons_11">
+		<weapons power="1" room="11" max="8" start="true" img="room_weapons_11">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -4010,7 +4010,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones max="8" power="2" room="10" max="8" start="true" img="room_drones_4" />
+		<drones power="2" room="10" max="8" start="true" img="room_drones_4" />
 		<engines max="8" power="2" room="9" start="true" img="room_engines_4">
 			<slot>
 				<direction>down</direction>
@@ -4037,14 +4037,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields max="8" power="2" room="1" max="8" start="true" img="room_shields_6">
+		<shields power="2" room="1" max="8" start="true" img="room_shields_6">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="12" start="false" />
-		<weapons max="8" power="3" room="5" max="8" start="true" img="room_weapons">
+		<weapons power="3" room="5" max="8" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4457,7 +4457,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</doors>
 		<drones max="8" power="1" room="15" start="false" img="room_drones" />
-		<engines max="8" max="2" power="1" room="3" start="true" img="room_engines_8">
+		<engines max="8" power="1" room="3" start="true" img="room_engines_8">
 			<slot>
 				<direction>left</direction>
 				<number>2</number>
@@ -4554,8 +4554,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter max="4"power="1" room="3" start="true" />
-		<weapons max="4"power="1" room="6" start="true" img="room_weapons_8">
+		<teleporter max="4" power="1" room="3" start="true" />
+		<weapons max="4" power="1" room="6" start="true" img="room_weapons_8">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4730,7 +4730,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_CYBER_3" layout="CyberwarfareC" img="CyberwarfareC">
 	<class>Cyberwarfare Cruiser</class>
 	<name>A-LAN23071912</name>
-	<desc>Fully automated and independent, this ship has everything it could ever need to sustain itself and its crew thanks to multiple advanced drones... except weapons. or crew. in fact, it cannot install weapons at all, and comes devoid of crew!</desc>
+	<desc>Fully automated and independent, this ship has everything it could ever need to sustain itself and its crew thanks to multiple advanced drones... except weapons. or crew. In fact, it cannot install weapons at all and it comes devoid of crew!</desc>
 	<systemList>
 		<battery power="1" room="20" start="true" img="room_battery" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking" />
@@ -4869,7 +4869,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_NBC_2" layout="NBC2" img="NBC2">
 	<class>NBC Cruisers</class>
 	<name>Cortinarius</name>
-	<desc>A variety of devastating (and probably against several conventions) explosives and a teleporter make this aggressive ship a force to be reckoned with, though care must be taken to not accidentaly kill the crew sent to the enemy ship.</desc>
+	<desc>A variety of devastating (and probably breaching several conventions related to war crimes) explosives and a teleporter make this aggressive ship a force to be reckoned with, though care must be taken to not accidentaly kill the crew sent to the enemy ship.</desc>
 	<systemList>
 		<battery power="1" room="18" start="false" img="room_battery_17" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking_3" />
@@ -4941,7 +4941,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_NBC_3" layout="NBC3" img="NBC3">
 	<class>NBC Cruisers</class>
 	<name>A13 - 11041970</name>
-	<desc>With its life support systems blown to bits and contaminated beyond saving, this ship will require careful micromanagement to make it, as its crew requires O2 all the same. thankfully, it comes well equiped elsewhere.</desc>
+	<desc>With its life support systems blown to bits and contaminated beyond saving, this ship will require careful micromanagement to make it, as its crew requires O2 all the same. Thankfully, it comes well equiped elsewhere.</desc>
 	<systemList>
 		<battery power="1" room="17" start="true" img="room_battery_9" />
 		<cloaking power="1" room="9" start="false" img="room_cloaking_8" />
