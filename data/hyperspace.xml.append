@@ -2449,6 +2449,185 @@
 		</statBoosts>
 	</aug>
 
+  <!--PROTOGEN LABS-->
+	<aug name="LAB_PROTOGEN_AWARENESS">
+		<statBoosts>
+			<statBoost name="cloneLoseSkills">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>
+			<statBoost name="isTelepathic">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>
+			<statBoost name="resistsMindControl">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>
+		</statBoosts>
+	</aug>
+
+	<aug name="LAB_PROTOGEN_BOOP">
+		<statBoosts>
+			<statBoost name="powerEffect">
+				<boostType>SET</boostType>
+				<powerEffect>
+					<cooldown>25</cooldown>
+					<jumpCooldown>full</jumpCooldown>
+					<buttonText>Boop</buttonText>
+					<tooltip>Ready: Multiply the movement speed and damage of all allied crew in the same room by 1.5 for 10 seconds.</tooltip>
+					<cooldownColor r="100" g="187" b="130"/>
+					<temporaryEffect>
+						<duration>10</duration>
+						<cooldownColor r="80" g="230" b="110"/>
+						<statBoosts>
+							<statBoost name="moveSpeedMultiplier">
+								<boostType>MULT</boostType>
+								<amount>1.5</amount>
+								<shipTarget>CURRENT_ROOM</shipTarget>
+								<crewTarget>ALLIES</crewTarget>
+								<affectsSelf>true</affectsSelf>
+							</statBoost>
+							<statBoost name="damageMultiplier">
+								<boostType>MULT</boostType>
+								<amount>1.5</amount>
+								<shipTarget>CURRENT_ROOM</shipTarget>
+								<crewTarget>ALLIES</crewTarget>
+								<affectsSelf>true</affectsSelf>
+								<boostAnim>pheromones_f</boostAnim>
+							</statBoost>
+						</statBoosts>
+					</temporaryEffect>
+					<powerSounds>
+						<powerSound>batteryStart</powerSound>
+					</powerSounds>
+				</powerEffect>
+
+				<shipTarget>ALL</shipTarget>
+        <crewTarget>ALLIES</crewTarget>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>
+		</statBoosts>
+	</aug>
+	<aug name="LAB_PROTOGEN_OXYGEN">
+		<statBoosts>
+			<statBoost name="canSuffocate">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>
+		</statBoosts>
+	</aug>
+
+	<aug name="LAB_PROTOGEN_SIPHONS">
+		<statBoosts>
+			<statBoost name="powerDrain">
+				<boostType>FLAT</boostType>
+				<amount>1</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>
+			<!--<statBoost name="powerDrainFriendly">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>-->
+      <!--PLACEHOLDER BUFF-->
+			<statBoost name="maxHealth">
+				<boostType>MULT</boostType>
+				<amount>999</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<all/>
+				</systemList>
+			</statBoost>
+
+		</statBoosts>
+	</aug>
+
+	<aug name="LAB_PROTOGEN_HEAVY">
+		<statBoosts>
+				<statBoost name="damageTakenMultiplier">
+					<boostType>MULT</boostType>
+					<amount>0.7</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<priority>999</priority>
+					<whiteList load="LIST_CREW_PROTOGEN"/>
+				</statBoost>
+				<statBoost name="moveSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>0.66</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<priority>999</priority>
+					<whiteList load="LIST_CREW_PROTOGEN"/>
+				</statBoost>
+			</statBoosts>
+	</aug>
+
+
+	<aug name="LAB_PROTOGEN_TEAMWORK">
+		<statBoosts>
+			<statBoost name="statBoost">
+
+								<statBoost name="repairSpeed">
+                    <boostType>MULT</boostType>
+                    <amount>1.15</amount>
+                    <shipTarget>CURRENT_ROOM</shipTarget>
+                    <crewTarget>ALLIES</crewTarget>
+                    <affectsSelf>false</affectsSelf>
+                    <priority>0</priority>
+										<whiteList load="LIST_CREW_PROTOGEN"/>
+        				</statBoost>
+
+				<shipTarget>ALL</shipTarget>
+        <crewTarget>ALLIES</crewTarget>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>
+			<statBoost name="statBoost">
+
+								<statBoost name="damageMultiplier">
+                    <boostType>MULT</boostType>
+                    <amount>1.15</amount>
+                    <shipTarget>CURRENT_ROOM</shipTarget>
+                    <crewTarget>ALLIES</crewTarget>
+                    <affectsSelf>false</affectsSelf>
+                    <priority>0</priority>
+										<whiteList load="LIST_CREW_PROTOGEN"/>
+        				</statBoost>
+
+				<shipTarget>ALL</shipTarget>
+        <crewTarget>ALLIES</crewTarget>
+				<whiteList load="LIST_CREW_PROTOGEN"/>
+			</statBoost>
+		</statBoosts>
+	</aug>
+
 	<!--//////////////////AVALI AUGMENTS///////////////-->
 	<aug name="LAB_AVALI_FLAMECLOAKS">
 		<statBoosts>

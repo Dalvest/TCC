@@ -1244,7 +1244,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ionartillery</weaponArt> 
+	<weaponArt>ionartillery</weaponArt>
 	<iconImage>ion_chain</iconImage>
 </weaponBlueprint>
 
@@ -1900,6 +1900,54 @@
 	<stackable>false</stackable>
 </augBlueprint>
 
+<!--///////////////LAB AUGMENTS//////////////-->
+<augBlueprint name="LAB_PROTOGEN_AWARENESS">
+	<title>Unstable Awareness Field</title>
+	<desc>Protogen now lose skills when cloned, but are immune to mind control and can see adjacent rooms, as well as sense lifeforms when sensors are down.</desc>
+	<cost>10</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="LAB_PROTOGEN_BOOP">
+	<title>"Boop" Overdrive</title>
+	<desc>Protogen now gain the ability to "Boop" all allied crew in the current room, boosting their movement speed and combat damage by PLACEHOLDER VALUE.</desc>
+	<cost>10</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="LAB_PROTOGEN_OXYGEN">
+	<title>Internal Oxygen Supply</title>
+	<desc>Protogen no longer require oxygen.</desc>
+	<cost>10</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="LAB_PROTOGEN_SIPHONS">
+	<title>Battery Siphons</title>
+	<desc>Protogen now drain one power fromm all systems, and gain a buff whenever able to do so.</desc>
+	<cost>10</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="LAB_PROTOGEN_HEAVY">
+	<title>Heavy Metal</title>
+	<desc>Protogen now drain take 0.7x damage from combat, but move at 2/3 their normal speed.</desc>
+	<cost>10</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="LAB_PROTOGEN_TEAMWORK">
+	<title>Teamwork Network</title>
+	<desc>Protogen gain 15% repair speed and combat damage every other protogen in the room.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
 
 <!--/////////////////////QUEST AUGS//////////////////////////-->
 
@@ -2080,7 +2128,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ion_1</weaponArt> 
+	<weaponArt>ion_1</weaponArt>
 </weaponBlueprint>
 
 <!--///////////////////// GOLD DRONE //////////////////////////-->
