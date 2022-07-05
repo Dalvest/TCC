@@ -2991,7 +2991,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_SDM_2" layout="player_ship_sdm_2" img="player_ship_sdm_2">
 	<class>Construction Crew Kestrel</class>
 	<name>The Original</name>
-	<desc>This is a completely functional version of the Kestrel Miner from the time it was actually used for mining - before TRACKER and the gang got it.</desc>
+	<desc>This is a completely functional version of the Kestrel Miner from the time it was actually used for mining - before TRACKER and the gang got it. It was owned by Zulqifar Industries and sports an outdated, worn-out paintjob.</desc>
 	<unlock id="ship_PLAYER_SHIP_SDM_2_unlock"/>
 	<systemList>
 		<battery power="1" max="2" room="5" start="false" img="room_battery_6" />
@@ -4039,6 +4039,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="avali" />
 	<crewCount amount="1" class="engi_separatist" />
 </shipBlueprint>
+
 <shipBlueprint name="PLAYER_SHIP_AVALI_3" layout="avali_cruiser_C" img="avali_cruiser_c">
 	<class>Avali Cruiser</class>
 	<name>Cathartes Aura</name>
