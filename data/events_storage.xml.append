@@ -1163,24 +1163,48 @@
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE"/>
     </choice>
     <choice req="scrapper" lvl="1" max_group="2" blue="false">
-      <text>Make a Scrapper Soldier</text>
+      <text>Upgrade your Scrapper</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE"/>
+    </choice>
+    <choice req="scrapper_soldier" lvl="1" max_group="3" blue="false">
+      <text>Upgrade your Scrapper Soldier</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
     </choice>
-    <choice req="scrapper" lvl="1" max_group="3" blue="false">
-      <text>Make a Scrapper Engineer</text>
+    <choice req="scrapper_engineer" lvl="1" max_group="4" blue="false">
+      <text>Upgrade your Scrapper Engineer</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
     </choice>
-    <choice req="scrapper" lvl="1" max_group="4" blue="false">
-      <text>Make a Scrapper Speedster</text>
+    <choice req="scrapper_speed" lvl="1" max_group="5" blue="false">
+      <text>Upgrade your Scrapper Speedster</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED"/>
     </choice>
-    <choice req="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE" lvl="1" max_group="5" blue="false">
-      <text>Make a Heavy Scrapper</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU"/>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
     </choice>
-    <choice req="SCAVENGER_REQ" lvl="1" max_group="6" blue="false">
-      <text>Make a Scrapper Scavenger</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU"/>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+      <text>Create a Scrapper Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SOLDIER"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="2" blue="false">
+      <text>Create a Scrapper Engineer.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ENGINEER"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="3" blue="false">
+      <text>Create a Scrapper Speedster.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SPEED"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="4" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_HEAVY"/>
+    </choice>
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="5" blue="false">
+      <text>Create a Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SCAV"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
@@ -1188,23 +1212,15 @@
     </choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU">
-    <text>Who do you want to upgrade?</text>
-    <choice req="scrapper" lvl="1" max_group="1" blue="false">
-      <text>Upgrade your Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE"/>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper_soldier" lvl="1" max_group="1" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY"/>
     </choice>
-    <choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
-      <text>Upgrade your Scrapper Soldier.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER"/>
-    </choice>
-    <choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
-      <text>Upgrade your Scrapper Engineer.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER"/>
-    </choice>
-    <choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
-      <text>Upgrade your Scrapper Speedster.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED"/>
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
+      <text>Create a Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_SCAV"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
@@ -1212,23 +1228,31 @@
     </choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU">
-    <text>Who do you want to upgrade?</text>
-    <choice req="scrapper" lvl="1" max_group="1" blue="false">
-      <text>Upgrade your Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE"/>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper_engineer" lvl="1" max_group="1" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_HEAVY"/>
     </choice>
-    <choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
-      <text>Upgrade your Scrapper Soldier.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER"/>
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
+      <text>Create a Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV"/>
     </choice>
-    <choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
-      <text>Upgrade your Scrapper Engineer.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER"/>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
     </choice>
-    <choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
-      <text>Upgrade your Scrapper Speedster.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED"/>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper_speed" lvl="1" max_group="1" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_HEAVY"/>
+    </choice>
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
+      <text>Create a Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_SCAV"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
@@ -1251,7 +1275,7 @@
 
 </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SOLDIER">
     <text>You can upgrade your Scrapper's combat ability by adding extra scrap to their arms, although this would reduce their repair speed.
       [x1.5 repair -> x1.0 repair speed
       x1.0 damage -> x2.0 damage]</text>
@@ -1268,7 +1292,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ENGINEER">
     <text>This upgrade will generally improve your Scrapper's ability to repair ship systems.
       [x1.5 repair -> x3.0 repair speed
       x1.0 damage -> x0.75 damage
@@ -1286,7 +1310,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SPEED">
     <text>By molding the legs into a more efficient shape, your Scrapper can achieve greater sprinting speeds.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
@@ -1302,7 +1326,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_HEAVY">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
       [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
@@ -1323,7 +1347,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
       [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
@@ -1344,7 +1368,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_HEAVY">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
       [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
@@ -1366,7 +1390,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_HEAVY">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
       [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
@@ -1387,7 +1411,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SCAV">
     <text>[ELITE UPGRADE] Using a highly complex alloy whose exact manufacturing method is known only by a select few, you can make this Scrapper even more powerful and adaptive.
       [125 health -> 150 health
       x1.5 repair speed -> x2 repair speed
@@ -1408,7 +1432,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_SCAV">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
@@ -1424,7 +1448,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
@@ -1440,7 +1464,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_SCAV">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
