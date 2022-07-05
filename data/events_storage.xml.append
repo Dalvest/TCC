@@ -1062,11 +1062,15 @@
       <text>Scan your Scrapper Speedster</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SPEED"/>
     </choice>
-    <choice req="scrapper_heavy" lvl="1" max_group="4" blue="false">
+    <choice req="scrapper_defender" lvl="1" max_group="4" blue="false">
+      <text>Scan your Scrapper Defender</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_DEFENDER"/>
+    </choice>
+    <choice req="scrapper_heavy" lvl="1" max_group="5" blue="false">
       <text>Scan your Heavy Scrapper</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_HEAVY"/>
     </choice>
-    <choice req="scrapper_scavenger" lvl="1" max_group="5" blue="false">
+    <choice req="scrapper_scavenger" lvl="1" max_group="6" blue="false">
       <text>Scan your Scrapper Scavenger</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SCAVENGER"/>
     </choice>
@@ -1128,6 +1132,19 @@
     </choice>
   </event>
 
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_DEFENDER">
+    <text>SCRAPPER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Genetic, Standard
+      Stats: 150 Health, x1.5 repair speed, x0.75 move speed, x0.75 fire damage, x0.8 damage taken.
+      Inherited Stats: Drains oxygen at 0.4oxy/s, immune to suffocation.
+      [DALVEST HELP] </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
   <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_HEAVY">
     <text>SCRAPPER DETAILS
       SPECIES? [Lanius] SUBTYPE? [Yes]
@@ -1174,7 +1191,11 @@
       <text>Upgrade your Scrapper Engineer</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
     </choice>
-    <choice req="scrapper_speed" lvl="1" max_group="5" blue="false">
+    <choice req="scrapper_defender" lvl="1" max_group="5" blue="false">
+      <text>Upgrade your Scrapper Defender</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER"/>
+    </choice>
+    <choice req="scrapper_speed" lvl="1" max_group="6" blue="false">
       <text>Upgrade your Scrapper Speedster</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED"/>
     </choice>
@@ -1199,10 +1220,14 @@
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SPEED"/>
     </choice>
     <choice req="scrapper" lvl="1" max_group="4" blue="false">
+      <text>Create a Scrapper Defender.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_DEFENDER"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="5" blue="false">
       <text>Create a Heavy Scrapper.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_HEAVY"/>
     </choice>
-    <choice req="SCAVENGER_REQ" lvl="1" max_group="5" blue="false">
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="6" blue="false">
       <text>Create a Scavenger.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SCAV"/>
     </choice>
@@ -1253,6 +1278,18 @@
     <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
       <text>Create a Scavenger.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_SCAV"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper_defender" lvl="1" max_group="1" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_HEAVY"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
@@ -1321,6 +1358,24 @@
           <item type="scrap" min="-25" max="-25"/>
         </item_modify>
         <transformRace class="scrapper">scrapper_speed</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_DEFENDER">
+    <text>By adding a plating of scrap to your Scrapper, you can make them resistant to damage.
+      [125 health -> 150 health
+      x0.9 movement speed -> x0.75 movement speed
+      x1 damage taken -> x0.8 damage taken]</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_speed">scrapper_defender</transformRace>
       </event>
     </choice>
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
@@ -1398,6 +1453,28 @@
       x2 movement speed -> x0.25 movement speed
       x0.75 fire damage -> x0.5 fire damage
       x1 damage -> x2.5 damage]</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_speed">scrapper_heavy</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_HEAVY">
+    <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
+      [150 health -> 250 health
+      3/4 oxygen drain -> 1/2 oxygen drain
+      x1.5 repair speed -> x0.5 repair speed
+      x0.75 movement speed -> x0.25 movement speed
+      x0.75 fire damage -> x0.5 fire damage
+      x1 damage -> x2.5 damage
+      x0.8 damage taken -> x1 damage taken]</text>
     <choice>
       <text>Do it.</text>
       <event>

@@ -5417,6 +5417,23 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
+<crewBlueprint name="scrapper_defender">
+	<title>Scrapper Defender</title>
+	<short>Defender</short>
+	<desc>A Lanius Scrapper, given a strong chest for absorbing damage.</desc>
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>0.75x oxygen drain</power>
+		<power>0.75x fire damage taken</power>
+		<power>1.5x repair speed</power>
+		<power>0.75x move speed</power>
+		<power>150 health</power>
+		<power>0.8x damage taken</power>
+	</powerList>
+</crewBlueprint>
+
 <crewBlueprint name="scrapper_scavenger">
 	<title>Scrapper Scavenger</title>
 	<short>Scavenger</short>

@@ -920,6 +920,22 @@
 			</deathSounds>
 		</mod-append:race>
 
+		<mod-append:race name="scrapper_defender">
+			<maxHealth>150</maxHealth>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>1.5</repairSpeed>
+			<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.75</fireDamageMultiplier>
+			<damageTakenMultiplier>0.8</damageTakenMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
+
 		<mod-append:race name="scrapper_scavenger">
 			<maxHealth>150</maxHealth>
 			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
