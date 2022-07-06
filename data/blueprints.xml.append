@@ -1144,11 +1144,12 @@
 	<title>Stolen MFK Battery Artillery</title>
 	<tip>tip_missiles</tip>
 	<short>MFK Battery Arty</short>
-	<desc>This missile battery was once on an MFK ship - now it's been captured by the Federation. It fires swarms of missiles across a very wide area. Can tear through entire ships with ease, doing up to 8 hull damage.</desc>
+	<desc>This missile battery was once on an MFK ship - now it's been captured by the Federation. It fires swarms of missiles that deal extremely high system damage.</desc>
 	<tooltip>Fires missile swarms across a random area doing high damage. Pierces all shields, evading Defense I Drones.</tooltip>
 	<drone_targetable>2</drone_targetable>
-	<radius>100</radius>
-	<damage>1</damage>
+	<radius>120</radius>
+	<damage>0</damage>
+	<sysDamage>3</sysDamage>
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>10</sp>
@@ -1593,7 +1594,7 @@
 	<tooltip>Pierces 2 shields; fires one canister that stuns and damages crew, corrodes systems, and has a low chance to cause breaches.</tooltip>
 	<damage>0</damage>
 	<persDamage>5</persDamage>
-	<sysDamage>4</sysDamage>
+	<sysDamage>2</sysDamage>
 	<shots>1</shots>
 	<stun>8</stun>
 	<sp>2</sp>
@@ -3422,7 +3423,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="5" max="8" room="1" start="true" img="room_drones_1._s__w_" />
+		<drones power="5" max="12" room="1" start="true" img="room_drones_1._s__w_" />
 		<engines power="2" max="8" room="2" start="true" img="room_engines_10">
 			<slot>
 				<direction>left</direction>
@@ -3470,7 +3471,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<name>Vulture Culture</name>
 	<desc>The intimidating shadow of this junker is enough to instill fear in any renegade - the main fighting force of the RSA is comprised of ships just like this one.</desc>
 	<systemList>
-		<artillery power="2" room="10" start="true" weapon="MINELAUNCHER_3" img="room_artillery10" />
+		<artillery power="2" room="10" start="true" weapon="TC_MFK_BATTERY" img="room_artillery10" />
 		<battery power="1" room="13" start="true" img="room_battery_2_1x1" />
 		<cloaking power="1" room="5" start="false" img="room_cloaking" />
 		<clonebay power="1" room="7" start="true">
@@ -3512,7 +3513,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="4" start="false" />
+		<teleporter power="1" room="4" start="true" />
 		<weapons power="2" max="8" room="11" start="true" img="room_weapons_11">
 			<slot>
 				<direction>right</direction>
@@ -3528,11 +3529,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</weaponList>
 	<droneList drones="5" count="4" />
 	<health amount="30" />
-	<maxPower amount="4" />
+	<maxPower amount="6" />
 	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="1" class="rsa_technician" />
-	<crewCount amount="1" class="mantis_free" />
+	<crewCount amount="2" class="mantis_free" />
 	<aug name="RECYCLER" />
+	<aug name="TELEPORT_HEAL" />
 </shipBlueprint>
 
 <!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
