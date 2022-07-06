@@ -1375,7 +1375,7 @@
         <item_modify>
           <item type="scrap" min="-50" max="-50"/>
         </item_modify>
-        <transformRace class="scrapper_speed">scrapper_defender</transformRace>
+        <transformRace class="scrapper">scrapper_defender</transformRace>
       </event>
     </choice>
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
@@ -1482,7 +1482,7 @@
         <item_modify>
           <item type="scrap" min="-50" max="-50"/>
         </item_modify>
-        <transformRace class="scrapper_speed">scrapper_heavy</transformRace>
+        <transformRace class="scrapper_defender">scrapper_heavy</transformRace>
       </event>
     </choice>
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
