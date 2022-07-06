@@ -3400,7 +3400,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="15" />
 	<maxPower amount="8" />
 	<crewCount amount="1" class="rsa_technician" />
-	<crewCount amount="1" class="engi_separatist" />
+	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="scrapper" />
 	<crewCount amount="1" class="kiviekith" />
 	<aug name="SALVAGE_ARRAY" />
@@ -3460,7 +3460,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="15" />
 	<maxPower amount="7" />
-	<crewCount amount="1" class="mantis_free" />
+	<crewCount amount="1" class="robottos" />
 	<crewCount amount="2" class="kiviekith" />
 	<aug name="DRONE_RECOVERY" />
 	<aug name="CREW_OXYGEN" />
@@ -3530,7 +3530,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="5" count="4" />
 	<health amount="30" />
 	<maxPower amount="6" />
-	<crewCount amount="1" class="engi_separatist" />
+	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="rsa_technician" />
 	<crewCount amount="2" class="mantis_free" />
 	<aug name="RECYCLER" />
@@ -4506,8 +4506,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="0" count="2" />
 	<health amount="10" />
 	<maxPower amount="9" />
-	<crewCount amount="1" class="human_angel" />
-	<crewCount amount="1" class="human_angel" />
+	<crewCount amount="2" class="human_angel" />
+	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="1" class="human_engineer" />
 	<aug name="EX_CLOAK_FIRE" />
@@ -5677,6 +5677,23 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Cannot repair, extinguish, or man systems</power>
 	</powerList>
 </crewBlueprint>
+
+<!--/////// ROBOTTOS //////-->
+
+<crewBlueprint name="robottos">
+	<desc>These guys were built for ship management and exploration, not war. They do make for crew good as long as you have no better alternative.</desc>
+	<cost>80</cost>
+	<title>Robotto</title>
+	<short>Robotto</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>80 HP owing to their frail and simple construction.</power>
+		<power>x0.7 repair speed and combat damage.</power>
+		<power>Unable to suffocate.</power>
+		<power>takes x1.25 damage from fires.</power>
+	</powerList>
+</crewBlueprint>
+
 
 <!--///////FREE BUSINESS MAN(TIS)//////-->
 

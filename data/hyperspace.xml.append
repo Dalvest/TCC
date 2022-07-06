@@ -229,7 +229,7 @@
 				<protogen_tracker room="1" name="TRACKER" />
 				<sergal_cheese room="11" name="Cheese" />
 				<clonefail_lancer room="3" name="Lancer" />
-				<avali room="2" name="Dalia" />
+				<robottos room="2" name="Z3N1TH" />
 			</crew>
 		</mod-append:customShip>
 
@@ -307,8 +307,8 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_ARMOREDWASP</hiddenAug>
 			<crew>
-				<scrapper_scavenger room="11" name="Scrappy McScrapton" />
-				<clonefail_lancer room="0" name="Lancer" />
+				<scrapper_scavenger room="11" />
+				<robottos room="0" />
 				<protogen room="1" />
 				<avali room="5" />
 			</crew>
@@ -321,7 +321,7 @@
 			<crew>
 				<human_soldier room="0" />
 				<avali room="11" />
-				<rsa_technician room="1" name="Choosechee" />
+				<robottos room="1" />
 			</crew>
 		</mod-append:customShip>
 
@@ -330,7 +330,8 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crewLimit>9</crewLimit>
 			<crew>
-				<kora room="0" name="Kora" />
+				<kora room="1" name="Kora" />
+				<clonefail_lancer room="0" name="Lancer" />
 			</crew>
 		</mod-append:customShip>
 
@@ -966,6 +967,43 @@
 			</deathSounds>
 		</mod-append:race>
 
+		<!--/////// ROBOTTOS ////////-->
+
+		<mod-append:race name="robottos">
+			<maxHealth>80</maxHealth>
+			<repairSpeed>0.7</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>true</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>false</canSuffocate>
+			<suffocationModifier>0.1</suffocationModifier>
+			<fireDamageMultiplier>1.25</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>1</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>0.7</sabotageSpeedMultiplier>
+			<damageMultiplier>0.7</damageMultiplier>
+			<damageTakenMultiplier>1</damageTakenMultiplier>
+			<animBase>human</animBase>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>crewLaser1</shootingSound>
+			</shootingSounds>
+			<repairSounds animSoundFrame="-1">
+				<repairSound>repair</repairSound>
+			</repairSounds>
+			<healSpeed>1.0</healSpeed>
+			<defaultSkillLevel>0</defaultSkillLevel>
+			<cloneLoseSkills>true</cloneLoseSkills>
+		</mod-append:race>
+
+		<!--/////// KIVIES ////////-->
 
 		<mod-append:race name="kiviekith">
 			<maxHealth>100</maxHealth>
@@ -1008,6 +1046,8 @@
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>true</cloneLoseSkills>
 		</mod-append:race>
+
+		<!--/////// KORA ////////-->
 
 		<mod-append:race name="kora">
 			<maxHealth>120</maxHealth>
@@ -1091,7 +1131,7 @@
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
 
-		<!--///////SERGALS////////-->
+		<!--/////// SERGALS ////////-->
 
 		<mod-append:race name="sergal_cheese">
 			<maxHealth>80</maxHealth>
