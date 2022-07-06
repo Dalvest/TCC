@@ -336,7 +336,7 @@
 
 		<!--///////COROSSUS//////-->
 
-		<mod-append:ship name="PLAYER_SHIP_COROSSUS" b="false" c="false" unused="true">
+		<mod-append:ship name="PLAYER_SHIP_COROSSUS" b="true" c="true" unused="true">
 			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_SLUGTON</arrow>
 			<unlock variant="a" silent="false">
 				<type>2</type>
@@ -358,6 +358,19 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_RSA</hiddenAug>
 		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_COROSSUS_2">
+			<crewLimit>6</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_RSA</hiddenAug>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_COROSSUS_3">
+			<crewLimit>10</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_RSA</hiddenAug>
+		</mod-append:customShip>
+
 
 		<!--///////RENT-A-FLAGSHIP//////-->
 

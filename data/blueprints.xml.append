@@ -2291,7 +2291,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<!--///////////////////// HEAVY  DRONE //////////////////////////-->
+<!--///////////////////// HEAVY DRONE //////////////////////////-->
 
 <droneBlueprint name="TC_COMBAT_HEAVY">
     <type>COMBAT</type>
@@ -2359,7 +2359,7 @@
     <power>3</power>
     <cooldown>3</cooldown>
     <dodge>0</dodge>
-    <speed>75</speed>
+    <speed>45</speed>
     <cost>150</cost>
     <bp>3</bp>
     <droneImage>bomb_flak_drone</droneImage>
@@ -3403,6 +3403,136 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="scrapper" />
 	<crewCount amount="1" class="kiviekith" />
 	<aug name="SALVAGE_ARRAY" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_COROSSUS_2" layout="tc_corrosus_2" img="tc_corrosus_2">
+	<class>RSA Scout</class>
+	<name>Wastebent</name>
+	<desc>Light and nimble, this RSA scout ship is dangerous but fragile. It has a vast arsenal of drones to rely on but no weapon system whatsoever.</desc>
+	<systemList>
+		<cloaking power="1" room="6" start="false" img="room_cloaking_bodyhorror" />
+		<clonebay power="1" room="7" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="4" start="true" img="room_doors_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="5" max="8" room="1" start="true" img="room_drones_1._s__w_" />
+		<engines power="2" max="8" room="2" start="true" img="room_engines_10">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="2" room="5" start="true" img="room_hacking" />
+		<medbay power="1" room="7" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<oxygen power="2" room="3" start="true" img="room_oxygen_13" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2_thrusters">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<shields power="2" max="8" room="8" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="11" count="4" />
+	<droneList drones="22" count="4">
+		<drone name="TC_COMBAT_BOMB" />
+		<drone name="BATTLETOG2_BOARDER" />
+		<drone name="DEFENSE_1" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="mantis_free" />
+	<crewCount amount="2" class="kiviekith" />
+	<aug name="DRONE_RECOVERY" />
+	<aug name="CREW_OXYGEN" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_COROSSUS_3" layout="tc_corossus_3" img="tc_corossus_3">
+	<class>RSA Bomber</class>
+	<name>Vulture Culture</name>
+	<desc>The intimidating shadow of this junker is enough to instill fear in any renegade - the main fighting force of the RSA is comprised of ships just like this one.</desc>
+	<systemList>
+		<artillery power="2" room="10" start="true" weapon="MINELAUNCHER_3" img="room_artillery10" />
+		<battery power="1" room="13" start="true" img="room_battery_2_1x1" />
+		<cloaking power="1" room="5" start="false" img="room_cloaking" />
+		<clonebay power="1" room="7" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="2" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" max="8" room="12" start="false" img="room_drones_14" />
+		<engines power="2" max="8" room="6" start="true" img="room_engines_nightowl">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="false" img="room_hacking_7" />
+		<mind power="1" room="14" start="false" img="room_artillery_invis_wide" />
+		<oxygen power="1" room="1" start="true" img="room_oxygen_9" />
+		<pilot power="2" room="3" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="0" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="9" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="false" />
+		<weapons power="2" max="8" room="11" start="true" img="room_weapons_11">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="4" count="4">
+		<weapon name="TCC_DEBUFF_SLOW_1" />
+		<weapon name="RSA_MINICANNON" />
+	</weaponList>
+	<droneList drones="5" count="4" />
+	<health amount="30" />
+	<maxPower amount="4" />
+	<crewCount amount="1" class="engi_separatist" />
+	<crewCount amount="1" class="rsa_technician" />
+	<crewCount amount="1" class="mantis_free" />
+	<aug name="RECYCLER" />
 </shipBlueprint>
 
 <!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
