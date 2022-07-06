@@ -496,7 +496,7 @@
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark I</title>
-	<short>B. Flak I</short>
+	<short>Bomb Flak I</short>
 	<tip>tip_flak</tip>
 	<desc>A small, lower power flak cannon reconfigured to shoot bombs instead of flak, ideal for devestating systems. Requires a missile to launch, but does not pierce any shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
@@ -716,6 +716,50 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_BOMB_SHOTGUN_FREE">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Recycler Bomb Flak Gun</title>
+	<short>R. Bomb Flak</short>
+	<tip>tip_missiles_recycler</tip>
+	<desc>A bomb flak that converts useless materials into explosives. Has a longer cooldown, but does not require ammunition.</desc>
+	<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
+	<radius>42</radius>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>15</cooldown>
+	<power>1</power>
+	<cost>72</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">bomb_small</projectile>
+	</projectiles>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>smallExplosion</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_bomb_shotgun_recycle</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_BOMB_SHOTGUN_CONSERVATIVE">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
@@ -766,7 +810,7 @@
 	<flavorType>Preemptive Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Pre-emptive Bomb Flak</title>
-	<short>Pre-Bomb Flak</short>
+	<short>Pre-B. Flak</short>
 	<tip>tip_flak</tip>
 	<desc>This bomb flak uses no power, charges instantly, and fires a burst of 7 bombs at once. However, it can only be shot once per battle. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 7 damage, and 14 system damage.</tooltip>
