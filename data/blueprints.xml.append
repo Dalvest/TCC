@@ -1509,6 +1509,92 @@
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="CRYS_50CAL">
+	<type>LASER</type>
+	<title>Crystallis .50 Caliber</title>
+	<short>Crys. 50Cal</short>
+	<desc>This weapon was made by a certain overeager protogen. Good luck hitting anything with it.</desc>
+	<tooltip>6 shot 1 damage weapon, gigantic hit radius, 85% chance to not use ammo, 10% chance to cause a breach.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>85</freeMissileChance>
+	<damage>1</damage>
+	<shots>6</shots>
+	<sp>0</sp>
+	<radius>160</radius>
+	<breachChance>1</breachChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<cost>70</cost>
+	<image>GB_shot_light</image>
+	<launchSounds>
+		<sound>GB_cannonLight1</sound>
+		<sound>GB_cannonLight2</sound>
+		<sound>GB_cannonLight3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crys_50cal</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="TC_VULCAN_CANNON">
+	<type>LASER</type>
+	<title>Militia Vulcan Cannon</title>
+	<short>MVC</short>
+	<desc>Highly powerful Vulcan-style autocannon that speeds up every time it fires.</desc>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>95</freeMissileChance>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<radius>40</radius>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<boost>
+		<type>cooldown</type>
+		<amount>4</amount>
+		<count>5</count>
+	</boost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<cost>80</cost>
+	<image>GB_shot_light</image>
+	<launchSounds>
+		<sound>GB_cannonLight1</sound>
+		<sound>GB_cannonLight2</sound>
+		<sound>GB_cannonLight3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_vulcan_cannon</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_MINIGUN_MK1">
 	<type>LASER</type>
 	<title>Minigun Mark I</title>
@@ -1522,7 +1608,7 @@
 	<sp>0</sp>
 	<radius>40</radius>
 	<breachChance>0</breachChance>
-	<cooldown>10</cooldown>
+	<cooldown>14</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
@@ -1551,6 +1637,96 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>tc_minigun_mk1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_MINIGUN_MK2">
+	<type>LASER</type>
+	<title>Minigun Mark II</title>
+	<short>Minigun Mk.2</short>
+	<desc>A relic from the Federation-Hive war. This is an upgraded model of the Mk. 1 minigun... it's faster and better, but it uses more ammunition.</desc>
+	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 85% chance to not use ammo.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>85</freeMissileChance>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>1</sp>
+	<radius>30</radius>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<boost>
+		<type>cooldown</type>
+		<amount>2</amount>
+		<count>5</count>
+	</boost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<cost>70</cost>
+	<image>GB_shot_light</image>
+	<launchSounds>
+		<sound>GB_cannonLight1</sound>
+		<sound>GB_cannonLight2</sound>
+		<sound>GB_cannonLight3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_minigun_mk2</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_MINIGUN_MK3">
+	<type>LASER</type>
+	<title>Minigun Mark III</title>
+	<short>Minigun Mk.3</short>
+	<desc>The Vulcan pales in comparison to this - while the other two miniguns would've only fit in a museum, this... this is a weapon.</desc>
+	<tooltip>3 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>95</freeMissileChance>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<radius>30</radius>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<power>3</power>
+	<boost>
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>5</count>
+	</boost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<cost>100</cost>
+	<image>GB_shot_light</image>
+	<launchSounds>
+		<sound>GB_cannonLight1</sound>
+		<sound>GB_cannonLight2</sound>
+		<sound>GB_cannonLight3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_minigun_mk3</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -1985,6 +2161,14 @@
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 	<bp>0</bp>
+</augBlueprint>
+
+<augBlueprint name="SHIP_MILITARY_FEDERATION">
+	<title>Federation Heavy Military Cruiser</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
 </augBlueprint>
 
 <augBlueprint name="SHIP_AVALI">
@@ -3072,7 +3256,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="23" count="2">
 		<weapon name="ION_CHARGER_1" />
-		<weapon name="RSA_MINICANNON" />
+		<weapon name="TC_SHOTGUN_BATTERY" />
 	</weaponList>
 	<droneList drones="7" count="2">
 		<drone name="REPAIR" />
@@ -3294,7 +3478,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="9" count="4">
 		<weapon name="TC_LASER_CHARGER" />
-		<weapon name="RSA_MINICANNON" />
 	</weaponList>
 	<droneList drones="3" count="4" />
 	<health amount="25" />
@@ -3364,8 +3547,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="8" count="4">
-		<weapon name="TC_SINEWAVE" />
-		<weapon name="ION_2" />
+		<weapon name="TC_MINIGUN_MK3" />
 	</weaponList>
 	<droneList drones="6" count="4">
 		<drone name="DEFENSE_1" />
@@ -3582,7 +3764,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="6" />
 	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="rsa_technician" />
-	<crewCount amount="2" class="mantis_free" />
+	<crewCount amount="1" class="kiviekith" />
+	<crewCount amount="1" class="mantis_rsa" />
 	<aug name="RECYCLER" />
 	<aug name="TELEPORT_HEAL" />
 </shipBlueprint>
@@ -4247,23 +4430,19 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</systemList>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="8" count="2">
-		<weapon name="RSA_MINICANNON" />
+	<weaponList missiles="2" count="2">
 	</weaponList>
-	<droneList drones="15" count="4">
-		<drone name="HELLRAISER_HULL" />
-		<drone name="COMBAT_1_LASER" />
+	<droneList drones="13" count="4">
+		<drone name="ION_1_AMP2" />
 		<drone name="DEFENSE_1" />
-		<drone name="COMBAT_CONSERVATIVE_LASER" />
+		<drone name="TC_COMBAT_BOMB" />
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="8" />
 	<aug name="DRONE_RECOVERY" />
 	<aug name="COMBAT_SHIELDS_JAMMER" />
-	<crewCount amount="1" class="avali" />
-	<crewCount amount="1" class="avali" />
-	<crewCount amount="1" class="avali" />
-	<crewCount amount="1" class="engi_separatist" />
+	<crewCount amount="4" class="avali" />
+	<crewCount amount="1" class="robottos_machinist" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_AVALI_3" layout="avali_cruiser_C" img="avali_cruiser_c">
@@ -4407,17 +4586,15 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="8" count="4">
-		<weapon name="RSA_MINICANNON" />
-		<weapon name="RSA_MINICANNON" />
+		<weapon name="BOMB_BREACH_1" />
 	</weaponList>
 	<droneList drones="5" count="2" />
 	<aug name="STORE_BEACON" />
 	<health amount="30" />
 	<maxPower amount="8" />
-	<crewCount amount="1" class="avali" />
-	<crewCount amount="1" class="avali" />
-	<crewCount amount="1" class="avali" />
-	<crewCount amount="1" class="rock_outcast" />
+	<crewCount amount="3" class="avali" />
+	<crewCount amount="1" class="robottos_gunner" />
+	<crewCount amount="1" class="robottos_machinist" />
 </shipBlueprint>
 
 <!--/////// FSF BLACK OPS //////-->
@@ -4633,7 +4810,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="slug_saboteur" />
 	<crewCount amount="1" class="human_angel" />
 	<crewCount amount="1" class="orchid_chieftain" />
-	<crewCount amount="1" class="engi_separatist" />
+	<crewCount amount="1" class="robottos_gunner" />
 	<aug name="EX_CLOAK_FIRE" />
 </shipBlueprint>
 
@@ -5512,8 +5689,746 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="8" />
 	<crewCount amount="1" class="rock_outcast" />
 	<crewCount amount="1" class="rsa_technician" />
-	<crewCount amount="1" class="engi_separatist" />
+	<crewCount amount="1" class="robottos" />
 	<aug name="RAMMING_SPEED" />
+</shipBlueprint>
+
+<!--/////// REBEL CRUISER //////-->
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_CRUISER" layout="rebel_cruiser_traitor" img="rebel_cruiser_traitor">
+	<class>Rebel Cruiser</class>
+	<name>RS Fratricide</name>
+	<desc>With its powerful laser array, the RS 'Fratricide' can easily defend itself from its former brothers-in-arms.</desc>
+	<systemList>
+		<artillery power="1" room="3" start="false" weapon="ARTILLERY_LASER" img="room_artillery_green_1x2down_right" />
+		<battery power="1" room="2" start="false" img="room_battery_fratricide" />
+		<cloaking power="1" room="7" start="false" img="room_cloaking_fratricide" />
+		<clonebay power="1" room="9" start="false">
+			<slot>
+				<number>2</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="15" start="true" img="room_doors_fratricide">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="8" start="false" img="room_drones_fratricide" />
+		<engines power="1" room="10" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="1" start="false" img="room_hacking" />
+		<medbay power="1" room="9" start="true" img="room_medbay_7">
+			<slot>
+				<number>2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="6" start="false" img="room_mind_fratricide" />
+		<oxygen power="2" room="13" start="true" img="room_oxygen_fratricide" />
+		<pilot power="1" room="14" start="true" img="room_pilot_fratricide">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="11" start="true" img="room_sensors_fratricide">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="4" start="true" img="room_shields_3">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="5" start="false" />
+		<weapons power="4" room="0" start="true" img="room_weapons_fratricide">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="LASER_HEAVY_1" />
+		<weapon name="CRYS_50CAL" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="2" class="human_rebel" />
+	<crewCount amount="2" class="human_mfk" />
+	<aug name="FTL_BOOSTER" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_CRUISER_2" layout="rebel_cruiser_militia" img="rebel_cruiser_militia">
+	<class>Rebel Cruiser</class>
+	<name>CMS Double-Deal</name>
+	<desc>Once a Rebellion freighter, this well-shielded, but otherwise basic ship now serves as the mobile home base of a small civilian militia team.</desc>
+	<systemList>
+		<artillery power="1" room="6" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_doubledeal" />
+		<battery power="1" room="4" start="false" img="room_battery_fratricide" />
+		<cloaking power="1" room="16" start="false" img="room_cloaking_doubledeal" />
+		<clonebay power="1" room="5" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="0" start="true" img="room_doors_doubledeal">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="9" start="false" img="room_drones_doubledeal" />
+		<engines power="1" room="7" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="2" start="false" img="room_hacking_doubledeal" />
+		<medbay power="1" room="5" start="true" img="room_medbay_doubledeal">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="15" start="false" img="room_mind_11" />
+		<oxygen power="1" room="13" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="18" start="true" img="room_pilot_doubledeal">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="12" start="true" img="room_sensors_doubledeal">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="4" room="10" start="true" img="room_shields_doubledeal">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="false" />
+		<weapons power="2" room="1" start="true" img="room_weapons_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="24" count="4">
+		<weapon name="TC_LASER_LEGION" />
+		<weapon name="TC_LASER_MARKSMAN" />
+	</weaponList>
+	<droneList drones="8" count="2" />
+	<health amount="30" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="rsa_technician" />
+	<crewCount amount="1" class="mantis_free" />
+	<crewCount amount="1" class="robottos" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_CRUISER_3" layout="rebel_cruiser_blackbird" img="rebel_cruiser_blackbird">
+	<class>Rebel Cruiser</class>
+	<name>RS The Dromaius</name>
+	<desc>After being rescued by a selfless Zoltan diplomat, the Rebel crew of this advanced E.W. ship have decided it would be best to fight against the Rebellion, not for it.</desc>
+	<systemList>
+		<artillery power="1" room="15" start="false" weapon="ARTILLERY_LASER" img="room_artillery_dromaius" />
+		<battery power="1" room="11" start="false" img="room_battery_dromaius" />
+		<cloaking power="1" room="6" start="false" img="room_cloaking" />
+		<clonebay power="1" room="14" start="true">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="18" start="true" img="room_doors_fratricide">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="9" start="false" img="room_drones_6" />
+		<engines power="2" room="5" start="true" img="room_engines_dromaius">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="0" start="true" img="room_hacking_dromaius" />
+		<medbay power="1" room="14" start="false" img="room_medbay_dromaius">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="2" start="false" img="room_mind_1" />
+		<oxygen power="1" room="16" start="true" img="room_oxygen_dromaius" />
+		<pilot power="2" room="17" start="true" img="room_pilot_fratricide">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="4" start="true" img="room_sensors_doubledeal">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="10" start="true" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="false" />
+		<weapons power="3" room="1" start="true" img="room_weapons_dromaius">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="TC_LASER_CHARGER" />
+	</weaponList>
+	<droneList drones="12" count="2" />
+	<health amount="30" />
+	<maxPower amount="9" />
+	<crewCount amount="1" class="human_rebel" />
+	<crewCount amount="1" class="protogen" />
+	<crewCount amount="1" class="robottos" />
+	<crewCount amount="1" class="zoltan" />
+</shipBlueprint>
+
+<!--/////// REBEL DESTROYER //////-->
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_DESTROYER" layout="rebel_destroyer_pirate" img="rebel_destroyer_pirate">
+	<class>Rebel Destroyer</class>
+	<name>RS Chaotic Good</name>
+	<desc>This Rebel ship was captured by an all-alien pirate gang who weren't happy with the Rebellion's ideal galaxy.</desc>
+	<systemList>
+		<artillery power="1" room="5" start="false" weapon="ARTILLERY_LASER" img="room_artillery_green_1x2down_right" />
+		<battery power="1" room="13" start="false" img="room_battery_chaoticgood" />
+		<cloaking power="1" room="7" start="false" img="room_cloaking_2" />
+		<clonebay power="1" room="6" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="2" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="8" start="false" img="room_drones_chaoticgood" />
+		<engines power="1" room="15" start="true" img="room_engines_chaoticgood">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="4" start="false" img="room_hacking" />
+		<medbay power="1" room="6" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="10" start="false" img="room_mind_fratricide" />
+		<oxygen power="1" room="11" start="true" img="room_oxygen_9" />
+		<pilot power="1" room="0" start="true" img="room_pilot_chaoticgood">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="3" start="true" img="room_sensors_chaoticgood">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="16" start="true" img="room_shields_chaoticgood">
+			<slot>
+				<direction>down</direction>
+				<number>3</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="1" start="false" />
+		<weapons power="3" room="9" start="true" img="room_weapons_chaoticgood">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="8" count="4">
+		<weapon name="ION_2" />
+		<weapon name="LASER_BURST_2" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="slug_saboteur" />
+	<crewCount amount="1" class="mantis_rsa" />
+	<crewCount amount="1" class="rock_commando" />
+	<crewCount amount="1" class="engi_separatist" />
+	<crewCount amount="1" class="protogen_space_scavenger" />
+	<aug name="ROCK_ARMOR" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_DESTROYER_2" layout="rebel_destroyer_stealth" img="rebel_destroyer_stealth">
+	<class>Rebel Destroyer</class>
+	<name>RS The Nightowl</name>
+	<desc>Equipped with cloaking systems and a powerful laser weapon, the elite Rebel ship 'The Nightowl' may just be the Federation's last hope.</desc>
+	<systemList>
+		<artillery power="1" room="11" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_nightowl" />
+		<battery power="1" room="15" start="false" img="room_battery_nightowl" />
+		<cloaking power="1" room="8" start="true" img="room_cloaking_5" />
+		<clonebay power="1" room="17" start="false">
+			<slot>
+				<number>2</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="3" start="true" img="room_doors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="1" start="false" img="room_drones_15" />
+		<engines power="3" room="18" start="true" img="room_engines_nightowl">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="5" start="false" img="room_hacking_9" />
+		<medbay power="1" room="17" start="true" img="room_medbay_7">
+			<slot>
+				<number>2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="9" start="false" img="room_mind_3" />
+		<oxygen power="1" room="10" start="true" img="room_oxygen_nightowl" />
+		<pilot power="1" room="0" start="true" img="room_pilot_chaoticgood">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="2" start="true" img="room_sensors_nightowl">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="12" start="true" img="room_shields_nightowl">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="false" />
+		<weapons power="3" room="13" start="true" img="room_weapons_nightowl">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="6" count="4">
+		<weapon name="LASER_PIERCE_2" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="3" class="human_rebel" />
+	<crewCount amount="1" class="human_medic" />
+	<aug name="FTL_JAMMER" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_DESTROYER_3" layout="rebel_destroyer_merc" img="rebel_destroyer_merc">
+	<class>Rebel Destroyer</class>
+	<name>Merc Hacktivist</name>
+	<desc>This E.W. ship was stolen from the Rebels by a team of mercenaries. Desperate for help, the Federation has now hired the team to fight for them.</desc>
+	<systemList>
+		<artillery power="1" room="7" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_hacktivist" />
+		<battery power="1" room="11" start="false" img="room_battery_hacktivist" />
+		<cloaking power="1" room="17" start="false" img="room_cloaking_10" />
+		<clonebay power="1" room="12" start="true">
+			<slot>
+				<number>2</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="5" start="true" img="room_doors_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="8" start="false" img="room_drones" />
+		<engines power="2" room="16" start="true" img="room_engines_chaoticgood">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="2" room="6" start="true" img="room_hacking_hacktivist" />
+		<medbay power="1" room="12" start="false" img="room_medbay_7">
+			<slot>
+				<number>2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="10" start="false" img="room_mind_hacktivist" />
+		<oxygen power="1" room="3" start="true" img="room_oxygen_hacktivist" />
+		<pilot power="1" room="0" start="true" img="room_pilot_chaoticgood">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="2" start="true" img="room_sensors_nightowl">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="15" start="true" img="room_shields_nightowl">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="9" start="false" />
+		<weapons power="3" room="4" start="true" img="room_weapons_dromaius">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="TC_VULCAN_CANNON" />
+	</weaponList>
+	<droneList drones="15" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="2" class="robottos" />
+	<crewCount amount="2" class="zoltan_peacekeeper" />
+	<crewCount amount="1" class="scrapper" />
+	<aug name="HACKING_STUN" />
+</shipBlueprint>
+
+<!--/////// REBEL SUPER RIGGER //////-->
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_SUPER_RIGGER" layout="rebel_super_rigger_body_horror" img="rebel_super_rigger_body_horror">
+	<class>Rebel Super Rigger</class>
+	<name>RS Body Horror</name>
+	<desc>Now that this ship and its powerful rocket battery are in the hands of the Federation, this former Rebel repair ship will instead be used to rip them apart.</desc>
+	<systemList>
+		<artillery power="3" room="5" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_blue_2x1right" />
+		<battery power="1" room="9" start="false" img="room_battery_10" />
+		<cloaking power="1" room="13" start="false" img="room_cloaking_bodyhorror" />
+		<clonebay power="1" room="7" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="1" start="true" img="room_doors_bodyhorror">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="15" start="false" img="room_drones_bodyhorror" />
+		<engines power="4" room="10" start="true" img="room_engines_bodyhorror">
+			<slot>
+				<direction>down</direction>
+				<number>3</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="6" start="false" img="room_hacking_bodyhorror" />
+		<medbay power="2" room="7" start="true" img="room_medbay_5">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="4" start="false" img="room_mind_fratricide" />
+		<oxygen power="2" room="12" start="true" img="room_oxygen_6" />
+		<pilot power="1" room="2" start="true" img="room_pilot_chaoticgood">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="0" start="true" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="11" start="true" img="room_shields_bodyhorror">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="false" />
+		<weapons power="1" room="8" start="true" img="room_weapons_bodyhorror">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="6" count="4" />
+	<droneList drones="3" count="2" />
+	<health amount="30" />
+	<maxPower amount="9" />
+	<crewCount amount="1" class="robottos_gunner" />
+	<crewCount amount="1" class="robottos_machinist" />
+	<crewCount amount="1" class="robottos_researcher" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_SUPER_RIGGER_2" layout="rebel_super_rigger_ogre" img="rebel_super_rigger_ogre">
+	<class>Rebel Super Rigger</class>
+	<name>CMS Ogre</name>
+	<desc>This minelayer struggles in head-to-head combat against other ships of its size. However, its advanced sensor suite is second-to-none.</desc>
+	<systemList>
+		<artillery power="2" room="4" start="true" weapon="ARTILLERY_FEDC" img="room_artillery_ogre" />
+		<battery power="1" room="11" start="false" img="room_battery_ogre" />
+		<cloaking power="1" room="14" start="false" img="room_cloaking_ogre" />
+		<clonebay power="1" room="7" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="6" start="false" img="room_doors_ogre">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="10" start="false" img="room_drones_9" />
+		<engines power="1" room="12" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="9" start="false" img="room_hacking_ogre" />
+		<medbay power="1" room="7" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="8" start="false" img="room_mind_ogre" />
+		<oxygen power="1" room="1" start="true" img="room_oxygen_ogre" />
+		<pilot power="1" room="0" start="true" img="room_pilot_chaoticgood">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="3" room="5" start="true" img="room_sensors_ogre">
+			<slot>
+				<direction>right</direction>
+				<number>3</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="3" start="true" img="room_shields_ogre">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="13" start="false" />
+		<weapons power="3" room="2" start="true" img="room_weapons_ogre">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="28" count="4">
+		<weapon name="MINELAUNCHER_2" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="2" class="human_rebel" />
+	<crewCount amount="2" class="robottos" />
+	<aug name="ADV_SCANNERS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_PROTOSTEEL_REBEL_SUPER_RIGGER_3" layout="rebel_super_rigger_splitface" img="rebel_super_rigger_splitface">
+	<class>Rebel Super Rigger</class>
+	<name>Merc Splitface</name>
+	<desc>As one might be able to tell from the paintjob and floorplan, the mercenaries piloting this bizarre ship disagree on many things.</desc>
+	<systemList>
+		<artillery power="1" room="1" start="true" weapon="ARTILLERY_FED" img="room_artillery_splitface" />
+		<battery power="1" room="12" start="false" img="room_battery_splitface" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking_splitface" />
+		<clonebay power="1" room="14" start="true">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="7" start="false" img="room_doors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="13" start="false" img="room_drones_splitface" />
+		<engines power="2" room="15" start="true" img="room_engines_splitface">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="false" img="room_hacking_9" />
+		<medbay power="1" room="14" start="false" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="11" start="false" img="room_mind_splitface" />
+		<oxygen power="1" room="10" start="true" img="room_oxygen_splitface" />
+		<pilot power="2" room="2" start="true" img="room_pilot_chaoticgood">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="4" start="true" img="room_sensors_nightowl">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="6" start="true" img="room_shields_splitface">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="9" start="false" />
+		<weapons power="3" room="5" start="true" img="room_weapons_splitface">
+			<slot>
+				<direction>right</direction>
+				<number>3</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="14" count="3">
+		<weapon name="TC_BOMB_SHOTGUN_2" />
+		<weapon name="TC_BOMB_SHOTGUN_FREE" />
+	</weaponList>
+	<droneList drones="4" count="3" />
+	<health amount="30" />
+	<maxPower amount="6" />
+	<crewCount amount="2" class="mantis_free" />
+	<crewCount amount="1" class="mantis_suzerain" />
+	<aug name="CREW_STIMS" />
+</shipBlueprint>
+
+<!--/////// MILSPEC //////-->
+
+<shipBlueprint name="PLAYER_SHIP_TC_MILSPEC" layout="player_ship_tc_milspec" img="player_ship_tc_milspec">
+	<class>Milspec Kleptocracy Cruiser</class>
+	<name>Military Surplus</name>
+	<desc>This ship was made by a bunch of Slugs who are fans of the Federation - they were banished from the Kleptocracy but managed to keep their ship.</desc>
+	<systemList>
+		<battery power="1" room="6" start="false" img="room_battery_FM_1" />
+		<cloaking power="1" room="10" start="false" img="room_cloaking" />
+		<doors power="1" room="2" start="false" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="3" room="13" start="false" img="room_drones" />
+		<engines power="2" room="16" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="5" start="false" img="room_hacking_7" />
+		<medbay power="1" room="3" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="2" room="9" start="true" img="room_mind_6" />
+		<oxygen power="1" room="8" start="true" img="room_oxygen_1x1_PMP" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="11" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="2" room="4" start="true" />
+		<weapons power="2" room="12" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>0</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="0" />
+	<droneList drones="0" count="0" />
+	<health amount="30" />
+	<maxPower amount="7" />
+	<crewCount amount="2" class="slug_saboteur" />
+	<crewCount amount="1" class="slug_ranger" />
+	<crewCount amount="1" class="slug_clansman" />
+	<aug name="EX_TELEPORT_HEAL" />
 </shipBlueprint>
 
 <!--
@@ -5683,8 +6598,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <crewBlueprint name="kiviekith">
 	<desc>After years of genetic tampering, these former humans are forced to wear their bulky suits in order to survive. The RSA gladly accepted these misfits into their ranks.</desc>
-	<title>RSA Kivie Grunt</title>
-	<short>RSA Kith</short>
+	<title>RSA Kivie</title>
+	<short>Kivie</short>
 	<cost>45</cost>
 	<bp>2</bp>
 	<rarity>4</rarity>
@@ -5731,24 +6646,67 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// ROBOTTOS //////-->
 
 <crewBlueprint name="robottos">
-	<desc>These guys were built for ship management and exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
-	<cost>80</cost>
-	<title>Robotto</title>
+	<desc>These guys were built for ship construction and spatial exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
+	<cost>50</cost>
+	<title>Sentient Robotto</title>
 	<short>Robotto</short>
 	<rarity>5</rarity>
 	<powerList>
 		<power>80 HP owing to their frail and simple construction.</power>
 		<power>x0.7 repair speed and combat damage.</power>
 		<power>Unable to suffocate.</power>
-		<power>takes x1.25 damage from fires.</power>
+		<power>Takes x1.25 damage from fires.</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="robottos_machinist">
+	<desc>This dedicated repair variant of the Sentient is made for maintaining ships in highly dangerous enviroments - perfect for combat situations.</desc>
+	<cost>70</cost>
+	<title>Sentient Robotto Machinist</title>
+	<short>Machinist</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>80 HP owing to their frail and simple construction</power>
+		<power>x2 repair speed, x0.7 combat damage</power>
+		<power>Unable to suffocate, completely fireproof</power>
+		<power>Provides a power bar to the current system</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="robottos_researcher">
+	<desc>The brainy variant of the Sentient - an amazing dedicated system manner that cannot lose skills and starts with higher default skills, but is still as frail as the base Robotto.</desc>
+	<cost>70</cost>
+	<title>Sentient Robotto Researcher</title>
+	<short>Researcher</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>80 HP owing to their frail and simple construction.</power>
+		<power>x2 movement speed, x0.7 repair speed and combat damage, x1.3 sabotage speed</power>
+		<power>Unable to suffocate, does not lose skills when cloned.</power>
+		<power>takes x1.25 damage from fires, provides a bar of power to the current room</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="robottos_gunner">
+	<desc>You'd expect some Sentients to specialize in fighting - and you'd be right. The gunner has a specialized targeting system and a stronger gun than the base version.</desc>
+	<cost>70</cost>
+	<title>Sentient Robotto Gunner</title>
+	<short>Gunner</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>80 HP owing to their frail and simple construction</power>
+		<power>x0.7 repair speed</power>
+		<power>Unable to suffocate</power>
+		<power>takes x1.25 damage from fires</power>
+		<power>x1.6 movement speed, takes x0.5 damage, deals x1.7 damage</power>
 	</powerList>
 </crewBlueprint>
 
 
-<!--///////FREE BUSINESS MAN(TIS)//////-->
+<!--/////// MANTIS //////-->
 
 <crewBlueprint name="mantis_freebusiness">
-	<desc>Slugton's ultraliberal Free Mantis sidekick, armed with two sharp claws, a love for jogging and an iconic faceplate scar from RAPTOR's claws.</desc>
+	<desc>Slugton's ultraliberal Free Mantis sidekick, armed with two sharp claws, a love for jogging and an iconic faceplate scar from RAPTOR's claws. Sigma grindset not included.</desc>
 	<title>Free Business Mantis</title>
 	<short>Businessmantis</short>
 	<cost>60</cost>
@@ -5757,6 +6715,20 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<powerList>
 		<power>Active Ability: Temporarily greatly increases speed and damage</power>
 		<power>Inflicts 1.2x damage in combat</power>
+		<power>Movement speed is 1.3x</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="mantis_rsa">
+	<desc>A Hive Mantis with prosthetic claws - they are frail and terrible in combat but work surprsingly well in repairs. They might not fit in with their brethren in the Hive, but they're always welcome in the RECLAIM and SALVAGE ASSOCIATION.</desc>
+	<title>RSA Hive Mantis</title>
+	<short>RSA Mantis</short>
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<powerList>
+		<power>Active Ability: Temporarily greatly increases repair speed</power>
+		<power>Inflicts 0.6x damage in combat, takes 0.9x damage but has 1.5x repair speed</power>
 		<power>Movement speed is 1.3x</power>
 	</powerList>
 </crewBlueprint>
@@ -5836,6 +6808,24 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
             <color r="255" g="238" b="46" a="1"/> <!--yellow-->
         </layer>
     </colorList>
+</crewBlueprint>
+
+<crewBlueprint name="protogen_space_scavenger">
+	<desc>Engineered to take apart ships while in the cold embrace of space, these special protogens were heavily augmented and are now fully anaerobic.</desc>
+	<cost>60</cost>
+	<title>Space Scavenger</title>
+	<short>S.Scavenger</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>x1.5 damage and sabotage speeds owing to specialised cybernetic augmentations.</power>
+		<power>x0.5 repair speed owing to specialised cybernetic augmentations.</power>
+		<power>x0.8 movement speed.</power>
+		<power>Requires no oxygen in their environment.</power>
+		<power>More susceptible to all damage owing to fragile breathing apparatus.</power>
+		<power>Maximum health of 70.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+		<power>Learns skills slower owing to specialised training.</power>
+	</powerList>
 </crewBlueprint>
 
 <crewBlueprint name="protogen_tracker">

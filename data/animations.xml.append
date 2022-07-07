@@ -41,7 +41,6 @@
 	<fireFrame>3</fireFrame>
 	<firePoint  x="14" y="26"/>
 	<mountPoint x="3" y="34"/>
-	<chargeImage>weapon_flak/tc_shotgun_battery_glow.png</chargeImage>
 </weaponAnim>
 
 <animSheet name="tc_shotgun_unstable" w="296" h="49" fw="37" fh="49">weapon_flak/tc_shotgun_unstable.png</animSheet>
@@ -352,6 +351,16 @@
 	<mountPoint x="3" y="47" />
 </weaponAnim>
 
+<animSheet name="crys_50cal" w="483" h="75" fw="21" fh="75">weapon_autocannon/crys_50cal.png</animSheet>
+<weaponAnim name="crys_50cal">
+	<sheet>crys_50cal</sheet>
+	<desc length="23" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="13" y="6" />
+	<mountPoint x="2" y="54" />
+</weaponAnim>
+
 <animSheet name="tc_minigun_mk1" w="180" h="49" fw="18" fh="49">weapon_autocannon/tc_minigun_mk1.png</animSheet>
 <weaponAnim name="tc_minigun_mk1">
 	<sheet>tc_minigun_mk1</sheet>
@@ -360,6 +369,26 @@
 	<fireFrame>2</fireFrame>
 	<firePoint x="12" y="13" />
 	<mountPoint x="2" y="36" />
+</weaponAnim>
+
+<animSheet name="tc_minigun_mk2" w="200" h="64" fw="20" fh="64">weapon_autocannon/tc_minigun_mk2.png</animSheet>
+<weaponAnim name="tc_minigun_mk2">
+	<sheet>tc_minigun_mk2</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="14" y="14" />
+	<mountPoint x="2" y="53" />
+</weaponAnim>
+
+<animSheet name="tc_minigun_mk3" w="176" h="74" fw="22" fh="74">weapon_autocannon/tc_minigun_mk3.png</animSheet>
+<weaponAnim name="tc_minigun_mk3">
+	<sheet>tc_minigun_mk3</sheet>
+	<desc length="8" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="14" y="10" />
+	<mountPoint x="2" y="53" />
 </weaponAnim>
 
 <animSheet name="RSA_MINICANNON" w="192" h="59" fw="24" fh="59">weapon_autocannon/rsa_minicannon.png</animSheet>
@@ -380,6 +409,16 @@
 	<fireFrame>5</fireFrame>
 	<firePoint x="17" y="11" />
 	<mountPoint x="3" y="69" />
+</weaponAnim>
+
+<animSheet name="tc_vulcan_cannon" w="360" h="80" fw="36" fh="80">weapon_autocannon/tc_vulcan_cannon.png</animSheet>
+<weaponAnim name="tc_vulcan_cannon">
+	<sheet>tc_vulcan_cannon</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="20" y="7" />
+	<mountPoint x="3" y="55" />
 </weaponAnim>
 
 <!--/////////////////// TEAR GAS //////////////////-->
@@ -2093,7 +2132,7 @@
 		<time>1</time>
 	</anim>
 
-<!--/////////////// FREEBUSINESSMANTIS //////////////-->
+<!--/////////////// MANTIS //////////////-->
 
 <animSheet name="mantis_freebusiness" w="350" h="490" fw="35" fh="35">people/mantis_freebusiness_base.png</animSheet>
 <anim name="mantis_freebusiness_clone">
@@ -2213,6 +2252,128 @@
 </anim>
 <anim name="mantis_freebusiness_portrait">
 	<sheet>mantis_freebusiness</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="mantis_rsa" w="350" h="490" fw="35" fh="35">people/mantis_rsa_base.png</animSheet>
+<anim name="mantis_rsa_clone">
+	<sheet>mantis_rsa</sheet>
+	<desc length="6" x="0" y="2"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_rsa_death_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="7" x="0" y="1"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_rsa_death_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="7" x="0" y="1"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_rsa_walk_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="5" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_walk_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="5" x="5" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_walk_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="5" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_walk_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="5" x="5" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_shoot_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_shoot_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_shoot_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="2" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_shoot_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="6" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_fire_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_fire_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_fire_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_fire_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_repair">
+	<sheet>mantis_rsa</sheet>
+	<desc length="9" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_punch_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="10" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_punch_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="10" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_teleport">
+	<sheet>mantis_rsa</sheet>
+	<desc length="9" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="mantis_rsa_type_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_rsa_type_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_rsa_type_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_rsa_type_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_rsa_portrait">
+	<sheet>mantis_rsa</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
@@ -2473,6 +2634,373 @@
 		<time>1</time>
 	</anim>
 
+	<animSheet name="robottos_machinist" w="315" h="455" fw="35" fh="35">people/robottos_machinist_base.png</animSheet>
+	<anim name="robottos_machinist_clone">
+		<sheet>robottos_machinist</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_death_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_death_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_walk_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_walk_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_walk_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_walk_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_shoot_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_shoot_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_shoot_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_shoot_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_fire_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_fire_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_fire_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_fire_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_repair">
+		<sheet>robottos_machinist</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_punch_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_punch_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_teleport">
+		<sheet>robottos_machinist</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="robottos_machinist_type_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_type_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_type_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_type_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_portrait">
+		<sheet>robottos_machinist</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<animSheet name="robottos_researcher" w="315" h="455" fw="35" fh="35">people/robottos_researcher_base.png</animSheet>
+	<anim name="robottos_researcher_clone">
+		<sheet>robottos_researcher</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_death_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_death_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_walk_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_walk_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_walk_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_walk_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_shoot_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_shoot_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_shoot_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_shoot_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_fire_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_fire_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_fire_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_fire_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_repair">
+		<sheet>robottos_researcher</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_punch_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_punch_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_teleport">
+		<sheet>robottos_researcher</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="robottos_researcher_type_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_type_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_type_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_type_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_portrait">
+		<sheet>robottos_researcher</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<animSheet name="robottos_gunner" w="315" h="455" fw="35" fh="35">people/robottos_gunner_base.png</animSheet>
+	<anim name="robottos_gunner_clone">
+		<sheet>robottos_gunner</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_death_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_death_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_walk_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_walk_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_walk_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_walk_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_shoot_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_shoot_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_shoot_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_shoot_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_fire_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_fire_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_fire_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_fire_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_repair">
+		<sheet>robottos_gunner</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_punch_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_punch_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_teleport">
+		<sheet>robottos_gunner</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="robottos_gunner_type_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_type_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_type_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_type_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_portrait">
+		<sheet>robottos_gunner</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	
 <!--/////////////// SERGALS //////////////-->
 
 <animSheet name="sergal_cheese" w="315" h="455" fw="35" fh="35">people/sergal_cheese_base.png</animSheet>
@@ -2718,6 +3246,130 @@
 	</anim>
 	<anim name="protogen_portrait">
 		<sheet>protogen</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<!--/////// SPACE SCAVENGER PROTOGEN VERIANT //////-->
+
+	<animSheet name="protogen_space_scavenger" w="315" h="455" fw="35" fh="35">people/protogen_space_scavenger_base.png</animSheet>
+	<anim name="protogen_space_scavenger_clone">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_death_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_death_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_walk_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_walk_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_walk_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_walk_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_shoot_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_shoot_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_shoot_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_shoot_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_fire_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_fire_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_fire_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_fire_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_repair">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_punch_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_punch_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_teleport">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="protogen_space_scavenger_type_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_type_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_type_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_type_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_portrait">
+		<sheet>protogen_space_scavenger</sheet>
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
@@ -3098,7 +3750,7 @@
 	<!--///////////////////////BIRBS//////////////////-->
 
 
-	<animSheet fh="35" fw="35" h="455" w="370" name="avali">people/avali_base.png</animSheet>
+	<animSheet fh="35" fw="35" h="455" w="350" name="avali">people/avali_base.png</animSheet>
 	<anim name="avali_clone">
 		<sheet>avali</sheet>
 		<desc y="2" x="0" length="7" />
