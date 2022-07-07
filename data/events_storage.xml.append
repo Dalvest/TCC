@@ -721,12 +721,26 @@
 
   <!--///////////////ROBOTTO TALK TO CREW//////////////-->
 
-   <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
+  <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
     <text>You look around for some crew to talk to.</text>
-
-   <choice req="robottos" blue="false" hidden="true">
+    <choice req="robottos" blue="false" hidden="true">
       <text>Look for your Sentient Robotto.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTOS"/>
+    </choice>
+
+    <choice req="robottos_machinist" blue="false" hidden="true">
+      <text>Look for your Sentient Robotto Machinist.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST"/>
+    </choice>
+
+    <choice req="robottos_gunner" blue="false" hidden="true">
+      <text>Look for your Sentient Robotto Gunner.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER"/>
+    </choice>
+
+    <choice req="robottos_researcher" blue="false" hidden="true">
+      <text>Look for your Sentient Robotto Researcher.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER"/>
     </choice>
   </event>
 
@@ -775,17 +789,6 @@
     <text>Your Sentient asks if anyone has weapons-grade uranium at hand. they claim it's 'fine,', they 'only need a little bit'.</text>
     <text>Your Sentient asks for your opinion on the many, many, many forms of life in the galaxy. You figure it'd take too look to talk about all of them.</text>
   </textList>
-
-    <!--///////////////ROBOTTO MACHINIST TALK TO CREW//////////////-->
-
-    <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
-      <text>You look around for some crew to talk to.</text>
-  
-     <choice req="robottos_machinist" blue="false" hidden="true">
-        <text>Look for your Sentient Robotto Machinist.</text>
-        <event load="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST"/>
-      </choice>
-    </event>
   
     <event name="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST">
       <text>What do you want to do with your Machinist?</text>
@@ -829,17 +832,6 @@
       <text>Your Machinist says they'd like to build their own spaceship sometime; when asked about it, they claim that they want less guns and more drones.</text>
       <text>Your Machinist is playing cards with a tiny mechanical arm it built for its own amusement. ...The Machinist is losing.</text>
     </textList>
-
-    <!--///////////////ROBOTTO GUNNER TALK TO CREW//////////////-->
-
-    <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
-      <text>You look around for some crew to talk to.</text>
-  
-      <choice req="robottos_gunner" blue="false" hidden="true">
-        <text>Look for your Sentient Robotto Gunner.</text>
-        <event load="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER"/>
-      </choice>
-    </event>
   
     <event name="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER">
       <text>What do you want to do with your Gunner?</text>
@@ -885,16 +877,7 @@
       <text>Your Gunner is whistling some digitized tune as it assembles and disassembles its custom gun and all of its accessories.</text>
     </textList>
 
-    <!--///////////////ROBOTTO RESEARCHER TALK TO CREW//////////////-->
 
-    <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
-      <text>You look around for some crew to talk to.</text>
-  
-     <choice req="robottos_researcher" blue="false" hidden="true">
-        <text>Look for your Sentient Robotto Researcher.</text>
-        <event load="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER"/>
-      </choice>
-    </event>
   
     <event name="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER">
       <text>What do you want to do with your Researcher?</text>
