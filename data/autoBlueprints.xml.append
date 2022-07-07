@@ -16,6 +16,13 @@
 	<name>scrapper_defender</name>
 </blueprintList>
 
+<blueprintList name="LIST_CREW_ROBOTTOS">
+	<name>robottos</name>
+	<name>robottos_gunner</name>
+	<name>robottos_machinist</name>
+	<name>robottos_researcher</name>
+</blueprintList>
+
 <blueprintList name="LIST_SCRAPPER_TIER_2">
 	<name>scrapper_soldier</name>
 	<name>scrapper_engineer</name>
@@ -113,6 +120,10 @@
 	<mod-append:name>sergal_cheese</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
 	<mod-append:name>avali</mod-append:name>
+	<mod-append:name>robottos</mod-append:name>
+	<mod-append:name>robottos_gunner</mod-append:name>
+	<mod-append:name>robottos_machinist</mod-append:name>
+	<mod-append:name>robottos_researcher</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
