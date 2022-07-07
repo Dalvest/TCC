@@ -2615,6 +2615,373 @@
 		<time>1</time>
 	</anim>
 
+	<animSheet name="robottos_machinist" w="315" h="455" fw="35" fh="35">people/robottos_machinist_base.png</animSheet>
+	<anim name="robottos_machinist_clone">
+		<sheet>robottos_machinist</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_death_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_death_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_walk_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_walk_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_walk_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_walk_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_shoot_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_shoot_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_shoot_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_shoot_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_fire_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_fire_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_fire_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_fire_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_repair">
+		<sheet>robottos_machinist</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_punch_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_punch_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_machinist_teleport">
+		<sheet>robottos_machinist</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="robottos_machinist_type_right">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_type_left">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_type_up">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_type_down">
+		<sheet>robottos_machinist</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_machinist_portrait">
+		<sheet>robottos_machinist</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<animSheet name="robottos_researcher" w="315" h="455" fw="35" fh="35">people/robottos_researcher_base.png</animSheet>
+	<anim name="robottos_researcher_clone">
+		<sheet>robottos_researcher</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_death_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_death_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_walk_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_walk_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_walk_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_walk_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_shoot_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_shoot_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_shoot_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_shoot_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_fire_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_fire_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_fire_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_fire_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_repair">
+		<sheet>robottos_researcher</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_punch_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_punch_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_researcher_teleport">
+		<sheet>robottos_researcher</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="robottos_researcher_type_right">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_type_left">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_type_up">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_type_down">
+		<sheet>robottos_researcher</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_researcher_portrait">
+		<sheet>robottos_researcher</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<animSheet name="robottos_gunner" w="315" h="455" fw="35" fh="35">people/robottos_gunner_base.png</animSheet>
+	<anim name="robottos_gunner_clone">
+		<sheet>robottos_gunner</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_death_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_death_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_walk_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_walk_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_walk_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_walk_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_shoot_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_shoot_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_shoot_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_shoot_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_fire_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_fire_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_fire_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_fire_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_repair">
+		<sheet>robottos_gunner</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_punch_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_punch_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_gunner_teleport">
+		<sheet>robottos_gunner</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="robottos_gunner_type_right">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_type_left">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_type_up">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_type_down">
+		<sheet>robottos_gunner</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_gunner_portrait">
+		<sheet>robottos_gunner</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	
 <!--/////////////// SERGALS //////////////-->
 
 <animSheet name="sergal_cheese" w="315" h="455" fw="35" fh="35">people/sergal_cheese_base.png</animSheet>

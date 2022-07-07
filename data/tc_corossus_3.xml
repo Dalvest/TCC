@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 
-<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+
+
 <img x="-73" y="-44" w="386" h="365" />
 <offsets>
 	<floor x="67" y="39" />
 	<cloak x="193" y="182" />
 </offsets>
 <weaponMounts>
-	<mount x="338" y="180" rotate="true" mirror="true" gib="-1" slide="up" />
-	<mount x="293" y="114" rotate="true" mirror="true" gib="-1" slide="right" />
-	<mount x="223" y="320" rotate="true" mirror="true" gib="-1" slide="right" />
-	<mount x="270" y="235" rotate="true" mirror="false" gib="-1" slide="down" />
-	<mount x="236" y="265" rotate="true" mirror="false" gib="-1" slide="no" />
+	<mount x="338" y="180" rotate="true" mirror="true" gib="4" slide="up" />
+	<mount x="293" y="114" rotate="true" mirror="true" gib="1" slide="right" />
+	<mount x="223" y="320" rotate="true" mirror="true" gib="4" slide="right" />
+	<mount x="270" y="235" rotate="true" mirror="false" gib="4" slide="down" />
+	<mount x="236" y="265" rotate="true" mirror="false" gib="4" slide="no" />
 </weaponMounts>
-<explosion />
+<explosion><gib1><velocity min="0.20639432342838482" max="0.6879810780946161" /><direction min="308" max="324" /><angular min="-0.621638827607942" max="0.621638827607942" /><x>194</x><y>1</y></gib1><gib2><velocity min="0.13309565148754693" max="0.4436521716251564" /><direction min="3" max="19" /><angular min="-0.6461150419287212" max="0.6461150419287212" /><x>97</x><y>3</y></gib2><gib3><velocity min="0.19990045304702506" max="0.6663348434900835" /><direction min="64" max="80" /><angular min="-0.6537168992145296" max="0.6537168992145296" /><x>1</x><y>39</y></gib3><gib4><velocity min="0.12477192060482684" max="0.41590640201608947" /><direction min="214" max="230" /><angular min="-0.4742516409800197" max="0.4742516409800197" /><x>161</x><y>164</y></gib4><gib5><velocity min="0.19528430478539957" max="0.6509476826179986" /><direction min="134" max="150" /><angular min="-0.7433987864169147" max="0.7433987864169147" /><x>47</x><y>183</y></gib5></explosion>
 
