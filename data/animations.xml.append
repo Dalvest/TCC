@@ -41,7 +41,6 @@
 	<fireFrame>3</fireFrame>
 	<firePoint  x="14" y="26"/>
 	<mountPoint x="3" y="34"/>
-	<chargeImage>weapon_flak/tc_shotgun_battery_glow.png</chargeImage>
 </weaponAnim>
 
 <animSheet name="tc_shotgun_unstable" w="296" h="49" fw="37" fh="49">weapon_flak/tc_shotgun_unstable.png</animSheet>
@@ -352,6 +351,16 @@
 	<mountPoint x="3" y="47" />
 </weaponAnim>
 
+<animSheet name="crys_50cal" w="483" h="75" fw="21" fh="75">weapon_autocannon/crys_50cal.png</animSheet>
+<weaponAnim name="crys_50cal">
+	<sheet>crys_50cal</sheet>
+	<desc length="23" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="13" y="6" />
+	<mountPoint x="2" y="54" />
+</weaponAnim>
+
 <animSheet name="tc_minigun_mk1" w="180" h="49" fw="18" fh="49">weapon_autocannon/tc_minigun_mk1.png</animSheet>
 <weaponAnim name="tc_minigun_mk1">
 	<sheet>tc_minigun_mk1</sheet>
@@ -400,6 +409,16 @@
 	<fireFrame>5</fireFrame>
 	<firePoint x="17" y="11" />
 	<mountPoint x="3" y="69" />
+</weaponAnim>
+
+<animSheet name="tc_vulcan_cannon" w="360" h="80" fw="36" fh="80">weapon_autocannon/tc_vulcan_cannon.png</animSheet>
+<weaponAnim name="tc_vulcan_cannon">
+	<sheet>tc_vulcan_cannon</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="20" y="7" />
+	<mountPoint x="3" y="55" />
 </weaponAnim>
 
 <!--/////////////////// TEAR GAS //////////////////-->
