@@ -7,7 +7,7 @@ Current Version: 1.1
 
 Lead Devs: Zuggo, Dalvest
 
-Coders: Zandoware, Choosechee, Vertaalfout, Kommandant_Julk
+Coders: Zandoware, Choosechee, Vertaalfout, Kommandant_Julk, Typerim
 
 Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee, Wabbles, ConMan, Skye, Typerim, Pedrosian96
 

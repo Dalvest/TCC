@@ -3231,6 +3231,130 @@
 		<time>1</time>
 	</anim>
 
+	<!--/////// SPACE SCAVENGER PROTOGEN VERIANT //////-->
+
+	<animSheet name="protogen_space_scavenger" w="315" h="455" fw="35" fh="35">people/protogen_space_scavenger_base.png</animSheet>
+	<anim name="protogen_space_scavenger_clone">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_death_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_death_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_walk_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_walk_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_walk_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_walk_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_shoot_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_shoot_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_shoot_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_shoot_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_fire_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_fire_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_fire_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_fire_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_repair">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_punch_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_punch_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="protogen_space_scavenger_teleport">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="protogen_space_scavenger_type_right">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_type_left">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_type_up">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_type_down">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="protogen_space_scavenger_portrait">
+		<sheet>protogen_space_scavenger</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
 	<!--/////// TRACKER //////-->
 
 	<animSheet name="protogen_tracker" w="315" h="455" fw="35" fh="35">people/protogen_tracker_base.png</animSheet>

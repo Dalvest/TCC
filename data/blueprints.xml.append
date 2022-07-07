@@ -5982,6 +5982,24 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
     </colorList>
 </crewBlueprint>
 
+<crewBlueprint name="protogen_space_scavenger">
+	<desc>Engineered to take appart ships while in the cold embrace of space, these special protogens had to be heavily augmented.</desc>
+	<cost>60</cost>
+	<title>Space Scavenger</title>
+	<short>S.Scavenger</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>x1.5 damage and sabotage speeds owing to specialised cybernetic augmentations.</power>
+		<power>x0.25 repair speed owing to specialised cybernetic augmentations.</power>
+		<power>x0.8 movement speed.</power>
+		<power>Requires no oxygen in their environment.</power>
+		<power>More susceptible to all damage owing to fragile breathing apparatus.</power>
+		<power>Maximum health of 70.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+		<power>Learns skills slower owing to specialised training.</power>
+	</powerList>
+</crewBlueprint>
+
 <crewBlueprint name="protogen_tracker">
 	<desc>TRACKER ONLINE! Badass but lazy, this protogen ship captain probably knows what he's doing... sometimes.</desc>
 	<cost>80</cost>
