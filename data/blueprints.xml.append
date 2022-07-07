@@ -1472,7 +1472,7 @@
 	<sp>0</sp>
 	<radius>40</radius>
 	<breachChance>0</breachChance>
-	<cooldown>10</cooldown>
+	<cooldown>14</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
@@ -1501,6 +1501,96 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>tc_minigun_mk1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_MINIGUN_MK2">
+	<type>LASER</type>
+	<title>Minigun Mark II</title>
+	<short>Minigun Mk.2</short>
+	<desc>A relic from the Federation-Hive war. This is an upgraded model of the Mk. 1 minigun... it's faster and better, but it uses more ammunition.</desc>
+	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 85% chance to not use ammo.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>85</freeMissileChance>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>1</sp>
+	<radius>30</radius>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<boost>
+		<type>cooldown</type>
+		<amount>2</amount>
+		<count>5</count>
+	</boost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<cost>70</cost>
+	<image>GB_shot_light</image>
+	<launchSounds>
+		<sound>GB_cannonLight1</sound>
+		<sound>GB_cannonLight2</sound>
+		<sound>GB_cannonLight3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_minigun_mk2</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_MINIGUN_MK3">
+	<type>LASER</type>
+	<title>Minigun Mark III</title>
+	<short>Minigun Mk.3</short>
+	<desc>The Vulcan pales in comparison to this - while the other two miniguns would've only fit in a museum, this... this is a weapon.</desc>
+	<tooltip>3 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>95</freeMissileChance>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<radius>30</radius>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<power>3</power>
+	<boost>
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>5</count>
+	</boost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<cost>100</cost>
+	<image>GB_shot_light</image>
+	<launchSounds>
+		<sound>GB_cannonLight1</sound>
+		<sound>GB_cannonLight2</sound>
+		<sound>GB_cannonLight3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_minigun_mk3</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -3314,8 +3404,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="8" count="4">
-		<weapon name="TC_SINEWAVE" />
-		<weapon name="ION_2" />
+		<weapon name="TC_MINIGUN_MK3" />
 	</weaponList>
 	<droneList drones="6" count="4">
 		<drone name="DEFENSE_1" />
@@ -5681,7 +5770,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// ROBOTTOS //////-->
 
 <crewBlueprint name="robottos">
-	<desc>These guys were built for ship management and exploration, not war. They do make for crew good as long as you have no better alternative.</desc>
+	<desc>These guys were built for ship management and exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
 	<cost>80</cost>
 	<title>Robotto</title>
 	<short>Robotto</short>
@@ -5695,10 +5784,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </crewBlueprint>
 
 
-<!--///////FREE BUSINESS MAN(TIS)//////-->
+<!--/////// MANTIS //////-->
 
 <crewBlueprint name="mantis_freebusiness">
-	<desc>Slugton's ultraliberal Free Mantis sidekick, armed with two sharp claws, a love for jogging and an iconic faceplate scar from RAPTOR's claws.</desc>
+	<desc>Slugton's ultraliberal Free Mantis sidekick, armed with two sharp claws, a love for jogging and an iconic faceplate scar from RAPTOR's claws. Sigma grindset not included.</desc>
 	<title>Free Business Mantis</title>
 	<short>Businessmantis</short>
 	<cost>60</cost>
@@ -5707,6 +5796,20 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<powerList>
 		<power>Active Ability: Temporarily greatly increases speed and damage</power>
 		<power>Inflicts 1.2x damage in combat</power>
+		<power>Movement speed is 1.3x</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="mantis_rsa">
+	<desc>A Hive Mantis with prosthetic claws - they are frail and terrible in combat but work surprsingly well in repairs. They might not fit in with their brethren in the Hive, but they're always welcome in the RECLAIM and SALVAGE ASSOCIATION.</desc>
+	<title>RSA Hive Mantis</title>
+	<short>RSA Mantis</short>
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<powerList>
+		<power>Active Ability: Temporarily greatly increases repair speed</power>
+		<power>Inflicts 0.6x damage in combat, takes 0.9x damage but has 1.5x repair speed</power>
 		<power>Movement speed is 1.3x</power>
 	</powerList>
 </crewBlueprint>

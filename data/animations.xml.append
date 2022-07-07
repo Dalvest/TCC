@@ -343,6 +343,26 @@
 	<mountPoint x="2" y="36" />
 </weaponAnim>
 
+<animSheet name="tc_minigun_mk2" w="200" h="64" fw="20" fh="64">weapon_autocannon/tc_minigun_mk2.png</animSheet>
+<weaponAnim name="tc_minigun_mk2">
+	<sheet>tc_minigun_mk2</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="14" y="14" />
+	<mountPoint x="2" y="53" />
+</weaponAnim>
+
+<animSheet name="tc_minigun_mk3" w="176" h="74" fw="22" fh="74">weapon_autocannon/tc_minigun_mk3.png</animSheet>
+<weaponAnim name="tc_minigun_mk3">
+	<sheet>tc_minigun_mk3</sheet>
+	<desc length="8" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="14" y="10" />
+	<mountPoint x="2" y="53" />
+</weaponAnim>
+
 <animSheet name="RSA_MINICANNON" w="192" h="59" fw="24" fh="59">weapon_autocannon/rsa_minicannon.png</animSheet>
 <weaponAnim name="RSA_MINICANNON">
 	<sheet>RSA_MINICANNON</sheet>
@@ -2074,7 +2094,7 @@
 		<time>1</time>
 	</anim>
 
-<!--/////////////// FREEBUSINESSMANTIS //////////////-->
+<!--/////////////// MANTIS //////////////-->
 
 <animSheet name="mantis_freebusiness" w="350" h="490" fw="35" fh="35">people/mantis_freebusiness_base.png</animSheet>
 <anim name="mantis_freebusiness_clone">
@@ -2194,6 +2214,128 @@
 </anim>
 <anim name="mantis_freebusiness_portrait">
 	<sheet>mantis_freebusiness</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="mantis_rsa" w="350" h="490" fw="35" fh="35">people/mantis_rsa_base.png</animSheet>
+<anim name="mantis_rsa_clone">
+	<sheet>mantis_rsa</sheet>
+	<desc length="6" x="0" y="2"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_rsa_death_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="7" x="0" y="1"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_rsa_death_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="7" x="0" y="1"/>
+	<time>0.7</time>
+</anim>
+<anim name="mantis_rsa_walk_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="5" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_walk_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="5" x="5" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_walk_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="5" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_walk_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="5" x="5" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_shoot_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_shoot_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_shoot_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="2" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_shoot_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="6" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_fire_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_fire_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_fire_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_fire_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_repair">
+	<sheet>mantis_rsa</sheet>
+	<desc length="9" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_punch_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="10" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_punch_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="10" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="mantis_rsa_teleport">
+	<sheet>mantis_rsa</sheet>
+	<desc length="9" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="mantis_rsa_type_right">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_rsa_type_left">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_rsa_type_up">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_rsa_type_down">
+	<sheet>mantis_rsa</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>1</time>
+</anim>
+<anim name="mantis_rsa_portrait">
+	<sheet>mantis_rsa</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
