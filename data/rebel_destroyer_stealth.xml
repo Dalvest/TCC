@@ -1,10 +1,9 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-
-
+<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
 <img x="-67" y="-43" w="500" h="400" />
 <offsets>
-	<floor x="61" y="37" />
+	<floor x="60" y="37" />
 	<cloak x="0" y="0" />
 </offsets>
 <weaponMounts>
@@ -15,5 +14,40 @@
 	<mount x="415" y="331" rotate="true" mirror="false" gib="4" slide="no" />
 </weaponMounts>
 <explosion>
-	<gib1><velocity min="0.2720661615444755" max="0.9068872051482516" /><direction min="49" max="65" /><angular min="-0.8540230586225828" max="0.8540230586225828" /><x>20</x><y>29</y></gib1><gib2><velocity min="0.13012778943799644" max="0.4337592981266548" /><direction min="323" max="339" /><angular min="-0.6975585450921774" max="0.6975585450921774" /><x>184</x><y>29</y></gib2><gib3><velocity min="0.22206858433361043" max="0.7402286144453681" /><direction min="259" max="275" /><angular min="-0.9128847157016171" max="0.9128847157016171" /><x>263</x><y>135</y></gib3><gib4><velocity min="0.1" max="0.3076440586164323" /><direction min="184" max="200" /><angular min="-0.5586592178770949" max="0.5586592178770949" /><x>127</x><y>191</y></gib4><gib5><velocity min="0.2379972036921149" max="0.7933240123070497" /><direction min="115" max="131" /><angular min="-0.7804878048780487" max="0.7804878048780487" /><x>20</x><y>195</y></gib5></explosion>
+	<gib1>
+		<velocity min="0.27" max="0.91" />
+		<direction min="49" max="65" />
+		<angular min="-0.85" max="0.85" />
+		<x>20</x>
+		<y>29</y>
+	</gib1>
+	<gib2>
+		<velocity min="0.13" max="0.43" />
+		<direction min="323" max="339" />
+		<angular min="-0.70" max="0.70" />
+		<x>184</x>
+		<y>29</y>
+	</gib2>
+	<gib3>
+		<velocity min="0.22" max="0.74" />
+		<direction min="259" max="275" />
+		<angular min="-0.91" max="0.91" />
+		<x>263</x>
+		<y>135</y>
+	</gib3>
+	<gib4>
+		<velocity min="0.10" max="0.31" />
+		<direction min="184" max="200" />
+		<angular min="-0.56" max="0.56" />
+		<x>127</x>
+		<y>191</y>
+	</gib4>
+	<gib5>
+		<velocity min="0.24" max="0.79" />
+		<direction min="115" max="131" />
+		<angular min="-0.78" max="0.78" />
+		<x>20</x>
+		<y>195</y>
+	</gib5>
+</explosion>
 
