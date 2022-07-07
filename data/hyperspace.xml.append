@@ -309,7 +309,7 @@
 			<crew>
 				<scrapper_scavenger room="11" />
 				<robottos room="0" />
-				<protogen room="1" />
+				<protogen_space_scavenger room="1" />
 				<avali room="5" />
 			</crew>
 		</mod-append:customShip>
@@ -1487,7 +1487,7 @@
 
 			<mod-append:race name="protogen_space_scavenger">
 			<maxHealth>70</maxHealth>
-			<repairSpeed>0.25</repairSpeed>
+			<repairSpeed>0.5</repairSpeed>
 			<canFight>true</canFight>
 			<canRepair>true</canRepair>
 			<canSabotage>true</canSabotage>
