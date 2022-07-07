@@ -56,9 +56,12 @@
 <blueprintList name="LIST_CREW_AVALI">
 	<name>avali</name>
 </blueprintList>
-<!--just a list of the weapons ariadne can get you-->
 
-<blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH">
+<blueprintList name="LIST_CREW_KIVIE">
+	<name>kiviekith</name>
+</blueprintList>
+
+<blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH"> <!--just a list of the weapons ariadne can get you-->
 	<name>LIST_WEAPONS_LOSTSUN</name>
 </blueprintList>
 <blueprintList name="LIST_DRONES_MADOK">
@@ -105,6 +108,11 @@
 	<name>LASER_LIGHT</name>
 </blueprintList>
 
+<mod:findName type="blueprintList" name="LIST_CREW_MANTIS">
+	<mod-append:name>mantis_rsa</mod-append:name>
+	<mod-append:name>mantis_freebusiness</mod-append:name>
+</mod:findName>
+
 <mod:findName type="blueprintList" name="LIST_CREW_ALIENS">
 	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>scrapper</mod-append:name>
@@ -124,6 +132,8 @@
 	<mod-append:name>robottos_gunner</mod-append:name>
 	<mod-append:name>robottos_machinist</mod-append:name>
 	<mod-append:name>robottos_researcher</mod-append:name>
+	<mod-append:name>mantis_rsa</mod-append:name>
+	<mod-append:name>mantis_freebusiness</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
@@ -616,6 +626,226 @@
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
+<shipBlueprint name="KIVIE_FIGHTER" layout="KIVIE_FIGHTER" img="KIVIE_FIGHTER">
+	<class>Kivie Fighter</class>
+	<minSector>2</minSector>
+	<maxSector>5</maxSector>
+	<systemList>
+		<clonebay power="1" max="2" room="5" start="true" />
+		<engines power="2" max="4" room="2" start="true" />
+		<hacking power="1" max="2" room="7" start="false" />
+		<mind power="1" max="2" room="9" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="6" room="3" start="true" />
+		<weapons power="2" max="6" room="8" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="0" count="0" />
+	<health amount="7" />
+	<maxPower amount="15" />
+	<crewCount amount="2" max="4" class="kiviekith" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="KIVIE_FIGHTER_ENGI" layout="KIVIE_FIGHTER" img="KIVIE_FIGHTER">
+	<class>Kivie Fighter</class>
+	<minSector>2</minSector>
+	<maxSector>5</maxSector>
+	<systemList>
+		<clonebay power="1" max="2" room="5" start="true" />
+		<engines power="2" max="4" room="2" start="true" />
+		<hacking power="1" max="2" room="7" start="false" />
+		<mind power="1" max="2" room="9" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="6" room="3" start="true" />
+		<weapons power="2" max="6" room="8" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="0" count="0" />
+	<health amount="7" />
+	<maxPower amount="15" />
+	<crewCount amount="2" max="4" class="kiviekith" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="MU_ENGI_FIGHTER_KIVIE" layout="mu_engi_fighter_a" img="mu_engi_fighter_a">
+	<class>Engi Fighter</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<drones power="2" max="8" room="2" start="true" />
+		<engines power="1" max="2" room="6" start="true" />
+		<medbay power="1" max="2" room="4" start="false" />
+		<oxygen power="1" max="2" room="5" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="8" room="3" start="true" />
+		<weapons power="2" max="7" room="1" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="0" count="3" load="LIST_WEAPONS_ENGI" />
+	<droneList drones="10" count="3" load="LIST_DRONES_ENGI" />
+	<health amount="10" />
+	<maxPower amount="9" />
+	<crewCount amount="2" max="6" class="engi" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="UPG_MEDBAY_NANO" />
+</shipBlueprint>
+
+<shipBlueprint name="KIVIE_BOMBER" layout="KIVIE_BOMBER" img="KIVIE_BOMBER">
+	<class>Kivie Bomber</class>
+	<minSector>4</minSector>
+	<maxSector>7</maxSector>
+	<systemList>
+		<clonebay power="1" max="1" room="10" start="true" />
+		<doors power="2" max="2" room="1" start="true" />
+		<engines power="2" max="3" room="4" start="true" />
+		<hacking power="1" max="1" room="12" start="false" />
+		<medbay power="1" max="1" room="10" start="true" />
+		<mind power="1" max="1" room="12" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<shields power="4" max="6" room="3" start="true" />
+		<teleporter power="1" max="2" room="11" start="false" />
+		<weapons power="4" max="6" room="7" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="10" count="3" load="LIST_WEAPONS_OUTCAST" />
+	<droneList drones="5" count="0" />
+	<health amount="15" />
+	<maxPower amount="15" />
+	<crewCount amount="3" max="5" class="kiviekith" />
+	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="KIVIE_BOMBER_SPIDER" layout="KIVIE_BOMBER_SPIDER" img="KIVIE_BOMBER_SPIDER">
+	<class>Kivie Bomber</class>
+	<minSector>4</minSector>
+	<maxSector>7</maxSector>
+	<systemList>
+		<clonebay power="1" max="1" room="10" start="true" />
+		<doors power="1" max="1" room="1" start="true" />
+		<engines power="2" max="3" room="4" start="true" />
+		<hacking power="1" max="1" room="12" start="false" />
+		<medbay power="1" max="1" room="10" start="true" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<shields power="2" max="4" room="3" start="true" />
+		<teleporter power="1" max="2" room="11" start="true" />
+		<weapons power="4" max="6" room="7" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="6" count="2" load="LIST_WEAPONS_OUTCAST" />
+	<droneList drones="5" count="0" />
+	<health amount="15" />
+	<maxPower amount="15" />
+	<crewCount amount="4" max="7" class="spider_hatch" />
+	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="KIVIE_SCOUT" layout="KIVIE_SCOUT" img="KIVIE_SCOUT">
+	<class>Kivie Scout</class>
+	<minSector>1</minSector>
+	<maxSector>4</maxSector>
+	<systemList>
+		<engines power="1" max="2" room="3" start="true" />
+		<hacking power="1" max="1" room="7" start="false" />
+		<mind power="1" max="1" room="7" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="1" max="1" room="0" start="true" />
+		<shields power="2" max="4" room="2" start="true" />
+		<weapons power="2" max="3" room="1" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="5" count="0" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="0" count="0" />
+	<health amount="6" />
+	<maxPower amount="10" />
+	<crewCount amount="2" max="2" class="kiviekith" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="KIVIE_SCOUT_ENGI" layout="KIVIE_SCOUT" img="KIVIE_SCOUT">
+	<class>Kivie Scout</class>
+	<minSector>1</minSector>
+	<maxSector>4</maxSector>
+	<systemList>
+		<engines power="1" max="2" room="3" start="true" />
+		<hacking power="1" max="1" room="7" start="false" />
+		<mind power="1" max="1" room="7" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="1" max="1" room="0" start="true" />
+		<shields power="2" max="4" room="2" start="true" />
+		<weapons power="2" max="3" room="1" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="5" count="0" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="0" count="0" />
+	<health amount="6" />
+	<maxPower amount="10" />
+	<crewCount amount="2" max="2" class="kiviekith" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="KIVIE_FIGHTER_PIRATE" layout="KIVIE_FIGHTER_PIRATE" img="KIVIE_FIGHTER_PIRATE">
+	<class>Kivie Fighter</class>
+	<minSector>2</minSector>
+	<maxSector>6</maxSector>
+	<systemList>
+		<clonebay power="1" max="2" room="5" start="true" />
+		<doors power="2" max="2" room="7" start="true" />
+		<engines power="2" max="4" room="2" start="true" />
+		<hacking power="1" max="2" room="9" start="false" />
+		<medbay power="1" max="1" room="5" start="true" />
+		<mind power="1" max="2" room="9" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="6" room="3" start="true" />
+		<weapons power="2" max="6" room="8" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="5" count="4" load="LIST_WEAPONS_REBEL" />
+	<droneList drones="0" count="0" />
+	<health amount="7" />
+	<maxPower amount="15" />
+	<crewCount amount="1" max="2" class="mantis" />
+	<crewCount amount="1" max="2" class="slug" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="KIVIE_AUTO" layout="KIVIE_AUTO" img="KIVIE_AUTO">
+	<class>Kivie Auto</class>
+	<minSector>1</minSector>
+	<maxSector>4</maxSector>
+	<systemList>
+		<doors power="1" max="1" room="5" start="true" />
+		<drones power="2" max="2" room="4" start="false" />
+		<engines power="1" max="3" room="3" start="true" />
+		<hacking power="1" max="1" room="4" start="false" />
+		<pilot power="1" max="1" room="1" start="true" />
+		<shields power="2" max="4" room="2" start="true" />
+		<weapons power="2" max="4" room="0" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>1</droneSlots>
+	<weaponList missiles="5" count="3" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="3" count="1" load="MV_DRONES_COMBAT" />
+	<health amount="7" />
+	<maxPower amount="15" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="NO_GHOST" />
+</shipBlueprint>
 
 <!--/////////////////////AVALI ENEMY SHIP BLUEPRINTS/////////////////-->
 <shipBlueprint name="AVALI_SKIRMISHER" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">

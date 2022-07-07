@@ -400,15 +400,20 @@
       <text>Look for Sergal crew.</text>
       <event load="STORAGE_CHECK_CREW_LIST_SERGAL"/>
     </mod-append:choice>
-      <!--//////////////////ROBOTTOS//////////////////-->
-      <mod-append:choice req="LIST_CREW_ROBOTTOS" lvl="1" blue="false" hidden="true">
+    <!--//////////////////KIVIE//////////////////-->
+    <mod-append:choice req="LIST_CREW_KIVIE" lvl="1" blue="false" hidden="true">
+      <text>Look for Kivie crew.</text>
+      <event load="STORAGE_CHECK_CREW_LIST_KIVIE"/>
+    </mod-append:choice>
+    <!--//////////////////ROBOTTOS//////////////////-->
+    <mod-append:choice req="LIST_CREW_ROBOTTOS" lvl="1" blue="false" hidden="true">
       <text>Look for Sentient Robotto crew.</text>
       <event load="STORAGE_CHECK_CREW_LIST_ROBOTTOS"/>
     </mod-append:choice>
       <!--//////////////////AVALI//////////////////-->
     <mod-append:choice req="LIST_CHECKCREW_AVALI" blue="false" hidden="true">
-		   <text>Look for Avali crew</text>
-		   <event load="STORAGE_CHECK_CREW_LIST_AVALI" />
+      <text>Look for Avali crew</text>
+      <event load="STORAGE_CHECK_CREW_LIST_AVALI" />
 	  </mod-append:choice>
 
     <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
@@ -663,12 +668,63 @@
     <text>Lancer quips at you happily using his tape recorder "PLEASE KEEP YOUR HANDS IN THE RIDE (whir) YOU- (whir) ARE IN A HARDHAT AREA (whir)". How cute of him!</text>
   </textList>
 
+  <!--///////////////KIVIE TALK TO CREW//////////////-->
+
+  <event name="STORAGE_CHECK_CREW_LIST_KIVIE">
+    <text>You look around for some crew to talk to.</text>
+
+   <choice req="kiviekith" blue="false" hidden="true">
+      <text>Look for your Kivie.</text>
+      <event load="STORAGE_CHECK_CREW_KIVIE"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_KIVIE">
+    <text>What do you want to do with your Kivie?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_KIVIE_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_KIVIE_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_KIVIE_SCAN">
+    <text>KIVIE'S DETAILS
+      SPECIES? [KIVIE] UNIQUE? [No]
+      Stats: Takes less hazard damage, learns skills slower, deals x1.2 combat and sabotage damage and takes x0.8 damage.
+      Formerly human, currently a genetic abomination. It is unclear who experimented on them, but one thing is clear - most of them are a part of the RECLAIM and SALVAGE ASSOCIATION.
+    </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_KIVIE_TALK">
+    <text load="TEXT_CREW_TALK_KIVIE"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_KIVIE">
+    <text>Your Kivie seems... well, you're not sure what their current emotional state is, given the fact that their face is obscured by a mask.</text>
+    <text>Your Kivie seems to be in a daze right now, so you decide to leave them alone.</text>
+    <text>Your Kivie asks if you can get them a coffee - you ask how they will drink it, and get a nod as an answer.</text>
+  </textList>
+
   <!--///////////////ROBOTTO TALK TO CREW//////////////-->
 
    <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
     <text>You look around for some crew to talk to.</text>
 
-   <choice req="sergal_cheese" blue="false" hidden="true">
+   <choice req="robottos" blue="false" hidden="true">
       <text>Look for your Sentient Robotto.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTOS"/>
     </choice>
@@ -725,7 +781,7 @@
     <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
       <text>You look around for some crew to talk to.</text>
   
-     <choice req="sergal_cheese" blue="false" hidden="true">
+     <choice req="robottos_machinist" blue="false" hidden="true">
         <text>Look for your Sentient Robotto Machinist.</text>
         <event load="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST"/>
       </choice>
@@ -779,7 +835,7 @@
     <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
       <text>You look around for some crew to talk to.</text>
   
-      <choice req="sergal_cheese" blue="false" hidden="true">
+      <choice req="robottos_gunner" blue="false" hidden="true">
         <text>Look for your Sentient Robotto Gunner.</text>
         <event load="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER"/>
       </choice>
@@ -834,7 +890,7 @@
     <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
       <text>You look around for some crew to talk to.</text>
   
-     <choice req="sergal_cheese" blue="false" hidden="true">
+     <choice req="robottos_researcher" blue="false" hidden="true">
         <text>Look for your Sentient Robotto Researcher.</text>
         <event load="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER"/>
       </choice>

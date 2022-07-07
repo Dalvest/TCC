@@ -1,0 +1,44 @@
+
+
+<mod:findName type="eventList" name="NEBULA_UNEXPLORED_DISTRESS">
+	<mod-append:event load="KIVIE_SCOUT_LOST"/>
+</mod:findName>
+
+<event name="KIVIE_SCOUT_LOST">
+<environment type="nebula"/>
+<distressBeacon/>
+    <ship load="KIVIE_SCOUT" hostile="false"/>
+	<text>Following the distress signal, you see a kiv ship floating aimlessly. "YOU..hmmhm..FED MAN. FUEL PLEASE! LOW FOOD..LOW AIR". You are taken back, never seeing a Kiv use the word please. They must be desperate...</text>
+		<choice hidden="true">
+			<text>Spare them a small amount.</text>
+				<event>
+				<text>Even with the meager amount given, the kiv seems gratefull and gives you whats left in his storage.</text>
+					<item_modify>
+						<item type="scrap" min="10" max="15"/>
+						<item type="fuel" min="-1" max="-2"/>
+					</item_modify>
+				</event>
+		</choice>
+		<choice hidden="true">
+			<text>Spare them a large amount.</text>
+					<event>
+							<text>"VERY GENEROUS! NEW...FEELING..". The Kiv filled with joy rips off one of his weapons and gives it to you. Nice.</text>
+							<weapon name="ION_CHARGER_1"/>
+								<item_modify>
+									<item type="fuel" min="-4" max="-5"/>
+								</item_modify>
+					</event>
+		</choice>
+		<choice>
+			<text>Hmmmm, Blast them.</text>
+				<event>
+					<text>"NEVER..TRUST..FEDS!" The Kiv yelled before shutting of their comms.</text>
+					<ship hostile="true"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+		</choice>
+</event>
+
