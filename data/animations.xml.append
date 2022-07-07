@@ -149,6 +149,7 @@
 	<firePoint  x="21" y="10"/>
 	<mountPoint x="8" y="38"/>
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_4_glow.png</chargeImage>
+</weaponAnim>
 	
 	<animSheet name="tc_bomb_shotgun_chain_chargeglow" w="117" h="53" fw="39" fh="53">weapon_bomb_flak/tc_bomb_shotgun_chain_chargeglow.png</animSheet>
 <anim name="tc_bomb_shotgun_chain_chargeglow">
@@ -2346,6 +2347,130 @@
 		<sheet>tele_effect</sheet>
 		<desc length="11" x="0" y="0"/>
 		<time>1.0</time>
+	</anim>
+
+	<!--/////////////// ROBOTTO //////////////-->
+
+	<animSheet name="robottos" w="315" h="455" fw="35" fh="35">people/robottos_base.png</animSheet>
+	<anim name="robottos_clone">
+		<sheet>robottos</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_death_right">
+		<sheet>robottos</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_death_left">
+		<sheet>robottos</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_walk_down">
+		<sheet>robottos</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_walk_right">
+		<sheet>robottos</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_walk_up">
+		<sheet>robottos</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_walk_left">
+		<sheet>robottos</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_shoot_down">
+		<sheet>robottos</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_shoot_right">
+		<sheet>robottos</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_shoot_up">
+		<sheet>robottos</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_shoot_left">
+		<sheet>robottos</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_fire_down">
+		<sheet>robottos</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_fire_right">
+		<sheet>robottos</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_fire_up">
+		<sheet>robottos</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_fire_left">
+		<sheet>robottos</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_repair">
+		<sheet>robottos</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_punch_up">
+		<sheet>robottos</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_punch_down">
+		<sheet>robottos</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_teleport">
+		<sheet>robottos</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="robottos_type_right">
+		<sheet>robottos</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_type_left">
+		<sheet>robottos</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_type_up">
+		<sheet>robottos</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_type_down">
+		<sheet>robottos</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_portrait">
+		<sheet>robottos</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
 	</anim>
 
 <!--/////////////// SERGALS //////////////-->

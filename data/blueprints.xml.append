@@ -1194,11 +1194,12 @@
 	<title>Stolen MFK Battery Artillery</title>
 	<tip>tip_missiles</tip>
 	<short>MFK Battery Arty</short>
-	<desc>This missile battery was once on an MFK ship - now it's been captured by the Federation. It fires swarms of missiles across a very wide area. Can tear through entire ships with ease, doing up to 8 hull damage.</desc>
+	<desc>This missile battery was once on an MFK ship - now it's been captured by the Federation. It fires swarms of missiles that deal extremely high system damage.</desc>
 	<tooltip>Fires missile swarms across a random area doing high damage. Pierces all shields, evading Defense I Drones.</tooltip>
 	<drone_targetable>2</drone_targetable>
-	<radius>100</radius>
-	<damage>1</damage>
+	<radius>120</radius>
+	<damage>0</damage>
+	<sysDamage>3</sysDamage>
 	<missiles>0</missiles>
 	<shots>1</shots>
 	<sp>10</sp>
@@ -1643,7 +1644,7 @@
 	<tooltip>Pierces 2 shields; fires one canister that stuns and damages crew, corrodes systems, and has a low chance to cause breaches.</tooltip>
 	<damage>0</damage>
 	<persDamage>5</persDamage>
-	<sysDamage>4</sysDamage>
+	<sysDamage>2</sysDamage>
 	<shots>1</shots>
 	<stun>8</stun>
 	<sp>2</sp>
@@ -2341,7 +2342,7 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<!--///////////////////// HEAVY  DRONE //////////////////////////-->
+<!--///////////////////// HEAVY DRONE //////////////////////////-->
 
 <droneBlueprint name="TC_COMBAT_HEAVY">
     <type>COMBAT</type>
@@ -2409,7 +2410,7 @@
     <power>3</power>
     <cooldown>3</cooldown>
     <dodge>0</dodge>
-    <speed>75</speed>
+    <speed>45</speed>
     <cost>150</cost>
     <bp>3</bp>
     <droneImage>bomb_flak_drone</droneImage>
@@ -3449,10 +3450,141 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="15" />
 	<maxPower amount="8" />
 	<crewCount amount="1" class="rsa_technician" />
-	<crewCount amount="1" class="engi_separatist" />
+	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="scrapper" />
 	<crewCount amount="1" class="kiviekith" />
 	<aug name="SALVAGE_ARRAY" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_COROSSUS_2" layout="tc_corrosus_2" img="tc_corrosus_2">
+	<class>RSA Scout</class>
+	<name>Wastebent</name>
+	<desc>Light and nimble, this RSA scout ship is dangerous but fragile. It has a vast arsenal of drones to rely on but no weapon system whatsoever.</desc>
+	<systemList>
+		<cloaking power="1" room="6" start="false" img="room_cloaking_bodyhorror" />
+		<clonebay power="1" room="7" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="4" start="true" img="room_doors_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="5" max="12" room="1" start="true" img="room_drones_1._s__w_" />
+		<engines power="2" max="8" room="2" start="true" img="room_engines_10">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="2" room="5" start="true" img="room_hacking" />
+		<medbay power="1" room="7" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<oxygen power="2" room="3" start="true" img="room_oxygen_13" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2_thrusters">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<shields power="2" max="8" room="8" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="11" count="4" />
+	<droneList drones="22" count="4">
+		<drone name="TC_COMBAT_BOMB" />
+		<drone name="BATTLETOG2_BOARDER" />
+		<drone name="DEFENSE_1" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="robottos" />
+	<crewCount amount="2" class="kiviekith" />
+	<aug name="DRONE_RECOVERY" />
+	<aug name="CREW_OXYGEN" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_COROSSUS_3" layout="tc_corossus_3" img="tc_corossus_3">
+	<class>RSA Bomber</class>
+	<name>Vulture Culture</name>
+	<desc>The intimidating shadow of this junker is enough to instill fear in any renegade - the main fighting force of the RSA is comprised of ships just like this one.</desc>
+	<systemList>
+		<artillery power="2" room="10" start="true" weapon="TC_MFK_BATTERY" img="room_artillery10" />
+		<battery power="1" room="13" start="true" img="room_battery_2_1x1" />
+		<cloaking power="1" room="5" start="false" img="room_cloaking" />
+		<clonebay power="1" room="7" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="2" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" max="8" room="12" start="false" img="room_drones_14" />
+		<engines power="2" max="8" room="6" start="true" img="room_engines_11_modified">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="false" img="room_hacking_7" />
+		<mind power="1" room="14" start="false" img="room_artillery_invis_wide" />
+		<oxygen power="1" room="1" start="true" img="room_oxygen_9" />
+		<pilot power="2" room="3" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="0" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="9" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="true" />
+		<weapons power="2" max="8" room="11" start="true" img="room_weapons_11">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="4" count="4">
+		<weapon name="TCC_DEBUFF_SLOW_1" />
+		<weapon name="RSA_MINICANNON" />
+	</weaponList>
+	<droneList drones="5" count="4" />
+	<health amount="30" />
+	<maxPower amount="6" />
+	<crewCount amount="1" class="robottos" />
+	<crewCount amount="1" class="rsa_technician" />
+	<crewCount amount="2" class="mantis_free" />
+	<aug name="RECYCLER" />
+	<aug name="TELEPORT_HEAL" />
 </shipBlueprint>
 
 <!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
@@ -4424,8 +4556,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="0" count="2" />
 	<health amount="10" />
 	<maxPower amount="9" />
-	<crewCount amount="1" class="human_angel" />
-	<crewCount amount="1" class="human_angel" />
+	<crewCount amount="2" class="human_angel" />
+	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="1" class="human_engineer" />
 	<aug name="EX_CLOAK_FIRE" />
@@ -5595,6 +5727,23 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Cannot repair, extinguish, or man systems</power>
 	</powerList>
 </crewBlueprint>
+
+<!--/////// ROBOTTOS //////-->
+
+<crewBlueprint name="robottos">
+	<desc>These guys were built for ship management and exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
+	<cost>80</cost>
+	<title>Robotto</title>
+	<short>Robotto</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>80 HP owing to their frail and simple construction.</power>
+		<power>x0.7 repair speed and combat damage.</power>
+		<power>Unable to suffocate.</power>
+		<power>takes x1.25 damage from fires.</power>
+	</powerList>
+</crewBlueprint>
+
 
 <!--///////FREE BUSINESS MAN(TIS)//////-->
 
