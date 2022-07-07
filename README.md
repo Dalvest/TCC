@@ -5,13 +5,13 @@ Current Version: 1.1
 
 # DEVELOPERS
 
-Lead Devs: Zuggo, Dalvest
+Lead Devs: Dalvest, Zuggo
 
-Coders: Zandoware, Choosechee, Vertaalfout, Kommandant_Julk, Typerim
+Coders: Choosechee, Kommandant_Julk, Typerim, Vertaalfout, Zandoware
 
-Artists: Cryntolov, Enchanter, Ashley Hecker, Land Green, NitronEXE, Choosechee, Wabbles, ConMan, Skye, Typerim, Pedrosian96
+Artists: Ashley Hecker, Choosechee, ConMan, Cryntolov, Enchanter, Land Green, NitronEXE, Pedrosian96, Skye, Typerim, Wabbles
 
-Playtesters: marcrusian, DemonFusionGamer, The Ghost Hugger, Lex
+Playtesters: DemonFusionGamer, Lex, marcrusian, The Ghost Hugger
 
 Special Thanks to Cyrus106 for inspiring me to do this and helping me begin my journey! Thank you for everyone involved, we never thought this mod would become as big as it did!
 

@@ -1557,3 +1557,93 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 </FTL>
+
+
+<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE">
+  <text>peonkdsfhalksdalksdj b:</text>
+  <choice req="robottos" lvl="1" max_group="1" blue="false">
+    <text>Create a Machinist</text>
+    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_MACHINIST"/>
+  </choice>
+  <choice req="robottos" lvl="1" max_group="2" blue="false">
+    <text>Create a Researcher</text>
+    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_RESEARCHER"/>
+  </choice>
+  <choice req="robottos" lvl="1" max_group="3" blue="false">
+    <text>Create a Gunner</text>
+    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_GUNNER"/>
+  </choice>
+  <choice>
+    <text>Nevermind, do something else.</text>
+    <event load="STORAGE_CHECK"/>
+  </choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_MACHINIST">
+  <text>hehahjzdfhjsgf
+    [125 health -> 150 health
+    x1.5 repair speed -> x2 repair speed
+    x0.9 movement speed -> x1.5 movement speed
+    x0.75 fire damage -> x0.5 fire damage
+    x1 damage -> x2 damage
+    x1 sabotage speed -> x2.5 sabotage speed]</text>
+    <!--wrongro stats bitw-->
+  <choice>
+    <text>Do it.</text>
+    <event>
+      <text>Your Robotto undergoes the upgrade...</text>
+      <item_modify>
+        <item type="scrap" min="-30" max="-30"/>
+        <item type="drones" min="-1" max="-1"/>
+      </item_modify>
+      <transformRace class="robottos">robottos_machinist</transformRace>
+    </event>
+  </choice>
+  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_RESEARCHER">
+  <text>hehahjzdfhjsgf
+    [125 health -> 150 health
+    x1.5 repair speed -> x2 repair speed
+    x0.9 movement speed -> x1.5 movement speed
+    x0.75 fire damage -> x0.5 fire damage
+    x1 damage -> x2 damage
+    x1 sabotage speed -> x2.5 sabotage speed]</text>
+    <!--wrongro stats bitw-->
+  <choice>
+    <text>Do it.</text>
+    <event>
+      <text>Your Robotto undergoes the upgrade...</text>
+      <item_modify>
+        <item type="scrap" min="-30" max="-30"/>
+        <item type="drones" min="-1" max="-1"/>
+      </item_modify>
+      <transformRace class="robottos">robottos_researcher</transformRace>
+    </event>
+  </choice>
+  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_GUNNER">
+  <text>hehahjzdfhjsgf
+    [125 health -> 150 health
+    x1.5 repair speed -> x2 repair speed
+    x0.9 movement speed -> x1.5 movement speed
+    x0.75 fire damage -> x0.5 fire damage
+    x1 damage -> x2 damage
+    x1 sabotage speed -> x2.5 sabotage speed]</text>
+    <!--wrongro stats bitw-->
+  <choice>
+    <text>Do it.</text>
+    <event>
+      <text>Your Robotto undergoes the upgrade...</text>
+      <item_modify>
+        <item type="scrap" min="-30" max="-30"/>
+        <item type="drones" min="-1" max="-1"/>
+      </item_modify>
+      <transformRace class="robottos">robottos_gunner</transformRace>
+    </event>
+  </choice>
+  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+</event>
