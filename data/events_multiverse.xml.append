@@ -558,6 +558,17 @@
 	</choice>
 
 	<choice hidden="false" blue="false">
+		<text>Chain Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_CHAIN"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
 		<text>Recycler Bomb Flak</text>
 		<event>
 			<text>Done!</text>

@@ -716,6 +716,56 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_BOMB_SHOTGUN_CHAIN">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Bomb Chain Flak Gun</title>
+	<tip>tip_flak</tip>
+	<short>B. Chain F.</short>
+	<desc>A bomb flak created using a refurbished Chain Bomb. Fires 3 bombs in a random area that excel at taking down systems. Each shot reduces the cooldown. Requires a missile to fire, but doesn't go through shields.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
+	<radius>42</radius>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<power>2</power>
+	<cost>90</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">bomb_small</projectile>
+	</projectiles>
+	<explosion>explosion_random</explosion>
+	<boost>
+		<type>cooldown</type>
+		<amount>3.66</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>smallExplosion</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_bomb_shotgun_chain</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_BOMB_SHOTGUN_FREE">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>

@@ -150,6 +150,25 @@
 	<mountPoint x="8" y="38"/>
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_4_glow.png</chargeImage>
 	
+	<animSheet name="tc_bomb_shotgun_chain_chargeglow" w="117" h="53" fw="39" fh="53">weapon_bomb_flak/tc_bomb_shotgun_chain_chargeglow.png</animSheet>
+<anim name="tc_bomb_shotgun_chain_chargeglow">
+	<sheet>tc_bomb_shotgun_chain_chargeglow</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="tc_bomb_shotgun_chain" w="234" h="53" fw="39" fh="53">weapon_bomb_flak/tc_bomb_shotgun_chain.png</animSheet>
+<weaponAnim name="tc_bomb_shotgun_chain">
+	<sheet>tc_bomb_shotgun_chain</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="17" y="10"/>
+	<mountPoint x="6" y="32"/>
+	<boost>tc_bomb_shotgun_chain_chargeglow</boost>
+	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_chain_glow.png</chargeImage>
+</weaponAnim>
+	
 	<animSheet name="tc_bomb_shotgun_recycle" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_recycle.png</animSheet>
 <weaponAnim name="tc_bomb_shotgun_recycle">
 	<sheet>tc_bomb_shotgun_recycle</sheet>
