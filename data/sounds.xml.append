@@ -20,29 +20,40 @@
 <Singularity volume="10">weapons/Singularity.ogg</Singularity> <!--woosh noise-->
 <tear_gas volume="7">weapons/tear_gas.ogg</tear_gas> <!--gas hiss noise-->
 
+<!--///////////////////// LASER NOISE //////////////////////////-->
+
 <apLaser1 volume="7">weapons/bp_laser_1.ogg</apLaser1>
 <apLaser2 volume="7">weapons/bp_laser_1b.ogg</apLaser2>
 <apLaser3 volume="7">weapons/bp_laser_1c.ogg</apLaser3>
+<heavyLaserScatter1 volume="10">weapons/bp_laser_heavy_2.ogg</heavyLaserScatter1>
+<heavyLaserScatter2 volume="10">weapons/bp_laser_heavy_2b.ogg</heavyLaserScatter2>
+<heavyLaserScatter3 volume="10">weapons/bp_laser_heavy_2c.ogg</heavyLaserScatter3>
+<rebel_railgun_dart_fire volume="10">weapons/rebel_railgun_dart_fire.ogg</rebel_railgun_dart_fire>
+<rebel_railgun_plasma_fire volume="10">weapons/rebel_railgun_plasma_fire.ogg</rebel_railgun_plasma_fire>
+<focusbeam1 volume="5">weapons/bp_laser_2.ogg</focusbeam1>
+<focusbeam2 volume="5">weapons/bp_laser_2b.ogg</focusbeam2>
+<focusbeam3 volume="5">weapons/bp_laser_2c.ogg</focusbeam3>
+
+
+<!--///////////////////// MISSILE MOMENT //////////////////////////-->
+
 <cloak_missile volume="7">weapons/bp_sfx_cloak_missile.ogg</cloak_missile>
 <engine_missile_launch1 volume="10">weapons/bp_engine_missile_launch1.ogg</engine_missile_launch1>
 <engine_missile_launch2 volume="10">weapons/bp_engine_missile_launch2.ogg</engine_missile_launch2>
 <engine_missile_swarm_launch volume="10">weapons/bp_engine_missile_swarm_launch.ogg</engine_missile_swarm_launch>
-<focusbeam1 volume="5">weapons/bp_laser_2.ogg</focusbeam1>
-<focusbeam2 volume="5">weapons/bp_laser_2b.ogg</focusbeam2>
-<focusbeam3 volume="5">weapons/bp_laser_2c.ogg</focusbeam3>
-<heavyLaserScatter1 volume="10">weapons/bp_laser_heavy_2.ogg</heavyLaserScatter1>
-<heavyLaserScatter2 volume="10">weapons/bp_laser_heavy_2b.ogg</heavyLaserScatter2>
-<heavyLaserScatter3 volume="10">weapons/bp_laser_heavy_2c.ogg</heavyLaserScatter3>
+<mine_homing volume="8">weapons/bp_sfx_mine_homing.ogg</mine_homing>
+
+<!--///////////////////// HULL HITS //////////////////////////-->
+
 <hit_hull_scatter_1 volume="10">weapons/bp_hit_hull_scatter_1.ogg</hit_hull_scatter_1>
 <hit_hull_scatter_2 volume="10">weapons/bp_hit_hull_scatter_2.ogg</hit_hull_scatter_2>
 <hit_hull_scatter_3 volume="10">weapons/bp_hit_hull_scatter_3.ogg</hit_hull_scatter_3>
 <hit_shield_scatter_1 volume="10">weapons/bp_hit_shield_scatter_1.ogg</hit_shield_scatter_1>
 <hit_shield_scatter_2 volume="10">weapons/bp_hit_shield_scatter_2.ogg</hit_shield_scatter_2>
 <hit_shield_scatter_3 volume="10">weapons/bp_hit_shield_scatter_3.ogg</hit_shield_scatter_3>
-<mine_homing volume="8">weapons/bp_sfx_mine_homing.ogg</mine_homing>
-<rebel_railgun_dart_fire volume="10">weapons/rebel_railgun_dart_fire.ogg</rebel_railgun_dart_fire>
-<rebel_railgun_plasma_fire volume="10">weapons/rebel_railgun_plasma_fire.ogg</rebel_railgun_plasma_fire>
+
+<!--///////////////////// ION NOISE //////////////////////////-->
+
 <smallExplosion_ionHit1 volume="10">explosions/smallExplosion_ionHit1.ogg</smallExplosion_ionHit1>
 <smallExplosion_ionHit2 volume="10">explosions/smallExplosion_ionHit2.ogg</smallExplosion_ionHit2>
 <smallExplosion_ionHit3 volume="10">explosions/smallExplosion_ionHit3.ogg</smallExplosion_ionHit3>
-<warning_effector volume="1">ui/warning3.ogg</warning_effector>
