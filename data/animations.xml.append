@@ -485,14 +485,64 @@
 	<mountPoint x="3" y="45" />
 </weaponAnim>
 
-<animSheet name="tc_sinewave" w="286" h="83" fw="26" fh="83">weapon_beam/tc_sinewave.png</animSheet>
-<weaponAnim name="tc_sinewave">
-	<sheet>tc_sinewave</sheet>
-	<desc length="11" x="0" y="0" />
+<animSheet name="nova_mk2" w="390" h="55" fw="30" fh="55">weapon_beam/nova_mk2.png</animSheet>
+<weaponAnim name="nova_mk2">
+	<sheet>nova_mk2</sheet>
+	<desc length="13" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="16" y="19" />
+	<mountPoint x="3" y="44" />
+</weaponAnim>
+
+<animSheet name="nova_mk3" w="442" h="61" fw="34" fh="61">weapon_beam/nova_mk3.png</animSheet>
+<weaponAnim name="nova_mk3">
+	<sheet>nova_mk3</sheet>
+	<desc length="13" x="0" y="0"/>
 	<chargedFrame>4</chargedFrame>
 	<fireFrame>5</fireFrame>
-	<firePoint x="13" y="37" />
-	<mountPoint x="2" y="58" />
+	<firePoint  x="19" y="26"/>
+	<mountPoint x="4" y="48"/>
+</weaponAnim>
+
+<animSheet name="rebel_supernova_catalyzer" w="377" h="65" fw="29" fh="65">weapon_beam/rebel_supernova_catalyzer_strip13.png</animSheet>
+<weaponAnim name="rebel_supernova_catalyzer">
+	<sheet>rebel_supernova_catalyzer</sheet>
+	<desc length="13" x="0" y="0" />
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint x="14" y="26" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+
+<animSheet name="tc_catalyzer" w="320" h="94" fw="40" fh="94">weapon_beam/tc_catalyzer.png</animSheet>
+<weaponAnim name="tc_catalyzer">
+	<sheet>tc_catalyzer</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="22" y="10"/>
+	<mountPoint x="7" y="69"/>
+</weaponAnim>
+
+<animSheet name="tc_eska" w="280" h="66" fw="28" fh="66">weapon_beam/tc_eska.png</animSheet>
+<weaponAnim name="tc_eska">
+	<sheet>tc_eska</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="17" y="34"/>
+	<mountPoint x="5" y="54"/>
+</weaponAnim>
+
+<animSheet name="tc_tonfa" w="182" h="66" fw="26" fh="66">weapon_beam/tc_tonfa.png</animSheet>
+<weaponAnim name="tc_tonfa">
+	<sheet>tc_tonfa</sheet>
+	<desc length="7" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="17" y="13"/>
+	<mountPoint x="5" y="53"/>
 </weaponAnim>
 
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->

@@ -1992,7 +1992,7 @@
 	<power>2</power>
 	<cost>30</cost>
 	<bp>7</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<length>40</length>
 	<launchSounds>
 		<sound>beam2</sound>
@@ -2003,6 +2003,192 @@
 		<b>6</b>
 	</color>-->
 	<weaponArt>nova_mk1</weaponArt>
+	<iconImage>beam</iconImage>
+	<iconScale>0.80</iconScale>
+</weaponBlueprint>
+
+<weaponBlueprint name="NOVA_MK2">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Nova Mk. II Beam</title>
+	<short>Nova Mk.2</short>
+	<desc>An upgraded version of the Nova beam - this one has a much longer beam length at the cost of extra power required to function.</desc>
+	<tooltip>Beam weapon, 1 damage to hull, 80 length</tooltip>
+	<damage>1</damage>
+	<hullbust>0</hullbust>
+	<sp>0</sp>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<image>beam_contact</image>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<length>80</length>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
+	<weaponArt>nova_mk2</weaponArt>
+	<iconImage>beam</iconImage>
+	<iconScale>0.80</iconScale>
+</weaponBlueprint>
+
+<weaponBlueprint name="NOVA_MK3">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Nova Mk. III Beam</title>
+	<short>Nova Mk.3</short>
+	<desc>Overcharged, overengineered and clearly overcompensated. Hey... at least it works.</desc>
+	<tooltip>Beam weapon, 1 damage to hull, 130 length</tooltip>
+	<damage>1</damage>
+	<hullbust>0</hullbust>
+	<sp>0</sp>
+	<breachChance>0</breachChance>
+	<cooldown>15</cooldown>
+	<image>beam_contact</image>
+	<power>3</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<length>130</length>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
+	<weaponArt>nova_mk3</weaponArt>
+	<iconImage>beam</iconImage>
+	<iconScale>0.80</iconScale>
+</weaponBlueprint>
+
+<weaponBlueprint name="SUPERNOVA_CATALYZER">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Supernova Catalyzer</title>
+	<short>Supernova</short>
+	<desc>If you thought the Nova Mk. III wasn't powerful enough, well, we might have something for you.</desc>
+	<tooltip>Beam weapon, 1 damage to hull, 130 length, 2 shield pierce</tooltip>
+	<damage>1</damage>
+	<hullbust>0</hullbust>
+	<sp>2</sp>
+	<breachChance>0</breachChance>
+	<cooldown>6</cooldown>
+	<image>beam_contact</image>
+	<power>4</power>
+	<cost>120</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<length>130</length>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
+	<weaponArt>rebel_supernova_catalyzer</weaponArt>
+	<iconImage>beam</iconImage>
+	<iconScale>0.80</iconScale>
+</weaponBlueprint>
+
+<weaponBlueprint name="CATALYZER">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Catalyzer</title>
+	<short>Catal.</short>
+	<desc>Legends say that this weapon was built by a Sergal engineer called Cheese - legends also say this Pinpoint beam has maximum penetration.</desc>
+	<tooltip>Beam weapon, 1 damage to hull, Pinpoint, ignores shields, hullbust</tooltip>
+	<damage>1</damage>
+	<hullbust>1</hullbust>
+	<sp>10</sp>
+	<breachChance>0</breachChance>
+	<cooldown>9</cooldown>
+	<image>beam_contact</image>
+	<power>3</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<length>5</length>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
+	<weaponArt>tc_catalyzer</weaponArt>
+	<iconImage>beam</iconImage>
+	<iconScale>0.80</iconScale>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_ESKA">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>'Eska' Beam</title>
+	<short>Eska Beam</short>
+	<desc>High breach chance, high length - the best thing to bring at a Zoltan debate competition.</desc>
+	<tooltip>Beam weapon, 1 damage to hull, Pinpoint, ignores shields, hullbust</tooltip>
+	<damage>1</damage>
+	<hullbust>0</hullbust>
+	<sp>0</sp>
+	<breachChance>6</breachChance>
+	<cooldown>12</cooldown>
+	<image>beam_contact</image>
+	<power>3</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<length>80</length>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
+	<weaponArt>tc_eska</weaponArt>
+	<iconImage>beam</iconImage>
+	<iconScale>0.80</iconScale>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_TONFA">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Tonfa</title>
+	<short>Tonfa</short>
+	<desc>PLACEHOLDER</desc>
+	<tooltip>Beam weapon, 1 damage to hull, Pinpoint, ignores shields, hullbust</tooltip>
+	<damage>1</damage>
+	<hullbust>1</hullbust>
+	<sp>10</sp>
+	<breachChance>0</breachChance>
+	<cooldown>9</cooldown>
+	<image>beam_contact</image>
+	<power>3</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>5</length>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
+	<weaponArt>tc_catalyzer</weaponArt>
 	<iconImage>beam</iconImage>
 	<iconScale>0.80</iconScale>
 </weaponBlueprint>
