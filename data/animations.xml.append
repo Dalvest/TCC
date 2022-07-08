@@ -104,6 +104,26 @@
 	<mountPoint x="7" y="44"/>
 </weaponAnim>
 
+<animSheet name="tc_militia_1" w="210" h="55" fw="30" fh="55">weapon_flak/tc_militia_1.png</animSheet>
+<weaponAnim name="tc_militia_1">
+	<sheet>tc_militia_1</sheet>
+	<desc length="7" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="25" y="4"/>
+	<mountPoint x="7" y="44"/>
+</weaponAnim>
+
+<animSheet name="tc_militia_2" w="217" h="59" fw="31" fh="59">weapon_flak/tc_militia_2.png</animSheet>
+<weaponAnim name="tc_militia_2">
+	<sheet>tc_militia_2</sheet>
+	<desc length="7" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="25" y="4"/>
+	<mountPoint x="7" y="44"/>
+</weaponAnim>
+
 <!--////////////////// BOMB FLAK //////////////////-->
 
 <animSheet name="tc_bomb_shotgun_1" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_1.png</animSheet>

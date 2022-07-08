@@ -2193,6 +2193,102 @@
 	<iconScale>0.80</iconScale>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_MILITIA_1">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>heheha</title>
+	<short>bop</short>
+	<tip>tip_flak</tip>
+	<desc>scababap</desc>
+	<tooltip>rodlfle</tooltip>
+	<radius>45</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>100</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>1</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="3" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_militia_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_MILITIA_2">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>sjk</title>
+	<short>spej</short>
+	<tip>tip_flak</tip>
+	<desc>Voici l'histoire de la trois petite cochon</desc>
+	<tooltip>Je ne suis pas fou fou fou</tooltip>
+	<radius>50</radius>
+	<damage>1</damage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>13</cooldown>
+	<power>3</power>
+	<cost>140</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>4</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">debris_large</projectile>
+		<projectile count="3" fake="false">debris_med</projectile>
+		<projectile count="6" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_militia_2</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->
 <!--/////// yes, they clobber stuff, but i swear it's fine! //////-->
 
