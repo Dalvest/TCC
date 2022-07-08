@@ -1554,7 +1554,7 @@
 	<type>LASER</type>
 	<title>Militia Vulcan Cannon</title>
 	<short>MVC</short>
-	<desc>Highly powerful Vulcan-style autocannon that speeds up every time it fires.</desc>
+	<desc>Highly powerful Vulcan-style autocannon that speeds up every time it fires. Water cooling and multiple barrels do wonder to a .950 autocannon.</desc>
 	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>95</freeMissileChance>
@@ -1567,8 +1567,8 @@
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
-		<amount>4</amount>
-		<count>5</count>
+		<amount>3</amount>
+		<count>4</count>
 	</boost>
 	<bp>4</bp>
 	<rarity>5</rarity>
@@ -2603,60 +2603,6 @@
               DRONES
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
-
-<!--///////////////////// BARRAGE ION DRONE //////////////////////////-->
-<droneBlueprint name="COMBAT_ION_NEW">
-	<type>COMBAT</type>
-	<tip>tip_combat</tip>
-	<title>'Barrage' Ion Drone</title>
-	<short>Ion Drone</short>
-	<desc>Slow moving drone that repeatedly attacks the enemy ship with ion blasts</desc>
-	<power>2</power>
-	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
-	<dodge>0</dodge>
-
-	<speed>7</speed> <!--- Change this to increase/decrease firing speed -->
-	<cost>50</cost>
-	<bp>3</bp>
-	<droneImage>drone_ion</droneImage>
-	<weaponBlueprint>DRONE_ION</weaponBlueprint>
-	<rarity>0</rarity>
-</droneBlueprint>
-
-<weaponBlueprint name="DRONE_ION_NEW">
-	<type>LASER</type>
-	<title>Ion Blast</title>
-	<short>Ion Blast</short>
-	<tip>tip_ion</tip>
-	<damage>0</damage>
-	<ion>1</ion>
-	<speed>20</speed>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
-	<rarity>0</rarity>
-	<image>ion_1_shot</image>
-	<launchSounds>
-		<sound>ionShoot1</sound>
-		<sound>ionShoot2</sound>
-		<sound>ionShoot3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>ionShields1</sound>
-		<sound>ionShields2</sound>
-		<sound>ionShields3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>ion_1</weaponArt>
-</weaponBlueprint>
 
 <!--///////////////////// GOLD DRONE //////////////////////////-->
 
@@ -5732,7 +5678,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones max="12" power="3" room="1" start="true" img="room_drones" />
+		<drones max="12" power="3" room="1" start="false" img="room_drones" />
 		<engines max="8" power="3" room="10" start="true" img="room_engines_9">
 			<slot>
 				<direction>up</direction>
@@ -5776,11 +5722,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="3" count="2">
+	<weaponList missiles="21" count="2">
+		<weapon name="MINELAUNCHER_2" />
 		<weapon name="MINELAUNCHER_2" />
 	</weaponList>
-	<droneList drones="15" count="4">
-		<drone name="COMBAT_ION_NEW" />
+	<droneList drones="3" count="4">
 	</droneList>
 	<health amount="45" />
 	<maxPower amount="9" />
@@ -5842,7 +5788,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="11" start="true" />
-		<weapons max="12" power="2" room="10" start="true" img="room_weapons_7">
+		<weapons max="12" power="4" room="10" start="true" img="room_weapons_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -5853,7 +5799,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="17" count="3">
-		<weapon name="TC_MINIGUN_MK1" />
+		<weapon name="TC_MINIGUN_MK3" />
 	</weaponList>
 	<droneList drones="3" count="3" />
 	<health amount="45" />
@@ -5917,7 +5863,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="13" start="false" />
-		<weapons max="8" power="1" room="10" start="true" img="room_weapons_10">
+		<weapons max="8" power="4" room="10" start="true" img="room_weapons_10">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -5928,10 +5874,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="3" count="2">
-		<weapon name="LASER_BURST_2" />
+		<weapon name="NOVA_MK1" />
+		<weapon name="TC_VULCAN_CANNON" />
 	</weaponList>
 	<droneList drones="8" count="3">
-		<drone name="COMBAT_ION_NEW" />
+		<drone name="ION_1_AMP2" />
 	</droneList>
 	<health amount="45" />
 	<maxPower amount="8" />
