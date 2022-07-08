@@ -732,12 +732,25 @@
 
 		<!--/////// MILSPEC //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="false" c="false" unused="true"/>
+		<mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false" unused="true"/>
 
 		<mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC">
 			<crewLimit>12</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_SLUG</hiddenAug>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC_2">
+			<crewLimit>12</crewLimit>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<hiddenAug>SHIP_CRYSTAL</hiddenAug>
+			<crew>
+				<human room="18" name="Childs" />
+				<human room="3" name="Windows" />
+				<human room="6" name="Garry" />
+				<human room="20" name="R.J. MacReady" />
+				<blobhuman room="13" name="Palmer" />
+			</crew>
 		</mod-append:customShip>
 
 	</mod:findLike>

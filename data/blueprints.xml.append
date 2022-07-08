@@ -6263,6 +6263,73 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="COMPACTOR" />
 </shipBlueprint>
 
+<shipBlueprint name="PLAYER_SHIP_TC_MILSPEC_2" layout="player_ship_tc_milspec_2" img="player_ship_tc_milspec_2">
+	<class>Milspec Crystal Cruiser</class>
+	<name>Outpost 21</name>
+	<desc>This Cruiser was carrying an alien specimen found on a derelict base - the alien specimen has escaped, much to the extreme paranoia of the crew.</desc>
+	<systemList>
+		<artillery power="1" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
+		<battery power="1" room="14" start="false" img="room_battery" />
+		<cloaking power="1" room="0" start="true" img="room_cloaking" />
+		<clonebay power="1" room="7" start="true">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="3" start="true" img="room_doors_ogre">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" room="21" start="false" img="room_drones_14" />
+		<engines power="3" room="13" start="true" img="room_engines_orchid_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="false" img="room_hacking_4" />
+		<mind power="1" room="12" start="true" img="room_mind_10" />
+		<oxygen power="2" room="18" start="true" img="room_oxygen_nightowl" />
+		<pilot power="2" room="20" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="19" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="9" start="false" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="1" start="false" />
+		<weapons power="2" room="6" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="NOVA_MK2" />
+	</weaponList>
+	<droneList drones="2" count="2" />
+	<health amount="30" />
+	<maxPower amount="5" />
+	<aug name="BACKUP_DNA" />
+</shipBlueprint>
+
+
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           JULK'S EXPANDCODE
