@@ -347,6 +347,26 @@
 	<boost>ionartillery_charge</boost>
 </weaponAnim>
 
+<animSheet name="tc_pulsar" w="198" h="58" fw="33" fh="58">weapon_ion/tc_pulsar.png</animSheet>
+<weaponAnim name="tc_pulsar">
+	<sheet>tc_pulsar</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="17" y="17"/>
+	<mountPoint x="5" y="45"/>
+</weaponAnim>
+
+<animSheet name="tc_ion_smol" w="280" h="60" fw="35" fh="60">weapon_ion/tc_ion_smol.png</animSheet>
+<weaponAnim name="tc_ion_smol">
+	<sheet>tc_ion_smol</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="17" y="17"/>
+	<mountPoint x="5" y="45"/>
+</weaponAnim>
+
 <!--/////////////////// SINGULARITY //////////////////-->
 
 <animSheet name="tc_singularity_projector" w="612" h="60" fw="51" fh="60">weapon_singularity/tc_singularity_projector.png</animSheet>

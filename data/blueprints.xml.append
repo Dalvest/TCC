@@ -2289,6 +2289,100 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_PULSAR">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>hohoho</title>
+	<short>hoehoehoe</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>aaaaaaaaaaaahahahaha</desc>
+	<tooltip>Never Gonna Give You Up</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>4</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>21</cooldown>
+	<power>1</power>
+	<cost>160</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_pulsar</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_PULSAR_SMOL">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>Simple Ion</title>
+	<short>Simple Ion</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>A simple ion weapon which can temporarily take down a shield barrier.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_ion_smol</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->
 <!--/////// yes, they clobber stuff, but i swear it's fine! //////-->
 
