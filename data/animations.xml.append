@@ -104,6 +104,26 @@
 	<mountPoint x="7" y="44"/>
 </weaponAnim>
 
+<animSheet name="tc_militia_1" w="210" h="55" fw="30" fh="55">weapon_flak/tc_militia_1.png</animSheet>
+<weaponAnim name="tc_militia_1">
+	<sheet>tc_militia_1</sheet>
+	<desc length="7" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="25" y="4"/>
+	<mountPoint x="7" y="44"/>
+</weaponAnim>
+
+<animSheet name="tc_militia_2" w="217" h="59" fw="31" fh="59">weapon_flak/tc_militia_2.png</animSheet>
+<weaponAnim name="tc_militia_2">
+	<sheet>tc_militia_2</sheet>
+	<desc length="7" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="25" y="4"/>
+	<mountPoint x="7" y="44"/>
+</weaponAnim>
+
 <!--////////////////// BOMB FLAK //////////////////-->
 
 <animSheet name="tc_bomb_shotgun_1" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_1.png</animSheet>
@@ -246,6 +266,26 @@
 	<mountPoint x="3" y="45"/>
 </weaponAnim>
 
+<animSheet name="tc_burst_1" w="209" h="59" fw="19" fh="59">weapon_laser/tc_burst_1.png</animSheet>
+<weaponAnim name="tc_burst_1">
+	<sheet>tc_burst_1</sheet>
+	<desc length="11" x="0" y="0"/>
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="17" y="2"/>
+	<mountPoint x="3" y="45"/>
+</weaponAnim>
+
+<animSheet name="tc_burst_2" w="294" h="62" fw="21" fh="62">weapon_laser/tc_burst_2.png</animSheet>
+<weaponAnim name="tc_burst_2">
+	<sheet>tc_burst_2</sheet>
+	<desc length="14" x="0" y="0"/>
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint  x="17" y="2"/>
+	<mountPoint x="3" y="45"/>
+</weaponAnim>
+
 <!--/////////////////// DEBUFFER //////////////////-->
 
 <animSheet name="tcc_debuff_slow_1" w="145" h="35" fw="29" fh="35">weapon_debuffer/tc_debuffer_mk1.png</animSheet>
@@ -320,13 +360,6 @@
 	<chargeImage>weapon_ion/Ion_Charger_1_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="ionartillery_charge" w="108" h="62" fw="36" fh="62">weapon_ion/ionartillery_chargeglow.png</animSheet>
-<anim name="ionartillery_charge">
-	<sheet>ionartillery_charge</sheet>
-	<desc length="3" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
 <animSheet name="ionartillery" w="288" h="62" fw="36" fh="62">weapon_ion/ionartillery_strip8.png</animSheet>
 <weaponAnim name="ionartillery">
 	<sheet>ionartillery</sheet>
@@ -337,6 +370,26 @@
 	<mountPoint x="5" y="45"/>
 	<chargeImage>weapon_ion/ionartillery_glow.png</chargeImage>
 	<boost>ionartillery_charge</boost>
+</weaponAnim>
+
+<animSheet name="tc_pulsar" w="198" h="58" fw="33" fh="58">weapon_ion/tc_pulsar.png</animSheet>
+<weaponAnim name="tc_pulsar">
+	<sheet>tc_pulsar</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="17" y="17"/>
+	<mountPoint x="5" y="45"/>
+</weaponAnim>
+
+<animSheet name="tc_ion_smol" w="280" h="60" fw="35" fh="60">weapon_ion/tc_ion_smol.png</animSheet>
+<weaponAnim name="tc_ion_smol">
+	<sheet>tc_ion_smol</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="17" y="17"/>
+	<mountPoint x="5" y="45"/>
 </weaponAnim>
 
 <!--/////////////////// SINGULARITY //////////////////-->
@@ -423,6 +476,16 @@
 	<mountPoint x="3" y="69" />
 </weaponAnim>
 
+<animSheet name="militia_tagger" w="253" h="84" fw="23" fh="84">weapon_laser/militia_tagger.png</animSheet>
+<weaponAnim name="militia_tagger">
+	<sheet>militia_tagger</sheet>
+	<desc length="11" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="17" y="11" />
+	<mountPoint x="3" y="69" />
+</weaponAnim>
+
 <animSheet name="tc_vulcan_cannon" w="360" h="80" fw="36" fh="80">weapon_autocannon/tc_vulcan_cannon.png</animSheet>
 <weaponAnim name="tc_vulcan_cannon">
 	<sheet>tc_vulcan_cannon</sheet>
@@ -467,6 +530,16 @@
 	<mountPoint x="2" y="31" />
 </weaponAnim>
 
+<animSheet name="Modular_Beam_Artillery" w="429" h="83" fw="33" fh="83">weapon_beam/Modular_Beam_Artillery.png</animSheet>
+<weaponAnim name="Modular_Beam_Artillery">
+	<sheet>Modular_Beam_Artillery</sheet>
+	<desc length="13" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="16" y="18" />
+	<mountPoint x="16" y="76" />
+</weaponAnim>
+
 <animSheet name="tc_sinewave" w="286" h="83" fw="26" fh="83">weapon_beam/tc_sinewave.png</animSheet>
 <weaponAnim name="tc_sinewave">
 	<sheet>tc_sinewave</sheet>
@@ -475,6 +548,76 @@
 	<fireFrame>5</fireFrame>
 	<firePoint x="13" y="37" />
 	<mountPoint x="2" y="58" />
+</weaponAnim>
+
+<animSheet name="nova_mk1" w="310" h="58" fw="31" fh="58">weapon_beam/nova_mk1.png</animSheet>
+<weaponAnim name="nova_mk1">
+	<sheet>nova_mk1</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="16" y="31" />
+	<mountPoint x="3" y="45" />
+</weaponAnim>
+
+<animSheet name="nova_mk2" w="390" h="55" fw="30" fh="55">weapon_beam/nova_mk2.png</animSheet>
+<weaponAnim name="nova_mk2">
+	<sheet>nova_mk2</sheet>
+	<desc length="13" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="16" y="19" />
+	<mountPoint x="3" y="44" />
+</weaponAnim>
+
+<animSheet name="nova_mk3" w="442" h="61" fw="34" fh="61">weapon_beam/nova_mk3.png</animSheet>
+<weaponAnim name="nova_mk3">
+	<sheet>nova_mk3</sheet>
+	<desc length="13" x="0" y="0"/>
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="19" y="26"/>
+	<mountPoint x="4" y="48"/>
+</weaponAnim>
+
+<animSheet name="rebel_supernova_catalyzer" w="377" h="65" fw="29" fh="65">weapon_beam/rebel_supernova_catalyzer_strip13.png</animSheet>
+<weaponAnim name="rebel_supernova_catalyzer">
+	<sheet>rebel_supernova_catalyzer</sheet>
+	<desc length="13" x="0" y="0" />
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint x="14" y="26" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+
+<animSheet name="tc_catalyzer" w="320" h="94" fw="40" fh="94">weapon_beam/tc_catalyzer.png</animSheet>
+<weaponAnim name="tc_catalyzer">
+	<sheet>tc_catalyzer</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="22" y="10"/>
+	<mountPoint x="7" y="69"/>
+</weaponAnim>
+
+<animSheet name="tc_eska" w="280" h="66" fw="28" fh="66">weapon_beam/tc_eska.png</animSheet>
+<weaponAnim name="tc_eska">
+	<sheet>tc_eska</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="17" y="34"/>
+	<mountPoint x="5" y="54"/>
+</weaponAnim>
+
+<animSheet name="tc_tonfa" w="182" h="66" fw="26" fh="66">weapon_beam/tc_tonfa.png</animSheet>
+<weaponAnim name="tc_tonfa">
+	<sheet>tc_tonfa</sheet>
+	<desc length="7" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="17" y="13"/>
+	<mountPoint x="5" y="53"/>
 </weaponAnim>
 
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->

@@ -17,7 +17,7 @@ Special Thanks to Cyrus106 for inspiring me to do this and helping me begin my j
 
 # FEATURED MODS
 
-A "side quest" of ours is to try and compile similar high quality mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair, Avali and FEDERATION SPECIAL FORCES! 
+A "side quest" of ours is to try and compile similar high quality mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair, Avali, FEDERATION SPECIAL FORCES and Leah Gaming! 
 
 We also ported several ships to Hyperspace + MV, such as the Potential, Stalwart Defense and Sovereign Star!
 
