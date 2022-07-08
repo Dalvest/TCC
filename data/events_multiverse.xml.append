@@ -567,6 +567,17 @@
 			<weapon name="TC_BOMB_SHOTGUN_CHAIN"/>
 		</event>
 	</choice>
+	
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak Charger</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-75" max="-75"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_CHARGE"/>
+		</event>
+	</choice>
 
 	<choice hidden="false" blue="false">
 		<text>Recycler Bomb Flak</text>

@@ -168,6 +168,18 @@
 	<boost>tc_bomb_shotgun_chain_chargeglow</boost>
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_chain_glow.png</chargeImage>
 </weaponAnim>
+
+<animSheet name="tc_bomb_shotgun_charge" w="800" h="52" fw="40" fh="52">weapon_bomb_flak/tc_bomb_shotgun_charge.png</animSheet>
+<weaponAnim name="tc_bomb_shotgun_charge">
+	<sheet>tc_bomb_shotgun_charge</sheet>
+	<desc length="20" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="19" y="9" charge="6"/>
+	<mountPoint x="5" y="26"/>
+	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_charge_glow.png</chargeImage>
+	<boost>shotgun_charge_charges</boost>
+</weaponAnim>
 	
 	<animSheet name="tc_bomb_shotgun_recycle" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_recycle.png</animSheet>
 <weaponAnim name="tc_bomb_shotgun_recycle">
