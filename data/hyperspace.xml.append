@@ -753,7 +753,7 @@
 		</mod-append:customShip>
 
 		<!--/////// PROTOSTEEL'S REBEL DESTROYER //////-->
-		
+
 		<mod-append:ship name="PLAYER_SHIP_PROTOSTEEL_REBEL_DESTROYER" b="true" c="true" unused="true" />
 
 		<mod-append:customShip name="PLAYER_SHIP_PROTOSTEEL_REBEL_DESTROYER">
@@ -795,7 +795,7 @@
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_REBEL</hiddenAug>
 		</mod-append:customShip>
-		
+
 		<!--/////// MILSPEC //////-->
 
 		<mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="false" c="false" unused="true"/>
@@ -1128,6 +1128,7 @@
 		<mod-append:race name="robottos_researcher">
 			<maxHealth>80</maxHealth>
 			<repairSpeed>0.7</repairSpeed>
+      <bonusPower>1</bonusPower>
 			<canFight>true</canFight>
 			<canRepair>true</canRepair>
 			<canSabotage>true</canSabotage>

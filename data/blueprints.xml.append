@@ -762,7 +762,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_chain</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_chain</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1510,7 +1510,7 @@
 </weaponBlueprint>
 
 <weaponBlueprint name="CRYS_50CAL">
-	<type>LASER</type>
+	<type>BURST</type>
 	<title>Crystallis .50 Caliber</title>
 	<short>Crys. 50Cal</short>
 	<desc>This weapon was made by a certain overeager protogen. Good luck hitting anything with it.</desc>
@@ -6221,7 +6221,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<name>CMS Ogre</name>
 	<desc>This minelayer struggles in head-to-head combat against other ships of its size. However, its advanced sensor suite is second-to-none.</desc>
 	<systemList>
-		<artillery power="2" room="4" start="true" weapon="ARTILLERY_FEDC" img="room_artillery_ogre" />
+		<artillery power="2" room="4" start="true" weapon="ARTILLERY_FIRE" img="room_artillery_ogre" />
 		<battery power="1" room="11" start="false" img="room_battery_ogre" />
 		<cloaking power="1" room="14" start="false" img="room_cloaking_ogre" />
 		<clonebay power="1" room="7" start="false">
