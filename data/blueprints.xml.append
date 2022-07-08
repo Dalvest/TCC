@@ -1034,6 +1034,84 @@
 	<weaponArt>tc_laser_charger</weaponArt>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_BURST_1">
+	<type>LASER</type>
+	<title>hohoho</title>
+	<short>hohoasdr</short>
+	<tip>tip_laser</tip>
+	<desc>i hate you</desc>
+	<tooltip>jk im sorry [3</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_burst</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_burst_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_BURST_2">
+	<type>LASER</type>
+	<title>hohoho</title>
+	<short>hohoasdr</short>
+	<tip>tip_laser</tip>
+	<desc>i hate you</desc>
+	<tooltip>jk im sorry [3</tooltip>
+	<damage>1</damage>
+	<shots>5</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>20</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_burst</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_burst_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
 
 <weaponBlueprint name="TCC_DEBUFF_SLOW_1">

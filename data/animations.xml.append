@@ -254,6 +254,26 @@
 	<mountPoint x="3" y="45"/>
 </weaponAnim>
 
+<animSheet name="tc_burst_1" w="209" h="59" fw="19" fh="59">weapon_laser/tc_burst_1.png</animSheet>
+<weaponAnim name="tc_burst_1">
+	<sheet>tc_burst_1</sheet>
+	<desc length="11" x="0" y="0"/>
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="17" y="2"/>
+	<mountPoint x="3" y="45"/>
+</weaponAnim>
+
+<animSheet name="tc_burst_2" w="294" h="62" fw="21" fh="62">weapon_laser/tc_burst_2.png</animSheet>
+<weaponAnim name="tc_burst_2">
+	<sheet>tc_burst_2</sheet>
+	<desc length="14" x="0" y="0"/>
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint  x="17" y="2"/>
+	<mountPoint x="3" y="45"/>
+</weaponAnim>
+
 <!--/////////////////// DEBUFFER //////////////////-->
 
 <animSheet name="tcc_debuff_slow_1" w="145" h="35" fw="29" fh="35">weapon_debuffer/tc_debuffer_mk1.png</animSheet>
