@@ -455,6 +455,36 @@
 	<mountPoint x="2" y="31" />
 </weaponAnim>
 
+<animSheet name="Modular_Beam_Artillery" w="429" h="83" fw="33" fh="83">weapon_beam/Modular_Beam_Artillery.png</animSheet>
+<weaponAnim name="Modular_Beam_Artillery">
+	<sheet>Modular_Beam_Artillery</sheet>
+	<desc length="13" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="16" y="18" />
+	<mountPoint x="16" y="76" />
+</weaponAnim>
+
+<animSheet name="tc_sinewave" w="286" h="83" fw="26" fh="83">weapon_beam/tc_sinewave.png</animSheet>
+<weaponAnim name="tc_sinewave">
+	<sheet>tc_sinewave</sheet>
+	<desc length="11" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="13" y="37" />
+	<mountPoint x="2" y="58" />
+</weaponAnim>
+
+<animSheet name="nova_mk1" w="310" h="58" fw="31" fh="58">weapon_beam/nova_mk1.png</animSheet>
+<weaponAnim name="nova_mk1">
+	<sheet>nova_mk1</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="16" y="31" />
+	<mountPoint x="3" y="45" />
+</weaponAnim>
+
 <animSheet name="tc_sinewave" w="286" h="83" fw="26" fh="83">weapon_beam/tc_sinewave.png</animSheet>
 <weaponAnim name="tc_sinewave">
 	<sheet>tc_sinewave</sheet>
