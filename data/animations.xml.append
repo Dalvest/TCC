@@ -451,6 +451,16 @@
 	<mountPoint x="3" y="69" />
 </weaponAnim>
 
+<animSheet name="militia_tagger" w="253" h="84" fw="23" fh="84">weapon_laser/militia_tagger.png</animSheet>
+<weaponAnim name="militia_tagger">
+	<sheet>militia_tagger</sheet>
+	<desc length="11" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="17" y="11" />
+	<mountPoint x="3" y="69" />
+</weaponAnim>
+
 <animSheet name="tc_vulcan_cannon" w="360" h="80" fw="36" fh="80">weapon_autocannon/tc_vulcan_cannon.png</animSheet>
 <weaponAnim name="tc_vulcan_cannon">
 	<sheet>tc_vulcan_cannon</sheet>
