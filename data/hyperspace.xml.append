@@ -753,6 +753,65 @@
 			</crew>
 		</mod-append:customShip>
 
+		<!--/////// LEAH GAMING //////-->
+	
+		<mod-append:ship name="PLAYER_SHIP_NEWTONBEAMA" b="true" c="true" unused="true">
+		<unlock variant="b" silent="false">
+			<type>2</type>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>4</type>
+			</unlock>
+		</mod-append:ship>
+		
+		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA">
+			<crewLimit>8</crewLimit>
+			<hiddenAug>SHIP_REBEL</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<unique_leah_mfk room="4" name="Leah" />
+				<!--piloting-->
+				<tinybug room="0" />
+				<!--engines-->
+				<tinybug room="5" />
+				<!--weapons-->
+				<tinybug room="7" />
+				<!--shields-->
+			</crew>
+		</mod-append:customShip>
+		
+		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_2">
+			<crewLimit>6</crewLimit>
+			<hiddenAug>SHIP_REBEL</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<unique_leah_mfk room="0" name="Leo Liam Leviticus" />
+				<!--tp-->
+				<robottos room="1" />
+				<!--piloting-->
+				<zoltan_devotee room="0" />
+				<!--tp-->
+				<leech room="0" />
+				<!--tp-->
+			</crew>
+		</mod-append:customShip>
+		
+		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_3">
+			<crewLimit>9</crewLimit>
+			<hiddenAug>SHIP_REBEL</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crew>
+				<unique_leah_mfk room="0" name="Leo Liam Leviticus" />
+				<!--tp-->
+				<human_rebel_medic room="1" />
+				<!--piloting-->
+				<human_rebel room="0" />
+				<!--tp-->
+				<human_soldier room="0" />
+				<!--tp-->
+			</crew>
+		</mod-append:customShip>
+
 	</mod:findLike>
 
 
@@ -790,7 +849,7 @@
 			<mod-append:ship>PLAYER_SHIP_CYBER</mod-append:ship> <!-- Cyberwarfare (Malwarebytes???) -->
 			<mod-append:ship>PLAYER_SHIP_MINESWEEPER</mod-append:ship> <!-- Windows Minesweeeper -->
 			<mod-append:ship>PLAYER_SHIP_BLACKOPS</mod-append:ship> <!-- Call of Duty: Black Ops II -->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming Ships -->
 			<mod-append:ship>PLAYER_SHIP_TC_MILSPEC</mod-append:ship> <!-- Milspec Ships -->
 		</mod:findLike>
 	</mod:findLike>

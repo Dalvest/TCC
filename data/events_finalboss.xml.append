@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	
+<mod:findName type="event" name="TRUE_VICTORY_CREW">
+    <mod-append:choice req="unique_leah_mfk" max_group="600" hidden="true">
+		<text>Ask Leah about this.</text>
+		<event load="TRUE_VICTORY_CREW_LEAH"/>
+	</mod-append:choice>
+</mod:findName>
+
+<event name="TRUE_VICTORY_CREW_LEAH">
+	<text>"We've been through a lot together, haven't we?" Leah turns away from you and looks out at the wreckage of the flagship. "I don't think Wither has the right idea. Sure, multiverse drives are dangerous, but look at us! Think of how many amazing movie-like rivalries we'll be ruining if we detonate that bomb! If we exist then there's plenty more out there." Leah pauses before turning back to you, "Out of all the infinite rivalries in the universe, this one is special, you're not just any old bitch, you're MY beyatch."</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="TRUE_VICTORY_LOAD"/>
+	</choice>
+</event>

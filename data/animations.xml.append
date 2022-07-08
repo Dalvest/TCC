@@ -348,13 +348,6 @@
 	<chargeImage>weapon_ion/Ion_Charger_1_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="ionartillery_charge" w="108" h="62" fw="36" fh="62">weapon_ion/ionartillery_chargeglow.png</animSheet>
-<anim name="ionartillery_charge">
-	<sheet>ionartillery_charge</sheet>
-	<desc length="3" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
 <animSheet name="ionartillery" w="288" h="62" fw="36" fh="62">weapon_ion/ionartillery_strip8.png</animSheet>
 <weaponAnim name="ionartillery">
 	<sheet>ionartillery</sheet>

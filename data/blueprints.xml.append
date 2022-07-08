@@ -1112,6 +1112,102 @@
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_MILITIA_1">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>heheha</title>
+	<short>bop</short>
+	<tip>tip_flak</tip>
+	<desc>scababap</desc>
+	<tooltip>rodlfle</tooltip>
+	<radius>45</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>100</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>1</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="3" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_militia_1</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_MILITIA_2">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>sjk</title>
+	<short>spej</short>
+	<tip>tip_flak</tip>
+	<desc>Voici l'histoire de la trois petite cochon</desc>
+	<tooltip>Je ne suis pas fou fou fou</tooltip>
+	<radius>50</radius>
+	<damage>1</damage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>13</cooldown>
+	<power>3</power>
+	<cost>140</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>4</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">debris_large</projectile>
+		<projectile count="3" fake="false">debris_med</projectile>
+		<projectile count="6" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_militia_2</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
 
 <weaponBlueprint name="TCC_DEBUFF_SLOW_1">
@@ -1371,6 +1467,100 @@
 </weaponBlueprint>
 
 <!--/////////////////////////////////////////////////////ION/////////////////////////////////////////////////////////-->
+
+<weaponBlueprint name="TC_PULSAR">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>hohoho</title>
+	<short>hoehoehoe</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>aaaaaaaaaaaahahahaha</desc>
+	<tooltip>Never Gonna Give You Up</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>4</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>21</cooldown>
+	<power>1</power>
+	<cost>160</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_pulsar</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_PULSAR_SMOL">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>Simple Ion</title>
+	<short>Simple Ion</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>A simple ion weapon which can temporarily take down a shield barrier.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_ion_smol</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
 
 <weaponBlueprint name="IONARTILLERY">
 	<type>LASER</type>
@@ -2309,194 +2499,65 @@
 	<iconScale>0.80</iconScale>
 </weaponBlueprint>
 
-<weaponBlueprint name="TC_MILITIA_1">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<drone_targetable>1</drone_targetable>
-	<title>heheha</title>
-	<short>bop</short>
-	<tip>tip_flak</tip>
-	<desc>scababap</desc>
-	<tooltip>rodlfle</tooltip>
-	<radius>45</radius>
-	<damage>1</damage>
-	<shots>1</shots>
-	<sp>1</sp>
-	<spin>720</spin>
+<weaponBlueprint name="BIO_1_LEAH">
+	<type>BEAM</type>
+	<flavorType>Beam</flavorType>
+	<tip>tip_beams</tip>
+	<title>Anti-Bio Artillery</title>
+	<short>abio art</short>
+	<desc>Artillery: Powers a massive and extremely fast beam that pierces all shields and deals crew damage, with a small breach chance.</desc>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>5</persDamage>
+	<sp>10</sp>
+	<breachChance>1</breachChance>
 	<fireChance>0</fireChance>
+	<cooldown>32</cooldown>
+	<speed>40</speed>
+	<power>1</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>500</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<color>
+		<r>255</r>
+		<g>140</g>
+		<b>20</b>
+	</color>
+	<weaponArt>focus_1</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="FOCUS_1_LEAH">
+	<type>BEAM</type>
+	<flavorType>Pinpoint</flavorType>
+	<tip>tip_focus</tip>
+	<title>'Leah's Toy' Pinpoint</title>
+	<short>'Leah's Toy'</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>2</persDamage>
+	<sp>10</sp>
+	<fireChance>1</fireChance>
 	<breachChance>2</breachChance>
 	<cooldown>10</cooldown>
-	<power>2</power>
-	<cost>100</cost>
-	<bp>10</bp>
-	<speed>26</speed>
-	<rarity>1</rarity>
-	<projectiles>
-		<projectile count="1" fake="false">debris_large</projectile>
-		<projectile count="2" fake="false">debris_med</projectile>
-		<projectile count="3" fake="true">debris_small</projectile>
-	</projectiles>
-	<launchSounds>
-		<sound>flak</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>flakImpact1</sound>
-		<sound>flakImpact2</sound>
-		<sound>flakImpact3</sound>
-		<sound>flakImpact4</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>tc_militia_1</weaponArt> 
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="TC_MILITIA_2">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<drone_targetable>1</drone_targetable>
-	<title>sjk</title>
-	<short>spej</short>
-	<tip>tip_flak</tip>
-	<desc>Voici l'histoire de la trois petite cochon</desc>
-	<tooltip>Je ne suis pas fou fou fou</tooltip>
-	<radius>50</radius>
-	<damage>1</damage>
-	<spin>720</spin>
-	<shots>1</shots>
-	<sp>1</sp>
-	<fireChance>0</fireChance>
-	<breachChance>2</breachChance>
-	<cooldown>13</cooldown>
-	<power>3</power>
-	<cost>140</cost>
-	<bp>10</bp>
-	<speed>26</speed>
-	<rarity>4</rarity>
-	<projectiles>
-		<projectile count="2" fake="false">debris_large</projectile>
-		<projectile count="3" fake="false">debris_med</projectile>
-		<projectile count="6" fake="true">debris_small</projectile>
-	</projectiles>
-	<launchSounds>
-		<sound>flak</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>flakImpact1</sound>
-		<sound>flakImpact2</sound>
-		<sound>flakImpact3</sound>
-		<sound>flakImpact4</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>tc_militia_2</weaponArt> 
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="TC_PULSAR">
-	<type>LASER</type>
-	<flavorType>Ion Blast</flavorType>
-	<title>hohoho</title>
-	<short>hoehoehoe</short>
-	<tip>tip_ion</tip>
-	<locked>1</locked>
-	<desc>aaaaaaaaaaaahahahaha</desc>
-	<tooltip>Never Gonna Give You Up</tooltip>
-	<damage>0</damage>
-	<spin>720</spin>
-	<ion>1</ion>
-	<speed>30</speed>
-	<shots>4</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
-	<stunChance>1</stunChance>
-	<cooldown>21</cooldown>
+	<speed>1</speed>
 	<power>1</power>
-	<cost>160</cost>
-	<bp>3</bp>
+	<cost>45</cost>
+	<bp>2</bp>
 	<rarity>0</rarity>
-	<image>ion_barrage</image>
-	<explosion>explosion_small_ion</explosion>
+	<image>beam_contact</image>
+	<length>1</length>
 	<launchSounds>
-		<sound>ionShoot1</sound>
-		<sound>ionShoot2</sound>
-		<sound>ionShoot3</sound>
+		<sound>focus_weak</sound>
 	</launchSounds>
-	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>ionShields1</sound>
-		<sound>ionShields2</sound>
-		<sound>ionShields3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>tc_pulsar</weaponArt>
-	<iconImage>ion</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="TC_PULSAR_SMOL">
-	<type>LASER</type>
-	<flavorType>Ion Blast</flavorType>
-	<title>Simple Ion</title>
-	<short>Simple Ion</short>
-	<tip>tip_ion</tip>
-	<locked>1</locked>
-	<desc>A simple ion weapon which can temporarily take down a shield barrier.</desc>
-	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
-	<damage>0</damage>
-	<spin>720</spin>
-	<ion>1</ion>
-	<speed>30</speed>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
-	<stunChance>1</stunChance>
-	<cooldown>9</cooldown>
-	<power>1</power>
-	<cost>40</cost>
-	<bp>3</bp>
-	<rarity>0</rarity>
-	<image>ion_barrage</image>
-	<explosion>explosion_small_ion</explosion>
-	<launchSounds>
-		<sound>ionShoot1</sound>
-		<sound>ionShoot2</sound>
-		<sound>ionShoot3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>ionShields1</sound>
-		<sound>ionShields2</sound>
-		<sound>ionShields3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>tc_ion_smol</weaponArt>
-	<iconImage>ion</iconImage>
+	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->
@@ -2595,6 +2656,8 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
+<!--/////////////////////THE TRANSMITTER//////////////////////////-->
+
 <augBlueprint name="SCRAP_TRANSMITTER">
     <title>Scrap Transmitter</title>
     <desc>A strange custom-made transmitter of a Lanius design. It bears the message "COME AND GET IT" but not much in the way of instructions, or what this "IT" actually is or does. Oddly enough, it has an analog phone welded to its side. </desc>
@@ -2604,6 +2667,15 @@
 </augBlueprint>
 
 <!--/////////////////////FUNCTIONAL AUGS//////////////////////////-->
+
+<augBlueprint name="CUSTOM_CRYSTAL">
+	<title>Leah's Vengeance</title>
+	<desc>You're not sure how this works and Leah refuses to tell you. Fires a system damaging pinpoint whenever you take damage</desc>
+	<cost>30</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
 
 <augBlueprint name="COMPACTOR">
     <title>Compactor</title>
@@ -6250,10 +6322,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
-	<weaponSlots>0</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="0" count="0" />
-	<droneList drones="0" count="0" />
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="3" count="2">
+		<weapon name="MILITIA_TAGGER" />
+	</weaponList>
+	<droneList drones="2" count="3">
+	</droneList>
 	<health amount="30" />
 	<maxPower amount="7" />
 	<crewCount amount="2" class="slug_saboteur" />
@@ -6320,14 +6395,227 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
-	<weaponList missiles="0" count="4">
-		<weapon name="NOVA_MK2" />
+	<weaponList missiles="5" count="4">
+		<weapon name="TC_BURST_1" />
 	</weaponList>
 	<droneList drones="2" count="2" />
 	<health amount="30" />
 	<maxPower amount="5" />
 	<aug name="BACKUP_DNA" />
 </shipBlueprint>
+
+<!--/////// LEAH'S SHIPS //////-->
+
+<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA" layout="newtonbeam" img="newtonbeam_base">
+	<class>Leah's Cruiser</class>
+	<name>The Beam Master</name>
+	<desc>The ship of the Infamous Beam Master, better known as Leo... or, wait was it Liam? Leviticus? Lizzy???</desc>
+	<systemList>
+		<battery power="1" max="2" room="12" start="false" img="room_battery_3" />
+		<cloaking power="1" room="1" start="false" img="room_cloaking_9" />
+		<clonebay power="1" room="6" start="false" >
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="10" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" max="8" room="9" start="false" img="room_drones" />
+		<engines power="2" room="5" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="true" img="room_hacking_5" />
+		<medbay power="1" room="6" start="true" img="USE">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="13" start="false" img="room_mind_3" />
+		<oxygen power="1" room="3" start="true" img="room_oxygen" />
+		<pilot power="1" room="4" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="11" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="0" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="2" start="false" />
+		<weapons power="2" max="8" room="7" start="true" img="room_weapons_6">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="3" count="4">
+		<weapon name="BEAM_PIERCE" />
+	</weaponList>
+	<droneList drones="10" count="2">
+		<drone name="REPAIR_BOARDER" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="8" />
+	<aug name="CUSTOM_CRYSTAL" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_2" layout="newtonbeam_2" img="newtonbeam_2">
+	<class>Leah's Cruiser</class>
+	<name>The Rulebook</name>
+	<unlock id="ship_PLAYER_SHIP_NEWTONBEAMA_2_unlock"/>
+	<desc>With a permenant mind control rig installed on the Beam Master's ship, her ship was quickly painted in federation colours and turned into a multiverse capable cruiser</desc>
+	<systemList>
+		<artillery power="1" max="5" room="3" start="true" weapon="BIO_1_LEAH" img="room_artillery_3" />
+		<battery power="1" max="2" room="10" start="false" img="room_battery_14" />
+		<cloaking power="1" max="5" room="2" start="false" img="room_cloaking_9" />
+		<clonebay power="1" max="4" room="14" start="true">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="7" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" max="8" room="4" start="false" img="room_drones_15" />
+		<engines power="2" max="8" room="5" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" max="3" room="11" start="false" img="room_hacking_2" />
+		<medbay power="1" max="4" room="14" start="false" img="room_medbay">
+			<slot>
+				<number>2</number>
+			</slot>
+		</medbay>
+		<mind power="1" max="3" room="9" start="true" img="room_mind_11" />
+		<oxygen power="1" max="4" room="13" start="true" img="room_oxygen_12" />
+		<pilot power="1" max="3" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" max="3" room="6" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="8" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="2" max="4" room="1" start="true" />
+		<weapons power="2" max="8" room="12" start="false" img="room_weapons_11">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="0" count="2" />
+		<weapon name="NOVA_MK2" />
+	</weaponList>
+	<droneList drones="3" count="4" />
+	<health amount="30" />
+	<maxPower amount="5" />
+	<aug name="CUSTOM_CRYSTAL" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_3" layout="newtonbeam_3" img="newtonbeam_3">
+	<class>Leah's Cruiser</class>
+	<name>The Semi-Competent</name>
+	<unlock id="ship_PLAYER_SHIP_NEWTONBEAMA_3_unlock"/>
+	<desc>After careful thought, Leah realized her old ship wasn't ready for the challenges of the multiverse. However, in her haste to upgrade her ship, she forgot to make it compatible with shields. Oops.</desc>
+	<systemList>
+		<battery power="1" room="12" start="false" img="room_battery_2" />
+		<cloaking power="2" room="1" start="true" img="room_cloaking_10" />
+		<clonebay power="1" room="3" start="false" >
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="6" start="true" img="room_doors_8">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="1" room="10" start="false" img="room_drones_15" />
+		<engines power="3" room="5" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_3" />
+		<medbay power="1" room="3" start="true" img="room_medbay_9">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="9" start="false" img="room_mind_3" />
+		<oxygen power="1" room="11" start="true" img="room_oxygen_6" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="2" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<teleporter power="1" room="4" start="false" />
+		<weapons power="3" room="8" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="3" count="3">
+		<weapon name="NOVA_MK1" />
+		<weapon name="BEAM_MINING" />
+	</weaponList>
+	<droneList drones="3" count="3" />
+	<health amount="30" />
+	<maxPower amount="9" />
+	<aug name="CUSTOM_CRYSTAL" />
+</shipBlueprint>
+
 
 
 <!--

@@ -958,4 +958,25 @@
 		</choice>
 		</event>
 
+
+		<mod:findName type="event" name="SYLVAN_ROYAL_NORMAL">
+<mod:findLike type="choice" start="0" limit="1">
+<mod:findLike type="event">
+<mod-append:choice req="LIST_CREW_LEAH" blue="true">
+    <text>Have Leah stand next to you while you respond to her hail.</text> 
+	<event load="SYLVAN_ROYAL_LEAH_DIALOGUE"/>
+</mod-append:choice>
+</mod:findLike>
+</mod:findLike>
+</mod:findName>
+
+<event name="SYLVAN_ROYAL_LEAH_DIALOGUE">
+    <text>"No way. No way you did this. No way you found… ANOTHER LEAH? What about us? What about our rivalry, the most legendary rivalry to ever exist, and you found ANOTHER me? I thought we had something special, we’ve fought each other so many times, had so many amazing moments and you… you... you cheat on me!" Leah slams her fist down onto the table and leaps from her seat. "No more games captain, our rivalry is over, and only one of us is going to make it out of here alive. Ooh, but what if we both died at the same time, wouldn’t that make for such a cool and epic mo-" You close communications and begin to charge your weapons.</text>
+	<ship hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
 </FTL>
