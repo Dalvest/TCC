@@ -809,7 +809,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_charge</weaponArt>  
+	<weaponArt>tc_bomb_shotgun_charge</weaponArt>
 	<iconImage>missile_charge</iconImage>
 </weaponBlueprint>
 
@@ -1203,7 +1203,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_militia_1</weaponArt> 
+	<weaponArt>tc_militia_1</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1251,7 +1251,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_militia_2</weaponArt> 
+	<weaponArt>tc_militia_2</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -6588,7 +6588,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</systemList>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="0" count="2" />
+	<weaponList missiles="0" count="2">
 		<weapon name="NOVA_MK2" />
 	</weaponList>
 	<droneList drones="3" count="4" />
