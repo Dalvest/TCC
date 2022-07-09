@@ -395,10 +395,25 @@
       <text>Look for Protogen crew.</text>
       <event load="STORAGE_CHECK_CREW_LIST_PROTOGEN"/>
     </mod-append:choice>
+     <!--//////////////////SERGAL//////////////////-->
+    <mod-append:choice req="LIST_CREW_SERGAL" lvl="1" blue="false" hidden="true">
+      <text>Look for Sergal crew.</text>
+      <event load="STORAGE_CHECK_CREW_LIST_SERGAL"/>
+    </mod-append:choice>
+    <!--//////////////////KIVIE//////////////////-->
+    <mod-append:choice req="LIST_CREW_KIVIE" lvl="1" blue="false" hidden="true">
+      <text>Look for Kivie crew.</text>
+      <event load="STORAGE_CHECK_CREW_LIST_KIVIE"/>
+    </mod-append:choice>
+    <!--//////////////////ROBOTTOS//////////////////-->
+    <mod-append:choice req="LIST_CREW_ROBOTTOS" lvl="1" blue="false" hidden="true">
+      <text>Look for Sentient Robotto crew.</text>
+      <event load="STORAGE_CHECK_CREW_LIST_ROBOTTOS"/>
+    </mod-append:choice>
       <!--//////////////////AVALI//////////////////-->
     <mod-append:choice req="LIST_CHECKCREW_AVALI" blue="false" hidden="true">
-		   <text>Look for Avali crew</text>
-		   <event load="STORAGE_CHECK_CREW_LIST_AVALI" />
+      <text>Look for Avali crew</text>
+      <event load="STORAGE_CHECK_CREW_LIST_AVALI" />
 	  </mod-append:choice>
 
     <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
@@ -406,6 +421,24 @@
       <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
     </mod:findWithChildLike>
   </mod:findName>
+
+
+
+  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_HUMAN">
+    <mod-append:choice req="kora" lvl="1" blue="false" hidden="true">
+      <text>Look for Kora.</text>
+      <event load="STORAGE_CHECK_CREW_KORA"/>
+    </mod-append:choice>
+
+    <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
+      <mod:selector>Nevermind, do something else.</mod:selector>
+      <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
+    </mod:findWithChildLike>
+
+
+  </mod:findName>
+
+<!--///////////////PROTOGEN TALK TO CREW//////////////-->
 
   <event name="STORAGE_CHECK_CREW_LIST_PROTOGEN">
     <text>You look around for some crew to talk to.</text>
@@ -421,7 +454,7 @@
   </choice>
 
   <choice req="primagen_raptor" blue="false" hidden="true">
-    <text>Look for Raptor.</text>
+    <text>Look for RAPTOR.</text>
     <event load="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR"/>
   </choice>
 
@@ -472,7 +505,7 @@
   </event>
 
   <event name="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR">
-    <text>What do you want to do with Raptor?</text>
+    <text>What do you want to do with RAPTOR?</text>
     <choice>
       <text id="talk_to_crew"/>
       <event load="STORAGE_CHECK_CREW_PRIMAGEN_RAPTOR_TALK"/>
@@ -595,9 +628,11 @@
     <text>RAPTOR just finished an hour-long rant about old human ammunition calibers - he wanted to start talking about flak weapons too but you've stopped him right in time.</text>
     <text>You ask RAPTOR if he ever ate anything, as you've only seen him charge using a power cord. He answers with "Yeah. Coffee.".</text>
     <text>RAPTOR is trying to fix a coffee vending machine in order to "Relive the good old times.".</text>
+    <text>RAPTOR is trying to improve the internet security on your ship mainframe in order to prevent Cheese from breaking it again.</text>
     <text>RAPTOR is debating whether a tabaxi or a sergal would be fluffier. You fear the debate may take hours.</text>
     <text>RAPTOR is reloading all of his weapons by putting junk in his chest cavity, compacting it and fabricating ammo. It's highly fascinating!</text>
-    <text>RAPTOR saw you enter his room and yelled "TANGO CONTACT!" reflexively. It seems even machines make mistakes.</text>
+    <text>You are looking for RAPTOR, who in turn is looking for Cheese. He doesn't seem too talkative right now.</text>
+    <text>RAPTOR is trying to write a poem for Cheese, but he's unable to come up with anything more than "Roses are colored, the void is not, i have decided, that you are hot.".</text>
   </textList>
 
 <!--//////LANCER DIALOGUE////////-->
@@ -633,8 +668,338 @@
     <text>Lancer quips at you happily using his tape recorder "PLEASE KEEP YOUR HANDS IN THE RIDE (whir) YOU- (whir) ARE IN A HARDHAT AREA (whir)". How cute of him!</text>
   </textList>
 
+  <!--///////////////KIVIE TALK TO CREW//////////////-->
+
+  <event name="STORAGE_CHECK_CREW_LIST_KIVIE">
+    <text>You look around for some crew to talk to.</text>
+
+   <choice req="kiviekith" blue="false" hidden="true">
+      <text>Look for your Kivie.</text>
+      <event load="STORAGE_CHECK_CREW_KIVIE"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_KIVIE">
+    <text>What do you want to do with your Kivie?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_KIVIE_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_KIVIE_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_KIVIE_SCAN">
+    <text>KIVIE'S DETAILS
+      SPECIES? [KIVIE] UNIQUE? [No]
+      Stats: Takes less hazard damage, learns skills slower, deals x1.2 combat and sabotage damage and takes x0.8 damage.
+      Formerly human, currently a genetic abomination. It is unclear who experimented on them, but one thing is clear - most of them are a part of the RECLAIM and SALVAGE ASSOCIATION.
+    </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_KIVIE_TALK">
+    <text load="TEXT_CREW_TALK_KIVIE"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_KIVIE">
+    <text>Your Kivie seems... well, you're not sure what their current emotional state is, given the fact that their face is obscured by a mask.</text>
+    <text>Your Kivie seems to be in a daze right now, so you decide to leave them alone.</text>
+    <text>Your Kivie asks if you can get them a coffee - you ask how they will drink it, and get a nod as an answer.</text>
+  </textList>
+
+  <!--///////////////ROBOTTO TALK TO CREW//////////////-->
+
+  <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
+    <text>You look around for some crew to talk to.</text>
+    <choice req="robottos" blue="false" hidden="true">
+      <text>Look for your Sentient Robotto.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS"/>
+    </choice>
+
+    <choice req="robottos_machinist" blue="false" hidden="true">
+      <text>Look for your Sentient Robotto Machinist.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST"/>
+    </choice>
+
+    <choice req="robottos_gunner" blue="false" hidden="true">
+      <text>Look for your Sentient Robotto Gunner.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER"/>
+    </choice>
+
+    <choice req="robottos_researcher" blue="false" hidden="true">
+      <text>Look for your Sentient Robotto Researcher.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_ROBOTTOS">
+    <text>What do you want to do with your Sentient?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_SCAN"/>
+    </choice>
+    <choice>
+      <text>Upgrade your Sentient Robotto into one of its upgraded versions.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_ROBOTTOS_SCAN">
+    <text>SENTIENT'S DETAILS
+      SPECIES? [Sentient Robotto] UNIQUE? [No]
+      Stats: 80 Health, x0.7 repair speed, unable to suffocate, takes x1.25 damage from fires.
+      These robottos are hailing from a distant multiverse - they're often sending scouting parties to various multiverse clusters to map and explore.
+    </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_ROBOTTOS_TALK">
+    <text load="TEXT_CREW_TALK_ROBOTTOS"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_ROBOTTOS">
+    <text>Your Sentient is quietly staring at the distant stars through a window. You figure it's best not disturb them.</text>
+    <text>Your Sentient asks you about the concept of a 'soul'. Their scanning can't detect one in anyone's anatomy and it is stressing the poor robotto out.</text>
+    <text>Your Sentient is not in their quarters; they're currently doing a spacewalk for fun. At least they're anaerobic.</text>
+    <text>Your Sentient asks if anyone has weapons-grade uranium at hand. they claim it's 'fine,', they 'only need a little bit'.</text>
+    <text>Your Sentient asks for your opinion on the many, many, many forms of life in the galaxy. You figure it'd take too look to talk about all of them.</text>
+  </textList>
+  
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST">
+      <text>What do you want to do with your Machinist?</text>
+      <choice>
+        <text id="talk_to_crew"/>
+        <event load="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST_TALK"/>
+      </choice>
+      <choice>
+        <text id="scan_crew"/>
+        <event load="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST_SCAN"/>
+      </choice>
+      <choice>
+        <text>Nevermind, do something else.</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+  
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST_SCAN">
+      <text>MACHINIST'S DETAILS
+        SPECIES? [Sentient Robotto] UNIQUE? [No]
+        Stats: 80 Health, x2 repair speed, unable to suffocate and completely fireproof, provides a bar of power to the current system.
+        The Machinist is excellent at repairing broken systems and hull breaches, as well as extinguishing fires. Whenever it's not repairing, it's probably manning a crucial system.
+      </text>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST_TALK">
+      <text load="TEXT_CREW_TALK_ROBOTTOS_MACHINIST"/>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <textList name="TEXT_CREW_TALK_ROBOTTOS_MACHINIST">
+      <text>Your Machinist says that the more he knows people, the more he prefers the company of high-density steel parts.</text>
+      <text>Your Machinist asks if you need anything repaired. It is clearly bored.</text>
+      <text>Your Machinist is constructing a vintage clock in its free time. It already works, and it's not even halfway done.</text>
+      <text>Your Machinist asks "How can you live in a body that can't be upgraded and improved?"". Their tone is far too naive and curious to be holding ill intent.</text>
+      <text>Your Machinist says they'd like to build their own spaceship sometime; when asked about it, they claim that they want less guns and more drones.</text>
+      <text>Your Machinist is playing cards with a tiny mechanical arm it built for its own amusement. ...The Machinist is losing.</text>
+    </textList>
+  
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER">
+      <text>What do you want to do with your Gunner?</text>
+      <choice>
+        <text id="talk_to_crew"/>
+        <event load="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER_TALK"/>
+      </choice>
+      <choice>
+        <text id="scan_crew"/>
+        <event load="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER_SCAN"/>
+      </choice>
+      <choice>
+        <text>Nevermind, do something else.</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+  
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER_SCAN">
+      <text>GUNNER'S DETAILS
+        SPECIES? [Sentient Robotto] UNIQUE? [No]
+        Stats: 80 Health, x0.7 repair speed, unable to suffocate, x1.7 combat damage, takes x0.5 damage
+        The Gunner is an amazing defender and boarder owing to its advanced weaponry and upgraded armor.
+      </text>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER_TALK">
+      <text load="TEXT_CREW_TALK_ROBOTTOS_GUNNER"/>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <textList name="TEXT_CREW_TALK_ROBOTTOS_GUNNER">
+      <text>Your Gunner has attached a small dartboard to the inner side of their quarters' door. A thrown dart almost hits you once you come in.</text>
+      <text>Your Gunner expresses their disdain for violence while butchering enemies by the hundreds in a videogame.</text>
+      <text>Your Gunner questions if specimens truly, truly need to be alive for scientific research.</text>
+      <text>Your Gunner requests permission to disintegrate the next enemy it sees.</text>
+      <text>Your Gunner is acting all sassy, claiming they always shoot first.</text>
+      <text>Your Gunner claims that if a gun doesn't weight at least 100 pounds then it's not a 'true weapon'.</text>
+      <text>Your Gunner is whistling some digitized tune as it assembles and disassembles its custom gun and all of its accessories.</text>
+    </textList>
+
+
+  
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER">
+      <text>What do you want to do with your Researcher?</text>
+      <choice>
+        <text id="talk_to_crew"/>
+        <event load="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER_TALK"/>
+      </choice>
+      <choice>
+        <text id="scan_crew"/>
+        <event load="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER_SCAN"/>
+      </choice>
+      <choice>
+        <text>Nevermind, do something else.</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+  
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER_SCAN">
+      <text>RESEARCHER'S DETAILS
+        SPECIES? [Sentient Robotto] UNIQUE? [No]
+        Stats: 80 Health, x0.7 repair speed, unable to suffocate, x1.6 movement speed, doesn't lose skills when cloned, starts with level 2 skills
+        The Researcher has an Internal Database similar to that of a protogen - its vast array of knowledge cannot be lost anymore.
+      </text>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER_TALK">
+      <text load="TEXT_CREW_TALK_ROBOTTOS_RESEARCHER"/>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <textList name="TEXT_CREW_TALK_ROBOTTOS_RESEARCHER">
+      <text>Your Researcher says you are 'beautiful' considering you're made off of star corpses.</text>
+      <text>Your Researcher says there are billions of billions of billions of billions of billions of particles in the observable universe, and that Vance has all the ugly ones.</text>
+      <text>Your Researcher asks you to let it commandeer the ship. You politely ask it to leave command in your hands.</text>
+      <text>Your Researcher asks you to come see a weapon of mass destruction that it has found aboard your ship. it turns out to be a bottle of bleach, which it claims to capable of causing billions of deaths... of bacteria.</text>
+      <text>Your Researcher asks if you've got a cold. It would like to look into any samples of your tissue on a microscope. You politely decline, stating your tissue is better when attached to your body. The Researcher attempts to use the microscope directly on you instead.</text>
+    </textList>
+
+  <!--///////////////SERGAL TALK TO CREW//////////////-->
+
+     <event name="STORAGE_CHECK_CREW_LIST_SERGAL">
+      <text>You look around for some crew to talk to.</text>
+  
+     <choice req="sergal_cheese" blue="false" hidden="true">
+        <text>Look for Cheese.</text>
+        <event load="STORAGE_CHECK_CREW_CHEESE"/>
+      </choice>
+    </event>
+  
+    <event name="STORAGE_CHECK_CREW_CHEESE">
+      <text>What do you want to do with Cheese?</text>   <!--Hey, he's RAPTOR's boyfriend, not yours!-->
+      <choice>
+        <text id="talk_to_crew"/>
+        <event load="STORAGE_CHECK_CREW_CHEESE_TALK"/>
+      </choice>
+      <choice>
+        <text id="scan_crew"/>
+        <event load="STORAGE_CHECK_CREW_CHEESE_SCAN"/>
+      </choice>
+      <choice>
+        <text>Nevermind, do something else.</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+  
+    <event name="STORAGE_CHECK_CREW_CHEESE_SCAN">
+      <text>CHEESE'S DETAILS
+        SPECIES? [Sergal] UNIQUE? [Yes]
+        Unique Traits: This Sergal is a highly adept mechanic owing to his time in the RSA. He may be moody at times but he's usually nice.
+        Stats: 80 Health, x1.7 repair speed, x1.1 hazard damage taken, x1.2 damage and sabotage
+        Cheese was a technician in the RECLAIM and SALVAGE ASSOCIATION, but he deserted in order to be together with his lover.
+        Lancer shares his DNA with Cheese. This technically makes Lancer his brother. Disturbing eldritch horrors are the best siblings!</text>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <event name="STORAGE_CHECK_CREW_CHEESE_TALK">
+      <text load="TEXT_CREW_TALK_CHEESE"/>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <textList name="TEXT_CREW_TALK_CHEESE">
+      <text>Cheese is trying to figure out what part of himself created Lancer's tongue. You realize this conversation could be highly disturbing and stop him.</text>
+      <text>Cheese is asking you where RAPTOR is every 5 minutes. It's getting annoying.</text>
+      <text>You wonder how Cheese, a totally biological sergal, is able to sustain a relationship with a gigantic hunk of metal.</text>
+      <text>Cheese talked about noodles for several hours - you wonder who he's been talking to but some investigation reveals he's been talking to himself.</text>
+      <text>Cheese is wondering what he can lift to get "completely shredded". You encourange him to go on his quest for "mad gainz".</text>
+      <text>Cheese is loading his pistol. You try to figure out why he has a .50 Earth-standard pistol as it's completely impractical.</text>
+      <text>You ask Cheese where his name comes from. He responds by taking a ration out of his backpack and pointing at it. You decide to leave it at that.</text>
+      <text>You ask Cheese how many things he can fix. Cheese, the ex-RSA mechanic and Federation certified engineer, answers with "Nothing.".</text>
+      <text>Cheese is brushing dust off his fur. He has so much of it, it'll take quite a while for him to finish.</text>
+      <text>Cheese asks you for permission to click the "hot gay furs in your sector" ad. You yell at him that he's an idiot.</text>
+      <text>Cheese's fur seems completely impractical for any enviroment, unless he plans to disguise himself as a Hektar billboard.</text>
+      <text>Cheese asks you to let him download Hektarsoft Flight Simulator on the ship mainframe. You politely inform him commiting game piracy would be equivalent to a war crime.</text>
+    </textList>
 
   <!--////// KORA'S DIALOGUE ////////-->
+
+  <event name="STORAGE_CHECK_CREW_KORA">
+    <text>What do you want to do with Kora?</text>
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_KORA_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_KORA_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
 
   <event name="STORAGE_CHECK_CREW_KORA_SCAN">
     <text>TRACKER'S DETAILS
@@ -720,6 +1085,7 @@
   	<text>Your Avali wishes that you'd install a "Nexus Link", when asked what that is they spout something about quantum entanglement and the "world wide web". They glare at you, and then shrug.</text>
   	<text>Your Avali calls Orchids a bunch of "uninspired knock-off Avali". You don't know whether to agree or not.</text>
   	<text>Your Avali wishes they could turn invisible. You respond with "Same.".</text>
+    <text>Your Avali lets out a short, curt and unbelievably cute "Gwah.". You agree completely with its brave statement.</text>
   	<text>Your Avali complains that their sprite is too small. You wonder what that is supposed to mean.</text>
   	<text>Your Avali complains about having to wear a cloak 24/7, when you tell them to just take it off they mutter something about "looking better with it on" and "sprite being hard to make otherwise"</text>
   </textList>
@@ -960,11 +1326,15 @@
       <text>Scan your Scrapper Speedster</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SPEED"/>
     </choice>
-    <choice req="scrapper_heavy" lvl="1" max_group="4" blue="false">
+    <choice req="scrapper_defender" lvl="1" max_group="4" blue="false">
+      <text>Scan your Scrapper Defender</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_DEFENDER"/>
+    </choice>
+    <choice req="scrapper_heavy" lvl="1" max_group="5" blue="false">
       <text>Scan your Heavy Scrapper</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_HEAVY"/>
     </choice>
-    <choice req="scrapper_scavenger" lvl="1" max_group="5" blue="false">
+    <choice req="scrapper_scavenger" lvl="1" max_group="6" blue="false">
       <text>Scan your Scrapper Scavenger</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_SCAN_SCAVENGER"/>
     </choice>
@@ -1026,6 +1396,19 @@
     </choice>
   </event>
 
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_DEFENDER">
+    <text>SCRAPPER DETAILS
+      SPECIES? [Lanius] SUBTYPE? [Yes]
+      Subtype Details: Genetic, Standard
+      Stats: 150 Health, x1.5 repair speed, x0.75 move speed, x0.75 fire damage, x0.8 damage taken.
+      Inherited Stats: Drains oxygen at 0.4oxy/s, immune to suffocation.
+      The Scrapper Defenders are slow but incredibly damage resistant - they may not make the best soldiers but they will definitely soak up damage. </text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
   <event name="STORAGE_CHECK_CREW_SCRAPPER_SCAN_HEAVY">
     <text>SCRAPPER DETAILS
       SPECIES? [Lanius] SUBTYPE? [Yes]
@@ -1052,7 +1435,11 @@
     </choice>
   </event>
 
-<!--//////////////////////////////////////////////////////////SCRAAPPER UPGRADE CHECKER////////////////////////////////////////////////////////-->
+<!--
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          SCRAPPER UPGRADE MENU
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE">
     <text>You've got a Scrapper you can upgrade - with some basic tools and machinery, you may upgrade a Scrapper into one of the following:</text>
@@ -1061,24 +1448,56 @@
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE"/>
     </choice>
     <choice req="scrapper" lvl="1" max_group="2" blue="false">
-      <text>Make a Scrapper Soldier</text>
+      <text>Upgrade your Scrapper</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE"/>
+    </choice>
+    <choice req="scrapper_soldier" lvl="1" max_group="3" blue="false">
+      <text>Upgrade your Scrapper Soldier</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
     </choice>
-    <choice req="scrapper" lvl="1" max_group="3" blue="false">
-      <text>Make a Scrapper Engineer</text>
+    <choice req="scrapper_engineer" lvl="1" max_group="4" blue="false">
+      <text>Upgrade your Scrapper Engineer</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
     </choice>
-    <choice req="scrapper" lvl="1" max_group="4" blue="false">
-      <text>Make a Scrapper Speedster</text>
+    <choice req="scrapper_defender" lvl="1" max_group="5" blue="false">
+      <text>Upgrade your Scrapper Defender</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER"/>
+    </choice>
+    <choice req="scrapper_speed" lvl="1" max_group="6" blue="false">
+      <text>Upgrade your Scrapper Speedster</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED"/>
     </choice>
-    <choice req="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE" lvl="1" max_group="5" blue="false">
-      <text>Make a Heavy Scrapper</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU"/>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+      <text>Create a Scrapper Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SOLDIER"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="2" blue="false">
+      <text>Create a Scrapper Engineer.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ENGINEER"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="3" blue="false">
+      <text>Create a Scrapper Speedster.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SPEED"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="4" blue="false">
+      <text>Create a Scrapper Defender.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_DEFENDER"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="5" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_HEAVY"/>
     </choice>
     <choice req="SCAVENGER_REQ" lvl="1" max_group="6" blue="false">
-      <text>Make a Scrapper Scavenger</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU"/>
+      <text>Create a Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SCAV"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
@@ -1086,23 +1505,15 @@
     </choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MENU">
-    <text>Who do you want to upgrade?</text>
-    <choice req="scrapper" lvl="1" max_group="1" blue="false">
-      <text>Upgrade your Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE"/>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper_soldier" lvl="1" max_group="1" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY"/>
     </choice>
-    <choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
-      <text>Upgrade your Scrapper Soldier.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER"/>
-    </choice>
-    <choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
-      <text>Upgrade your Scrapper Engineer.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER"/>
-    </choice>
-    <choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
-      <text>Upgrade your Scrapper Speedster.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED"/>
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
+      <text>Create a Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_SCAV"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
@@ -1110,23 +1521,43 @@
     </choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MENU">
-    <text>Who do you want to upgrade?</text>
-    <choice req="scrapper" lvl="1" max_group="1" blue="false">
-      <text>Upgrade your Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE"/>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper_engineer" lvl="1" max_group="1" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_HEAVY"/>
     </choice>
-    <choice req="scrapper_soldier" lvl="1" max_group="2" blue="false">
-      <text>Upgrade your Scrapper Soldier.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER"/>
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
+      <text>Create a Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV"/>
     </choice>
-    <choice req="scrapper_engineer" lvl="1" max_group="3" blue="false">
-      <text>Upgrade your Scrapper Engineer.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER"/>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
     </choice>
-    <choice req="scrapper_speed" lvl="1" max_group="4" blue="false">
-      <text>Upgrade your Scrapper Speedster.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED"/>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper_speed" lvl="1" max_group="1" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_HEAVY"/>
+    </choice>
+    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
+      <text>Create a Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_SCAV"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER">
+    <text>Who do you want to create?</text>
+    <choice req="scrapper_defender" lvl="1" max_group="1" blue="false">
+      <text>Create a Heavy Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_HEAVY"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
@@ -1149,7 +1580,7 @@
 
 </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SOLDIER">
     <text>You can upgrade your Scrapper's combat ability by adding extra scrap to their arms, although this would reduce their repair speed.
       [x1.5 repair -> x1.0 repair speed
       x1.0 damage -> x2.0 damage]</text>
@@ -1166,7 +1597,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ENGINEER">
     <text>This upgrade will generally improve your Scrapper's ability to repair ship systems.
       [x1.5 repair -> x3.0 repair speed
       x1.0 damage -> x0.75 damage
@@ -1184,7 +1615,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SPEED">
     <text>By molding the legs into a more efficient shape, your Scrapper can achieve greater sprinting speeds.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
@@ -1200,7 +1631,25 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_BASE">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_DEFENDER">
+    <text>By adding a plating of scrap to your Scrapper, you can make them resistant to damage.
+      [125 health -> 150 health
+      x0.9 movement speed -> x0.75 movement speed
+      x1 damage taken -> x0.8 damage taken]</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper">scrapper_defender</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_HEAVY">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
       [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
@@ -1221,7 +1670,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SOLDIER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
       [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
@@ -1242,7 +1691,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_ENGINEER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_HEAVY">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
       [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
@@ -1264,7 +1713,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_SPEED">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_HEAVY">
     <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
       [125 health -> 250 health
       3/4 oxygen drain -> 1/2 oxygen drain
@@ -1285,7 +1734,29 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_BASE">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_HEAVY">
+    <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
+      [150 health -> 250 health
+      3/4 oxygen drain -> 1/2 oxygen drain
+      x1.5 repair speed -> x0.5 repair speed
+      x0.75 movement speed -> x0.25 movement speed
+      x0.75 fire damage -> x0.5 fire damage
+      x1 damage -> x2.5 damage
+      x0.8 damage taken -> x1 damage taken]</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+        </item_modify>
+        <transformRace class="scrapper_defender">scrapper_heavy</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SCAV">
     <text>[ELITE UPGRADE] Using a highly complex alloy whose exact manufacturing method is known only by a select few, you can make this Scrapper even more powerful and adaptive.
       [125 health -> 150 health
       x1.5 repair speed -> x2 repair speed
@@ -1306,7 +1777,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SOLDIER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_SCAV">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
@@ -1322,7 +1793,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_ENGINEER">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
@@ -1338,7 +1809,7 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_SPEED">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_SCAV">
     <text>Will cover the body in a layer of elite scrap.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
@@ -1353,4 +1824,144 @@
     </choice>
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
+
+<!--
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          ROBOTTO UPGRADE MENU
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
+
+<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE">
+  <text>You can upgrade one of your robottos into one of their elite specialized variants.</text>
+  <choice req="robottos" lvl="1" max_group="1" blue="false">
+    <text>Create a Machinist</text>
+    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_MACHINIST"/>
+  </choice>
+  <choice req="robottos" lvl="1" max_group="2" blue="false">
+    <text>Create a Researcher</text>
+    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_RESEARCHER"/>
+  </choice>
+  <choice req="robottos" lvl="1" max_group="3" blue="false">
+    <text>Create a Gunner</text>
+    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_GUNNER"/>
+  </choice>
+  <choice>
+    <text>Nevermind, do something else.</text>
+    <event load="STORAGE_CHECK"/>
+  </choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_MACHINIST">
+  <text>Upgrading your Robotto to have better available tools on their arms would greatly increase their repair capability - adding fireproofing would be possible as well.</text>
+  <choice>
+    <text>Do it.</text>
+    <event>
+      <text>Your Robotto undergoes the upgrade...</text>
+      <item_modify>
+        <item type="scrap" min="-30" max="-30"/>
+        <item type="drones" min="-3" max="-3"/>
+      </item_modify>
+      <transformRace class="robottos">robottos_machinist</transformRace>
+    </event>
+  </choice>
+  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_RESEARCHER">
+  <text>Upgrading your Robotto to have an Internal Database similar to a protogen's would make them amazing system managers.</text>
+  <choice>
+    <text>Do it.</text>
+    <event>
+      <text>Your Robotto undergoes the upgrade...</text>
+      <item_modify>
+        <item type="scrap" min="-30" max="-30"/>
+        <item type="drones" min="-3" max="-3"/>
+      </item_modify>
+      <transformRace class="robottos">robottos_researcher</transformRace>
+    </event>
+  </choice>
+  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_GUNNER">
+  <text>Upgrading your Robotto's arsenal and targeting system would greatly increase their combat capacity.</text>
+  <choice>
+    <text>Do it.</text>
+    <event>
+      <text>Your Robotto undergoes the upgrade...</text>
+      <item_modify>
+        <item type="scrap" min="-30" max="-30"/>
+        <item type="drones" min="-3" max="-3"/>
+      </item_modify>
+      <transformRace class="robottos">robottos_gunner</transformRace>
+    </event>
+  </choice>
+  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+</event>
+
+<mod:findName type = "event" name="STORAGE_CHECK_CREW_LIST_HUMAN">
+<mod-append:choice req="unique_leah_mfk" blue="false">
+     <text>Look for Leah.</text> 
+     <event load="STORAGE_CHECK_CREW_LEAH"/>
+</mod-append:choice>
+</mod:findName> 
+
+<event name="STORAGE_CHECK_CREW_LEAH">
+    <text>What do you want to do with Leah?</text>
+    <choice>
+        <text>Nevermind, do something else.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+    <choice hidden="true">
+        <text id="talk_to_crew"/>
+        <event load="STORAGE_CHECK_CREW_LEAH_TALK"/>
+    </choice>
+    <choice hidden="true">
+        <text id="scan_crew"/>
+        <event load="STORAGE_CHECK_CREW_LEAH_SCAN"/>
+    </choice>
+</event>
+<event name="STORAGE_CHECK_CREW_LEAH_SCAN">
+    <text>LEAH DETAILS
+    SPECIES? [Human] SUBTYPE? [Yes]
+    Subtype Details: Unique
+    Stats: 100 Health, 1.5x sabotage speed, 0.7x combat damage taken, 2x combat damage, 50% fire and suffocation damage. Has maximum skill level. Does not lose skills when cloned.
+    </text>
+    <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_LEAH_TALK">
+    <text load="TEXT_CREW_TALK_LEAH"/>
+    <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+</event>
+
+<textList name="TEXT_CREW_TALK_LEAH">
+<text>You enter Leah's quarters, but see no sign of her. An open Hektar magazine is open on her bed advertising various new beam technology.</text>
+<text>You hear Leah reciting various villain monologues through her door. You decide not to disturb her lest she make you review and critique all of them.</text>
+<text>You ask Leah why she decided to join the rebellion. She tells you she originally wanted to have an Orchid ship but the sector was too peaceful to find a good nemesis.</text>
+<text>Leah claims she had no idea that the Rebellion hated aliens so much, as she apparently had been banned from all Rebellion meetings and discussions due to "excessive shouting"</text>
+<text>Leah complains about how the Rebels are the bad guys because she doesn't get to live out her movie fantasy of being an action hero and blowing an empire up dramatically</text>
+<text>Leah asks for feedback on her list of potential new nemesis', which includes Sylvan. You gently tell her she should probably just stick to fighting you.</text>
+<text>Leah whines about how you can't fight when you're working together on the same ship. You tell her that once the flagship is defeated, you'll fight her in a one on one duel.</text>
+<text>You find Leah breeding tiny terrestrial spiders in her room. She swears that they’ll eventually be combat ready if she trains them well enough.</text>
+<text>You question Leah on why she likes beams so much. Apparently she once saw a flagship get destroyed with two glaives in one shot and has been fascinated ever since.</text>
+<text>You ask Leah if she could try getting more personal warp-buttons for each of your crew members. She refuses saying that knowing you won't die removes all tension and makes you a 'certified beyatch'.</text>
+<text>Leah is busy experimenting with a laser pointer which she swears is the future of space-age combat.</text>
+<text>Leah is looking out of a ship window wistfully. You ask her what's wrong and she says she’s just practicing poses for if she ever needs to give a dramatic speech during your journey.</text>
+<text>Leah thinks you should invest more into beam technology. Obviously.</text>
+<text>Leah hands you a handwritten letter thanking you for being such a great nemesis. It's a sweet gesture but the tilde after your name concerns you a bit.</text>
+<text>Leah swears she'd sacrifice her life for the sake of the mission. You ask if she really means it and she says she’s not sure but she’s always wanted to say that.</text>
+<text>You ask Leah what it was like to defect to the Federation. She says one of her warps accidentally teleported her into a Federation barracks and she thought that was a good a time as any to swap sides.</text>
+<text>Leah blocks your path and says "We meet again Captain, for the last time!" before stuttering and admitting she hasn't written the rest of that speech.</text>
+<text>Leah politely asks that you turn don't use shields next time you fight.</text>
+<text>Leah has mixed feelings on the Flagship. On one hand, destroying it will save thousands, maybe even millions of lives, however on the other hand she's a massive fan of the ships paint-job.</text>
+<text>You stumble into Leah's room to find her playing Squad Fort 2 on her personal terminal. Of course she's a fucking spy main what else would she play?</text>
+</textList>
+
 </FTL>

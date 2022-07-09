@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--/////////////////////ENEMY SHIPS//////////////////////////-->
+<!--///////////////////// ENEMY SHIPS //////////////////////////-->
 
 <text name="text_TC_TRASH_COMPACTOR1_class">Trash Compactor</text>
 <text name="text_TC_TRASH_COMPACTOR2_class">Trash Compactor</text>
@@ -9,8 +9,17 @@
 <text name="text_TC_TRASH_COMPACTOR5_class">Trash Compactor</text>
 <text name="text_TC_TRASH_COMPACTOR6_class">Trash Compactor</text>
 <text name="text_TC_TRASH_MINER_class">Trash Miner</text>
+<text name="text_KIVIE_FIGHTER_class">Kivie Fighter</text>
+<text name="text_KIVIE_BOMBER_class">Kivie Bomber</text>
+<text name="text_KIVIE_BOMBER_SPIDER_class">Kivie Bomber</text>
+<text name="text_KIVIE_SCOUT_class">Kivie Scout</text>
+<text name="text_KIVIE_SCOUT_ENGI_class">Kivie Scout</text>
+<text name="text_KIVIE_FIGHTER_class">Kivie Fighter</text>
+<text name="text_KIVIE_FIGHTER_ENGI_class">Kivie Fighter</text>
+<text name="text_MU_ENGI_FIGHTER_KIVIE_class">Engi Fighter</text>
+<text name="text_KIVIE_AUTO_class">Kivie Auto</text>
 
-<!--/////////////////////SCRAPPER DREADNOUGHT//////////////////////////-->
+<!--///////////////////// SCRAPPER DREADNOUGHT //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_SCRAPPER_class">Scrapper Corvette</text>
 <text name="text_PLAYER_SHIP_SCRAPPER_name">Fiare Vechi</text>
@@ -23,14 +32,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_SCRAPPER_2_desc">This ship can board like no other - but in the haste to construct the gigantic teleporter room, the Scrappers have forgotten to install all of the weapon slots. Not as if you'll be using them, anyway.</text>
 <text name="ship_PLAYER_SHIP_SCRAPPER_2_unlock">Reach sector 5 with Type A.</text>
 
-<!--/////////////////////TCG//////////////////////////-->
+<!--///////////////////// TCG - DEPRECATED //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_class">Trash Compactor</text>
 <text name="text_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_name">Trash Compactor</text>
 <text name="text_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_desc">OMEGA Ship.</text>
 <text name="ship_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_unlock">Thats the neat part, you (probably) won't.</text>
 
-<!--/////////////////////KESTREL MINER//////////////////////////-->
+<!--///////////////////// KESTREL MINER //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_TRASH_MINER_class">Kestrel Miner</text>
 <text name="text_PLAYER_SHIP_TRASH_MINER_name">Garbage Compactor</text>
@@ -47,13 +56,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_TRASH_MINER_3_desc">Three certain RSA Grunts took over this ship, and decided to modify it a little. Kill your enemies in a blitz of fire with this helluva ship.</text>
 <text name="ship_PLAYER_SHIP_TRASH_MINER_3_unlock">Reach sector 5 with Type B or win with Type A.</text>
 
-<!--/////////////////////REACTIVE COMPACTOR//////////////////////////-->
+<!--///////////////////// REACTIVE COMPACTOR //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_TRASH_REACTOR_class">Customized Kestrel Miner</text>
 <text name="text_PLAYER_SHIP_TRASH_REACTOR_name">Reactive Compactor</text>
 <text name="text_PLAYER_SHIP_TRASH_REACTOR_desc">Rebuilt from the Garbage Compactor, and the remains of a Zoltan and Hektar ship - the Hektar ship was carrying very odd exoskeleton pieces - we could use them to our benefit. The paintjob was rushed but it looks the part.</text>
 <text name="ship_PLAYER_SHIP_TRASH_REACTOR_unlock">Win the Game with any layout of the Kestrel Miner.</text>
-<!--/////////////////////SDM//////////////////////////-->
+<!--///////////////////// SDM //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_SDM_class">Enforcer Dropship</text>
 <text name="text_PLAYER_SHIP_SDM_name">Size Doesn't Matter</text>
@@ -65,7 +74,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_SDM_2_desc">This is a completely functional version of the Kestrel Miner from the time it was actually used for mining - before TRACKER and the gang got it.</text>
 <text name="ship_PLAYER_SHIP_SDM_2_unlock">Reach sector 5 with Type A.</text>
 
-<!--/////////////////////ARMORED WASP//////////////////////////-->
+<!--///////////////////// ARMORED WASP //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_TC_ARMORED_WASP_class">"Gladiator" Corvette</text>
 <text name="text_PLAYER_SHIP_TC_ARMORED_WASP_name">Armored Wasp</text>
@@ -82,14 +91,22 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_TC_ARMORED_WASP_3_desc">This ship is a highly stealthy one - try not to get hit, though.</text>
 <text name="ship_PLAYER_SHIP_TC_ARMORED_WASP_3_unlock">Reach sector 5 with Type B or win with Type A.</text>
 
-<!--/////////////////////COROSSSUS//////////////////////////-->
+<!--///////////////////// COROSSSUS //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_COROSSUS_class">RSA Dropship</text>
 <text name="text_PLAYER_SHIP_COROSSUS_name">Corossus</text>
 <text name="text_PLAYER_SHIP_COROSSUS_desc">An old, rusting amalgmation constructed out of the remains of several other ships. The Reclaim and Salvage Association staffed it with a diverse crew, including a captured Scrapper.</text>
 <text name="ship_PLAYER_SHIP_COROSSUS_unlock">Win the Game with any layout of the "Gladiator" Corvette.</text>
 
-<!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
+<text name="text_PLAYER_SHIP_COROSSUS_2_class">RSA Scout</text>
+<text name="text_PLAYER_SHIP_COROSSUS_2_name">Wastebent</text>
+<text name="text_PLAYER_SHIP_COROSSUS_2_desc">Light and nimble, this RSA scout ship is dangerous but fragile. It has a vast arsenal of drones to rely on but no weapon system whatsoever.</text>
+
+<text name="text_PLAYER_SHIP_COROSSUS_3_class">RSA Bomber</text>
+<text name="text_PLAYER_SHIP_COROSSUS_3_name">Vulture Culture</text>
+<text name="text_PLAYER_SHIP_COROSSUS_3_desc">The intimidating shadow of this junker is enough to instill fear in any renegade - the main fighting force of the RSA is comprised of ships just like this one.</text>
+
+<!--///////////////////// RENT-A-FLAGSHIP //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_SLUGTON_class">Rent-a-Flagship</text>
 <text name="text_PLAYER_SHIP_SLUGTON_name">RENT-A-FLAGSHIP</text>
@@ -106,7 +123,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_SLUGTON_3_desc">Why did Cheese remake this ship and bring it into the Federation Fleet? That's a good question!</text>
 <text name="ship_PLAYER_SHIP_SLUGTON_3_unlock">Reach sector 5 with Type B or win with Type A.</text>
 
-<!--/////////////////////EXTRA ELITE SHIP PACK//////////////////////////-->
+<!--///////////////////// EXTRA ELITE SHIP PACK //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_EXTRAELITE_class">Elite Custom Renegade</text>
 <text name="text_PLAYER_SHIP_EXTRAELITE_name">The Neapolitan</text>
@@ -118,11 +135,66 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_EXTRAELITE_2_desc">The ultimate ship for assassination hits - destroy your multiversal enemies with the varied arsenal on this ship. A true bounty hunter, loyal to whoemever pays the best.</text>
 <text name="ship_PLAYER_SHIP_EXTRAELITE_2_unlock">Win the game with Type A.</text>
 
+<!--//////////////////////// AVALI STUFF //////////////////////////////-->
 
-<!--////////////////////////AVALI STUFF//////////////////////////////-->
 <text name="ship_PLAYER_SHIP_AVALI_unlock">if this cruiser is locked your game sucks and is bad and also report it as a bug please</text>
 <text name="ship_PLAYER_SHIP_AVALI_2_unlock">Get to Sector 5 with the Avali Cruiser Type A to unlock this ship.</text>
 <text name="ship_PLAYER_SHIP_AVALI_3_unlock">Get to Sector 5 with the Avali Cruiser Type B or beat the game with the Avali Cruiser Type A to unlock this ship.</text>
 <text name="text_PLAYER_SHIP_AVALI_SLOT2_desc">birdy boarding</text>
 <text name="text_PLAYER_SHIP_AVALI_SLOT2_name">Accipitridae</text>
 <text name="text_PLAYER_SHIP_AVALI_SLOT2_class">Avali Cruiser</text>
+
+<!--//////////////////////// FSF STUFF //////////////////////////////-->
+
+<text name="text_PLAYER_SHIP_BLACKOPS_class">Black Ops</text>
+<text name="text_PLAYER_SHIP_BLACKOPS_name">Sicario</text>
+<text name="text_PLAYER_SHIP_BLACKOPS_desc">Specializing in swiftly eliminating the enemy crew, this silent, nimble elite vessel is as deadly as it is fragile.</text>
+<text name="text_PLAYER_SHIP_HARD_BLACKOPS_2_class">Black Ops</text>
+<text name="text_PLAYER_SHIP_HARD_name">Skorzeny</text>
+<text name="text_PLAYER_SHIP_HARD_desc">This nimble ship relies on its cloaking to evade retaliation while its crew boards the enemy ship.</text>
+<text name="text_PLAYER_SHIP_HARD_BLACKOPS_3_class">Black Ops</text>
+<text name="text_PLAYER_SHIP_HARD_name">Gungnir</text>
+<text name="text__desc">This fragile ship relies on its devastating weaponry to destroy enemy vessels, but requires cloaking to spool its guns to maximum power.</text>
+
+<!--//////////////////////// FEDERATION CARRIER //////////////////////////////-->
+
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_class">Federation Carrier</text>
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_name">Star Sovereign</text>
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_desc">This is a highly drone-focused Federation Fleet Support carrier - it's got some pretty old spec equipment, but it'll do...</text>
+
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_2_class">Federation Carrier</text>
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_2_name">The Scylla</text>
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_2_desc">This ship was modified by a militia group and features a chain ion artillery as well as a minigun.</text>
+
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_3_class">Federation Carrier</text>
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_3_name">The Interceptor</text>
+<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_3_desc">This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured by the Federation and quickly refit to get back into battle.</text>
+
+<!--//////////////////////// MILSPEC //////////////////////////////-->
+
+<text name="text_PLAYER_SHIP_TC_MILSPEC_class">Milspec Kleptocracy Cruiser</text>
+<text name="text_PLAYER_SHIP_TC_MILSPEC_name">MILSURP</text>
+<text name="text_PLAYER_SHIP_TC_MILSPEC_desc">This ship was made by a bunch of Slugs who are fans of the Federation - they were banished from the Kleptocracy but managed to keep their ship.</text>
+
+<text name="text_PLAYER_SHIP_TC_MILSPEC_class">Milspec Crystal Cruiser</text>
+<text name="text_PLAYER_SHIP_TC_MILSPEC_name">Outpost 21</text>
+<text name="text_PLAYER_SHIP_TC_MILSPEC_desc">This Cruiser was carrying an alien specimen found on a derelict base - the alien specimen has escaped, much to the extreme paranoia of the crew.</text>
+
+<!--//////////////////////// LEAH GAMING //////////////////////////////-->
+
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_class">Leah's Cruiser</text>
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_name">The Beam Master</text>
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_desc">The ship of the Infamous Beam Master, better known as Leo... or, wait was it Liam? Leviticus? Lizzy???</text>
+
+
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_2_desc">With a permenant mind control rig installed on the Beam Master's ship, her ship was quickly painted in federation colours and turned into a multiverse capable ship</text>
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_2_name">The Rulebook</text>
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_2_class">Leah's Cruiser</text>
+
+<text name="ship_PLAYER_SHIP_NEWTONBEAMA_2_unlock">Beat the game with Leah's Cruiser Type A to unlock this ship.</text>
+
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_3_desc">After careful thought, Leah realized her old ship wasn't ready for the challenges of the multiverse. However, in her haste to upgrade her ship, she forgot to make it compatible with shields. Oops.</text>
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_3_name">The Semi-Competent</text>
+<text name="text_PLAYER_SHIP_NEWTONBEAMA_3_class">Leah's Cruiser</text>
+
+<text name="ship_PLAYER_SHIP_NEWTONBEAMA_3_unlock">Consult the advice of a certain beam afficionado about a certain artifact to unlock this ship.</text>

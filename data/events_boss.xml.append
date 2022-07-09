@@ -16,7 +16,7 @@
 				<mod-append:choice hidden="true" max_group="1" req="SHIP_TRASH" blue="false">
 					<text>Contact Federation command.</text>
 					<event>
-						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "I've been waiting for someone to come and clean my private quarters- what, you're a military ship. You don't look the part, although I'm guessing that's a camouflage tactic."</text>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "I've been waiting for someone to come and clean the military shipyard- what, you're a military ship? You don't look the part, although I'm guessing that's a camouflage tactic."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
@@ -36,7 +36,7 @@
 				<mod-append:choice hidden="true" max_group="1" req="SHIP_ARMOREDWASP" blue="false">
 					<text>Contact Federation command.</text>
 					<event>
-						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "That's an... uh... slug... Lanius... Mantis... What is that ship? ...Well, hopefully, this ship will be the end of the Rebellion."</text>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "That's an... uh... slug... Lanius... Mantis... What is that ship? ...Well, hopefully, this ship will be the end of the Rebellion... in this Universe, at least."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
@@ -53,7 +53,6 @@
 							</choice>
 					</event>
 				</mod-append:choice>
-				<!--//////////////AVALI SHIP THINGY, ACTUALLY ADD SOMETHING HERE//////////////-->
 				<mod-append:choice hidden="true" max_group="1" req="SHIP_AVALI" blue="false">
 				<text>Contact Federation command.</text>
 				<event>
@@ -63,7 +62,17 @@
 						<event load="LAST_STAND_START_2"/>
 					</choice>
 				</event>
-			</mod-append:choice>
+				</mod-append:choice>
+				<mod-append:choice hidden="true" max_group="1" req="SHIP_MILITARY_FEDERATION" blue="false">
+					<text>Contact Federation command.</text>
+					<event>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "Finally, we've got some pretty heavy Federation backup. Find the Rebel Flagship and get rid of it - your specialized military ship should make short work of it."</text>
+						<choice hidden="true">
+							<text>Continue...</text>
+							<event load="LAST_STAND_START_2"/>
+						</choice>
+					</event>
+					</mod-append:choice>
 			</mod:findLike>
 		</mod:findLike>
 	</mod:findName>
