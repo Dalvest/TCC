@@ -952,6 +952,102 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_MILITIA_1">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>heheha</title>
+	<short>bop</short>
+	<tip>tip_flak</tip>
+	<desc>scababap</desc>
+	<tooltip>rodlfle</tooltip>
+	<radius>45</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>100</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>1</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="3" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_militia_1</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_MILITIA_2">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>sjk</title>
+	<short>spej</short>
+	<tip>tip_flak</tip>
+	<desc>Voici l'histoire de la trois petite cochon</desc>
+	<tooltip>Je ne suis pas fou fou fou</tooltip>
+	<radius>50</radius>
+	<damage>1</damage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>13</cooldown>
+	<power>3</power>
+	<cost>140</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>4</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">debris_large</projectile>
+		<projectile count="3" fake="false">debris_med</projectile>
+		<projectile count="6" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_militia_2</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <!--//////////////////////////////////////////////LASER/////////////////////////////////////////////-->
 
 <weaponBlueprint name="TC_LASER_MARKSMAN">
@@ -1083,8 +1179,8 @@
 
 <weaponBlueprint name="TC_BURST_1">
 	<type>LASER</type>
-	<title>hohoho</title>
-	<short>hohoasdr</short>
+	<title>Militia Burst Laser Epsilon</title>
+	<short>Burst Laser E</short>
 	<tip>tip_laser</tip>
 	<desc>i hate you</desc>
 	<tooltip>jk im sorry [3</tooltip>
@@ -1157,102 +1253,6 @@
 	</missSounds>
 	<weaponArt>tc_burst_1</weaponArt>
 	<iconImage>laser</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="TC_MILITIA_1">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<drone_targetable>1</drone_targetable>
-	<title>heheha</title>
-	<short>bop</short>
-	<tip>tip_flak</tip>
-	<desc>scababap</desc>
-	<tooltip>rodlfle</tooltip>
-	<radius>45</radius>
-	<damage>1</damage>
-	<shots>1</shots>
-	<sp>1</sp>
-	<spin>720</spin>
-	<fireChance>0</fireChance>
-	<breachChance>2</breachChance>
-	<cooldown>10</cooldown>
-	<power>2</power>
-	<cost>100</cost>
-	<bp>10</bp>
-	<speed>26</speed>
-	<rarity>1</rarity>
-	<projectiles>
-		<projectile count="1" fake="false">debris_large</projectile>
-		<projectile count="2" fake="false">debris_med</projectile>
-		<projectile count="3" fake="true">debris_small</projectile>
-	</projectiles>
-	<launchSounds>
-		<sound>flak</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>flakImpact1</sound>
-		<sound>flakImpact2</sound>
-		<sound>flakImpact3</sound>
-		<sound>flakImpact4</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>tc_militia_1</weaponArt>
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="TC_MILITIA_2">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<drone_targetable>1</drone_targetable>
-	<title>sjk</title>
-	<short>spej</short>
-	<tip>tip_flak</tip>
-	<desc>Voici l'histoire de la trois petite cochon</desc>
-	<tooltip>Je ne suis pas fou fou fou</tooltip>
-	<radius>50</radius>
-	<damage>1</damage>
-	<spin>720</spin>
-	<shots>1</shots>
-	<sp>1</sp>
-	<fireChance>0</fireChance>
-	<breachChance>2</breachChance>
-	<cooldown>13</cooldown>
-	<power>3</power>
-	<cost>140</cost>
-	<bp>10</bp>
-	<speed>26</speed>
-	<rarity>4</rarity>
-	<projectiles>
-		<projectile count="2" fake="false">debris_large</projectile>
-		<projectile count="3" fake="false">debris_med</projectile>
-		<projectile count="6" fake="true">debris_small</projectile>
-	</projectiles>
-	<launchSounds>
-		<sound>flak</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>flakImpact1</sound>
-		<sound>flakImpact2</sound>
-		<sound>flakImpact3</sound>
-		<sound>flakImpact4</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>tc_militia_2</weaponArt>
-	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
 <!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
@@ -1518,16 +1518,16 @@
 <weaponBlueprint name="TC_PULSAR">
 	<type>LASER</type>
 	<flavorType>Ion Blast</flavorType>
-	<title>hohoho</title>
-	<short>hoehoehoe</short>
+	<title>Ion Pulsar Barrage</title>
+	<short>Pulsar</short>
 	<tip>tip_ion</tip>
 	<locked>1</locked>
-	<desc>aaaaaaaaaaaahahahaha</desc>
-	<tooltip>Never Gonna Give You Up</tooltip>
+	<desc>Launches 4 ionized projectiles able to suppress multiple layers of shields as well as keeping systems offline.</desc>
+	<tooltip>4 shot 1 ion damage weapon with 40 projectile speed.</tooltip>
 	<damage>0</damage>
 	<spin>720</spin>
 	<ion>1</ion>
-	<speed>30</speed>
+	<speed>40</speed>
 	<shots>4</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
@@ -1535,7 +1535,7 @@
 	<stunChance>1</stunChance>
 	<cooldown>21</cooldown>
 	<power>1</power>
-	<cost>160</cost>
+	<cost>110</cost>
 	<bp>3</bp>
 	<rarity>0</rarity>
 	<image>ion_barrage</image>
@@ -1565,15 +1565,15 @@
 <weaponBlueprint name="TC_PULSAR_SMOL">
 	<type>LASER</type>
 	<flavorType>Ion Blast</flavorType>
-	<title>Simple Ion</title>
-	<short>Simple Ion</short>
+	<title>Rebel Ion</title>
+	<short>Rebel Ion</short>
 	<tip>tip_ion</tip>
 	<locked>1</locked>
-	<desc>A simple ion weapon which can temporarily take down a shield barrier.</desc>
+	<desc>A simple ion weapon which can temporarily take down a shield barrier - this is a rebel version of it, featuring more ion damage.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
 	<damage>0</damage>
 	<spin>720</spin>
-	<ion>1</ion>
+	<ion>2</ion>
 	<speed>30</speed>
 	<shots>1</shots>
 	<sp>0</sp>
@@ -1582,7 +1582,7 @@
 	<stunChance>1</stunChance>
 	<cooldown>9</cooldown>
 	<power>1</power>
-	<cost>40</cost>
+	<cost>50</cost>
 	<bp>3</bp>
 	<rarity>0</rarity>
 	<image>ion_barrage</image>
@@ -2129,7 +2129,7 @@
 	<type>LASER</type>
 	<title>Militia Tagger</title>
 	<short>Tagger</short>
-	<desc>This is one of the most fielded weapons by the [NOT RSA], owing to its efficacy and simplicity. It works beautifully and that's about it.</desc>
+	<desc>The Militia made their own version of the Tagger - autocannons must be going out of fashion because this is a Laser weapon.</desc>
 	<tooltip>2 shot 1 damage weapon, 10% chance to cause a breach, pierces one shield bubble.</tooltip>
 	<damage>1</damage>
 	<shots>2</shots>
@@ -2164,6 +2164,7 @@
 </weaponBlueprint>
 
 <!--////////TEAR GAS////////-->
+
 <weaponBlueprint name="TC_TEAR_GAS">
 	<type>MISSILES</type>
 	<flavorType>Militia Tech</flavorType>
@@ -3818,72 +3819,66 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////////////////////SIZE DOESN'T MATTER//////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_SDM" layout="player_ship_sdm" img="player_ship_sdm">
-	<class>Transport Dropship</class>
-	<name>Size Doesn't Matter</name>
-	<desc>This small enforcer dropship was once a Federation Kestrel - then it became a Mercenary dropship, and now... it's in the hands of the Federation once again. After all, allegiance doesn't matter. It's who you use it against.</desc>
-	<unlock id="ship_PLAYER_SHIP_SDM_unlock"/>
+	<class>Converted Civilian Cruiser</class>
+	<name>Size Doesn't Matteer</name>
+	<desc>We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues.</desc>
 	<systemList>
-		<cloaking power="1" room="8" start="false" img="room_cloaking_2_1x1" />
-		<clonebay power="2" room="1" start="true">
+		<cloaking power="1" room="12" start="false" img="room_cloaking_4" />
+		<clonebay power="1" room="0" start="true">
 			<slot>
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<drones power="1" max="8" room="3" start="true" img="room_drones_14_medevac" />
-		<engines power="1" max="8" room="5" start="true" img="room_engines_dromaius">
+		<doors power="1" room="1" start="true" img="room_doors">
 			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</engines>
-		<hacking power="1" room="9" start="true" img="room_hacking_spot" />
-		<medbay power="2" room="1" start="false" img="room_medbay">
-			<slot>
+				<direction>up</direction>
 				<number>1</number>
 			</slot>
-		</medbay>
-		<mind power="1" room="10" start="false" img="room_mind_1x1" />
-		<oxygen power="1" room="2" start="true" img="room_oxygen" />
-		<pilot power="1" room="7" start="true" img="room_pilot_2">
+		</doors>
+		<drones power="1" max="8" room="11" start="false" img="room_drones_bodyhorror" />
+		<engines power="1" max="8" room="5" start="true" img="room_engines_8">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="false" img="room_hacking_6" />
+		<mind power="1" room="9" start="false" img="room_mind_1x1" />
+		<oxygen power="1" room="10" start="true" img="room_oxygen_FM_2" />
+		<pilot power="1" room="6" start="true" img="room_pilot_fratricide">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
 			</slot>
 		</pilot>
-		<sensors power="2" room="11" start="true" img="room_sensors_3-1x1">
-			<slot>
-				<direction>right</direction>
-				<number>0</number>
-			</slot>
-		</sensors>
-		<shields power="2" max="8" room="6" start="false" img="room_shields_11">
+		<sensors power="1" room="2" start="false" img="room_sensors">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
 			</slot>
-		</shields>
-		<teleporter power="2" room="0" start="true" />
-		<weapons power="3" max="8" room="4" start="true" img="room_weapons_ogre_long">
+		</sensors>
+		<shields power="2" max="8" room="3" start="true" img="room_shields_TCC">
 			<slot>
-				<direction>right</direction>
-				<number>1</number>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="2" room="4" start="true" />
+		<weapons power="1" max="8" room="7" start="true" img="room_weapons_10_2x1">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
 			</slot>
 		</weapons>
 	</systemList>
-	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>2</droneSlots>
-	<weaponList missiles="23" count="2">
-		<weapon name="ION_CHARGER_1" />
-		<weapon name="TC_SHOTGUN_BATTERY" />
-	</weaponList>
-	<droneList drones="7" count="2">
-		<drone name="REPAIR" />
-	</droneList>
+	<weaponList missiles="3" count="2" />
+	<droneList drones="5" count="2" />
 	<health amount="20" />
 	<maxPower amount="6" />
+	<aug name="EX_FTL_BOOSTER" />
 	<aug name="CREW_FIREARMS" />
-	<aug name="EXTRA_PREP" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_SDM_2" layout="player_ship_sdm_2" img="player_ship_sdm_2">
@@ -6387,7 +6382,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <shipBlueprint name="PLAYER_SHIP_TC_MILSPEC_2" layout="player_ship_tc_milspec_2" img="player_ship_tc_milspec_2">
 	<class>Milspec Crystal Cruiser</class>
-	<name>Outpost 21</name>
+	<name>'Outpost 31'</name>
 	<desc>This Cruiser was carrying an alien specimen found on a derelict base - the alien specimen has escaped, much to the extreme paranoia of the crew.</desc>
 	<systemList>
 		<artillery power="1" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
