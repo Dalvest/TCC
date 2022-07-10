@@ -2810,6 +2810,15 @@
 	<bp>0</bp>
 </augBlueprint>
 
+<augBlueprint name="SHIP_ROBOTTOS">
+	<title>Robotto Cruiser</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<bp>0</bp>
+</augBlueprint>
+
 <augBlueprint name="SHIP_RSA">
 	<title>RSA Cruiser</title>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
@@ -6658,6 +6667,78 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="CUSTOM_CRYSTAL" />
 </shipBlueprint>
 
+<!--/////// ROBOTTOS ARS+ SHIPS //////-->
+
+<shipBlueprint name="PLAYER_SHIP_ROBOTTO" layout="ars_tanker" img="ars_tanker">
+	<class>Robotto Fuel Tanker</class>
+	<name>The Tanker</name>
+	<desc>This is a fragile but surprsingly well-armed tanker type ship staffed entirely by the Sentient race of robots - also known as Robottos and not to be confused with Engis.</desc>
+	<systemList>
+		<battery power="1" room="6" start="false" img="room_battery" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking" />
+		<doors power="2" room="10" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="8" start="true" img="room_drones" />
+		<engines power="3" room="1" start="true" img="room_engines_nightowl">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="12" start="false" img="room_hacking" />
+		<medbay power="1" room="5" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="11" start="false" img="room_mind_1x1" />
+		<oxygen power="1" room="13" start="true" img="room_oxygen" />
+		<pilot power="1" room="0" start="true" img="room_pilot_7">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="9" start="true" img="room_sensors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="2" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="false" />
+		<weapons power="1" room="7" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="3" count="3">
+		<weapon name="TC_BURST_1" />
+	</weaponList>
+	<droneList drones="15" count="3">
+		<drone name="BATTLETOG_BOARDER" />
+	</droneList>
+	<health amount="25" />
+	<maxPower amount="11" />
+	<crewCount amount="3" class="robottos" />
+	<crewCount amount="1" class="robottos_machinist" />
+	<crewCount amount="1" class="robottos_gunner" />
+	<aug name="CRATE_FUEL" />
+</shipBlueprint>
+
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           JULK'S EXPANDCODE
@@ -6896,7 +6977,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>80 HP owing to their frail and simple construction</power>
 		<power>x2 repair speed, x0.7 combat damage</power>
 		<power>Unable to suffocate, completely fireproof</power>
-		<power>Provides a power bar to the current system</power>
 	</powerList>
 </crewBlueprint>
 
