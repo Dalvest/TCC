@@ -277,7 +277,7 @@
 		<!--///////ARMORED WASP//////-->
 
 		<mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
-			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_COROSSUS</arrow>
+			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_CORROSUS</arrow>
 			<unlock variant="a" silent="false">
 				<type>2</type>
 				<shipReq>PLAYER_SHIP_SDM</shipReq>
@@ -335,9 +335,9 @@
 			</crew>
 		</mod-append:customShip>
 
-		<!--///////COROSSUS//////-->
+		<!--///////CORROSUS//////-->
 
-		<mod-append:ship name="PLAYER_SHIP_COROSSUS" b="true" c="true" unused="true">
+		<mod-append:ship name="PLAYER_SHIP_CORROSUS" b="true" c="true" unused="true">
 			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_SLUGTON</arrow>
 			<unlock variant="a" silent="false">
 				<type>2</type>
@@ -354,19 +354,19 @@
 
 		</mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_COROSSUS">
+		<mod-append:customShip name="PLAYER_SHIP_CORROSUS">
 			<crewLimit>12</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_RSA</hiddenAug>
 		</mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_COROSSUS_2">
+		<mod-append:customShip name="PLAYER_SHIP_CORROSUS_2">
 			<crewLimit>6</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_RSA</hiddenAug>
 		</mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_COROSSUS_3">
+		<mod-append:customShip name="PLAYER_SHIP_CORROSUS_3">
 			<crewLimit>10</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_RSA</hiddenAug>
@@ -378,7 +378,7 @@
 		<mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
 			<unlock variant="a" silent="false">
 				<type>2</type>
-				<shipReq>PLAYER_SHIP_COROSSUS</shipReq>
+				<shipReq>PLAYER_SHIP_CORROSUS</shipReq>
 			</unlock>
 			<unlock variant="b" silent="false">
 				<type>1</type>
@@ -445,7 +445,7 @@
 					<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
 					<ship>PLAYER_SHIP_SDM</ship>
 					<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
-					<ship>PLAYER_SHIP_COROSSUS</ship>
+					<ship>PLAYER_SHIP_CORROSUS</ship>
 					<ship>PLAYER_SHIP_SLUGTON</ship>
 		    </otherUnlocks>
     	</unlock>
@@ -553,7 +553,7 @@
 					<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
 					<ship>PLAYER_SHIP_SDM</ship>
 					<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
-					<ship>PLAYER_SHIP_COROSSUS</ship>
+					<ship>PLAYER_SHIP_CORROSUS</ship>
 					<ship>PLAYER_SHIP_SLUGTON</ship>
 		    </otherUnlocks>
     	</unlock>
@@ -843,7 +843,7 @@
 			<mod-append:ship>PLAYER_SHIP_TRASH_REACTOR</mod-append:ship> <!--Reactive Compactor-->
 			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship> <!--SDM-->
 			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship> <!--Armored Wasp-->
-			<mod-append:ship>PLAYER_SHIP_COROSSUS</mod-append:ship> <!--CorosSUS-->
+			<mod-append:ship>PLAYER_SHIP_CORROSUS</mod-append:ship> <!--CorroSUS-->
 			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship> <!--RENT-A-FLAGSHIP-->
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->

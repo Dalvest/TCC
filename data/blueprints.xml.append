@@ -2129,18 +2129,19 @@
 	<type>LASER</type>
 	<title>Militia Tagger</title>
 	<short>Tagger</short>
-	<desc>The Militia made their own version of the Tagger - autocannons must be going out of fashion because this is a Laser weapon.</desc>
-	<tooltip>2 shot 1 damage weapon, 10% chance to cause a breach, pierces one shield bubble.</tooltip>
-	<damage>1</damage>
+	<desc>The Militia made their own version of the Tagger - autocannons must be going out of fashion because this is a Laser weapon... although this one doesn't do any hull damage.</desc>
+	<tooltip>2 shot high system damage weapon, 10% chance to cause a breach, pierces one shield bubble.</tooltip>
+	<damage>0</damage>
+	<sysDamage>3</sysDamage>
 	<shots>2</shots>
 	<sp>1</sp>
 	<radius>20</radius>
 	<breachChance>1</breachChance>
-	<cooldown>14</cooldown>
+	<cooldown>10</cooldown>
 	<power>2</power>
 	<bp>4</bp>
-	<rarity>4</rarity>
-	<cost>60</cost>
+	<rarity>5</rarity>
+	<cost>50</cost>
 	<image>GB_shot_light</image>
 	<launchSounds>
 		<sound>GB_cannonLight1</sound>
@@ -4182,13 +4183,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 
-<!--/////////////////////COROSSUS/////////////////////////-->
+<!--/////////////////////CORROSUS/////////////////////////-->
 
-<shipBlueprint name="PLAYER_SHIP_COROSSUS" layout="tc_corrosus" img="tc_corrosus">
+<shipBlueprint name="PLAYER_SHIP_CORROSUS" layout="tc_corrosus" img="tc_corrosus">
 	<class>RSA Dropship</class>
-	<name>Corossus</name>
+	<name>Corrosus</name>
 	<desc>An old, rusting amalgmation constructed out of the remains of several other ships. The Reclaim and Salvage Association staffed it with a diverse crew, including a captured Scrapper.</desc>
-	<unlock id="ship_PLAYER_SHIP_COROSSUS_unlock"/>
+	<unlock id="ship_PLAYER_SHIP_CORROSUS_unlock"/>
 	<systemList>
 		<artillery power="1" room="10" start="true" weapon="TC_RESCRAPFLAK" img="room_artillery" />
 		<battery power="1" max="2" room="24" start="false" img="room_battery_nightowl" />
@@ -4261,7 +4262,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="SALVAGE_ARRAY" />
 </shipBlueprint>
 
-<shipBlueprint name="PLAYER_SHIP_COROSSUS_2" layout="tc_corrosus_2" img="tc_corrosus_2">
+<shipBlueprint name="PLAYER_SHIP_CORROSUS_2" layout="tc_corrosus_2" img="tc_corrosus_2">
 	<class>RSA Scout</class>
 	<name>Wastebent</name>
 	<desc>Light and nimble, this RSA scout ship is dangerous but fragile. It has a vast arsenal of drones to rely on but no weapon system whatsoever.</desc>
@@ -4321,76 +4322,73 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="CREW_OXYGEN" />
 </shipBlueprint>
 
-<shipBlueprint name="PLAYER_SHIP_COROSSUS_3" layout="tc_corossus_3" img="tc_corossus_3">
-	<class>RSA Bomber</class>
+<shipBlueprint name="PLAYER_SHIP_CORROSUS_3" layout="tc_corrosus_3" img="tc_corrosus_3">
+	<class>RSA Fleet Support</class>
 	<name>Vulture Culture</name>
-	<desc>The intimidating shadow of this junker is enough to instill fear in any renegade - the main fighting force of the RSA is comprised of ships just like this one.</desc>
+	<desc>This model of Bomber-type ship is one of the most common ships in the RECLAIM and SALVAGE ASSOCIATION; although almost none of those ships look the exact same, given the... rough hull construction.</desc>
 	<systemList>
-		<artillery power="2" room="10" start="true" weapon="TC_MFK_BATTERY" img="room_artillery10" />
-		<battery power="1" room="13" start="true" img="room_battery_2_1x1" />
-		<cloaking power="1" room="5" start="false" img="room_cloaking" />
-		<clonebay power="1" room="7" start="true">
-			<slot>
-				<number>1</number>
-			</slot>
-		</clonebay>
-		<doors power="1" room="2" start="true" img="room_doors">
+		<artillery power="2" room="5" start="true" weapon="IONARTILLERY" img="room_artillery" />
+		<battery power="1" room="6" start="false" img="room_battery" />
+		<cloaking power="1" room="4" start="false" img="room_cloaking" />
+		<doors power="1" room="12" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" max="8" room="12" start="false" img="room_drones_14" />
-		<engines power="2" max="8" room="6" start="true" img="room_engines_11_modified">
+		<drones power="1" room="13" start="false" img="room_drones" />
+		<engines power="2" room="3" start="true" img="room_engines">
 			<slot>
-				<direction>right</direction>
-				<number>1</number>
+				<direction>down</direction>
+				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="8" start="false" img="room_hacking_7" />
-		<mind power="1" room="14" start="false" img="room_artillery_invis_wide" />
-		<oxygen power="1" room="1" start="true" img="room_oxygen_9" />
-		<pilot power="2" room="3" start="true" img="room_pilot_2">
+		<hacking power="1" room="11" start="false" img="room_hacking" />
+		<medbay power="1" room="8" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="15" start="false" img="room_mind_11" />
+		<oxygen power="1" room="7" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2_thrusters">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="0" start="true" img="room_sensors">
+		<sensors power="1" room="14" start="false" img="room_sensors">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="9" start="true" img="room_shields">
+		<shields power="2" room="2" start="true" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="4" start="true" />
-		<weapons power="2" max="8" room="11" start="true" img="room_weapons_11">
+		<teleporter power="1" room="1" start="true" />
+		<weapons power="3" room="9" start="true" img="room_weapons">
 			<slot>
-				<direction>right</direction>
+				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</weapons>
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="4" count="4">
+	<weaponList missiles="16" count="4">
+		<weapon name="MILITIA_TAGGER" />
 		<weapon name="TCC_DEBUFF_SLOW_1" />
-		<weapon name="RSA_MINICANNON" />
 	</weaponList>
-	<droneList drones="5" count="4" />
+	<droneList drones="4" count="4" />
 	<health amount="30" />
 	<maxPower amount="6" />
 	<crewCount amount="1" class="robottos" />
-	<crewCount amount="1" class="rsa_technician" />
 	<crewCount amount="1" class="kiviekith" />
 	<crewCount amount="1" class="mantis_rsa" />
-	<aug name="RECYCLER" />
-	<aug name="TELEPORT_HEAL" />
 </shipBlueprint>
 
 <!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
