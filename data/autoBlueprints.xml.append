@@ -16,18 +16,6 @@
 	<name>scrapper_defender</name>
 </blueprintList>
 
-<blueprintList name="LIST_CREW_LEAH">
-	<name>unique_leah_mfk</name>
-</blueprintList>
-
-
-<blueprintList name="LIST_CREW_ROBOTTOS">
-	<name>robottos</name>
-	<name>robottos_gunner</name>
-	<name>robottos_machinist</name>
-	<name>robottos_researcher</name>
-</blueprintList>
-
 <blueprintList name="LIST_SCRAPPER_TIER_2">
 	<name>scrapper_soldier</name>
 	<name>scrapper_engineer</name>
@@ -59,13 +47,6 @@
 	<name>avali</name>
 </blueprintList>
 
-<blueprintList name="LIST_CREW_AVALI">
-	<name>avali</name>
-</blueprintList>
-
-<blueprintList name="LIST_CREW_KIVIE">
-	<name>kiviekith</name>
-</blueprintList>
 
 <blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH"> <!--just a list of the weapons ariadne can get you-->
 	<name>LIST_WEAPONS_LOSTSUN</name>
@@ -169,11 +150,39 @@
 	<name>protogen_tracker</name>
 	<name>primagen_raptor</name>
 	<name>clonefail_lancer</name>
+	<name>protogen_space_scavenger</name>
 </blueprintList>
 
 <!--/////// SERGALS //////-->
 <blueprintList name="LIST_CREW_SERGAL">
 	<name>sergal_cheese</name>
+</blueprintList>
+
+<!--/////// AVALI //////-->
+
+<blueprintList name="LIST_CREW_AVALI">
+	<name>avali</name>
+</blueprintList>
+
+<!--/////// KIVIES //////-->
+
+<blueprintList name="LIST_CREW_KIVIE">
+	<name>kiviekith</name>
+</blueprintList>
+
+<!--/////// LEAH //////-->
+
+<blueprintList name="LIST_CREW_LEAH">
+	<name>unique_leah_mfk</name>
+</blueprintList>
+
+<!--/////// ROBOTTOS //////-->
+
+<blueprintList name="LIST_CREW_ROBOTTOS">
+	<name>robottos</name>
+	<name>robottos_gunner</name>
+	<name>robottos_machinist</name>
+	<name>robottos_researcher</name>
 </blueprintList>
 
 <!--/////// LANIUS //////-->
@@ -188,7 +197,8 @@
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 </mod:findName>
 
-<!--//////// KORA /////////-->
+<!--//////// HUMANS /////////-->
+
 <mod:findName type="blueprintList" name="LIST_CHECKCREW_HUMAN">
 	<mod-append:name>kora</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
@@ -259,6 +269,21 @@
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
 	<mod-append:name>TC_LASER_CHARGER</mod-append:name>
 	<mod-append:name>TC_MINIGUN_MK1</mod-append:name>
+	<mod-append:name>TC_MINIGUN_MK2</mod-append:name>
+	<mod-append:name>TC_MINIGUN_MK3</mod-append:name>
+	<mod-append:name>TC_BURST_1</mod-append:name>
+	<mod-append:name>TC_BURST_2</mod-append:name>
+	<mod-append:name>TC_MILITIA_1</mod-append:name>
+	<mod-append:name>TC_MILITIA_2</mod-append:name>
+	<mod-append:name>TC_VULCAN_CANNON</mod-append:name>
+	<mod-append:name>NOVA_MK1</mod-append:name>
+	<mod-append:name>NOVA_MK2</mod-append:name>
+	<mod-append:name>NOVA_MK3</mod-append:name>
+	<mod-append:name>SUPERNOVA_CATALYZER</mod-append:name>
+	<mod-append:name>CATALYZER</mod-append:name>
+	<mod-append:name>MILITIA_TAGGER</mod-append:name>
+	<mod-append:name>TC_ESKA</mod-append:name>
+	<mod-append:name>TC_TONFA</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -297,6 +322,21 @@
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
 	<mod-append:name>TC_LASER_CHARGER</mod-append:name>
 	<mod-append:name>TC_MINIGUN_MK1</mod-append:name>
+	<mod-append:name>TC_MINIGUN_MK2</mod-append:name>
+	<mod-append:name>TC_MINIGUN_MK3</mod-append:name>
+	<mod-append:name>TC_BURST_1</mod-append:name>
+	<mod-append:name>TC_BURST_2</mod-append:name>
+	<mod-append:name>TC_MILITIA_1</mod-append:name>
+	<mod-append:name>TC_MILITIA_2</mod-append:name>
+	<mod-append:name>TC_VULCAN_CANNON</mod-append:name>
+	<mod-append:name>NOVA_MK1</mod-append:name>
+	<mod-append:name>NOVA_MK2</mod-append:name>
+	<mod-append:name>NOVA_MK3</mod-append:name>
+	<mod-append:name>SUPERNOVA_CATALYZER</mod-append:name>
+	<mod-append:name>CATALYZER</mod-append:name>
+	<mod-append:name>MILITIA_TAGGER</mod-append:name>
+	<mod-append:name>TC_ESKA</mod-append:name>
+	<mod-append:name>TC_TONFA</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
@@ -308,8 +348,9 @@
 	<mod-append:name>TC_SHOTGUN_HELL</mod-append:name>
 	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
 	<mod-append:name>TC_RAPTORS_OWN</mod-append:name>
-	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
 	<mod-append:name>TC_SCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_MILITIA_1</mod-append:name>
+	<mod-append:name>TC_MILITIA_2</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
