@@ -683,6 +683,125 @@
 	</event>
 	</FTL>
 
+
+	<event name="AUTOMATED_QUARTERMASTER_CHOICE">
+		<text>Choose weapon:</text>
+	
+		<choice hidden="false" blue="false">
+			<text>Un</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Deux</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Trois</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Quatre</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Cinq</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Six</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Sept</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Huit</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Neuf</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>Dix</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-99" max="-99"/>
+					</item_modify>
+				<weapon name="CRASH_LASER"/>
+			</event>
+		</choice>
+	
+		<choice hidden="false" blue="true">
+			<text>Nevermind.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+		</event>
 	<FTL>
 	<eventList name="SCRAP_COMPACT">
 		<event load="SCRAP_COMPACT_FAIL"/>

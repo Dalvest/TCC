@@ -13,6 +13,11 @@
       <event load="FLAK_FORGE"/>
     </mod-append:choice>
 
+    <mod-append:choice req="AUTOMATED_QUARTERMASTER">
+      <text>(Automated Quartermaster) Print a custom weapon.</text>
+      <event load="AUTOMATED_QUARTERMASTER_CHOICE"/>
+    </mod-append:choice>
+
     <mod-append:choice req="SCRAP_COMPACTOR">
       <text>(Scrap Compactor) Print a custom flak weapon.</text>
       <event>
