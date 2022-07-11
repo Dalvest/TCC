@@ -694,7 +694,7 @@
 		<choice hidden="false" blue="false">
 			<text>MILITIA TAGGER</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-50" max="-50"/>
 					</item_modify>
@@ -705,7 +705,7 @@
 		<choice hidden="false" blue="false">
 			<text>ALTERNATE VER. -> RSA TAGGER</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-50" max="-50"/>
 					</item_modify>
@@ -716,7 +716,7 @@
 		<choice hidden="false" blue="false">
 			<text>MILITIA FLAK ONE</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-30" max="-30"/>
 					</item_modify>
@@ -727,7 +727,7 @@
 		<choice hidden="false" blue="false">
 			<text>MILITIA FLAK TWO</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-75" max="-75"/>
 					</item_modify>
@@ -736,9 +736,42 @@
 		</choice>
 
 		<choice hidden="false" blue="false">
+			<text>MINIGUN MARK ONE</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-40" max="-40"/>
+					</item_modify>
+				<weapon name="TC_MINIGUN_MK1"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>MINIGUN MARK TWO</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-55" max="-55"/>
+					</item_modify>
+				<weapon name="TC_MINIGUN_MK2"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>MINIGUN MARK THREE</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-85" max="-85"/>
+					</item_modify>
+				<weapon name="TC_MINIGUN_MK3"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
 			<text>LASER CENTRIFUGE</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-55" max="-55"/>
 					</item_modify>
@@ -749,7 +782,7 @@
 		<choice hidden="false" blue="false">
 			<text>LEGION LASER</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-60" max="-60"/>
 					</item_modify>
@@ -760,7 +793,7 @@
 		<choice hidden="false" blue="false">
 			<text>MARKSMAN LASER</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-45" max="-45"/>
 					</item_modify>
@@ -771,7 +804,7 @@
 		<choice hidden="false" blue="false">
 			<text>VULCAN ROTARY AUTOCANNON</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-60" max="-60"/>
 					</item_modify>
@@ -782,7 +815,7 @@
 		<choice hidden="false" blue="false">
 			<text>BURST LASER EPSILON</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-30" max="-30"/>
 					</item_modify>
@@ -793,7 +826,7 @@
 		<choice hidden="false" blue="false">
 			<text>BURST LASER SIGMA</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-50" max="-50"/>
 					</item_modify>
@@ -804,9 +837,9 @@
 		<choice hidden="false" blue="false">
 			<text>ESKA BEAM</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
-						<item type="scrap" min="-75" max="-75"/>
+						<item type="scrap" min="-55" max="-55"/>
 					</item_modify>
 				<weapon name="TC_ESKA"/>
 			</event>
@@ -815,11 +848,22 @@
 		<choice hidden="false" blue="false">
 			<text>RSA MINICANNON</text>
 			<event>
-				<text>Done!</text>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
 				<item_modify>
 						<item type="scrap" min="-20" max="-20"/>
 					</item_modify>
 				<weapon name="RSA_MINICANNON"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>TONFA ION BEAM</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-50" max="-50"/>
+					</item_modify>
+				<weapon name="TC_TONFA"/>
 			</event>
 		</choice>
 	

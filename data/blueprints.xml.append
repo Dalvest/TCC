@@ -1867,18 +1867,18 @@
 
 <weaponBlueprint name="TC_VULCAN_CANNON">
 	<type>LASER</type>
-	<title>Militia Vulcan Cannon</title>
-	<short>MVC</short>
+	<title>Militia Vulcan Rotary Autocannon</title>
+	<short>M.V.R.A.</short>
 	<desc>Highly powerful Vulcan-style autocannon that speeds up every time it fires. Water cooling and multiple barrels do wonder to a .950 autocannon.</desc>
-	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 2 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>95</freeMissileChance>
-	<damage>1</damage>
+	<damage>2</damage>
 	<shots>1</shots>
 	<sp>0</sp>
 	<radius>40</radius>
 	<breachChance>0</breachChance>
-	<cooldown>14</cooldown>
+	<cooldown>13</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
@@ -2472,7 +2472,7 @@
 	<cost>90</cost>
 	<bp>7</bp>
 	<rarity>5</rarity>
-	<length>5</length>
+	<length>1</length>
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
@@ -2492,18 +2492,18 @@
 	<title>'Eska' Beam</title>
 	<short>Eska Beam</short>
 	<desc>High breach chance, high length - the best thing to bring at a Zoltan debate competition.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, Pinpoint, ignores shields, hullbust</tooltip>
-	<damage>1</damage>
+	<tooltip>Beam weapon, 2 damage to hull, 90 length, pierces one shield layer</tooltip>
+	<damage>2</damage>
 	<hullbust>0</hullbust>
-	<sp>0</sp>
+	<sp>1</sp>
 	<breachChance>6</breachChance>
 	<cooldown>12</cooldown>
 	<image>beam_contact</image>
-	<power>3</power>
-	<cost>90</cost>
+	<power>2</power>
+	<cost>70</cost>
 	<bp>7</bp>
 	<rarity>5</rarity>
-	<length>80</length>
+	<length>90</length>
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
