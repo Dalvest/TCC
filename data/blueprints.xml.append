@@ -6345,7 +6345,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</doors>
 		<drones max="8" power="3" room="19" start="true" img="room_drones_8" />
-		<engines max="12" power="2" room="6" start="true" img="room_engines_5">
+		<engines max="8" power="2" room="6" start="true" img="room_engines_5">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -6400,7 +6400,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="protogen" />
 	<crewCount amount="1" class="rsa_technician" />
 	<crewCount amount="1" class="robottos" />
-	<aug name="RAMMING_SPEED" />
+	<aug name="ROCK_ARMOR" />
 </shipBlueprint>
 
 <!--/////// MILSPEC //////-->
