@@ -4337,36 +4337,34 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<desc>This model of Bomber-type ship is one of the most common ships in the RECLAIM and SALVAGE ASSOCIATION; although almost none of those ships look the exact same, given the... rough hull construction.</desc>
 	<systemList>
 		<artillery power="2" room="5" start="true" weapon="IONARTILLERY" img="room_artillery" />
-		<battery power="1" room="6" start="false" img="room_battery" />
-		<cloaking power="1" room="4" start="false" img="room_cloaking" />
-		<doors power="1" room="12" start="true" img="room_doors">
+		<doors power="1" room="11" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" room="13" start="false" img="room_drones" />
-		<engines power="2" room="3" start="true" img="room_engines">
+		<drones power="1" room="12" start="false" img="room_drones" />
+		<engines power="2" room="3" start="true" img="room_engines_8">
 			<slot>
-				<direction>down</direction>
+				<direction>left</direction>
 				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="11" start="false" img="room_hacking" />
-		<medbay power="1" room="8" start="true" img="room_medbay">
+		<hacking power="1" room="10" start="true" img="room_hacking_doubledeal" />
+		<medbay power="1" room="7" start="true" img="room_medbay">
 			<slot>
 				<number>1</number>
 			</slot>
 		</medbay>
-		<mind power="1" room="15" start="false" img="room_mind_11" />
-		<oxygen power="1" room="7" start="true" img="room_oxygen_2" />
-		<pilot power="1" room="0" start="true" img="room_pilot_2_thrusters">
+		<mind power="1" room="14" start="false" img="room_mind_11" />
+		<oxygen power="1" room="6" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="0" start="true" img="room_pilot_chaoticgood">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="14" start="false" img="room_sensors">
+		<sensors power="1" room="13" start="false" img="room_sensors">
 			<slot>
 				<direction>down</direction>
 				<number>1</number>
@@ -4379,7 +4377,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="1" start="true" />
-		<weapons power="3" room="9" start="true" img="room_weapons">
+		<weapons power="3" room="8" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4395,9 +4393,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="4" count="4" />
 	<health amount="30" />
 	<maxPower amount="6" />
-	<crewCount amount="1" class="robottos" />
-	<crewCount amount="1" class="kiviekith" />
+	<crewCount amount="1" class="robottos_gunner" />
 	<crewCount amount="1" class="mantis_rsa" />
+	<crewCount amount="1" class="kiviekith" />
+	<crewCount amount="1" class="human_technician" />
 	<aug name="AUTOMATED_QUARTERMASTER" />
 </shipBlueprint>
 
