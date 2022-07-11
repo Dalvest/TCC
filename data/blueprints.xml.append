@@ -956,11 +956,11 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
-	<title>heheha</title>
-	<short>bop</short>
+	<title>Militia Flak I</title>
+	<short>M.Flak 1</short>
 	<tip>tip_flak</tip>
-	<desc>scababap</desc>
-	<tooltip>rodlfle</tooltip>
+	<desc>Slightly modified Flak II modified by the militia - the flak it launches can pierce shields.</desc>
+	<tooltip>Flak that deals up to 4 damage and pierces one shield.</tooltip>
 	<radius>45</radius>
 	<damage>1</damage>
 	<shots>1</shots>
@@ -970,14 +970,14 @@
 	<breachChance>2</breachChance>
 	<cooldown>10</cooldown>
 	<power>2</power>
-	<cost>100</cost>
+	<cost>60</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>1</rarity>
 	<projectiles>
 		<projectile count="1" fake="false">debris_large</projectile>
-		<projectile count="2" fake="false">debris_med</projectile>
-		<projectile count="3" fake="true">debris_small</projectile>
+		<projectile count="3" fake="false">debris_med</projectile>
+		<projectile count="4" fake="true">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>flak</sound>
@@ -1004,7 +1004,7 @@
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
-	<title>sjk</title>
+	<title>Militia Flak 2</title>
 	<short>spej</short>
 	<tip>tip_flak</tip>
 	<desc>Voici l'histoire de la trois petite cochon</desc>
@@ -2368,18 +2368,18 @@
 	<title>Nova Mk. II Beam</title>
 	<short>Nova Mk.2</short>
 	<desc>An upgraded version of the Nova beam - this one has a much longer beam length at the cost of extra power required to function.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, 80 length</tooltip>
+	<tooltip>Beam weapon, 1 damage to hull, low chance to breach, 80 length</tooltip>
 	<damage>1</damage>
 	<hullbust>0</hullbust>
 	<sp>0</sp>
-	<breachChance>0</breachChance>
+	<breachChance>2</breachChance>
 	<cooldown>12</cooldown>
 	<image>beam_contact</image>
 	<power>2</power>
 	<cost>50</cost>
 	<bp>7</bp>
 	<rarity>5</rarity>
-	<length>80</length>
+	<length>60</length>
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
@@ -2398,19 +2398,19 @@
 	<tip>tip_beams</tip>
 	<title>Nova Mk. III Beam</title>
 	<short>Nova Mk.3</short>
-	<desc>Overcharged, overengineered and clearly overcompensated. Hey... at least it works.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, 130 length</tooltip>
-	<damage>1</damage>
+	<desc>Overcharged, overengineered and clearly overcompensated. Hey... at least it works, and it does so beatifully.</desc>
+	<tooltip>Beam weapon, 2 damage to hull, medium chance to breach, 120 length</tooltip>
+	<damage>2</damage>
 	<hullbust>0</hullbust>
 	<sp>0</sp>
-	<breachChance>0</breachChance>
+	<breachChance>6</breachChance>
 	<cooldown>15</cooldown>
 	<image>beam_contact</image>
 	<power>3</power>
 	<cost>90</cost>
 	<bp>7</bp>
 	<rarity>5</rarity>
-	<length>130</length>
+	<length>90</length>
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
@@ -2430,11 +2430,11 @@
 	<title>Supernova Catalyzer</title>
 	<short>Supernova</short>
 	<desc>If you thought the Nova Mk. III wasn't powerful enough, well, we might have something for you.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, 130 length, 2 shield pierce</tooltip>
-	<damage>1</damage>
+	<tooltip>Beam weapon, 3 damage to hull, high chance to breach, 130 length, 2 shield pierce</tooltip>
+	<damage>3</damage>
 	<hullbust>0</hullbust>
 	<sp>2</sp>
-	<breachChance>0</breachChance>
+	<breachChance>9</breachChance>
 	<cooldown>6</cooldown>
 	<image>beam_contact</image>
 	<power>4</power>
@@ -2461,12 +2461,12 @@
 	<title>Catalyzer</title>
 	<short>Catal.</short>
 	<desc>Legends say that this weapon was built by a Sergal engineer called Cheese - legends also say this Pinpoint beam has maximum penetration.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, Pinpoint, ignores shields, hullbust</tooltip>
-	<damage>1</damage>
+	<tooltip>Beam weapon, 3 damage to hull, Pinpoint, high chance to breach, ignores shields, hullbust</tooltip>
+	<damage>3</damage>
 	<hullbust>1</hullbust>
 	<sp>10</sp>
-	<breachChance>0</breachChance>
-	<cooldown>9</cooldown>
+	<breachChance>7</breachChance>
+	<cooldown>11</cooldown>
 	<image>beam_contact</image>
 	<power>3</power>
 	<cost>90</cost>
@@ -2520,29 +2520,30 @@
 <weaponBlueprint name="TC_TONFA">
 	<type>BEAM</type>
 	<tip>tip_beams</tip>
-	<title>Tonfa</title>
+	<title>Tonfa Beam</title>
 	<short>Tonfa</short>
-	<desc>PLACEHOLDER</desc>
-	<tooltip>Beam weapon, 1 damage to hull, Pinpoint, ignores shields, hullbust</tooltip>
-	<damage>1</damage>
+	<desc>Energy beam that deals ion damage on impact as well as causing system damage and ripping breaches to hulls.</desc>
+	<tooltip>Beam weapon, medium system damage and medium chance to breach, does ion damage.</tooltip>
+	<damage>0</damage>
+	<sysDamage>3</sysDamage>
 	<ionBeamFix>1</ionBeamFix>
 	<sp>10</sp>
-	<breachChance>0</breachChance>
+	<breachChance>3</breachChance>
 	<cooldown>9</cooldown>
 	<image>beam_contact</image>
-	<power>3</power>
-	<cost>90</cost>
+	<power>2</power>
+	<cost>70</cost>
 	<bp>7</bp>
 	<rarity>0</rarity>
 	<length>5</length>
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
-	<!--<color>
-		<r>0</r>
-		<g>255</g>
-		<b>6</b>
-	</color>-->
+	<color>
+		<r>255</r>
+		<g>215</g>
+		<b>1</b>
+	</color>
 	<weaponArt>tc_catalyzer</weaponArt>
 	<iconImage>beam</iconImage>
 	<iconScale>0.80</iconScale>
@@ -3726,7 +3727,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</shields>
 		<teleporter power="1" room="6" start="false" />
 		<temporal power="1" room="10" start="false" img="" />
-		<weapons power="2" max="8" room="11" start="true" img="room_weapons">
+		<weapons power="3" max="8" room="11" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -3736,9 +3737,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>3</droneSlots>
-	<weaponList missiles="21" count="4">
-		<weapon name="MODULAR_MISSILE_FIRE_BIO" />
-		<weapon name="MODULAR_MISSILE_FIRE_BIO" />
+	<weaponList missiles="4" count="4">
+		<weapon name="CATALYZER" />
 	</weaponList>
 	<droneList drones="2" count="3" />
 	<health amount="30" />
