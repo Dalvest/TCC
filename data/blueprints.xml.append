@@ -4336,7 +4336,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" room="13" start="false" img="room_drones" />
+		<drones max="8" power="1" room="13" start="false" img="room_drones" />
 		<engines power="2" room="3" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
@@ -4363,14 +4363,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="2" start="true" img="room_shields">
+		<shields max="8" power="2" room="2" start="true" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="1" start="true" />
-		<weapons power="3" room="9" start="true" img="room_weapons">
+		<weapons  max="8" power="3" room="9" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
