@@ -458,6 +458,7 @@
 	<!--/////// PORTED SHIPS //////-->
 
 		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true"/>
+
 		<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
 			<hiddenAug>SHIP_SPLICE</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -465,8 +466,16 @@
 		</mod-append:customShip>
 
 
-		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="false" c="false" unused="true"/>
+		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="false" unused="true"/>
+
 		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
+			<hiddenAug>SHIP_FEDERATION</hiddenAug>
+			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+			<crewLimit>8</crewLimit>
+			<customReactor maxLevel="60"/>
+		</mod-append:customShip>
+
+		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL_2">
 			<hiddenAug>SHIP_FEDERATION</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<crewLimit>8</crewLimit>

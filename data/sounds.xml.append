@@ -56,3 +56,21 @@
 <smallExplosion_ionHit1 volume="10">explosions/smallExplosion_ionHit1.ogg</smallExplosion_ionHit1>
 <smallExplosion_ionHit2 volume="10">explosions/smallExplosion_ionHit2.ogg</smallExplosion_ionHit2>
 <smallExplosion_ionHit3 volume="10">explosions/smallExplosion_ionHit3.ogg</smallExplosion_ionHit3>
+
+<!--///////////////////// MUSIC //////////////////////////-->
+
+<music>
+	<!--<track> <!--by Ean Grimm (Heart of Steel)
+		<name>steampunk</name>
+		<combat>tc_MUS_TrashedBATTLE.ogg</combat>
+	</track>
+    <track> <!--by Revolt Music Production (Augmentation)
+        <name>cyber</name>
+        <combat>tc_MUS_CyberBATTLE.ogg</combat>
+    </track>-->
+	<track> <!--from Avali-->
+		<name>avali</name>
+		<explore>tc_MUS_AvaliEXPLORE.ogg</explore>
+		<combat>tc_MUS_AvaliBATTLE.ogg</combat>
+	</track>
+</music>

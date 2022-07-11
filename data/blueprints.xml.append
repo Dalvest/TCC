@@ -4758,7 +4758,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="ANTI_ANAEROBIC_GRID" />
 </shipBlueprint>
 
-<!--/////////////////////STALWART DEFENCE//////////////////////////-->
+<!--/////////////////////STALWART DEFENSE//////////////////////////-->
+
 <shipBlueprint name="PLAYER_SHIP_DEFENSE" layout="defense" img="defense">
 	<class>Salvaged Federation Cruiser</class>
 	<name>Stalwart Defense</name>
@@ -4835,12 +4836,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="SYSTEM_CASING_NEW" />
 </shipBlueprint>
 
+<!--/////////////////////POTENTIAL//////////////////////////-->
+
 <shipBlueprint name="PLAYER_SHIP_POTENTIAL" layout="potential" img="potential">
-	<class>Potential</class>
+	<class>Unstable Federation Cruiser</class>
 	<name>Potential</name>
 	<desc>Using the potential field between white and black holes in the engine core, this ship can power anything you can attach to it.</desc>
 	<systemList>
-		<artillery power="1" room="5" start="false" img="room_artillery_2" />
+		<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
 		<battery power="1" room="10" start="false" img="room_battery_17" />
 		<cloaking power="1" room="4" start="false" img="room_cloaking_3" />
 		<clonebay power="1" room="12" start="false">
@@ -4907,6 +4910,82 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="60" />
 	<crewCount amount="1" class="human" />
 	<crewCount amount="1" class="engi" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_POTENTIAL_2" layout="potential_2" img="potential_2">
+	<class>Unstable Federation Cruiser</class>
+	<name>Caught Lackin'</name>
+	<desc>This ship was clearly overengineered for maximum drone action - too bad the weapon system is quite... lacking.</desc>
+	<systemList>
+		<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
+		<battery power="1" room="10" start="false" img="room_battery_17" />
+		<cloaking power="1" room="4" start="true" img="room_cloaking_3" />
+		<clonebay power="1" room="12" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="15" start="false" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="6" max="16" room="0" start="true" img="room_drones_orchid" />
+		<engines power="1" max="8" room="19" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="2" room="16" start="true" img="room_hacking_6" />
+		<medbay power="1" room="12" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="7" start="false" img="room_mind" />
+		<oxygen power="1" room="13" start="false" img="room_oxygen_2" />
+		<pilot power="1" room="2" start="true" img="room_pilot_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="3" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="1" start="false" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="14" start="false" />
+		<weapons power="1" max="4" room="9" start="false" img="room_weapons_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>5</droneSlots>
+	<weaponList missiles="2" count="2" />
+	<droneList drones="34" count="5">
+		<drone name="BATTLE" />
+		<drone name="COMBAT_MISSILE" />
+		<drone name="DRONE_SHIELD_PLAYER" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="60" />
+	<crewCount amount="1" class="scrapper" />
+	<crewCount amount="1" class="robottos" />
+	<aug name="CRATE_DRONES" />
+	<aug name="DRONE_RECOVERY" />
 </shipBlueprint>
 
 <!--//////////////////AVALI SHIPS//////////////-->
