@@ -1182,18 +1182,18 @@
 	<title>Militia Burst Laser Epsilon</title>
 	<short>Burst Laser E</short>
 	<tip>tip_laser</tip>
-	<desc>i hate you</desc>
-	<tooltip>jk im sorry [3</tooltip>
+	<desc>An upgraded version of the Burst laser constructed by the Militia.</desc>
+	<tooltip>3 shot 1 damage laser weapon, low chance to breach</tooltip>
 	<damage>1</damage>
 	<shots>3</shots>
 	<sp>0</sp>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>16</cooldown>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>12</cooldown>
 	<power>1</power>
-	<cost>40</cost>
+	<cost>50</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<image>laser_burst</image>
 	<launchSounds>
 		<sound>lightLaser1</sound>
@@ -1218,21 +1218,21 @@
 
 <weaponBlueprint name="TC_BURST_2">
 	<type>LASER</type>
-	<title>hohoho</title>
-	<short>hohoasdr</short>
+	<title>Militia Burst Laser Sigma</title>
+	<short>Burst Laser S</short>
 	<tip>tip_laser</tip>
-	<desc>i hate you</desc>
-	<tooltip>jk im sorry [3</tooltip>
+	<desc>An upgraded version of the Burst laser constructed by the Militia. Get that sigma energy going.</desc>
+	<tooltip>5 shot 1 damage laser weapon, medium chance to breach</tooltip>
 	<damage>1</damage>
 	<shots>5</shots>
 	<sp>0</sp>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
 	<cooldown>20</cooldown>
-	<power>1</power>
-	<cost>40</cost>
+	<power>2</power>
+	<cost>70</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<image>laser_burst</image>
 	<launchSounds>
 		<sound>lightLaser1</sound>
@@ -4899,7 +4899,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="0" count="4">
-		<weapon name="LASER_BURST_2" />
+		<weapon name="TC_BURST_2" />
 		<weapon name="BEAM_1" />
 	</weaponList>
 	<droneList drones="0" count="3" />
