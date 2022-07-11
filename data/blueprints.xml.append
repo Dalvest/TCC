@@ -2793,7 +2793,7 @@
 </augBlueprint>
 
 <augBlueprint name="AUTOMATED_QUARTERMASTER">
-	<title>Automated Quartermaster</title>
+	<title>Auto-Quartermaster</title>
 	<desc>You're pretty sure the RSA made this strange 3D printer - whoever made the software signed themselves as Ch33s3. It doesn't have the same blueprints as the legendary Compactor, but it works, and that's what matters.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
@@ -6245,8 +6245,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="45" />
 	<maxPower amount="9" />
-	<crewCount amount="1" class="protogen" />
-	<crewCount amount="1" class="rock_commando" />
+	<crewCount amount="1" class="robottos" />
+	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="2" class="human_soldier" />
 </shipBlueprint>
 
@@ -6321,7 +6321,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="10" />
 	<crewCount amount="1" class="human_engineer" />
 	<crewCount amount="1" class="mantis_free" />
-	<crewCount amount="1" class="mantis" />
+	<crewCount amount="1" class="protogen" />
 	<crewCount amount="1" class="avali" />
 	<aug name="ADV_SCANNERS" />
 </shipBlueprint>
@@ -6397,7 +6397,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="45" />
 	<maxPower amount="8" />
-	<crewCount amount="1" class="rock_outcast" />
+	<crewCount amount="1" class="protogen" />
 	<crewCount amount="1" class="rsa_technician" />
 	<crewCount amount="1" class="robottos" />
 	<aug name="RAMMING_SPEED" />
@@ -6406,72 +6406,69 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// MILSPEC //////-->
 
 <shipBlueprint name="PLAYER_SHIP_TC_MILSPEC" layout="player_ship_tc_milspec" img="player_ship_tc_milspec">
-	<class>Milspec Kleptocracy Cruiser</class>
+	<class>Experimental Cargo Liner</class>
 	<name>Military Surplus</name>
-	<desc>This ship was made by a bunch of Slugs who are fans of the Federation - they were banished from the Kleptocracy but managed to keep their ship.</desc>
+	<desc>This ship is a highly experimental Cargo Liner made by the Fedeartion - it's been specially outfitted with an Automated Quartermaster unit to help the crew create weaponry if needed.</desc>
 	<systemList>
-		<battery power="1" room="6" start="false" img="room_battery_FM_1" />
-		<cloaking power="1" room="10" start="false" img="room_cloaking" />
-		<doors power="1" room="2" start="false" img="room_doors">
+		<artillery power="1" room="11" start="true" weapon="ARTILLERY_FIRE" img="room_artillery_3" />
+		<battery power="1" room="2" start="false" img="room_battery_8" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking_11" />
+		<clonebay power="1" room="13" start="true">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="10" start="false" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" room="4" start="false" img="room_drones_1._s__w_" />
+		<engines power="3" room="6" start="true" img="room_engines_9">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
-		</doors>
-		<drones power="3" room="13" start="false" img="room_drones" />
-		<engines power="2" room="16" start="true" img="room_engines">
-			<slot>
-				<direction>down</direction>
-				<number>2</number>
-			</slot>
 		</engines>
-		<hacking power="1" room="5" start="false" img="room_hacking_7" />
-		<medbay power="1" room="3" start="true" img="room_medbay">
-			<slot>
-				<number>1</number>
-			</slot>
-		</medbay>
-		<mind power="2" room="9" start="true" img="room_mind_6" />
-		<oxygen power="1" room="8" start="true" img="room_oxygen_1x1_PMP" />
-		<pilot power="1" room="0" start="true" img="room_pilot">
+		<hacking power="1" room="1" start="false" img="room_hacking_7" />
+		<mind power="1" room="12" start="false" img="room_mind_1x1" />
+		<oxygen power="1" room="8" start="true" img="room_oxygen_10" />
+		<pilot power="1" room="0" start="true" img="room_pilot_doubledeal">
 			<slot>
 				<direction>right</direction>
 				<number>0</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="1" start="false" img="room_sensors">
+		<sensors power="2" room="7" start="true" img="room_sensors_4">
 			<slot>
-				<direction>down</direction>
+				<direction>left</direction>
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="11" start="true" img="room_shields">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</shields>
-		<teleporter power="2" room="4" start="true" />
-		<weapons power="2" room="12" start="true" img="room_weapons">
+		<shields power="2" room="5" start="true" img="room_shields_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
+		</shields>
+		<weapons power="3" room="9" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
 		</weapons>
 	</systemList>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="3" count="2">
-		<weapon name="MILITIA_TAGGER" />
-	</weaponList>
-	<droneList drones="2" count="3">
-	</droneList>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="12" count="4" />
+	<droneList drones="8" count="3" />
 	<health amount="30" />
 	<maxPower amount="7" />
-	<crewCount amount="2" class="slug_saboteur" />
-	<crewCount amount="1" class="slug_ranger" />
-	<crewCount amount="1" class="slug_clansman" />
-	<aug name="EX_TELEPORT_HEAL" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="human_soldier" />
+	<crewCount amount="1" class="robottos" />
+	<crewCount amount="1" class="mantis_free" />
 	<aug name="AUTOMATED_QUARTERMASTER" />
 </shipBlueprint>
 
@@ -6538,7 +6535,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="2" count="2" />
 	<health amount="30" />
 	<maxPower amount="5" />
-	<aug name="BACKUP_DNA" />
+	<aug name="EX_BACKUP_DNA" />
 </shipBlueprint>
 
 <!--/////// LEAH'S SHIPS //////-->
