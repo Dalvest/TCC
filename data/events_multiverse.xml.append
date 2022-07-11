@@ -685,120 +685,146 @@
 
 
 	<event name="AUTOMATED_QUARTERMASTER_CHOICE">
-		<text>Choose weapon:</text>
+		<text>PICK A/////FIREARM////QUALITY_MERCHANDISE////GREAT CHOICES////
+		ALL WEAPONS ARE FRESH AND HOT////INSERT YOUR SCRAP IN THE RECEPTACLE AND TURN THE SAFETY CRANK 274° COUNTER-CLOCKWISE////
+		ch33s3W4sH3r3////RSA FOREVER
+		...SELECT YOUR WEAPON FROM THE LIST OF PRESET .GCODE FILES...
+		</text>
 	
 		<choice hidden="false" blue="false">
-			<text>Un</text>
+			<text>MILITIA TAGGER</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-50" max="-50"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="MILITIA_TAGGER"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Deux</text>
+			<text>ALTERNATE VER. -> RSA TAGGER</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-50" max="-50"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="RSA_TAGGER"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Trois</text>
+			<text>MILITIA FLAK ONE</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-30" max="-30"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="TC_MILITIA_1"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Quatre</text>
+			<text>MILITIA FLAK TWO</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-75" max="-75"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="TC_MILITIA_2"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Cinq</text>
+			<text>LASER CENTRIFUGE</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-55" max="-55"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="TC_LASER_CHARGER"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Six</text>
+			<text>LEGION LASER</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-60" max="-60"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="TC_LASER_LEGION"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Sept</text>
+			<text>MARKSMAN LASER</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-45" max="-45"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="TC_LASER_MARKSMAN"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Huit</text>
+			<text>VULCAN ROTARY AUTOCANNON</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-60" max="-60"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="TC_VULCAN_CANNON"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Neuf</text>
+			<text>BURST LASER EPSILON</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-30" max="-30"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="TC_BURST_1"/>
 			</event>
 		</choice>
 
 		<choice hidden="false" blue="false">
-			<text>Dix</text>
+			<text>BURST LASER SIGMA</text>
 			<event>
 				<text>Done!</text>
 				<item_modify>
-						<item type="scrap" min="-99" max="-99"/>
+						<item type="scrap" min="-50" max="-50"/>
 					</item_modify>
-				<weapon name="CRASH_LASER"/>
+				<weapon name="TC_BURST_2"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>ESKA BEAM</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-75" max="-75"/>
+					</item_modify>
+				<weapon name="TC_ESKA"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>RSA MINICANNON</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-20" max="-20"/>
+					</item_modify>
+				<weapon name="RSA_MINICANNON"/>
 			</event>
 		</choice>
 	
 		<choice hidden="false" blue="true">
-			<text>Nevermind.</text>
+			<text>////CANCEL TRANSACTION////</text>
 			<event load="STORAGE_CHECK"/>
 		</choice>
 		</event>
