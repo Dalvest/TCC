@@ -2,6 +2,7 @@
 
 
 
+
 <img x="-55" y="-59" w="440" h="325" />
 <offsets>
 	<floor x="49" y="52" />
@@ -10,10 +11,10 @@
 <weaponMounts>
 	<mount x="336" y="74" rotate="true" mirror="true" gib="2" slide="up" />
 	<mount x="255" y="33" rotate="true" mirror="true" gib="2" slide="up" />
-	<mount x="361" y="289" rotate="true" mirror="false" gib="3" slide="down" />
-	<mount x="381" y="211" rotate="true" mirror="true" gib="3" slide="right" />
+	<mount x="361" y="289" rotate="true" mirror="false" gib="4" slide="down" />
+	<mount x="381" y="211" rotate="true" mirror="true" gib="4" slide="right" />
 	<mount x="358" y="125" rotate="true" mirror="false" gib="2" slide="no" />
 </weaponMounts>
 <explosion>
-	<gib1><velocity min="0.24627282454464075" max="0.8209094151488026" /><direction min="49" max="65" /><angular min="-0.9037558685446009" max="0.9037558685446009" /><x>45</x><y>28</y></gib1><gib2><velocity min="0.12635158483014858" max="0.42117194943382863" /><direction min="302" max="318" /><angular min="-0.6888246628131021" max="0.6888246628131021" /><x>193</x><y>28</y></gib2><gib3><velocity min="0.260995522065622" max="0.8699850735520733" /><direction min="241" max="257" /><angular min="-0.8451536643026005" max="0.8451536643026005" /><x>272</x><y>126</y></gib3><gib4><velocity min="0.24774430645249682" max="0.8258143548416561" /><direction min="109" max="125" /><angular min="-0.8401880141010575" max="0.8401880141010575" /><x>28</x><y>146</y></gib4><gib5><velocity min="0.19103021508224738" max="0.6367673836074913" /><direction min="174" max="190" /><angular min="-1.239935587761675" max="1.239935587761675" /><x>164</x><y>159</y></gib5></explosion>
+	<gib1><velocity min="0.20405346044231995" max="0.6801782014743999" /><direction min="53" max="69" /><angular min="-0.7823062795514047" max="0.7823062795514047" /><x>44</x><y>28</y></gib1><gib2><velocity min="0.1334468633922329" max="0.4448228779741097" /><direction min="301" max="317" /><angular min="-0.709350529709811" max="0.709350529709811" /><x>199</x><y>28</y></gib2><gib3><velocity min="0.1" max="0.29384853597885013" /><direction min="190" max="206" /><angular min="-0.6097709551656919" max="0.6097709551656919" /><x>131</x><y>145</y></gib3><gib4><velocity min="0.2122657061070855" max="0.707552353690285" /><direction min="233" max="249" /><angular min="-0.759945338597024" max="0.759945338597024" /><x>235</x><y>146</y></gib4><gib5><velocity min="0.3936143588517656" max="1.3120478628392187" /><direction min="108" max="124" /><angular min="-1.1757105943152453" max="1.1757105943152453" /><x>28</x><y>160</y></gib5></explosion>
 
