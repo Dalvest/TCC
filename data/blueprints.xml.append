@@ -2522,7 +2522,7 @@
 	<tip>tip_beams</tip>
 	<title>Tonfa Beam</title>
 	<short>Tonfa</short>
-	<desc>Energy beam that deals ion damage on impact as well as causing system damage and ripping breaches to hulls.</desc>
+	<desc>Energy beam that deals ion damage on impact as well as causing system damage and ripping breaches through hulls.</desc>
 	<tooltip>Beam weapon, medium system damage and medium chance to breach, does ion damage.</tooltip>
 	<damage>0</damage>
 	<sysDamage>3</sysDamage>
@@ -6424,8 +6424,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" room="4" start="false" img="room_drones_1._s__w_" />
-		<engines power="3" room="6" start="true" img="room_engines_9">
+		<drones power="1" room="4" max="8" start="false" img="room_drones_1._s__w_" />
+		<engines power="3" room="6" max="8" start="true" img="room_engines_9">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -6446,13 +6446,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="5" start="true" img="room_shields_7">
+		<shields power="2" max="8" room="5" start="true" img="room_shields_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</shields>
-		<weapons power="3" room="9" start="true" img="room_weapons_4">
+		<weapons power="3" max="8" room="9" start="true" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -6491,8 +6491,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" room="21" start="false" img="room_drones_14" />
-		<engines power="3" room="13" start="true" img="room_engines_orchid_3">
+		<drones power="1" max="8" room="21" start="false" img="room_drones_14" />
+		<engines power="3" max="8" room="13" start="true" img="room_engines_orchid_3">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -6513,14 +6513,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="9" start="false" img="room_shields">
+		<shields power="2" max="8" room="9" start="false" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="1" start="false" />
-		<weapons power="2" room="6" start="true" img="room_weapons">
+		<weapons power="2" max="8" room="6" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
