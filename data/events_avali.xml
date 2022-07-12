@@ -10,7 +10,12 @@
 		<event load="AVALI_FIGHT" />
 		<event load="ENCOUNTER_PIRATE" />
 	</eventList>
+
 	<eventList name="AVALI_EVENT_NEUTRAL"></eventList>
+	<eventList name="AVALI_EVENT_NEUTRAL">
+		<event load="INSTANT_ISSUES" />
+	</eventList>	
+
 	<eventList name="AVALI_REBEL_LIST">
 		<event load="ENCOUNTER_REBEL_AVALI" />
 		<event load="ENCOUNTER_REBEL" />
@@ -18,6 +23,7 @@
 		<event load="ENCOUNTER_REBEL" />
 		<event load="ENCOUNTER_REBEL_SPY" />
 	</eventList>
+
 	<event name="AVALI_FIGHT">
 		<text load="TEXT_AVALI_FIGHT" />
 		<ship load="SHIP_AVALI_FIGHT" hostile="true" />
@@ -29,6 +35,7 @@
 	<textList name="TEXT_AVALI_FIGHT">
 		<text>bird fight!!!!!!!</text>
 	</textList>
+
 	<event name="ENCOUNTER_REBEL_AVALI">
 		<text load="TEXT_ENCOUNTER_REBEL_AVALI" />
 		<ship load="SHIP_REBEL_FIGHT" hostile="true" />
@@ -88,7 +95,7 @@
 			<text>text</text>
 			<event load="AVALI_LOSTSUN_TEACH_HAIL_VOLUNTEER" />
 		</choice>
-		<choice req="ariadne" hidden="true">
+		<choice req="rock_commando" hidden="true">
 			<text>(Ariadne) text.</text>
 			<event>
 				<text>text</text>
@@ -116,7 +123,7 @@
 			<event load="OPTION_INVALID" />
 			<!--OPTION_INVALID is an event that costs 999 of each resource and 9999 scrap to select, so you can practically never select it, this means that this option will be grayed out, the hidden="true" tag makes it so that the game doesnt display the cost/reward of this choice next to the choice bubble (like surrenders would)-->
 		</choice>
-		<choice req="ariadne" hidden="true">
+		<choice req="rock_commando" hidden="true">
 			<text>(Ariadne) text.</text>
 			<event>
 				<text>text</text>
@@ -249,10 +256,16 @@
 			</event>
 		</choice>
 	</event>
+
 	<ship name="MU_BOSS_ENGINEER_C" auto_blueprint="MU_BOSS_ENGINEER_C">
 		<destroyed load="DESTROYED_ENGINEER_RENEGADE" />
 		<deadCrew load="DEAD_CREW_ENGINEER_RENEGADE" />
 	</ship>
+
+	<ship name="ARS_FED_AUTOSHIP" auto_blueprint="ARS_FED_AUTOSHIP">
+		<destroyed load="DESTROYED_AUTO_DAMAGED" />
+	</ship>
+
 	<event name="DESTROYED_ENGINEER_RENEGADE">
 		<text>One last explosion marks the engineer's fate, as his ship breaks apart. You quickly collect what remains.</text>
 		<autoReward level="MED">standard</autoReward>
@@ -261,6 +274,7 @@
 			<event load="AVALI_ARGUMENT_CONTACT_ILLUMINANT" />
 		</choice>
 	</event>
+
 	<event name="DEAD_CREW_ENGINEER_RENEGADE">
 		<text>The mighty cruiser vessel's engines stutter to a halt, as the last lifeform reading fades away. While scrapping the hull, you find a functional drone schematic, it may have failed its old master, but hopefully it'll serve you better.</text>
 		<autoReward level="HIGH">standard</autoReward>
@@ -270,12 +284,13 @@
 			<event load="AVALI_ARGUMENT_CONTACT_ILLUMINANT" />
 		</choice>
 	</event>
+
 	<event name="AVALI_ARGUMENT_CONTACT_ILLUMINANT">
 		<text>The Illuminant hails you: "Thanks for the help, I would've been toast if I had to fight him any longer. Here, a sample of the medicine I was selling, as a sign of my appreciation!" Upon reading the label, you are sickened to discover the side effects of these pills include "Turning into Avali". Did you pick the right side here...?</text>
 		<choice hidden="true">
 			<text>Accept.</text>
 			<event>
-				<text>The Illuminant transfers the pills to you, and gives you a friendly wave before jumping away. (event unfinished, no pills yet, take consulation prize)</text>
+				<text>The Illuminant transfers the pills to you, and gives you a friendly wave before jumping away. (event unfinished, no pills yet, take consolation prize)</text>
 				<autoReward level="LOW">standard</autoReward>
 			</event>
 		</choice>
@@ -287,5 +302,54 @@
 			</event>
 		</choice>
 	</event>
+
+	<event name="INSTANT_ISSUES">
+        <text>You're hailed by a Federation Autoship trying to sell you insta-noodles... It's strange, considering the fact that the auto-ship seems to be of a military type. It's also malfunctioning, seemingly trying to power up weapons.</text>
+        <ship load="ARS_FED_AUTOSHIP" hostile="false"/>
+        <choice hidden="true" req="LIST_CREW_PROTOGEN">
+            <text>(Protogen Crew) Have your protogen fix the Autoship.</text>
+            <event>
+                <text>Your Protogen manages to fix the malfunctioning Autoship and makes it dispense Noodle Rations everywhere. It also allows you to access its store interface.</text>
+                <store>STORE_NOODLE</store>
+                <augment name="NOODLE_RATIONS"/>
+            </event>
+        </choice>
+        <choice hidden="true" req="LIST_CREW_RSA">
+            <text>(RSA Crew) Have your RSA crew fix the auto-ship.</text>
+            <event>
+                <text>Your RSA member uses their years of experience to fix the malfunctioning Autoship and makes it dispense Noodle Rations everywhere. It also allows you to access its store interface.</text>
+                <store>STORE_NOODLE</store>
+                <augment name="NOODLE_RATIONS"/>
+            </event>
+        </choice>
+        <choice hidden="true" req="LIST_CREW_ENGI">
+            <text>(Engi Crew) Have your Engi crew fix the auto-ship.</text>
+            <event>
+                <text>Your Engi fixes the malfunctioning Autoship with ease and makes it dispense Noodle Rations. It also allows you to access its store interface.</text>
+                <store>STORE_NOODLE</store>
+                <augment name="NOODLE_RATIONS"/>
+            </event>
+        </choice>
+        <choice hidden="true" req="LIST_CREW_AVALI">
+            <text>(Avali Crew) Have your Avali crew fix the auto-ship.</text>
+            <event>
+                <text>Your Avali explains that they have seen an automated merchant like this before and tries to fix the malfunctioning Autoship. It didn't exactly work, though...</text>
+                <autoReward level="LOW">standard</autoReward>
+            </event>
+        </choice>
+        <choice hidden="true">
+            <text>Try to fix the auto-ship.</text>
+            <event>
+                <text>The auto-ship dispenses several piles of noodle rations before self-destructing. You're still not sure what happened, but at least you can loot the broken Autoship...</text>
+                <augment name="NOODLE_RATIONS"/>
+                <autoReward level="LOW">standard</autoReward>
+            </event>
+        </choice>
+        <choice>
+            <text>Ignore the Autoship.</text>
+            <event/>
+        </choice>
+    </event>
+
 </FTL>
 

@@ -2,6 +2,36 @@
   <mod:setValue>^1.2.0</mod:setValue>
 </mod:findLike>
 
+<!-- Enables command console in game \\ press L to use
+
+EVENT          Run an event.                           Usage: EVENT <event_id>        Example: EVENT FREE_AUG
+LOAD           Loads a ship blueprint.                 Usage: LOAD <ship_id> <str>    Example: LOAD MANTIS_BOMBER 5 (with 5 sector strength)
+ACH            Unlock achievement.                     Usage: ACH <achievement_id>    Example: ACH ACH_SECTOR_8
+SECTOR         Go to sector type.                      Usage: SECTOR <sector_type>    Example: SECTOR PIRATE_SECTOR
+SCRAP          Add scrap.                              Usage: SCRAP <num_to_add>      Example: SCRAP 500
+WEAPON         Add a weapon blueprint.                 Usage: WEAPON <weapon_id>      Example: WEAPON LASER_BURST_1
+SHIP           Unlock a ship.                          Usage: SHIP <ship_id>          Example: SHIP PLAYER_SHIP_MANTIS
+DRONES         Add drone parts.                        Usage: DRONES <num_to_add>     Example: DRONES 50
+DRONE          Add a drone blueprint.                  Usage: DRONE <drone_id>        Example: DRONE COMBAT_2
+FUEL           Add fuel.                               Usage: FUEL <num_to_add>       Example: FUEL 50
+MISSILES       Add missiles.                           Usage: MISSILES <num_to_add>   Example: MISSILES 50
+RICH           Add 80 of each resource and 1999 scrap. Usage: RICH
+GOD            Fully upgrade every system and reactor. Usage: GOD
+DELETE         Destroys enemy ship.                    Usage: DELETE
+SYS            Add a system.                           Usage: SYS <system_name>       Example: SYS cloaking
+AUG            Add an augmentation.                    Usage: AUG <augment_name>      Example: AUG O2_MASKS
+CREW           Add a crew member.                      Usage: CREW [race_name]        Example: CREW slug
+EXIT           Makes your location an exit beacon      Usage: EXIT
+STORE          Creates a store at your location        Usage: STORE [sector]          Example: STORE 3
+KILL           Kills a person on your ship             Usage: KILL <crew_name>        Example: KILL John
+DELETECREW     Kills everyone on the enemy ship        Usage: DELETECREW
+SPEED          Changes gamespeed
+VARIABLE [name] [value]
+VAR [name] [value]
+METAVARIABLE [name] [value]
+METAVAR [name] [value]
+MVAR [name] [value]
+-->
 
 <FTL><!--appending to Inferno-Core-->
 	<events>
@@ -62,16 +92,87 @@
 		<!--sector stuff-->
 		<eventFile>avali</eventFile>
 	</events>
+
+
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+												STORE LISTS
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	-->
+
+	<customStore id="STORE_NOODLE">
+        <hullRepair>
+			<price min="2" max="4"/>
+			<sectorScaled/>
+		</hullRepair>
+		<resource>
+			<type>fuel</type>
+			<count min="5" max="10"/>
+		</resource>
+		<resource>
+			<type>missiles</type>
+			<count min="3" max="7"/>
+		</resource>
+		<resource>
+			<type>drones</type>
+			<count min="6" max="11"/>
+		</resource>
+		<category type="WEAPONS">
+			<item>    
+			<modifier min="1" max="1.5" flat="false"/><!--Multiplier to price-->                
+			<blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
+			<price>-1</price><!--You can set the price of the item here, -1 defaults to the price in the weapon blueprint-->
+			<mysteryItem>false</mysteryItem><!--"Item of the day"-->                    
+			</item>
+			<chance>100</chance>
+        </category>
+		<category type="SYSTEMS">
+            <customTitle>ESSENTIAL SYSTEMS</customTitle>
+			<guaranteedSystems>
+                <weapons/>
+ 			    <shields/>
+				<oxygen/>
+            </guaranteedSystems>
+			<item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+			<chance>100</chance>
+        </category>
+		<category type="SYSTEMS">
+			<customTitle>AUXILIARY SYSTEMS</customTitle>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+			<chance>65</chance>
+        </category>
+    </customStore>
+
+
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	SHIPS
+													SHIPS
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	-->
 
 
 

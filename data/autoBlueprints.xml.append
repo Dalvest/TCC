@@ -158,6 +158,13 @@
 	<name>sergal_cheese</name>
 </blueprintList>
 
+<!--/////// RSA CREW //////-->
+<blueprintList name="LIST_CREW_RSA">
+	<name>sergal_cheese</name>
+	<name>mantis_rsa</name>
+	<name>kiviekith</name>
+</blueprintList>
+
 <!--/////// AVALI //////-->
 
 <blueprintList name="LIST_CREW_AVALI">
@@ -231,6 +238,17 @@
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
 </mod:findName>
+
+<!--/////// STORE LISTS //////-->
+
+<blueprintList name="SHOP_ITEM_WEAPONS_INSTANOODLE">
+	<name>ION_INSTANT</name>
+	<name>SHOTGUN_INSTANT</name>
+	<name>BEAM_FIRE_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>LOOT_MATH_5</name>
+	<name>BIG_ION</name>
+</blueprintList>
 
 <!--/////// WEAPONS ALL //////-->
 
@@ -916,6 +934,26 @@
 	<aug name="NO_GHOST" />
 </shipBlueprint>
 
+<shipBlueprint name="ARS_FED_AUTOSHIP" layout="ars_fed_autoship" img="ars_fed_autoship">
+	<class>Instant Noodle Auto-Merchant</class>
+	<minSector>1</minSector>
+	<maxSector>4</maxSector>
+	<systemList>
+		<doors power="2" max="2" room="2" start="true" />
+		<engines power="2" max="4" room="1" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<shields power="2" max="4" room="6" start="true" />
+		<weapons power="2" max="4" room="5" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="9" count="4" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="3" count="0" />
+	<health amount="11" />
+	<maxPower amount="6" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
 <!--/////////////////////AVALI ENEMY SHIP BLUEPRINTS/////////////////-->
 <shipBlueprint name="AVALI_SKIRMISHER" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
 	<class>Avali Skirmisher</class>
@@ -939,6 +977,7 @@
 	<maxPower amount="10" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
+
 <shipBlueprint name="MU_BOSS_ENGINEER_C" layout="MU_BOSS_ENGINEER_C" img="MU_BOSS_ENGINEER_C">
 	<class>Renegade Cruiser</class>
 	<minSector>1</minSector>

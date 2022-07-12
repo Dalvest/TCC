@@ -1039,8 +1039,9 @@
 			<choice>
 				<text>Help TRACKER!</text>
 				<event>
-					<text>The strange lanius ship descends in your view once again (how does it keep coming back?) and prepares to end you once and for all. Despite being hit, the Kestrel is still in the fight too!</text>
+					<text>The strange lanius ship descends in your view once again (how does it keep coming back?) and prepares to end you once and for all. Despite being hit, TRACKER's ship is still in the fight too!</text>
 					<ship load="TC_TRASH_COMPACTOR4" hostile="true"/>
+					<environment type="PDS" target="enemy"/>
 					<choice hidden="true">
 						<text>Let's do this.</text>
 						<event load="COMBAT_CHECK"/>
