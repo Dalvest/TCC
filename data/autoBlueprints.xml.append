@@ -954,6 +954,82 @@
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
+<shipBlueprint name="TC_SCRAPPER_CORVETTE" layout="ars_corvette" img="ars_corvette">
+	<class>Scrapper Corvette</class>
+	<minSector>2</minSector>
+	<maxSector>4</maxSector>
+	<systemList>
+		<cloaking power="1" max="1" room="6" start="true" />
+		<clonebay power="1" max="1" room="4" start="true" />
+		<engines power="3" max="4" room="0" start="true" />
+		<hacking power="2" max="2" room="3" start="true" />
+		<pilot power="2" max="2" room="2" start="true" />
+		<shields power="2" max="4" room="1" start="true" />
+		<weapons power="4" max="6" room="5" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="15" count="4">
+		<weapon name="TC_BOMB_SHOTGUN_2" />
+		<weapon name="SHOTGUN_INSTANT" />
+		<weapon name="TC_BOMB_SHOTGUN_FREE" />
+	</weaponList>
+	<droneList drones="1" count="0" />
+	<health amount="8" />
+	<maxPower amount="12" />
+	<crewCount amount="2" max="3" class="scrapper" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="TC_SCRAPPER_HUNTER" layout="ars_hunter" img="ars_hunter">
+	<class>Scrapper Hunter</class>
+	<minSector>2</minSector>
+	<maxSector>4</maxSector>
+	<systemList>
+		<cloaking power="2" max="2" room="1" start="true" />
+		<engines power="3" max="5" room="3" start="true" />
+		<pilot power="2" max="2" room="4" start="true" />
+		<shields power="2" max="4" room="2" start="true" />
+		<teleporter power="2" max="3" room="0" start="true" />
+	</systemList>
+	<weaponSlots>0</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="3" count="0" />
+	<droneList drones="3" count="0" />
+	<health amount="9" />
+	<maxPower amount="10" />
+	<crewCount amount="1" max="2" class="scrapper" />
+	<crewCount amount="3" max="3" class="scrapper_soldier" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="TC_SCRAPPER_SUPPORT" layout="ars_support" img="ars_support">
+	<class>Scrapper Support</class>
+	<minSector>2</minSector>
+	<maxSector>4</maxSector>
+	<systemList>
+		<drones power="4" max="5" room="1" start="true" />
+		<engines power="2" max="5" room="5" start="true" />
+		<mind power="1" max="2" room="4" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<shields power="2" max="4" room="2" start="true" />
+		<weapons power="2" max="3" room="3" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="3" count="2">
+		<weapon name="SHOTGUN_1" />
+	</weaponList>
+	<droneList drones="6" count="4">
+		<drone name="TC_COMBAT_BOMB" />
+		<drone name="TC_COMBAT_HEAVY" />
+	</droneList>
+	<health amount="13" />
+	<maxPower amount="10" />
+	<crewCount amount="1" max="2" class="scrapper" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
 <!--/////////////////////AVALI ENEMY SHIP BLUEPRINTS/////////////////-->
 <shipBlueprint name="AVALI_SKIRMISHER" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
 	<class>Avali Skirmisher</class>
