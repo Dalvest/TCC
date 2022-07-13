@@ -2,13 +2,13 @@
 
 <!--///////////////////// AUTOCANNON NOISE //////////////////////////-->
 
-<GB_cannonLight1 volume="4">weapons/GB_cannonLight1.ogg</GB_cannonLight1>
+<GB_cannonLight1 volume="4">weapons/GB_cannonLight1.ogg</GB_cannonLight1> <!--autocannon noise-->
 <GB_cannonLight2 volume="4">weapons/GB_cannonLight2.ogg</GB_cannonLight2>
 <GB_cannonLight3 volume="4">weapons/GB_cannonLight3.ogg</GB_cannonLight3>
 
 <!--///////////////////// INSTANT FLAIR NOISE //////////////////////////-->
 
-<instant_shotgun volume="10">weapons/instant_flak.ogg</instant_shotgun>
+<instant_shotgun volume="10">weapons/instant_flak.ogg</instant_shotgun> <!--instanoodle-->
 <instant_ion volume="10">weapons/instant_ion.ogg</instant_ion>
 <instant_torch volume="10">weapons/instant_torch.ogg</instant_torch>
 <instant_revolver volume="10">weapons/instant_revolver.ogg</instant_revolver>
@@ -28,8 +28,13 @@
 <heavyLaserScatter1 volume="10">weapons/bp_laser_heavy_2.ogg</heavyLaserScatter1>
 <heavyLaserScatter2 volume="10">weapons/bp_laser_heavy_2b.ogg</heavyLaserScatter2>
 <heavyLaserScatter3 volume="10">weapons/bp_laser_heavy_2c.ogg</heavyLaserScatter3>
-<rebel_railgun_dart_fire volume="10">weapons/rebel_railgun_dart_fire.ogg</rebel_railgun_dart_fire>
+
+<rebel_railgun_dart_fire volume="10">weapons/rebel_railgun_dart_fire.ogg</rebel_railgun_dart_fire> <!--very heavy laser screech noise-->
+
 <rebel_railgun_plasma_fire volume="10">weapons/rebel_railgun_plasma_fire.ogg</rebel_railgun_plasma_fire>
+
+<!--///////////////////// BEAMWORK NEURONS //////////////////////////-->
+
 <focusbeam1 volume="5">weapons/bp_laser_2.ogg</focusbeam1>
 <focusbeam2 volume="5">weapons/bp_laser_2b.ogg</focusbeam2>
 <focusbeam3 volume="5">weapons/bp_laser_2c.ogg</focusbeam3>
@@ -40,7 +45,6 @@
 <engine_missile_launch1 volume="10">weapons/bp_engine_missile_launch1.ogg</engine_missile_launch1>
 <engine_missile_launch2 volume="10">weapons/bp_engine_missile_launch2.ogg</engine_missile_launch2>
 <engine_missile_swarm_launch volume="10">weapons/bp_engine_missile_swarm_launch.ogg</engine_missile_swarm_launch>
-<mine_homing volume="8">weapons/bp_sfx_mine_homing.ogg</mine_homing>
 
 <!--///////////////////// HULL HITS //////////////////////////-->
 
@@ -68,7 +72,7 @@
         <name>cyber</name>
         <combat>tc_MUS_CyberBATTLE.ogg</combat>
     </track>-->
-	<track> <!--from Avali-->
+	<track> <!--from Avali, thank you to MaddieDoktor for making these-->
 		<name>avali</name>
 		<explore>tc_MUS_AvaliEXPLORE.ogg</explore>
 		<combat>tc_MUS_AvaliBATTLE.ogg</combat>

@@ -489,6 +489,102 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_MILITIA_1">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Militia Flak I</title>
+	<short>M.Flak 1</short>
+	<tip>tip_flak</tip>
+	<desc>Slightly modified Flak II modified by the militia - the flak it launches can pierce shields.</desc>
+	<tooltip>Flak that deals up to 4 damage and pierces one shield.</tooltip>
+	<radius>45</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>1</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+		<projectile count="3" fake="false">debris_med</projectile>
+		<projectile count="4" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_militia_1</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_MILITIA_2">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Militia Flak 2</title>
+	<short>M.Flak II</short>
+	<tip>tip_flak</tip>
+	<desc>Slightly modified Flak III modified by the militia - the flak it launches can pierce shields.</desc>
+	<tooltip>Flak that deals up to 6 damage and pierces one shield.</tooltip>
+	<radius>50</radius>
+	<damage>1</damage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>13</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>4</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">debris_large</projectile>
+		<projectile count="3" fake="false">debris_med</projectile>
+		<projectile count="6" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_militia_2</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <!--//////////////////////////////////////// BOMB FLAKS ////////////////////////////////////////-->
 
 <weaponBlueprint name="TC_BOMB_SHOTGUN_1">
@@ -952,102 +1048,6 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="TC_MILITIA_1">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<drone_targetable>1</drone_targetable>
-	<title>Militia Flak I</title>
-	<short>M.Flak 1</short>
-	<tip>tip_flak</tip>
-	<desc>Slightly modified Flak II modified by the militia - the flak it launches can pierce shields.</desc>
-	<tooltip>Flak that deals up to 4 damage and pierces one shield.</tooltip>
-	<radius>45</radius>
-	<damage>1</damage>
-	<shots>1</shots>
-	<sp>1</sp>
-	<spin>720</spin>
-	<fireChance>0</fireChance>
-	<breachChance>2</breachChance>
-	<cooldown>10</cooldown>
-	<power>2</power>
-	<cost>60</cost>
-	<bp>10</bp>
-	<speed>26</speed>
-	<rarity>1</rarity>
-	<projectiles>
-		<projectile count="1" fake="false">debris_large</projectile>
-		<projectile count="3" fake="false">debris_med</projectile>
-		<projectile count="4" fake="true">debris_small</projectile>
-	</projectiles>
-	<launchSounds>
-		<sound>flak</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>flakImpact1</sound>
-		<sound>flakImpact2</sound>
-		<sound>flakImpact3</sound>
-		<sound>flakImpact4</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>tc_militia_1</weaponArt>
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="TC_MILITIA_2">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<drone_targetable>1</drone_targetable>
-	<title>Militia Flak 2</title>
-	<short>spej</short>
-	<tip>tip_flak</tip>
-	<desc>Voici l'histoire de la trois petite cochon</desc>
-	<tooltip>Je ne suis pas fou fou fou</tooltip>
-	<radius>50</radius>
-	<damage>1</damage>
-	<spin>720</spin>
-	<shots>1</shots>
-	<sp>1</sp>
-	<fireChance>0</fireChance>
-	<breachChance>2</breachChance>
-	<cooldown>13</cooldown>
-	<power>3</power>
-	<cost>80</cost>
-	<bp>10</bp>
-	<speed>26</speed>
-	<rarity>4</rarity>
-	<projectiles>
-		<projectile count="2" fake="false">debris_large</projectile>
-		<projectile count="3" fake="false">debris_med</projectile>
-		<projectile count="6" fake="true">debris_small</projectile>
-	</projectiles>
-	<launchSounds>
-		<sound>flak</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>flakImpact1</sound>
-		<sound>flakImpact2</sound>
-		<sound>flakImpact3</sound>
-		<sound>flakImpact4</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>tc_militia_2</weaponArt>
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
 <!--//////////////////////////////////////////////LASER/////////////////////////////////////////////-->
 
 <weaponBlueprint name="TC_LASER_MARKSMAN">
@@ -1074,9 +1074,7 @@
 		<count>10</count>
 	</boost>
 	<launchSounds>
-		<sound>heavyLaser1</sound>
-		<sound>heavyLaser2</sound>
-		<sound>heavyLaser3</sound>
+		<sound>rebel_railgun_dart_fire</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1117,9 +1115,7 @@
 		<count>9</count>
 	</boost>
 	<launchSounds>
-		<sound>heavyLaser1</sound>
-		<sound>heavyLaser2</sound>
-		<sound>heavyLaser3</sound>
+		<sound>rebel_railgun_dart_fire</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1159,9 +1155,9 @@
 		<count>7</count>
 	</boost>
 	<launchSounds>
-		<sound>heavyLaser1</sound>
-		<sound>heavyLaser2</sound>
-		<sound>heavyLaser3</sound>
+		<sound>apLaser1</sound>
+		<sound>apLaser2</sound>
+		<sound>apLaser3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1255,6 +1251,45 @@
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="MILITIA_TAGGER">
+	<type>LASER</type>
+	<title>Militia Tagger</title>
+	<short>Tagger</short>
+	<desc>The Militia made their own version of the Tagger - autocannons must be going out of fashion because this is a Laser weapon... although this one doesn't do any hull damage.</desc>
+	<tooltip>2 shot high system damage weapon, 10% chance to cause a breach, pierces one shield bubble.</tooltip>
+	<damage>0</damage>
+	<sysDamage>3</sysDamage>
+	<shots>2</shots>
+	<sp>1</sp>
+	<radius>20</radius>
+	<breachChance>1</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<cost>50</cost>
+	<image>tc_laser_shot_shot</image>
+	<launchSounds>
+		<sound>apLaser1</sound>
+		<sound>apLaser2</sound>
+		<sound>apLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>militia_tagger</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
 
 <weaponBlueprint name="TCC_DEBUFF_SLOW_1">
@@ -1316,9 +1351,7 @@
 	<rarity>0</rarity>
 	<image>tc_debuffer_projection</image>
 	<launchSounds>
-		<sound>lightLaser1</sound>
-		<sound>lightLaser2</sound>
-		<sound>lightLaser3</sound>
+		<sound>Singularity</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>hitHull2</sound>
@@ -1392,16 +1425,16 @@
 	<rarity>0</rarity>
 	<image>missile_bio</image>
 	<launchSounds>
-		<sound>smallMissile1</sound>
-		<sound>smallMissile2</sound>
+		<sound>engine_missile_launch1</sound>
+		<sound>engine_missile_launch2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
+		<sound>hit_shield_scatter_1</sound>
+		<sound>hit_shield_scatter_2</sound>
+		<sound>hit_shield_scatter_3</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>miss</sound>
@@ -1457,12 +1490,12 @@
 	</launchSounds>
 	<explosion>explosion_random</explosion>
 	<hitShipSounds>
-		<sound>smallExplosion</sound>
+		<sound>engine_missile_swarm_launch</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
+		<sound>hit_shield_scatter_1</sound>
+		<sound>hit_shield_scatter_2</sound>
+		<sound>hit_shield_scatter_3</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>miss</sound>
@@ -2122,45 +2155,6 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>RSA_TAGGER</weaponArt>
-	<iconImage>laser</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="MILITIA_TAGGER">
-	<type>LASER</type>
-	<title>Militia Tagger</title>
-	<short>Tagger</short>
-	<desc>The Militia made their own version of the Tagger - autocannons must be going out of fashion because this is a Laser weapon... although this one doesn't do any hull damage.</desc>
-	<tooltip>2 shot high system damage weapon, 10% chance to cause a breach, pierces one shield bubble.</tooltip>
-	<damage>0</damage>
-	<sysDamage>3</sysDamage>
-	<shots>2</shots>
-	<sp>1</sp>
-	<radius>20</radius>
-	<breachChance>1</breachChance>
-	<cooldown>10</cooldown>
-	<power>2</power>
-	<bp>4</bp>
-	<rarity>5</rarity>
-	<cost>50</cost>
-	<image>GB_shot_light</image>
-	<launchSounds>
-		<sound>GB_cannonLight1</sound>
-		<sound>GB_cannonLight2</sound>
-		<sound>GB_cannonLight3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>militia_tagger</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
