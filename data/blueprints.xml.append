@@ -4773,6 +4773,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Salvaged Federation Cruiser</class>
 	<name>Stalwart Defense</name>
 	<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The combined nature of the craft makes it hard to manoeuvre and impossible to cloak.</desc>
+	<unlock id="ship_PLAYER_SHIP_DEFENSE_unlock"/>
 	<systemList>
 		<artillery power="2" room="5" start="true" weapon="ARTILLERY_BEAM" img="room_artillery" />
 		<battery power="1" room="12" start="true" img="room_battery_6" />
@@ -4851,6 +4852,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Unstable Federation Cruiser</class>
 	<name>Potential</name>
 	<desc>Using the potential field between white and black holes in the engine core, this ship can power anything you can attach to it.</desc>
+	<unlock id="ship_PLAYER_SHIP_POTENTIAL_unlock"/>
 	<systemList>
 		<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
 		<battery power="1" room="10" start="false" img="room_battery_17" />
@@ -4925,6 +4927,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Unstable Federation Cruiser</class>
 	<name>Caught Lackin'</name>
 	<desc>This ship was clearly overengineered for maximum drone action - too bad the weapon system is quite... lacking.</desc>
+	<unlock id="ship_PLAYER_SHIP_POTENTIAL_2_unlock"/>
 	<systemList>
 		<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
 		<battery power="1" room="10" start="false" img="room_battery_17" />
