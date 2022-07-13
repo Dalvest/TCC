@@ -558,7 +558,12 @@ MVAR [name] [value]
 
 	<!--/////// PORTED SHIPS //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true"/>
+		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true">
+			<unlock variant="a" silent="false">
+				<type>3</type>
+				<shipReq>CREW_SHIP_SLOT2_2</shipReq>
+			</unlock>
+		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
 			<hiddenAug>SHIP_SPLICE</hiddenAug>
@@ -567,7 +572,19 @@ MVAR [name] [value]
 		</mod-append:customShip>
 
 
-		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="false" unused="true"/>
+		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="false" unused="true">
+		<unlock variant="a" silent="false">
+			<type>3</type>
+			<shipReq>CREW_SHIP_SLOT1_2</shipReq>
+		</unlock>
+
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_POTENTIAL</shipReq>
+			<value>5</value>
+		</unlock>
+	
+		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
 			<hiddenAug>SHIP_FEDERATION</hiddenAug>
@@ -603,6 +620,10 @@ MVAR [name] [value]
 		</mod-append:customShip>
 
 		<mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" unused="true" >
+			<unlock variant="a" silent="false">
+				<type>3</type>
+				<shipReq>PLAYER_SHIP_ORCHID_3</shipReq>
+			</unlock>
 			<unlock variant="b" silent="false">
 				<type>1</type>
 				<shipReq>PLAYER_SHIP_AVALI</shipReq>
@@ -644,7 +665,12 @@ MVAR [name] [value]
 
 		<!--/////////////////// AVALI SLOT 2 //////////////// -->
 
-		<mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" />
+		<mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" >
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_AVALI_3</shipReq>
+			</unlock>
+		</mod-append:ship>
 
 			<mod-append:customShip name="PLAYER_SHIP_AVALI_SLOT2">
 				<hiddenAug>SHIP_AVALI</hiddenAug>
@@ -701,7 +727,35 @@ MVAR [name] [value]
 
 		<!--/////// FSF BLACK OPS //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_BLACKOPS" b="true" c="true" unused="true"/>
+		<mod-append:ship name="PLAYER_SHIP_BLACKOPS" b="true" c="true" unused="true">
+		<unlock variant="a" silent="false">
+			<type>3</type>
+			<otherUnlocks>
+				<ship>PLAYER_SHIP_CIVILIAN</ship>
+				<ship>PLAYER_SHIP_MILITIA</ship>
+				<ship>PLAYER_SHIP_FEDERATION</ship>
+				<ship>PLAYER_SHIP_KESTREL</ship>
+				<ship>PLAYER_SHIP_STEALTH</ship>
+			</otherUnlocks>
+		</unlock>
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_BLACKOPS_2</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
+			<silent>false</silent>
+		</unlock>
+	</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_BLACKOPS">
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -723,7 +777,29 @@ MVAR [name] [value]
 
 		<!--/////// FSF MINESWEEPER //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_MINESWEEPER" b="true" c="true" unused="true" />
+		<mod-append:ship name="PLAYER_SHIP_MINESWEEPER" b="true" c="true" unused="true" >
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
+		</unlock>
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
+			<silent>false</silent>
+		</unlock>
+	</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER">
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -775,7 +851,29 @@ MVAR [name] [value]
 
 		<!--/////// FSF CYBERWARFARE //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_CYBER" b="true" c="true" unused="true" />
+		<mod-append:ship name="PLAYER_SHIP_CYBER" b="true" c="true" unused="true" >
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
+		</unlock>
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_CYBER</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_CYBER_2</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_CYBER</shipReq>
+			<silent>false</silent>
+		</unlock>
+	</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_CYBER">
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -798,7 +896,29 @@ MVAR [name] [value]
 
 		<!--/////// FSF NBC //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_NBC" b="true" c="true" unused="true" />
+		<mod-append:ship name="PLAYER_SHIP_NBC" b="true" c="true" unused="true" >
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_CYBER</shipReq>
+		</unlock>
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_NBC</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_NBC_2</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_NBC</shipReq>
+			<silent>false</silent>
+		</unlock>
+	</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_NBC">
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -820,7 +940,34 @@ MVAR [name] [value]
 
 		<!--/////// FEDERATION CARRIER //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="true" c="true" unused="true" />
+		<mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="true" c="true" unused="true" >
+		<unlock variant="a" silent="false">
+			<type>3</type>
+			<otherUnlocks>
+				<ship>PLAYER_SHIP_BLACKOPS</ship>
+				<ship>PLAYER_SHIP_MINESWEEPER</ship>
+				<ship>PLAYER_SHIP_CYBER</ship>
+				<ship>PLAYER_SHIP_NBC</ship>
+			</otherUnlocks>
+		</unlock>
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_FEDERATION_CARRIER_2</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
+			<silent>false</silent>
+		</unlock>
+	</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER">
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -842,7 +989,18 @@ MVAR [name] [value]
 
 		<!--/////// MILSPEC //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false" unused="true"/>
+		<mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false" unused="true">
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_AVALI</shipReq>
+			</unlock>
+			<unlock variant="b" silent="false">
+				<type>1</type>
+				<shipReq>PLAYER_SHIP_TC_MILSPEC</shipReq>
+				<value>5</value>
+				<silent>false</silent>
+			</unlock>
+		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC">
 			<crewLimit>12</crewLimit>
@@ -924,7 +1082,12 @@ MVAR [name] [value]
 
 		<!--/////// ROBOTTO SHIPS //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_ROBOTTO" b="false" c="false" unused="true" />
+		<mod-append:ship name="PLAYER_SHIP_ROBOTTO" b="false" c="false" unused="true" >
+		<unlock variant="a" silent="false">
+			<type>3</type>
+			<shipReq>PLAYER_SHIP_MVCIVILIAN</shipReq>
+		</unlock>
+	</mod-append:ship>
 		<mod-append:customShip name="PLAYER_SHIP_ROBOTTO">
 			<crewLimit>10</crewLimit>
 			<hiddenAug>SHIP_ROBOTTOS</hiddenAug>
