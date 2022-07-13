@@ -677,6 +677,8 @@
 	<boardingAI>invasion</boardingAI>
 </shipBlueprint>
 
+<!--///////////////////// THE KM /////////////////-->
+
 <shipBlueprint name="TC_TRASH_MINER" layout="tc_trash_miner" img="tc_trash_miner">
 	<class>TRACKER's Garbage Ccompactor</class>
 	<minSector>1</minSector>
@@ -707,11 +709,13 @@
 	<crew>
             <primagen_raptor room="5" name="RAPTOR" />
             <protogen_tracker room="0" name="TRACKER" />
-            <human room="11" name="Cheese" />
+            <sergal_cheese room="11" name="Cheese" />
             <clonefail_lancer room="12" name="Lancer" />
 	</crew>
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
+
+<!--///////////////////// KIVIE STUFF /////////////////-->
 
 <shipBlueprint name="KIVIE_FIGHTER" layout="KIVIE_FIGHTER" img="KIVIE_FIGHTER">
 	<class>Kivie Fighter</class>
@@ -934,25 +938,7 @@
 	<aug name="NO_GHOST" />
 </shipBlueprint>
 
-<shipBlueprint name="ARS_FED_AUTOSHIP" layout="ars_fed_autoship" img="ars_fed_autoship">
-	<class>Instant Noodle Auto-Merchant</class>
-	<minSector>1</minSector>
-	<maxSector>4</maxSector>
-	<systemList>
-		<doors power="2" max="2" room="2" start="true" />
-		<engines power="2" max="4" room="1" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="2" max="4" room="6" start="true" />
-		<weapons power="2" max="4" room="5" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="9" count="4" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="3" count="0" />
-	<health amount="11" />
-	<maxPower amount="6" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
+<!--///////////////////// TC 3 /////////////////-->
 
 <shipBlueprint name="TC_SCRAPPER_CORVETTE" layout="ars_corvette" img="ars_corvette">
 	<class>Scrapper Corvette</class>
@@ -1030,7 +1016,72 @@
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
+<!--///////////////////// KM QUEST ENEMIES /////////////////-->
+
+<shipBlueprint name="SYLVAN_LODGE" layout="ars_lodge" img="ars_lodge">
+	<class>Militarized Hotel Station</class>
+	<minSector>2</minSector>
+	<maxSector>6</maxSector>
+	<systemList>
+		<battery power="2" max="2" room="19" start="true" />
+		<cloaking power="1" max="1" room="7" start="true" />
+		<doors power="2" max="3" room="3" start="true" />
+		<drones power="4" max="5" room="9" start="true" />
+		<hacking power="1" max="3" room="7" start="true" />
+		<medbay power="1" max="3" room="16" start="true" />
+		<mind power="1" max="3" room="10" start="true" />
+		<oxygen power="2" max="3" room="6" start="true" />
+		<sensors power="2" max="3" room="1" start="true" />
+		<shields power="4" max="8" room="5" start="true" />
+		<teleporter power="1" max="3" room="8" start="true" />
+		<weapons power="4" max="6" room="4" start="true" />
+	</systemList>
+	<weaponSlots>0</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="4" count="0" load="LIST_WEAPONS_NEWGEN" />
+	<droneList drones="4" count="0" load="MV_DRONES_COMBAT" />
+	<health amount="20" />
+	<maxPower amount="10" />
+	<crewCount amount="1" max="1" class="unique_sylvan" />
+	<crewCount amount="4" max="7" class="slug_saboteur" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="CREW_OXYGEN" />
+</shipBlueprint>
+
+<shipBlueprint name="TC_RENTAFLAGSHIP" layout="tc_rentaflagship" img="tc_rentaflagship">
+	<class>Rent-A-Flagship</class>
+	<minSector>2</minSector>
+	<maxSector>6</maxSector>
+	<systemList>
+		<doors power="2" max="3" room="20" start="true" />
+		<drones power="1" max="2" room="5" start="true" />
+		<engines power="2" max="5" room="7" start="true" />
+		<hacking power="1" max="3" room="3" start="true" />
+		<medbay power="2" max="2" room="14" start="true" />
+		<mind power="1" max="2" room="6" start="true" />
+		<oxygen power="2" max="2" room="21" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<sensors power="1" max="3" room="9" start="true" />
+		<shields power="2" max="6" room="13" start="true" />
+		<teleporter power="2" max="2" room="18" start="true" />
+		<weapons power="3" max="6" room="12" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4">
+		<weapon name="TC_BOMB_SHOTGUN_3" />
+		<weapon name="TC_BOMB_SHOTGUN_FREE" />
+	</weaponList>
+	<droneList drones="4" count="0" />
+	<health amount="16" />
+	<maxPower amount="10" />
+	<crewCount amount="5" max="8" class="slug_hektar" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="HEKTAR_GEL" />
+</shipBlueprint>
+
 <!--/////////////////////AVALI ENEMY SHIP BLUEPRINTS/////////////////-->
+
 <shipBlueprint name="AVALI_SKIRMISHER" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
 	<class>Avali Skirmisher</class>
 	<minSector>1</minSector>
@@ -1051,6 +1102,26 @@
 	<crewCount amount="2" max="4" class="avali" />
 	<health amount="6" />
 	<maxPower amount="10" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="ARS_FED_AUTOSHIP" layout="ars_fed_autoship" img="ars_fed_autoship">
+	<class>Instant Noodle Auto-Merchant</class>
+	<minSector>1</minSector>
+	<maxSector>4</maxSector>
+	<systemList>
+		<doors power="2" max="2" room="2" start="true" />
+		<engines power="2" max="4" room="1" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<shields power="2" max="4" room="6" start="true" />
+		<weapons power="2" max="4" room="5" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="9" count="4" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="3" count="0" />
+	<health amount="11" />
+	<maxPower amount="6" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
