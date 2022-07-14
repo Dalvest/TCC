@@ -169,6 +169,17 @@
 	<mountPoint x="8" y="38"/>
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_4_glow.png</chargeImage>
 </weaponAnim>
+
+<animSheet name="tc_bomb_shotgun_breach" w="296" h="57" fw="37" fh="57">weapon_bomb_flak/tc_bomb_shotgun_breach.png</animSheet>
+<weaponAnim name="tc_bomb_shotgun_breach">
+	<sheet>tc_bomb_shotgun_breach</sheet>
+	<desc length="8" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint  x="12" y="22"/>
+	<mountPoint x="3" y="33"/>
+	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_breach_glow.png</chargeImage>
+</weaponAnim>
 	
 	<animSheet name="tc_bomb_shotgun_chain_chargeglow" w="117" h="53" fw="39" fh="53">weapon_bomb_flak/tc_bomb_shotgun_chain_chargeglow.png</animSheet>
 <anim name="tc_bomb_shotgun_chain_chargeglow">

@@ -556,6 +556,17 @@
 			<weapon name="TC_BOMB_SHOTGUN_4"/>
 		</event>
 	</choice>
+	
+	<choice hidden="false" blue="false">
+		<text>Breach Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_BREACH"/>
+		</event>
+	</choice>
 
 	<choice hidden="false" blue="false">
 		<text>Chain Bomb Flak</text>

@@ -812,6 +812,51 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_BOMB_SHOTGUN_BREACH">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Breach Bomb Flak Gun</title>
+	<short>B. Bomb Flak</short>
+	<tip>tip_flak</tip>
+	<desc>A flak cannon reconfigured to shoot breach bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devestating systems and keeping them down but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
+	<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
+	<radius>47</radius>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>8</breachChance>
+	<cooldown>13</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">bomb_breach</projectile>
+	</projectiles>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>smallExplosion</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_bomb_shotgun_breach</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_BOMB_SHOTGUN_CHAIN">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
@@ -869,7 +914,7 @@
 	<title>Bomb Flak Charger</title>
 	<short>Bomb Flak Ch.</short>
 	<tip>tip_flak</tip>
-	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devestating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
+	<desc>A specialized bomb flak that can charge up to 3 shots! Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
 	<radius>45</radius>
 	<damage>1</damage>
