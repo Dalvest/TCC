@@ -2091,12 +2091,12 @@
 	<sp>0</sp>
 	<radius>30</radius>
 	<breachChance>0</breachChance>
-	<cooldown>12</cooldown>
+	<cooldown>13</cooldown>
 	<power>3</power>
 	<boost>
 		<type>cooldown</type>
 		<amount>3</amount>
-		<count>5</count>
+		<count>4</count>
 	</boost>
 	<bp>4</bp>
 	<rarity>5</rarity>
@@ -7070,8 +7070,23 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>RSA Scout Drone</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Max Health is 70, x2 movement speed</power>
+		<power>Max Health is 50, x2 movement speed</power>
 		<power>Fights and sabotages with x2 strength</power>
+		<power>Cannot repair, extinguish, or man systems</power>
+	</powerList>
+</crewBlueprint>
+
+<!--/////// RSA TANK //////-->
+
+<crewBlueprint name="rsa_tank">
+	<desc>A very cool drone! I think.</desc>
+	<cost>40</cost>
+	<title>RSA Remote Control Tank</title>
+	<short>RSA RC Tank</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Max Health is 70, x1.5 movement speed</power>
+		<power>Fights and sabotages with x2.2 strength</power>
 		<power>Cannot repair, extinguish, or man systems</power>
 	</powerList>
 </crewBlueprint>
