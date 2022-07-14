@@ -2551,6 +2551,41 @@ MVAR [name] [value]
 			</powerEffect>
 		</mod-append:race>
 
+		<mod-append:race name="rsa_tank">
+			<maxHealth>70</maxHealth>
+			<noSlot>true</noSlot>
+			<damageMultiplier>2.2</damageMultiplier>
+			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+			<moveSpeedMultiplier>2.0</moveSpeedMultiplier>
+			<resistsMindControl>true</resistsMindControl>	<!-- CURA event -->
+			<canMan>false</canMan>
+			<canRepair>false</canRepair>
+			<noClone>true</noClone>
+			<canBurn>false</canBurn>
+			<canSuffocate>false</canSuffocate>
+			<deathSounds>
+				<deathSound>explosion1</deathSound>
+				<deathSound>explosion2</deathSound>
+				<deathSound>explosion3</deathSound>
+				<deathSound>explosion4</deathSound>
+			</deathSounds>
+			<powerEffect>
+				<cooldown>0</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<buttonText>EXPIRATION</buttonText>
+				<tooltip>You shouldn't see this. Shows how long is left in its lifespan.</tooltip>
+				<cooldownColor r="185" g="185" b="185"/>
+				<activateWhenReady>true</activateWhenReady>
+				<temporaryEffect>
+					<duration>25</duration>
+					<cooldownColor r="185" g="185" b="185"/>
+					<powerSounds>
+						<powerSound>shieldsDown</powerSound>
+					</powerSounds>
+				</temporaryEffect>
+			</powerEffect>
+		</mod-append:race>
+
 		<!--//////////////// MANTIS /////////////////////-->
 
 		<mod-append:race name="mantis_freebusiness">

@@ -2287,6 +2287,76 @@
 		<time>1</time>
 	</anim>
 
+<!--/////////////// RSA TANK //////////////-->
+
+<animSheet name="rsa_tank" w="385" h="175" fw="35" fh="35">people/tonk_base.png</animSheet>
+	<animSheet name="rsa_tank_death" w="320" h="32" fh="32" fw="32">effects/explosion1_strip10.png</animSheet>
+	<anim name="rsa_tank_death_right">
+		<sheet>rsa_tank_death</sheet>
+		<desc length="10" x="0" y="0"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_death_left">
+		<sheet>rsa_tank_death</sheet>
+		<desc length="10" x="0" y="0"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_walk_down">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="0" y="4"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_walk_up">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="1" y="4"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_walk_right">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="2" y="4"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_walk_left">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="3" y="4"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_punch_up">
+		<sheet>rsa_tank</sheet>
+		<desc length="11" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_punch_down">
+		<sheet>rsa_tank</sheet>
+		<desc length="11" x="0" y="2"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_shoot_down">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="0" y="3"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_shoot_up">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="1" y="3"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_shoot_right">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="2" y="3"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_shoot_left">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="3" y="3"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rsa_tank_portrait">
+		<sheet>rsa_tank</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+	
 <!--/////////////// MANTIS //////////////-->
 
 <animSheet name="mantis_freebusiness" w="350" h="490" fw="35" fh="35">people/mantis_freebusiness_base.png</animSheet>
