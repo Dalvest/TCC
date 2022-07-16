@@ -1635,7 +1635,171 @@
 	<weaponArt>tc_rescrapflak</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
+<blueprintList name="TC_FIREWORK_VARIANTS">
+	<name>TC_FIREWORK_DISPENSER</name>
+</blueprintList>
+<weaponBlueprint name="TC_FIREWORK_DISPENSER">
+	<type>BURST</type>
+	<drone_targetable>1</drone_targetable>
+	<title>'Party Starter' Dispenser</title>
+	<short>'Party Starter'</short>
+	<desc>A recycler module configured to produce random fireworks strapped to a throwing arm, not at all a fire hazard.</desc>
+	<!--<descriptionOverride>They says smaller weapons deal less damage but fire faster, but this is a bit much...
 
+		Stats:
+		Requires no Power
+		Charge Time: 2 seconds
+
+		Shots Per Charge: 1
+
+		Average Ion Damage: 0.5
+
+		Stun Chance: 10% (3 seconds long)
+
+		Buy/Sell Price: 10~/5~
+	</descriptionOverride>
+	<tooltipOverride>
+		Requires no Power
+		Charge Time: 2 seconds
+
+		Shots Per Charge: 1
+
+		Average Ion Damage: 0.5
+
+		Stun Chance: 10% (3 seconds long)
+	</tooltipOverride>-->
+
+	<tooltip>Cooldown drops the more it fires.</tooltip>
+	<radius>15</radius>
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<persDamage>3</persDamage>
+	<ion>0</ion>
+	<shots>1</shots>
+	<sp>10</sp>
+	<speed>35</speed>
+	<stun>5</stun>
+	<fireChance>100</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<accuracyMod>10</accuracyMod>
+	<fireTime>0.3</fireTime>
+	<explosion>tc_explosion_firework</explosion>
+	<projectiles>
+		<projectile count="1" fake="false" blueprint="TC_FIREWORK_DISPENSER">tc_projectile_firework</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>explosion_heavy</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_firework_dispenser</weaponArt>
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+<!--<weaponBlueprint name="TC_FIREWORK_DISPENSER_EXPLOSION_BIG1_ION">
+	<type>BURST</type>
+	<drone_targetable>1</drone_targetable>
+	<title>'Party Starter' Dispenser</title>
+	<short>'Party Starter'</short>
+	<desc>A recycler module configured to produce random fireworks strapped to a throwing arm, not at all a fire hazard.</desc>
+	<tooltip>Cooldown drops the more it fires.</tooltip>
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<persDamage>3</persDamage>
+	<ion>0</ion>
+	<shots>1</shots>
+	<sp>10</sp>
+	<speed>35</speed>
+	<stun>5</stun>
+	<fireChance>100</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<accuracyMod>10</accuracyMod>
+	<explosion>explosion_big1_ion</explosion>
+	<projectiles>
+		<projectile count="1" fake="false" blueprint="TC_FIREWORK_DISPENSER">tc_projectile_firework</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>explosion_heavy</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_firework_dispenser</weaponArt>
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="TC_FIREWORK_DISPENSER_EXPLOSION_BIG1_ION">
+	<type>BURST</type>
+	<drone_targetable>1</drone_targetable>
+	<title>'Party Starter' Dispenser</title>
+	<short>'Party Starter'</short>
+	<desc>A recycler module configured to produce random fireworks strapped to a throwing arm, not at all a fire hazard.</desc>
+	<tooltip>Cooldown drops the more it fires.</tooltip>
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<persDamage>3</persDamage>
+	<ion>0</ion>
+	<shots>1</shots>
+	<sp>10</sp>
+	<speed>35</speed>
+	<stun>5</stun>
+	<fireChance>100</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<accuracyMod>10</accuracyMod>
+	<explosion>explosion_big1</explosion>
+	<projectiles>
+		<projectile count="1" fake="false" blueprint="TC_FIREWORK_DISPENSER">tc_projectile_firework</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>explosion_heavy</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_firework_dispenser</weaponArt>
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>-->
 <!--/////////////////////////////////////////////////////ION/////////////////////////////////////////////////////////-->
 
 <weaponBlueprint name="TC_PULSAR">
