@@ -643,8 +643,6 @@ MVAR [name] [value]
 			</unlock>
 		</mod-append:ship>
 
-
-
 			<mod-append:customShip name="PLAYER_SHIP_AVALI">
 				<hiddenAug>SHIP_AVALI</hiddenAug>
 				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -703,13 +701,6 @@ MVAR [name] [value]
 			<crewLimit>20</crewLimit>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_SLUG</hiddenAug>
-			<crew>
-				<scrapper room="2" />
-				<scrapper room="9" name="Zog" />
-				<trash_eater room="0" name="Trash Eater" />
-				<scrapper_engineer room="7" />
-				<scrapper_soldier room="6" />
-			</crew>
 		</mod-append:customShip>
 
 		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
@@ -3138,7 +3129,7 @@ MVAR [name] [value]
 		<function name="SCRAP_COLLECTOR" value="0.3" useForReqs="false"/>
 	</aug>
 
-	<aug name="ICE_CREAM_GEL">
+	<aug name="MERCURY_GEL">
 		<function name="SLUG_GEL" value="0.50" useForReqs="false"/>
 
 		<statBoosts>

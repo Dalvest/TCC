@@ -2284,12 +2284,11 @@
 	<title>Resolver Beam</title>
 	<short>Resolver</short>
 	<desc>This beam weapon was made out of an emptied out bomb flak - the innards of the bomb flaks are perfect to gut and replace with other weapons' parts.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, 40 beam length, does double damage on systemless rooms</tooltip>
-	<damage>1</damage>
+	<tooltip>Beam weapon, high system damage, 40 beam length</tooltip>
+	<sysDamage>3</sysDamage>
 	<sp>0</sp>
 	<breachChance>0</breachChance>
 	<cooldown>12</cooldown>
-	<hullbust>1</hullbust>
 	<image>beam_contact</image>
 	<power>2</power>
 	<cost>80</cost>
@@ -2807,9 +2806,9 @@
     <stackable>false</stackable>
 </augBlueprint>
 
-<augBlueprint name="ICE_CREAM_GEL">
-	<title>Ice Cream Slug Substance</title>
-	<desc>A strange, ice cream like substance is coating every single room of this ship - you are not sure how and why it works, but it seems to keep the properties of Slug Gel while also providing 1.6hp/s regeneration for all allied crew.</desc>
+<augBlueprint name="MERCURY_GEL">
+	<title>Mercury Slug... Gel?</title>
+	<desc>A strange, shiny substance coating every single room of this ship - you are not sure how and why it works, but it seems to keep the properties of Slug Gel while also providing 1.6hp/s regeneration for all allied crew. All Lanius consider it tasty for... some reason.</desc>
 	<cost>60</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4657,13 +4656,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <!--/////////////////////EXTRA ELITE SHIP PACK//////////////////////////-->
+
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE" layout="player_ship_extraelite" img="player_ship_extraelite">
-	<class>Elite Custom Renegade</class>
-	<name>The Neapolitan</name>
-	<desc>This ship looks tasty. Maybe that's why so many Scrappers are on it? No, it can't be...</desc>
-	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_unlock"/>
+	<class>Captured Slug Dropship</class>
+	<name>Nerve Center</name>
+	<desc>This ship was made to carry a lot of tasty looking cargo. Maybe that's why so many Scrappers are on it? No, it can't be...</desc>
 	<systemList>
-		<battery power="1" max="2" room="3" start="false" img="room_battery_2" />
+		<battery power="1" room="3" start="false" img="room_battery_2" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking_orchid_3" />
 		<clonebay power="1" room="5" start="false">
 			<slot>
@@ -4676,8 +4675,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" max="8" room="11" start="false" img="room_drones_2_alt" />
-		<engines power="3" max="8" room="7" start="true" img="room_engines_7">
+		<drones power="1" room="11" start="false" img="room_drones_2_alt" />
+		<engines power="3" room="7" start="true" img="room_engines_7">
 			<slot>
 				<direction>right</direction>
 				<number>3</number>
@@ -4703,31 +4702,32 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="9" start="true" img="room_shields_4">
+		<shields power="2" room="9" start="true" img="room_shields_4">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="12" start="false" />
-		<weapons power="4" max="8" room="6" start="true" img="room_weapons">
+		<teleporter power="1" room="15" start="true" />
+		<weapons power="2" room="6" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</weapons>
 	</systemList>
-	<systemLimit>12</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="7" count="4">
-		<weapon name="TC_LASER_LEGION" />
+	<weaponList missiles="5" count="4">
 		<weapon name="TC_RESOLVER" />
 	</weaponList>
 	<droneList drones="8" count="4" />
 	<health amount="30" />
 	<maxPower amount="12" />
-	<aug name="ICE_CREAM_GEL" />
+	<crewCount amount="1" class="trash_eater" />
+	<crewCount amount="2" class="scrapper" />
+	<crewCount amount="1" class="scrapper_scavenger" />
+	<aug name="MERCURY_GEL" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="player_ship_extraelite_2" img="player_ship_extraelite_2">
