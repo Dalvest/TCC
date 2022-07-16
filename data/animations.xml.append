@@ -180,7 +180,7 @@
 	<mountPoint x="3" y="33"/>
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_breach_glow.png</chargeImage>
 </weaponAnim>
-	
+
 	<animSheet name="tc_bomb_shotgun_chain_chargeglow" w="117" h="53" fw="39" fh="53">weapon_bomb_flak/tc_bomb_shotgun_chain_chargeglow.png</animSheet>
 <anim name="tc_bomb_shotgun_chain_chargeglow">
 	<sheet>tc_bomb_shotgun_chain_chargeglow</sheet>
@@ -211,7 +211,7 @@
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_charge_glow.png</chargeImage>
 	<boost>shotgun_charge_charges</boost>
 </weaponAnim>
-	
+
 	<animSheet name="tc_bomb_shotgun_recycle" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_recycle.png</animSheet>
 <weaponAnim name="tc_bomb_shotgun_recycle">
 	<sheet>tc_bomb_shotgun_recycle</sheet>
@@ -336,6 +336,16 @@
 	<fireFrame>2</fireFrame>
 	<firePoint  x="30" y="10"/>
 	<mountPoint x="3" y="33"/>
+</weaponAnim>
+
+<animSheet name="tc_firework_dispenser" w="2400" h="45" fw="50" fh="45">weapon_missile/tc_firework_dispenser_strip48.png</animSheet>
+<weaponAnim name="tc_firework_dispenser">
+	<sheet>tc_firework_dispenser</sheet>
+	<desc length="48" x="0" y="0"/>
+	<chargedFrame>15</chargedFrame>
+	<fireFrame>36</fireFrame>
+	<firePoint  x="43" y="6"/>
+	<mountPoint x="3" y="18"/>
 </weaponAnim>
 
 <!--/////////////////// ION //////////////////-->
@@ -822,6 +832,19 @@
 <anim name="missile_flak">
 	<sheet>missile_flak</sheet>
 	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="tc_projectile_firework" w="19" h="7" fw="19" fh="7">weapon_missile/tc_projectile_firework.png</animSheet>
+<anim name="tc_projectile_firework">
+	<sheet>tc_projectile_firework</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="tc_firework_explosion" w="3100" h="100" fw="100" fh="100">effects/explosion_firework.png</animSheet>
+<anim name="tc_firework_explosion">
+	<sheet>tc_firework_explosion</sheet>
+	<desc length="31" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
@@ -2367,7 +2390,7 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
-	
+
 <!--/////////////// MANTIS //////////////-->
 
 <animSheet name="mantis_freebusiness" w="350" h="490" fw="35" fh="35">people/mantis_freebusiness_base.png</animSheet>
@@ -3236,7 +3259,7 @@
 		<time>1</time>
 	</anim>
 
-	
+
 <!--/////////////// SERGALS //////////////-->
 
 <animSheet name="sergal_cheese" w="315" h="455" fw="35" fh="35">people/sergal_cheese_base.png</animSheet>
@@ -3360,7 +3383,7 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
-	
+
 <!--/////////////////////////////////////////////////// PROTOGEN ZONE ////////////////////////////////////////////////////-->
 <!--///////////////GENERIC PROTOGEN//////////////-->
 
