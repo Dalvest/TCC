@@ -4524,6 +4524,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>RSA Scout</class>
 	<name>Wastebent</name>
 	<desc>Light and nimble, this RSA scout ship is dangerous but fragile. It has a vast arsenal of drones to rely on but no weapon system whatsoever.</desc>
+	<unlock id="ship_PLAYER_SHIP_CORROSUS_2_unlock"/>
 	<systemList>
 		<cloaking power="1" room="6" start="false" img="room_cloaking_bodyhorror" />
 		<clonebay power="1" room="7" start="false">
@@ -4584,6 +4585,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>RSA Fleet Support</class>
 	<name>Vulture Culture</name>
 	<desc>This model of Bomber-type ship is one of the most common ships in the RECLAIM and SALVAGE ASSOCIATION; although almost none of those ships look the exact same, given the... rough hull construction.</desc>
+	<unlock id="ship_PLAYER_SHIP_CORROSUS_3_unlock"/>
 	<systemList>
 		<artillery power="2" room="5" start="true" weapon="IONARTILLERY" img="room_artillery" />
 		<doors power="1" room="11" start="true" img="room_doors">
@@ -4872,6 +4874,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Captured Slug Dropship</class>
 	<name>Nerve Center</name>
 	<desc>This ship was made to carry a lot of tasty looking cargo. Maybe that's why so many Scrappers are on it? No, it can't be...</desc>
+	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_unlock"/>
 	<systemList>
 		<battery power="1" room="3" start="false" img="room_battery_2" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking_orchid_3" />
@@ -5163,7 +5166,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="0" count="4">
-		<weapon name="TC_BURST_2" />
+		<weapon name="LASER_BURST_1" />
 		<weapon name="BEAM_1" />
 	</weaponList>
 	<droneList drones="0" count="3" />
@@ -5485,6 +5488,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Avali Merchant Cruiser</class>
 	<name>Accipitridae</name>
 	<desc>This merchant cruiser was halfway through loading with junk to sell before it was pushed into military service. Luckily it's cargo teleporter can serve as an offense.</desc>
+	<unlock id="ship_PLAYER_SHIP_AVALI_SLOT2_unlock"/>
 	<systemList>
 		<battery power="1" room="17" start="false" img="room_battery_6" />
 		<cloaking power="1" room="9" start="false" img="room_cloaking_3" />
@@ -5561,6 +5565,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Black Ops</class>
 	<name>Sicario</name>
 	<desc>Specializing in swiftly eliminating the enemy crew, this silent, nimble elite vessel is as deadly as it is fragile.</desc>
+	<unlock id="ship_PLAYER_SHIP_BLACKOPS_unlock"/>
 	<systemList>
 		<battery power="1" room="7" start="false" img="room_battery_6" />
 		<cloaking power="1" room="8" start="true" img="room_cloaking_3" />
@@ -5632,6 +5637,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Black Ops</class>
 	<name>Skorzeny</name>
 	<desc>This nimble ship relies on its cloaking to evade retaliation while its crew boards the enemy ship.</desc>
+	<unlock id="ship_PLAYER_SHIP_BLACKOPS_2_unlock"/>
 	<systemList>
 		<battery power="1" room="10" start="false" img="room_battery" />
 		<cloaking power="2" room="13" start="true" img="room_cloaking_9" />
@@ -5702,6 +5708,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Black Ops</class>
 	<name>Gungnir</name>
 	<desc>This fragile ship relies on its devastating weaponry to destroy enemy vessels, but requires cloaking to spool its guns to maximum power.</desc>
+	<unlock id="ship_PLAYER_SHIP_BLACKOPS_3_unlock"/>
 	<systemList>
 		<battery power="1" room="4" start="false" img="room_battery_14" />
 		<cloaking power="1" room="5" start="true" img="room_cloaking_orchid_3" />
@@ -5777,6 +5784,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Minesweeper Cruiser</class>
 	<name>Ottawa</name>
 	<desc>Moreso designed to safely create and destroy minefields than open combat, this clumsy ship is more than able to take a beating - and keep on kicking.</desc>
+	<unlock id="ship_PLAYER_SHIP_MINESWEEPER_unlock"/>
 	<systemList>
 		<battery power="1" room="16" start="false" img="room_battery_16" />
 		<cloaking power="1" room="5" start="false" img="room_cloaking_10" />
@@ -5850,6 +5858,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Minesweeper Cruiser</class>
 	<name>Hohlladungs-4672</name>
 	<desc>This ship was designed to disarm minefields using controlled, high-power explosives. Turns out this also makes it excellent at exploding other things. Like enemies!</desc>
+	<unlock id="ship_PLAYER_SHIP_MINESWEEPER_2_unlock"/>
 	<systemList>
 		<battery power="1" room="19" start="false" img="room_battery_6" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking_2" />
@@ -5920,6 +5929,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Minesweeper Cruiser</class>
 	<name>BNK-3R</name>
 	<desc>Multiple armored layers make this ship extremely heavy, taking so much energy to simply move that most systems can barely be powered up. with crippling limitations, it is still one of the most resilient ships ever devised - a bunker with a thruster.</desc>
+	<unlock id="ship_PLAYER_SHIP_MINESWEEPER_3_unlock"/>
 	<systemList>
 		<battery power="1" room="17" start="false" img="room_battery_2" />
 		<cloaking max="4" power="1" room="18" start="false" img="room_cloaking_3" />
@@ -5993,6 +6003,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Cyberwarfare Cruiser</class>
 	<name>Scytale</name>
 	<desc>This counterintelligence ship comes equipped with disruptive drones to expose enemy vessels to its otherwise lackluster weapons.</desc>
+	<unlock id="ship_PLAYER_SHIP_CYBER_unlock"/>
 	<systemList>
 		<battery power="1" room="23" start="true" img="room_battery" />
 		<cloaking power="1" room="15" start="false" img="room_cloaking" />
@@ -6067,6 +6078,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Cyberwarfare Cruiser</class>
 	<name>Stuxnet</name>
 	<desc>Able to cripple the entire enemy ship's systems or completely disable its hacking system, this ship relies on AP drones and a sole technician to repair them more than it relies on its anemic weaponry.</desc>
+	<unlock id="ship_PLAYER_SHIP_CYBER_2_unlock"/>
 	<systemList>
 		<battery power="1" room="11" start="true" img="room_battery_8" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking_9" />
@@ -6139,6 +6151,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Cyberwarfare Cruiser</class>
 	<name>A-LAN23071912</name>
 	<desc>Fully automated and independent, this ship has everything it could ever need to sustain itself and its crew thanks to multiple advanced drones... except weapons. or crew. In fact, it cannot install weapons at all and it comes devoid of crew!</desc>
+	<unlock id="ship_PLAYER_SHIP_CYBER_3_unlock"/>
 	<systemList>
 		<battery power="1" room="20" start="true" img="room_battery" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking" />
@@ -6205,6 +6218,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>NBC Cruisers</class>
 	<name>Thermite S3</name>
 	<desc>This ship brings destruction with its combination of incendiary missiles and boarding drones.</desc>
+	<unlock id="ship_PLAYER_SHIP_NBC_unlock"/>
 	<systemList>
 		<battery power="1" room="10" start="false" img="room_battery" />
 		<cloaking power="1" room="6" start="false" img="room_cloaking_3" />
@@ -6278,6 +6292,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>NBC Cruisers</class>
 	<name>Cortinarius</name>
 	<desc>A variety of devastating (and probably breaching several conventions related to war crimes) explosives and a teleporter make this aggressive ship a force to be reckoned with, though care must be taken to not accidentaly kill the crew sent to the enemy ship.</desc>
+	<unlock id="ship_PLAYER_SHIP_NBC_2_unlock"/>
 	<systemList>
 		<battery power="1" room="18" start="false" img="room_battery_17" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking_3" />
@@ -6350,6 +6365,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>NBC Cruisers</class>
 	<name>A13 - 11041970</name>
 	<desc>With its life support systems blown to bits and contaminated beyond saving, this ship will require careful micromanagement to make it, as its crew requires O2 all the same. Thankfully, it comes well equiped elsewhere.</desc>
+	<unlock id="ship_PLAYER_SHIP_NBC_3_unlock"/>
 	<systemList>
 		<battery power="1" room="17" start="true" img="room_battery_9" />
 		<cloaking power="1" room="9" start="false" img="room_cloaking_8" />
@@ -6656,6 +6672,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Experimental Cargo Liner</class>
 	<name>Military Surplus</name>
 	<desc>This ship is a highly experimental Cargo Liner made by the Fedeartion - it's been specially outfitted with an Automated Quartermaster unit to help the crew create weaponry if needed.</desc>
+	<unlock id="text_PLAYER_SHIP_TC_MILSPEC_unlock"/>
 	<systemList>
 		<artillery power="1" room="11" start="true" weapon="ARTILLERY_FIRE" img="room_artillery_3" />
 		<battery power="1" room="2" start="false" img="room_battery_8" />
@@ -6723,6 +6740,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Milspec Crystal Cruiser</class>
 	<name>'Outpost 31'</name>
 	<desc>This Cruiser was carrying an alien specimen found on a derelict base - the alien specimen has escaped, much to the extreme paranoia of the crew.</desc>
+	<unlock id="text_PLAYER_SHIP_TC_MILSPEC_2_unlock"/>
 	<systemList>
 		<artillery power="1" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
 		<battery power="1" room="14" start="false" img="room_battery" />
