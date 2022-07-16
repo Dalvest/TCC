@@ -2329,12 +2329,11 @@
 	<title>Resolver Beam</title>
 	<short>Resolver</short>
 	<desc>This beam weapon was made out of an emptied out bomb flak - the innards of the bomb flaks are perfect to gut and replace with other weapons' parts.</desc>
-	<tooltip>Beam weapon, 1 damage to hull, 40 beam length, does double damage on systemless rooms</tooltip>
-	<damage>1</damage>
+	<tooltip>Beam weapon, high system damage, 40 beam length</tooltip>
+	<sysDamage>3</sysDamage>
 	<sp>0</sp>
 	<breachChance>0</breachChance>
 	<cooldown>12</cooldown>
-	<hullbust>1</hullbust>
 	<image>beam_contact</image>
 	<power>2</power>
 	<cost>80</cost>
@@ -2852,9 +2851,9 @@
     <stackable>false</stackable>
 </augBlueprint>
 
-<augBlueprint name="ICE_CREAM_GEL">
-	<title>Ice Cream Slug Substance</title>
-	<desc>A strange, ice cream like substance is coating every single room of this ship - you are not sure how and why it works, but it seems to keep the properties of Slug Gel while also providing 1.6hp/s regeneration for all allied crew.</desc>
+<augBlueprint name="MERCURY_GEL">
+	<title>Mercury Slug... Gel?</title>
+	<desc>A strange, shiny substance coating every single room of this ship - you are not sure how and why it works, but it seems to keep the properties of Slug Gel while also providing 1.6hp/s regeneration for all allied crew. All Lanius consider it tasty for... some reason.</desc>
 	<cost>60</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4702,13 +4701,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <!--/////////////////////EXTRA ELITE SHIP PACK//////////////////////////-->
+
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE" layout="player_ship_extraelite" img="player_ship_extraelite">
-	<class>Elite Custom Renegade</class>
-	<name>The Neapolitan</name>
-	<desc>This ship looks tasty. Maybe that's why so many Scrappers are on it? No, it can't be...</desc>
-	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_unlock"/>
+	<class>Captured Slug Dropship</class>
+	<name>Nerve Center</name>
+	<desc>This ship was made to carry a lot of tasty looking cargo. Maybe that's why so many Scrappers are on it? No, it can't be...</desc>
 	<systemList>
-		<battery power="1" max="2" room="3" start="false" img="room_battery_2" />
+		<battery power="1" room="3" start="false" img="room_battery_2" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking_orchid_3" />
 		<clonebay power="1" room="5" start="false">
 			<slot>
@@ -4721,8 +4720,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" max="8" room="11" start="false" img="room_drones_2_alt" />
-		<engines power="3" max="8" room="7" start="true" img="room_engines_7">
+		<drones power="1" room="11" start="false" img="room_drones_2_alt" />
+		<engines power="3" room="7" start="true" img="room_engines_7">
 			<slot>
 				<direction>right</direction>
 				<number>3</number>
@@ -4748,31 +4747,32 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="9" start="true" img="room_shields_4">
+		<shields power="2" room="9" start="true" img="room_shields_4">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="12" start="false" />
-		<weapons power="4" max="8" room="6" start="true" img="room_weapons">
+		<teleporter power="1" room="15" start="true" />
+		<weapons power="2" room="6" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</weapons>
 	</systemList>
-	<systemLimit>12</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="7" count="4">
-		<weapon name="TC_LASER_LEGION" />
+	<weaponList missiles="5" count="4">
 		<weapon name="TC_RESOLVER" />
 	</weaponList>
 	<droneList drones="8" count="4" />
 	<health amount="30" />
 	<maxPower amount="12" />
-	<aug name="ICE_CREAM_GEL" />
+	<crewCount amount="1" class="trash_eater" />
+	<crewCount amount="2" class="scrapper" />
+	<crewCount amount="1" class="scrapper_scavenger" />
+	<aug name="MERCURY_GEL" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="player_ship_extraelite_2" img="player_ship_extraelite_2">
@@ -5321,7 +5321,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_AVALI_SLOT2" layout="avali_cruiser_D" img="avali_cruiser_D">
-	<class>Avali Cruiser</class>
+	<class>Avali Merchant Cruiser</class>
 	<name>Accipitridae</name>
 	<desc>This merchant cruiser was halfway through loading with junk to sell before it was pushed into military service. Luckily it's cargo teleporter can serve as an offense.</desc>
 	<systemList>
@@ -5530,7 +5530,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="10" />
 	<maxPower amount="9" />
 	<crewCount amount="2" class="human_angel" />
-	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="1" class="human_engineer" />
 	<aug name="EX_CLOAK_FIRE" />
@@ -5606,7 +5605,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="slug_saboteur" />
 	<crewCount amount="1" class="human_angel" />
 	<crewCount amount="1" class="orchid_chieftain" />
-	<crewCount amount="1" class="robottos_gunner" />
+	<crewCount amount="1" class="engi_separatist" />
 	<aug name="EX_CLOAK_FIRE" />
 </shipBlueprint>
 
@@ -5678,9 +5677,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="45" />
 	<maxPower amount="8" />
-	<crewCount amount="1" class="engi" />
+	<crewCount amount="2" class="engi" />
 	<crewCount amount="1" class="human_soldier" />
-	<crewCount amount="1" class="engi" />
 	<crewCount amount="1" class="zoltan" />
 	<aug name="RECYCLER" />
 	<aug name="SUPER_ARMOR" />
@@ -6840,9 +6838,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// ROBOTTOS ARS+ SHIPS //////-->
 
 <shipBlueprint name="PLAYER_SHIP_ROBOTTO" layout="ars_tanker" img="ars_tanker">
-	<class>Robotto Fuel Tanker</class>
+	<class>Sentient Fuel Tanker</class>
 	<name>The Tanker</name>
-	<desc>This is a fragile but surprsingly well-armed tanker type ship staffed entirely by the Sentient race of robots - also known as Robottos and not to be confused with Engis.</desc>
+	<desc>This is a fragile but surprsingly well-armed tanker type ship staffed entirely by the Sentients - not to be confused with Engis.</desc>
 	<systemList>
 		<battery power="1" room="6" start="false" img="room_battery" />
 		<cloaking power="1" room="3" start="false" img="room_cloaking" />
@@ -7141,8 +7139,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="robottos">
 	<desc>These guys were built for ship construction and spatial exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
 	<cost>50</cost>
-	<title>Sentient Robotto</title>
-	<short>Robotto</short>
+	<title>Sentient</title>
+	<short>Sentient</short>
 	<rarity>5</rarity>
 	<powerList>
 		<power>80 HP owing to their frail and simple construction.</power>
@@ -7156,7 +7154,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="robottos_machinist">
 	<desc>This dedicated repair variant of the Sentient is made for maintaining ships in highly dangerous enviroments - perfect for combat situations.</desc>
 	<cost>70</cost>
-	<title>Sentient Robotto Machinist</title>
+	<title>Sentient Machinist</title>
 	<short>Machinist</short>
 	<rarity>0</rarity>
 	<powerList>
@@ -7169,7 +7167,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="robottos_researcher">
 	<desc>The brainy variant of the Sentient - an amazing dedicated system manner that cannot lose skills and starts with higher default skills, but is still as frail as the base Robotto.</desc>
 	<cost>70</cost>
-	<title>Sentient Robotto Researcher</title>
+	<title>Sentient Researcher</title>
 	<short>Researcher</short>
 	<rarity>0</rarity>
 	<powerList>
@@ -7183,7 +7181,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="robottos_gunner">
 	<desc>You'd expect some Sentients to specialize in fighting - and you'd be right. The gunner has a specialized targeting system and a stronger gun than the base version.</desc>
 	<cost>70</cost>
-	<title>Sentient Robotto Gunner</title>
+	<title>Sentient Gunner</title>
 	<short>Gunner</short>
 	<rarity>0</rarity>
 	<powerList>

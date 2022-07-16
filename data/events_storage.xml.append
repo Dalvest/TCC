@@ -729,22 +729,22 @@
   <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
     <text>You look around for some crew to talk to.</text>
     <choice req="robottos" blue="false" hidden="true">
-      <text>Look for your Sentient Robotto.</text>
+      <text>Look for your Sentient.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTOS"/>
     </choice>
 
     <choice req="robottos_machinist" blue="false" hidden="true">
-      <text>Look for your Sentient Robotto Machinist.</text>
+      <text>Look for your Sentient Machinist.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST"/>
     </choice>
 
     <choice req="robottos_gunner" blue="false" hidden="true">
-      <text>Look for your Sentient Robotto Gunner.</text>
+      <text>Look for your Sentient Gunner.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER"/>
     </choice>
 
     <choice req="robottos_researcher" blue="false" hidden="true">
-      <text>Look for your Sentient Robotto Researcher.</text>
+      <text>Look for your Sentient Researcher.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER"/>
     </choice>
   </event>
@@ -760,7 +760,7 @@
       <event load="STORAGE_CHECK_CREW_ROBOTTOS_SCAN"/>
     </choice>
     <choice>
-      <text>Upgrade your Sentient Robotto into one of its upgraded versions.</text>
+      <text>Upgrade your Sentient into one of its upgraded versions.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE"/>
     </choice>
     <choice>
@@ -771,9 +771,9 @@
 
   <event name="STORAGE_CHECK_CREW_ROBOTTOS_SCAN">
     <text>SENTIENT'S DETAILS
-      SPECIES? [Sentient Robotto] UNIQUE? [No]
+      SPECIES? [Sentient] UNIQUE? [No]
       Stats: 80 Health, x0.7 repair speed, unable to suffocate, takes x1.25 damage from fires.
-      These robottos are hailing from a distant multiverse - they're often sending scouting parties to various multiverse clusters to map and explore.
+      These engi-like machines are hailing from a distant multiverse - they're often sending scouting parties to various multiverse clusters to map and explore.
     </text>
     <choice>
       <text>Continue...</text>
@@ -813,7 +813,7 @@
   
     <event name="STORAGE_CHECK_CREW_ROBOTTOS_MACHINIST_SCAN">
       <text>MACHINIST'S DETAILS
-        SPECIES? [Sentient Robotto] UNIQUE? [No]
+        SPECIES? [Sentient] UNIQUE? [No]
         Stats: 80 Health, x2 repair speed, unable to suffocate and completely fireproof, provides a bar of power to the current system.
         The Machinist is excellent at repairing broken systems and hull breaches, as well as extinguishing fires. Whenever it's not repairing, it's probably manning a crucial system.
       </text>
@@ -856,7 +856,7 @@
   
     <event name="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER_SCAN">
       <text>GUNNER'S DETAILS
-        SPECIES? [Sentient Robotto] UNIQUE? [No]
+        SPECIES? [Sentient] UNIQUE? [No]
         Stats: 80 Health, x0.7 repair speed, unable to suffocate, x1.7 combat damage, takes x0.5 damage
         The Gunner is an amazing defender and boarder owing to its advanced weaponry and upgraded armor.
       </text>
@@ -902,7 +902,7 @@
   
     <event name="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER_SCAN">
       <text>RESEARCHER'S DETAILS
-        SPECIES? [Sentient Robotto] UNIQUE? [No]
+        SPECIES? [Sentient] UNIQUE? [No]
         Stats: 80 Health, x0.7 repair speed, unable to suffocate, x1.6 movement speed, doesn't lose skills when cloned, starts with level 2 skills
         The Researcher has an Internal Database similar to that of a protogen - its vast array of knowledge cannot be lost anymore.
       </text>
