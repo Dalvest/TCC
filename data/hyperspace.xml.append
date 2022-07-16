@@ -704,7 +704,7 @@ MVAR [name] [value]
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 			<hiddenAug>SHIP_SLUG</hiddenAug>
 			<crew>
-				<scrapper room="2" name="Mochi" />
+				<scrapper room="2" />
 				<scrapper room="9" name="Zog" />
 				<trash_eater room="0" name="Trash Eater" />
 				<scrapper_engineer room="7" />
@@ -752,7 +752,7 @@ MVAR [name] [value]
 		</unlock>
 		<unlock variant="c" silent="false">
 			<type>2</type>
-			<shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
+			<shipReq>PLAYER_SHIP_BLACKOPS_3</shipReq>
 			<silent>false</silent>
 		</unlock>
 	</mod-append:ship>
@@ -799,7 +799,7 @@ MVAR [name] [value]
 			<shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
 			<silent>false</silent>
 		</unlock>
-	</mod-append:ship>
+		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER">
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -870,7 +870,7 @@ MVAR [name] [value]
 		</unlock>
 		<unlock variant="c" silent="false">
 			<type>2</type>
-			<shipReq>PLAYER_SHIP_CYBER</shipReq>
+			<shipReq>PLAYER_SHIP_CYBER_3</shipReq>
 			<silent>false</silent>
 		</unlock>
 	</mod-append:ship>
@@ -915,7 +915,7 @@ MVAR [name] [value]
 		</unlock>
 		<unlock variant="c" silent="false">
 			<type>2</type>
-			<shipReq>PLAYER_SHIP_NBC</shipReq>
+			<shipReq>PLAYER_SHIP_NBC_3</shipReq>
 			<silent>false</silent>
 		</unlock>
 	</mod-append:ship>
