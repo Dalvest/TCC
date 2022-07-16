@@ -6881,7 +6881,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Leah's Cruiser</class>
 	<name>The Rulebook</name>
 	<unlock id="ship_PLAYER_SHIP_NEWTONBEAMA_2_unlock"/>
-	<desc>With a permenant mind control rig installed on the Beam Master's ship, her ship was quickly painted in federation colours and turned into a multiverse capable cruiser</desc>
+	<desc>With a permenant mind control rig installed on the Beam Master's ship, her ship was quickly painted in federation colours and turned into a multiverse capable cruiser.</desc>
 	<systemList>
 		<artillery power="1" max="5" room="3" start="true" weapon="BIO_1_LEAH" img="room_artillery_3" />
 		<battery power="1" max="2" room="10" start="false" img="room_battery_14" />
@@ -6968,8 +6968,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" room="10" start="false" img="room_drones_15" />
-		<engines power="3" room="5" start="true" img="room_engines">
+		<drones power="1" max="8" room="10" start="false" img="room_drones_15" />
+		<engines power="3" max="8" room="5" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
@@ -6996,7 +6996,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</sensors>
 		<teleporter power="1" room="4" start="false" />
-		<weapons power="3" room="8" start="true" img="room_weapons">
+		<weapons power="3" max="8" room="8" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -7030,8 +7030,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="2" room="8" start="true" img="room_drones" />
-		<engines power="3" room="1" start="true" img="room_engines_nightowl">
+		<drones power="2" max="8" room="8" start="true" img="room_drones" />
+		<engines power="3" max="8" room="1" start="true" img="room_engines_nightowl">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -7057,14 +7057,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="2" start="true" img="room_shields">
+		<shields power="2" max="8" room="2" start="true" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="4" start="false" />
-		<weapons power="1" room="7" start="true" img="room_weapons">
+		<weapons power="1" max="8" room="7" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
