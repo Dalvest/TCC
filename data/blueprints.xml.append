@@ -1126,6 +1126,52 @@
 		<sound>flak</sound>
 	</launchSounds>
 	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_bomb_shotgun_fire</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_BOMB_SHOTGUN_LOCK">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Lockdown Bomb Flak Gun</title>
+	<short>L. Bomb Flak</short>
+	<tip>tip_flak</tip>
+	<desc>Fires 4 fire bombs that are guaranteed to start a fire and do double system damage. Requires a missile to fire, but doesn't go through shields.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
+	<radius>55</radius>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<missiles>1</missiles>
+	<spin>720</spin>
+	<shots>1</shots>
+	<lockdown>1</lockdown>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>14</cooldown>
+	<power>3</power>
+	<cost>85</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="4" fake="false">bomb_lockdown</projectile>
+	</projectiles>
+	<explosion>explosion_lockdown</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
 		<sound>smallExplosion</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
@@ -1134,7 +1180,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_fire</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_lockdown</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 

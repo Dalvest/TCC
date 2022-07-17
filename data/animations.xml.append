@@ -256,6 +256,17 @@
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_fire_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="tc_bomb_shotgun_lockdown" w="484" h="48" fw="44" fh="48">weapon_bomb_flak/tc_bomb_shotgun_lockdown.png</animSheet>
+<weaponAnim name="tc_bomb_shotgun_lockdown">
+	<sheet>tc_bomb_shotgun_lockdown</sheet>
+	<desc length="11" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="18" y="8"/>
+	<mountPoint x="5" y="31"/>
+	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_lockdown_glow.png</chargeImage>
+</weaponAnim>
+
 <!--/////////////////// LASER //////////////////-->
 
 <animSheet name="tc_laser_marksman" w="392" h="95" fw="28" fh="95">weapon_laser/tc_laser_marksman.png</animSheet>
