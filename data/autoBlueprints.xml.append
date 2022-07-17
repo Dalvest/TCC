@@ -101,9 +101,11 @@
 	<name>MANNING</name>
 	<name>BATTLETOG2_DEFEND</name>
 </blueprintList>
+
 <blueprintList name="SHIP_AVALI_FIGHT">
 	<name>AVALI_SKIRMISHER</name>
 </blueprintList>
+
 <blueprintList name="LIST_DRONES_AVALI">
 	<name>REPAIR</name>
 	<name>GUARDIAN_1_DRONE</name>
@@ -120,6 +122,7 @@
 	<name>ENERGY_1_AMP2_ENEMY</name>
 	<name>BATTLETOG2_BOARDER</name>
 </blueprintList>
+
 <blueprintList name="LIST_WEAPONS_AVALI">
 	<name>LASER_BURST_1</name>
 	<name>LASER_BURST_2_ENEMY</name>
@@ -554,9 +557,9 @@
 		<scrapper_engineer room="3"/>
 		<scrapper_speed room="5"/>
 		<scrapper_heavy room="11"/>
-		<scrapper room="4"/>
+		<trash_eater room="0" name="Trash Eater"/>
     </crew>
-	<crewCount amount="1" max="1" class="trash_eater" />
+	<crewCount amount="1" max="1" class="scrapper" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 

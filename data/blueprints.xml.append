@@ -1533,6 +1533,48 @@
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_CLOAKER">
+	<type>LASER</type>
+	<flavorType>Missiles</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<tip>tip_missiles_cloak</tip>
+	<title>'Cloaker' Missile Launcher</title>
+	<short>Cloaker</short>
+	<desc>The safeword is "Hail the rebellion"! This Missile launcher has a micro-cloaker mechanism that automatically hides the missiles it fires from defense drones.</desc>
+	<tooltip>Fires a missile that deals 2 damage, with a medium chance to breach, while also piercing all shields.</tooltip>
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<stunChance>5</stunChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<speed>35</speed>
+	<cost>50</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>tc_cloak_missile</image>
+	<launchSounds>
+		<sound>engine_missile_launch1</sound>
+		<sound>engine_missile_launch2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hit_shield_scatter_1</sound>
+		<sound>hit_shield_scatter_2</sound>
+		<sound>hit_shield_scatter_3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_cloaker</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_MFK_BATTERY">
 	<type>BURST</type>
 	<title>Stolen MFK Battery Artillery</title>
@@ -1835,9 +1877,9 @@
 		<sound>ionShoot3</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
+		<sound>smallExplosion_ionHit1</sound>
+		<sound>smallExplosion_ionHit2</sound>
+		<sound>smallExplosion_ionHit3</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>ionShields1</sound>
@@ -1882,9 +1924,9 @@
 		<sound>ionShoot3</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
+		<sound>smallExplosion_ionHit1</sound>
+		<sound>smallExplosion_ionHit2</sound>
+		<sound>smallExplosion_ionHit3</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>ionShields1</sound>
@@ -1895,6 +1937,53 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>tc_ion_smol</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_HARMONIZER">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>HARMONY ENFORCER MODULE</title>
+	<short>HARMONIZER</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>ENFORCE THE HARMONY//PRIMARY DIRECTIVE: KILL ALL WHO GO AGAINST THE HARMONY//</desc>
+	<tooltip>3 shot//2 ion</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>2</ion>
+	<speed>60</speed>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>14</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion_ionHit1</sound>
+		<sound>smallExplosion_ionHit2</sound>
+		<sound>smallExplosion_ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_harmonizer</weaponArt>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
@@ -1931,9 +2020,9 @@
 		<sound>ionShoot3</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>ionHit1</sound>
-		<sound>ionHit2</sound>
-		<sound>ionHit3</sound>
+		<sound>smallExplosion_ionHit1</sound>
+		<sound>smallExplosion_ionHit2</sound>
+		<sound>smallExplosion_ionHit3</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>ionShields1</sound>
@@ -3426,7 +3515,7 @@
     <cooldown>1</cooldown>
     <dodge>0</dodge>
     <speed>10</speed>
-    <cost>100</cost>
+    <cost>60</cost>
     <bp>3</bp>
     <droneImage>heavy_flak_drone</droneImage>
     <weaponBlueprint>TC_DRONE_HEAVY_COMBAT</weaponBlueprint>
@@ -4779,7 +4868,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="16" start="false" />
-		<weapons power="5" max="8" room="6" start="true" img="room_weapons_4">
+		<weapons power="4" max="8" room="6" start="true" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -4790,10 +4879,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="18" count="4">
-		<weapon name="TC_DECONSTRUCTOR" />
-		<weapon name="LASER_HEAVY_1" />
+		<weapon name="TC_CLOAKER" />
+		<weapon name="TC_CLOAKER" />
 	</weaponList>
-	<droneList drones="7" count="4" />
+	<droneList drones="3" count="4" />
 	<health amount="30" />
 	<maxPower amount="11" />
 	<aug name="HEKTAR_GEL" />
@@ -4802,10 +4891,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_SLUGTON_3" layout="player_ship_slugton_3" img="player_ship_slugton_3">
 	<class>Rent-a-Flagship</class>
 	<name>J4NK-3R</name>
-	<desc>Why did Cheese remake this ship and bring it into the Federation Fleet? That's a good question!</desc>
+	<desc>This absolute junker was repainted with the Garbage Compactor color scheme and was refitted with random ship bits - for example, a Zoltan shield generator "rescued" from an abandoned Ministry transport.</desc>
 	<unlock id="ship_PLAYER_SHIP_SLUGTON_3_unlock"/>
 	<systemList>
-		<artillery power="1" room="17" start="true" weapon="TC_LIGHT_SHOW" img="room_artillery_5" />
+		<artillery power="1" room="17" start="true" weapon="IONARTILLERY" img="room_artillery_5" />
 		<battery power="1" room="2" start="false" img="room_battery" />
 		<cloaking power="1" room="13" start="true" img="room_cloaking 2x1 01-00-00" />
 		<clonebay power="1" room="10" start="true">
@@ -4923,7 +5012,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="15" start="true" />
-		<weapons power="2" room="6" start="true" img="room_weapons">
+		<weapons power="3" room="6" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4933,7 +5022,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="5" count="4">
-		<weapon name="TC_RESOLVER" />
+		<weapon name="TC_HARMONIZER" />
 	</weaponList>
 	<droneList drones="8" count="4" />
 	<health amount="30" />
@@ -6671,7 +6760,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_TC_MILSPEC" layout="player_ship_tc_milspec" img="player_ship_tc_milspec">
 	<class>Experimental Cargo Liner</class>
 	<name>Military Surplus</name>
-	<desc>This ship is a highly experimental Cargo Liner made by the Fedeartion - it's been specially outfitted with an Automated Quartermaster unit to help the crew create weaponry if needed.</desc>
+	<desc>This ship is a highly experimental Cargo Liner made by the Federation - it's been specially outfitted with an Automated Quartermaster unit purchased from the RSA in order to help the crew create weaponry if needed.</desc>
 	<unlock id="text_PLAYER_SHIP_TC_MILSPEC_unlock"/>
 	<systemList>
 		<artillery power="1" room="11" start="true" weapon="ARTILLERY_FIRE" img="room_artillery_3" />
@@ -7425,6 +7514,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Armed and dangerous - has 1.2x combat damage and sabotage speed.</power>
 		<power>Strength allows him to soak up damage taken, taking only 0.8x.</power>
 		<power>1.2x hazard damage taken, 120hp.</power>
+		<power>Multiversal Uplift active ability makes him and his allies able to teleport at will anywhere for 3 seconds.</power>
 	</powerList>
 </crewBlueprint>
 
