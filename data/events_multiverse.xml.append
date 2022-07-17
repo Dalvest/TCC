@@ -131,7 +131,7 @@
 	</event>
 
 	<event name="TC3_DESTROY">
-		<text>This time, they've alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
+		<text>This time, they had alerted their swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_LEAD"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -139,7 +139,7 @@
 	</event>
 
 	<event name="TC3_CREW">
-		<text>This time, they've alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
+		<text>This time, they had alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_LEAD"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -995,7 +995,7 @@
 <choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
 	<text>Not every fight is our fight.</text>
 	<event>
-		<text>You manage to sneak away by distracting the Scrappers - it seems the old "Rusting locomotives in your area" still works.</text>
+		<text>You manage to sneak away by distracting the Scrappers - it seems the old "Rusting locomotives in your area" method still works.</text>
 		<choice>
 			<text>Do something onboard the ship.</text>
 			<event load="STORAGE_CHECK"/>
@@ -1008,7 +1008,7 @@
 </choice>
 </event>
 
-<event name="ENCOUNTER_TC3">
+<!--<event name="ENCOUNTER_TC3">
 	<text>Hold on, we just killed these guys. How and why are they back? They... they seem to have learned from the previous engagements, as this time they've got you cornered.</text>
 	<beaconType id="map_icon_trash" global="true">
         <color r="110" g="32" b="9" a="1.0"/>
@@ -1045,9 +1045,88 @@
 			</choice>
 		</event>
 	</choice>
+</event>-->
+
+<event name="ENCOUNTER_TC3">
+	<text>Arriving at the beacon, you are met by four entire ships, all of them readying weapons against you. You won't be able to manuever away without fighting at least one ship.</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+    </beaconType>
+	<choice req="TC3_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+		<text>Get closer...</text>
+		<event>
+			<text>The four ships have you cornered - who will you attack?</text>
+			<choice>
+				<text>Attack the Corvette ship. </text>
+				<event>
+					<text>The Corvette starts powering up its weapons, detaches from the Trash fleet and takes position to fire at your ship!</text>
+					<ship load="TC_SCRAPPER_CORVETTE" hostile="true"/>
+					<choice hidden="true">
+						<text>Prepare for battle.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Attack the Hunter ship. </text>
+				<event>
+					<text>The Hunter acquires teleporter lock-on to your ship. Get ready for intruders!</text>
+					<ship load="TC_SCRAPPER_HUNTER" hostile="true"/>
+					<choice hidden="true">
+						<text>Prepare for battle.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Attack the Support ship. </text>
+				<event>
+					<text>The Support ship maneuvers itself close to your ship and powers up its drones!</text>
+					<ship load="TC_SCRAPPER_SUPPORT" hostile="true"/>
+					<choice hidden="true">
+						<text>Prepare for battle.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Ignore the lesser ships and attack the Trash Compactor itself. </text>
+				<event>
+					<text>The Trash Compactor was waiting for you, seemingly having anticipated your movements. You get a garbled, badly translated hail from them: "WE not sAme UN1verse. We smMORTer thAn oTher SCrappErS, wE k1Ll uNiversE and PREZent to leader FOR eat. STANd in the w4y, Y0u, die...". These guys aren't gonna talk it out, though, as they already powered up weapons!</text>
+					<ship load="TC_TRASH_COMPACTOR3" hostile="true"/>
+					<choice hidden="true">
+						<text>Let's end this. Again.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC3_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+		<text>The rest of the ships scatter seeing the carnage you've inflicted. You're safe, for now...</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="cloaking" lvl="3" max_group="998" blue="true" hidden="true">
+		<text>(Upgraded Cloaking) Sneak away.</text>
+		<event>
+			<text>Somehow, despite being cornered by them, your advanced Cloaking lets you disappear and manuever right between the enemy ships. You could probably do something at the beacon without being detected.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
 </event>
+
 <event name="ENCOUNTER_TC4">
-	<text>Hey, there's a second ship here. And it's not hostile. In fact, it's not even a Scrapper. It's a scavenger of some kind, judging by their terribly aged and dirty hull. Clearly a garbage disposal ship.</text>
+	<text>Hey, there's a second ship here. And it's not hostile. In fact, it's not even a Scrapper. It's a scavenger of some kind, judging by their terribly damaged and dirty hull. Clearly painted as a garbage disposal ship -  but it's way too well-armed to actually be one.</text>
 	<beaconType id="map_icon_trash" global="true">
         <color r="110" g="32" b="9" a="1.0"/>
         <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
@@ -1057,7 +1136,7 @@
 	<choice req="TC4_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 		<text>Try to intervene.</text>
 		<event>
-			<text>You receive a transmission from the Kestrel. A protogen appears on the communications console. "I'm TRACKER, Federation pilot. Pleased to meet you and everything. These bast- I mean, rude fellows are trying to kill us, and I don't know how much longer we'll hold. Help. I will make sure you get proper compens-AH, THEY GOT A BREACH HERE!"</text>
+			<text>You receive a transmission from the Kestrel. A protogen appears on the communications console. "I'm TRACKER, Federation pilot. Pleased to meet you and everything. These bast- I mean, rude fellows are trying to kill us, and I don't know how much longer we'll hold. Help. I will make sure you get proper compens-CHEESE WE LOST THE LEFT AFTERBURNER, GET TO FIXING IT NOW!"</text>
 			<choice>
 				<text>Help TRACKER!</text>
 				<event>
@@ -1084,7 +1163,7 @@
 		</event>
 	</choice>
 	<choice req="TC4_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
-		<text>The Scrap Transmitter's lights flicker wildly. It seems that it's receiving a massive signal... It was a trap all along. It's acting as a multiversal lure. Interesting... Maybe the hunter will become the hunted.</text>
+		<text>The Scrap Transmitter's lights flicker wildly. It seems that it's receiving a massive signal... It was a trap all along. It's acting as a multiversal lure, trying to bring even more Scrappers on your location... Interesting, maybe the hunters will soon become the hunted.</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">

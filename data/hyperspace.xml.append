@@ -1076,7 +1076,12 @@ MVAR [name] [value]
 		<mod-append:ship name="PLAYER_SHIP_ROBOTTO" b="false" c="false" unused="true" >
 		<unlock variant="a" silent="false">
 			<type>3</type>
-			<shipReq>PLAYER_SHIP_MVCIVILIAN</shipReq>
+			<otherUnlocks>
+				<ship>PLAYER_SHIP_MVCIVILIAN</ship>
+				<ship>PLAYER_SHIP_CIVILIAN</ship>
+				<ship>PLAYER_SHIP_CIVILIAN_2</ship>
+				<ship>PLAYER_SHIP_CIVILIAN_3</ship>
+			</otherUnlocks>
 		</unlock>
 	</mod-append:ship>
 		<mod-append:customShip name="PLAYER_SHIP_ROBOTTO">
@@ -1138,9 +1143,9 @@ MVAR [name] [value]
 			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
 			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
 			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming Ships -->
+			<mod-append:empty/>
+			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_TC_MILSPEC</mod-append:ship> <!-- Milspec Ships -->
-			<mod-append:empty/>
-			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 		</mod:findLike>
@@ -3083,11 +3088,11 @@ MVAR [name] [value]
 				<whiteList>
 					<engi_separatist_nano/>
 					<orchid_chieftain/>
-					<LIST_CREW_GHOST/>
-					<LIST_CREW_LANIUS/>
-					<LIST_CREW_ANCIENT/>
-					<LIST_CREW_SCRAPPER/>
-					<LIST_CREW_MORPH/>
+					<blueprintList load="LIST_CREW_GHOST"/>
+					<blueprintList load="LIST_CREW_LANIUS"/>
+					<blueprintList load="LIST_CREW_ANCIENT"/>
+					<blueprintList load="LIST_CREW_SCRAPPER"/>
+					<blueprintList load="LIST_CREW_MORPH"/>
 				</whiteList>
 				<amount>-2</amount>
 				<priority>0</priority>
@@ -3210,7 +3215,8 @@ MVAR [name] [value]
 		</statBoosts>
 	</aug>
 
-  <!--PROTOGEN LABS-->
+<!--//////////////////PROTOGEN LAB UPGRADES//////////////-->
+
 	<aug name="LAB_PROTOGEN_AWARENESS">
 		<statBoosts>
 			<statBoost name="cloneLoseSkills">
@@ -3389,7 +3395,8 @@ MVAR [name] [value]
 		</statBoosts>
 	</aug>
 
-	<!--//////////////////AVALI AUGMENTS///////////////-->
+<!--//////////////////AVALI LAB UPGRADES//////////////-->
+
 	<aug name="LAB_AVALI_FLAMECLOAKS">
 		<statBoosts>
 			<statBoost name="fireDamageMultiplier">
@@ -3420,6 +3427,7 @@ MVAR [name] [value]
 			</statBoost>
 		</statBoosts>
 	</aug>
+
 	<aug name="LAB_AVALI_INSTALLED">
 		<statBoosts>
 			<statBoost name="fireDamageMultiplier">
@@ -3437,6 +3445,7 @@ MVAR [name] [value]
 			</statBoost>
 		</statBoosts>
 	</aug>
+
 	<aug name="LAB_AVALI_DENSEFLUFF">
 		<statBoosts>
 			<statBoost name="fireDamageMultiplier">
@@ -3480,6 +3489,7 @@ MVAR [name] [value]
 			</whiteList>
 		</statBoost>
 	</aug>
+
 	<aug name="EX_LAB_AVALI_NOCLONEXP">
 		<statBoosts>
 			<statBoost name="fireDamageMultiplier">
@@ -3536,6 +3546,7 @@ MVAR [name] [value]
 			</statBoost>
 		</statBoosts>
 	</aug>
+
 	<aug name="LAB_AVALI_NOCLONEXP">
 		<statBoosts>
 			<statBoost name="statBoost">
@@ -3714,14 +3725,11 @@ MVAR [name] [value]
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	BOSSES
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
+	<events>
 	<bossShip>TC_TRASH_COMPACTOR1</bossShip>
 	<bossShip>TC_TRASH_COMPACTOR2</bossShip>
 	<bossShip>TC_TRASH_COMPACTOR3</bossShip>
@@ -3729,15 +3737,12 @@ MVAR [name] [value]
 	<bossShip>TC_TRASH_COMPACTOR5</bossShip>
 	<bossShip>TC_TRASH_COMPACTOR6</bossShip>
 	<bossShip>TC_TRASH_MINER</bossShip>
+	</events>
 
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	SURGE
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
