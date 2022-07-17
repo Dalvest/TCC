@@ -1940,6 +1940,53 @@
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_HARMONIZER">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>Rebel Ion</title>
+	<short>Rebel Ion</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>ENFORCE THE HARMONY//PRIMARY DIRECTIVE: KILL ALL WHO GO AGAINST THE HARMONY//</desc>
+	<tooltip>3 shot//2 ion</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>2</ion>
+	<speed>60</speed>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>14</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion_ionHit1</sound>
+		<sound>smallExplosion_ionHit2</sound>
+		<sound>smallExplosion_ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_harmonizer</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="IONARTILLERY">
 	<type>LASER</type>
 	<title>Chain Ion Artillery</title>
