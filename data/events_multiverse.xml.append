@@ -995,7 +995,7 @@
 <choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
 	<text>Not every fight is our fight.</text>
 	<event>
-		<text>You manage to sneak away by distracting the Scrappers - it seems the old "Rusting locomotives in your area" still works.</text>
+		<text>You manage to sneak away by distracting the Scrappers - it seems the old "Rusting locomotives in your area" method still works.</text>
 		<choice>
 			<text>Do something onboard the ship.</text>
 			<event load="STORAGE_CHECK"/>
@@ -1060,7 +1060,7 @@
 		<event>
 			<text>The four ships have you cornered - who will you attack?</text>
 			<choice>
-				<text>Attack the Corvette. </text>
+				<text>Attack the Corvette ship. </text>
 				<event>
 					
 					<text>The Corvette starts powering up its weapons, detaches from the Trash fleet and takes position to fire at your ship!</text>
@@ -1072,7 +1072,7 @@
 				</event>
 			</choice>
 			<choice>
-				<text>Attack the Hunter. </text>
+				<text>Attack the Hunter ship. </text>
 				<event>
 					
 					<text>The Hunter acquires teleporter lock-on to your ship. Get ready for intruders!</text>
@@ -1084,7 +1084,7 @@
 				</event>
 			</choice>
 			<choice>
-				<text>Attack the Support. </text>
+				<text>Attack the Support ship. </text>
 				<event>
 					
 					<text>The Support ship maneuvers itself close to your ship and powers up its drones!</text>
@@ -1096,7 +1096,7 @@
 				</event>
 			</choice>
 			<choice>
-				<text>Attack the Trash Compactor. </text>
+				<text>Ignore the lesser ships and attack the Trash Compactor itself. </text>
 				<event>
 					
 					<text>The Trash Compactor was waiting for you, seemingly having anticipated your movements. You get a garbled, badly translated hail from them: "WE not sAme UN1verse. We smMORTer thAn oTher SCrappErS, wE k1Ll uNiversE and PREZent to leader FOR eat. STANd in the w4y, Y0u, die...". These guys aren't gonna talk it out, though, as they already powered up weapons!</text>

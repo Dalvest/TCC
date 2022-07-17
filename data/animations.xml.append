@@ -339,6 +339,16 @@
 	<mountPoint x="7" y="30"/>
 </weaponAnim>
 
+<animSheet name="tc_cloaker" w="81" h="60" fw="27" fh="60">weapon_missile/tc_cloaker.png</animSheet>
+<weaponAnim name="tc_cloaker">
+	<sheet>tc_cloaker</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="15" y="20"/>
+	<mountPoint x="7" y="30"/>
+</weaponAnim>
+
 <animSheet name="tc_stolen_battery" w="440" h="65" fw="55" fh="65">weapon_missile/tc_stolen_battery.png</animSheet>
 <weaponAnim name="tc_stolen_battery">
 	<sheet>tc_stolen_battery</sheet>
@@ -846,12 +856,20 @@
 	<time>1</time>
 </anim>
 
-<animSheet name="tc_projectile_firework" w="19" h="7" fw="19" fh="7">weapon_missile/tc_projectile_firework.png</animSheet>
+<animSheet name="tc_cloak_missile" w="640" h="32" fw="80" fh="32">projectiles/tc_cloak_missile.png</animSheet>
+<anim name="tc_cloak_missile">
+	<sheet>tc_cloak_missile</sheet>
+	<desc length="8" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="tc_projectile_firework" w="19" h="7" fw="19" fh="7">projectiles/tc_projectile_firework.png</animSheet>
 <anim name="tc_projectile_firework">
 	<sheet>tc_projectile_firework</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
+
 <animSheet name="tc_firework_explosion" w="3100" h="100" fw="100" fh="100">effects/explosion_firework.png</animSheet>
 <anim name="tc_firework_explosion">
 	<sheet>tc_firework_explosion</sheet>
