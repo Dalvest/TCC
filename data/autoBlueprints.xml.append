@@ -557,9 +557,9 @@
 		<scrapper_engineer room="3"/>
 		<scrapper_speed room="5"/>
 		<scrapper_heavy room="11"/>
-		<scrapper room="4"/>
+		<trash_eater room="0" name="Trash Eater"/>
     </crew>
-	<crewCount amount="1" max="1" class="trash_eater" />
+	<crewCount amount="1" max="1" class="scrapper" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
