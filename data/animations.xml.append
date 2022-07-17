@@ -1776,126 +1776,125 @@
 
 <!--///////////////HEAVY SCRAPPER///////////////-->
 
-<animSheet name="rock" w="350" h="455" fw="35" fh="35">people/scrapper_heavy_base.png</animSheet>
-
+<animSheet name="scrapper_heavy" w="280" h="490" fw="35" fh="35">people/scrapper_heavy_base.png</animSheet>
 <anim name="scrapper_heavy_clone">
-	<sheet>rock</sheet>
-	<desc length="6" x="0" y="2" />
-	<time>1.0</time>
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
 </anim>
 <anim name="scrapper_heavy_death_right">
-	<sheet>rock</sheet>
-	<desc length="7" x="3" y="0" />
-	<time>1.0</time>
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
 </anim>
 <anim name="scrapper_heavy_death_left">
-	<sheet>rock</sheet>
-	<desc length="7" x="3" y="0" />
-	<time>1.0</time>
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
 </anim>
 <anim name="scrapper_heavy_walk_down">
-	<sheet>rock</sheet>
-	<desc length="4" x="0" y="12" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="13"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_walk_right">
-	<sheet>rock</sheet>
-	<desc length="4" x="4" y="12" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="13"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_walk_up">
-	<sheet>rock</sheet>
-	<desc length="4" x="0" y="11" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="12"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_walk_left">
-	<sheet>rock</sheet>
-	<desc length="4" x="4" y="11" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="12"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_shoot_down">
-	<sheet>rock</sheet>
-	<desc length="4" x="0" y="10" />
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="11"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_shoot_right">
-	<sheet>rock</sheet>
-	<desc length="4" x="4" y="10" />
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="11"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_shoot_up">
-	<sheet>rock</sheet>
-	<desc length="4" x="0" y="9" />
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="10"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_shoot_left">
-	<sheet>rock</sheet>
-	<desc length="4" x="4" y="9" />
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="10"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_fire_down">
-	<sheet>rock</sheet>
-	<desc length="10" x="0" y="8" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="9"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_fire_right">
-	<sheet>rock</sheet>
-	<desc length="10" x="0" y="8" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="9"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_fire_up">
-	<sheet>rock</sheet>
-	<desc length="10" x="0" y="8" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="8"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_fire_left">
-	<sheet>rock</sheet>
-	<desc length="10" x="0" y="8" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="8"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_repair">
-	<sheet>rock</sheet>
-	<desc length="8" x="0" y="7" />
+	<sheet>lanius</sheet>
+	<desc length="4" x="3" y="0"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_punch_up">
-	<sheet>rock</sheet>
-	<desc length="6" x="3" y="1" />
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="7"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_punch_down">
-	<sheet>rock</sheet>
-	<desc length="6" x="0" y="6" />
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="6"/>
 	<time>1.0</time>
 </anim>
 <anim name="scrapper_heavy_teleport">
-	<sheet>rock</sheet>
-	<desc length="9" x="0" y="3" />
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="3"/>
 	<time>0.5</time>
 </anim>
 <anim name="scrapper_heavy_type_right">
-	<sheet>rock</sheet>
-	<desc length="4" x="0" y="5" />
-	<time>1</time>
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
 </anim>
 <anim name="scrapper_heavy_type_left">
-	<sheet>rock</sheet>
-	<desc length="4" x="4" y="5" />
-	<time>1</time>
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
 </anim>
 <anim name="scrapper_heavy_type_up">
-	<sheet>rock</sheet>
-	<desc length="4" x="0" y="4" />
-	<time>1</time>
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
 </anim>
 <anim name="scrapper_heavy_type_down">
-	<sheet>rock</sheet>
-	<desc length="4" x="4" y="4" />
-	<time>1</time>
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
 </anim>
 <anim name="scrapper_heavy_portrait">
-	<sheet>rock</sheet>
-	<desc length="1" x="0" y="0" />
+	<sheet>lanius</sheet>
+	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
