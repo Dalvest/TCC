@@ -1076,7 +1076,12 @@ MVAR [name] [value]
 		<mod-append:ship name="PLAYER_SHIP_ROBOTTO" b="false" c="false" unused="true" >
 		<unlock variant="a" silent="false">
 			<type>3</type>
-			<shipReq>PLAYER_SHIP_MVCIVILIAN</shipReq>
+			<otherUnlocks>
+				<ship>PLAYER_SHIP_MVCIVILIAN</ship>
+				<ship>PLAYER_SHIP_CIVILIAN</ship>
+				<ship>PLAYER_SHIP_CIVILIAN_2</ship>
+				<ship>PLAYER_SHIP_CIVILIAN_3</ship>
+			</otherUnlocks>
 		</unlock>
 	</mod-append:ship>
 		<mod-append:customShip name="PLAYER_SHIP_ROBOTTO">
