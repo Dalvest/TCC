@@ -1062,7 +1062,6 @@
 			<choice>
 				<text>Attack the Corvette ship. </text>
 				<event>
-					
 					<text>The Corvette starts powering up its weapons, detaches from the Trash fleet and takes position to fire at your ship!</text>
 					<ship load="TC_SCRAPPER_CORVETTE" hostile="true"/>
 					<choice hidden="true">
@@ -1074,7 +1073,6 @@
 			<choice>
 				<text>Attack the Hunter ship. </text>
 				<event>
-					
 					<text>The Hunter acquires teleporter lock-on to your ship. Get ready for intruders!</text>
 					<ship load="TC_SCRAPPER_HUNTER" hostile="true"/>
 					<choice hidden="true">
@@ -1086,9 +1084,8 @@
 			<choice>
 				<text>Attack the Support ship. </text>
 				<event>
-					
 					<text>The Support ship maneuvers itself close to your ship and powers up its drones!</text>
-					<ship load="TC_SCRAPPER_CORVETTE" hostile="true"/>
+					<ship load="TC_SCRAPPER_SUPPORT" hostile="true"/>
 					<choice hidden="true">
 						<text>Prepare for battle.</text>
 						<event load="COMBAT_CHECK"/>
@@ -1098,7 +1095,6 @@
 			<choice>
 				<text>Ignore the lesser ships and attack the Trash Compactor itself. </text>
 				<event>
-					
 					<text>The Trash Compactor was waiting for you, seemingly having anticipated your movements. You get a garbled, badly translated hail from them: "WE not sAme UN1verse. We smMORTer thAn oTher SCrappErS, wE k1Ll uNiversE and PREZent to leader FOR eat. STANd in the w4y, Y0u, die...". These guys aren't gonna talk it out, though, as they already powered up weapons!</text>
 					<ship load="TC_TRASH_COMPACTOR3" hostile="true"/>
 					<choice hidden="true">

@@ -3080,11 +3080,11 @@ MVAR [name] [value]
 				<whiteList>
 					<engi_separatist_nano/>
 					<orchid_chieftain/>
-					<LIST_CREW_GHOST/>
-					<LIST_CREW_LANIUS/>
-					<LIST_CREW_ANCIENT/>
-					<LIST_CREW_SCRAPPER/>
-					<LIST_CREW_MORPH/>
+					<blueprintList load="LIST_CREW_GHOST"/>
+					<blueprintList load="LIST_CREW_LANIUS"/>
+					<blueprintList load="LIST_CREW_ANCIENT"/>
+					<blueprintList load="LIST_CREW_SCRAPPER"/>
+					<blueprintList load="LIST_CREW_MORPH"/>
 				</whiteList>
 				<amount>-2</amount>
 				<priority>0</priority>
