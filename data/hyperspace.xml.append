@@ -120,11 +120,11 @@ MVAR [name] [value]
 			<count min="6" max="11"/>
 		</resource>
 		<category type="WEAPONS">
-			<item>    
-			<modifier min="1" max="1.5" flat="false"/><!--Multiplier to price-->                
+			<item>
+			<modifier min="1" max="1.5" flat="false"/><!--Multiplier to price-->
 			<blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
 			<price>-1</price><!--You can set the price of the item here, -1 defaults to the price in the weapon blueprint-->
-			<mysteryItem>false</mysteryItem><!--"Item of the day"-->                    
+			<mysteryItem>false</mysteryItem><!--"Item of the day"-->
 			</item>
 			<chance>100</chance>
         </category>
@@ -583,7 +583,7 @@ MVAR [name] [value]
 			<shipReq>PLAYER_SHIP_POTENTIAL</shipReq>
 			<value>5</value>
 		</unlock>
-	
+
 		</mod-append:ship>
 
 		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
@@ -1013,7 +1013,7 @@ MVAR [name] [value]
 		</mod-append:customShip>
 
 		<!--/////// LEAH GAMING //////-->
-	
+
 		<mod-append:ship name="PLAYER_SHIP_NEWTONBEAMA" b="true" c="true" unused="true" >
 			<unlock variant="b" silent="false">
 				<type>2</type>
@@ -1022,7 +1022,7 @@ MVAR [name] [value]
 				<type>4</type>
 				</unlock>
 		</mod-append:ship>
-		
+
 		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA">
 			<crewLimit>8</crewLimit>
 			<hiddenAug>SHIP_REBEL</hiddenAug>
@@ -1038,7 +1038,7 @@ MVAR [name] [value]
 				<!--shields-->
 			</crew>
 		</mod-append:customShip>
-		
+
 		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_2">
 			<crewLimit>6</crewLimit>
 			<hiddenAug>SHIP_REBEL</hiddenAug>
@@ -1054,7 +1054,7 @@ MVAR [name] [value]
 				<!--tp-->
 			</crew>
 		</mod-append:customShip>
-		
+
 		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_3">
 			<crewLimit>9</crewLimit>
 			<hiddenAug>SHIP_REBEL</hiddenAug>
@@ -1084,6 +1084,14 @@ MVAR [name] [value]
 			<hiddenAug>SHIP_ROBOTTOS</hiddenAug>
 			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		</mod-append:customShip>
+
+    <mod-append:customShip name="TC_TRASH_COMPACTOR1">
+      <shipIcons>
+				<shipIcon>icon_threat</shipIcon>
+				<shipIcon>icon_no2</shipIcon>
+			</shipIcons>
+      <noFuelStalemate/>
+    </mod-append:customShip>
 
 	</mod:findLike>
 
