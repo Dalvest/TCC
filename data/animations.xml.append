@@ -319,6 +319,26 @@
 	<mountPoint x="3" y="45"/>
 </weaponAnim>
 
+<animSheet name="tc_overlord" w="1406" h="68" fw="37" fh="68">weapon_laser/tc_overlord.png</animSheet>
+<weaponAnim name="tc_overlord">
+	<sheet>tc_overlord</sheet>
+	<desc length="38" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="23" y="3"/>
+	<mountPoint x="7" y="39"/>
+</weaponAnim>
+
+<animSheet name="rebel_dart" w="260" h="59" fw="20" fh="59">weapon_laser/rebel_dart.png</animSheet>
+<weaponAnim name="rebel_dart">
+	<sheet>rebel_dart</sheet>
+	<desc length="13" x="0" y="0"/>
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint  x="15" y="3"/>
+	<mountPoint x="3" y="44"/>
+</weaponAnim>
+
 <!--/////////////////// DEBUFFER //////////////////-->
 
 <animSheet name="tcc_debuff_slow_1" w="145" h="35" fw="29" fh="35">weapon_debuffer/tc_debuffer_mk1.png</animSheet>
