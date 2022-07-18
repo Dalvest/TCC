@@ -1126,6 +1126,52 @@
 		<sound>flak</sound>
 	</launchSounds>
 	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>fireBomb</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_bomb_shotgun_fire</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_BOMB_SHOTGUN_LOCK">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Lockdown Bomb Flak Gun</title>
+	<short>L. Bomb Flak</short>
+	<tip>tip_flak</tip>
+	<desc>Fires 4 bombs that lockdown rooms, do double system damage, and have a low chance of fire and breach. Requires a missile to fire, but doesn't go through shields.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
+	<radius>55</radius>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<missiles>1</missiles>
+	<spin>720</spin>
+	<shots>1</shots>
+	<lockdown>1</lockdown>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>14</cooldown>
+	<power>3</power>
+	<cost>85</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="4" fake="false">bomb_lockdown</projectile>
+	</projectiles>
+	<explosion>explosion_lockdown</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
 		<sound>smallExplosion</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
@@ -1134,7 +1180,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_fire</weaponArt>
+	<weaponArt>tc_bomb_shotgun_lockdown</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1378,6 +1424,84 @@
 	</missSounds>
 	<weaponArt>militia_tagger</weaponArt>
 	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_OVERLORD">
+	<type>LASER</type>
+	<title>'OVERLORD' Supercharger Laser</title>
+	<short>Overlord</short>
+	<tip>tip_charge</tip>
+	<desc>One of RAPTOR's weirder ideas was a combination between a Vulcan and a few broken laser weapons - this is one of the better weapons he'd managed to create, though.</desc>
+	<tooltip>Fires up to 8 lasers; 1 damage each. 4 seconds per charge, 20 seconds max cooldown.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>4</cooldown>
+	<power>4</power>
+	<cost>95</cost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<image>laser_light1</image>
+	<chargeLevels>5</chargeLevels>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_overlord</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="REBEL_DART">
+	<type>LASER</type>
+	<tip>tip_laser</tip>
+	<title>Rebel 'Dart' Laser</title>
+	<short>Dart Laser</short>
+	<desc>This weapon of Rebel design fires a short burst of lasers.</desc>
+	<tooltip>Fires 2 lasers; 1 damage each.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rebel_dart</weaponArt>
 </weaponBlueprint>
 
 <!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
@@ -1686,7 +1810,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>'Party Starter' Dispenser</title>
 	<short>'Party Starter'</short>
-	<desc>A recycler module configured to produce random fireworks strapped to a throwing arm, not at all a fire hazard.</desc>
+	<desc>A recycler module configured to produce random fireworks strapped to a throwing arm; also, not at all a fire hazard.</desc>
 	<!--<descriptionOverride>They says smaller weapons deal less damage but fire faster, but this is a bit much...
 
 		Stats:
@@ -2293,20 +2417,20 @@
 	<title>Minigun Mark I</title>
 	<short>Minigun Mk.1</short>
 	<desc>A relic from the Federation-Hive war - an autocannon minigun! It uses caseless ammunition which can be replicated using missiles.</desc>
-	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - 85% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>95</freeMissileChance>
+	<freeMissileChance>85</freeMissileChance>
 	<damage>1</damage>
-	<shots>2</shots>
+	<shots>1</shots>
 	<sp>0</sp>
 	<radius>40</radius>
 	<breachChance>0</breachChance>
-	<cooldown>14</cooldown>
+	<cooldown>17</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
 		<amount>2</amount>
-		<count>5</count>
+		<count>6</count>
 	</boost>
 	<bp>4</bp>
 	<rarity>5</rarity>
@@ -2338,19 +2462,19 @@
 	<title>Minigun Mark II</title>
 	<short>Minigun Mk.2</short>
 	<desc>A relic from the Federation-Hive war. This is an upgraded model of the Mk. 1 minigun... it's faster and better, but it uses more ammunition.</desc>
-	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 85% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 75% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>85</freeMissileChance>
+	<freeMissileChance>75</freeMissileChance>
 	<damage>1</damage>
-	<shots>2</shots>
+	<shots>1</shots>
 	<sp>1</sp>
 	<radius>30</radius>
 	<breachChance>0</breachChance>
-	<cooldown>12</cooldown>
+	<cooldown>16</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
-		<amount>2</amount>
+		<amount>3</amount>
 		<count>5</count>
 	</boost>
 	<bp>4</bp>
@@ -2383,14 +2507,14 @@
 	<title>Minigun Mark III</title>
 	<short>Minigun Mk.3</short>
 	<desc>The Vulcan pales in comparison to this - while the other two miniguns would've only fit in a museum, this... this is a weapon.</desc>
-	<tooltip>3 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires, pierces one shield - 65% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>95</freeMissileChance>
+	<freeMissileChance>65</freeMissileChance>
 	<damage>1</damage>
-	<shots>3</shots>
-	<sp>0</sp>
-	<radius>30</radius>
-	<breachChance>0</breachChance>
+	<shots>1</shots>
+	<sp>1</sp>
+	<radius>10</radius>
+	<breachChance>1</breachChance>
 	<cooldown>13</cooldown>
 	<power>3</power>
 	<boost>
@@ -2427,7 +2551,7 @@
 	<type>LASER</type>
 	<title>RSA Minicannon</title>
 	<short>Minicannon</short>
-	<desc>This is a small cannon. ...That's about it. It's pretty cool, though.</desc>
+	<desc>This is a small, simple cannon. ...That's about it. It's pretty cool, though.</desc>
 	<tooltip>1 shot 1 damage weapon, pierces one shield bubble, 85% chance to not use ammo, 10% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>85</freeMissileChance>
@@ -3456,7 +3580,7 @@
     <power>3</power>
     <cooldown>3</cooldown>
     <dodge>0</dodge>
-    <speed>75</speed>
+    <speed>20</speed>
     <cost>100</cost>
     <bp>3</bp>
     <droneImage>unstable_drone</droneImage>
@@ -3571,7 +3695,7 @@
     <power>3</power>
     <cooldown>3</cooldown>
     <dodge>0</dodge>
-    <speed>45</speed>
+    <speed>12</speed>
     <cost>150</cost>
     <bp>3</bp>
     <droneImage>bomb_flak_drone</droneImage>
@@ -4107,7 +4231,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="2" room="9" start="true" img="room_doors">
+		<doors power="1" room="9" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4128,7 +4252,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</medbay>
 		<mind power="1" room="5" start="false" img="room_mind" />
 		<oxygen power="1" room="10" start="true" img="room_oxygen_6" />
-		<pilot power="3" room="1" start="true" img="ancient_pilot">
+		<pilot power="1" room="1" start="true" img="ancient_pilot">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -4146,9 +4270,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="3" start="true" />
+		<teleporter power="1" room="3" start="false" />
 		<temporal power="1" room="8" start="false" img="" />
-		<weapons power="3" max="8" room="2" start="true" img="room_weapons">
+		<weapons power="4" max="8" room="2" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4157,13 +4281,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</systemList>
 	<systemLimit>10</systemLimit>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
+	<droneSlots>3</droneSlots>
 	<weaponList missiles="7" count="4">
-		<weapon name="TC_LASER_MARKSMAN" />
+		<weapon name="TC_OVERLORD" />
 	</weaponList>
 	<droneList drones="15" count="4">
 		<drone name="REPAIR" />
-		<drone name="BATTLETOG_BOARDER" />
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="6" />
@@ -4227,6 +4350,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="3" count="2" />
@@ -4654,6 +4778,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="11" count="4" />
@@ -4724,6 +4849,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="16" count="4">
@@ -5019,6 +5145,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="5" count="4">
@@ -7406,10 +7533,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// RSA TANK //////-->
 
 <crewBlueprint name="rsa_tank">
-	<desc>A very cool drone! I think.</desc>
+	<desc>A very cool tank! I think.</desc>
 	<cost>40</cost>
-	<title>RSA Remote Control Tank</title>
-	<short>RSA RC Tank</short>
+	<title>RSA Tank Drone</title>
+	<short>RSA Tank</short>
 	<rarity>0</rarity>
 	<powerList>
 		<power>Max Health is 70, x1.5 movement speed</power>

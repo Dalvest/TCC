@@ -256,6 +256,17 @@
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_fire_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="tc_bomb_shotgun_lockdown" w="484" h="48" fw="44" fh="48">weapon_bomb_flak/tc_bomb_shotgun_lockdown.png</animSheet>
+<weaponAnim name="tc_bomb_shotgun_lockdown">
+	<sheet>tc_bomb_shotgun_lockdown</sheet>
+	<desc length="11" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="18" y="8"/>
+	<mountPoint x="5" y="31"/>
+	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_lockdown_glow.png</chargeImage>
+</weaponAnim>
+
 <!--/////////////////// LASER //////////////////-->
 
 <animSheet name="tc_laser_marksman" w="392" h="95" fw="28" fh="95">weapon_laser/tc_laser_marksman.png</animSheet>
@@ -306,6 +317,26 @@
 	<fireFrame>8</fireFrame>
 	<firePoint  x="17" y="2"/>
 	<mountPoint x="3" y="45"/>
+</weaponAnim>
+
+<animSheet name="tc_overlord" w="1406" h="68" fw="37" fh="68">weapon_laser/tc_overlord.png</animSheet>
+<weaponAnim name="tc_overlord">
+	<sheet>tc_overlord</sheet>
+	<desc length="38" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="23" y="3"/>
+	<mountPoint x="7" y="39"/>
+</weaponAnim>
+
+<animSheet name="rebel_dart" w="260" h="59" fw="20" fh="59">weapon_laser/rebel_dart.png</animSheet>
+<weaponAnim name="rebel_dart">
+	<sheet>rebel_dart</sheet>
+	<desc length="13" x="0" y="0"/>
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint  x="15" y="3"/>
+	<mountPoint x="3" y="44"/>
 </weaponAnim>
 
 <!--/////////////////// DEBUFFER //////////////////-->
@@ -2361,7 +2392,7 @@
 
 <!--/////////////// RSA TANK //////////////-->
 
-<animSheet name="rsa_tank" w="385" h="175" fw="35" fh="35">people/tonk_base.png</animSheet>
+<animSheet name="rsa_tank" w="385" h="175" fw="35" fh="35">people/rsa_tank_base.png</animSheet>
 	<animSheet name="rsa_tank_death" w="320" h="32" fh="32" fw="32">effects/explosion1_strip10.png</animSheet>
 	<anim name="rsa_tank_death_right">
 		<sheet>rsa_tank_death</sheet>
