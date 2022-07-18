@@ -2417,20 +2417,20 @@
 	<title>Minigun Mark I</title>
 	<short>Minigun Mk.1</short>
 	<desc>A relic from the Federation-Hive war - an autocannon minigun! It uses caseless ammunition which can be replicated using missiles.</desc>
-	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - 85% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>95</freeMissileChance>
+	<freeMissileChance>85</freeMissileChance>
 	<damage>1</damage>
-	<shots>2</shots>
+	<shots>1</shots>
 	<sp>0</sp>
 	<radius>40</radius>
 	<breachChance>0</breachChance>
-	<cooldown>14</cooldown>
+	<cooldown>17</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
 		<amount>2</amount>
-		<count>5</count>
+		<count>6</count>
 	</boost>
 	<bp>4</bp>
 	<rarity>5</rarity>
@@ -2462,19 +2462,19 @@
 	<title>Minigun Mark II</title>
 	<short>Minigun Mk.2</short>
 	<desc>A relic from the Federation-Hive war. This is an upgraded model of the Mk. 1 minigun... it's faster and better, but it uses more ammunition.</desc>
-	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 85% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 75% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>85</freeMissileChance>
+	<freeMissileChance>75</freeMissileChance>
 	<damage>1</damage>
-	<shots>2</shots>
+	<shots>1</shots>
 	<sp>1</sp>
 	<radius>30</radius>
 	<breachChance>0</breachChance>
-	<cooldown>12</cooldown>
+	<cooldown>16</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
-		<amount>2</amount>
+		<amount>3</amount>
 		<count>5</count>
 	</boost>
 	<bp>4</bp>
@@ -2507,14 +2507,14 @@
 	<title>Minigun Mark III</title>
 	<short>Minigun Mk.3</short>
 	<desc>The Vulcan pales in comparison to this - while the other two miniguns would've only fit in a museum, this... this is a weapon.</desc>
-	<tooltip>3 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires, pierces one shield - 65% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>95</freeMissileChance>
+	<freeMissileChance>65</freeMissileChance>
 	<damage>1</damage>
-	<shots>3</shots>
-	<sp>0</sp>
-	<radius>30</radius>
-	<breachChance>0</breachChance>
+	<shots>1</shots>
+	<sp>1</sp>
+	<radius>10</radius>
+	<breachChance>1</breachChance>
 	<cooldown>13</cooldown>
 	<power>3</power>
 	<boost>
@@ -7518,10 +7518,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// RSA TANK //////-->
 
 <crewBlueprint name="rsa_tank">
-	<desc>A very cool drone! I think.</desc>
+	<desc>A very cool tank! I think.</desc>
 	<cost>40</cost>
-	<title>RSA Remote Control Tank</title>
-	<short>RSA RC Tank</short>
+	<title>RSA Tank Drone</title>
+	<short>RSA Tank</short>
 	<rarity>0</rarity>
 	<powerList>
 		<power>Max Health is 70, x1.5 movement speed</power>
