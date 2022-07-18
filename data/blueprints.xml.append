@@ -1134,7 +1134,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_fire</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_fire</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -5658,6 +5658,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="7" start="false" img="room_battery_6" />
 		<cloaking power="1" room="8" start="true" img="room_cloaking_3" />
+		<clonebay power="1" room="10" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="1" start="true" img="room_doors_3">
 			<slot>
 				<direction>right</direction>
@@ -5730,6 +5735,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="10" start="false" img="room_battery" />
 		<cloaking power="2" room="13" start="true" img="room_cloaking_9" />
+		<clonebay power="1" room="5" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="15" start="true" img="room_doors_6">
 			<slot>
 				<direction>right</direction>
@@ -5801,6 +5811,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="4" start="false" img="room_battery_14" />
 		<cloaking power="1" room="5" start="true" img="room_cloaking_orchid_3" />
+		<clonebay power="1" room="3" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="2" start="true" img="room_doors_9">
 			<slot>
 				<direction>right</direction>
