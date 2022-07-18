@@ -1145,7 +1145,7 @@
 	<title>Lockdown Bomb Flak Gun</title>
 	<short>L. Bomb Flak</short>
 	<tip>tip_flak</tip>
-	<desc>Fires 4 fire bombs that are guaranteed to start a fire and do double system damage. Requires a missile to fire, but doesn't go through shields.</desc>
+	<desc>Fires 4 bombs that lockdown rooms, do double system damage, and have a low chance of fire and breach. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
 	<radius>55</radius>
 	<damage>1</damage>
@@ -5703,7 +5703,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<unlock id="ship_PLAYER_SHIP_BLACKOPS_unlock"/>
 	<systemList>
 		<battery power="1" room="7" start="false" img="room_battery_6" />
-		<cloaking power="1" room="8" start="true" img="room_cloaking_3" />
+		<cloaking power="2" room="8" start="true" img="room_cloaking_3" />
 		<doors power="1" room="1" start="true" img="room_doors_3">
 			<slot>
 				<direction>right</direction>
@@ -5723,7 +5723,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>-2</number>
 			</slot>
 		</medbay>
-		<mind power="1" room="12" start="true" img="room_mind_9" />
+		<mind power="2" room="12" start="true" img="room_mind_9" />
 		<oxygen power="1" room="4" start="true" img="room_oxygen_9" />
 		<pilot power="1" room="0" start="true" img="room_pilot_2">
 			<slot>
@@ -5731,7 +5731,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="2" start="true" img="room_sensors_3">
+		<sensors power="2" room="2" start="true" img="room_sensors_3">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -5759,7 +5759,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<weapon name="SHOTGUN_1" />
 	</weaponList>
 	<droneList drones="0" count="2" />
-	<health amount="10" />
+	<health amount="15" />
 	<maxPower amount="8" />
 	<crewCount amount="1" class="human_angel" />
 	<crewCount amount="1" class="shell_mechanic" />
@@ -5830,7 +5830,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<weapon name="ION_PIERCE_1" />
 	</weaponList>
 	<droneList drones="0" count="2" />
-	<health amount="10" />
+	<health amount="15" />
 	<maxPower amount="9" />
 	<crewCount amount="2" class="human_angel" />
 	<crewCount amount="1" class="engi_separatist" />
@@ -5846,7 +5846,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<unlock id="ship_PLAYER_SHIP_BLACKOPS_3_unlock"/>
 	<systemList>
 		<battery power="1" room="4" start="false" img="room_battery_14" />
-		<cloaking power="1" room="5" start="true" img="room_cloaking_orchid_3" />
+		<cloaking power="2" room="5" start="true" img="room_cloaking_orchid_3" />
 		<doors power="1" room="2" start="true" img="room_doors_9">
 			<slot>
 				<direction>right</direction>
@@ -5904,7 +5904,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<drone name="GUARDIAN_1_DRONE" />
 		<drone name="DEFENSE_1" />
 	</droneList>
-	<health amount="10" />
+	<health amount="15" />
 	<maxPower amount="9" />
 	<crewCount amount="1" class="slug_saboteur" />
 	<crewCount amount="1" class="human_angel" />
