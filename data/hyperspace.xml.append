@@ -335,7 +335,7 @@ MVAR [name] [value]
 
     <!--///////SIZE DOESN'T MATTER//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_SDM" b="false" c="false" unused="true">
 
       <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_TC_ARMORED_WASP</arrow>
       <unlock variant="a" silent="false">
@@ -365,15 +365,6 @@ MVAR [name] [value]
       </crew>
     </mod-append:customShip>
 
-    <mod-append:customShip name="PLAYER_SHIP_SDM_2">
-      <crewLimit>11</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_CIVILIAN</hiddenAug>
-      <crew>
-        <rsa_technician room="0" />
-      </crew>
-    </mod-append:customShip>
-
     <!--///////ARMORED WASP//////-->
 
     <mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
@@ -381,10 +372,6 @@ MVAR [name] [value]
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_SDM</shipReq>
-      </unlock>
-      <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_SDM_2</shipReq>
       </unlock>
       <unlock variant="b" silent="false">
         <type>1</type>
@@ -434,6 +421,25 @@ MVAR [name] [value]
         <clonefail_lancer room="0" name="Lancer" />
       </crew>
     </mod-append:customShip>
+
+    <!--///////CCK//////-->
+
+	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="false" c="false" unused="true">
+	<unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_ROBOTTO</shipReq>
+	</unlock>
+    </mod-append:ship>
+
+	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION">
+		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>11</crewLimit>
+		<crew>
+			<rsa_technician room="1" />
+			<mantis_rsa room="0" />
+		</crew>
+	</mod-append:customShip>
 
     <!--///////CORROSUS//////-->
 
@@ -1169,7 +1175,7 @@ MVAR [name] [value]
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
 			<!--Page 2-->
 			<mod-append:ship>PLAYER_SHIP_ROBOTTO</mod-append:ship> <!-- ARS+ Robotto Ships -->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_NBC</mod-append:ship> <!-- NBC -->
