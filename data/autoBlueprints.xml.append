@@ -516,9 +516,8 @@
 		<doors power="1" max="1" room="6" start="true" />
 		<engines power="1" max="1" room="3" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
-		<sensors power="1" max="1" room="12" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
-		<weapons power="3" max="3" room="11" start="true" />
+		<weapons power="2" max="2" room="11" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>0</droneSlots>
@@ -548,9 +547,8 @@
 		<doors power="2" max="2" room="6" start="true" />
 		<engines power="1" max="2" room="3" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
-		<sensors power="2" max="2" room="12" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
-		<weapons power="4" max="6" room="11" start="true" />
+		<weapons power="4" max="4" room="11" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>0</droneSlots>
@@ -581,16 +579,14 @@
 		<doors power="2" max="2" room="6" start="true" />
 		<engines power="1" max="2" room="3" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
-		<sensors power="2" max="2" room="12" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
 		<teleporter power="1" max="1" room="9" start="true" />
-		<weapons power="3" max="7" room="11" start="true" />
+		<weapons power="4" max="4" room="11" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="0" count="4">
 		<weapon name="TC_SHOTGUN_LEAD" />
-		<weapon name="TC_SHOTGUN_UNSTABLE" />
 		<weapon name="TC_BOMB_SHOTGUN_2" />
 	</weaponList>
 	<droneList drones="0" count="0" />
@@ -620,15 +616,13 @@
 		<doors power="2" max="2" room="13" start="true" />
 		<engines power="1" max="3" room="3" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
-		<sensors power="2" max="2" room="11" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
 		<teleporter power="1" max="1" room="7" start="true" />
-		<weapons power="3" max="12" room="8" start="true" />
+		<weapons power="5" max="5" room="8" start="true" />
 	</systemList>
 	<weaponSlots>6</weaponSlots>
 	<droneSlots>0</droneSlots>
-	<weaponList missiles="0" count="6">
-		<weapon name="TC_SHOTGUN_LEAD" />
+	<weaponList missiles="12" count="6">
 		<weapon name="TC_UNSCRAPFLAK" />
 		<weapon name="TC_BOMB_SHOTGUN_3" />
 	</weaponList>
@@ -640,9 +634,7 @@
 		<scrapper_heavy room="12"/>
 		<scrapper_speed room="13"/>
 		<scrapper_heavy room="5"/>
-
 		<scrapper_engineer room="3"/>
-
 		<scrapper_scavenger room="7"/>
 		<scrapper_engineer room="12"/>
 
@@ -663,16 +655,14 @@
 		<drones power="2" max="2" room="10" start="true" />
 		<engines power="1" max="3" room="3" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
-		<sensors power="3" max="3" room="11" start="true" />
-		<shields power="2" max="10" room="5" start="true" />
-		<teleporter power="2" max="2" room="7" start="true" />
-		<weapons power="7" max="10" room="8" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="2" max="3" room="7" start="true" />
+		<weapons power="6" max="6" room="8" start="true" />
 	</systemList>
 	<weaponSlots>6</weaponSlots>
 	<droneSlots>1</droneSlots>
-	<weaponList missiles="0" count="6">
+	<weaponList missiles="21" count="6">
 		<weapon name="TC_SHOTGUN_BOMB" />
-		<weapon name="TC_SHOTGUN_UNSTABLE" />
 		<weapon name="TC_SHOTGUN_GOLD" />
 	</weaponList>
 	<droneList drones="999" count="1">
@@ -709,10 +699,9 @@
 		<drones power="3" max="3" room="10" start="true" />
 		<engines power="1" max="4" room="3" start="true" />
 		<pilot power="3" max="3" room="0" start="true" />
-		<sensors power="3" max="3" room="11" start="true" />
-		<shields power="2" max="10" room="5" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
 		<teleporter power="3" max="3" room="7" start="true" />
-		<weapons power="16" max="16" room="8" start="true" />
+		<weapons power="6" max="6" room="8" start="true" />
 	</systemList>
 	<weaponSlots>8</weaponSlots>
 	<droneSlots>2</droneSlots>
@@ -753,24 +742,23 @@
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
 	<systemList>
-		<artillery power="4" max="4" room="10" start="true" weapon="ARTILLERY_FLAK" />
+		<artillery power="2" max="4" room="10" start="true" weapon="ARTILLERY_FLAK" />
 		<battery power="1" max="1" room="1" start="true" />
-		<cloaking power="4" max="4" room="16" start="true" />
+		<cloaking power="1" max="3" room="16" start="true" />
 		<clonebay power="3" max="3" room="15" start="true" />
-		<doors power="2" max="3" room="3" start="true" />
+		<doors power="1" max="2" room="3" start="true" />
 		<engines power="3" max="5" room="11" start="true" />
 		<oxygen power="1" max="2" room="14" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<sensors power="1" max="1" room="2" start="true" />
-		<shields power="4" max="1" room="6" start="true" />
-		<teleporter power="2" max="3" room="12" start="true" />
-		<weapons power="7" max="8" room="5" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="6" room="6" start="true" />
+		<teleporter power="1" max="2" room="12" start="true" />
+		<weapons power="6" max="7" room="5" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>0</droneSlots>
-	<weaponList missiles="0" count="4">
-		<weapon name="TC_LASER_MARKSMAN" />
-		<weapon name="TC_RAPTORS_OWN" />
+	<weaponList missiles="13" count="4">
+		<weapon name="TC_RAPTOR_AUTOCANNON" />
+		<weapon name="TC_OVERLORD" />
 	</weaponList>
 	<droneList drones="0" count="0" />
 	<health amount="11" />
