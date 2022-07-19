@@ -486,6 +486,14 @@ MVAR [name] [value]
         <type>2</type>
         <shipReq>PLAYER_SHIP_CORROSUS</shipReq>
       </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CORROSUS_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CORROSUS_3</shipReq>
+      </unlock>
       <unlock variant="b" silent="false">
         <type>1</type>
         <shipReq>PLAYER_SHIP_SLUGTON</shipReq>
@@ -679,6 +687,9 @@ MVAR [name] [value]
       <hiddenAug>SHIP_AVALI</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <crewLimit>12</crewLimit>
+	  <crew>
+        <robottos_gunner room="0" />
+      </crew>
     </mod-append:customShip>
 
     <!--///////EXTRA ELITE SHIP PACK//////-->
@@ -778,6 +789,14 @@ MVAR [name] [value]
         <type>2</type>
         <shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
       </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_BLACKOPS_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_BLACKOPS_3</shipReq>
+      </unlock>
       <unlock variant="b" silent="false">
         <type>1</type>
         <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
@@ -852,6 +871,14 @@ MVAR [name] [value]
         <type>2</type>
         <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
       </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER_3</shipReq>
+      </unlock>
       <unlock variant="b" silent="false">
         <type>1</type>
         <shipReq>PLAYER_SHIP_CYBER</shipReq>
@@ -896,6 +923,14 @@ MVAR [name] [value]
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_CYBER</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CYBER_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CYBER_3</shipReq>
       </unlock>
       <unlock variant="b" silent="false">
         <type>1</type>
@@ -989,6 +1024,14 @@ MVAR [name] [value]
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_AVALI</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_AVALI_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_AVALI_3</shipReq>
       </unlock>
       <unlock variant="b" silent="false">
         <type>1</type>
