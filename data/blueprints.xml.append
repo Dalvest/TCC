@@ -6020,6 +6020,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="16" start="false" img="room_battery_16" />
 		<cloaking power="1" room="5" start="false" img="room_cloaking_10" />
+		<clonebay power="1" room="4" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="17" start="true" img="room_doors_4">
 			<slot>
 				<direction>right</direction>
@@ -6113,6 +6118,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking power="1" room="14" start="false" img="room_hacking_8" />
+		<medbay power="1" room="16" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
 		<mind power="1" room="17" start="false" img="room_mind_4" />
 		<oxygen power="1" room="12" start="true" img="room_oxygen_6" />
 		<pilot power="1" room="0" start="true" img="room_pilot_5">
@@ -6184,6 +6194,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking max="2" power="1" room="12" start="false" img="room_hacking" />
+		<medbay max="4" power="1" room="20" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
 		<mind max="2" power="1" room="14" start="false" img="room_mind_3" />
 		<oxygen max="2" power="1" room="4" start="true" img="room_oxygen_6" />
 		<pilot power="1" room="0" start="true" img="room_pilot_5">
@@ -6239,6 +6254,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="23" start="true" img="room_battery" />
 		<cloaking power="1" room="15" start="false" img="room_cloaking" />
+		<clonebay power="1" room="24" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="3" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
@@ -6314,6 +6334,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="11" start="true" img="room_battery_8" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking_9" />
+		<clonebay power="2" room="20" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="3" start="true" img="room_doors_4">
 			<slot>
 				<direction>right</direction>
@@ -6387,6 +6412,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="20" start="true" img="room_battery" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking" />
+		<clonebay power="1" room="0" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="18" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
@@ -6454,6 +6484,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="10" start="false" img="room_battery" />
 		<cloaking power="1" room="6" start="false" img="room_cloaking_3" />
+		<clonebay power="2" room="7" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="14" start="true" img="room_doors_9">
 			<slot>
 				<direction>right</direction>
@@ -6528,6 +6563,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="18" start="false" img="room_battery_17" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking_3" />
+		<clonebay power="2" room="9" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="8" start="true" img="room_doors_9">
 			<slot>
 				<direction>right</direction>
@@ -6620,6 +6660,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking power="1" room="7" start="false" img="room_hacking_5" />
+		<medbay power="1" room="1" start="false" img="room_medbay">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
 		<mind power="1" room="13" start="false" img="room_mind_5" />
 		<oxygen power="1" room="11" start="false" img="room_oxygen_6" />
 		<pilot power="1" room="0" start="true" img="room_pilot_6">
