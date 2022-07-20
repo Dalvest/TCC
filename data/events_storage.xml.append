@@ -185,7 +185,7 @@
     <choice>
       <text>Request that the Eater makes a weapon.</text>
       <event>
-        <text>The Trash Eater nods and starts his work - a complex tango of rust and machinery, a veritable ballad of screws and bolts. You got an abomination of a weapon!</text>
+        <text>The Trash Eater nods and starts his work - and from the complex tango of rust and machinery, a veritable ballad of screws and bolts. You got an abomination of a weapon!</text>
         <weapon name="TC_SCRAPFLAK"/>
         <event/>
       </event>
@@ -193,7 +193,7 @@
     <choice>
       <text>Request that the Eater makes a drone.</text>
       <event>
-        <text>The Trash Eater starts bashing togehter pieces of machinery and electronics, managing to create a fully functional combat drone!</text>
+        <text>The Trash Eater starts bashing together various pieces of scrounged up machinery and electronics, before presenting to you a fully functional combat drone!</text>
         <drone name="TC_COMBAT_HEAVY"/>
         <event/>
       </event>
@@ -201,14 +201,14 @@
     <choice>
       <text>Request that the Eater forges a Scrapper.</text>
       <event>
-        <text>The Trash Eater nods and starts carving a Lanius-esque figure in metal. You attempt to explain you don't need a decorative statue, but suddenly, it springs to life!</text>
+        <text>The Trash Eater nods and starts carving a Lanius-esque figure in metal. You try to explain to it that you don't need a decorative statue, only for it to suddenly spring to life!</text>
         <crewMember amount="1" class="scrapper">Scrapface Statueman</crewMember>
       </event>
     </choice>
     <choice>
       <text>Disassemble it all into usable materials.</text>
       <event>
-        <text>You take all of it - there's no such as problem as too much scrap. The Trash Eater helps you get every single gram of metal.</text>
+        <text>You tell them to not worry about it - there's no such as problem as too much scrap. The Trash Eater helps you get every single piece.</text>
         <autoReward level="HIGH">stuff</autoReward>
       </event>
     </choice>
@@ -217,7 +217,7 @@
   <mod:findName type = "event" name = "COMBAT_CHECK_REAL">
 
   <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602"  blue="true">
-  	<text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it might damage your hull. [Costs: 10~]</text>
+  	<text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it could cause some minor damage to the hull. [Costs: 10~]</text>
         <event load="COMBAT_CHECK_RAMMING_SCRAP"/>
       </mod-append:choice>
 
@@ -246,7 +246,7 @@
         </item_modify>
         <enemyDamage amount="5" system="engines" effect="fire"/>
         <choice>
-          <text>Continue to the fight!</text>
+          <text>Continue the fight!</text>
           <event/>
         </choice>
       </event>
@@ -649,7 +649,7 @@
       Stats: 60 Health, x2 damage taken, no suffocation damage, x1.3 movement speed, Lancer Overdrive ability that increases movement speed to 3x and damage to 2.5x for 7 seconds. Cannot lose skills, a trait inherited from TRACKER's augments.
       Lancer carries the DNA of Cheese the Sergal and TRACKER the Protogen - this failed clone is an abhorrent and voraciously hungry monster, willing to do anything to taste flesh yet again.
       Lancer has a broken voice box and is unable to talk with his mouth, so he uses a tape recorder with prerecorded voicelines instead.
-      Lancer's tongue, an upside down tail that grows and writhes within his body, is usually used as a weapon, despite it being useful in other applications as well.</text>
+      Lancer's tongue, an upside down tail that grows and writhes within his body, is usually used as a weapon.</text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -879,7 +879,7 @@
       <text>Your Gunner requests permission to disintegrate the next enemy it sees.</text>
       <text>Your Gunner is acting all sassy, claiming they always shoot first.</text>
       <text>Your Gunner claims that if a gun doesn't weight at least 100 pounds then it's not a 'true weapon'.</text>
-      <text>Your Gunner is whistling some digitized tune as it assembles and disassembles its custom gun and all of its accessories.</text>
+      <text>Your Gunner is whistling some digitized tune as it assembles and disassembles it's custom gun along with all of its accessories.</text>
     </textList>
 
 
@@ -919,7 +919,7 @@
       </choice>
     </event>
     <textList name="TEXT_CREW_TALK_ROBOTTOS_RESEARCHER">
-      <text>Your Researcher says you are 'beautiful' considering you're made off of star corpses.</text>
+      <text>Your Researcher says you are 'beautiful' considering you're comprised of star corpses.</text>
       <text>Your Researcher says there are billions of billions of billions of billions of billions of particles in the observable universe, and that Vance has all the ugly ones.</text>
       <text>Your Researcher asks you to let it commandeer the ship. You politely ask it to leave command in your hands.</text>
       <text>Your Researcher asks you to come see a weapon of mass destruction that it has found aboard your ship. it turns out to be a bottle of bleach, which it claims to capable of causing billions of deaths... of bacteria.</text>
@@ -1369,7 +1369,7 @@
       Subtype Details: Genetic, Standard
       Stats: 125 Health, x1 repair speed, x0.9 move speed, x0.75 fire damage, x2 damage.
       Inherited Stats: Drains oxygen at 0.4oxy/s, immune to suffocation.
-      This version of the Scrapper has blades on its arms that can be used to attack - these have been inspired by Lancer the Clonefail during a skirmish between him and the Scrappers. </text>
+      The addition of rusted blades on the arms of this scrapper makes them a scary adversary - these have been inspired by Lancer the Clonefail during a skirmish between him and the Scrappers. </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -1382,7 +1382,7 @@
       Subtype Details: Genetic, Standard
       Stats: 125 Health, x3 repair speed, x0.9 move speed, x0.75 fire damage, x0.75 damage, x1.5 sabotage speed.
       Inherited Stats: Drains oxygen at 0.4oxy/s, immune to suffocation.
-      The Engineer is highly adept repairing things and salvagining ships, something this is highly necessary in order to help the Scrapper race survive. </text>
+      The Engineer is highly adept at repairing things and salvaging ships, something this is highly necessary in order to help the Scrapper race survive. </text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -1622,7 +1622,7 @@
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SPEED">
-    <text>By molding the legs into a more efficient shape, your Scrapper can achieve greater sprinting speeds.
+    <text>By molding the legs into a more efficient shape, your Scrapper can now run more efficiently.
       [x0.9 movement speed -> x2.0 movement speed]</text>
     <choice>
       <text>Do it.</text>
@@ -1965,8 +1965,8 @@
 <text>Leah swears she'd sacrifice her life for the sake of the mission. You ask if she really means it and she says she’s not sure but she’s always wanted to say that.</text>
 <text>You ask Leah what it was like to defect to the Federation. She says one of her warps accidentally teleported her into a Federation barracks and she thought that was a good a time as any to swap sides.</text>
 <text>Leah blocks your path and says "We meet again Captain, for the last time!" before stuttering and admitting she hasn't written the rest of that speech.</text>
-<text>Leah politely asks that you turn don't use shields next time you fight.</text>
-<text>Leah has mixed feelings on the Flagship. On one hand, destroying it will save thousands, maybe even millions of lives, however on the other hand she's a massive fan of the ships paint-job.</text>
+<text>Leah politely asks that you don't use shields next time you fight her.</text>
+<text>Leah has mixed feelings on the Flagship. On one hand, destroying it will save thousands, maybe even millions of lives, however on the other hand she's a massive fan of the ship's paint-job.</text>
 <text>You stumble into Leah's room to find her playing Squad Fort 2 on her personal terminal. Of course she's a fucking spy main what else would she play?</text>
 </textList>
 
