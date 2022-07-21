@@ -1012,8 +1012,10 @@
 	<minSector>2</minSector>
 	<maxSector>4</maxSector>
 	<systemList>
+		<artillery power="2" max="3" room="7" start="true" weapon="IONARTILLERY" />
 		<cloaking power="1" max="1" room="6" start="true" />
-		<clonebay power="1" max="1" room="4" start="true" />
+		<clonebay power="1" max="2" room="4" start="true" />
+		<doors power="1" max="2" room="8" start="true" />
 		<engines power="3" max="4" room="0" start="true" />
 		<hacking power="2" max="2" room="3" start="true" />
 		<pilot power="2" max="2" room="2" start="true" />
@@ -1030,7 +1032,9 @@
 	<droneList drones="1" count="0" />
 	<health amount="8" />
 	<maxPower amount="12" />
-	<crewCount amount="2" max="3" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
@@ -1040,19 +1044,26 @@
 	<maxSector>4</maxSector>
 	<systemList>
 		<cloaking power="2" max="2" room="1" start="true" />
-		<engines power="3" max="5" room="3" start="true" />
-		<pilot power="2" max="2" room="4" start="true" />
+		<clonebay power="1" max="2" room="8" start="true" />
+		<doors power="1" max="2" room="9" start="true" />
+		<engines power="2" max="5" room="6" start="true" />
+		<pilot power="2" max="2" room="5" start="true" />
 		<shields power="2" max="4" room="2" start="true" />
 		<teleporter power="2" max="3" room="0" start="true" />
+		<weapons power="2" max="4" room="7" start="true" />
 	</systemList>
-	<weaponSlots>0</weaponSlots>
+	<weaponSlots>2</weaponSlots>
 	<droneSlots>0</droneSlots>
-	<weaponList missiles="3" count="0" />
+	<weaponList missiles="9" count="2">
+		<weapon name="TC_BOMB_SHOTGUN_1" />
+		<weapon name="TC_BOMB_SHOTGUN_1" />
+	</weaponList>
 	<droneList drones="3" count="0" />
 	<health amount="9" />
 	<maxPower amount="10" />
 	<crewCount amount="1" max="2" class="scrapper" />
-	<crewCount amount="3" max="3" class="scrapper_soldier" />
+	<crewCount amount="1" max="2" class="scrapper_heavy" />
+	<crewCount amount="2" max="2" class="scrapper_soldier" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
@@ -1061,11 +1072,15 @@
 	<minSector>2</minSector>
 	<maxSector>4</maxSector>
 	<systemList>
-		<drones power="4" max="5" room="1" start="true" />
+		<cloaking power="1" max="1" room="7" start="true" />
+		<doors power="1" max="2" room="9" start="true" />
+		<drones power="2" max="5" room="1" start="true" />
 		<engines power="2" max="5" room="5" start="true" />
-		<mind power="1" max="2" room="4" start="true" />
+		<hacking power="1" max="2" room="8" start="true" />
+		<medbay power="1" max="2" room="6" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="2" max="4" room="2" start="true" />
+		<teleporter power="1" max="2" room="4" start="true" />
 		<weapons power="2" max="3" room="3" start="true" />
 	</systemList>
 	<weaponSlots>2</weaponSlots>
@@ -1080,6 +1095,7 @@
 	<health amount="13" />
 	<maxPower amount="10" />
 	<crewCount amount="1" max="2" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 

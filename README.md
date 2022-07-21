@@ -1,7 +1,7 @@
 # TCC
 
 Trash Compactor Collection Add-On for the popular game FTL: Multiverse.
-Current Version: 1.1
+Current Version: 1.15
 
 # DEVELOPERS
 
@@ -57,7 +57,18 @@ Good Luck! Don't get compacted!
 
 # CHANGELOG
 
-### Update 1.1
+### Update 1.15
+- Federation Special Forces + Leah Gaming ship have been added, obviously. Minor bug fixes have been done to all of them.
+- Corrosus B and C layouts now exist -  on a related note, Construction Crew Kestrel is now a completely separate ship, not SDM B.
+- new crew types such as Cheese the Sergal, the upgradable Sentient robot race and RSA Hive Mantises.
+- complete rework of the SDM - B and C layout coming soon.
+- added several new ships such as the Tanker, Military Surplus and 'Outpost 31'.
+- Trash Compactor 3 fight has been reworked from ground up. There's a new Scrapper variant now called the Scrapper defender.
+- RSA technicians now have a PORTABLE TANK. This is like the most radical change idk.
+- Trash_call event is no longer appended to the gigantic text wall at the beginning. Quality of life!
+- new weapons such as the Overlord laser and a few new Bomb Flaks variants (Recycler, Lockdown, Fire)
+
+Update 1.1
 - SCRAPPERS! A new subfaction of Lanius with a pretty fun backstory.
 - The RAPTOR's Right Hand flak, Raptor LMG, Lance Antipersonnel, SCRAPFLAK, Unscrapflak, Rescrapflak, RSA TAGGER and MINICANNON and Deconstructor Beam + a few others I can't recall rn;
 - Loads of playable ships such as the hastily put-together Corossus, the civilian-spec The Original and the boarding madness of Razormind

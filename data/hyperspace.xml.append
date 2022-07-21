@@ -814,6 +814,11 @@ MVAR [name] [value]
         <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
         <silent>false</silent>
       </unlock>
+	  <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
+        <silent>false</silent>
+      </unlock>
     </mod-append:ship>
 
     <mod-append:customShip name="PLAYER_SHIP_MINESWEEPER">
@@ -893,7 +898,12 @@ MVAR [name] [value]
       </unlock>
       <unlock variant="c" silent="false">
         <type>2</type>
-        <shipReq>PLAYER_SHIP_CYBER_3</shipReq>
+        <shipReq>PLAYER_SHIP_CYBER</shipReq>
+        <silent>false</silent>
+      </unlock>
+	  <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CYBER_2</shipReq>
         <silent>false</silent>
       </unlock>
     </mod-append:ship>
@@ -946,7 +956,12 @@ MVAR [name] [value]
       </unlock>
       <unlock variant="c" silent="false">
         <type>2</type>
-        <shipReq>PLAYER_SHIP_NBC_3</shipReq>
+        <shipReq>PLAYER_SHIP_NBC</shipReq>
+        <silent>false</silent>
+      </unlock>
+	  <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_NBC_2</shipReq>
         <silent>false</silent>
       </unlock>
     </mod-append:ship>
