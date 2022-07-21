@@ -58,6 +58,9 @@ Good Luck! Don't get compacted!
 # CHANGELOG
 
 ### Update 1.15
+- Federation Special Forces + Leah Gaming ship have been added, obviously. Minor bug fixes have been done to all of them.
+- Corrosus B and C layouts now exist -  on a related note, Construction Crew Kestrel is now a completely separate ship, not SDM B.
+- new crew types such as Cheese the Sergal, the upgradable Sentient robot race and RSA Hive Mantises.
 - complete rework of the SDM - B and C layout coming soon.
 - added several new ships such as the Tanker, Military Surplus and 'Outpost 31'.
 - Trash Compactor 3 fight has been reworked from ground up. There's a new Scrapper variant now called the Scrapper defender.
