@@ -3507,7 +3507,50 @@
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-              DRONES
+              PERSONNEL DRONES
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
+
+<blueprintList name="LIST_TOGGLE_ROBOMANT">
+	<name>ROBOMANT_BOARDER</name>
+	<name>ROBOMANT_DEFEND</name>
+</blueprintList>
+<droneBlueprint name="ROBOMANT_DEFEND">
+	<type>BATTLE</type>
+	<locked>1</locked>
+	<tip>tip_toggle_crew</tip>
+	<title>Mantis Battle Drone [Anti-Pers]</title>
+	<short>Robo Mant [A]</short>
+	<desc>[CURRENT MODE: Anti-Personnel] Controllable, a personnel drone that can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
+    
+-175 HP, 1.1x combat damage
+-0.8x movement speed</desc>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>3</bp>
+	<rarity>2</rarity>
+	<iconImage>robomant</iconImage>
+</droneBlueprint>
+<droneBlueprint name="ROBOMANT_BOARDER">
+	<type>BOARDER</type>
+	<tip>tip_toggle_crew</tip>
+	<locked>1</locked>
+	<title>Mantis Battle Drone [Boarding]</title>
+	<short>Robo Mant [B]</short>
+	<desc>[CURRENT MODE: Boarding] Controllable, a personnel drone that can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
+    
+-175 HP, 1.1x combat damage
+-0.8x movement speed</desc>
+	<power>2</power>
+	<speed>18</speed>
+	<cost>50</cost>
+	<rarity>0</rarity>
+	<iconImage>robomant</iconImage>
+</droneBlueprint>
+
+<!--
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+              COMBAT AND DEFENSE DRONES
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
