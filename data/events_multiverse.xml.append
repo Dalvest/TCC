@@ -131,9 +131,16 @@
 	</event>
 
 	<event name="TC3_DESTROY">
-		<text>This time, they had alerted their swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
+		<text>The Trash Compactor has been defeated yet again, leaving the small fleet to scatter helplessly. </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_LEAD"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC3_DEAD</hiddenAug>
+	</event>
+
+	<event name="TC3_LESSER_DESTROY">
+		<text>The Fleet ship lays broken before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials. </text>
+		<autoReward level="MED">stuff</autoReward>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC3_DEAD</hiddenAug>
 	</event>
@@ -142,6 +149,13 @@
 		<text>This time, they had alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_LEAD"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC3_DEAD</hiddenAug>
+	</event>
+
+	<event name="TC3_LESSER_CREW">
+		<text>The Fleet ship lays motionless before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials. </text>
+		<autoReward level="MED">stuff</autoReward>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC3_DEAD</hiddenAug>
 	</event>
@@ -1117,7 +1131,7 @@
 		</event>
 	</choice>
 	<choice req="TC3_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
-		<text>The rest of the ships scatter seeing the carnage you've inflicted. You're safe, for now...</text>
+		<text>The rest of the fleet scatters seeing the carnage you've inflicted. You're safe, for now...</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="cloaking" lvl="3" max_group="998" blue="true" hidden="true">

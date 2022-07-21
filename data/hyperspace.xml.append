@@ -814,6 +814,11 @@ MVAR [name] [value]
         <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
         <silent>false</silent>
       </unlock>
+	  <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
+        <silent>false</silent>
+      </unlock>
     </mod-append:ship>
 
     <mod-append:customShip name="PLAYER_SHIP_MINESWEEPER">

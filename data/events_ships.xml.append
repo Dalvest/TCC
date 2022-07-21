@@ -37,18 +37,18 @@
 	</ship>
 	<ship name="TC_SCRAPPER_CORVETTE" auto_blueprint="TC_SCRAPPER_CORVETTE">
 	    <ship hostile="true"/>
-		<destroyed load="TC3_DESTROY"/>
-		<deadCrew load="TC3_CREW"/>
+		<destroyed load="TC3_LESSER_DESTROY"/>
+		<deadCrew load="TC3_LESSER_CREW"/>
 	</ship>
 	<ship name="TC_SCRAPPER_HUNTER" auto_blueprint="TC_SCRAPPER_HUNTER">
 	    <ship hostile="true"/>
-		<destroyed load="TC3_DESTROY"/>
-		<deadCrew load="TC3_CREW"/>
+		<destroyed load="TC3_LESSER_DESTROY"/>
+		<deadCrew load="TC3_LESSER_CREW"/>
 	</ship>
 	<ship name="TC_SCRAPPER_SUPPORT" auto_blueprint="TC_SCRAPPER_SUPPORT">
 	    <ship hostile="true"/>
-		<destroyed load="TC3_DESTROY"/>
-		<deadCrew load="TC3_CREW"/>
+		<destroyed load="TC3_LESSER_DESTROY"/>
+		<deadCrew load="TC3_LESSER_CREW"/>
 	</ship>
 <ship name="SHIP_FREEMANTIS_BOMB_FLAKS" auto_blueprint="LIST_SHIPS_FREEMANTIS_FIGHT">
 	<destroyed load="DESTROYED_FREEMANTIS_BOMB_FLAKS"/>
