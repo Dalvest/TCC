@@ -319,6 +319,26 @@
 	<mountPoint x="3" y="45"/>
 </weaponAnim>
 
+<animSheet name="tc_overlord" w="1406" h="68" fw="37" fh="68">weapon_laser/tc_overlord.png</animSheet>
+<weaponAnim name="tc_overlord">
+	<sheet>tc_overlord</sheet>
+	<desc length="38" x="0" y="0"/>
+	<chargedFrame>5</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="23" y="3"/>
+	<mountPoint x="7" y="39"/>
+</weaponAnim>
+
+<animSheet name="rebel_dart" w="260" h="59" fw="20" fh="59">weapon_laser/rebel_dart.png</animSheet>
+<weaponAnim name="rebel_dart">
+	<sheet>rebel_dart</sheet>
+	<desc length="13" x="0" y="0"/>
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint  x="15" y="3"/>
+	<mountPoint x="3" y="44"/>
+</weaponAnim>
+
 <!--/////////////////// DEBUFFER //////////////////-->
 
 <animSheet name="tcc_debuff_slow_1" w="145" h="35" fw="29" fh="35">weapon_debuffer/tc_debuffer_mk1.png</animSheet>
@@ -370,14 +390,14 @@
 	<mountPoint x="3" y="33"/>
 </weaponAnim>
 
-<animSheet name="tc_firework_dispenser" w="2400" h="45" fw="50" fh="45">weapon_missile/tc_firework_dispenser_strip48.png</animSheet>
+<animSheet name="tc_firework_dispenser" w="2736" h="45" fw="57" fh="45">weapon_missile/tc_firework_dispenser_strip48.png</animSheet>
 <weaponAnim name="tc_firework_dispenser">
 	<sheet>tc_firework_dispenser</sheet>
 	<desc length="48" x="0" y="0"/>
 	<chargedFrame>15</chargedFrame>
 	<fireFrame>36</fireFrame>
-	<firePoint  x="43" y="6"/>
-	<mountPoint x="3" y="18"/>
+	<firePoint  x="53" y="6"/>
+	<mountPoint x="13" y="18"/>
 </weaponAnim>
 
 <!--/////////////////// ION //////////////////-->
@@ -928,16 +948,16 @@
 	<time>1</time>
 </anim>
 
-<animSheet name="tc_gibs" w="96" h="32" fw="32" fh="32">projectiles/tc_gibs.png</animSheet>
-<anim name="tc_gibs">
-	<sheet>tc_gibs</sheet>
+<animSheet name="tc_shipbits" w="96" h="32" fw="32" fh="32">projectiles/tc_shipbits.png</animSheet>
+<anim name="tc_shipbits">
+	<sheet>tc_shipbits</sheet>
 	<desc length="3" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
-<animSheet name="tc_gibs_2" w="120" h="24" fw="24" fh="24">projectiles/tc_gibs_2.png</animSheet>
-<anim name="tc_gibs_2">
-	<sheet>tc_gibs_2</sheet>
+<animSheet name="tc_shipbits_2" w="120" h="24" fw="24" fh="24">projectiles/tc_shipbits_2.png</animSheet>
+<anim name="tc_shipbits_2">
+	<sheet>tc_shipbits_2</sheet>
 	<desc length="5" x="0" y="0"/>
 	<time>1</time>
 </anim>
@@ -2372,7 +2392,7 @@
 
 <!--/////////////// RSA TANK //////////////-->
 
-<animSheet name="rsa_tank" w="385" h="175" fw="35" fh="35">people/tonk_base.png</animSheet>
+<animSheet name="rsa_tank" w="385" h="175" fw="35" fh="35">people/rsa_tank_base.png</animSheet>
 	<animSheet name="rsa_tank_death" w="320" h="32" fh="32" fw="32">effects/explosion1_strip10.png</animSheet>
 	<anim name="rsa_tank_death_right">
 		<sheet>rsa_tank_death</sheet>

@@ -418,8 +418,8 @@
 	<speed>35</speed>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="4" fake="false">tc_gibs_2</projectile>
-		<projectile count="4" fake="true">tc_gibs</projectile>
+		<projectile count="4" fake="false">tc_shipbits_2</projectile>
+		<projectile count="4" fake="true">tc_shipbits</projectile>
 		<projectile count="7" fake="false">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
@@ -1134,7 +1134,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_fire</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_fire</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1180,7 +1180,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_lockdown</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_lockdown</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1424,6 +1424,84 @@
 	</missSounds>
 	<weaponArt>militia_tagger</weaponArt>
 	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_OVERLORD">
+	<type>LASER</type>
+	<title>'OVERLORD' Supercharger Laser</title>
+	<short>Overlord</short>
+	<tip>tip_charge</tip>
+	<desc>One of RAPTOR's weirder ideas was a combination between a Vulcan and a few broken laser weapons - this is one of the better weapons he'd managed to create, though.</desc>
+	<tooltip>Fires up to 8 lasers; 1 damage each. 4 seconds per charge, 20 seconds max cooldown.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>4</cooldown>
+	<power>4</power>
+	<cost>95</cost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<image>laser_light1</image>
+	<chargeLevels>5</chargeLevels>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_overlord</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="REBEL_DART">
+	<type>LASER</type>
+	<tip>tip_laser</tip>
+	<title>Rebel 'Dart' Laser</title>
+	<short>Dart Laser</short>
+	<desc>This weapon of Rebel design fires a short burst of lasers.</desc>
+	<tooltip>Fires 2 lasers; 1 damage each.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rebel_dart</weaponArt>
 </weaponBlueprint>
 
 <!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
@@ -1732,7 +1810,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>'Party Starter' Dispenser</title>
 	<short>'Party Starter'</short>
-	<desc>A recycler module configured to produce random fireworks strapped to a throwing arm, not at all a fire hazard.</desc>
+	<desc>A recycler module configured to produce random fireworks strapped to a throwing arm; also, not at all a fire hazard.</desc>
 	<!--<descriptionOverride>They says smaller weapons deal less damage but fire faster, but this is a bit much...
 
 		Stats:
@@ -2339,20 +2417,20 @@
 	<title>Minigun Mark I</title>
 	<short>Minigun Mk.1</short>
 	<desc>A relic from the Federation-Hive war - an autocannon minigun! It uses caseless ammunition which can be replicated using missiles.</desc>
-	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - 85% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>95</freeMissileChance>
+	<freeMissileChance>85</freeMissileChance>
 	<damage>1</damage>
-	<shots>2</shots>
+	<shots>1</shots>
 	<sp>0</sp>
 	<radius>40</radius>
 	<breachChance>0</breachChance>
-	<cooldown>14</cooldown>
+	<cooldown>17</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
 		<amount>2</amount>
-		<count>5</count>
+		<count>6</count>
 	</boost>
 	<bp>4</bp>
 	<rarity>5</rarity>
@@ -2384,19 +2462,19 @@
 	<title>Minigun Mark II</title>
 	<short>Minigun Mk.2</short>
 	<desc>A relic from the Federation-Hive war. This is an upgraded model of the Mk. 1 minigun... it's faster and better, but it uses more ammunition.</desc>
-	<tooltip>2 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 85% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 75% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>85</freeMissileChance>
+	<freeMissileChance>75</freeMissileChance>
 	<damage>1</damage>
-	<shots>2</shots>
+	<shots>1</shots>
 	<sp>1</sp>
 	<radius>30</radius>
 	<breachChance>0</breachChance>
-	<cooldown>12</cooldown>
+	<cooldown>16</cooldown>
 	<power>2</power>
 	<boost>
 		<type>cooldown</type>
-		<amount>2</amount>
+		<amount>3</amount>
 		<count>5</count>
 	</boost>
 	<bp>4</bp>
@@ -2429,14 +2507,14 @@
 	<title>Minigun Mark III</title>
 	<short>Minigun Mk.3</short>
 	<desc>The Vulcan pales in comparison to this - while the other two miniguns would've only fit in a museum, this... this is a weapon.</desc>
-	<tooltip>3 shot 1 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires, pierces one shield - 65% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>95</freeMissileChance>
+	<freeMissileChance>65</freeMissileChance>
 	<damage>1</damage>
-	<shots>3</shots>
-	<sp>0</sp>
-	<radius>30</radius>
-	<breachChance>0</breachChance>
+	<shots>1</shots>
+	<sp>1</sp>
+	<radius>10</radius>
+	<breachChance>1</breachChance>
 	<cooldown>13</cooldown>
 	<power>3</power>
 	<boost>
@@ -2473,7 +2551,7 @@
 	<type>LASER</type>
 	<title>RSA Minicannon</title>
 	<short>Minicannon</short>
-	<desc>This is a small cannon. ...That's about it. It's pretty cool, though.</desc>
+	<desc>This is a small, simple cannon. ...That's about it. It's pretty cool, though.</desc>
 	<tooltip>1 shot 1 damage weapon, pierces one shield bubble, 85% chance to not use ammo, 10% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>85</freeMissileChance>
@@ -3502,7 +3580,7 @@
     <power>3</power>
     <cooldown>3</cooldown>
     <dodge>0</dodge>
-    <speed>75</speed>
+    <speed>20</speed>
     <cost>100</cost>
     <bp>3</bp>
     <droneImage>unstable_drone</droneImage>
@@ -3617,7 +3695,7 @@
     <power>3</power>
     <cooldown>3</cooldown>
     <dodge>0</dodge>
-    <speed>45</speed>
+    <speed>12</speed>
     <cost>150</cost>
     <bp>3</bp>
     <droneImage>bomb_flak_drone</droneImage>
@@ -4153,7 +4231,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="2" room="9" start="true" img="room_doors">
+		<doors power="1" room="9" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4174,7 +4252,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</medbay>
 		<mind power="1" room="5" start="false" img="room_mind" />
 		<oxygen power="1" room="10" start="true" img="room_oxygen_6" />
-		<pilot power="3" room="1" start="true" img="ancient_pilot">
+		<pilot power="1" room="1" start="true" img="ancient_pilot">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -4192,9 +4270,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="3" start="true" />
+		<teleporter power="1" room="3" start="false" />
 		<temporal power="1" room="8" start="false" img="" />
-		<weapons power="3" max="8" room="2" start="true" img="room_weapons">
+		<weapons power="4" max="8" room="2" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4203,13 +4281,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</systemList>
 	<systemLimit>10</systemLimit>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
+	<droneSlots>3</droneSlots>
 	<weaponList missiles="7" count="4">
-		<weapon name="TC_LASER_MARKSMAN" />
+		<weapon name="TC_OVERLORD" />
 	</weaponList>
 	<droneList drones="15" count="4">
 		<drone name="REPAIR" />
-		<drone name="BATTLETOG_BOARDER" />
 	</droneList>
 	<health amount="30" />
 	<maxPower amount="6" />
@@ -4273,6 +4350,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="3" count="2" />
@@ -4283,14 +4361,21 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="CREW_FIREARMS" />
 </shipBlueprint>
 
-<shipBlueprint name="PLAYER_SHIP_SDM_2" layout="player_ship_sdm_2" img="player_ship_sdm_2">
+<!--/////////////////////CONSTRUCTION KESTREL/////////////////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_TC_CONSTRUCTION" layout="player_ship_tc_construction" img="player_ship_tc_construction">
 	<class>Construction Crew Kestrel</class>
-	<name>The Original</name>
+	<name>'The Original'</name>
 	<desc>This is a completely functional version of the Kestrel Miner from the time it was actually used for mining - before TRACKER and the gang got it. It was owned by Zulqifar Industries and sports an outdated, worn-out paintjob.</desc>
-	<unlock id="ship_PLAYER_SHIP_SDM_2_unlock"/>
+	<unlock id="ship_PLAYER_SHIP_TC_CONSTRUCTION_unlock"/>
 	<systemList>
-		<battery power="1" max="2" room="5" start="false" img="room_battery_6" />
+		<battery power="1" room="5" start="false" img="room_battery_6" />
 		<cloaking power="1" room="6" start="false" img="room_cloaking_9" />
+		<clonebay power="2" room="10" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="15" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
@@ -4310,11 +4395,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</medbay>
-		<clonebay power="2" room="10" start="false">
-			<slot>
-				<number>1</number>
-			</slot>
-		</clonebay>
 		<oxygen power="1" room="4" start="true" img="room_oxygen_nightowl" />
 		<pilot power="2" room="0" start="true" img="room_pilot">
 			<slot>
@@ -4324,7 +4404,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</pilot>
 		<sensors power="1" room="3" start="true" img="room_sensors">
 			<slot>
-				<direction>up</direction>
+				<direction>down</direction>
 				<number>1</number>
 			</slot>
 		</sensors>
@@ -4700,6 +4780,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="11" count="4" />
@@ -4770,6 +4851,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="16" count="4">
@@ -5065,6 +5147,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="5" count="4">
@@ -5690,7 +5773,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="30" />
 	<maxPower amount="8" />
 	<crewCount amount="3" class="avali" />
-	<crewCount amount="1" class="robottos_gunner" />
 	<crewCount amount="1" class="robottos_machinist" />
 </shipBlueprint>
 
@@ -5703,7 +5785,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<unlock id="ship_PLAYER_SHIP_BLACKOPS_unlock"/>
 	<systemList>
 		<battery power="1" room="7" start="false" img="room_battery_6" />
-		<cloaking power="2" room="8" start="true" img="room_cloaking_3" />
+		<cloaking power="1" room="8" start="true" img="room_cloaking_3" />
+		<clonebay power="1" room="10" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="1" start="true" img="room_doors_3">
 			<slot>
 				<direction>right</direction>
@@ -5723,7 +5810,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>-2</number>
 			</slot>
 		</medbay>
-		<mind power="2" room="12" start="true" img="room_mind_9" />
+		<mind power="1" room="12" start="true" img="room_mind_9" />
 		<oxygen power="1" room="4" start="true" img="room_oxygen_9" />
 		<pilot power="1" room="0" start="true" img="room_pilot_2">
 			<slot>
@@ -5731,7 +5818,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</pilot>
-		<sensors power="2" room="2" start="true" img="room_sensors_3">
+		<sensors power="1" room="2" start="true" img="room_sensors_3">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -5759,13 +5846,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<weapon name="SHOTGUN_1" />
 	</weaponList>
 	<droneList drones="0" count="2" />
-	<health amount="15" />
+	<health amount="10" />
 	<maxPower amount="8" />
 	<crewCount amount="1" class="human_angel" />
 	<crewCount amount="1" class="shell_mechanic" />
 	<crewCount amount="1" class="human_engineer" />
 	<aug name="EX_CLOAK_FIRE" />
-	<aug name="COMBAT_WARP_JAMMER" />
+	<aug name="ENERGY_SHIELD" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_BLACKOPS_2" layout="BlackopsB" img="BlackopsB">
@@ -5776,6 +5863,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="10" start="false" img="room_battery" />
 		<cloaking power="2" room="13" start="true" img="room_cloaking_9" />
+		<clonebay power="1" room="5" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="15" start="true" img="room_doors_6">
 			<slot>
 				<direction>right</direction>
@@ -5830,7 +5922,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<weapon name="ION_PIERCE_1" />
 	</weaponList>
 	<droneList drones="0" count="2" />
-	<health amount="15" />
+	<health amount="10" />
 	<maxPower amount="9" />
 	<crewCount amount="2" class="human_angel" />
 	<crewCount amount="1" class="engi_separatist" />
@@ -5846,7 +5938,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<unlock id="ship_PLAYER_SHIP_BLACKOPS_3_unlock"/>
 	<systemList>
 		<battery power="1" room="4" start="false" img="room_battery_14" />
-		<cloaking power="3" room="5" start="true" img="room_cloaking_orchid_3" />
+		<cloaking power="1" room="5" start="true" img="room_cloaking_orchid_3" />
+		<clonebay power="1" room="3" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="2" start="true" img="room_doors_9">
 			<slot>
 				<direction>right</direction>
@@ -5904,7 +6001,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<drone name="GUARDIAN_1_DRONE" />
 		<drone name="DEFENSE_1" />
 	</droneList>
-	<health amount="15" />
+	<health amount="10" />
 	<maxPower amount="9" />
 	<crewCount amount="1" class="slug_saboteur" />
 	<crewCount amount="1" class="human_angel" />
@@ -5923,6 +6020,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="16" start="false" img="room_battery_16" />
 		<cloaking power="1" room="5" start="false" img="room_cloaking_10" />
+		<clonebay power="1" room="4" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="17" start="true" img="room_doors_4">
 			<slot>
 				<direction>right</direction>
@@ -6016,6 +6118,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking power="1" room="14" start="false" img="room_hacking_8" />
+		<medbay power="1" room="16" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
 		<mind power="1" room="17" start="false" img="room_mind_4" />
 		<oxygen power="1" room="12" start="true" img="room_oxygen_6" />
 		<pilot power="1" room="0" start="true" img="room_pilot_5">
@@ -6087,6 +6194,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking max="2" power="1" room="12" start="false" img="room_hacking" />
+		<medbay max="4" power="1" room="20" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
 		<mind max="2" power="1" room="14" start="false" img="room_mind_3" />
 		<oxygen max="2" power="1" room="4" start="true" img="room_oxygen_6" />
 		<pilot power="1" room="0" start="true" img="room_pilot_5">
@@ -6142,6 +6254,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="23" start="true" img="room_battery" />
 		<cloaking power="1" room="15" start="false" img="room_cloaking" />
+		<clonebay power="1" room="24" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="3" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
@@ -6217,6 +6334,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="11" start="true" img="room_battery_8" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking_9" />
+		<clonebay power="2" room="20" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
 		<doors power="1" room="3" start="true" img="room_doors_4">
 			<slot>
 				<direction>right</direction>
@@ -6290,6 +6412,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="20" start="true" img="room_battery" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking" />
+		<clonebay power="1" room="0" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="18" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
@@ -6357,6 +6484,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="10" start="false" img="room_battery" />
 		<cloaking power="1" room="6" start="false" img="room_cloaking_3" />
+		<clonebay power="2" room="7" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="14" start="true" img="room_doors_9">
 			<slot>
 				<direction>right</direction>
@@ -6431,6 +6563,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="18" start="false" img="room_battery_17" />
 		<cloaking power="1" room="12" start="false" img="room_cloaking_3" />
+		<clonebay power="2" room="9" start="false">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="8" start="true" img="room_doors_9">
 			<slot>
 				<direction>right</direction>
@@ -6523,6 +6660,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking power="1" room="7" start="false" img="room_hacking_5" />
+		<medbay power="1" room="1" start="false" img="room_medbay">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
 		<mind power="1" room="13" start="false" img="room_mind_5" />
 		<oxygen power="1" room="11" start="false" img="room_oxygen_6" />
 		<pilot power="1" room="0" start="true" img="room_pilot_6">
@@ -7437,10 +7579,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// RSA TANK //////-->
 
 <crewBlueprint name="rsa_tank">
-	<desc>A very cool drone! I think.</desc>
+	<desc>A very cool tank! I think.</desc>
 	<cost>40</cost>
-	<title>RSA Remote Control Tank</title>
-	<short>RSA RC Tank</short>
+	<title>RSA Tank Drone</title>
+	<short>RSA Tank</short>
 	<rarity>0</rarity>
 	<powerList>
 		<power>Max Health is 70, x1.5 movement speed</power>

@@ -43,6 +43,7 @@ MVAR [name] [value]
 			</req>
 			<req lvl="0" max_lvl="0">
 				<name>tcc_called_compactor</name>
+        <name>tc_call_marker</name>
 			</req>
 		</req>
 	</events>
@@ -54,1043 +55,1140 @@ MVAR [name] [value]
 	</mod:findLike>
 </FTL>
 <FTL>
-	<mod:findLike type="events">
-		<mod:findName type="event" name="START_BEACON">
-			<mod-append:hiddenAug>ADDON_INSTALLED_TCC</mod-append:hiddenAug>
-		</mod:findName>
-	</mod:findLike>
-	<events><!--i am 99% sure that those reqs couldn't work bc missing <events>-->
-		<req name="SCAVENGER_REQ" type="all">
-			<name>ADVANCED_SCRAP_REQ</name>
-			<name>LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE</name>
-		</req>
+  <mod:findLike type="events">
+    <mod:findName type="event" name="START_BEACON">
+      <mod-append:hiddenAug>ADDON_INSTALLED_TCC</mod-append:hiddenAug>
+    </mod:findName>
+  </mod:findLike>
+  <events><!--i am 99% sure that those reqs couldn't work bc missing <events>-->
+    <req name="SCAVENGER_REQ" type="all">
+      <name>ADVANCED_SCRAP_REQ</name>
+      <name>LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE</name>
+    </req>
 
 
-		<req name="ADVANCED_SCRAP_REQ" type="any">
-			<name>ADVANCED_SCRAP</name>
-			<name>trash_eater</name>
-		</req>
+    <req name="ADVANCED_SCRAP_REQ" type="any">
+      <name>ADVANCED_SCRAP</name>
+      <name>trash_eater</name>
+    </req>
 
-		<!--///////////////AVALI EVENT STUFF/////////-->
-		<event name="INSTALL_LAB_AVALI_DENSEFLUFF">
-			<hiddenAug>LAB_AVALI_DENSEFLUFF</hiddenAug>
-			<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-			<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-		</event>
-		<event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
-			<hiddenAug>LAB_AVALI_FLAMECLOAKS</hiddenAug>
-			<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-			<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-		</event>
-		<event name="INSTALL_LAB_AVALI_CYBERNETIC">
-			<!--pardon the naming scheme, enhanced cybernetics used to be a lab, and no clone XP was an exclusive aug to avali C, but now its external enhanced cybernetics-->
-			<hiddenAug>LAB_AVALI_NOCLONEXP</hiddenAug>
-			<hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-			<loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-		</event>
-		<bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
-		<!--sector stuff-->
-		<eventFile>avali</eventFile>
-	</events>
-
-
-	<!--
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-												STORE LISTS
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	-->
-
-	<customStore id="STORE_NOODLE">
-        <hullRepair>
-			<price min="2" max="4"/>
-			<sectorScaled/>
-		</hullRepair>
-		<resource>
-			<type>fuel</type>
-			<count min="5" max="10"/>
-		</resource>
-		<resource>
-			<type>missiles</type>
-			<count min="3" max="7"/>
-		</resource>
-		<resource>
-			<type>drones</type>
-			<count min="6" max="11"/>
-		</resource>
-		<category type="WEAPONS">
-			<item>    
-			<modifier min="1" max="1.5" flat="false"/><!--Multiplier to price-->                
-			<blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
-			<price>-1</price><!--You can set the price of the item here, -1 defaults to the price in the weapon blueprint-->
-			<mysteryItem>false</mysteryItem><!--"Item of the day"-->                    
-			</item>
-			<chance>100</chance>
-        </category>
-		<category type="SYSTEMS">
-            <customTitle>ESSENTIAL SYSTEMS</customTitle>
-			<guaranteedSystems>
-                <weapons/>
- 			    <shields/>
-				<oxygen/>
-            </guaranteedSystems>
-			<item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-			<chance>100</chance>
-        </category>
-		<category type="SYSTEMS">
-			<customTitle>AUXILIARY SYSTEMS</customTitle>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-			<chance>65</chance>
-        </category>
-    </customStore>
+    <!--///////////////AVALI EVENT STUFF/////////-->
+    <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
+      <hiddenAug>LAB_AVALI_DENSEFLUFF</hiddenAug>
+      <hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
+      <loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
+    </event>
+    <event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
+      <hiddenAug>LAB_AVALI_FLAMECLOAKS</hiddenAug>
+      <hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
+      <loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
+    </event>
+    <event name="INSTALL_LAB_AVALI_CYBERNETIC">
+      <!--pardon the naming scheme, enhanced cybernetics used to be a lab, and no clone XP was an exclusive aug to avali C, but now its external enhanced cybernetics-->
+      <hiddenAug>LAB_AVALI_NOCLONEXP</hiddenAug>
+      <hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
+      <loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
+    </event>
+    <bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
+    <!--sector stuff-->
+    <eventFile>avali</eventFile>
+  </events>
 
 
-	<!--
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-													SHIPS
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	-->
+  <!--
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  STORE LISTS
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <customStore id="STORE_NOODLE">
+    <hullRepair>
+      <price min="2" max="4"/>
+      <sectorScaled/>
+    </hullRepair>
+    <resource>
+      <type>fuel</type>
+      <count min="5" max="10"/>
+    </resource>
+    <resource>
+      <type>missiles</type>
+      <count min="3" max="7"/>
+    </resource>
+    <resource>
+      <type>drones</type>
+      <count min="6" max="11"/>
+    </resource>
+    <category type="WEAPONS">
+      <item>
+        <modifier min="1" max="1.5" flat="false"/><!--Multiplier to price-->
+        <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
+        <price>-1</price><!--You can set the price of the item here, -1 defaults to the price in the weapon blueprint-->
+        <mysteryItem>false</mysteryItem><!--"Item of the day"-->
+      </item>
+      <chance>100</chance>
+    </category>
+    <category type="SYSTEMS">
+      <customTitle>ESSENTIAL SYSTEMS</customTitle>
+      <guaranteedSystems>
+        <weapons/>
+        <shields/>
+        <oxygen/>
+      </guaranteedSystems>
+      <item>
+        <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+      </item>
+      <item>
+        <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+      </item>
+      <item>
+        <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+      </item>
+      <chance>100</chance>
+    </category>
+    <category type="SYSTEMS">
+      <customTitle>AUXILIARY SYSTEMS</customTitle>
+      <item>
+        <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+      </item>
+      <item>
+        <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+      </item>
+      <item>
+        <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+      </item>
+      <chance>65</chance>
+    </category>
+  </customStore>
+
+
+  <!--
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  SHIPS
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
 
 
-	<mod:findLike type="ships">
+  <mod:findLike type="ships">
 
-		<!--///////SCRAPPER DREADNOUGHT//////-->
+    <!--///////SCRAPPER DREADNOUGHT//////-->
 
-		<mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
 
-			<unlock variant="a" silent="false">
-				<type>4</type>
-			</unlock>
-			<unlock variant="b" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
-				<value>5</value>
-			</unlock>
+      <unlock variant="a" silent="false">
+        <type>4</type>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
+        <value>5</value>
+      </unlock>
 
-		</mod-append:ship>
-		<mod-append:customShip name="PLAYER_SHIP_SCRAPPER">
-			<crewLimit>8</crewLimit>
-			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crew>
-				<scrapper_scavenger room="0" name="Zuggo" />
-				<scrapper_heavy room="5" />
-				<scrapper_engineer room="2" name="Ash" />
-				<scrapper room="15"/>
-			</crew>
-		</mod-append:customShip>
-		<mod-append:customShip name="PLAYER_SHIP_SCRAPPER_2">
-			<crewLimit>10</crewLimit>
-			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crew>
-				<scrapper_engineer room="0"/>
-				<scrapper_heavy room="1"/>
-				<scrapper_soldier room="1"/>
-				<scrapper_soldier room="1"/>
-				<scrapper room="1"/>
-				<scrapper room="2"/>
-			</crew>
-		</mod-append:customShip>
+    </mod-append:ship>
+    <mod-append:customShip name="PLAYER_SHIP_SCRAPPER">
+      <crewLimit>8</crewLimit>
+      <hiddenAug>SHIP_SCRAPPER</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crew>
+        <scrapper_scavenger room="0" name="Zuggo" />
+        <scrapper_heavy room="5" />
+        <scrapper_engineer room="2" name="Ash" />
+        <scrapper room="15"/>
+      </crew>
+    </mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_SCRAPPER_2">
+      <crewLimit>10</crewLimit>
+      <hiddenAug>SHIP_SCRAPPER</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crew>
+        <scrapper_engineer room="0"/>
+        <scrapper_heavy room="1"/>
+        <scrapper_soldier room="1"/>
+        <scrapper_soldier room="1"/>
+        <scrapper room="1"/>
+        <scrapper room="2"/>
+      </crew>
+    </mod-append:customShip>
 
-		<!--///////SCRAPPER OP SHIP//////-->
+    <!--///////SCRAPPER OP SHIP//////-->
 
-		<mod-append:ship name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD" b="false" c="false" unused="true" noAppend="true">
+    <mod-append:ship name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD" b="false" c="false" unused="true" noAppend="true">
 
-			<unlock variant="a" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_LIMIT_3</shipReq>
-				<value>50</value>
-			</unlock>
+      <unlock variant="a" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_LIMIT_3</shipReq>
+        <value>50</value>
+      </unlock>
 
-		</mod-append:ship>
-		<mod-append:customShip name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD">
-			<crewLimit>16</crewLimit>
-			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crew>
-				<trash_eater room="0" name="Trash Eater" />
-				<scrapper room="5" name="Zuggo" />
-				<scrapper room="2" name="Ash" />
-			</crew>
-			<customReactor maxLevel="50"/>
-		</mod-append:customShip>
+    </mod-append:ship>
+    <mod-append:customShip name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD">
+      <crewLimit>16</crewLimit>
+      <hiddenAug>SHIP_SCRAPPER</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crew>
+        <trash_eater room="0" name="Trash Eater" />
+        <scrapper room="5" name="Zuggo" />
+        <scrapper room="2" name="Ash" />
+      </crew>
+      <customReactor maxLevel="50"/>
+    </mod-append:customShip>
 
-		<!--///////KESTREL MINER//////-->
+    <!--///////KESTREL MINER//////-->
 
-		<mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true" unused="true">
 
-			<arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
-			<unlock variant="a" silent="false">
-				<type>4</type>
-			</unlock>
-			<unlock variant="b" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
-				<value>5</value>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_TRASH_MINER_2</shipReq>
-				<value>5</value>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
-			</unlock>
-		</mod-append:ship>
-		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER">
-			<crewLimit>11</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_GARBAGE_COMPACTOR</hiddenAug>
-			<crew>
-				<primagen_raptor room="11" name="RAPTOR" />
-				<protogen_tracker room="0" name="TRACKER" />
-				<sergal_cheese room="13" name="Cheese" />
-				<clonefail_lancer room="15" name="Lancer" />
-			</crew>
-		</mod-append:customShip>
+      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
+      <unlock variant="a" silent="false">
+        <type>4</type>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
+        <value>5</value>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_TRASH_MINER_2</shipReq>
+        <value>5</value>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
+      </unlock>
+    </mod-append:ship>
+    <mod-append:customShip name="PLAYER_SHIP_TRASH_MINER">
+      <crewLimit>11</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_GARBAGE_COMPACTOR</hiddenAug>
+      <crew>
+        <primagen_raptor room="11" name="RAPTOR" />
+        <protogen_tracker room="0" name="TRACKER" />
+        <sergal_cheese room="13" name="Cheese" />
+        <clonefail_lancer room="15" name="Lancer" />
+      </crew>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_2">
-			<crewLimit>11</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_TRASH</hiddenAug>
-			<crew>
-				<primagen_raptor room="12" name="RAPTOR" />
-				<protogen_tracker room="0" name="TRACKER" />
-				<sergal_cheese room="13" name="Cheese" />
-				<clonefail_lancer room="6" name="Lancer" />
-				<rock_commando room="6" name="Lex" />
-			</crew>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_2">
+      <crewLimit>11</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_TRASH</hiddenAug>
+      <crew>
+        <primagen_raptor room="12" name="RAPTOR" />
+        <protogen_tracker room="0" name="TRACKER" />
+        <sergal_cheese room="13" name="Cheese" />
+        <clonefail_lancer room="6" name="Lancer" />
+        <rock_commando room="6" name="Lex" />
+      </crew>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_3">
-			<crewLimit>11</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_TRASH</hiddenAug>
-			<crew>
-				<avali room="11" name="Stolas" />
-				<kiviekith room="13" name="Alastor" />
-				<kiviekith room="0" name="Blitzo" />
-			</crew>
-		</mod-append:customShip>
-
-
-		<!--///////TRASH REACTOR//////-->
-
-		<mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="false" c="false" unused="true">
-
-			<arrow variant="a" direction="down" tooltip="ship_unlock_victory" image="arrow_v_down.png" unlockedImage="arrow_v_down_on.png">PLAYER_SHIP_SDM</arrow>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
-			</unlock>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TRASH_MINER_2</shipReq>
-			</unlock>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TRASH_MINER_3</shipReq>
-			</unlock>
-		</mod-append:ship>
-
-		<mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR">
-			<crewLimit>12</crewLimit>
-			<customReactor maxLevel="50"/>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_TRASH</hiddenAug>
-			<crew>
-				<kora room="12" name="Kora" />
-				<primagen_raptor room="14" name="RAPTOR" />
-				<protogen_tracker room="1" name="TRACKER" />
-				<sergal_cheese room="11" name="Cheese" />
-				<clonefail_lancer room="3" name="Lancer" />
-				<robottos room="2" name="Z3N1TH" />
-			</crew>
-		</mod-append:customShip>
-
-		<!--///////SIZE DOESN'T MATTER//////-->
-
-		<mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
-
-			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_TC_ARMORED_WASP</arrow>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
-			</unlock>
-			<unlock variant="b" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_SDM</shipReq>
-				<value>5</value>
-			</unlock>
-		</mod-append:ship>
-
-		<mod-append:customShip name="PLAYER_SHIP_SDM">
-			<crewLimit>9</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_FEDERATION</hiddenAug>
-			<crew>
-				<human_mfk room="6" name="Echo-Cap" />
-				<human_soldier room="4" name="Echo-1" />
-				<human_soldier room="4" name="Echo-2" />
-				<human_soldier room="4" name="Echo-3" />
-				<human_soldier room="4" name="Echo-4" />
-				<human_soldier room="4" name="Echo-5" />
-				<human_engineer room="7" name="Echo-Sup" />
-				<human_medic room="3" name="Echo-Med" />
-			</crew>
-		</mod-append:customShip>
-
-		<mod-append:customShip name="PLAYER_SHIP_SDM_2">
-			<crewLimit>11</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_CIVILIAN</hiddenAug>
-			<crew>
-				<rsa_technician room="0" />
-			</crew>
-		</mod-append:customShip>
-
-		<!--///////ARMORED WASP//////-->
-
-		<mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
-			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_CORROSUS</arrow>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_SDM</shipReq>
-			</unlock>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_SDM_2</shipReq>
-			</unlock>
-			<unlock variant="b" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
-				<value>5</value>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
-				<value>5</value>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
-			</unlock>
-		</mod-append:ship>
-
-		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP">
-			<crewLimit>9</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_ARMOREDWASP</hiddenAug>
-			<crew>
-				<scrapper_scavenger room="11" />
-				<robottos room="0" />
-				<protogen_space_scavenger room="1" />
-				<avali room="5" />
-			</crew>
-		</mod-append:customShip>
-
-		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_2">
-			<hiddenAug>SHIP_FEDERATION</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crewLimit>9</crewLimit>
-			<crew>
-				<human_soldier room="0" />
-				<avali room="11" />
-				<robottos room="1" />
-			</crew>
-		</mod-append:customShip>
-
-		<mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_3">
-			<hiddenAug>SHIP_STEALTH</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crewLimit>9</crewLimit>
-			<crew>
-				<kora room="1" name="Kora" />
-				<clonefail_lancer room="0" name="Lancer" />
-			</crew>
-		</mod-append:customShip>
-
-		<!--///////CORROSUS//////-->
-
-		<mod-append:ship name="PLAYER_SHIP_CORROSUS" b="true" c="true" unused="true">
-			<arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_SLUGTON</arrow>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
-			</unlock>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
-			</unlock>
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
-			</unlock>
-
-		</mod-append:ship>
-
-		<mod-append:customShip name="PLAYER_SHIP_CORROSUS">
-			<crewLimit>12</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_RSA</hiddenAug>
-		</mod-append:customShip>
-
-		<mod-append:customShip name="PLAYER_SHIP_CORROSUS_2">
-			<crewLimit>6</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_RSA</hiddenAug>
-		</mod-append:customShip>
-
-		<mod-append:customShip name="PLAYER_SHIP_CORROSUS_3">
-			<crewLimit>10</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_RSA</hiddenAug>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_TRASH_MINER_3">
+      <crewLimit>11</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_TRASH</hiddenAug>
+      <crew>
+        <avali room="11" name="Stolas" />
+        <kiviekith room="13" name="Alastor" />
+        <kiviekith room="0" name="Blitzo" />
+      </crew>
+    </mod-append:customShip>
 
 
-		<!--///////RENT-A-FLAGSHIP//////-->
+    <!--///////TRASH REACTOR//////-->
 
-		<mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
-			<unlock variant="a" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_CORROSUS</shipReq>
-			</unlock>
-			<unlock variant="b" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_SLUGTON</shipReq>
-				<value>5</value>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_SLUGTON_2</shipReq>
-				<value>5</value>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_SLUGTON</shipReq>
-			</unlock>
-		</mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="false" c="false" unused="true">
 
-		<mod-append:customShip name="PLAYER_SHIP_SLUGTON">
-			<crewLimit>20</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_SLUG</hiddenAug>
-			<crew>
-				<slug_hektar room="0" name="SLUGTON" />
-				<mantis_freebusiness room="1" name="Businessmantis" />
-				<slug_hektar room="7" />
-				<slug_hektar room="6" name="ConMan" />
-			</crew>
-		</mod-append:customShip>
+      <arrow variant="a" direction="down" tooltip="ship_unlock_victory" image="arrow_v_down.png" unlockedImage="arrow_v_down_on.png">PLAYER_SHIP_SDM</arrow>
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
+      </unlock>
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TRASH_MINER_2</shipReq>
+      </unlock>
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TRASH_MINER_3</shipReq>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_SLUGTON_2">
-			<crewLimit>20</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_PIRATE</hiddenAug>
-			<crew>
-				<kiviekith room="0" name="Krieg" />
-				<avali room="6" name="Jessica" />
-				<mantis_rsa room="1" name="Diego" />
-			</crew>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR">
+      <crewLimit>12</crewLimit>
+      <customReactor maxLevel="50"/>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_TRASH</hiddenAug>
+      <crew>
+        <kora room="12" name="Kora" />
+        <primagen_raptor room="14" name="RAPTOR" />
+        <protogen_tracker room="1" name="TRACKER" />
+        <sergal_cheese room="11" name="Cheese" />
+        <clonefail_lancer room="3" name="Lancer" />
+        <robottos room="2" name="Z3N1TH" />
+      </crew>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_SLUGTON_3">
-			<crewLimit>20</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_TRASH</hiddenAug>
-			<crew>
-				<sergal_cheese room="0" name="Cheese" />
-				<rsa_technician room="1" name="Nitron" />
-				<primagen_raptor room="7" name="RAPTOR" />
-				<clonefail_lancer room="6" name="Lancer" />
-				<protogen room="6" />
-				<human_mfk room="6" />
-				<human_medic room="6" />
-			</crew>
-		</mod-append:customShip>
+    <!--///////SIZE DOESN'T MATTER//////-->
 
-		<!--///////EXTRA ELITE SHIP PACK//////-->
+    <mod-append:ship name="PLAYER_SHIP_SDM" b="false" c="false" unused="true">
 
-		<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
-			<unlock variant="a" silent="false">
+      <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_TC_ARMORED_WASP</arrow>
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_SDM</shipReq>
+        <value>5</value>
+      </unlock>
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_SDM">
+      <crewLimit>9</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <crew>
+        <human_mfk room="6" name="Echo-Cap" />
+        <human_soldier room="4" name="Echo-1" />
+        <human_soldier room="4" name="Echo-2" />
+        <human_soldier room="4" name="Echo-3" />
+        <human_soldier room="4" name="Echo-4" />
+        <human_soldier room="4" name="Echo-5" />
+        <human_engineer room="7" name="Echo-Sup" />
+        <human_medic room="3" name="Echo-Med" />
+      </crew>
+    </mod-append:customShip>
+
+    <!--///////ARMORED WASP//////-->
+
+    <mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
+      <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_CORROSUS</arrow>
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_SDM</shipReq>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
+        <value>5</value>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
+        <value>5</value>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
+      </unlock>
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP">
+      <crewLimit>9</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_ARMOREDWASP</hiddenAug>
+      <crew>
+        <scrapper_scavenger room="11" />
+        <robottos room="0" />
+        <protogen_space_scavenger room="1" />
+        <avali room="5" />
+      </crew>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_2">
+      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>9</crewLimit>
+      <crew>
+        <human_soldier room="0" />
+        <avali room="11" />
+        <robottos room="1" />
+      </crew>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_3">
+      <hiddenAug>SHIP_STEALTH</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>9</crewLimit>
+      <crew>
+        <kora room="1" name="Kora" />
+        <clonefail_lancer room="0" name="Lancer" />
+      </crew>
+    </mod-append:customShip>
+
+    <!--///////CCK//////-->
+
+	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="false" c="false" unused="true">
+	<unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_ROBOTTO</shipReq>
+	</unlock>
+    </mod-append:ship>
+
+	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION">
+		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>11</crewLimit>
+		<crew>
+			<rsa_technician room="1" />
+			<mantis_rsa room="0" />
+		</crew>
+	</mod-append:customShip>
+
+    <!--///////CORROSUS//////-->
+
+    <mod-append:ship name="PLAYER_SHIP_CORROSUS" b="true" c="true" unused="true">
+      <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_SLUGTON</arrow>
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
+      </unlock>
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
+      </unlock>
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
+      </unlock>
+
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_CORROSUS">
+      <crewLimit>12</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_RSA</hiddenAug>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_CORROSUS_2">
+      <crewLimit>6</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_RSA</hiddenAug>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_CORROSUS_3">
+      <crewLimit>10</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_RSA</hiddenAug>
+    </mod-append:customShip>
+
+
+    <!--///////RENT-A-FLAGSHIP//////-->
+
+    <mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CORROSUS</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CORROSUS_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CORROSUS_3</shipReq>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_SLUGTON</shipReq>
+        <value>5</value>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_SLUGTON_2</shipReq>
+        <value>5</value>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_SLUGTON</shipReq>
+      </unlock>
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_SLUGTON">
+      <crewLimit>20</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_SLUG</hiddenAug>
+      <crew>
+        <slug_hektar room="0" name="SLUGTON" />
+        <mantis_freebusiness room="1" name="Businessmantis" />
+        <slug_hektar room="7" />
+        <slug_hektar room="6" name="ConMan" />
+      </crew>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_SLUGTON_2">
+      <crewLimit>20</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_PIRATE</hiddenAug>
+      <crew>
+        <kiviekith room="0" name="Krieg" />
+        <avali room="6" name="Jessica" />
+        <mantis_rsa room="1" name="Diego" />
+      </crew>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_SLUGTON_3">
+      <crewLimit>20</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_TRASH</hiddenAug>
+      <crew>
+        <sergal_cheese room="0" name="Cheese" />
+        <rsa_technician room="1" name="Nitron" />
+        <primagen_raptor room="7" name="RAPTOR" />
+        <clonefail_lancer room="6" name="Lancer" />
+        <protogen room="6" />
+        <human_mfk room="6" />
+        <human_medic room="6" />
+      </crew>
+    </mod-append:customShip>
+
+    <!--///////EXTRA ELITE SHIP PACK//////-->
+
+    <mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
+      <unlock variant="a" silent="false">
         <type>3</type>
-		    <otherUnlocks>
-					<ship>PLAYER_SHIP_SCRAPPER</ship>
-					<ship>PLAYER_SHIP_TRASH_MINER</ship>
-					<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
-					<ship>PLAYER_SHIP_SDM</ship>
-					<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
-					<ship>PLAYER_SHIP_CORROSUS</ship>
-					<ship>PLAYER_SHIP_SLUGTON</ship>
-		    </otherUnlocks>
-    	</unlock>
-			<unlock variant="b" silent="false">
+        <otherUnlocks>
+          <ship>PLAYER_SHIP_SCRAPPER</ship>
+          <ship>PLAYER_SHIP_TRASH_MINER</ship>
+          <ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+          <ship>PLAYER_SHIP_SDM</ship>
+          <ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
+          <ship>PLAYER_SHIP_CORROSUS</ship>
+          <ship>PLAYER_SHIP_SLUGTON</ship>
+        </otherUnlocks>
+      </unlock>
+      <unlock variant="b" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
       </unlock>
-		</mod-append:ship>
+    </mod-append:ship>
 
-	<!--/////// PORTED SHIPS //////-->
+    <!--/////// PORTED SHIPS //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true">
-			<unlock variant="a" silent="false">
-				<type>3</type>
-				<shipReq>CREW_SHIP_SLOT2_2</shipReq>
-			</unlock>
-		</mod-append:ship>
-
-		<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
-			<hiddenAug>SHIP_SPLICE</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
-
-
-		<mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="false" unused="true">
-		<unlock variant="a" silent="false">
-			<type>3</type>
-			<shipReq>CREW_SHIP_SLOT1_2</shipReq>
-		</unlock>
-
-		<unlock variant="b" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_POTENTIAL</shipReq>
-			<value>5</value>
-		</unlock>
-	
-		</mod-append:ship>
-
-		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
-			<hiddenAug>SHIP_FEDERATION</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crewLimit>8</crewLimit>
-			<customReactor maxLevel="60"/>
-		</mod-append:customShip>
-
-		<mod-append:customShip name="PLAYER_SHIP_POTENTIAL_2">
-			<hiddenAug>SHIP_FEDERATION</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crewLimit>8</crewLimit>
-			<customReactor maxLevel="60"/>
-		</mod-append:customShip>
-
-
-	<!--/////////////////// AVALI ZONE //////////////// -->
-
-		<mod-append:customShip name="MU_BOSS_ENGINEER_C">
-			<shipIcons>
-				<shipIcon>icon_droneboost</shipIcon>
-			</shipIcons>
-			<crew>
-				<engineer room="0" name="Doctor M." />
-				<!--piloting-->
-				<weaver room="14" />
-				<!--engines-->
-				<technomanning room="10" name="1812" />
-				<!--weapons-->
-				<technomanning room="13" />
-				<!--shields-->
-			</crew>
-		</mod-append:customShip>
-
-		<mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" unused="true" >
-			<unlock variant="a" silent="false">
-				<type>3</type>
-				<shipReq>PLAYER_SHIP_ORCHID_3</shipReq>
-			</unlock>
-			<unlock variant="b" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_AVALI</shipReq>
-				<value>5</value>
-				<silent>false</silent>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_AVALI_2</shipReq>
-				<value>5</value>
-				<silent>false</silent>
-			</unlock>
-			<unlock variant="c" silent="false">
-				<type>2</type>
-				<shipReq>PLAYER_SHIP_AVALI</shipReq>
-				<silent>false</silent>
-			</unlock>
-		</mod-append:ship>
-
-			<mod-append:customShip name="PLAYER_SHIP_AVALI">
-				<hiddenAug>SHIP_AVALI</hiddenAug>
-				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-				<crewLimit>12</crewLimit>
-			</mod-append:customShip>
-
-			<mod-append:customShip name="PLAYER_SHIP_AVALI_2">
-				<hiddenAug>SHIP_AVALI</hiddenAug>
-				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-				<crewLimit>12</crewLimit>
-			</mod-append:customShip>
-
-			<mod-append:customShip name="PLAYER_SHIP_AVALI_3">
-				<hiddenAug>SHIP_AVALI</hiddenAug>
-				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-				<crewLimit>12</crewLimit>
-			</mod-append:customShip>
-
-		<!--/////////////////// AVALI SLOT 2 //////////////// -->
-
-		<mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" >
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_AVALI_3</shipReq>
-			</unlock>
-		</mod-append:ship>
-
-			<mod-append:customShip name="PLAYER_SHIP_AVALI_SLOT2">
-				<hiddenAug>SHIP_AVALI</hiddenAug>
-				<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-				<crewLimit>12</crewLimit>
-			</mod-append:customShip>
-
-		<!--///////EXTRA ELITE SHIP PACK//////-->
-
-		<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
-			<unlock variant="a" silent="false">
+    <mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true">
+      <unlock variant="a" silent="false">
         <type>3</type>
-		    <otherUnlocks>
-					<ship>PLAYER_SHIP_SCRAPPER</ship>
-					<ship>PLAYER_SHIP_TRASH_MINER</ship>
-					<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
-					<ship>PLAYER_SHIP_SDM</ship>
-					<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
-					<ship>PLAYER_SHIP_CORROSUS</ship>
-					<ship>PLAYER_SHIP_SLUGTON</ship>
-		    </otherUnlocks>
-    	</unlock>
-			<unlock variant="b" silent="false">
+        <shipReq>CREW_SHIP_SLOT2_2</shipReq>
+      </unlock>
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_DEFENSE">
+      <hiddenAug>SHIP_SPLICE</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
+
+
+    <mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="false" unused="true">
+      <unlock variant="a" silent="false">
+        <type>3</type>
+        <shipReq>CREW_SHIP_SLOT1_2</shipReq>
+      </unlock>
+
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_POTENTIAL</shipReq>
+        <value>5</value>
+      </unlock>
+
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
+      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>8</crewLimit>
+      <customReactor maxLevel="60"/>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_POTENTIAL_2">
+      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>8</crewLimit>
+      <customReactor maxLevel="60"/>
+    </mod-append:customShip>
+
+
+    <!--/////////////////// AVALI ZONE //////////////// -->
+
+    <mod-append:customShip name="MU_BOSS_ENGINEER_C">
+      <shipIcons>
+        <shipIcon>icon_droneboost</shipIcon>
+      </shipIcons>
+      <crew>
+        <engineer room="0" name="Doctor M." />
+        <!--piloting-->
+        <weaver room="14" />
+        <!--engines-->
+        <technomanning room="10" name="1812" />
+        <!--weapons-->
+        <technomanning room="13" />
+        <!--shields-->
+      </crew>
+    </mod-append:customShip>
+
+    <mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" unused="true" >
+      <unlock variant="a" silent="false">
+        <type>3</type>
+        <shipReq>PLAYER_SHIP_ORCHID_3</shipReq>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_AVALI</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_AVALI_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_AVALI</shipReq>
+        <silent>false</silent>
+      </unlock>
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_AVALI">
+      <hiddenAug>SHIP_AVALI</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>12</crewLimit>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_AVALI_2">
+      <hiddenAug>SHIP_AVALI</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>12</crewLimit>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_AVALI_3">
+      <hiddenAug>SHIP_AVALI</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>12</crewLimit>
+    </mod-append:customShip>
+
+    <!--/////////////////// AVALI SLOT 2 //////////////// -->
+
+    <mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" >
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_AVALI_3</shipReq>
+      </unlock>
+    </mod-append:ship>
+
+    <mod-append:customShip name="PLAYER_SHIP_AVALI_SLOT2">
+      <hiddenAug>SHIP_AVALI</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>12</crewLimit>
+	  <crew>
+        <robottos_gunner room="0" />
+      </crew>
+    </mod-append:customShip>
+
+    <!--///////EXTRA ELITE SHIP PACK//////-->
+
+    <mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
+      <unlock variant="a" silent="false">
+        <type>3</type>
+        <otherUnlocks>
+          <ship>PLAYER_SHIP_SCRAPPER</ship>
+          <ship>PLAYER_SHIP_TRASH_MINER</ship>
+          <ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+          <ship>PLAYER_SHIP_SDM</ship>
+          <ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
+          <ship>PLAYER_SHIP_CORROSUS</ship>
+          <ship>PLAYER_SHIP_SLUGTON</ship>
+        </otherUnlocks>
+      </unlock>
+      <unlock variant="b" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
-    	</unlock>
-		</mod-append:ship>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
-			<crewLimit>20</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_SLUG</hiddenAug>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
+      <crewLimit>20</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_SLUG</hiddenAug>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
-			<crewLimit>10</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_SCRAPPER</hiddenAug>
-			<crew>
-				<protogen room="2" />
-				<kiviekith room="7" name="Orvech Vonor" />
-				<kiviekith room="14" name="Altan" />
-				<kora room="0" name="Kora" />
-				<scrapper room="15" />
-			</crew>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
+      <crewLimit>10</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_SCRAPPER</hiddenAug>
+      <crew>
+        <protogen room="2" />
+        <kiviekith room="7" name="Orvech Vonor" />
+        <kiviekith room="14" name="Altan" />
+        <kora room="0" name="Kora" />
+        <scrapper room="15" />
+      </crew>
+    </mod-append:customShip>
 
-		<!--/////// FSF BLACK OPS //////-->
+    <!--/////// FSF BLACK OPS //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_BLACKOPS" b="true" c="true" unused="true">
-		<unlock variant="a" silent="false">
-			<type>3</type>
-			<otherUnlocks>
-				<ship>PLAYER_SHIP_CIVILIAN</ship>
-				<ship>PLAYER_SHIP_MILITIA</ship>
-				<ship>PLAYER_SHIP_FEDERATION</ship>
-				<ship>PLAYER_SHIP_KESTREL</ship>
-				<ship>PLAYER_SHIP_STEALTH</ship>
-			</otherUnlocks>
-		</unlock>
-		<unlock variant="b" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_BLACKOPS_2</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_BLACKOPS_3</shipReq>
-			<silent>false</silent>
-		</unlock>
-	</mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_BLACKOPS" b="true" c="true" unused="true">
+      <unlock variant="a" silent="false">
+        <type>3</type>
+        <otherUnlocks>
+          <ship>PLAYER_SHIP_CIVILIAN</ship>
+          <ship>PLAYER_SHIP_MILITIA</ship>
+          <ship>PLAYER_SHIP_FEDERATION</ship>
+          <ship>PLAYER_SHIP_KESTREL</ship>
+          <ship>PLAYER_SHIP_STEALTH</ship>
+        </otherUnlocks>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_BLACKOPS_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_BLACKOPS_3</shipReq>
+        <silent>false</silent>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_BLACKOPS">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_STEALTH</hiddenAug>
-			<crewLimit>4</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_BLACKOPS">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_STEALTH</hiddenAug>
+      <crewLimit>4</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_BLACKOPS_2">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_STEALTH</hiddenAug>
-			<crewLimit>4</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_BLACKOPS_2">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_STEALTH</hiddenAug>
+      <crewLimit>4</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_BLACKOPS_3">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_STEALTH</hiddenAug>
-			<crewLimit>4</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_BLACKOPS_3">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_STEALTH</hiddenAug>
+      <crewLimit>4</crewLimit>
+    </mod-append:customShip>
 
-		<!--/////// FSF MINESWEEPER //////-->
+    <!--/////// FSF MINESWEEPER //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_MINESWEEPER" b="true" c="true" unused="true" >
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
-		</unlock>
-		<unlock variant="b" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
-			<silent>false</silent>
-		</unlock>
-		</mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_MINESWEEPER" b="true" c="true" unused="true" >
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_BLACKOPS_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_BLACKOPS_3</shipReq>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
+        <silent>false</silent>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_MINESWEEPER">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER_2">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_MINESWEEPER_2">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_MINESWEEPER_3">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
+    <mod-append:customShip name="PLAYER_SHIP_MINESWEEPER_3">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
 
 
-			<rooms>
-			<room id="10"> <!--doors-->
-				<roomAnim renderLayer="0">resist_2x1</roomAnim>
-				<roomAnim renderLayer="3">resist_icon</roomAnim>
-				<sysDamageResistChance>100</sysDamageResistChance>
-			</room>
-			<room id="21"> <!--engines-->
-				<roomAnim renderLayer="0">resist_2x1</roomAnim>
-				<roomAnim renderLayer="3">resist_icon</roomAnim>
-				<sysDamageResistChance>100</sysDamageResistChance>
-			</room>
-			<room id="0"> <!--pilot-->
-				<roomAnim renderLayer="0">resist_2x2</roomAnim>
-				<roomAnim renderLayer="3">resist_icon</roomAnim>
-				<sysDamageResistChance>100</sysDamageResistChance>
-			</room>
-			<room id="9"> <!--sensors-->
-				<roomAnim renderLayer="0">resist_2x1</roomAnim>
-				<roomAnim renderLayer="3">resist_icon</roomAnim>
-				<sysDamageResistChance>100</sysDamageResistChance>
-			</room>
-			<room id="6"> <!--weapons-->
-				<roomAnim renderLayer="0">resist_2x1</roomAnim>
-				<roomAnim renderLayer="3">resist_icon</roomAnim>
-				<sysDamageResistChance>100</sysDamageResistChance>
-			</room>
-			</rooms>
+      <rooms>
+        <room id="10"> <!--doors-->
+          <roomAnim renderLayer="0">resist_2x1</roomAnim>
+          <roomAnim renderLayer="3">resist_icon</roomAnim>
+          <sysDamageResistChance>100</sysDamageResistChance>
+        </room>
+        <room id="21"> <!--engines-->
+          <roomAnim renderLayer="0">resist_2x1</roomAnim>
+          <roomAnim renderLayer="3">resist_icon</roomAnim>
+          <sysDamageResistChance>100</sysDamageResistChance>
+        </room>
+        <room id="0"> <!--pilot-->
+          <roomAnim renderLayer="0">resist_2x2</roomAnim>
+          <roomAnim renderLayer="3">resist_icon</roomAnim>
+          <sysDamageResistChance>100</sysDamageResistChance>
+        </room>
+        <room id="9"> <!--sensors-->
+          <roomAnim renderLayer="0">resist_2x1</roomAnim>
+          <roomAnim renderLayer="3">resist_icon</roomAnim>
+          <sysDamageResistChance>100</sysDamageResistChance>
+        </room>
+        <room id="6"> <!--weapons-->
+          <roomAnim renderLayer="0">resist_2x1</roomAnim>
+          <roomAnim renderLayer="3">resist_icon</roomAnim>
+          <sysDamageResistChance>100</sysDamageResistChance>
+        </room>
+      </rooms>
 
-		</mod-append:customShip>
+    </mod-append:customShip>
 
-		<!--/////// FSF CYBERWARFARE //////-->
+    <!--/////// FSF CYBERWARFARE //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_CYBER" b="true" c="true" unused="true" >
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
-		</unlock>
-		<unlock variant="b" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_CYBER</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_CYBER_2</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_CYBER_3</shipReq>
-			<silent>false</silent>
-		</unlock>
-	</mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_CYBER" b="true" c="true" unused="true" >
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_MINESWEEPER_3</shipReq>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CYBER</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_CYBER_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CYBER_3</shipReq>
+        <silent>false</silent>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_CYBER">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CYBER">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_CYBER_2">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CYBER_2">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_CYBER_3">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<autoShipForce>true</autoShipForce>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_CYBER_3">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <autoShipForce>true</autoShipForce>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<!--/////// FSF NBC //////-->
+    <!--/////// FSF NBC //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_NBC" b="true" c="true" unused="true" >
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_CYBER</shipReq>
-		</unlock>
-		<unlock variant="b" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_NBC</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_NBC_2</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_NBC_3</shipReq>
-			<silent>false</silent>
-		</unlock>
-	</mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_NBC" b="true" c="true" unused="true" >
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CYBER</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CYBER_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_CYBER_3</shipReq>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_NBC</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_NBC_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_NBC_3</shipReq>
+        <silent>false</silent>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_NBC">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_NBC">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_NBC_2">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_NBC_2">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_NBC_3">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_NBC_3">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<!--/////// FEDERATION CARRIER //////-->
+    <!--/////// FEDERATION CARRIER //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="true" c="true" unused="true" >
-		<unlock variant="a" silent="false">
-			<type>3</type>
-			<otherUnlocks>
-				<ship>PLAYER_SHIP_BLACKOPS</ship>
-				<ship>PLAYER_SHIP_MINESWEEPER</ship>
-				<ship>PLAYER_SHIP_CYBER</ship>
-				<ship>PLAYER_SHIP_NBC</ship>
-			</otherUnlocks>
-		</unlock>
-		<unlock variant="b" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_FEDERATION_CARRIER_2</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
-			<silent>false</silent>
-		</unlock>
-	</mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="true" c="true" unused="true" >
+      <unlock variant="a" silent="false">
+        <type>3</type>
+        <otherUnlocks>
+          <ship>PLAYER_SHIP_BLACKOPS</ship>
+          <ship>PLAYER_SHIP_MINESWEEPER</ship>
+          <ship>PLAYER_SHIP_CYBER</ship>
+          <ship>PLAYER_SHIP_NBC</ship>
+        </otherUnlocks>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_FEDERATION_CARRIER_2</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
+        <silent>false</silent>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER_2">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER_2">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER_3">
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_FEDERATION</hiddenAug>
-			<crewLimit>8</crewLimit>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER_3">
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <crewLimit>8</crewLimit>
+    </mod-append:customShip>
 
-		<!--/////// MILSPEC //////-->
+    <!--/////// MILSPEC //////-->
 
-		<mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false" unused="true">
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_AVALI</shipReq>
-			</unlock>
-			<unlock variant="b" silent="false">
-				<type>1</type>
-				<shipReq>PLAYER_SHIP_TC_MILSPEC</shipReq>
-				<value>5</value>
-				<silent>false</silent>
-			</unlock>
-		</mod-append:ship>
+    <mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false" unused="true">
+      <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_AVALI</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_AVALI_2</shipReq>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>2</type>
+        <shipReq>PLAYER_SHIP_AVALI_3</shipReq>
+      </unlock>
+      <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_TC_MILSPEC</shipReq>
+        <value>5</value>
+        <silent>false</silent>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC">
-			<crewLimit>12</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC">
+      <crewLimit>12</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+    </mod-append:customShip>
 
-		<mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC_2">
-			<crewLimit>12</crewLimit>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<hiddenAug>SHIP_CRYSTAL</hiddenAug>
-			<crew>
-				<human room="18" name="Childs" />
-				<human room="3" name="Windows" />
-				<human room="6" name="Garry" />
-				<human room="20" name="R.J. MacReady" />
-				<blobhuman room="13" name="Palmer" />
-			</crew>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC_2">
+      <crewLimit>12</crewLimit>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <hiddenAug>SHIP_CRYSTAL</hiddenAug>
+      <crew>
+        <human room="18" name="Childs" />
+        <human room="3" name="Windows" />
+        <human room="6" name="Garry" />
+        <human room="20" name="R.J. MacReady" />
+        <blobhuman room="13" name="Palmer" />
+      </crew>
+    </mod-append:customShip>
 
-		<!--/////// LEAH GAMING //////-->
-	
-		<mod-append:ship name="PLAYER_SHIP_NEWTONBEAMA" b="true" c="true" unused="true" >
-			<unlock variant="b" silent="false">
-				<type>2</type>
-				</unlock>
-			<unlock variant="c" silent="false">
-				<type>4</type>
-				</unlock>
-		</mod-append:ship>
-		
-		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA">
-			<crewLimit>8</crewLimit>
-			<hiddenAug>SHIP_REBEL</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crew>
-				<unique_leah_mfk room="4" name="Leah" />
-				<!--piloting-->
-				<tinybug room="0" />
-				<!--engines-->
-				<tinybug room="5" />
-				<!--weapons-->
-				<tinybug room="7" />
-				<!--shields-->
-			</crew>
-		</mod-append:customShip>
-		
-		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_2">
-			<crewLimit>6</crewLimit>
-			<hiddenAug>SHIP_REBEL</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crew>
-				<unique_leah_mfk room="0" name="Leo Liam Leviticus" />
-				<!--tp-->
-				<robottos room="1" />
-				<!--piloting-->
-				<zoltan_devotee room="0" />
-				<!--tp-->
-				<leech room="0" />
-				<!--tp-->
-			</crew>
-		</mod-append:customShip>
-		
-		<mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_3">
-			<crewLimit>9</crewLimit>
-			<hiddenAug>SHIP_REBEL</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-			<crew>
-				<unique_leah_mfk room="0" name="Leo Liam Leviticus" />
-				<!--tp-->
-				<human_rebel_medic room="1" />
-				<!--piloting-->
-				<human_rebel room="0" />
-				<!--tp-->
-				<human_soldier room="0" />
-				<!--tp-->
-			</crew>
-		</mod-append:customShip>
+    <!--/////// LEAH GAMING //////-->
 
-		<!--/////// ROBOTTO SHIPS //////-->
+    <mod-append:ship name="PLAYER_SHIP_NEWTONBEAMA" b="true" c="true" unused="true" >
+      <unlock variant="b" silent="false">
+        <type>2</type>
+      </unlock>
+      <unlock variant="c" silent="false">
+        <type>4</type>
+      </unlock>
+    </mod-append:ship>
 
-		<mod-append:ship name="PLAYER_SHIP_ROBOTTO" b="false" c="false" unused="true" >
-		<unlock variant="a" silent="false">
-			<type>3</type>
-			<otherUnlocks>
-				<ship>PLAYER_SHIP_MVCIVILIAN</ship>
-				<ship>PLAYER_SHIP_CIVILIAN</ship>
-				<ship>PLAYER_SHIP_CIVILIAN_2</ship>
-				<ship>PLAYER_SHIP_CIVILIAN_3</ship>
-			</otherUnlocks>
-		</unlock>
-	</mod-append:ship>
-		<mod-append:customShip name="PLAYER_SHIP_ROBOTTO">
-			<crewLimit>10</crewLimit>
-			<hiddenAug>SHIP_ROBOTTOS</hiddenAug>
-			<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		</mod-append:customShip>
+    <mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA">
+      <crewLimit>8</crewLimit>
+      <hiddenAug>SHIP_REBEL</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crew>
+        <unique_leah_mfk room="4" name="Leah" />
+        <!--piloting-->
+        <tinybug room="0" />
+        <!--engines-->
+        <tinybug room="5" />
+        <!--weapons-->
+        <tinybug room="7" />
+        <!--shields-->
+      </crew>
+    </mod-append:customShip>
 
-	</mod:findLike>
+    <mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_2">
+      <crewLimit>6</crewLimit>
+      <hiddenAug>SHIP_REBEL</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crew>
+        <unique_leah_mfk room="0" name="Leo Liam Leviticus" />
+        <!--tp-->
+        <robottos room="1" />
+        <!--piloting-->
+        <zoltan_devotee room="0" />
+        <!--tp-->
+        <leech room="0" />
+        <!--tp-->
+      </crew>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_3">
+      <crewLimit>9</crewLimit>
+      <hiddenAug>SHIP_REBEL</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crew>
+        <unique_leah_mfk room="0" name="Leo Liam Leviticus" />
+        <!--tp-->
+        <human_rebel_medic room="1" />
+        <!--piloting-->
+        <human_rebel room="0" />
+        <!--tp-->
+        <human_soldier room="0" />
+        <!--tp-->
+      </crew>
+    </mod-append:customShip>
+
+    <!--/////// ROBOTTO SHIPS //////-->
+
+    <mod-append:ship name="PLAYER_SHIP_ROBOTTO" b="false" c="false" unused="true" >
+      <unlock variant="a" silent="false">
+        <type>3</type>
+        <otherUnlocks>
+          <ship>PLAYER_SHIP_MVCIVILIAN</ship>
+          <ship>PLAYER_SHIP_CIVILIAN</ship>
+          <ship>PLAYER_SHIP_CIVILIAN_2</ship>
+          <ship>PLAYER_SHIP_CIVILIAN_3</ship>
+        </otherUnlocks>
+      </unlock>
+    </mod-append:ship>
+    <mod-append:customShip name="PLAYER_SHIP_ROBOTTO">
+      <crewLimit>10</crewLimit>
+      <hiddenAug>SHIP_ROBOTTOS</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+    </mod-append:customShip>
+
+    <!--/////// ENEMY SHIPS //////-->
+    <mod-append:customShip name="TC_TRASH_COMPACTOR1">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="TC_TRASH_COMPACTOR2">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="TC_TRASH_COMPACTOR3">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="TC_TRASH_COMPACTOR4">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="TC_TRASH_COMPACTOR5">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="TC_TRASH_COMPACTOR6">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+
+  </mod:findLike>
 
 
 	<!--
@@ -1120,7 +1218,7 @@ MVAR [name] [value]
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
 			<!--Page 2-->
 			<mod-append:ship>PLAYER_SHIP_ROBOTTO</mod-append:ship> <!-- ARS+ Robotto Ships -->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_NBC</mod-append:ship> <!-- NBC -->
@@ -1565,7 +1663,7 @@ MVAR [name] [value]
 				<temporaryEffect>
 					<duration>3</duration>
 					<cooldownColor r="120" g="20" b="255"/>
-					<animSheet baseVisible="true">kora_glow</animSheet><!--PLACEHOLDER FOR SURE-->
+					<animSheet baseVisible="true">kora_glow</animSheet>
 					<finishSounds enemy="true">
 							<finishSound>decloak</finishSound>
 					</finishSounds>
@@ -2488,17 +2586,17 @@ MVAR [name] [value]
 				<req type="enemy">
 					<enemyInRoom/>
 				</req>
-				<buttonText>DRONE</buttonText>
-				<tooltip>Ready: Spawns a temporary drone scout which can fight and sabotage but not repair or man systems. Lasts 15 seconds.</tooltip>
+				<buttonText>TANK</buttonText>
+				<tooltip>Ready: Spawns a temporary tank drone which can fight and sabotage but not repair or man systems. Lasts 40 seconds.</tooltip>
 				<cooldownColor r="185" g="185" b="185"/>
 				<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-				<powerCharges>5</powerCharges>
-				<initialCharges>5</initialCharges>
+				<powerCharges>2</powerCharges>
+				<initialCharges>2</initialCharges>
 				<chargesPerJump>1</chargesPerJump>
 				<spawnCrew>
 					<number>1</number>
-					<race>rsa_technician_drone</race>
-					<lifetime>15</lifetime>
+					<race>rsa_tank</race>
+					<lifetime>40</lifetime>
 					<statBoosts>
 						<statBoost name="noClone">
 							<boostType>SET</boostType>
@@ -2573,7 +2671,7 @@ MVAR [name] [value]
 				<cooldownColor r="185" g="185" b="185"/>
 				<activateWhenReady>true</activateWhenReady>
 				<temporaryEffect>
-					<duration>25</duration>
+					<duration>40</duration>
 					<cooldownColor r="185" g="185" b="185"/>
 					<powerSounds>
 						<powerSound>shieldsDown</powerSound>
