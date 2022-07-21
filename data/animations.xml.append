@@ -390,14 +390,14 @@
 	<mountPoint x="3" y="33"/>
 </weaponAnim>
 
-<animSheet name="tc_firework_dispenser" w="2400" h="45" fw="50" fh="45">weapon_missile/tc_firework_dispenser_strip48.png</animSheet>
+<animSheet name="tc_firework_dispenser" w="2736" h="45" fw="57" fh="45">weapon_missile/tc_firework_dispenser_strip48.png</animSheet>
 <weaponAnim name="tc_firework_dispenser">
 	<sheet>tc_firework_dispenser</sheet>
 	<desc length="48" x="0" y="0"/>
 	<chargedFrame>15</chargedFrame>
 	<fireFrame>36</fireFrame>
-	<firePoint  x="43" y="6"/>
-	<mountPoint x="3" y="18"/>
+	<firePoint  x="53" y="6"/>
+	<mountPoint x="13" y="18"/>
 </weaponAnim>
 
 <!--/////////////////// ION //////////////////-->
@@ -948,16 +948,16 @@
 	<time>1</time>
 </anim>
 
-<animSheet name="tc_gibs" w="96" h="32" fw="32" fh="32">projectiles/tc_gibs.png</animSheet>
-<anim name="tc_gibs">
-	<sheet>tc_gibs</sheet>
+<animSheet name="tc_shipbits" w="96" h="32" fw="32" fh="32">projectiles/tc_shipbits.png</animSheet>
+<anim name="tc_shipbits">
+	<sheet>tc_shipbits</sheet>
 	<desc length="3" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
-<animSheet name="tc_gibs_2" w="120" h="24" fw="24" fh="24">projectiles/tc_gibs_2.png</animSheet>
-<anim name="tc_gibs_2">
-	<sheet>tc_gibs_2</sheet>
+<animSheet name="tc_shipbits_2" w="120" h="24" fw="24" fh="24">projectiles/tc_shipbits_2.png</animSheet>
+<anim name="tc_shipbits_2">
+	<sheet>tc_shipbits_2</sheet>
 	<desc length="5" x="0" y="0"/>
 	<time>1</time>
 </anim>
