@@ -3598,6 +3598,17 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
+<crewBlueprint name="robomant">
+	<title>Mantis Battle Drone</title>
+	<short>Mantis Battle Drone</short>
+	<desc>YOU SHOULD NEVER SEE THIS.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>DRONE</power>
+	</powerList>
+</crewBlueprint>
+
 <blueprintList name="LIST_TOGGLE_ROBOMANT">
 	<name>ROBOMANT_BOARDER</name>
 	<name>ROBOMANT_DEFEND</name>
@@ -3616,8 +3627,9 @@
 	<cost>50</cost>
 	<bp>3</bp>
 	<rarity>2</rarity>
-	<iconImage>robomant</iconImage>
+	<iconImage>battle</iconImage>
 </droneBlueprint>
+
 <droneBlueprint name="ROBOMANT_BOARDER">
 	<type>BOARDER</type>
 	<tip>tip_toggle_crew</tip>
@@ -3632,7 +3644,7 @@
 	<speed>18</speed>
 	<cost>50</cost>
 	<rarity>0</rarity>
-	<iconImage>robomant</iconImage>
+	<iconImage>boarder</iconImage>
 </droneBlueprint>
 
 <!--
