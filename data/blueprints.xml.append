@@ -1138,6 +1138,93 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_BOMB_SHOTGUN_ION">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Ion Bomb Flak Gun</title>
+	<short>I. Bomb Flak</short>
+	<tip>tip_flak</tip>
+	<descriptionOverride>This special bomb flak shoots 3 ion bombs that do 4 ion damage each! However, they can't ion shields unless they hit the system itself. Requires a missile to fire, but doesn't go through shields.
+	
+	Stats:
+	
+	Required Power: 3
+	Charge Time: 17 seconds
+	Missile Consumption: 1
+	
+	Shot Radius: 55
+	Shots Per Charge: 3
+	
+	Base Hull Damage: 1
+	Ion Damage: 4
+	
+	Buy/Sell Price: 110~/55~</descriptionOverride>
+	<tooltip>Fires a blast of debris across a random area doing up to 7 damage.</tooltip>
+	<radius>55</radius>
+	<damage>1</damage>
+	<sysDamage>-1</sysDamage>
+	<persDamage>-1</persDamage>
+	<missiles>1</missiles>
+	<spawnCrew>
+		<race>tcc_generic_crewjank</race>
+		<number>1</number>
+		<enemy>true</enemy><!--So you don't ever see the crew-->
+		<lifetime>0</lifetime>
+		<noSlot>true</noSlot>
+		<statBoosts>
+
+			<statBoost name="deathEffect"><!--This modifies the stat of the crew, so that the same crew can be used for multiple weapons-->
+				<boostType>SET</boostType>
+
+
+				<deathEffect><!--When template crew dies (on weapon impact) these statBoosts are applied -->
+					<ion>4</ion>
+					<shipFriendlyFire>true</shipFriendlyFire>
+				</deathEffect>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>9999999</priority>
+
+			</statBoost>
+
+		</statBoosts>
+	</spawnCrew>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<cost>110</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">bomb_ion</projectile>
+	</projectiles>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_bomb_shotgun_ion</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_BOMB_SHOTGUN_LOCK">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>

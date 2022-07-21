@@ -649,6 +649,17 @@
 	</choice>
 	
 	<choice hidden="false" blue="false">
+		<text>Ion Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_ION"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="false">
 		<text>Lockdown Bomb Flak</text>
 		<event>
 			<text>Done!</text>
