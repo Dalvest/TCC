@@ -8,32 +8,19 @@
 
 <!--
 <blueprintList name="LIST_NON_RARITY_0_THINGS"> (Just here for reference)
-	<name>TC_LASER_MARKSMAN</name>
 	<name>TC_LIGHT_SHOW</name>
 	<name>RSA_MINICANNON</name>
 	<name>RSA_TAGGER</name>
-	<name>TC_TEAR_GAS</name>
 	<name>TC_DECONSTRUCTOR</name>
 	<name>TC_RESOLVER</name>
 	<name>TC_SINEWAVE</name>
 	<name>RSA_BIOHAZARD</name>
 	<name>SINGULARITY_PROJECTOR_1</name>
-	<name>TC_LASER_CHARGER</name>
-	<name>TC_MINIGUN_MK1</name>
-	<name>TC_MINIGUN_MK2</name>
-	<name>TC_MINIGUN_MK3</name>
-	<name>TC_BURST_1</name>
-	<name>TC_BURST_2</name>
-	<name>TC_MILITIA_1</name>
-	<name>TC_MILITIA_2</name>
-	<name>TC_VULCAN_CANNON</name>
 	<name>NOVA_MK1</name>
 	<name>NOVA_MK2</name>
 	<name>NOVA_MK3</name>
 	<name>SUPERNOVA_CATALYZER</name>
 	<name>CATALYZER</name>
-	<name>MILITIA_TAGGER</name>
-	<name>TC_ESKA</name>
 	<name>NOODLE_RATIONS</name>
 	<name>scrapper</name>
 	<name>kiviekith</name>
@@ -309,7 +296,6 @@
 	<mod-append:name>TC_SHOTGUN_HELL</mod-append:name>
 	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
 	<mod-append:name>TC_RAPTORS_OWN</mod-append:name>
-	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_1_ENEMY</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
@@ -324,6 +310,8 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
+	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
+	<mod-append:name>TC_LASER_LEGION</mod-append:name>
 	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
 	<mod-append:name>ION_CHARGER_1</mod-append:name>
 	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
@@ -353,6 +341,7 @@
 	<mod-append:name>SUPERNOVA_CATALYZER</mod-append:name>
 	<mod-append:name>CATALYZER</mod-append:name>
 	<mod-append:name>MILITIA_TAGGER</mod-append:name>
+	<mod-append:name>TC_OVERLORD</mod-append:name>
 	<mod-append:name>TC_ESKA</mod-append:name>
 	<mod-append:name>TC_TONFA</mod-append:name>
 </mod:findName>
@@ -366,7 +355,6 @@
 	<mod-append:name>TC_SHOTGUN_HELL</mod-append:name>
 	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
 	<mod-append:name>TC_RAPTORS_OWN</mod-append:name>
-	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
@@ -380,6 +368,8 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
+	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
+	<mod-append:name>TC_LASER_LEGION</mod-append:name>
 	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
 	<mod-append:name>ION_CHARGER_1</mod-append:name>
 	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
@@ -411,6 +401,7 @@
 	<mod-append:name>SUPERNOVA_CATALYZER</mod-append:name>
 	<mod-append:name>CATALYZER</mod-append:name>
 	<mod-append:name>MILITIA_TAGGER</mod-append:name>
+	<mod-append:name>TC_OVERLORD</mod-append:name>
 	<mod-append:name>TC_ESKA</mod-append:name>
 	<mod-append:name>TC_TONFA</mod-append:name>
 </mod:findName>
@@ -439,22 +430,38 @@
 	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="SHOP_MANTIS_ITEM_WEAPONS_BOMB">
-	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
+<!--////////// GIFTLISTS ////////// -->
+
+<mod:findName type="blueprintList" name="GIFTLIST_CRYSTAL">
+	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="GIFTLIST_MANTIS">
+	<!--<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>-->
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_BREACH</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_CHAIN</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_CHARGE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_FREE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_CONSERVATIVE</mod-append:name>
+	<!--<mod-append:name>TC_BOMB_SHOTGUN_FREE</mod-append:name>-->
+	<!--<mod-append:name>TC_BOMB_SHOTGUN_CONSERVATIVE</mod-append:name>-->
 	<mod-append:name>TC_BOMB_SHOTGUN_INSTANT</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="GIFTLIST_MANTIS">
+<!--////////// STORELISTS ////////// -->
+
+<mod:findName type="blueprintList" name="SHOP_CRYSTAL_ITEM_WEAPONS">
+	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="SHOP_CRYSTAL_ITEM_WEAPONS_CRYSTAL">
+	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="SHOP_MANTIS_ITEM_WEAPONS_BOMB">
 	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>

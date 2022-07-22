@@ -113,36 +113,102 @@
 	<mod-append:priorityEvent name="MANTIS_BOMB_FLAK_TRANSPORT" min="1" max="1" priority="3"/>
 </mod:findName>
 
-<!--//////////////// ANCIENT SECTOR BLACKLISTING /////////////////-->
+<!--//////////////// SECTOR RARITY STUFF /////////////////-->
+
+<mod:findName type="sectorDescription" name="SECTOR_CIVILIAN">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_MILITIA_1" rarity="4" />
+		<mod-append:blueprint name="TC_MILITIA_2" rarity="5" />
+		<mod-append:blueprint name="TC_LASER_MARKSMAN" rarity="5" />
+		<mod-append:blueprint name="TC_LASER_LEGION" rarity="5" />
+		<mod-append:blueprint name="TC_LASER_CHARGER" rarity="5" />
+		<mod-append:blueprint name="TC_BURST_1" rarity="4" />
+		<mod-append:blueprint name="TC_BURST_2" rarity="5" />
+		<mod-append:blueprint name="MILITIA_TAGGER" rarity="4" />
+		<mod-append:blueprint name="TC_OVERLORD" rarity="5" />
+		<mod-append:blueprint name="CRYS_50CAL" rarity="4" />
+		<!--<mod-append:blueprint name="TC_VULCAN_CANNON" rarity="5" />-->
+		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
+		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="5" />
+		<!--<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />-->
+		<mod-append:blueprint name="TC_TEAR_GAS" rarity="4" />
+		<!--<mod-append:blueprint name="TC_ESKA" rarity="5" />-->
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_CIVILIAN_UNIQUE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_MILITIA_1" rarity="3" />
+		<mod-append:blueprint name="TC_MILITIA_2" rarity="4" />
+		<mod-append:blueprint name="TC_LASER_MARKSMAN" rarity="4" />
+		<mod-append:blueprint name="TC_LASER_LEGION" rarity="4" />
+		<mod-append:blueprint name="TC_LASER_CHARGER" rarity="4" />
+		<mod-append:blueprint name="TC_BURST_1" rarity="3" />
+		<mod-append:blueprint name="TC_BURST_2" rarity="4" />
+		<mod-append:blueprint name="MILITIA_TAGGER" rarity="4" />
+		<mod-append:blueprint name="TC_OVERLORD" rarity="5" />
+		<mod-append:blueprint name="CRYS_50CAL" rarity="4" />
+		<mod-append:blueprint name="TC_VULCAN_CANNON" rarity="5" />
+		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
+		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="4" />
+		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
+		<mod-append:blueprint name="TC_TEAR_GAS" rarity="4" />
+		<mod-append:blueprint name="TC_ESKA" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_MILITIA">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_MILITIA_1" rarity="3" />
+		<mod-append:blueprint name="TC_MILITIA_2" rarity="4" />
+		<mod-append:blueprint name="TC_LASER_MARKSMAN" rarity="3" />
+		<mod-append:blueprint name="TC_LASER_LEGION" rarity="3" />
+		<mod-append:blueprint name="TC_LASER_CHARGER" rarity="3" />
+		<mod-append:blueprint name="TC_BURST_1" rarity="3" />
+		<mod-append:blueprint name="TC_BURST_2" rarity="4" />
+		<mod-append:blueprint name="MILITIA_TAGGER" rarity="3" />
+		<mod-append:blueprint name="TC_OVERLORD" rarity="4" />
+		<mod-append:blueprint name="CRYS_50CAL" rarity="3" />
+		<mod-append:blueprint name="TC_VULCAN_CANNON" rarity="5" />
+		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
+		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="4" />
+		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
+		<mod-append:blueprint name="TC_TEAR_GAS" rarity="3" />
+		<mod-append:blueprint name="TC_ESKA" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_FEDERATION">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
+		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="4" />
+		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="FINAL">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
+		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="4" />
+		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
+	</mod:findLike>
+</mod:findName>
 
 <mod:findName type="sectorDescription" name="SECRET_ANCIENT">
 	<mod:findLike type="rarityList">
-		<mod-append:blueprint name="TC_LASER_MARKSMAN" rarity="0" />
 		<mod-append:blueprint name="TC_LIGHT_SHOW" rarity="0" />
 		<mod-append:blueprint name="RSA_MINICANNON" rarity="0" />
 		<mod-append:blueprint name="RSA_TAGGER" rarity="0" />
-		<mod-append:blueprint name="TC_TEAR_GAS" rarity="0" />
 		<mod-append:blueprint name="TC_DECONSTRUCTOR" rarity="0" />
 		<mod-append:blueprint name="TC_RESOLVER" rarity="0" />
 		<mod-append:blueprint name="TC_SINEWAVE" rarity="0" />
 		<mod-append:blueprint name="RSA_BIOHAZARD" rarity="0" />
 		<mod-append:blueprint name="SINGULARITY_PROJECTOR_1" rarity="0" />
-		<mod-append:blueprint name="TC_LASER_CHARGER" rarity="0" />
-		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="0" />
-		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="0" />
-		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="0" />
-		<mod-append:blueprint name="TC_BURST_1" rarity="0" />
-		<mod-append:blueprint name="TC_BURST_2" rarity="0" />
-		<mod-append:blueprint name="TC_MILITIA_1" rarity="0" />
-		<mod-append:blueprint name="TC_MILITIA_2" rarity="0" />
-		<mod-append:blueprint name="TC_VULCAN_CANNON" rarity="0" />
 		<mod-append:blueprint name="NOVA_MK1" rarity="0" />
 		<mod-append:blueprint name="NOVA_MK2" rarity="0" />
 		<mod-append:blueprint name="NOVA_MK3" rarity="0" />
 		<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="0" />
 		<mod-append:blueprint name="CATALYZER" rarity="0" />
-		<mod-append:blueprint name="MILITIA_TAGGER" rarity="0" />
-		<mod-append:blueprint name="TC_ESKA" rarity="0" />
 		<mod-append:blueprint name="NOODLE_RATIONS" rarity="0" />
 		<mod-append:blueprint name="scrapper" rarity="0" />
 		<mod-append:blueprint name="kiviekith" rarity="0" />
@@ -157,32 +223,19 @@
 
 <mod:findName type="sectorDescription" name="SECRET_ROYAL">
 	<mod:findLike type="rarityList">
-		<mod-append:blueprint name="TC_LASER_MARKSMAN" rarity="0" />
 		<mod-append:blueprint name="TC_LIGHT_SHOW" rarity="0" />
 		<mod-append:blueprint name="RSA_MINICANNON" rarity="0" />
 		<mod-append:blueprint name="RSA_TAGGER" rarity="0" />
-		<mod-append:blueprint name="TC_TEAR_GAS" rarity="0" />
 		<mod-append:blueprint name="TC_DECONSTRUCTOR" rarity="0" />
 		<mod-append:blueprint name="TC_RESOLVER" rarity="0" />
 		<mod-append:blueprint name="TC_SINEWAVE" rarity="0" />
 		<mod-append:blueprint name="RSA_BIOHAZARD" rarity="0" />
 		<mod-append:blueprint name="SINGULARITY_PROJECTOR_1" rarity="0" />
-		<mod-append:blueprint name="TC_LASER_CHARGER" rarity="0" />
-		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="0" />
-		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="0" />
-		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="0" />
-		<mod-append:blueprint name="TC_BURST_1" rarity="0" />
-		<mod-append:blueprint name="TC_BURST_2" rarity="0" />
-		<mod-append:blueprint name="TC_MILITIA_1" rarity="0" />
-		<mod-append:blueprint name="TC_MILITIA_2" rarity="0" />
-		<mod-append:blueprint name="TC_VULCAN_CANNON" rarity="0" />
 		<mod-append:blueprint name="NOVA_MK1" rarity="0" />
 		<mod-append:blueprint name="NOVA_MK2" rarity="0" />
 		<mod-append:blueprint name="NOVA_MK3" rarity="0" />
 		<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="0" />
 		<mod-append:blueprint name="CATALYZER" rarity="0" />
-		<mod-append:blueprint name="MILITIA_TAGGER" rarity="0" />
-		<mod-append:blueprint name="TC_ESKA" rarity="0" />
 		<mod-append:blueprint name="NOODLE_RATIONS" rarity="0" />
 		<mod-append:blueprint name="scrapper" rarity="0" />
 		<mod-append:blueprint name="kiviekith" rarity="0" />
