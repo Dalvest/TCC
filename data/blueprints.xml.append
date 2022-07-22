@@ -6862,6 +6862,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Federation Carrier</class>
 	<name>Star Sovereign</name>
 	<desc>This is a highly drone-focused Federation Fleet Support carrier - it's got some pretty old spec equipment, but it'll do...</desc>
+	<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_unlock"/>
 	<systemList>
 		<battery power="1" room="9" start="true" img="room_battery_9" />
 		<cloaking power="1" room="18" start="false" img="room_cloaking" />
@@ -6937,6 +6938,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Federation Carrier</class>
 	<name>The Scylla</name>
 	<desc>This heavily armored and highly armed ship was modified by a militia group - it features a chain ion artillery as well as a minigun.</desc>
+	<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_2_unlock"/>
 	<systemList>
 		<artillery power="2" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
 		<battery power="1" room="2" start="false" img="room_battery_7" />
@@ -7013,6 +7015,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Federation Carrier</class>
 	<name>The Interceptor</name>
 	<desc>This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured by the Federation and quickly refit to get back into battle.</desc>
+	<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_3_unlock"/>
 	<systemList>
 		<battery power="1" room="14" start="false" img="room_battery_14" />
 		<cloaking power="1" room="18" start="false" img="room_cloaking" />
@@ -7444,6 +7447,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<battery power="1" room="6" start="false" img="room_battery" />
 		<cloaking power="1" room="3" start="false" img="room_cloaking" />
+		<clonebay power="1" room="5" start="false" >
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
 		<doors power="2" room="10" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
