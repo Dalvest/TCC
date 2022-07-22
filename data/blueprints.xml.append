@@ -2468,7 +2468,7 @@
 	<radius>40</radius>
 	<breachChance>0</breachChance>
 	<cooldown>13</cooldown>
-	<power>2</power>
+	<power>3</power>
 	<boost>
 		<type>cooldown</type>
 		<amount>3</amount>
@@ -3598,7 +3598,7 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-<crewBlueprint name="robomant">
+<crewBlueprint name="robo_mant">
 	<title>Mantis Battle Drone</title>
 	<short>Mantis Battle Drone</short>
 	<desc>YOU SHOULD NEVER SEE THIS.</desc>
@@ -3609,11 +3609,12 @@
 	</powerList>
 </crewBlueprint>
 
-<blueprintList name="LIST_TOGGLE_ROBOMANT">
-	<name>ROBOMANT_BOARDER</name>
-	<name>ROBOMANT_DEFEND</name>
+<blueprintList name="LIST_TOGGLE_ROBO_MANT">
+	<name>ROBO_MANT_BOARDER</name>
+	<name>ROBO_MANT_DEFEND</name>
 </blueprintList>
-<droneBlueprint name="ROBOMANT_DEFEND">
+
+<droneBlueprint name="ROBO_MANT_DEFEND">
 	<type>BATTLE</type>
 	<locked>1</locked>
 	<tip>tip_toggle_crew</tip>
@@ -3621,16 +3622,16 @@
 	<short>Robo Mant [A]</short>
 	<desc>[CURRENT MODE: Anti-Personnel] Controllable, a personnel drone that can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
     
--175 HP, 1.1x combat damage
+-150 HP, 1.4x combat damage
 -0.8x movement speed</desc>
 	<power>2</power>
-	<cost>50</cost>
+	<cost>80</cost>
 	<bp>3</bp>
-	<rarity>2</rarity>
+	<rarity>0</rarity>
 	<iconImage>battle</iconImage>
 </droneBlueprint>
 
-<droneBlueprint name="ROBOMANT_BOARDER">
+<droneBlueprint name="ROBO_MANT_BOARDER">
 	<type>BOARDER</type>
 	<tip>tip_toggle_crew</tip>
 	<locked>1</locked>
@@ -3638,11 +3639,11 @@
 	<short>Robo Mant [B]</short>
 	<desc>[CURRENT MODE: Boarding] Controllable, a personnel drone that can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
     
--175 HP, 1.1x combat damage
+-150 HP, 1.4x combat damage
 -0.8x movement speed</desc>
 	<power>2</power>
 	<speed>18</speed>
-	<cost>50</cost>
+	<cost>80</cost>
 	<rarity>0</rarity>
 	<iconImage>boarder</iconImage>
 </droneBlueprint>
@@ -6909,7 +6910,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="11" start="true" />
-		<weapons max="4" power="3" room="19" start="true" img="room_weapons_2">
+		<weapons max="2" power="3" room="19" start="true" img="room_weapons_2">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -6921,15 +6922,15 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="21" count="2">
 		<weapon name="MINELAUNCHER_2" />
-		<weapon name="MINELAUNCHER_2" />
 	</weaponList>
 	<droneList drones="3" count="4">
 	</droneList>
 	<health amount="45" />
 	<maxPower amount="9" />
 	<crewCount amount="1" class="robottos" />
-	<crewCount amount="1" class="engi_separatist" />
-	<crewCount amount="2" class="human_soldier" />
+	<crewCount amount="1" class="protogen" />
+	<crewCount amount="1" class="human_soldier" />
+	<crewCount amount="1" class="human_engineer" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_2" layout="federation_carrier_2" img="federation_carrier_2">
@@ -6985,7 +6986,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="11" start="true" />
-		<weapons max="12" power="4" room="10" start="true" img="room_weapons_7">
+		<weapons max="12" power="3" room="10" start="true" img="room_weapons_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -6996,7 +6997,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="17" count="3">
-		<weapon name="TC_MINIGUN_MK3" />
+		<weapon name="TC_VULCAN_CANNON" />
 	</weaponList>
 	<droneList drones="3" count="3" />
 	<health amount="45" />
@@ -7072,7 +7073,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="3" count="2">
 		<weapon name="NOVA_MK1" />
-		<weapon name="TC_VULCAN_CANNON" />
+		<weapon name="CATALYZER" />
 	</weaponList>
 	<droneList drones="8" count="3">
 		<drone name="ION_1_AMP2" />

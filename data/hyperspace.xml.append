@@ -3850,15 +3850,36 @@ MVAR [name] [value]
 	A DRONE THING
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+	
+	<mod:findLike type="drones">
+		<mod-append:drone name="ROBO_MANT_DEFEND">
+			<crewBlueprint>robo_mant</crewBlueprint>
+			<tooltipName>Mantis Battle Drone</tooltipName>
+		</mod-append:drone>
+		<mod-append:drone name="ROBO_MANT_BOARDER">
+			<crewBlueprint>robo_mant</crewBlueprint>
+			<tooltipName>Mantis Battle Drone</tooltipName>
+		</mod-append:drone>
+	</mod:findLike>
 
-	<drone name="ROBOMANT_DEFEND">
-		<crewBlueprint>robo_mant</crewBlueprint>
-		<tooltipName>Mantis Battle Drone</tooltipName>
-	</drone>
-	<drone name="ROBOMANT_BOARDER">
-		<crewBlueprint>robo_mant</crewBlueprint>
-		<tooltipName>Mantis Battle Drone</tooltipName>
-	</drone>
+	<mod-append:race name="robo_mant">
+		<canFight>true</canFight>
+		<canSabotage>true</canSabotage>
+		<canRepair>false</canRepair>
+		<canSuffocate>false</canSuffocate>
+		<canMan>false</canMan>
+		<maxHealth>150</maxHealth>
+		<stunMultiplier>0.25</stunMultiplier>
+		<resistsMindControl>true</resistsMindControl>	<!-- salvage event -->
+		<droneAI>
+			<fightAI/>
+			<returnToDroneRoom/>
+		</droneAI>
+		<damageMultiplier>1.4</damageMultiplier>
+		<fireDamageMultiplier>0.25</fireDamageMultiplier>
+		<moveSpeedMultiplier>0.8</moveSpeedMultiplier>
+		<controllable>true</controllable>
+	</mod-append:race>
 	
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
