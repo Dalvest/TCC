@@ -412,12 +412,12 @@
     </mod-append:choice>
     <!--//////////////////ROBOTTOS//////////////////-->
     <mod-append:choice req="LIST_CREW_ROBOTTOS" lvl="1" blue="false" hidden="true">
-      <text>Look for Sentient Robotto crew.</text>
+      <text>Look for Sentient crew.</text>
       <event load="STORAGE_CHECK_CREW_LIST_ROBOTTOS"/>
     </mod-append:choice>
       <!--//////////////////AVALI//////////////////-->
     <mod-append:choice req="LIST_CHECKCREW_AVALI" blue="false" hidden="true">
-      <text>Look for Avali crew</text>
+      <text>Look for Avali crew.</text>
       <event load="STORAGE_CHECK_CREW_LIST_AVALI" />
 	  </mod-append:choice>
 
@@ -453,6 +453,11 @@
     <event load="STORAGE_CHECK_CREW_PROTOGEN"/>
   </choice>
 
+  <choice req="protogen_space_scavenger" blue="false" hidden="true">
+    <text>Look for your Protogen.</text>
+    <event load="STORAGE_CHECK_CREW_PROTOGEN_SSCAV"/>
+  </choice>
+
   <choice req="protogen_tracker" blue="false" hidden="true">
     <text>Look for TRACKER.</text>
     <event load="STORAGE_CHECK_CREW_TRACKER"/>
@@ -479,6 +484,22 @@
 
   <event name="STORAGE_CHECK_CREW_PROTOGEN">
     <text>What do you want to do with your Protogen?</text>   <!--I'll tell you when you're older...-->
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_PROTOGEN_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_PROTOGEN_SSCAV">
+    <text>What do you want to do with your Protogen Space Scavenger?</text>
     <choice>
       <text id="talk_to_crew"/>
       <event load="STORAGE_CHECK_CREW_PROTOGEN_TALK"/>
@@ -728,6 +749,7 @@
 
   <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
     <text>You look around for some crew to talk to.</text>
+
     <choice req="robottos" blue="false" hidden="true">
       <text>Look for your Sentient.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTOS"/>
@@ -747,13 +769,12 @@
       <text>Look for your Sentient Researcher.</text>
       <event load="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER"/>
     </choice>
-  </event>
 
-  <choice req="robottos_police" blue="false" hidden="true">
-    <text>Look for your Sentient Scout.</text>
-    <event load="STORAGE_CHECK_CREW_ROBOTTOS_POLICE"/>
-  </choice>
-</event>
+    <choice req="robottos_police" blue="false" hidden="true">
+      <text>Look for your Sentient Scout.</text>
+      <event load="STORAGE_CHECK_CREW_ROBOTTOS_POLICE"/>
+    </choice>
+  </event>
 
   <event name="STORAGE_CHECK_CREW_ROBOTTOS">
     <text>What do you want to do with your Sentient?</text>
@@ -1051,7 +1072,6 @@
       <event load="STORAGE_CHECK"/>
     </choice>
   </event>
-
 
   <event name="STORAGE_CHECK_CREW_KORA_SCAN">
     <text>TRACKER'S DETAILS
