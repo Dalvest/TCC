@@ -826,6 +826,20 @@
 	<time>0.5</time>
 </anim>
 
+<animSheet name="GB_shot_medium" w="200" h="20" fw="50" fh="20">projectiles/GB_shot_medium_strip4.png</animSheet>
+<anim name="GB_shot_medium">
+	<sheet>GB_shot_medium</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>0.5</time>
+</anim>
+
+<animSheet name="GB_shot_heavy" w="200" h="20" fw="50" fh="20">projectiles/GB_shot_heavy_strip4.png</animSheet>
+<anim name="GB_shot_heavy">
+	<sheet>GB_shot_heavy</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>0.5</time>
+</anim>
+
 <!--/////TEAR GAS/////-->
 
 <animSheet name="tc_tear_gas" w="110" h="24" fw="11" fh="24">projectiles/tc_tear_gas.png</animSheet>
@@ -3048,6 +3062,128 @@
 	</anim>
 	<anim name="robottos_portrait">
 		<sheet>robottos</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<animSheet name="robottos_police" w="315" h="455" fw="35" fh="35">people/robottos_police_base.png</animSheet>
+	<anim name="robottos_police_clone">
+		<sheet>robottos_police</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_police_death_right">
+		<sheet>robottos_police</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_police_death_left">
+		<sheet>robottos_police</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_police_walk_down">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_walk_right">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_walk_up">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_walk_left">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_shoot_down">
+		<sheet>robottos_police</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_shoot_right">
+		<sheet>robottos_police</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_shoot_up">
+		<sheet>robottos_police</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_shoot_left">
+		<sheet>robottos_police</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_fire_down">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_fire_right">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_fire_up">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_fire_left">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_repair">
+		<sheet>robottos_police</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_punch_up">
+		<sheet>robottos_police</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_punch_down">
+		<sheet>robottos_police</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="robottos_police_teleport">
+		<sheet>robottos_police</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="robottos_police_type_right">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_police_type_left">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_police_type_up">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_police_type_down">
+		<sheet>robottos_police</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="robottos_police_portrait">
+		<sheet>robottos_police</sheet>
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>

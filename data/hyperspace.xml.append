@@ -1487,6 +1487,40 @@ MVAR [name] [value]
 			<cloneLoseSkills>true</cloneLoseSkills>
 		</mod-append:race>
 
+		<mod-append:race name="robottos_police">
+			<maxHealth>80</maxHealth>
+			<repairSpeed>0.7</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>true</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>false</canSuffocate>
+			<suffocationModifier>0.1</suffocationModifier>
+			<fireDamageMultiplier>1.25</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>1.6</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>1.4</sabotageSpeedMultiplier>
+			<damageMultiplier>1.4</damageMultiplier>
+			<damageTakenMultiplier>1</damageTakenMultiplier>
+			<animBase>human</animBase>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>crewLaser1</shootingSound>
+			</shootingSounds>
+			<repairSounds animSoundFrame="-1">
+				<repairSound>repair</repairSound>
+			</repairSounds>
+			<healSpeed>2.0</healSpeed>
+			<defaultSkillLevel>0</defaultSkillLevel>
+			<cloneLoseSkills>true</cloneLoseSkills>
+		</mod-append:race>
+
 		<mod-append:race name="robottos_machinist">
 			<maxHealth>80</maxHealth>
 			<repairSpeed>2</repairSpeed>

@@ -749,6 +749,12 @@
     </choice>
   </event>
 
+  <choice req="robottos_police" blue="false" hidden="true">
+    <text>Look for your Sentient Scout.</text>
+    <event load="STORAGE_CHECK_CREW_ROBOTTOS_POLICE"/>
+  </choice>
+</event>
+
   <event name="STORAGE_CHECK_CREW_ROBOTTOS">
     <text>What do you want to do with your Sentient?</text>
     <choice>
@@ -836,6 +842,47 @@
       <text>Your Machinist asks "How can you live in a body that can't be upgraded and improved?"". Their tone is far too naive and curious to be holding ill intent.</text>
       <text>Your Machinist says they'd like to build their own spaceship sometime; when asked about it, they claim that they want less guns and more drones.</text>
       <text>Your Machinist is playing cards with a tiny mechanical arm it built for its own amusement. ...The Machinist is losing.</text>
+    </textList>
+
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_POLICE">
+      <text>What do you want to do with your Scout?</text>
+      <choice>
+        <text id="talk_to_crew"/>
+        <event load="STORAGE_CHECK_CREW_ROBOTTOS_POLICE_TALK"/>
+      </choice>
+      <choice>
+        <text id="scan_crew"/>
+        <event load="STORAGE_CHECK_CREW_ROBOTTOS_POLICE_SCAN"/>
+      </choice>
+      <choice>
+        <text>Nevermind, do something else.</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+  
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_POLICE_SCAN">
+      <text>MACHINIST'S DETAILS
+        SPECIES? [Sentient] UNIQUE? [No]
+        Stats: 80 Health, x2 repair speed, unable to suffocate, x1.4 combat damage
+        The Scout is excellent at taking damage and still coming out on top - it can both soak up more damage and heal faster, while also having higher combat stats.
+      </text>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <event name="STORAGE_CHECK_CREW_ROBOTTOS_POLICE_TALK">
+      <text load="TEXT_CREW_TALK_ROBOTTOS_POLICE"/>
+      <choice>
+        <text>Continue...</text>
+        <event load="STORAGE_CHECK"/>
+      </choice>
+    </event>
+    <textList name="TEXT_CREW_TALK_ROBOTTOS_POLICE">
+      <text>Your Scout explains that it's studying serial killers. You leave it to its business.</text>
+      <text>Your Scout desires to be a detective. The first case? Missing rations from the ship's hold.</text>
+      <text>Your Scout is studying behavioral psychology. It's trying to train to be an effective hostage negotiator.</text>
+      <text>Your Scout explains that they are a robotto sent by the Militia. You're pretty sure it used that same line several times already.</text>
     </textList>
   
     <event name="STORAGE_CHECK_CREW_ROBOTTOS_GUNNER">

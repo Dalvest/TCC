@@ -1897,7 +1897,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>'Party Starter' Dispenser</title>
 	<short>'Party Starter'</short>
-	<desc>A recycler module configured to produce random fireworks strapped to a throwing arm; also, not at all a fire hazard.</desc>
+	<desc>This weapon has a recycler module configured to produce random fireworks. A simple throwing arm catches the fireworks and places it outside the weapon where it is fired; also, if anyone asks, this is not at all a fire hazard.</desc>
 	<!--<descriptionOverride>They says smaller weapons deal less damage but fire faster, but this is a bit much...
 
 		Stats:
@@ -1923,16 +1923,16 @@
 		Stun Chance: 10% (3 seconds long)
 	</tooltipOverride>-->
 
-	<tooltip>Cooldown drops the more it fires.</tooltip>
-	<radius>15</radius>
+	<tooltip>Deals high crew damage + stun as well as causing fires and damaging systems - also ignores shields but does no hull damage.</tooltip>
+	<radius>20</radius>
 	<damage>0</damage>
-	<sysDamage>2</sysDamage>
+	<sysDamage>1</sysDamage>
 	<persDamage>3</persDamage>
 	<ion>0</ion>
 	<shots>1</shots>
 	<sp>10</sp>
 	<speed>35</speed>
-	<stun>5</stun>
+	<stun>3</stun>
 	<fireChance>100</fireChance>
 	<breachChance>0</breachChance>
 	<cooldown>10</cooldown>
@@ -2373,29 +2373,31 @@
 
 <!--///////////////////////////////////////////AUTOCANNON////////////////////////////////////////////////////////////////-->
 
+<!--BASED ON AUTOCANNON 2-->
+
 <weaponBlueprint name="TC_RAPTOR_AUTOCANNON">
 	<type>LASER</type>
-	<title>'RAPTOR' LMG Autocannon</title>
-	<short>R.L.AC.</short>
-	<desc>It may surprise you, but RAPTOR fought during the Federation-Mantis war. He welded his LMG to the side of his ship - and it worked surprsingly well.</desc>
-	<tooltip>4 shot 1 damage weapon, 45% chance to not use ammo, 10% chance to cause a breach.</tooltip>
+	<title>'RAPTOR' Autocannon</title>
+	<short>R.AC.</short>
+	<desc>It may surprise you, but RAPTOR fought during the Federation-Mantis war. He'd welded his LMG to the side of his ship and started upgrading it bit by bit - it worked surprsingly well.</desc>
+	<tooltip>1 shot 3 damage weapon, 75% chance to not use ammo, 10% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>45</freeMissileChance>
-	<damage>1</damage>
-	<shots>4</shots>
+	<freeMissileChance>75</freeMissileChance>
+	<damage>3</damage>
+	<shots>1</shots>
 	<sp>0</sp>
 	<radius>10</radius>
 	<breachChance>1</breachChance>
-	<cooldown>15</cooldown>
+	<cooldown>7</cooldown>
 	<power>2</power>
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<cost>70</cost>
-	<image>GB_shot_light</image>
+	<image>GB_shot_medium</image>
 	<launchSounds>
-		<sound>GB_cannonLight1</sound>
-		<sound>GB_cannonLight2</sound>
-		<sound>GB_cannonLight3</sound>
+		<sound>GB_cannonMedium1</sound>
+		<sound>GB_cannonMedium2</sound>
+		<sound>GB_cannonMedium3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>hitHull2</sound>
@@ -2501,7 +2503,7 @@
 
 <weaponBlueprint name="TC_MINIGUN_MK1">
 	<type>LASER</type>
-	<title>Minigun Mark I</title>
+	<title>Heavy Minigun Mark I</title>
 	<short>Minigun Mk.1</short>
 	<desc>A relic from the Federation-Hive war - an autocannon minigun! It uses caseless ammunition which can be replicated using missiles.</desc>
 	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - 85% chance to not use ammo.</tooltip>
@@ -2546,7 +2548,7 @@
 
 <weaponBlueprint name="TC_MINIGUN_MK2">
 	<type>LASER</type>
-	<title>Minigun Mark II</title>
+	<title>Heavy Minigun Mark II</title>
 	<short>Minigun Mk.2</short>
 	<desc>A relic from the Federation-Hive war. This is an upgraded model of the Mk. 1 minigun... it's faster and better, but it uses more ammunition.</desc>
 	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires - pierces one shield bubble due to specialized ammunition - 75% chance to not use ammo.</tooltip>
@@ -2591,7 +2593,7 @@
 
 <weaponBlueprint name="TC_MINIGUN_MK3">
 	<type>LASER</type>
-	<title>Minigun Mark III</title>
+	<title>Heavy Minigun Mark III</title>
 	<short>Minigun Mk.3</short>
 	<desc>The Vulcan pales in comparison to this - while the other two miniguns would've only fit in a museum, this... this is a weapon.</desc>
 	<tooltip>1 shot 1 damage weapon that speeds up cooldown every time it fires, pierces one shield - 65% chance to not use ammo.</tooltip>
@@ -2634,20 +2636,22 @@
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
+<!--BASED ON AUTOCANNON 1-->
+
 <weaponBlueprint name="RSA_MINICANNON">
 	<type>LASER</type>
 	<title>RSA Minicannon</title>
 	<short>Minicannon</short>
 	<desc>This is a small, simple cannon. ...That's about it. It's pretty cool, though.</desc>
-	<tooltip>1 shot 1 damage weapon, pierces one shield bubble, 85% chance to not use ammo, 10% chance to cause a breach.</tooltip>
+	<tooltip>1 shot 1 damage weapon, pierces one shield bubble, 85% chance to not use ammo, 40% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>85</freeMissileChance>
 	<damage>1</damage>
 	<shots>1</shots>
 	<sp>1</sp>
-	<radius>10</radius>
-	<breachChance>1</breachChance>
-	<cooldown>7</cooldown>
+	<radius>5</radius>
+	<breachChance>4</breachChance>
+	<cooldown>8</cooldown>
 	<power>1</power>
 	<bp>4</bp>
 	<rarity>5</rarity>
@@ -2674,29 +2678,32 @@
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
+<!--BASED ON AUTOCANNON 3-->
+
 <weaponBlueprint name="RSA_TAGGER">
 	<type>LASER</type>
 	<title>RSA Tagger</title>
 	<short>Tagger</short>
-	<desc>This is one of the most fielded weapons by the RSA, owing to its efficacy and simplicity. It works beautifully and that's about it.</desc>
-	<tooltip>2 shot 1 damage weapon, 65% chance to not use ammo, 10% chance to cause a breach, pierces one shield bubble.</tooltip>
+	<desc>This is one of the most fielded weapons by the RSA, owing to its efficacy and simplicity. It works beautifully, kills with ease and that's about it.</desc>
+	<tooltip>1 shot 3 damage weapon, 75% chance to not use ammo, 40% chance to cause a breach + medium stun on crew, pierces one shield bubble.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>65</freeMissileChance>
+	<freeMissileChance>75</freeMissileChance>
 	<damage>1</damage>
 	<shots>2</shots>
 	<sp>1</sp>
 	<radius>20</radius>
-	<breachChance>1</breachChance>
-	<cooldown>14</cooldown>
-	<power>2</power>
+	<breachChance>4</breachChance>
+	<stunChance>4</stunChance>
+	<cooldown>8</cooldown>
+	<power>3</power>
 	<bp>4</bp>
 	<rarity>5</rarity>
 	<cost>60</cost>
-	<image>GB_shot_light</image>
+	<image>GB_shot_heavy</image>
 	<launchSounds>
-		<sound>GB_cannonLight1</sound>
-		<sound>GB_cannonLight2</sound>
-		<sound>GB_cannonLight3</sound>
+		<sound>GB_cannonHeavy1</sound>
+		<sound>GB_cannonHeavy2</sound>
+		<sound>GB_cannonHeavy3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>hitHull2</sound>
@@ -2722,16 +2729,15 @@
 	<title>Lance Antipersonnel Autocannon</title>
 	<short>L.AP.AC.</short>
 	<desc>This Tear Gas Autocannon is effective at non-lethal takedowns in riots - or at least it would've been, but Lancer modified it to be a bit more... lethal.</desc>
-	<tooltip>Pierces 2 shields; fires one canister that stuns and damages crew, corrodes systems, and has a low chance to cause breaches.</tooltip>
+	<tooltip>Ignores shields; fires one canister that stuns, damages crew and has a low chance to cause breaches.</tooltip>
 	<damage>0</damage>
-	<persDamage>5</persDamage>
-	<sysDamage>2</sysDamage>
+	<persDamage>3</persDamage>
 	<shots>1</shots>
 	<stun>8</stun>
 	<sp>2</sp>
 	<fireChance>0</fireChance>
 	<breachChance>1</breachChance>
-	<cooldown>13</cooldown>
+	<cooldown>11</cooldown>
 	<power>2</power>
 	<speed>50</speed>
 	<cost>60</cost>
@@ -4854,7 +4860,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="19" start="false" />
-		<weapons power="2" max="10" room="15" start="true" img="room_weapons">
+		<weapons power="3" max="10" room="15" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -6877,8 +6883,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones max="12" power="3" room="1" start="false" img="room_drones" />
-		<engines max="8" power="3" room="10" start="true" img="room_engines_9">
+		<drones max="12" power="3" room="1" start="true" img="room_drones" />
+		<engines max="8" power="2" room="10" start="true" img="room_engines_9">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -6911,7 +6917,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="11" start="true" />
-		<weapons max="2" power="3" room="19" start="true" img="room_weapons_2">
+		<weapons max="2" power="2" room="19" start="true" img="room_weapons_2">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -6921,13 +6927,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="21" count="2">
-		<weapon name="MINELAUNCHER_2" />
+	<weaponList missiles="11" count="2">
+		<weapon name="MINELAUNCHER_1" />
 	</weaponList>
-	<droneList drones="3" count="4">
+	<droneList drones="14" count="4">
+		<drone name="ROBO_MANT_DEFEND" />
 	</droneList>
 	<health amount="45" />
-	<maxPower amount="9" />
+	<maxPower amount="7" />
 	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="protogen" />
 	<crewCount amount="1" class="human_soldier" />
@@ -6937,7 +6944,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_2" layout="federation_carrier_2" img="federation_carrier_2">
 	<class>Federation Carrier</class>
 	<name>The Scylla</name>
-	<desc>This heavily armored and highly armed ship was modified by a militia group - it features a chain ion artillery as well as a minigun.</desc>
+	<desc>This heavily armored and highly armed ship was modified by Sentient Scout serving the Militia - it features a chain ion artillery as well as a Vulcan Rotary Autocannon.</desc>
 	<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_2_unlock"/>
 	<systemList>
 		<artillery power="2" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
@@ -7004,7 +7011,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="3" count="3" />
 	<health amount="45" />
 	<maxPower amount="10" />
-	<crewCount amount="1" class="human_engineer" />
+	<crewCount amount="1" class="robottos_police" />
 	<crewCount amount="1" class="mantis_free" />
 	<crewCount amount="1" class="protogen" />
 	<crewCount amount="1" class="avali" />
@@ -7014,7 +7021,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_3" layout="federation_carrier_3" img="federation_carrier_3">
 	<class>Federation Carrier</class>
 	<name>The Interceptor</name>
-	<desc>This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured by the Federation and quickly refit to get back into battle.</desc>
+	<desc>This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured and refit by several strange crewmembers.</desc>
 	<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_3_unlock"/>
 	<systemList>
 		<battery power="1" room="14" start="false" img="room_battery_14" />
@@ -7064,7 +7071,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="13" start="false" />
-		<weapons max="8" power="4" room="10" start="true" img="room_weapons_10">
+		<weapons max="10" power="4" room="10" start="true" img="room_weapons_10">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -7072,20 +7079,20 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</weapons>
 	</systemList>
 	<systemLimit>9</systemLimit>
-	<weaponSlots>2</weaponSlots>
-	<droneSlots>4</droneSlots>
-	<weaponList missiles="3" count="2">
-		<weapon name="NOVA_MK1" />
-		<weapon name="CATALYZER" />
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="18" count="2">
+		<weapon name="LOOT_ROCK_1" />
+		<weapon name="LOOT_ROCK_1" />
 	</weaponList>
 	<droneList drones="8" count="3">
-		<drone name="ION_1_AMP2" />
 	</droneList>
 	<health amount="45" />
 	<maxPower amount="8" />
-	<crewCount amount="1" class="protogen" />
+	<crewCount amount="1" class="protogen_space_scavenger" />
 	<crewCount amount="1" class="rsa_technician" />
-	<crewCount amount="1" class="robottos" />
+	<crewCount amount="1" class="rock_commando" />
+	<crewCount amount="1" class="rock" />
 	<aug name="ROCK_ARMOR" />
 </shipBlueprint>
 
@@ -7218,9 +7225,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="5" count="4">
-		<weapon name="TC_BURST_1" />
+		<weapon name="TC_PULSAR_SMOL" />
+		<weapon name="RSA_MINICANNON" />
 	</weaponList>
-	<droneList drones="2" count="2" />
+	<droneList drones="4" count="2" />
 	<health amount="30" />
 	<maxPower amount="5" />
 	<aug name="EX_BACKUP_DNA" />
@@ -7798,6 +7806,21 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Unable to suffocate</power>
 		<power>takes x1.25 damage from fires</power>
 		<power>x1.6 movement speed, takes x0.5 damage, deals x1.7 damage</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="robottos_police">
+	<desc>A dedicated law enforcement Sentient - while not exactly following its original directives, this robot has joined the Militia in order to help uphold the law.</desc>
+	<cost>70</cost>
+	<title>Sentient Law Enforcement Scout</title>
+	<short>Scout</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>100 HP due to their durable armor</power>
+		<power>x0.7 repair speed</power>
+		<power>Unable to suffocate</power>
+		<power>takes x1.25 damage from fires</power>
+		<power>x1.6 movement speed, deals x1.4 damage, heals x2 faster</power>
 	</powerList>
 </crewBlueprint>
 
