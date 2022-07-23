@@ -1293,8 +1293,8 @@
 	<image>tc_laser_shot_shot</image>
 	<boost>
 		<type>damage</type>
-		<amount>2</amount>
-		<count>10</count>
+		<amount>1</amount>
+		<count>9</count>
 	</boost>
 	<launchSounds>
 		<sound>rebel_railgun_dart_fire</sound>
@@ -1319,12 +1319,12 @@
 	<title>"LEGION" Laser</title>
 	<short>LEGION L.</short>
 	<desc>This heavily upgraded Militia laser is ready to tear through ships, destroying anything that stands in its path.</desc>
-	<tooltip>Fires 1 shot that causes 1 damage that does hullbust and has a medium chance to breach; it also increases in strength each time it fires (up to 10).</tooltip>
+	<tooltip>Fires 1 shot that causes 1 damage that does hullbust and has a low chance to cause a fire and a medium chance to breach; it also increases in strength each time it fires (up to 10).</tooltip>
 	<damage>1</damage>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>3</breachChance>
+	<fireChance>3</fireChance>
+	<breachChance>5</breachChance>
 	<cooldown>15</cooldown>
 	<power>2</power>
 	<cost>75</cost>
