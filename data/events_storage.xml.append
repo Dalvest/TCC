@@ -803,7 +803,7 @@
     <text>SENTIENT'S DETAILS
       SPECIES? [Sentient] UNIQUE? [No]
       Stats: 80 Health, x0.7 repair speed, unable to suffocate, takes x1.25 damage from fires.
-      These engi-like machines are hailing from a distant multiverse - they're often sending scouting parties to various multiverse clusters to map and explore.
+      These engi-like machines are hailing from a distant universe - they're often sending scouting parties to various multiverse clusters to map and explore. They can be seen in very many places - their complete free will allows them to make any kind of choice they wish.
     </text>
     <choice>
       <text>Continue...</text>
@@ -1006,13 +1006,12 @@
         <text>Look for Cheese.</text>
         <event load="STORAGE_CHECK_CREW_CHEESE"/>
       </choice>
-    </event>
 
-    <choice req="sergal" blue="false" hidden="true">
-      <text>Look for your Sergal.</text>
-      <event load="STORAGE_CHECK_CREW_SERGAL"/>
-    </choice>
-  </event>
+      <choice req="sergal" blue="false" hidden="true">
+        <text>Look for your Sergal.</text>
+        <event load="STORAGE_CHECK_CREW_SERGAL"/>
+      </choice>
+    </event>
   
   <event name="STORAGE_CHECK_CREW_SERGAL">
     <text>What do you want to do with your Sergal?</text> 
