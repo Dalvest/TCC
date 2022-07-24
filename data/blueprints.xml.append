@@ -1407,7 +1407,7 @@
 	<shots>3</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
-	<breachChance>2</breachChance>
+	<breachChance>1</breachChance>
 	<cooldown>12</cooldown>
 	<power>1</power>
 	<cost>50</cost>
@@ -1441,9 +1441,9 @@
 	<short>Burst Laser S</short>
 	<tip>tip_laser</tip>
 	<desc>An upgraded version of the Burst laser constructed by the Militia. Get that sigma energy going.</desc>
-	<tooltip>5 shot 1 damage laser weapon, medium chance to breach</tooltip>
+	<tooltip>4 shot 1 damage laser weapon, medium chance to breach</tooltip>
 	<damage>1</damage>
-	<shots>5</shots>
+	<shots>4</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>3</breachChance>
@@ -1533,9 +1533,9 @@
 	<image>laser_light1</image>
 	<chargeLevels>5</chargeLevels>
 	<launchSounds>
-		<sound>lightLaser1</sound>
-		<sound>lightLaser2</sound>
-		<sound>lightLaser3</sound>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>hitHull2</sound>
@@ -1559,18 +1559,20 @@
 	<title>Rebel 'Dart' Laser</title>
 	<short>Dart Laser</short>
 	<desc>This weapon of Rebel design fires a short burst of lasers.</desc>
-	<tooltip>Fires 2 lasers; 1 damage each.</tooltip>
-	<damage>1</damage>
-	<shots>3</shots>
+	<tooltip>Fires 1 laser that deals low system and crew damage, has a 20% to cause a fire - it is too light to affect the enemy's hull.</tooltip>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>1</fireChance>
+	<fireChance>2</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>11</cooldown>
+	<cooldown>5</cooldown>
 	<power>1</power>
 	<cost>55</cost>
 	<bp>7</bp>
 	<rarity>5</rarity>
-	<image>laser_light2</image>
+	<image>tc_laser_shot_shot</image>
 	<launchSounds>
 		<sound>lightLaser1</sound>
 		<sound>lightLaser2</sound>
@@ -4449,6 +4451,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Converted Civilian Cruiser</class>
 	<name>Size Doesn't Matter</name>
 	<desc>We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues.</desc>
+	<unlock id="ship_PLAYER_SHIP_SDM_unlock"/>
 	<systemList>
 		<cloaking power="1" room="12" start="false" img="room_cloaking_4" />
 		<clonebay power="1" room="0" start="true">
@@ -4507,6 +4510,76 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="6" />
 	<aug name="EX_FTL_BOOSTER" />
 	<aug name="CREW_FIREARMS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_SDM_2" layout="player_ship_sdm_2" img="player_ship_sdm_2">
+	<class>Converted Civilian Cruiser</class>
+	<name>Size Difference</name>
+	<desc>A strange Free Mantis has remade this ship almost entirely in order for its layout to "make sense". Given the lack of a gigantic and terribly inconvenient teleporter, this ship might even look... normal...</desc>
+	<unlock id="ship_PLAYER_SHIP_SDM_2_unlock"/>
+	<systemList>
+		<cloaking power="1" room="11" start="true" img="room_cloaking_4" />
+		<clonebay power="1" room="3" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="0" start="false" img="room_doors_13">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="7" start="true" img="room_drones_14" />
+		<engines power="1" room="9" start="true" img="room_engines_8ManningTopLeft">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="5" start="false" img="room_hacking_7" />
+		<mind power="1" room="12" start="true" img="room_mind_1x1" />
+		<oxygen power="1" room="2" start="true" img="room_oxygen_FM_2" />
+		<pilot power="1" room="6" start="true" img="room_pilot_fratricide">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="10" start="false" img="room_shields_TCC">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="true" />
+		<weapons power="2" room="8" start="true" img="room_weapons_10_2x1">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="3" count="2">
+		<weapon name="TC_CLOAKER" />
+	</weaponList>
+	<droneList drones="5" count="2">
+		<drone name="ROBO_MANT_BOARDER" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="5" />
+	<crewCount amount="1" class="mantis_freebusiness" />
+	<crewCount amount="1" class="mantis_free" />
+	<crewCount amount="1" class="mantis_rsa" />
+	<aug name="MANTIS_RELOADER" />
 </shipBlueprint>
 
 <!--/////////////////////CONSTRUCTION KESTREL/////////////////////////-->
@@ -7012,7 +7085,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="10" />
 	<crewCount amount="1" class="robottos_police" />
 	<crewCount amount="1" class="mantis_free" />
-	<crewCount amount="1" class="protogen" />
+	<crewCount amount="1" class="sergal" />
 	<crewCount amount="1" class="avali" />
 	<aug name="ADV_SCANNERS" />
 </shipBlueprint>
@@ -8005,6 +8078,48 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <!--/////// SERGALS //////-->
 
+<crewBlueprint name="sergal">
+	<desc>The Sergals used to be primal, like the Tree Lizard Things. However, they managed to hold out on their own when they were discovered by the RSA. They're intelligent, creative and usually also cute.</desc>
+	<cost>50</cost>
+	<title>Sergal</title>
+	<short>Sergal</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>x1.2 repair speed</power>
+		<power>Takes x0.7 hazard damage</power>
+		<power>80 HP</power>
+		<power>Deals x1.4 sabotage damage and has x1.2 movement speed</power>
+	</powerList>
+	<colorList>
+        <layer> <!-- fur -->
+            <color r="139" g="139" b="139" a="0.6"/> <!--deep grey-->
+            <color r="255" g="255" b="255" a="0.8"/> <!--white-->
+            <color r="84" g="0" b="255" a="0.6"/> <!--dark purple-->
+            <color r="0" g="156" b="255" a="0.7"/> <!--light blue-->
+            <color r="255" g="0" b="120" a="0.7"/> <!--pink-->
+            <color r="255" g="0" b="36" a="0.6"/> <!--red-->
+            <color r="0" g="255" b="170" a="0.3"/> <!--cyan-->
+			<color r="158" g="105" b="105" a="1"/> <!--brown-->
+			<color r="255" g="90" b="0" a="1" /> <!--redorange-->
+			<color r="255" g="120" b="0" a="1" /> <!--orange-->
+			<color r="0" g="255" b="0" a="0.5"/> <!--green-->
+			<color r="221" g="21" b="178" a="1"/> <!--pink -->
+			<color r="165" g="0" b="255" a="1" /> <!--alt purple-->
+			<color r="255" g="0" b="136" a="0.6"/> <!--deep red-->
+        </layer>
+		<layer> <!-- clothes -->
+            <color r="0" g="0" b="0" a="1"/> <!--black-->
+            <color r="65" g="65" b="65" a="1"/> <!--grey-->
+            <color r="165" g="165" b="165" a="1"/> <!--deep grey-->
+            <color r="207" g="207" b="207" a="1"/> <!--light grey-->
+			<color r="124" g="113" b="113" a="1"/> <!--white-->
+            <color r="46" g="41" b="41" a="1"/> <!--black-->
+			<color r="114" g="117" b="107" a="1"/> <!--alt grey-->
+            <color r="175" g="87" b="32" a="1"/> <!--rust-->
+        </layer>
+	</colorList>
+</crewBlueprint>
+
 <crewBlueprint name="sergal_cheese">
 	<desc>RAPTOR's boyfriend, sergal, ex-RSA mechanic, Ship Engineer aboard the legendary Garbage Compactor. Created many contraptions. Loves noodles.</desc>
 	<cost>80</cost>
@@ -8012,7 +8127,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>Cheese</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>x1.7 repair speed owing to his training.</power>
+		<power>x1.7 repair speed owing to his training</power>
 		<power>Takes x1.1 hazard damage</power>
 		<power>80 HP, x1.1 damage taken</power>
 		<power>Deals x1.2 damage and has x1.2 movement speed</power>
@@ -8020,6 +8135,48 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </crewBlueprint>
 
 <!--/////// TABAXI //////-->
+
+<crewBlueprint name="tabaxi">
+	<desc>CAT LORE GOES HERE.</desc>
+	<cost>50</cost>
+	<title>Tabaxi</title>
+	<short>Tabaxi</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>x1.2 repair speed</power>
+		<power>Takes x0.7 hazard damage</power>
+		<power>80 HP</power>
+		<power>Deals x1.4 sabotage damage and has x1.2 movement speed</power>
+	</powerList>
+	<colorList>
+        <layer> <!-- fur -->
+            <color r="139" g="139" b="139" a="0.6"/> <!--deep grey-->
+            <color r="255" g="255" b="255" a="0.8"/> <!--white-->
+            <color r="84" g="0" b="255" a="0.6"/> <!--dark purple-->
+            <color r="0" g="156" b="255" a="0.7"/> <!--light blue-->
+            <color r="255" g="0" b="120" a="0.7"/> <!--pink-->
+            <color r="255" g="0" b="36" a="0.6"/> <!--red-->
+            <color r="0" g="255" b="170" a="0.3"/> <!--cyan-->
+			<color r="158" g="105" b="105" a="1"/> <!--brown-->
+			<color r="255" g="90" b="0" a="1" /> <!--redorange-->
+			<color r="255" g="120" b="0" a="1" /> <!--orange-->
+			<color r="0" g="255" b="0" a="0.5"/> <!--green-->
+			<color r="221" g="21" b="178" a="1"/> <!--pink -->
+			<color r="165" g="0" b="255" a="1" /> <!--alt purple-->
+			<color r="255" g="0" b="136" a="0.6"/> <!--deep red-->
+        </layer>
+		<layer> <!-- clothes -->
+            <color r="0" g="0" b="0" a="1"/> <!--black-->
+            <color r="65" g="65" b="65" a="1"/> <!--grey-->
+            <color r="165" g="165" b="165" a="1"/> <!--deep grey-->
+            <color r="207" g="207" b="207" a="1"/> <!--light grey-->
+			<color r="124" g="113" b="113" a="1"/> <!--white-->
+            <color r="46" g="41" b="41" a="1"/> <!--black-->
+			<color r="114" g="117" b="107" a="1"/> <!--alt grey-->
+            <color r="175" g="87" b="32" a="1"/> <!--rust-->
+        </layer>
+	</colorList>
+</crewBlueprint>
 
 <!--/////////////// BIRB BRIBRBIIBRIBRB BIRB BIRBBIRBBIRBIRB //////////////////////-->
 <!--/////////////// SEE: AVALI //////////////////////-->

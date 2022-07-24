@@ -335,7 +335,7 @@ MVAR [name] [value]
 
     <!--///////SIZE DOESN'T MATTER//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_SDM" b="false" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
 
       <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_TC_ARMORED_WASP</arrow>
       <unlock variant="a" silent="false">
@@ -364,6 +364,12 @@ MVAR [name] [value]
         <human_medic room="3" name="Echo-Med" />
       </crew>
     </mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_SDM_2">
+		<crewLimit>9</crewLimit>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_FREEMANTIS</hiddenAug>
+	  </mod-append:customShip>
 
     <!--///////ARMORED WASP//////-->
 
@@ -1753,6 +1759,128 @@ MVAR [name] [value]
 		</mod-append:race>
 
 		<!--/////// SERGALS ////////-->
+
+		<mod-append:race name="sergal">
+			<maxHealth>80</maxHealth>
+			<repairSpeed>1.2</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>true</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>true</canSuffocate>
+			<suffocationModifier>0.7</suffocationModifier>
+			<fireDamageMultiplier>0.7</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>1.2</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>1.4</sabotageSpeedMultiplier>
+			<damageMultiplier>1</damageMultiplier>
+			<damageTakenMultiplier>1</damageTakenMultiplier>
+
+			<passiveStatBoosts><!--Buffs Avali-->
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="maxHealth">
+					<boostType>FLAT</boostType>
+					<amount>5</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.10</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.05</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.15</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.1</amount>
+					<shipTarget>CURRENT_ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList>
+						<avali />
+						<illuminant />
+						<tori />
+						<technician />
+					</whiteList>
+				</statBoost>
+			</passiveStatBoosts>
+
+			<animBase>human</animBase>
+			<deathSounds>
+				<deathSound>death1</deathSound>
+				<deathSound>death2</deathSound>
+			</deathSounds>
+			<shootingSounds>
+				<shootingSound>crewLaser1</shootingSound>
+			</shootingSounds>
+			<repairSounds animSoundFrame="-1">
+				<repairSound>repair</repairSound>
+			</repairSounds>
+			<healSpeed>1.2</healSpeed>
+			<defaultSkillLevel>0</defaultSkillLevel>
+			<cloneLoseSkills>false</cloneLoseSkills>
+		</mod-append:race>
 
 		<mod-append:race name="sergal_cheese">
 			<maxHealth>80</maxHealth>

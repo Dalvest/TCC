@@ -157,12 +157,14 @@
 	<mod-append:name>primagen_raptor</mod-append:name>
 	<mod-append:name>clonefail_lancer</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
+	<mod-append:name>sergal</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
 	<mod-append:name>avali</mod-append:name>
 	<mod-append:name>robottos</mod-append:name>
 	<mod-append:name>robottos_gunner</mod-append:name>
 	<mod-append:name>robottos_machinist</mod-append:name>
 	<mod-append:name>robottos_researcher</mod-append:name>
+	<mod-append:name>robottos_police</mod-append:name>
 	<mod-append:name>mantis_rsa</mod-append:name>
 	<mod-append:name>mantis_freebusiness</mod-append:name>
 </mod:findName>
@@ -189,6 +191,7 @@
 
 <!--/////// SERGALS //////-->
 <blueprintList name="LIST_CREW_SERGAL">
+	<name>sergal</name>
 	<name>sergal_cheese</name>
 </blueprintList>
 

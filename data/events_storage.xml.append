@@ -570,7 +570,7 @@
       SPECIES? [Protogen] SUBTYPE? [No]
       Stats: 90 Health, x1.1 repair speed, half suffocation damage, x1.1 damage and sabotage, cannot lose skills
       Protogens are genetically modified anthropomorphic creatures that rely on their cybernetic augmentations to serve their designated purpose.
-      The Protogen Project was kickstarted by the Federation in an effort to gain an upper hand against the rebels - as such, most protogens are now soldiers of the Federation.</text>
+      The Protogen Project was kickstarted as part of a Rebellion black op in order to create the perfect soldier - most of the protogen race was liberated shortly before the Federation-Mantis war.</text>
     <choice>
       <text>Continue...</text>
       <event load="STORAGE_CHECK"/>
@@ -584,7 +584,8 @@
     </choice>
   </event>
   <textList name="TEXT_CREW_TALK_PROTOGEN">
-    <text>You catch your protogen flirting with the microwave again...</text>
+    <text>You catch your protogen flirting with the microwave again... You decide to leave them be for now.</text>
+    <text>You ask your protogen whether they know who liberated them or not. They respond by saying they've heard of TRACKER, RAPTOR and their bioengineer friend. They're apparently legendary.</text>
     <text>Your protogen appears to have made the great misfortune of discovering just how effective an electric razor is against fur. You try your best to comfort them during these trying times.</text>
     <text>You ask your protogen why people call it a toaster... they beep defensively before changing the subject.</text>
     <text>As you walk into the break room, you catch your protogen slowly sneaking a stick of RAM out of one of the computers. Before you can get to it, they scurry off down the corridor, random access memory in tow.</text>
@@ -624,9 +625,10 @@
     <text>TRACKER is unsure how many "hot male protogens" are in the sector. You don't know what to answer.</text>
     <text>TRACKER has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them.</text>
     <text>You are suddenly hugged by TRACKER. You ask why, and are told "Mental support." You nod and thank him.</text>
-    <text>You ask TRACKER where his names comes from. He explains it's a nickname from the time in the Federation Ground Infantry - he no longer remembers his original name. To be fair, several thousands of years have passed since then.</text>
-    <text>You ask TRACKER how old he is. He does an eye rolling animation on the visor and says "Chronologically or biologically?".</text>
+    <text>You ask TRACKER where his names comes from. He explains it's a nickname from the time in the Federation Ground Infantry - he no longer wants to use or even remember his original name. You decide not to ask.</text>
     <text>You ask TRACKER why he made Lancer. He answers with a curt "Yes.". You decide not to press further.</text>
+    <text>TRACKER is wailing in his quarters. You're not sure if he has any tear ducts to cry with.</text>
+    <text>You ask TRACKER what he used to be before becoming a ship captain/pilot. He answers by sighing, shurgging and sighing again. "I used to clean houses for ungrateful idiots.".</text>
   </textList>
 
   <!--//////RAPTOR DIALOGUE////////-->
@@ -657,6 +659,7 @@
     <text>RAPTOR is trying to improve the internet security on your ship mainframe in order to prevent Cheese from breaking it again.</text>
     <text>RAPTOR is debating whether a tabaxi or a sergal would be fluffier. You fear the debate may take hours.</text>
     <text>RAPTOR is reloading all of his weapons by putting junk in his chest cavity, compacting it and fabricating ammo. It's highly fascinating!</text>
+    <text>You ask RAPTOR what he used to before becoming a soldier. He explains combat was always his job as he used to be a security guard for a Rebellion-backed hotel chain.</text>
     <text>You are looking for RAPTOR, who in turn is looking for Cheese. He doesn't seem too talkative right now.</text>
     <text>RAPTOR is trying to write a poem for Cheese, but he's unable to come up with anything more than "Roses are colored, the void is not, i have decided, that you are hot.".</text>
   </textList>
@@ -800,7 +803,7 @@
     <text>SENTIENT'S DETAILS
       SPECIES? [Sentient] UNIQUE? [No]
       Stats: 80 Health, x0.7 repair speed, unable to suffocate, takes x1.25 damage from fires.
-      These engi-like machines are hailing from a distant multiverse - they're often sending scouting parties to various multiverse clusters to map and explore.
+      These engi-like machines are hailing from a distant universe - they're often sending scouting parties to various multiverse clusters to map and explore. They can be seen in very many places - their complete free will allows them to make any kind of choice they wish.
     </text>
     <choice>
       <text>Continue...</text>
@@ -996,64 +999,110 @@
 
   <!--///////////////SERGAL TALK TO CREW//////////////-->
 
-     <event name="STORAGE_CHECK_CREW_LIST_SERGAL">
+    <event name="STORAGE_CHECK_CREW_LIST_SERGAL">
       <text>You look around for some crew to talk to.</text>
   
      <choice req="sergal_cheese" blue="false" hidden="true">
         <text>Look for Cheese.</text>
         <event load="STORAGE_CHECK_CREW_CHEESE"/>
       </choice>
-    </event>
-  
-    <event name="STORAGE_CHECK_CREW_CHEESE">
-      <text>What do you want to do with Cheese?</text>   <!--Hey, he's RAPTOR's boyfriend, not yours!-->
-      <choice>
-        <text id="talk_to_crew"/>
-        <event load="STORAGE_CHECK_CREW_CHEESE_TALK"/>
-      </choice>
-      <choice>
-        <text id="scan_crew"/>
-        <event load="STORAGE_CHECK_CREW_CHEESE_SCAN"/>
-      </choice>
-      <choice>
-        <text>Nevermind, do something else.</text>
-        <event load="STORAGE_CHECK"/>
+
+      <choice req="sergal" blue="false" hidden="true">
+        <text>Look for your Sergal.</text>
+        <event load="STORAGE_CHECK_CREW_SERGAL"/>
       </choice>
     </event>
   
-    <event name="STORAGE_CHECK_CREW_CHEESE_SCAN">
-      <text>CHEESE'S DETAILS
-        SPECIES? [Sergal] UNIQUE? [Yes]
-        Unique Traits: This Sergal is a highly adept mechanic owing to his time in the RSA. He may be moody at times but he's usually nice.
-        Stats: 80 Health, x1.7 repair speed, x1.1 hazard damage taken, x1.2 damage and sabotage
-        Cheese was a technician in the RECLAIM and SALVAGE ASSOCIATION, but he deserted in order to be together with his lover.
-        Lancer shares his DNA with Cheese. This technically makes Lancer his brother. Disturbing eldritch horrors are the best siblings!</text>
-      <choice>
-        <text>Continue...</text>
-        <event load="STORAGE_CHECK"/>
-      </choice>
-    </event>
-    <event name="STORAGE_CHECK_CREW_CHEESE_TALK">
-      <text load="TEXT_CREW_TALK_CHEESE"/>
-      <choice>
-        <text>Continue...</text>
-        <event load="STORAGE_CHECK"/>
-      </choice>
-    </event>
-    <textList name="TEXT_CREW_TALK_CHEESE">
-      <text>Cheese is trying to figure out what part of himself created Lancer's tongue. You realize this conversation could be highly disturbing and stop him.</text>
-      <text>Cheese is asking you where RAPTOR is every 5 minutes. It's getting annoying.</text>
-      <text>You wonder how Cheese, a totally biological sergal, is able to sustain a relationship with a gigantic hunk of metal.</text>
-      <text>Cheese talked about noodles for several hours - you wonder who he's been talking to but some investigation reveals he's been talking to himself.</text>
-      <text>Cheese is wondering what he can lift to get "completely shredded". You encourange him to go on his quest for "mad gainz".</text>
-      <text>Cheese is loading his pistol. You try to figure out why he has a .50 Earth-standard pistol as it's completely impractical.</text>
-      <text>You ask Cheese where his name comes from. He responds by taking a ration out of his backpack and pointing at it. You decide to leave it at that.</text>
-      <text>You ask Cheese how many things he can fix. Cheese, the ex-RSA mechanic and Federation certified engineer, answers with "Nothing.".</text>
-      <text>Cheese is brushing dust off his fur. He has so much of it, it'll take quite a while for him to finish.</text>
-      <text>Cheese asks you for permission to click the "hot gay furs in your sector" ad. You yell at him that he's an idiot.</text>
-      <text>Cheese's fur seems completely impractical for any enviroment, unless he plans to disguise himself as a Hektar billboard.</text>
-      <text>Cheese asks you to let him download Hektarsoft Flight Simulator on the ship mainframe. You politely inform him commiting game piracy would be equivalent to a war crime.</text>
-    </textList>
+  <event name="STORAGE_CHECK_CREW_SERGAL">
+    <text>What do you want to do with your Sergal?</text> 
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_SERGAL_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_SERGAL_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SERGAL_SCAN">
+    <text>CHEESE'S DETAILS
+      SPECIES? [Sergal] UNIQUE? [No]
+      Stats: 80 Health, x1.2 repair speed, x0.7 hazard damage taken, x1.4 sabotage damage
+      Sergals are highly adept at engineering and construction, as well as managing to hold out for themselves in battles. They're resilient and quite good at breaking and repairing systems.
+      Sergals used to be primal but were eventually found by the RECLAIM and SALVAGE ASSOCIATION technicians. They established mostly peaceful contact, with some even joining the RSA.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_SERGAL_TALK">
+    <text load="TEXT_CREW_TALK_SERGAL"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_SERGAL">
+    <text>Your Sergal is constantly asking about food. You try to ignore them, as they've had their ration already.</text>
+    <text>Your Sergal would like to take a shuttle to a planetside bar and have a few drinks with whoever they'd meet there. You can't help but agree, that seems to be a good plan.</text>
+    <text>You ask your Sergal if they like the rations - they respond with "Needs more dairy products.".</text>
+  </textList>
+
+  <event name="STORAGE_CHECK_CREW_CHEESE">
+    <text>What do you want to do with Cheese?</text>   <!--Hey, he's RAPTOR's boyfriend, not yours!-->
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_CHEESE_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_CHEESE_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_CHEESE_SCAN">
+    <text>CHEESE'S DETAILS
+      SPECIES? [Sergal] UNIQUE? [Yes]
+      Unique Traits: This Sergal is a highly adept mechanic owing to his time in the RSA. He also has experience in bioengineering and prosthetics development.
+      Stats: 80 Health, x1.7 repair speed, x1.1 hazard damage taken, x1.2 damage and sabotage
+      Cheese was a bioengineering technician in the RECLAIM and SALVAGE ASSOCIATION; he deserted in order to be together with his lover during the events of the Protogen Project Liberation.
+      He may be moody at times but he's usually nice.
+      Lancer shares his DNA with Cheese. This technically makes Lancer his brother. Disturbing eldritch horrors are the best siblings!</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_CHEESE_TALK">
+    <text load="TEXT_CREW_TALK_CHEESE"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_CHEESE">
+    <text>Cheese is trying to figure out what part of himself created Lancer's tongue. You realize this conversation could be highly disturbing and stop him.</text>
+    <text>Cheese is asking you where RAPTOR is every 5 minutes. It's getting annoying.</text>
+    <text>You wonder how Cheese, a totally biological sergal, is able to sustain a relationship with a gigantic hunk of metal.</text>
+    <text>Cheese talked about noodles for several hours - you wonder who he's been talking to but some investigation reveals he's been talking to himself.</text>
+    <text>Cheese is wondering what he can lift to get "completely shredded". You encourange him to go on his quest for "mad gainz".</text>
+    <text>Cheese is loading his pistol. You try to figure out why he has a .50 Earth-standard pistol as it's completely impractical.</text>
+    <text>You ask Cheese where his name comes from. He responds by taking a ration out of his backpack and pointing at it. You decide to leave it at that.</text>
+    <text>You ask Cheese how many things he can fix. Cheese, the ex-RSA mechanic and Federation certified engineer, answers with "Nothing.".</text>
+    <text>Cheese is brushing dust off his fur. He has so much of it, it'll take quite a while for him to finish.</text>
+    <text>Cheese asks you for permission to click the "hot gay furs in your sector" ad. You yell at him that he's an idiot.</text>
+    <text>Cheese's fur seems completely impractical for any enviroment, unless he plans to disguise himself as a Hektar billboard.</text>
+    <text>Cheese asks you to let him download Hektarsoft Flight Simulator on the ship mainframe. You politely inform him commiting game piracy would be equivalent to a war crime.</text>
+  </textList>
 
   <!--////// KORA'S DIALOGUE ////////-->
 
