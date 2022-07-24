@@ -7013,7 +7013,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="10" />
 	<crewCount amount="1" class="robottos_police" />
 	<crewCount amount="1" class="mantis_free" />
-	<crewCount amount="1" class="protogen" />
+	<crewCount amount="1" class="sergal" />
 	<crewCount amount="1" class="avali" />
 	<aug name="ADV_SCANNERS" />
 </shipBlueprint>
@@ -8006,6 +8006,48 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <!--/////// SERGALS //////-->
 
+<crewBlueprint name="sergal">
+	<desc>The Sergals used to be primal, like the Tree Lizard Things. However, they managed to hold out on their own when they were discovered by the RSA. They're intelligent, creative and usually also cute.</desc>
+	<cost>50</cost>
+	<title>Sergal</title>
+	<short>Sergal</short>
+	<rarity>5</rarity>
+	<powerList>
+		<power>x1.2 repair speed</power>
+		<power>Takes x0.7 hazard damage</power>
+		<power>80 HP</power>
+		<power>Deals x1.4 sabotage damage and has x1.2 movement speed</power>
+	</powerList>
+	<colorList>
+        <layer> <!-- fur -->
+            <color r="139" g="139" b="139" a="0.6"/> <!--deep grey-->
+            <color r="255" g="255" b="255" a="0.8"/> <!--white-->
+            <color r="84" g="0" b="255" a="0.6"/> <!--dark purple-->
+            <color r="0" g="156" b="255" a="0.7"/> <!--light blue-->
+            <color r="255" g="0" b="120" a="0.7"/> <!--pink-->
+            <color r="255" g="0" b="36" a="0.6"/> <!--red-->
+            <color r="0" g="255" b="170" a="0.3"/> <!--cyan-->
+			<color r="158" g="105" b="105" a="1"/> <!--brown-->
+			<color r="255" g="90" b="0" a="1" /> <!--redorange-->
+			<color r="255" g="120" b="0" a="1" /> <!--orange-->
+			<color r="0" g="255" b="0" a="0.5"/> <!--green-->
+			<color r="221" g="21" b="178" a="1"/> <!--pink -->
+			<color r="165" g="0" b="255" a="1" /> <!--alt purple-->
+			<color r="255" g="0" b="136" a="0.6"/> <!--deep red-->
+        </layer>
+		<layer> <!-- armor bits -->
+            <color r="0" g="0" b="0" a="1"/> <!--black-->
+            <color r="65" g="65" b="65" a="1"/> <!--grey-->
+            <color r="165" g="165" b="165" a="1"/> <!--deep grey-->
+            <color r="207" g="207" b="207" a="1"/> <!--light grey-->
+			<color r="124" g="113" b="113" a="1"/> <!--white-->
+            <color r="46" g="41" b="41" a="1"/> <!--black-->
+			<color r="114" g="117" b="107" a="1"/> <!--alt grey-->
+            <color r="175" g="87" b="32" a="1"/> <!--rust-->
+        </layer>
+	</colorList>
+</crewBlueprint>
+
 <crewBlueprint name="sergal_cheese">
 	<desc>RAPTOR's boyfriend, sergal, ex-RSA mechanic, Ship Engineer aboard the legendary Garbage Compactor. Created many contraptions. Loves noodles.</desc>
 	<cost>80</cost>
@@ -8013,7 +8055,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<short>Cheese</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>x1.7 repair speed owing to his training.</power>
+		<power>x1.7 repair speed owing to his training</power>
 		<power>Takes x1.1 hazard damage</power>
 		<power>80 HP, x1.1 damage taken</power>
 		<power>Deals x1.2 damage and has x1.2 movement speed</power>
