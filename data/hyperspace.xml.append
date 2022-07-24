@@ -335,7 +335,7 @@ MVAR [name] [value]
 
     <!--///////SIZE DOESN'T MATTER//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_SDM" b="false" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
 
       <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_TC_ARMORED_WASP</arrow>
       <unlock variant="a" silent="false">
@@ -364,6 +364,12 @@ MVAR [name] [value]
         <human_medic room="3" name="Echo-Med" />
       </crew>
     </mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_SDM_2">
+		<crewLimit>9</crewLimit>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_FREEMANTIS</hiddenAug>
+	  </mod-append:customShip>
 
     <!--///////ARMORED WASP//////-->
 
