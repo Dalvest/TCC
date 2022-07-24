@@ -1146,19 +1146,19 @@
 	<short>I. Bomb Flak</short>
 	<tip>tip_flak</tip>
 	<descriptionOverride>This special bomb flak shoots 3 ion bombs that do 4 ion damage each! However, they can't ion shields unless they hit the system itself. Requires a missile to fire, but doesn't go through shields.
-	
+
 	Stats:
-	
+
 	Required Power: 3
 	Charge Time: 17 seconds
 	Missile Consumption: 1
-	
+
 	Shot Radius: 55
 	Shots Per Charge: 3
-	
+
 	Base Hull Damage: 1
 	Ion Damage: 4
-	
+
 	Buy/Sell Price: 110~/55~</descriptionOverride>
 	<tooltip>Fires a blast of debris across a random area doing up to 7 damage.</tooltip>
 	<radius>55</radius>
@@ -1221,7 +1221,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_ion</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_ion</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -3629,7 +3629,7 @@
 	<title>Mantis Battle Drone [Anti-Pers]</title>
 	<short>Robo Mant [A]</short>
 	<desc>[CURRENT MODE: Anti-Personnel] Controllable, a personnel drone that can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
-    
+
 -150 HP, 1.4x combat damage
 -0.8x movement speed</desc>
 	<power>2</power>
@@ -3646,7 +3646,7 @@
 	<title>Mantis Battle Drone [Boarding]</title>
 	<short>Robo Mant [B]</short>
 	<desc>[CURRENT MODE: Boarding] Controllable, a personnel drone that can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
-    
+
 -150 HP, 1.4x combat damage
 -0.8x movement speed</desc>
 	<power>2</power>
@@ -4356,7 +4356,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</weapons>
 	</systemList>
 	<systemLimit>9</systemLimit>
-	<weaponSlots>4</weaponSlots>
+	<weaponSlots>3</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="4" count="4">
 		<weapon name="CATALYZER" />
