@@ -3016,14 +3016,13 @@
 	<title>Catalyzer</title>
 	<short>Catal.</short>
 	<desc>Legends say that this weapon was built by a Sergal engineer called Cheese - legends also say this Pinpoint beam has maximum penetration.</desc>
-	<tooltip>Beam weapon, 3 damage to hull, Pinpoint, high chance to breach, ignores shields, hullbust</tooltip>
-	<damage>3</damage>
-	<hullbust>1</hullbust>
+	<tooltip>Beam weapon, 1 damage to hull, Pinpoint, low chance to breach, ignores shields.</tooltip>
+	<damage>1</damage>
 	<sp>10</sp>
-	<breachChance>7</breachChance>
-	<cooldown>11</cooldown>
+	<breachChance>3</breachChance>
+	<cooldown>7</cooldown>
 	<image>beam_contact</image>
-	<power>3</power>
+	<power>4</power>
 	<cost>90</cost>
 	<bp>7</bp>
 	<rarity>5</rarity>
