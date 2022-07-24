@@ -4348,7 +4348,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</shields>
 		<teleporter power="1" room="6" start="false" />
 		<temporal power="1" room="10" start="false" img="" />
-		<weapons power="3" max="8" room="11" start="true" img="room_weapons">
+		<weapons power="4" max="8" room="11" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -4363,7 +4363,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</weaponList>
 	<droneList drones="2" count="3" />
 	<health amount="30" />
-	<maxPower amount="7" />
+	<maxPower amount="8" />
 </shipBlueprint>
 
 <!--/////////////////////TRASH REACTOR//////////////////////////-->
