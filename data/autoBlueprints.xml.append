@@ -851,30 +851,6 @@
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
-<shipBlueprint name="MU_ENGI_FIGHTER_KIVIE" layout="mu_engi_fighter_a" img="mu_engi_fighter_a">
-	<class>Engi Fighter</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<drones power="2" max="8" room="2" start="true" />
-		<engines power="1" max="2" room="6" start="true" />
-		<medbay power="1" max="2" room="4" start="false" />
-		<oxygen power="1" max="2" room="5" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="8" room="3" start="true" />
-		<weapons power="2" max="7" room="1" start="true" />
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>3</droneSlots>
-	<weaponList missiles="0" count="3" load="LIST_WEAPONS_ENGI" />
-	<droneList drones="10" count="3" load="LIST_DRONES_ENGI" />
-	<health amount="10" />
-	<maxPower amount="9" />
-	<crewCount amount="2" max="6" class="engi" />
-	<boardingAI>sabotage</boardingAI>
-	<aug name="UPG_MEDBAY_NANO" />
-</shipBlueprint>
-
 <shipBlueprint name="KIVIE_BOMBER" layout="KIVIE_BOMBER" img="KIVIE_BOMBER">
 	<class>Kivie Bomber</class>
 	<minSector>4</minSector>

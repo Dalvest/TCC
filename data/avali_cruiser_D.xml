@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 
-<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+
+
 <img x="-104" y="-100" w="622" h="407" />
 <offsets>
 	<floor x="98" y="94" />
@@ -8,45 +9,10 @@
 </offsets>
 <weaponMounts>
 	<mount x="430" y="318" rotate="true" mirror="false" gib="5" slide="down" />
-	<mount x="430" y="91" rotate="true" mirror="true" gib="1" slide="up" />
-	<mount x="535" y="110" rotate="true" mirror="true" gib="3" slide="up" />
-	<mount x="535" y="298" rotate="true" mirror="false" gib="3" slide="down" />
+	<mount x="430" y="91" rotate="true" mirror="true" gib="4" slide="up" />
+	<mount x="535" y="110" rotate="true" mirror="true" gib="2" slide="up" />
+	<mount x="535" y="298" rotate="true" mirror="false" gib="2" slide="down" />
 </weaponMounts>
 <explosion>
-	<gib1>
-		<velocity min="0.11" max="0.36" />
-		<direction min="342" max="358" />
-		<angular min="-0.65" max="0.65" />
-		<x>200</x>
-		<y>0</y>
-	</gib1>
-	<gib2>
-		<velocity min="0.17" max="0.55" />
-		<direction min="82" max="98" />
-		<angular min="-0.52" max="0.52" />
-		<x>0</x>
-		<y>71</y>
-	</gib2>
-	<gib3>
-		<velocity min="0.21" max="0.69" />
-		<direction min="265" max="281" />
-		<angular min="-0.65" max="0.65" />
-		<x>368</x>
-		<y>86</y>
-	</gib3>
-	<gib4>
-		<velocity min="0.27" max="0.89" />
-		<direction min="243" max="259" />
-		<angular min="-1.17" max="1.17" />
-		<x>333</x>
-		<y>173</y>
-	</gib4>
-	<gib5>
-		<velocity min="0.12" max="0.41" />
-		<direction min="170" max="186" />
-		<angular min="-0.72" max="0.72" />
-		<x>189</x>
-		<y>197</y>
-	</gib5>
-</explosion>
+	<gib1><velocity min="0.2667281615273052" max="0.8890938717576842" /><direction min="243" max="259" /><angular min="-1.1749622066038985" max="1.1749622066038985" /><x>333</x><y>173</y></gib1><gib2><velocity min="0.20647433367528703" max="0.6882477789176235" /><direction min="265" max="281" /><angular min="-0.65133164259198" max="0.65133164259198" /><x>368</x><y>86</y></gib2><gib3><velocity min="0.16709012902160042" max="0.5569670967386681" /><direction min="82" max="98" /><angular min="-0.5264327728596043" max="0.5264327728596043" /><x>0</x><y>71</y></gib3><gib4><velocity min="0.10752863008620489" max="0.3584287669540163" /><direction min="341" max="357" /><angular min="-0.6384486237209972" max="0.6384486237209972" /><x>200</x><y>0</y></gib4><gib5><velocity min="0.11094600273706762" max="0.3698200091235587" /><direction min="168" max="184" /><angular min="-0.695723764280947" max="0.695723764280947" /><x>185</x><y>186</y></gib5></explosion>
 
