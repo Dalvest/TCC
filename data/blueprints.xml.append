@@ -1522,7 +1522,7 @@
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>3</breachChance>
-	<cooldown>20</cooldown>
+	<cooldown>15</cooldown>
 	<power>2</power>
 	<cost>70</cost>
 	<bp>2</bp>
@@ -2494,8 +2494,8 @@
 
 <weaponBlueprint name="CRYS_50CAL">
 	<type>BURST</type>
-	<title>Crystallis .950 Caliber</title>
-	<short>Crys. 950Cal</short>
+	<title>Crystallis .950 Autocannon</title>
+	<short>Crys. .950Cal</short>
 	<desc>This weapon was made by a certain overeager protogen. It fires a volley of 6 rounds, but good luck hitting anything with it.</desc>
 	<tooltip>6 shot 1 damage weapon, gigantic hit radius, 85% chance to not use ammo, 10% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
@@ -2719,7 +2719,7 @@
 	<type>LASER</type>
 	<title>RSA Minicannon</title>
 	<short>Minicannon</short>
-	<desc>This is a small, simple cannon. ...That's about it. It's pretty cool, though.</desc>
+	<desc>This is a small, simple autocannon. ...That's about it. It surpasses a basic laser in shield penetration capability but uses ammunition.</desc>
 	<tooltip>1 shot 1 damage weapon, pierces one shield bubble, 85% chance to not use ammo, 40% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>85</freeMissileChance>
@@ -2759,14 +2759,14 @@
 
 <weaponBlueprint name="RSA_TAGGER">
 	<type>LASER</type>
-	<title>RSA Tagger</title>
-	<short>Tagger</short>
-	<desc>This is one of the most fielded weapons by the RSA, owing to its efficacy and simplicity. It works beautifully, kills with ease and that's about it.</desc>
+	<title>RSA Tagger Autocannon</title>
+	<short>Tagger AC</short>
+	<desc>This autocannon is one of the most fielded weapons by the RSA, owing to its efficacy and simplicity. It works beautifully, kills with ease and that's about it.</desc>
 	<tooltip>1 shot 3 damage weapon, 75% chance to not use ammo, 40% chance to cause a breach + medium stun on crew, pierces one shield bubble.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>75</freeMissileChance>
-	<damage>1</damage>
-	<shots>2</shots>
+	<damage>3</damage>
+	<shots>1</shots>
 	<sp>1</sp>
 	<radius>20</radius>
 	<breachChance>4</breachChance>
@@ -2795,6 +2795,45 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>RSA_TAGGER</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="RSA_AVENGER_ARTILLERY">
+	<type>LASER</type>
+	<title>RSA Avenger Artillery</title>
+	<short>RSA Avenger</short>
+	<desc>This is a gigantic and clearly too big artillery was made as a predecessor to the Vulcan. While the prototype never hit mass-production, certain RSA ships still use it.</desc>
+	<tooltip>4 shot 2 damage weapon, 40% chance to cause a breach + medium stun on crew.</tooltip>
+	<damage>1</damage>
+	<shots>4</shots>
+	<sp>1</sp>
+	<radius>20</radius>
+	<breachChance>4</breachChance>
+	<stunChance>4</stunChance>
+	<cooldown>25</cooldown>
+	<power>4</power>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<cost>60</cost>
+	<image>GB_shot_heavy</image>
+	<launchSounds>
+		<sound>GB_cannonHeavy1</sound>
+		<sound>GB_cannonHeavy2</sound>
+		<sound>GB_cannonHeavy3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rsa_avenger</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -4652,7 +4691,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="20" />
 	<maxPower amount="5" />
-	<crewCount amount="1" class="mantis_freebusiness" />
 	<crewCount amount="1" class="mantis_free" />
 	<crewCount amount="1" class="mantis_rsa" />
 	<aug name="MANTIS_RELOADER" />
@@ -4960,7 +4998,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<desc>An old, rusting amalgmation constructed out of the remains of several other ships. The Reclaim and Salvage Association staffed it with a diverse crew, including a captured Scrapper.</desc>
 	<unlock id="ship_PLAYER_SHIP_CORROSUS_unlock"/>
 	<systemList>
-		<artillery power="1" room="10" start="true" weapon="TC_RESCRAPFLAK" img="room_artillery" />
+		<artillery power="1" room="10" start="true" weapon="RSA_AVENGER_ARTILLERY" img="room_artillery" />
 		<battery power="1" max="2" room="24" start="false" img="room_battery_nightowl" />
 		<cloaking power="1" room="5" start="false" img="room_cloaking" />
 		<clonebay power="1" room="20" start="false">

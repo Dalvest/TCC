@@ -369,7 +369,10 @@ MVAR [name] [value]
 		<crewLimit>9</crewLimit>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>SHIP_FREEMANTIS</hiddenAug>
-	  </mod-append:customShip>
+		<crew>
+			<mantis_freebusiness room="6" name="Businessmantis" />
+		</crew>
+	</mod-append:customShip>
 
     <!--///////ARMORED WASP//////-->
 

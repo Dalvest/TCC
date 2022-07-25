@@ -361,6 +361,16 @@
 	<mountPoint x="3" y="44"/>
 </weaponAnim>
 
+<animSheet name="militia_tagger" w="253" h="84" fw="23" fh="84">weapon_laser/militia_tagger.png</animSheet>
+<weaponAnim name="militia_tagger">
+	<sheet>militia_tagger</sheet>
+	<desc length="11" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="17" y="11" />
+	<mountPoint x="3" y="69" />
+</weaponAnim>
+
 <!--/////////////////// DEBUFFER //////////////////-->
 
 <animSheet name="tcc_debuff_slow_1" w="145" h="35" fw="29" fh="35">weapon_debuffer/tc_debuffer_mk1.png</animSheet>
@@ -581,16 +591,6 @@
 	<mountPoint x="3" y="69" />
 </weaponAnim>
 
-<animSheet name="militia_tagger" w="253" h="84" fw="23" fh="84">weapon_laser/militia_tagger.png</animSheet>
-<weaponAnim name="militia_tagger">
-	<sheet>militia_tagger</sheet>
-	<desc length="11" x="0" y="0" />
-	<chargedFrame>4</chargedFrame>
-	<fireFrame>5</fireFrame>
-	<firePoint x="17" y="11" />
-	<mountPoint x="3" y="69" />
-</weaponAnim>
-
 <animSheet name="tc_vulcan_cannon" w="360" h="80" fw="36" fh="80">weapon_autocannon/tc_vulcan_cannon.png</animSheet>
 <weaponAnim name="tc_vulcan_cannon">
 	<sheet>tc_vulcan_cannon</sheet>
@@ -599,6 +599,16 @@
 	<fireFrame>5</fireFrame>
 	<firePoint x="20" y="7" />
 	<mountPoint x="3" y="55" />
+</weaponAnim>
+
+<animSheet name="rsa_avenger" w="480" h="118" fw="32" fh="118">weapon_autocannon/rsa_avenger.png</animSheet>
+<weaponAnim name="rsa_avenger">
+	<sheet>rsa_avenger</sheet>
+	<desc length="15" x="0" y="0" />
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>7</fireFrame>
+	<firePoint x="18" y="11" />
+	<mountPoint x="4" y="90" />
 </weaponAnim>
 
 <!--/////////////////// TEAR GAS //////////////////-->
