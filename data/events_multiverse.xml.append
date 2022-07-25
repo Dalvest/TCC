@@ -660,6 +660,16 @@
 	</choice>
 	
 	<choice hidden="false" blue="false">
+		<text>Rad Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-95" max="-95"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_BIO"/>
+		</event>
+	
+	<choice hidden="false" blue="false">
 		<text>Lockdown Bomb Flak</text>
 		<event>
 			<text>Done!</text>

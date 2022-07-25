@@ -1160,7 +1160,7 @@
 	Ion Damage: 4
 	
 	Buy/Sell Price: 110~/55~</descriptionOverride>
-	<tooltip>Fires a blast of debris across a random area doing up to 7 damage.</tooltip>
+	<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
 	<radius>55</radius>
 	<damage>1</damage>
 	<sysDamage>-1</sysDamage>
@@ -1222,6 +1222,81 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>tc_bomb_shotgun_ion</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="TC_BOMB_SHOTGUN_BIO">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Irradiation Bomb Flak Gun</title>
+	<short>Rad B. Flak</short>
+	<tip>tip_bio</tip>
+	<desc>Fires 4 radioactive bombs which do normal hull damage as well as double system damage, very high crew damage and sometimes erode the hull enough to create a breach.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 7 damage.</tooltip>
+	<radius>55</radius>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>3</persDamage>
+	<missiles>1</missiles>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>16</cooldown>
+	<power>3</power>
+	<cost>105</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="4" fake="false">bomb_bio</projectile>
+	</projectiles>
+	<explosion>explosion_bio</explosion>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>smallExplosion</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_bomb_shotgun_bio</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 

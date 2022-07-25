@@ -267,6 +267,17 @@
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_ion_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="tc_bomb_shotgun_bio" w="360" h="52" fw="40" fh="52">weapon_bomb_flak/tc_bomb_shotgun_bio.png</animSheet>
+<weaponAnim name="tc_bomb_shotgun_bio">
+	<sheet>tc_bomb_shotgun_bio</sheet>
+	<desc length="9" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="17" y="18"/>
+	<mountPoint x="5" y="34"/>
+	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_bio_glow.png</chargeImage>
+</weaponAnim>
+
 <animSheet name="tc_bomb_shotgun_lockdown" w="484" h="48" fw="44" fh="48">weapon_bomb_flak/tc_bomb_shotgun_lockdown.png</animSheet>
 <weaponAnim name="tc_bomb_shotgun_lockdown">
 	<sheet>tc_bomb_shotgun_lockdown</sheet>
