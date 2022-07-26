@@ -3742,7 +3742,7 @@
 	<tip>tip_toggle_crew</tip>
 	<title>Mantis Battle Drone [Anti-Pers]</title>
 	<short>Robo Mant [A]</short>
-	<desc>[CURRENT MODE: Anti-Personnel] Controllable, a personnel drone that can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
+	<desc>[CURRENT MODE: Anti-Personnel] Modeled after a famous mantis warrior, this drone can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
 
 -150 HP, 1.4x combat damage
 -0.8x movement speed</desc>
@@ -3759,7 +3759,7 @@
 	<locked>1</locked>
 	<title>Mantis Battle Drone [Boarding]</title>
 	<short>Robo Mant [B]</short>
-	<desc>[CURRENT MODE: Boarding] Controllable, a personnel drone that can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
+	<desc>[CURRENT MODE: Boarding] Modeled after a famous mantis warrior, this drone can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
 
 -150 HP, 1.4x combat damage
 -0.8x movement speed</desc>
@@ -3768,6 +3768,54 @@
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<iconImage>boarder</iconImage>
+</droneBlueprint>
+
+<crewBlueprint name="silica">
+	<desc>You shouldn't see this!</desc>
+	<title>Silica</title>
+	<short>Silica</short>
+	<cost>150</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Drone</power>
+	</powerList>
+</crewBlueprint>
+
+<droneBlueprint name="SILICA_BATTLE">
+    <type>BATTLE</type>
+    <locked>1</locked>
+    <tip>tip_toggle_crew</tip>
+    <title>Silica</title>
+    <short>Silica</short>
+    <desc>[CURRENT MODE: Shipboard] A terraformer and tactician drone created by the R.S.T. and Pinnacle Robotics - in a distant Universe, he discovered a problematic infestation. He likes gardening and gardening accessories.
+    
+-2.2x combat damage, 1.75x movement speed
+-Immune to fire and stun
+-Can man systems at lv2 skill level</desc>
+    <power>2</power>
+    <cost>80</cost>
+    <bp>3</bp>
+    <rarity>0</rarity>
+    <iconImage>battle</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="SILICA_BOARDER">
+    <type>BOARDER</type>
+    <tip>tip_toggle_crew</tip>
+    <locked>1</locked>
+    <title>Silica</title>
+    <short>Silica</short>
+    <desc>[CURRENT MODE: Boarding] A terraformer and tactician drone created by the R.S.T. and Pinnacle Robotics - in a distant Universe, he discovered a problematic infestation. He likes gardening and gardening accessories.
+    
+-2.2x combat damage, 1.75x movement speed
+-Immune to fire and stun
+-Can man systems at lv2 skill level</desc>
+    <power>2</power>
+    <speed>50</speed>
+    <cost>80</cost>
+    <rarity>0</rarity>
+    <iconImage>boarder</iconImage>
 </droneBlueprint>
 
 <!--
@@ -4645,8 +4693,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="2" room="7" start="true" img="room_drones_14" />
-		<engines power="1" room="9" start="true" img="room_engines_8ManningTopLeft">
+		<drones power="2" max="8" room="7" start="true" img="room_drones_14" />
+		<engines power="1" max="8" room="9" start="true" img="room_engines_8ManningTopLeft">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -4667,14 +4715,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="10" start="false" img="room_shields_TCC">
+		<shields power="2" max="8" room="10" start="false" img="room_shields_TCC">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="4" start="true" />
-		<weapons power="2" room="8" start="true" img="room_weapons_10_2x1">
+		<weapons power="2" max="8" room="8" start="true" img="room_weapons_10_2x1">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -4691,8 +4739,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="20" />
 	<maxPower amount="5" />
-	<crewCount amount="1" class="mantis_free" />
-	<crewCount amount="1" class="mantis_rsa" />
 	<aug name="MANTIS_RELOADER" />
 </shipBlueprint>
 
@@ -4730,6 +4776,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</medbay>
+		<mind power="1" room="14" start="false" img="room_mind_2" />
 		<oxygen power="1" room="4" start="true" img="room_oxygen_nightowl" />
 		<pilot power="2" room="0" start="true" img="room_pilot">
 			<slot>
@@ -4759,7 +4806,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</systemList>
 	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
+	<droneSlots>2</droneSlots>
 	<weaponList missiles="16" count="4">
 		<weapon name="TC_DECONSTRUCTOR" />
 	</weaponList>
@@ -4768,6 +4815,80 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<maxPower amount="8" />
 	<aug name="SCRAP_COMPACTOR" />
 	<aug name="SCRAP_COLLECTOR" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_TC_CONSTRUCTION_2" layout="player_ship_tc_construction_2" img="player_ship_tc_construction_2">
+	<class>Construction Crew Kestrel</class>
+	<name>Quality Control</name>
+	<desc>Wentworth Industries used to use this Kestrel variant for ships designated to carry crew such as Technicians. This wasn't made for combat, though...</desc>
+	<unlock id="ship_PLAYER_SHIP_TC_CONSTRUCTION_2_unlock"/>
+	<systemList>
+		<battery power="1" room="5" start="false" img="room_battery_6" />
+		<cloaking power="1" room="6" start="false" img="room_cloaking_9" />
+		<clonebay power="1" room="10" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="15" start="false" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" max="10" room="7" start="true" img="room_drones" />
+		<engines power="1" max="8" room="8" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_4" />
+		<medbay power="1" room="10" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="14" start="false" img="room_mind_2" />
+		<oxygen power="1" room="4" start="true" img="room_oxygen_nightowl" />
+		<pilot power="2" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="3" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="9" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="2" start="true" />
+		<weapons power="1" max="8" room="1" start="false" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<systemLimit>9</systemLimit>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="3" count="4" />
+	<droneList drones="13" count="4">
+		<drone name="SILICA_BATTLE" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="9" />
+	<crewCount amount="1" class="human_technician" />
+	<crewCount amount="1" class="human_engineer" />
+	<aug name="CRATE_DRONES" />
 </shipBlueprint>
 
 <!--/////////////////////ARMORED WASP/////////////////////////-->
@@ -7908,19 +8029,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</colorList>
 </crewBlueprint>
 
-<crewBlueprint name="rsa_technician_drone">
-	<desc>A very cool drone! I think.</desc>
-	<cost>40</cost>
-	<title>RSA Scout Drone</title>
-	<short>RSA Scout Drone</short>
-	<rarity>0</rarity>
-	<powerList>
-		<power>Max Health is 50, x2 movement speed</power>
-		<power>Fights and sabotages with x2 strength</power>
-		<power>Cannot repair, extinguish, or man systems</power>
-	</powerList>
-</crewBlueprint>
-
 <!--/////// RSA TANK //////-->
 
 <crewBlueprint name="rsa_tank">
@@ -8134,6 +8242,24 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<title>Space Scavenger</title>
 	<short>S.Scavenger</short>
 	<rarity>5</rarity>
+	<powerList>
+		<power>x1.5 damage and sabotage speeds owing to specialised cybernetic augmentations.</power>
+		<power>x0.5 repair speed owing to specialised cybernetic augmentations.</power>
+		<power>x0.8 movement speed.</power>
+		<power>Requires no oxygen in their environment.</power>
+		<power>More susceptible to all damage owing to fragile breathing apparatus.</power>
+		<power>Maximum health of 70.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+		<power>Learns skills slower owing to specialised training.</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="protogen_pete">
+	<desc>When asked what P.E.T.E. stands for, he will simply start a talk about something called P.I.R.A.T.E..</desc>
+	<cost>1</cost>
+	<title>P.E.T.E.</title>
+	<short>P.E.T.E.</short>
+	<rarity>0</rarity>
 	<powerList>
 		<power>x1.5 damage and sabotage speeds owing to specialised cybernetic augmentations.</power>
 		<power>x0.5 repair speed owing to specialised cybernetic augmentations.</power>
