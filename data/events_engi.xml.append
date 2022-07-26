@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mod:findName type="eventList" name="NEUTRAL_ENGI">
-	<mod-append:event load="KIVIE_SCOUT_CHOICE"/>
-</mod:findName>
-
 <mod:findName type="eventList" name="HOSTILE_ENGI">
 	<mod-append:event load="KIVIE_FIGHTER_ENGI_BULLY"/>
 </mod:findName>
@@ -15,24 +11,6 @@
 			<text>Continue...</text>
 			<event load="COMBAT_CHECK"/>
 		</choice>
-</event>
-
-<event name="KIVIE_SCOUT_CHOICE">
-	<text>You come up to a beacon where a Kivie and Engi ship are docked. They both seem to be locked in an argument comparing the size of their ships. "MINE BIGGER" the Kiv garbled while the Engi disagreed. "Calculations: Engi ship larger by x2+3x44 inches". They both ask you who is bigger.</text>
-		<choice>
-			<text>Side with the Kivie.</text>
-			<event load="ENGI_ARGUMENT"/>
-			<event/>
-		</choice>
-		<choice>
-			<text>Side with the Engi.</text>
-			<event load="KIVIE_SCOUT_ARGUMENT"/>
-			<event/>
-		</choice>
-			<choice>
-	    <text>Uhhhh... no.</text>
-		<event/>
-	</choice>
 </event>
 
 <textList name="KIVIE_FIGHTER_ENGI_MEAN">
@@ -83,24 +61,6 @@
 		</choice>
 </event>
 </eventList>
-
-<ship name="KIVIE_SCOUT_ENGI" auto_blueprint="KIVIE_SCOUT">
-    <destroyed>
-		<text load="KIVIE_FIGHTER_ENGI_DEAD_CREW"/>
-		<autoReward level="LOW">standard</autoReward>
-			<choice hidden="true">
-				<text id="continue" />
-				<event load="ENGI_KIVIE_WINNING"/>
-			</choice>
-    </destroyed>
-    <deadCrew>
-        <text load="KIVIE_FIGHTER_ENGI_DEAD_CREW"/>
-		<autoReward level="LOW">standard</autoReward>
-			<choice hidden="true">
-				<text id="continue" />
-				<event load="ENGI_KIVIE_WINNING"/>
-			</choice>
-    </deadCrew>
 	
 </ship>
 
@@ -115,71 +75,3 @@
     </deadCrew>
 	
 </ship>
-
-<ship name="MU_ENGI_FIGHTER_KIVIE" auto_blueprint="MU_ENGI_FIGHTER_KIVIE">
-    <destroyed>
-        <text> With the Engi ship destroyed, you wonder why it even cared about its ship size. On second thought, nevermind.</text>
-		<autoReward level="LOW">standard</autoReward>
-			<choice hidden="true">
-				<text id="continue" />
-				<event load="ENGI_KIVIE_WIN"/>
-			</choice>
-    </destroyed>
-    <deadCrew>
-        <text> With the Engi dead, you wonder why it even cared about its ship size. On second thought, nevermind.</text>
-		<autoReward level="LOW">standard</autoReward>
-			<choice hidden="true">
-				<text id="continue" />
-				<event load="ENGI_KIVIE_WIN"/>
-			</choice>
-    </deadCrew>
-	
-</ship>
-
-<!-- ************************************************************************************ -->
-
-<eventList name="KIVIE_SCOUT_ARGUMENT">
-<event>
-	<ship load="KIVIE_SCOUT_ENGI" hostile="true"/>
-	<text>"MY SHIP! MY SHIP! MY SHIP! MY SHIP!" The Kivie continues to yell while powering their weapons up.</text>
-		<choice>
-			<text>continue...</text>
-			<event load="COMBAT_CHECK"/>
-			<event/>
-		</choice>
-</event>
-</eventList>
-
-<eventList name="ENGI_ARGUMENT">
-<event>
-	<ship load="MU_ENGI_FIGHTER_KIVIE" hostile="true"/>
-	<text>"WRONG: ACTIVATING ERADICATION PROTOCOL-69."</text>
-		<choice>
-			<text>continue...</text>
-			<event load="COMBAT_CHECK"/>
-			<event/>
-		</choice>
-</event>
-</eventList>
-
-<eventList name="ENGI_KIVIE_WINNING">
-<event>
-	<text>"CHOICE OBVIOUS: REWARD DISPENSING."</text>
-	<autoReward level="LOW">standard</autoReward>
-		<choice>
-			<text>continue...</text>
-			<event/>
-		</choice>
-</event>
-</eventList>
-
-<eventList name="ENGI_KIVIE_WIN">
-<event>
-	<text>"ROBOT WRONG..HEKHEKHEK..ROBOT DEAD!". The Kivie continues to laugh at his opponent's demise. "HAVE SCRAP".</text>
-	<autoReward level="LOW">standard</autoReward>
-		<choice>
-			<text>continue...</text>
-			<event/>
-		</choice>
-</event>
-</eventList>
