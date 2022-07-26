@@ -100,6 +100,61 @@
 	</mod:findLike>
 </mod:findName>
 
+<mod:findName type="sectorDescription" name="SECTOR_REBEL">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="REBEL_DART" rarity="3" />
+		<mod-append:blueprint name="TC_CLOAKER" rarity="3" />
+		<mod-append:blueprint name="NOVA_MK1" rarity="3" />
+		<mod-append:blueprint name="NOVA_MK2" rarity="4" />
+		<mod-append:blueprint name="NOVA_MK3" rarity="5" />
+		<!--<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="5" />-->
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_REBEL_UNIQUE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="REBEL_DART" rarity="3" />
+		<mod-append:blueprint name="TC_CLOAKER" rarity="3" />
+		<mod-append:blueprint name="NOVA_MK1" rarity="3" />
+		<mod-append:blueprint name="NOVA_MK2" rarity="4" />
+		<mod-append:blueprint name="NOVA_MK3" rarity="4" />
+		<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_AUTO">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="REBEL_DART" rarity="4" />
+		<mod-append:blueprint name="TC_CLOAKER" rarity="4" />
+		<mod-append:blueprint name="NOVA_MK1" rarity="4" />
+		<mod-append:blueprint name="NOVA_MK2" rarity="5" />
+		<mod-append:blueprint name="NOVA_MK3" rarity="5" />
+		<!--<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="5" />-->
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_AUTO_UNIQUE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="REBEL_DART" rarity="3" />
+		<mod-append:blueprint name="TC_CLOAKER" rarity="3" />
+		<mod-append:blueprint name="NOVA_MK1" rarity="3" />
+		<mod-append:blueprint name="NOVA_MK2" rarity="4" />
+		<mod-append:blueprint name="NOVA_MK3" rarity="5" />
+		<!--<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="5" />-->
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_JERRY">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="REBEL_DART" rarity="2" />
+		<mod-append:blueprint name="TC_CLOAKER" rarity="2" />
+		<mod-append:blueprint name="NOVA_MK1" rarity="2" />
+		<mod-append:blueprint name="NOVA_MK2" rarity="3" />
+		<mod-append:blueprint name="NOVA_MK3" rarity="4" />
+		<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
 <mod:findName type="sectorDescription" name="SECTOR_LANIUS">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="scrapper" rarity="4" />
