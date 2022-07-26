@@ -160,6 +160,108 @@ MVAR [name] [value]
       <chance>65</chance>
     </category>
   </customStore>
+  
+  <customStore id="STORE_RSA">
+        <hullRepair>
+			<price min="2" max="4"/>
+			<sectorScaled/>
+		</hullRepair>
+		<resource>
+			<type>fuel</type>
+			<count min="5" max="10"/>
+		</resource>
+		<resource>
+			<type>missiles</type>
+			<count min="3" max="7"/>
+		</resource>
+		<resource>
+			<type>drones</type>
+			<count min="6" max="11"/>
+		</resource>
+		<category type="WEAPONS" group="1">
+            <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
+			<item>
+                <blueprint>GIFTLIST_RUSTY</blueprint>
+				<modifier flat="false">0.6</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+                <modifier flat="false">0.6</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item>
+			<item>
+                <modifier flat="false">0.6</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item>
+			<chance>100</chance>
+        </category>
+		<category type="WEAPONS">
+            <item/>
+            <item/>
+            <item>
+				<blueprint>SHOP_RSA_ITEM_WEAPONS</blueprint>
+			</item>
+			<chance>100</chance>
+        </category>
+		<category type="DRONES" group="0">
+            <item/>
+            <item/>
+            <item/>
+			<chance>65</chance>
+			<groupChance>50</groupChance>
+        </category>
+		<category type="AUGMENTS" group="0">
+            <item/>
+            <item/>
+            <item/>
+			<chance>65</chance>
+			<groupChance>50</groupChance>
+        </category>
+		<category type="CREW">
+			<customTitle>DECKHANDS</customTitle>
+		    <allowDuplicates/>
+			<item/>
+            <item/>
+            <item>
+				<blueprint>SHOP_RSA_ITEM_CREW</blueprint>
+			</item>
+			<chance>100</chance>
+        </category>
+		<category type="SYSTEMS">
+            <customTitle>ESSENTIAL SYSTEMS</customTitle>
+			<guaranteedSystems>
+                <weapons/>
+				<shields/>
+				<oxygen/>
+            </guaranteedSystems>
+			<item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+			<chance>100</chance>
+        </category>
+		<category type="SYSTEMS">
+			<customTitle>AUXILIARY SYSTEMS</customTitle>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+			<chance>65</chance>
+        </category>
+    </customStore>
 
 
   <!--

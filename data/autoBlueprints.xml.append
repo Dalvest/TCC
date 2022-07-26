@@ -286,6 +286,43 @@
 	<name>BIG_ION</name>
 </blueprintList>
 
+<!-- Duplicates are for increasing the chance to appear -->
+
+<blueprintList name="SHOP_RSA_ITEM_CREW">
+	<name>mantis_rsa</name>
+	<name>mantis_rsa</name>
+	<name>kiviekith</name>
+	<name>kiviekith</name>
+	<name>rsa_technician</name>
+</blueprintList>
+
+<blueprintList name="SHOP_RSA_ITEM_WEAPONS">
+	<name>RSA_MINICANNON</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_TAGGER</name>
+	<name>RSA_TAGGER</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_RESOLVER</name>
+	<name>TC_RESOLVER</name>
+	<name>CATALYZER</name>
+	<name>CATALYZER</name>
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_4</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_FREE</name>
+	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
 <!--/////// WEAPONS ALL //////-->
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
