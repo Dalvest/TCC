@@ -16,10 +16,6 @@
 	<name>TC_SINEWAVE</name>
 	<name>RSA_BIOHAZARD</name>
 	<name>SINGULARITY_PROJECTOR_1</name>
-	<name>NOVA_MK1</name>
-	<name>NOVA_MK2</name>
-	<name>NOVA_MK3</name>
-	<name>SUPERNOVA_CATALYZER</name>
 	<name>CATALYZER</name>
 	<name>NOODLE_RATIONS</name>
 	<name>scrapper</name>
@@ -321,6 +317,7 @@
 	<mod-append:name>TC_LASER_LEGION</mod-append:name>
 	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
 	<mod-append:name>ION_CHARGER_1</mod-append:name>
+	<mod-append:name>REBEL_DART</mod-append:name>
 	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
 	<mod-append:name>RSA_MINICANNON</mod-append:name>
 	<mod-append:name>RSA_TAGGER</mod-append:name>
@@ -330,6 +327,7 @@
 	<mod-append:name>TC_SINEWAVE</mod-append:name>
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
 	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_CLOAKER</mod-append:name>
 	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
 	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
@@ -380,6 +378,7 @@
 	<mod-append:name>TC_LASER_LEGION</mod-append:name>
 	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
 	<mod-append:name>ION_CHARGER_1</mod-append:name>
+	<mod-append:name>REBEL_DART</mod-append:name>
 	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
 	<mod-append:name>RSA_MINICANNON</mod-append:name>
 	<mod-append:name>RSA_TAGGER</mod-append:name>
@@ -391,6 +390,7 @@
 	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
 	<mod-append:name>TC_UNSCRAPFLAK</mod-append:name>
 	<mod-append:name>TC_SCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_CLOAKER</mod-append:name>
 	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
 	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
@@ -444,6 +444,11 @@
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
 </mod:findName>-->
 
+<mod:findName type="blueprintList" name="GIFTLIST_REBEL">
+	<mod-append:name>NOVA_MK2</mod-append:name>
+	<mod-append:name>REBEL_DART</mod-append:name>
+</mod:findName>
+
 <mod:findName type="blueprintList" name="GIFTLIST_MANTIS">
 	<!--<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>-->
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
@@ -469,6 +474,10 @@
 <mod:findName type="blueprintList" name="SHOP_CRYSTAL_ITEM_WEAPONS_CRYSTAL">
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
 </mod:findName>-->
+
+<mod:findName type="blueprintList" name="SHOP_REBEL_ITEM_WEAPONS_LASERS">
+	<mod-append:name>REBEL_DART</mod-append:name>
+</mod:findName>
 
 <mod:findName type="blueprintList" name="SHOP_MANTIS_ITEM_WEAPONS_BOMB">
 	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
