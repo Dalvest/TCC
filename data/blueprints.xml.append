@@ -8254,6 +8254,24 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
+<crewBlueprint name="protogen_pete">
+	<desc>When asked what P.E.T.E. stands for, he will simply start a talk about something called P.I.R.A.T.E..</desc>
+	<cost>1</cost>
+	<title>P.E.T.E.</title>
+	<short>P.E.T.E.</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>x1.5 damage and sabotage speeds owing to specialised cybernetic augmentations.</power>
+		<power>x0.5 repair speed owing to specialised cybernetic augmentations.</power>
+		<power>x0.8 movement speed.</power>
+		<power>Requires no oxygen in their environment.</power>
+		<power>More susceptible to all damage owing to fragile breathing apparatus.</power>
+		<power>Maximum health of 70.</power>
+		<power>Internal Database makes skills unable to degrade.</power>
+		<power>Learns skills slower owing to specialised training.</power>
+	</powerList>
+</crewBlueprint>
+
 <crewBlueprint name="protogen_tracker">
 	<desc>TRACKER ONLINE! Badass but lazy, this protogen ship captain probably knows what he's doing... sometimes.</desc>
 	<cost>80</cost>
