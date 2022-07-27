@@ -121,9 +121,32 @@
 	<name>MISSILES_2_ENEMY</name>
 	<name>MISSILES_1</name>
 	<name>TC_SINEWAVE</name>
-	<name>TC_MINIGUN_MK1</name>
-	<name>LASER_CHAINGUN_DAMAGE</name>
+	<name>TC_ESKA</name>
+	<name>TC_OVERLORD</name>
 	<name>LASER_LIGHT</name>
+</blueprintList>
+
+<blueprintList name="LIST_WEAPONS_RSA">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2_ENEMY</name>
+	<name>LASER_HEAVY_CHAINGUN</name>
+	<name>LASER_CHAINGUN_ENEMY</name>
+	<name>LASER_CHAINGUN_2</name>
+	<name>ION_FIRE</name>
+	<name>ION_STUN</name>
+	<name>ION_CHAINGUN</name>
+	<name>MISSILES_2_ENEMY</name>
+	<name>MISSILES_1</name>
+	<name>RSA_BIOHAZARD</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_TAGGER</name>
+	<name>TC_ESKA</name>
+	<name>TC_OVERLORD</name>
+	<name>TC_MINIGUN_MK1</name>
+	<name>TC_MINIGUN_MK2</name>
+	<name>TC_MINIGUN_MK3</name>
+	<name>TC_SCRAPFLAK</name>
+	<name>TC_RESCRAPFLAK</name>
 </blueprintList>
 
 <mod:findName type="blueprintList" name="LIST_CREW_MANTIS">
@@ -149,6 +172,7 @@
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
 	<mod-append:name>protogen</mod-append:name>
+	<mod-append:name>protogen_pete</mod-append:name>
 	<mod-append:name>protogen_space_scavenger</mod-append:name>
 	<mod-append:name>protogen_tracker</mod-append:name>
 	<mod-append:name>primagen_raptor</mod-append:name>
@@ -184,6 +208,7 @@
 	<name>primagen_raptor</name>
 	<name>clonefail_lancer</name>
 	<name>protogen_space_scavenger</name>
+	<name>protogen_pete</name>
 </blueprintList>
 
 <!--/////// SERGALS //////-->
@@ -1247,6 +1272,39 @@
 	<droneList drones="3" count="0" />
 	<health amount="11" />
 	<maxPower amount="6" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="RSA_DROPSHIP" layout="rsa_dropship" img="rsa_dropship">
+	<class>RSA Dropship</class>
+	<minSector>1</minSector>
+	<maxSector>5</maxSector>
+	<systemList>
+		<artillery power="2" max="4" room="20" start="true" weapon="RSA_AVENGER_ARTILLERY" />
+		<battery power="1" max="2" room="22" start="false" />
+		<doors power="1" max="2" room="8" start="true" />
+		<drones power="2" max="4" room="12" start="true" />
+		<engines power="4" max="6" room="17" start="true" />
+		<hacking power="1" max="1" room="11" start="false" />
+		<medbay power="1" max="2" room="13" start="true" />
+		<mind power="1" max="2" room="23" start="false" />
+		<oxygen power="1" max="2" room="3" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="4" room="6" start="true" />
+		<teleporter power="1" max="2" room="14" start="true" />
+		<weapons power="1" max="1" room="24" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="15" count="4" load="LIST_WEAPONS_RSA" />
+	<droneList drones="15" count="4">
+		<drone name="SILICA_BOARDER" />
+	</droneList>
+	<crewCount amount="1" max="3" class="mantis_rsa" />
+	<crewCount amount="1" max="2" class="rsa_technician" />
+	<crewCount amount="1" max="2" class="kiviekith" />
+	<health amount="7" />
+	<maxPower amount="10" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 

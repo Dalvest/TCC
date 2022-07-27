@@ -3197,7 +3197,7 @@
 	<tooltip>Beam weapon, medium system damage and medium chance to breach, does ion damage.</tooltip>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
-	<ionBeamFix>1</ionBeamFix>
+	<ionBeamFix>true</ionBeamFix>
 	<sp>10</sp>
 	<breachChance>3</breachChance>
 	<cooldown>12</cooldown>
@@ -4869,7 +4869,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="2" start="true" />
+		<teleporter power="2" room="2" start="true" />
 		<weapons power="1" max="8" room="1" start="false" img="room_weapons">
 			<slot>
 				<direction>up</direction>
@@ -5188,139 +5188,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="scrapper" />
 	<crewCount amount="1" class="kiviekith" />
 	<aug name="SALVAGE_ARRAY" />
-	<aug name="AUTOMATED_QUARTERMASTER" />
-</shipBlueprint>
-
-<shipBlueprint name="PLAYER_SHIP_CORROSUS_2" layout="tc_corrosus_2" img="tc_corrosus_2">
-	<class>RSA Scout</class>
-	<name>Wastebent</name>
-	<desc>Light and nimble, this RSA scout ship is dangerous but fragile. It has a vast arsenal of drones to rely on but no weapon system whatsoever.</desc>
-	<unlock id="ship_PLAYER_SHIP_CORROSUS_2_unlock"/>
-	<systemList>
-		<cloaking power="1" room="6" start="false" img="room_cloaking_bodyhorror" />
-		<clonebay power="1" room="7" start="false">
-			<slot>
-				<number>1</number>
-			</slot>
-		</clonebay>
-		<doors power="1" room="4" start="true" img="room_doors_4">
-			<slot>
-				<direction>right</direction>
-				<number>0</number>
-			</slot>
-		</doors>
-		<drones power="5" max="12" room="1" start="true" img="room_drones_1._s__w_" />
-		<engines power="2" max="8" room="2" start="true" img="room_engines_10">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</engines>
-		<hacking power="2" room="5" start="true" img="room_hacking" />
-		<medbay power="1" room="7" start="true" img="room_medbay">
-			<slot>
-				<number>1</number>
-			</slot>
-		</medbay>
-		<oxygen power="2" room="3" start="true" img="room_oxygen_13" />
-		<pilot power="1" room="0" start="true" img="room_pilot_2_thrusters">
-			<slot>
-				<direction>right</direction>
-				<number>1</number>
-			</slot>
-		</pilot>
-		<shields power="2" max="8" room="8" start="true" img="room_shields">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</shields>
-	</systemList>
-	<systemLimit>9</systemLimit>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
-	<weaponList missiles="11" count="4" />
-	<droneList drones="22" count="4">
-		<drone name="TC_COMBAT_BOMB" />
-		<drone name="BATTLETOG2_BOARDER" />
-		<drone name="DEFENSE_1" />
-	</droneList>
-	<health amount="15" />
-	<maxPower amount="7" />
-	<crewCount amount="1" class="robottos" />
-	<crewCount amount="2" class="kiviekith" />
-	<aug name="DRONE_RECOVERY" />
-	<aug name="AUTOMATED_QUARTERMASTER" />
-</shipBlueprint>
-
-<shipBlueprint name="PLAYER_SHIP_CORROSUS_3" layout="tc_corrosus_3" img="tc_corrosus_3">
-	<class>RSA Fleet Support</class>
-	<name>Vulture Culture</name>
-	<desc>This model of Bomber-type ship is one of the most common ships in the RECLAIM and SALVAGE ASSOCIATION; although almost none of those ships look the exact same, given the... rough hull construction.</desc>
-	<unlock id="ship_PLAYER_SHIP_CORROSUS_3_unlock"/>
-	<systemList>
-		<artillery power="2" room="5" start="true" weapon="IONARTILLERY" img="room_artillery" />
-		<doors power="1" room="11" start="true" img="room_doors">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</doors>
-		<drones max="8" power="1" room="12" start="false" img="room_drones" />
-		<engines power="2" room="3" start="true" img="room_engines_8">
-			<slot>
-				<direction>left</direction>
-				<number>2</number>
-			</slot>
-		</engines>
-		<hacking power="1" room="10" start="true" img="room_hacking_doubledeal" />
-		<medbay power="1" room="7" start="true" img="room_medbay">
-			<slot>
-				<number>1</number>
-			</slot>
-		</medbay>
-		<mind power="1" room="14" start="false" img="room_mind_11" />
-		<oxygen power="1" room="6" start="true" img="room_oxygen_2" />
-		<pilot power="1" room="0" start="true" img="room_pilot_chaoticgood">
-			<slot>
-				<direction>right</direction>
-				<number>1</number>
-			</slot>
-		</pilot>
-		<sensors power="1" room="13" start="false" img="room_sensors">
-			<slot>
-				<direction>down</direction>
-				<number>1</number>
-			</slot>
-		</sensors>
-		<shields max="8" power="2" room="2" start="true" img="room_shields">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</shields>
-		<teleporter power="1" room="1" start="true" />
-		<weapons max="8" power="3" room="8" start="true" img="room_weapons">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</weapons>
-	</systemList>
-	<systemLimit>9</systemLimit>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
-	<weaponList missiles="16" count="4">
-		<weapon name="MILITIA_TAGGER" />
-		<weapon name="TCC_DEBUFF_SLOW_1" />
-	</weaponList>
-	<droneList drones="4" count="4" />
-	<health amount="30" />
-	<maxPower amount="6" />
-	<crewCount amount="1" class="robottos_gunner" />
-	<crewCount amount="1" class="mantis_rsa" />
-	<crewCount amount="1" class="kiviekith" />
-	<crewCount amount="1" class="human_technician" />
 	<aug name="AUTOMATED_QUARTERMASTER" />
 </shipBlueprint>
 
@@ -7474,71 +7341,70 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_TC_MILSPEC_2" layout="player_ship_tc_milspec_2" img="player_ship_tc_milspec_2">
-	<class>Milspec Crystal Cruiser</class>
+	<class>Experimental Cargo Liner</class>
 	<name>'Outpost 31'</name>
 	<desc>This Cruiser was carrying an alien specimen found on a derelict base - the alien specimen has escaped, much to the extreme paranoia of the crew.</desc>
 	<unlock id="text_PLAYER_SHIP_TC_MILSPEC_2_unlock"/>
 	<systemList>
-		<artillery power="1" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
-		<battery power="1" room="14" start="false" img="room_battery" />
-		<cloaking power="1" room="0" start="true" img="room_cloaking" />
-		<clonebay power="1" room="7" start="true">
+		<artillery power="1" room="11" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_3" />
+		<battery power="1" room="2" start="true" img="room_battery_8" />
+		<cloaking power="1" room="3" start="true" img="room_cloaking_11" />
+		<clonebay power="1" room="13" start="true">
 			<slot>
-				<number>3</number>
+				<number>0</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="3" start="true" img="room_doors_ogre">
-			<slot>
-				<direction>left</direction>
-				<number>1</number>
-			</slot>
-		</doors>
-		<drones power="1" max="8" room="21" start="false" img="room_drones_14" />
-		<engines power="3" max="8" room="13" start="true" img="room_engines_orchid_3">
+		<doors power="1" room="10" start="true" img="room_doors_6">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
 			</slot>
+		</doors>
+		<drones power="2" max="8" room="4" start="true" img="room_drones_1._s__w_" />
+		<engines power="3" max="8" room="6" start="true" img="room_engines_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
 		</engines>
-		<hacking power="1" room="8" start="false" img="room_hacking_4" />
-		<mind power="1" room="12" start="true" img="room_mind_10" />
-		<oxygen power="2" room="18" start="true" img="room_oxygen_nightowl" />
-		<pilot power="2" room="20" start="true" img="room_pilot">
+		<hacking power="1" room="1" start="false" img="room_hacking_7" />
+		<mind power="1" room="12" start="false" img="room_mind_1x1" />
+		<oxygen power="1" room="8" start="true" img="room_oxygen_10" />
+		<pilot power="1" room="0" start="true" img="room_pilot_doubledeal">
 			<slot>
 				<direction>right</direction>
 				<number>0</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="19" start="false" img="room_sensors">
+		<sensors power="2" room="7" start="false" img="room_sensors_4">
 			<slot>
-				<direction>down</direction>
+				<direction>left</direction>
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="9" start="false" img="room_shields">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</shields>
-		<teleporter power="1" room="1" start="false" />
-		<weapons power="2" max="8" room="6" start="true" img="room_weapons">
+		<shields power="2" max="8" room="5" start="false" img="room_shields_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
+		</shields>
+		<weapons power="2" max="8" room="9" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
 		</weapons>
 	</systemList>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="5" count="4">
-		<weapon name="TC_PULSAR_SMOL" />
-		<weapon name="RSA_MINICANNON" />
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="12" count="4">
+		<weapon name="TC_RAPTOR_AUTOCANNON" />
 	</weaponList>
-	<droneList drones="4" count="2" />
+	<droneList drones="8" count="3">
+		<drone name="DRONE_SHIELD_PLAYER" />
+	</droneList>
 	<health amount="30" />
-	<maxPower amount="5" />
-	<aug name="EX_BACKUP_DNA" />
+	<maxPower amount="6" />
 </shipBlueprint>
 
 <!--/////// LEAH'S SHIPS //////-->
@@ -7787,7 +7653,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</medbay>
 		<mind power="1" room="11" start="false" img="room_mind_1x1" />
-		<oxygen power="1" room="13" start="true" img="room_oxygen" />
+		<oxygen power="1" room="13" start="false" img="room_oxygen" />
 		<pilot power="1" room="0" start="true" img="room_pilot_7">
 			<slot>
 				<direction>right</direction>
