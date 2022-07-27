@@ -102,7 +102,8 @@ MVAR [name] [value]
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-  <customStore id="STORE_NOODLE">
+ <mod:findLike type="store">
+  <mod-append:customStore id="STORE_NOODLE">
     <hullRepair>
       <price min="2" max="4"/>
       <sectorScaled/>
@@ -125,6 +126,18 @@ MVAR [name] [value]
         <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
         <price>-1</price><!--You can set the price of the item here, -1 defaults to the price in the weapon blueprint-->
         <mysteryItem>false</mysteryItem><!--"Item of the day"-->
+      </item>
+	  <item>
+        <modifier min="1" max="1.5" flat="false"/>
+        <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
+        <price>-1</price>
+        <mysteryItem>false</mysteryItem>
+      </item>
+	  <item>
+        <modifier min="1" max="1.5" flat="false"/>
+        <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
+        <price>-1</price>
+        <mysteryItem>false</mysteryItem>
       </item>
       <chance>100</chance>
     </category>
@@ -159,9 +172,9 @@ MVAR [name] [value]
       </item>
       <chance>65</chance>
     </category>
-  </customStore>
+  </mod-append:customStore>
   
-  <customStore id="STORE_RSA">
+  <mod-append:customStore id="STORE_RSA">
         <hullRepair>
 			<price min="2" max="4"/>
 			<sectorScaled/>
@@ -187,12 +200,14 @@ MVAR [name] [value]
 				<mysteryItem>true</mysteryItem>
             </item> 
 			<item>
-                <modifier flat="false">0.6</modifier> 
+                <blueprint>GIFTLIST_RUSTY</blueprint>
+				<modifier flat="false">0.6</modifier> 
                 <price>-1</price>
 				<mysteryItem>true</mysteryItem>
             </item>
 			<item>
-                <modifier flat="false">0.6</modifier> 
+                <blueprint>GIFTLIST_RUSTY</blueprint>
+				<modifier flat="false">0.6</modifier> 
                 <price>-1</price>
 				<mysteryItem>true</mysteryItem>
             </item>
@@ -261,7 +276,8 @@ MVAR [name] [value]
             </item>
 			<chance>65</chance>
         </category>
-    </customStore>
+    </mod-append:customStore>
+</mod:findLike>
 
 
   <!--
