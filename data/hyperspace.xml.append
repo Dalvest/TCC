@@ -608,33 +608,12 @@ MVAR [name] [value]
       <hiddenAug>SHIP_RSA</hiddenAug>
     </mod-append:customShip>
 
-    <mod-append:customShip name="PLAYER_SHIP_CORROSUS_2">
-      <crewLimit>6</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_RSA</hiddenAug>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_CORROSUS_3">
-      <crewLimit>10</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_RSA</hiddenAug>
-    </mod-append:customShip>
-
-
     <!--///////RENT-A-FLAGSHIP//////-->
 
     <mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_CORROSUS</shipReq>
-      </unlock>
-	  <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_CORROSUS_2</shipReq>
-      </unlock>
-	  <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_CORROSUS_3</shipReq>
       </unlock>
       <unlock variant="b" silent="false">
         <type>1</type>
@@ -1177,7 +1156,7 @@ MVAR [name] [value]
 
     <!--/////// MILSPEC //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="false" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false" unused="true">
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_AVALI</shipReq>
@@ -1207,13 +1186,13 @@ MVAR [name] [value]
     <mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC_2">
       <crewLimit>12</crewLimit>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_CRYSTAL</hiddenAug>
+      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
       <crew>
-        <human room="18" name="Childs" />
-        <human room="3" name="Windows" />
+        <human room="4" name="Childs" />
+        <human room="10" name="Windows" />
         <human room="6" name="Garry" />
-        <human room="20" name="R.J. MacReady" />
-        <blobhuman room="13" name="Palmer" />
+        <human_legion_pyro room="0" name="R.J. MacReady" />
+        <blobhuman room="9" name="Palmer" />
       </crew>
     </mod-append:customShip>
 
@@ -1296,7 +1275,7 @@ MVAR [name] [value]
     </mod-append:customShip>
 
     <!--/////// ENEMY SHIPS //////-->
-	
+
     <mod-append:customShip name="TC_TRASH_COMPACTOR1">
       <shipIcons>
         <shipIcon>icon_threat</shipIcon>

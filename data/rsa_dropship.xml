@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 
-<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+
+
 <img x="-32" y="-66" w="391" h="643" />
 <offsets>
 	<floor x="195" y="321" />
 	<cloak x="195" y="321" />
 </offsets>
 <weaponMounts>
-	<mount x="17" y="246" rotate="false" mirror="true" gib="-1" slide="left" />
-	<mount x="93" y="116" rotate="false" mirror="true" gib="-1" slide="left" />
-	<mount x="174" y="70" rotate="false" mirror="false" gib="-1" slide="right" />
-	<mount x="324" y="194" rotate="false" mirror="false" gib="-1" slide="right" />
-	<mount x="247" y="130" rotate="false" mirror="false" gib="-1" slide="no" />
+	<mount x="17" y="246" rotate="false" mirror="true" gib="2" slide="left" />
+	<mount x="93" y="116" rotate="false" mirror="true" gib="4" slide="left" />
+	<mount x="174" y="70" rotate="false" mirror="false" gib="4" slide="right" />
+	<mount x="324" y="194" rotate="false" mirror="false" gib="3" slide="right" />
+	<mount x="247" y="130" rotate="false" mirror="false" gib="4" slide="no" />
 </weaponMounts>
-<explosion />
+<explosion><gib1><velocity min="0.326721283728247" max="1.0890709457608234" /><direction min="205" max="221" /><angular min="-1.0671503501803958" max="1.0671503501803958" /><x>212</x><y>370</y></gib1><gib2><velocity min="0.1" max="0.2611135028980403" /><direction min="108" max="124" /><angular min="-0.5909144631914715" max="0.5909144631914715" /><x>16</x><y>219</y></gib2><gib3><velocity min="0.1" max="0.28964237122429887" /><direction min="314" max="330" /><angular min="-0.79327969348659" max="0.79327969348659" /><x>143</x><y>149</y></gib3><gib4><velocity min="0.20740222585469933" max="0.6913407528489978" /><direction min="9" max="25" /><angular min="-0.6571784387311189" max="0.6571784387311189" /><x>18</x><y>35</y></gib4><gib5><velocity min="0.197201302745876" max="0.6573376758195867" /><direction min="160" max="176" /><angular min="-0.6032602063551915" max="0.6032602063551915" /><x>16</x><y>404</y></gib5></explosion>
 
