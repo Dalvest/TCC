@@ -5566,7 +5566,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_DEFENSE" layout="defense" img="defense">
 	<class>Salvaged Federation Cruiser</class>
 	<name>Stalwart Defense</name>
-	<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The combined nature of the craft makes it hard to manoeuvre and impossible to cloak.</desc>
+	<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The spliced nature of the craft makes it hard to manuever.</desc>
 	<unlock id="ship_PLAYER_SHIP_DEFENSE_unlock"/>
 	<systemList>
 		<artillery power="2" room="5" start="true" weapon="ARTILLERY_BEAM" img="room_artillery" />
@@ -5628,10 +5628,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<weapon name="LASER_CHAINGUN_2" />
 		<weapon name="BOMB_HEAL_SYSTEM" />
 	</weaponList>
-	<droneList drones="5" count="2">
+	<droneList drones="8" count="2">
 		<drone name="DEFENSE_1" />
 	</droneList>
-	<health amount="46" /><!-- math based on ship hulls used, first number is highest for that class (the actual value taking that specific variant into account/missing pieces)((calculation with least efficency)): 14(10)+12(9)+9((4))+11=46(39)((34))-->
+	<health amount="46" /> <!-- math based on ship hulls used, first number is highest for that class (the actual value taking that specific variant into account/missing pieces)((calculation with least efficency)): 14(10)+12(9)+9((4))+11=46(39)((34))-->
 	<maxPower amount="2" />
 	<crewCount amount="1" class="rock_crusader" />
 	<crewCount amount="1" class="zoltan_peacekeeper" />
@@ -5640,12 +5640,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="SYSTEM_CASING_NEW" />
 </shipBlueprint>
 
-<!--/////////////////////POTENTIAL//////////////////////////-->
+<!--///////////////////// POTENTIAL //////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_POTENTIAL" layout="potential" img="potential">
 	<class>Unstable Federation Cruiser</class>
 	<name>Potential</name>
-	<desc>Using the potential field between white and black holes in the engine core, this ship can power anything you can attach to it.</desc>
+	<desc>Using the potential field between white and black holes in the engine core, this ship can power anything you can attach to it. It's highly unstable and was never deployed apart from in Special Forces units.</desc>
 	<unlock id="ship_PLAYER_SHIP_POTENTIAL_unlock"/>
 	<systemList>
 		<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
@@ -5706,11 +5706,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>3</droneSlots>
-	<weaponList missiles="0" count="4">
+	<weaponList missiles="4" count="4">
 		<weapon name="LASER_BURST_1" />
 		<weapon name="BEAM_1" />
 	</weaponList>
-	<droneList drones="0" count="3" />
+	<droneList drones="7" count="3" />
 	<health amount="30" />
 	<maxPower amount="60" />
 	<crewCount amount="1" class="human" />
@@ -5720,7 +5720,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_POTENTIAL_2" layout="potential_2" img="potential_2">
 	<class>Unstable Federation Cruiser</class>
 	<name>Caught Lackin'</name>
-	<desc>This ship was clearly overengineered for maximum drone action - too bad the weapon system is quite... lacking.</desc>
+	<desc>This ship was clearly overengineered for maximum drone action - too bad the weapon system is quite... lacking. It can handle mining, at least.</desc>
 	<unlock id="ship_PLAYER_SHIP_POTENTIAL_2_unlock"/>
 	<systemList>
 		<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
@@ -5794,7 +5794,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="DRONE_RECOVERY" />
 </shipBlueprint>
 
-<!--//////////////////AVALI SHIPS//////////////-->
+<!--////////////////// AVALI SHIPS //////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_AVALI" layout="avali_cruiser_A" img="avali_cruiser_A">
 	<class>Avali Cruiser</class>
@@ -7758,7 +7758,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="scrapper_soldier">
 	<title>Scrapper Soldier</title>
 	<short>Soldier</short>
-	<desc>A Lanius Scrapper with scythe-like fists to shred through anything in its path. This makes extinguishing, manning and repairing impossible, but at least this scrapper is highly combat effective.</desc>
+	<desc>Elite Scrapper Crew. A Lanius Scrapper with scythe-like fists to shred through anything in its path. This makes extinguishing, manning and repairing impossible, but at least this scrapper is highly combat effective.</desc>
 	<cost>60</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
@@ -7775,7 +7775,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="scrapper_heavy">
 	<title>Heavy Scrapper</title>
 	<short>Heavy</short>
-	<desc>A Lanius Scrapper covered in a thick crust of scrap for protection.</desc>
+	<desc>Elite Scrapper Crew. A Lanius Scrapper covered in a thick crust of scrap for protection.</desc>
 	<cost>60</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
@@ -7792,7 +7792,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="scrapper_engineer">
 	<title>Scrapper Engineer</title>
 	<short>Engineer</short>
-	<desc>A Lanius Scrapper, given sharp hands that can quickly shape themselves into various tools.</desc>
+	<desc>Elite Scrapper Crew. A Lanius Scrapper, given sharp hands that can quickly shape themselves into various tools.</desc>
 	<cost>60</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
@@ -7810,7 +7810,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="scrapper_speed">
 	<title>Scrapper Speedster</title>
 	<short>Speedster</short>
-	<desc>A Lanius Scrapper, given strong legs and a lighter body.</desc>
+	<desc>Elite Scrapper Crew. A Lanius Scrapper, given strong legs and a lighter body.</desc>
 	<cost>60</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
@@ -7826,7 +7826,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="scrapper_defender">
 	<title>Scrapper Defender</title>
 	<short>Defender</short>
-	<desc>A Lanius Scrapper, given a strong chest for absorbing damage.</desc>
+	<desc>Super Elite Scrapper Crew. A Lanius Scrapper, given a strong chest for absorbing damage.</desc>
 	<cost>60</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
@@ -7843,7 +7843,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="scrapper_scavenger">
 	<title>Scrapper Scavenger</title>
 	<short>Scavenger</short>
-	<desc>A Lanius Scrapper with a unique scrap plating created by the Trash Eater himself.</desc>
+	<desc>Super Elite Scrapper Crew. A Lanius Scrapper with a unique scrap plating created by the Trash Eater himself.</desc>
 	<cost>80</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
@@ -7856,6 +7856,38 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>1.5x move speed</power>
 		<power>150 health</power>
 	</powerList>
+</crewBlueprint>
+
+<!--/////// SPECIAL FORCES //////-->
+
+<crewBlueprint name="human_phoenix">
+    <desc>Super Elite Federation Crew. This soldiers is one of the best of the best available in the Federation - trained to maximum combat capability and augmented with the finest augments provided by the RSA.</desc>
+    <cost>125</cost>
+    <title>'Phoenix' Squad Special Forces</title>
+    <short>Phoenix</short>
+    <rarity>0</rarity>
+    <powerList>
+        <power>Inflicts 1.5x damage in combat</power>
+		<power>Repairs at 0.6x speed</power>
+		<power>2x ranged damage multiplier</power>
+        <power>Takes 0.8x damage from combat, half from hazards, is highly resistant to stuns</power>
+        <power>Trained in lvl2 skills</power>
+    </powerList>
+</crewBlueprint>
+
+<crewBlueprint name="human_hazmat">
+    <desc>Elite Federation Crew. Scientists of the Federation, dedicated to furthering current research efforts. Usually deployed on field with other operatives to gather informations wherever applicable.</desc>
+    <cost>125</cost>
+    <title>Federation Scientist</title>
+    <short>Scientist</short>
+    <rarity>0</rarity>
+    <powerList>
+        <power>Inflicts 0.8x damage in combat and moves at 0.8x speed</power>
+		<power>Repairs at 1.3x speed owing to technical knowledge</power>
+		<power>Backup battery backpack provides one bar of power to the current system</power>
+        <power>Takes 1.3x damage from combat, half from hazards, is highly resistant to stuns</power>
+        <power>Trained in lvl1 skills</power>
+    </powerList>
 </crewBlueprint>
 
 <!--///////GENERIC - RSA//////-->
@@ -7965,7 +7997,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>x0.7 repair speed</power>
 		<power>Unable to suffocate</power>
 		<power>takes x1.25 damage from fires</power>
-		<power>x1.6 movement speed, takes x0.5 damage, deals x1.7 damage</power>
+		<power>x1.6 movement speed, takes x0.5 damage, deals x1.2 damage and x1.7 in ranged combat</power>
 	</powerList>
 </crewBlueprint>
 

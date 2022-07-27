@@ -2299,6 +2299,276 @@
 	<time>1</time>
 </anim>
 
+<!--///////////////////////////// SPECIAL FORCES /////////////////////////////-->
+
+<!--////////// 'PHOENIX' SQUAD ////////-->
+
+<animSheet name="human_phoenix" w="315" h="455" fw="35" fh="35">people/human_phoenix_base.png</animSheet>
+<anim name="human_phoenix_clone">
+	<sheet>human_phoenix</sheet>
+	<desc length="6" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="human_phoenix_death_right">
+	<sheet>human_phoenix</sheet>
+	<desc length="5" x="3" y="0"/>
+	<time>0.75</time>
+</anim>
+<anim name="human_phoenix_death_left">
+	<sheet>human_phoenix</sheet>
+	<desc length="5" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="human_phoenix_walk_down">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_walk_right">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_walk_up">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_walk_left">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="4" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_shoot_down">
+	<sheet>human_phoenix</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_shoot_right">
+	<sheet>human_phoenix</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_shoot_up">
+	<sheet>human_phoenix</sheet>
+	<desc length="3" x="6" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_shoot_left">
+	<sheet>human_phoenix</sheet>
+	<desc length="3" x="0" y="1"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_fire_down">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_fire_right">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_fire_up">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_fire_left">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_repair">
+	<sheet>human_phoenix</sheet>
+	<desc length="9" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_punch_up">
+	<sheet>human_phoenix</sheet>
+	<desc length="6" x="3" y="1"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_punch_down">
+	<sheet>human_phoenix</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="human_phoenix_teleport">
+	<sheet>human_phoenix</sheet>
+	<desc length="9" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="human_phoenix_type_right">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="human_phoenix_type_left">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="human_phoenix_type_up">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="human_phoenix_type_down">
+	<sheet>human_phoenix</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="human_phoenix_portrait">
+	<sheet>human_phoenix</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<!--////////// SCIENTIST ////////-->
+
+<animSheet name="human_hazmat" w="315" h="455" fw="35" fh="35">people/human_hazmat_base.png</animSheet>
+<anim name="human_hazmat_clone">
+	<sheet>human_hazmat</sheet>
+	<desc length="6" x="2" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_death_right">
+	<sheet>human_hazmat</sheet>
+	<desc length="5" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_death_left">
+	<sheet>human_hazmat</sheet>
+	<desc length="5" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_walk_down">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_walk_right">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_walk_up">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_walk_left">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="4" y="11"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_shoot_down">
+	<sheet>human_hazmat</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_shoot_right">
+	<sheet>human_hazmat</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_shoot_up">
+	<sheet>human_hazmat</sheet>
+	<desc length="3" x="6" y="10"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_shoot_left">
+	<sheet>human_hazmat</sheet>
+	<desc length="3" x="0" y="1"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_fire_down">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_fire_right">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_fire_up">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_fire_left">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_repair">
+	<sheet>human_hazmat</sheet>
+	<desc length="9" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_punch_up">
+	<sheet>human_hazmat</sheet>
+	<desc length="6" x="3" y="1"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_punch_down">
+	<sheet>human_hazmat</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+
+<anim name="human_hazmat_teleport">
+	<sheet>human_hazmat</sheet>
+	<desc length="9" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+
+<anim name="human_hazmat_type_right">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>1</time>
+</anim>
+<anim name="human_hazmat_type_left">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>1</time>
+</anim>
+<anim name="human_hazmat_type_up">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>1</time>
+</anim>
+<anim name="human_hazmat_type_down">
+	<sheet>human_hazmat</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>1</time>
+</anim>
+
+<anim name="human_hazmat_portrait">
+	<sheet>human_hazmat</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 <!--///////////////RSA KIVIE GRUNT//////////////-->
 
 <animSheet name="kiviekith" w="315" h="455" fw="35" fh="35">people/kiviekith_base.png</animSheet>
