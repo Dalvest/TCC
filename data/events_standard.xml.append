@@ -24,46 +24,7 @@
 			</item_modify>
 			<choice hidden="true">
 				<text>Open the crate.</text>
-				<event>
-					<text>Unfortunately, it seems most of the missiles inside are unusable. You pick out the few working ones and head into the store.</text>
-					<item_modify>
-						<item type="missiles" min="2" max="3"/>
-					</item_modify>
-					<choice>
-						<text>Continue...</text>
-						<event load="STORE_LOAD_RSA"/>
-					</choice>
-				</event>
-				<event>
-					<text>Around half of the missiles are usable. You pick out the working ones and head into the store.</text>
-					<item_modify>
-						<item type="missiles" min="4" max="6"/>
-					</item_modify>
-					<choice>
-						<text>Continue...</text>
-						<event load="STORE_LOAD_RSA"/>
-					</choice>
-				</event>
-				<event>
-					<text>Almost all of the missiles are functional! You discard the broken ones and head into the store.</text>
-					<item_modify>
-						<item type="missiles" min="7" max="9"/>
-					</item_modify>
-					<choice>
-						<text>Continue...</text>
-						<event load="STORE_LOAD_RSA"/>
-					</choice>
-				</event>
-				<event>
-					<text>It seems it's your lucky day, as all of the missiles inside are functional! Satisfied, you head into the store.</text>
-					<item_modify>
-						<item type="missiles" min="10" max="10"/>
-					</item_modify>
-					<choice>
-						<text>Continue...</text>
-						<event load="STORE_LOAD_RSA"/>
-					</choice>
-				</event>
+				<event load="RSA_MISSILE_CRATE_OPEN"/>
 			</choice>
 		</event>
 	</choice>
@@ -76,46 +37,7 @@
 			</item_modify>
 			<choice hidden="true">
 				<text>Open the crate.</text>
-				<event>
-					<text>Unfortunately, it seems most of the droneparts inside are unusable. You pick out the few working ones and head into the store.</text>
-					<item_modify>
-						<item type="drones" min="2" max="3"/>
-					</item_modify>
-					<choice>
-						<text>Continue...</text>
-						<event load="STORE_LOAD_RSA"/>
-					</choice>
-				</event>
-				<event>
-					<text>Around half of the droneparts are usable. You pick out the working ones and head into the store.</text>
-					<item_modify>
-						<item type="drones" min="4" max="6"/>
-					</item_modify>
-					<choice>
-						<text>Continue...</text>
-						<event load="STORE_LOAD_RSA"/>
-					</choice>
-				</event>
-				<event>
-					<text>Almost all of the droneparts are functional! You discard the broken ones and head into the store.</text>
-					<item_modify>
-						<item type="drones" min="7" max="9"/>
-					</item_modify>
-					<choice>
-						<text>Continue...</text>
-						<event load="STORE_LOAD_RSA"/>
-					</choice>
-				</event>
-				<event>
-					<text>It seems it's your lucky day, as all of the droneparts inside are functional! Satisfied, you head into the store.</text>
-					<item_modify>
-						<item type="drones" min="10" max="10"/>
-					</item_modify>
-					<choice>
-						<text>Continue...</text>
-						<event load="STORE_LOAD_RSA"/>
-					</choice>
-				</event>
+				<event load="RSA_DRONE_CRATE_OPEN"/>
 			</choice>
 		</event>
 	</choice>
@@ -124,5 +46,91 @@
 		<event load="STORE_LOAD_RSA"/>
 	</choice>
 </event>
+
+<eventList name="RSA_MISSILE_CRATE_OPEN">
+	<event>
+		<text>Unfortunately, it seems most of the missiles inside are unusable. You pick out the few working ones and head into the store.</text>
+		<item_modify>
+			<item type="missiles" min="2" max="3"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+	</event>
+	<event>
+		<text>Around half of the missiles are usable. You pick out the working ones and head into the store.</text>
+		<item_modify>
+			<item type="missiles" min="4" max="6"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+	</event>
+	<event>
+		<text>Almost all of the missiles are functional! You discard the broken ones and head into the store.</text>
+		<item_modify>
+			<item type="missiles" min="7" max="9"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+	</event>
+	<event>
+		<text>It seems it's your lucky day, as all of the missiles inside are functional! Satisfied, you head into the store.</text>
+		<item_modify>
+			<item type="missiles" min="10" max="10"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+	</event>
+</eventList>
+
+<eventList name="RSA_DRONE_CRATE_OPEN">
+	<event>
+		<text>Unfortunately, it seems most of the droneparts inside are unusable. You pick out the few working ones and head into the store.</text>
+		<item_modify>
+			<item type="drones" min="2" max="3"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+	</event>
+	<event>
+		<text>Around half of the droneparts are usable. You pick out the working ones and head into the store.</text>
+		<item_modify>
+			<item type="drones" min="4" max="6"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+	</event>
+	<event>
+		<text>Almost all of the droneparts are functional! You discard the broken ones and head into the store.</text>
+		<item_modify>
+			<item type="drones" min="7" max="9"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+	</event>
+	<event>
+		<text>It seems it's your lucky day, as all of the droneparts inside are functional! Satisfied, you head into the store.</text>
+		<item_modify>
+			<item type="drones" min="10" max="10"/>
+		</item_modify>
+		<choice>
+			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+	</event>
+</eventList>
 
 </FIL>
