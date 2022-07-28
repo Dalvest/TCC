@@ -2,165 +2,17 @@
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-          BLUEPRINTS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          LISTS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-<!--
-<blueprintList name="LIST_NON_RARITY_0_THINGS"> (Just here for reference)
-	<name>TC_LIGHT_SHOW</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_TAGGER</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_RESOLVER</name>
-	<name>TC_SINEWAVE</name>
-	<name>RSA_BIOHAZARD</name>
-	<name>SINGULARITY_PROJECTOR_1</name>
-	<name>CATALYZER</name>
-	<name>NOODLE_RATIONS</name>
-	<name>scrapper</name>
-	<name>kiviekith</name>
-	<name>rsa_technician</name>
-	<name>robottos</name>
-	<name>mantis_rsa</name>
-	<name>protogen</name>
-	<name>protogen_space_scavenger</name>
-	<name>avali</name>
-</blueprintList>
--->
+	<!--///////////////////////////////
+////////////// CREW ZONE ///////////////
+////////////////////////////////-->
 
-<blueprintList name="LIST_CREW_SCRAPPER">
-	<name>scrapper</name>
-	<name>scrapper_soldier</name>
-	<name>scrapper_heavy</name>
-	<name>scrapper_engineer</name>
-	<name>scrapper_speed</name>
-	<name>scrapper_scavenger</name>
-	<name>scrapper_defender</name>
-</blueprintList>
-
-<blueprintList name="LIST_SCRAPPER_TIER_2">
-	<name>scrapper_soldier</name>
-	<name>scrapper_engineer</name>
-	<name>scrapper_speed</name>
-	<name>scrapper_defender</name>
-</blueprintList>
-
-<blueprintList name="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE">
-	<name>scrapper</name>
-	<name>scrapper_soldier</name>
-	<name>scrapper_engineer</name>
-	<name>scrapper_speed</name>
-</blueprintList>
-
-<blueprintList name="LIST_BOMB_SHOTGUNS">
-	<name>TC_BOMB_SHOTGUN_1</name>
-	<name>TC_BOMB_SHOTGUN_1_ENEMY</name>
-	<name>TC_BOMB_SHOTGUN_2</name>
-	<name>TC_BOMB_SHOTGUN_3</name>
-	<name>TC_BOMB_SHOTGUN_4</name>
-	<name>TC_BOMB_SHOTGUN_BREACH</name>
-	<name>TC_BOMB_SHOTGUN_CHAIN</name>
-	<name>TC_BOMB_SHOTGUN_CHARGE</name>
-	<name>TC_BOMB_SHOTGUN_FREE</name>
-	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
-	<name>TC_BOMB_SHOTGUN_INSTANT</name>
-	<name>TC_BOMB_SHOTGUN_FIRE</name>
-	<name>TC_BOMB_SHOTGUN_ION</name>
-	<name>TC_BOMB_SHOTGUN_BIO</name>
-	<name>TC_BOMB_SHOTGUN_LOCK</name>
-</blueprintList>
-
-<blueprintList name="LIST_CHECKCREW_AVALI">
-	<name>avali</name>
-</blueprintList>
-
-
-<blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH"> <!--just a list of the weapons ariadne can get you-->
-	<name>LIST_WEAPONS_LOSTSUN</name>
-</blueprintList>
-<blueprintList name="LIST_DRONES_MADOK">
-	<name>REPAIR</name>
-	<!--placeholders until loot versions added-->
-	<name>ION_1_AMP2</name>
-	<name>HELLRAISER_HULL</name>
-	<name>MANNING</name>
-	<name>BATTLETOG2_DEFEND</name>
-</blueprintList>
-
-<blueprintList name="SHIP_AVALI_FIGHT">
-	<name>AVALI_SKIRMISHER</name>
-</blueprintList>
-
-<blueprintList name="LIST_DRONES_AVALI">
-	<name>REPAIR</name>
-	<name>GUARDIAN_1_DRONE</name>
-	<name>GUARDIAN_1_MISSILE</name>
-	<name>DEFENSE_1_ENEMY</name>
-	<name>AMPHI_COMBAT</name>
-	<name>COMBAT_1_LASER</name>
-	<name>COMBAT_1_BEAM</name>
-	<name>COMBAT_2_LASER</name>
-	<name>COMBAT_2_BEAM</name>
-	<name>PEST_RAD_ENEMY</name>
-	<name>ION_1_AMP3_ENEMY</name>
-	<name>ION_1_AMP2_ENEMY</name>
-	<name>ENERGY_1_AMP2_ENEMY</name>
-	<name>BATTLETOG2_BOARDER</name>
-</blueprintList>
-
-<blueprintList name="LIST_WEAPONS_AVALI">
-	<name>LASER_BURST_1</name>
-	<name>LASER_BURST_2_ENEMY</name>
-	<name>LASER_HEAVY_CHAINGUN</name>
-	<name>LASER_CHAINGUN_ENEMY</name>
-	<name>LASER_CHAINGUN_2</name>
-	<name>ION_FIRE</name>
-	<name>ION_STUN</name>
-	<name>ION_CHAINGUN</name>
-	<name>MISSILES_2_ENEMY</name>
-	<name>MISSILES_1</name>
-	<name>TC_SINEWAVE</name>
-	<name>TC_ESKA</name>
-	<name>TC_OVERLORD</name>
-	<name>LASER_LIGHT</name>
-</blueprintList>
-
-<blueprintList name="LIST_WEAPONS_RSA">
-	<name>LASER_BURST_1</name>
-	<name>LASER_BURST_2_ENEMY</name>
-	<name>LASER_HEAVY_CHAINGUN</name>
-	<name>LASER_CHAINGUN_ENEMY</name>
-	<name>LASER_CHAINGUN_2</name>
-	<name>ION_FIRE</name>
-	<name>ION_STUN</name>
-	<name>ION_CHAINGUN</name>
-	<name>MISSILES_2_ENEMY</name>
-	<name>MISSILES_1</name>
-	<name>RSA_BIOHAZARD</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_TAGGER</name>
-	<name>TC_ESKA</name>
-	<name>TC_OVERLORD</name>
-	<name>TC_MINIGUN_MK1</name>
-	<name>TC_MINIGUN_MK2</name>
-	<name>TC_MINIGUN_MK3</name>
-	<name>TC_SCRAPFLAK</name>
-	<name>TC_RESCRAPFLAK</name>
-</blueprintList>
-
-<mod:findName type="blueprintList" name="LIST_CREW_MANTIS">
-	<mod-append:name>mantis_rsa</mod-append:name>
-	<mod-append:name>mantis_freebusiness</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_HIVE">
-	<mod-append:name>mantis_rsa</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_FREEMAN">
-	<mod-append:name>mantis_freebusiness</mod-append:name>
-</mod:findName>
+<!--/////// ALIENS LIST - HIGHLY IMPORTANT //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_ALIENS">
 	<mod-append:name>trash_eater</mod-append:name>
@@ -189,6 +41,59 @@
 	<mod-append:name>mantis_rsa</mod-append:name>
 	<mod-append:name>mantis_freebusiness</mod-append:name>
 </mod:findName>
+
+<!--/////// SCRAPPERS //////-->
+
+<blueprintList name="LIST_CREW_SCRAPPER">
+	<name>scrapper</name>
+	<name>scrapper_soldier</name>
+	<name>scrapper_heavy</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_speed</name>
+	<name>scrapper_scavenger</name>
+	<name>scrapper_defender</name>
+</blueprintList>
+
+<!--/////// SCRAPPERS T2 //////-->
+
+<blueprintList name="LIST_SCRAPPER_TIER_2">
+	<name>scrapper_soldier</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_speed</name>
+	<name>scrapper_defender</name>
+</blueprintList>
+
+<!--/////// SCRAPPER ELITE COMPAT //////-->
+
+<blueprintList name="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE">
+	<name>scrapper</name>
+	<name>scrapper_soldier</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_speed</name>
+</blueprintList>
+
+<!--/////// LITERALLY ALL OF THE BIRDS //////-->
+
+<blueprintList name="LIST_CHECKCREW_AVALI">
+	<name>avali</name>
+</blueprintList>
+
+<!--/////// MANTIS ZONE //////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_MANTIS">
+	<mod-append:name>mantis_rsa</mod-append:name>
+	<mod-append:name>mantis_freebusiness</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_HIVE">
+	<mod-append:name>mantis_rsa</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_FREEMAN">
+	<mod-append:name>mantis_freebusiness</mod-append:name>
+</mod:findName>
+
+<!--/////// LANIUS //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
 	<mod-append:name>trash_eater</mod-append:name>
@@ -303,60 +208,9 @@
 	<mod-append:name>kora</mod-append:name>
 </mod:findName>
 
-<!--/////// STORE LISTS //////-->
-
-<blueprintList name="SHOP_ITEM_WEAPONS_INSTANOODLE">
-	<name>ION_INSTANT</name>
-	<name>SHOTGUN_INSTANT</name>
-	<name>BEAM_FIRE_INSTANT</name>
-	<name>TC_BOMB_SHOTGUN_INSTANT</name>
-	<name>LOOT_MATH_5</name>
-	<name>BIG_ION</name>
-</blueprintList>
-
-<!-- Duplicates are for increasing the chance to appear -->
-
-<blueprintList name="SHOP_RSA_ITEM_CREW">
-	<name>mantis_rsa</name>
-	<name>mantis_rsa</name>
-	<name>kiviekith</name>
-	<name>kiviekith</name>
-	<name>rsa_technician</name>
-</blueprintList>
-
-<blueprintList name="SHOP_RSA_ITEM_WEAPONS">
-	<name>RSA_MINICANNON</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_TAGGER</name>
-	<name>RSA_TAGGER</name>
-	<name>RSA_TAGGER</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_RESOLVER</name>
-	<name>TC_RESOLVER</name>
-	<name>TC_RESOLVER</name>
-	<name>CATALYZER</name>
-	<name>CATALYZER</name>
-	<name>CATALYZER</name>
-	<name>TC_BOMB_SHOTGUN_1</name>
-	<name>TC_BOMB_SHOTGUN_2</name>
-	<name>TC_BOMB_SHOTGUN_3</name>
-	<name>TC_BOMB_SHOTGUN_4</name>
-	<name>TC_BOMB_SHOTGUN_BREACH</name>
-	<name>TC_BOMB_SHOTGUN_CHAIN</name>
-	<name>TC_BOMB_SHOTGUN_CHARGE</name>
-	<name>TC_BOMB_SHOTGUN_FREE</name>
-	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
-	<name>TC_BOMB_SHOTGUN_INSTANT</name>
-	<name>TC_BOMB_SHOTGUN_FIRE</name>
-	<name>TC_BOMB_SHOTGUN_ION</name>
-	<name>TC_BOMB_SHOTGUN_BIO</name>
-	<name>TC_BOMB_SHOTGUN_LOCK</name>
-</blueprintList>
-
-<!--/////// WEAPONS ALL //////-->
+	<!--///////////////////////////////
+////////////// WEAPON ZONE ///////////////
+////////////////////////////////-->
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
 	<mod-append:name>TC_SHOTGUN_BOMB</mod-append:name>
@@ -483,6 +337,194 @@
 	<mod-append:name>TC_TONFA</mod-append:name>
 </mod:findName>
 
+<!--
+<blueprintList name="LIST_NON_RARITY_0_THINGS"> (Just here for reference)
+	<name>TC_LIGHT_SHOW</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_TAGGER</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_RESOLVER</name>
+	<name>TC_SINEWAVE</name>
+	<name>RSA_BIOHAZARD</name>
+	<name>SINGULARITY_PROJECTOR_1</name>
+	<name>CATALYZER</name>
+	<name>NOODLE_RATIONS</name>
+	<name>scrapper</name>
+	<name>kiviekith</name>
+	<name>rsa_technician</name>
+	<name>robottos</name>
+	<name>mantis_rsa</name>
+	<name>protogen</name>
+	<name>protogen_space_scavenger</name>
+	<name>avali</name>
+</blueprintList>
+-->
+
+<!--/////// BOMB SHOTGUN ZONE //////-->
+
+<blueprintList name="LIST_BOMB_SHOTGUNS">
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_1_ENEMY</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_4</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_FREE</name>
+	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
+<!--/////// WHY DIDN"T YOU FUCKEN UHHHHHHHH //////-->
+
+<blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH"> <!--just a list of the weapons ariadne can get you-->
+	<name>LIST_WEAPONS_LOSTSUN</name>
+</blueprintList>
+
+<!--/////// MADOK LIST //////-->
+
+<blueprintList name="LIST_DRONES_MADOK">
+	<name>REPAIR</name>
+	<!--placeholders until loot versions added-->
+	<name>ION_1_AMP2</name>
+	<name>HELLRAISER_HULL</name>
+	<name>MANNING</name>
+	<name>BATTLETOG2_DEFEND</name>
+</blueprintList>
+
+<!--/////// THIS DOESNT FUCKEN WORK BY THE WAY. //////-->
+
+<blueprintList name="SHIP_AVALI_FIGHT">
+	<name>AVALI_SKIRMISHER</name>
+</blueprintList>
+
+<!--/////// DRONE LIST - AVALI //////-->
+
+<blueprintList name="LIST_DRONES_AVALI">
+	<name>REPAIR</name>
+	<name>GUARDIAN_1_DRONE</name>
+	<name>GUARDIAN_1_MISSILE</name>
+	<name>DEFENSE_1_ENEMY</name>
+	<name>AMPHI_COMBAT</name>
+	<name>COMBAT_1_LASER</name>
+	<name>COMBAT_1_BEAM</name>
+	<name>COMBAT_2_LASER</name>
+	<name>COMBAT_2_BEAM</name>
+	<name>PEST_RAD_ENEMY</name>
+	<name>ION_1_AMP3_ENEMY</name>
+	<name>ION_1_AMP2_ENEMY</name>
+	<name>ENERGY_1_AMP2_ENEMY</name>
+	<name>BATTLETOG2_BOARDER</name>
+</blueprintList>
+
+<!--/////// WEAPON LIST - AVALI //////-->
+
+<blueprintList name="LIST_WEAPONS_AVALI">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2_ENEMY</name>
+	<name>LASER_HEAVY_CHAINGUN</name>
+	<name>LASER_CHAINGUN_ENEMY</name>
+	<name>LASER_CHAINGUN_2</name>
+	<name>ION_FIRE</name>
+	<name>ION_STUN</name>
+	<name>ION_CHAINGUN</name>
+	<name>MISSILES_2_ENEMY</name>
+	<name>MISSILES_1</name>
+	<name>TC_SINEWAVE</name>
+	<name>TC_ESKA</name>
+	<name>TC_OVERLORD</name>
+	<name>LASER_LIGHT</name>
+</blueprintList>
+
+<!--/////// WEAPON LIST - RSA //////-->
+
+<blueprintList name="LIST_WEAPONS_RSA">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2_ENEMY</name>
+	<name>LASER_HEAVY_CHAINGUN</name>
+	<name>LASER_CHAINGUN_ENEMY</name>
+	<name>LASER_CHAINGUN_2</name>
+	<name>ION_FIRE</name>
+	<name>ION_STUN</name>
+	<name>ION_CHAINGUN</name>
+	<name>MISSILES_2_ENEMY</name>
+	<name>MISSILES_1</name>
+	<name>RSA_BIOHAZARD</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_TAGGER</name>
+	<name>TC_ESKA</name>
+	<name>TC_OVERLORD</name>
+	<name>TC_MINIGUN_MK1</name>
+	<name>TC_MINIGUN_MK2</name>
+	<name>TC_MINIGUN_MK3</name>
+	<name>TC_SCRAPFLAK</name>
+	<name>TC_RESCRAPFLAK</name>
+</blueprintList>
+
+<!-- Duplicates are for increasing the chance to appear -->
+
+<blueprintList name="SHOP_RSA_ITEM_CREW">
+	<name>mantis_rsa</name>
+	<name>mantis_rsa</name>
+	<name>kiviekith</name>
+	<name>kiviekith</name>
+	<name>rsa_technician</name>
+</blueprintList>
+
+<!--/////// STORE LISTS //////-->
+
+<blueprintList name="SHOP_ITEM_WEAPONS_INSTANOODLE"> <!--/// INSTANT_ISSUES ///-->
+	<name>ION_INSTANT</name>
+	<name>SHOTGUN_INSTANT</name>
+	<name>BEAM_FIRE_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>ION_INSTANT</name>
+	<name>SHOTGUN_INSTANT</name>
+	<name>BEAM_FIRE_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>LOOT_MATH_5</name>
+	<name>BIG_ION</name>
+</blueprintList>
+
+<blueprintList name="SHOP_RSA_ITEM_WEAPONS"> <!--/// RSA STORE ///-->
+	<name>RSA_MINICANNON</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_TAGGER</name>
+	<name>RSA_TAGGER</name>
+	<name>RSA_TAGGER</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_RESOLVER</name>
+	<name>TC_RESOLVER</name>
+	<name>TC_RESOLVER</name>
+	<name>CATALYZER</name>
+	<name>CATALYZER</name>
+	<name>CATALYZER</name>
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_4</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_FREE</name>
+	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
+<!--/////// FLAKS FOR BOSS FIGHTS //////-->
+
 <mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
 	<mod-append:name>TC_SHOTGUN_BOMB</mod-append:name>
 	<mod-append:name>TC_SHOTGUN_UNSTABLE</mod-append:name>
@@ -497,17 +539,33 @@
 	<mod-append:name>TC_MILITIA_2</mod-append:name>
 </mod:findName>
 
+	<!--///////////////////////////////
+////////////// DRONE ZONE ///////////////
+////////////////////////////////-->
+
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
 	<mod-append:name>TC_DRONE_GOLD_COMBAT</mod-append:name>
 	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
+	<mod-append:name>TC_COMBAT_HEAVY_COMBAT</mod-append:name>
+	<mod-append:name>ROBO_MANT_DEFEND</mod-append:name>
+	<mod-append:name>SILICA_BATTLE</mod-append:name>
+	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
+	<mod-append:name>SILICA_BOARDER</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
 	<mod-append:name>TC_DRONE_GOLD_COMBAT</mod-append:name>
 	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
+	<mod-append:name>TC_COMBAT_HEAVY_COMBAT</mod-append:name>
+	<mod-append:name>ROBO_MANT_DEFEND</mod-append:name>
+	<mod-append:name>SILICA_BATTLE</mod-append:name>
+	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
+	<mod-append:name>SILICA_BOARDER</mod-append:name>
 </mod:findName>
 
-<!--////////// GIFTLISTS ////////// -->
+	<!--///////////////////////////////
+////////////// GIFTLISTS ///////////////
+////////////////////////////////-->
 
 <!--<mod:findName type="blueprintList" name="GIFTLIST_CRYSTAL">
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
@@ -610,7 +668,9 @@
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           ENEMY SHIP BLUEPRINTS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
@@ -1236,8 +1296,6 @@
 	<boardingAI>sabotage</boardingAI>
 	<aug name="HEKTAR_GEL" />
 </shipBlueprint>
-
-<!--/////////////////////AVALI ENEMY SHIP BLUEPRINTS/////////////////-->
 
 <shipBlueprint name="AVALI_SKIRMISHER" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
 	<class>Avali Skirmisher</class>
