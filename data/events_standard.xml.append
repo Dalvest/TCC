@@ -14,7 +14,7 @@
 </event>
 
 <event name="STOREEVENT_RSA_RESOURCES">
-	<text>It seems this beacon has an RSA station selling refurbished equipment. Nearby the station is a very large, cobbled together drone. It sends you an automated message: "Missiles and droneparts available for 50% off standard price! Used, but still good as new! (Note, RSA cannot validate the effectiveness of any missiles or droneparts sold, and is not liable for any defective units.)</text>
+	<text>It seems this beacon has an RSA station selling refurbished equipment. Near the station is a very large, cobbled together drone. It sends you an automated message: "Missiles and droneparts available for 50% off standard price! Used, but still good as new! (Note: RSA cannot validate the effectiveness of any missiles or droneparts sold, and is not liable for any defective units.)</text>
 	<choice>
 		<text>Buy a crate of missiles.</text>
 		<event>
@@ -49,7 +49,7 @@
 
 <eventList name="RSA_MISSILE_CRATE_OPEN">
 	<event>
-		<text>Unfortunately, it seems most of the missiles inside are unusable. You pick out the few working ones and head into the store.</text>
+		<text>Unfortunately, it seems most of the missiles inside are unusable. You pick out the very few working ones and carefully dispose of the rest before heading into the store.</text>
 		<item_modify>
 			<item type="missiles" min="2" max="3"/>
 		</item_modify>
@@ -59,7 +59,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>Around half of the missiles are usable. You pick out the working ones and head into the store.</text>
+		<text>Around half of the missiles inside the box are usable. You grab them, dump the rest and head into the store.</text>
 		<item_modify>
 			<item type="missiles" min="4" max="6"/>
 		</item_modify>
@@ -69,7 +69,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>Almost all of the missiles are functional! You discard the broken ones and head into the store.</text>
+		<text>Almost all of the missiles are functional! You discard the very few broken ones and head into the store.</text>
 		<item_modify>
 			<item type="missiles" min="7" max="9"/>
 		</item_modify>
@@ -92,7 +92,7 @@
 
 <eventList name="RSA_DRONE_CRATE_OPEN">
 	<event>
-		<text>Unfortunately, it seems most of the droneparts inside are unusable. You pick out the few working ones and head into the store.</text>
+		<text>Unfortunately, it seems that most of the droneparts inside are completely burnt out. It would take too much time to try and fix them, so you pick out the few working ones and head into the store.</text>
 		<item_modify>
 			<item type="drones" min="2" max="3"/>
 		</item_modify>
@@ -102,7 +102,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>Around half of the droneparts are usable. You pick out the working ones and head into the store.</text>
+		<text>Around half of the droneparts are usable. This could've gone worse; you pick out the working ones and head into the store.</text>
 		<item_modify>
 			<item type="drones" min="4" max="6"/>
 		</item_modify>
@@ -112,7 +112,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>Almost all of the droneparts are functional! You discard the broken ones and head into the store.</text>
+		<text>Almost all of the droneparts are functional! You discard the very few broken ones and head into the store.</text>
 		<item_modify>
 			<item type="drones" min="7" max="9"/>
 		</item_modify>
@@ -134,7 +134,7 @@
 </eventList>
 
 <event name="STOREEVENT_RSA_RESTORE">
-	<text>As you enter the beacon, you notice an RSA marketplace nearby. Along with selling weapons and other equipment, you notice a vendor with nothing but some repair equipment. You inquire, and it seems they're willing to repair any broken weapon for 25% of its normal value.</text>
+	<text>As you finalize the beacon jump, you notice a RECLAIM and SALVAGE ASSOCIATION marketplace nearby. It seems to be crowded hub of activity with species of all kinds both selling and buying. You dock the station and look through the stalls. Along with selling weapons and other equipment, you notice a sleazy-looking technician offering to repair some of your equipment. You inquire, and it seems they're willing to repair any broken weapon for 25% of its normal value.</text>
 	<choice>
 		<text>We don't need any weapons repaired, just move on to the other vendors.</text>
 		<event load="STORE_LOAD_RSA"/>
@@ -146,7 +146,7 @@
 </event>
 
 <event name="RSA_WEAPON_RESTORE">
-	<text>You express interest in the offer, and the vendor gets their tools ready. Which weapon do you want to repair?</text>
+	<text>You express interest in the offer. The technician tosses aside the tank drone they were working on and prepares to look at your items. Which weapon do you want to repair?</text>
 	<choice req="RUSTY_LASER_BURST_2">
 		<text>Repair your Burst Laser Mark I.</text>
 		<event>
@@ -268,7 +268,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Change your mind and check out the other vendors.</text>
+		<text>Change your mind and check out the regular marketplace instead.</text>
 		<event load="STORE_LOAD_RSA"/>
 	</choice>
 </event>

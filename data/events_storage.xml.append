@@ -1,5 +1,8 @@
 <FTL>
-  <!-- AUGMENT USAGE MENU -->
+
+  <!--///////////////////////////////
+  ////////////// STORAGE CHECK OPTIONS ///////////////
+  ////////////////////////////////-->
 
   <mod:findName type="event" name="STORAGE_CHECK_AUG">
 
@@ -37,20 +40,12 @@
       <mod:selector>Nevermind, do something else.</mod:selector>
       <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
     </mod:findWithChildLike>
+
   </mod:findName>
 
-  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
-
-    <mod-append:choice req="trash_eater" blue="false" >
-      <text>Look for The Trash Eater.</text>
-      <event load="STORAGE_CHECK_CREW_TRASH"/>
-    </mod-append:choice>
-
-    <mod:findWithChildLike type="choice" child-type="text">
-      <mod:selector>Nevermind, do something else.</mod:selector>
-      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-    </mod:findWithChildLike>
-  </mod:findName>
+    <!--///////////////////////////////
+  ////////////// COMPACTOR OPTIONS ///////////////
+  ////////////////////////////////-->
 
   <event name="FLAK_FORGE">
     <text>You fire up the Compactor - it hums with power as you stare at the weapon select screen  it seems that you've got quite a few blueprints available. What would you like to create?</text>
@@ -72,7 +67,23 @@
     </choice>
   </event>
 
-  <!--//////TRASH EATER DIALOGUE////////-->
+    <!--///////////////////////////////
+  ////////////// TALK OPTIONS ///////////////
+  ////////////////////////////////-->
+
+  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
+
+    <mod-append:choice req="trash_eater" blue="false" >
+      <text>Look for The Trash Eater.</text>
+      <event load="STORAGE_CHECK_CREW_TRASH"/>
+    </mod-append:choice>
+
+    <mod:findWithChildLike type="choice" child-type="text">
+      <mod:selector>Nevermind, do something else.</mod:selector>
+      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+    </mod:findWithChildLike>
+  </mod:findName>
+
   <event name="STORAGE_CHECK_CREW_TRASH">
     <text>What do you want to do with The Trash Eater?</text>
     <choice>
@@ -121,9 +132,7 @@
     <text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
   </textList>
 
-
-  <!--/////////////////TRASH EATER STORAGE ABILITY THINGY//////////////////-->
-
+  <!--//////////////////////////////////// TRASH EATER STORAGE - ABILITY THINGY //////////////////////////////////////-->
 
   <mod:findName type="event" name="STORAGE_CHECK_JOB">
 
@@ -137,11 +146,6 @@
       <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
     </mod:findWithChildLike>
   </mod:findName>
-
-
-
-
-
 
   <eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
   	<event>
@@ -2085,5 +2089,137 @@
 <text>Leah has mixed feelings on the Flagship. On one hand, destroying it will save thousands, maybe even millions of lives, however on the other hand she's a massive fan of the ship's paint-job.</text>
 <text>You stumble into Leah's room to find her playing Squad Fort 2 on her personal terminal. Of course she's a fucking spy main what else would she play?</text>
 </textList>
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+	<!--
+	\\\\\\\\\\\\\\\\\\\\\\\\\
+	         TOGGLE
+	\\\\\\\\\\\\\\\\\\\\\\\\\
+	-->
+	<mod-append:choice req="ROBO_MANT_BOARDER" blue="false">
+		<text>(Boarding Drone) Set the state of the drone. [Current mode: Boarding]</text>
+		<event load="COMBAT_CHECK_ROBO_MANT_BOARDER"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="SILICA_BOARDER" blue="false">
+		<text>(Boarding Drone) Set the state of the drone. [Current mode: Boarding]</text>
+		<event load="COMBAT_CHECK_SILICA_BOARDER"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="ROBO_MANT_DEFEND" blue="false">
+		<text>(Boarding Drone) Set the state of the drone. [Current mode: Anti-Person]</text>
+		<event load="COMBAT_CHECK_ROBO_MANT_DEFEND"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="SILICA_BATTLE" blue="false">
+		<text>(Boarding Drone) Set the state of the drone. [Current mode: Anti-Person]</text>
+		<event load="COMBAT_CHECK_SILICA_BATTLE"/>
+	</mod-append:choice>
+
+</mod:findName>
+
+<event name="COMBAT_CHECK_ROBO_MANT_DEFEND">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Boarding Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="ROBO_MANT_DEFEND"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="ROBO_MANT_BOARDER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+
+<event name="COMBAT_CHECK_ROBO_MANT_BOARDER">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Defensive Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="ROBO_MANT_BOARDER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="ROBO_MANT_DEFEND"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+
+<event name="COMBAT_CHECK_SILICA_BATTLE">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Boarding Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="SILICA_BATTLE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="SILICA_BOARDER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+
+<event name="COMBAT_CHECK_SILICA_BOARDER">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Defensive Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="SILICA_BOARDER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="SILICA_BATTLE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
 
 </FTL>

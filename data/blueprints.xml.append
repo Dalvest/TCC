@@ -3782,6 +3782,11 @@
 	</powerList>
 </crewBlueprint>
 
+<blueprintList name="LIST_TOGGLE_SILICA">
+	<name>SILICA_BOARDER</name>
+	<name>SILICA_BATTLE</name>
+</blueprintList>
+
 <droneBlueprint name="SILICA_BATTLE">
     <type>BATTLE</type>
     <locked>1</locked>
@@ -7877,7 +7882,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <crewBlueprint name="human_hazmat">
     <desc>Elite Federation Crew. Scientists of the Federation, dedicated to furthering current research efforts. Usually deployed on field with other operatives to gather informations wherever applicable.</desc>
-    <cost>125</cost>
+    <cost>80</cost>
     <title>Federation Scientist</title>
     <short>Scientist</short>
     <rarity>0</rarity>
