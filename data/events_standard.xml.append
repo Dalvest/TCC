@@ -136,7 +136,7 @@
 <event name="STOREEVENT_RSA_RESTORE">
 	<text>As you enter the beacon, you notice an RSA marketplace nearby. Along with selling weapons and other equipment, you notice a vendor with nothing but some repair equipment. You inquire, and it seems they're willing to repair any broken weapon for 25% of its normal value.</text>
 	<choice>
-		<text>We don't need any weapons repaired, just move on to the other vendors</text>
+		<text>We don't need any weapons repaired, just move on to the other vendors.</text>
 		<event load="STORE_LOAD_RSA"/>
 	</choice>
 	<choice req="GIFTLIST_RUSTY" blue="false">
@@ -148,7 +148,7 @@
 <event name="RSA_WEAPON_RESTORE">
 	<text>You express interest in the offer, and the vendor gets their tools ready. Which weapon do you want to repair?</text>
 	<choice req="RUSTY_LASER_BURST_2">
-		<text>Repair your Burst Laser Mark I</text>
+		<text>Repair your Burst Laser Mark I.</text>
 		<event>
 			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
@@ -163,7 +163,7 @@
 		</event>
 	</choice>
 	<choice req="RUSTY_LASER_BURST_3">
-		<text>Repair your Burst Laser Mark II</text>
+		<text>Repair your Burst Laser Mark II.</text>
 		<event>
 			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
@@ -178,7 +178,7 @@
 		</event>
 	</choice>
 	<choice req="RUSTY_LASER_BURST_5">
-		<text>Repair your Burst Laser Mark III</text>
+		<text>Repair your Burst Laser Mark III.</text>
 		<event>
 			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
@@ -193,7 +193,7 @@
 		</event>
 	</choice>
 	<choice req="RUSTY_LASER_HEAVY_1">
-		<text>Repair your Heavy Laser Mark I</text>
+		<text>Repair your Heavy Laser Mark I.</text>
 		<event>
 			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
@@ -208,7 +208,7 @@
 		</event>
 	</choice>
 	<choice req="RUSTY_MISSILES_1">
-		<text>Repair your 'Leto' Missiles</text>
+		<text>Repair your 'Leto' Missiles.</text>
 		<event>
 			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
@@ -223,7 +223,7 @@
 		</event>
 	</choice>
 	<choice req="RUSTY_MISSILES_2">
-		<text>Repair your 'Artemis' Missiles</text>
+		<text>Repair your 'Artemis' Missiles.</text>
 		<event>
 			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
@@ -238,7 +238,7 @@
 		</event>
 	</choice>
 	<choice req="RUSTY_MISSILES_3">
-		<text>Repair your 'Hermes' Missiles</text>
+		<text>Repair your 'Hermes' Missiles.</text>
 		<event>
 			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
@@ -253,11 +253,11 @@
 		</event>
 	</choice>
 	<choice req="RUSTY_MISSILES_BURST">
-		<text>Repair your 'Pegasus' Burst Missiles</text>
+		<text>Repair your 'Pegasus' Burst Missiles.</text>
 		<event>
 			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
-				<item type="scrap" min="-15" max="-15"/>
+				<item type="scrap" min="-12" max="-13"/>
 			</item_modify>
 			<remove name="RUSTY_MISSILES_BURST"/>
 			<weapon name="MISSILES_BURST"/>
