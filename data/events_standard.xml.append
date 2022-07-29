@@ -13,7 +13,11 @@
 	</choice>
 </event>
 
-<event name="STOREEVENT_RSA_RESOURCES">
+<event name="STOREEVENT_RSA_RESOURCES" unique="true">
+	<preventQuest/>
+	<beaconType id="map_icon_store_rsa" global="false">
+		<color r="175" g="80" b="20" a="1.0"/>
+	</beaconType>
 	<text>It seems this beacon has an RSA station selling refurbished equipment. Nearby the station is a very large, cobbled together drone. It sends you an automated message: "Missiles and droneparts available for 50% off standard price! Used, but still good as new! (Note, RSA cannot validate the effectiveness of any missiles or droneparts sold, and is not liable for any defective units.)</text>
 	<choice>
 		<text>Buy a crate of missiles.</text>
@@ -133,7 +137,11 @@
 	</event>
 </eventList>
 
-<event name="STOREEVENT_RSA_RESTORE">
+<event name="STOREEVENT_RSA_RESTORE" unique="true">
+	<preventQuest/>
+	<beaconType id="map_icon_store_rsa" global="false">
+		<color r="175" g="80" b="20" a="1.0"/>
+	</beaconType>
 	<text>As you enter the beacon, you notice an RSA marketplace nearby. Along with selling weapons and other equipment, you notice a vendor with nothing but some repair equipment. You inquire, and it seems they're willing to repair any broken weapon for 25% of its normal value.</text>
 	<choice>
 		<text>We don't need any weapons repaired, just move on to the other vendors.</text>
@@ -150,7 +158,7 @@
 	<choice req="RUSTY_LASER_BURST_2">
 		<text>Repair your Burst Laser Mark I.</text>
 		<event>
-			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
+			<text>The vendor begins by disassembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reassembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
 				<item type="scrap" min="-15" max="-15"/>
 			</item_modify>
@@ -165,7 +173,7 @@
 	<choice req="RUSTY_LASER_BURST_3">
 		<text>Repair your Burst Laser Mark II.</text>
 		<event>
-			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
+			<text>The vendor begins by disassembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reassembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
 				<item type="scrap" min="-17" max="-18"/>
 			</item_modify>
@@ -180,7 +188,7 @@
 	<choice req="RUSTY_LASER_BURST_5">
 		<text>Repair your Burst Laser Mark III.</text>
 		<event>
-			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
+			<text>The vendor begins by disassembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reassembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
 				<item type="scrap" min="-26" max="-27"/>
 			</item_modify>
@@ -195,7 +203,7 @@
 	<choice req="RUSTY_LASER_HEAVY_1">
 		<text>Repair your Heavy Laser Mark I.</text>
 		<event>
-			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
+			<text>The vendor begins by disassembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reassembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
 				<item type="scrap" min="-12" max="-13"/>
 			</item_modify>
@@ -210,7 +218,7 @@
 	<choice req="RUSTY_MISSILES_1">
 		<text>Repair your 'Leto' Missiles.</text>
 		<event>
-			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
+			<text>The vendor begins by disassembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reassembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
 				<item type="scrap" min="-10" max="-10"/>
 			</item_modify>
@@ -225,7 +233,7 @@
 	<choice req="RUSTY_MISSILES_2">
 		<text>Repair your 'Artemis' Missiles.</text>
 		<event>
-			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
+			<text>The vendor begins by disassembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reassembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
 				<item type="scrap" min="-11" max="-12"/>
 			</item_modify>
@@ -240,7 +248,7 @@
 	<choice req="RUSTY_MISSILES_3">
 		<text>Repair your 'Hermes' Missiles.</text>
 		<event>
-			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
+			<text>The vendor begins by disassembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reassembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
 				<item type="scrap" min="-15" max="-15"/>
 			</item_modify>
@@ -255,7 +263,7 @@
 	<choice req="RUSTY_MISSILES_BURST">
 		<text>Repair your 'Pegasus' Burst Missiles.</text>
 		<event>
-			<text>The vendor begins by disasembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reasembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
+			<text>The vendor begins by disassembling the weapon, and cleaning the case. You watch as they then fix or replace all of the faulty components. It takes some time, but eventually, your weapon is reassembled, and looks good as new! You thank them, and move on to the rest of the marketplace.</text>
 			<item_modify>
 				<item type="scrap" min="-12" max="-13"/>
 			</item_modify>
@@ -272,5 +280,45 @@
 		<event load="STORE_LOAD_RSA"/>
 	</choice>
 </event>
+
+<mod:findName type="eventList" name="STORELIST_CIVILIAN">
+	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
+	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+</mod:findname>
+
+<mod:findName type="eventList" name="STORELIST_MILITIA">
+	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
+	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+</mod:findname>
+
+<mod:findName type="eventList" name="STORELIST_FED">
+	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
+	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+</mod:findname>
+
+<mod:findName type="eventList" name="STORELIST_PIRATE">
+	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
+	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+</mod:findname>
+
+<mod:findName type="eventList" name="STORELIST_MANTIS">
+	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
+	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+</mod:findname>
+
+<mod:findName type="eventList" name="STORELIST_ABANDONED">
+	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
+	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+</mod:findname>
+
+<mod:findName type="eventList" name="STORELIST_LANIUS">
+	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
+	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+</mod:findname>
+
+<mod:findName type="eventList" name="STORELIST_LEECH">
+	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
+	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+</mod:findname>
 
 </FIL>
