@@ -9,7 +9,7 @@ Lead Devs: Dalvest, Zuggo
 
 Coders: Choosechee, Kommandant_Julk, Typerim, Vertaalfout, Zandoware
 
-Artists: Ashley Hecker, Choosechee, ConMan, Cryntolov, Enchanter, Land Green, NitronEXE, Pedrosian96, Skye, Typerim, Wabbles
+Artists: Ashley Hecker, Choosechee, ConMan, Cryntolov, Enchanter, Land Green, NitronEXE, Pedrosian96, Skye, SillySillyMan, Typerim, Wabbles
 
 Playtesters: DemonFusionGamer, Lex, marcrusian, The Ghost Hugger
 
@@ -27,6 +27,8 @@ We also ported several ships to Hyperspace + MV, such as the Potential, Stalwart
 FTL: Multiverse (and by extension Hyperspace) is absolutely necessary for this mod to run! Load it as your first mod.
 
 We also RECOMMEND that you get Forgemaster, Inferno-Core and Go Ballistic and load them BEFORE the TCC. They are completely optional, though.
+
+Load other things such as Generated Gibs after the content packs, e.g. the mods mentioned earlier.
 
 # DESCRIPTION
 
@@ -98,6 +100,6 @@ Update 1.08
 - added playable Scrapper ship, "Fiare Vechi"
 - added gibs made with GenGibs
 
-# CONTACT
+# CONTACT/ISSUES
 
 Feel free to DM @Dalvest on the FTL: Multiverse discord with any issue you might have.
