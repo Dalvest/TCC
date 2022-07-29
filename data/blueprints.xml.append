@@ -3782,6 +3782,11 @@
 	</powerList>
 </crewBlueprint>
 
+<blueprintList name="LIST_TOGGLE_SILICA">
+	<name>SILICA_BOARDER</name>
+	<name>SILICA_BATTLE</name>
+</blueprintList>
+
 <droneBlueprint name="SILICA_BATTLE">
     <type>BATTLE</type>
     <locked>1</locked>
@@ -7112,7 +7117,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="robottos" />
 	<crewCount amount="1" class="protogen" />
 	<crewCount amount="1" class="human_soldier" />
-	<crewCount amount="1" class="human_engineer" />
+	<crewCount amount="1" class="human_hazmat" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_2" layout="federation_carrier_2" img="federation_carrier_2">
@@ -7861,26 +7866,26 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// SPECIAL FORCES //////-->
 
 <crewBlueprint name="human_phoenix">
-    <desc>Super Elite Federation Crew. This soldiers is one of the best of the best available in the Federation - trained to maximum combat capability and augmented with the finest augments provided by the RSA.</desc>
-    <cost>125</cost>
-    <title>'Phoenix' Squad Special Forces</title>
-    <short>Phoenix</short>
-    <rarity>0</rarity>
+    <desc>Super Elite Federation Crew. This soldier is one of the best of the best available in the Federation - trained to maximum combat capability and heavily armored.</desc>
+    <cost>130</cost>
+    <title>'Phoenix' Squad Operator</title>
+    <short>Operator</short>
+    <rarity>5</rarity>
     <powerList>
         <power>Inflicts 1.5x damage in combat</power>
 		<power>Repairs at 0.6x speed</power>
 		<power>2x ranged damage multiplier</power>
-        <power>Takes 0.8x damage from combat, half from hazards, is highly resistant to stuns</power>
+        <power>Takes 0.6x damage from combat, half from hazards, is highly resistant to stuns</power>
         <power>Trained in lvl2 skills</power>
     </powerList>
 </crewBlueprint>
 
 <crewBlueprint name="human_hazmat">
     <desc>Elite Federation Crew. Scientists of the Federation, dedicated to furthering current research efforts. Usually deployed on field with other operatives to gather informations wherever applicable.</desc>
-    <cost>125</cost>
+    <cost>80</cost>
     <title>Federation Scientist</title>
     <short>Scientist</short>
-    <rarity>0</rarity>
+    <rarity>5</rarity>
     <powerList>
         <power>Inflicts 0.8x damage in combat and moves at 0.8x speed</power>
 		<power>Repairs at 1.3x speed owing to technical knowledge</power>

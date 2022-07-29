@@ -1,5 +1,8 @@
 <FTL>
-  <!-- AUGMENT USAGE MENU -->
+
+  <!--///////////////////////////////
+  ////////////// STORAGE CHECK OPTIONS ///////////////
+  ////////////////////////////////-->
 
   <mod:findName type="event" name="STORAGE_CHECK_AUG">
 
@@ -37,234 +40,13 @@
       <mod:selector>Nevermind, do something else.</mod:selector>
       <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
     </mod:findWithChildLike>
+
   </mod:findName>
 
-  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
-
-    <mod-append:choice req="trash_eater" blue="false" >
-      <text>Look for The Trash Eater.</text>
-      <event load="STORAGE_CHECK_CREW_TRASH"/>
-    </mod-append:choice>
-
-    <mod:findWithChildLike type="choice" child-type="text">
-      <mod:selector>Nevermind, do something else.</mod:selector>
-      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-    </mod:findWithChildLike>
-  </mod:findName>
-
-  <event name="FLAK_FORGE">
-    <text>You fire up the Compactor - it hums with power as you stare at the weapon select screen  it seems that you've got quite a few blueprints available. What would you like to create?</text>
-    <choice>
-      <text>Generic Flak Blueprints</text>
-      <event load="FLAK_FORGE_VANILLA"/>
-    </choice>
-    <choice>
-      <text>Trash Eater's Blueprints</text>
-      <event load="FLAK_FORGE_CUSTOM"/>
-    </choice>
-    <choice>
-      <text>Bomb Flak Blueprints</text>
-      <event load="FLAK_FORGE_BOMB"/>
-    </choice>
-    <choice>
-      <text>Flak-Based Drones</text>
-      <event load="FLAK_FORGE_DRONE"/>
-    </choice>
-  </event>
-
-  <!--//////TRASH EATER DIALOGUE////////-->
-  <event name="STORAGE_CHECK_CREW_TRASH">
-    <text>What do you want to do with The Trash Eater?</text>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
-    <choice>
-      <text id="talk_to_crew"/>
-      <event load="STORAGE_CHECK_CREW_TRASH_TALK"/>
-    </choice>
-    <choice>
-      <text id="scan_crew"/>
-      <event load="STORAGE_CHECK_CREW_TRASH_SCAN"/>
-    </choice>
-  </event>
-  <event name="STORAGE_CHECK_CREW_TRASH_SCAN">
-    <text>TRASH EATER DETAILS
-      SPECIES? [Lanius] SUBTYPE? [Yes]
-      Subtype Details: Unique
-      Stats: 200 Health, x1.5 sabotage damage, instantly drains oxygen
-      Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-      Can consume beacons when there is an opportunity for it. This will usually provide a large amount of additional scrap and has a 10% chance of compacting a crew, weapon or done, but has a 10% chance of backfiring and leaving you stranded, boosting the fleet by a jump.
-      Ability (25s cooldown, 15s duration): Does 1 hull damage, and creates a breach in the current room (can damage player ship as well). Heals back to full health immediately. Gains 50 health temporarily.
-      Ability cooldown type: Refills on jump.
-      The Trash Eater is the prince of Lanius, not to be confused with his Beacon Eater brethren. His plan to take over the world consists in absorbing their entire universe and perhaps even the Multiverse itself, creating one gigantic symbiotic World Feeder.
-    </text>
-    <choice>
-      <text>Continue...</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
-  </event>
-  <event name="STORAGE_CHECK_CREW_TRASH_TALK">
-    <text load="TEXT_CREW_TALK_TRASH"/>
-    <choice>
-      <text>Continue...</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
-  </event>
-  <textList name="TEXT_CREW_TALK_TRASH">
-    <text>The Trash Eater is checking the ship for garbage to consume - trash to eat, if you will.</text>
-    <text>The Trash Eater is wondering how many tin cans one would need to create an entire ship from scratch - you fear the answer may be terrifying and decide not to push further.</text>
-    <text>The Trash Eater has finally said something in your language, but it sounds nonsensical - "Can I get it in beige?" What does that even mean?</text>
-    <text>You catch Trash Eater trying to eat flak. You fail at several attempts to stop them.</text>
-    <text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.</text>
-    <text>The Trash Eater insinuates that they would like to taste the piloting room of your ship - you convince him it has a really bad taste.</text>
-    <text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
-  </textList>
+   <!--/////////////////STORAGE CHECK NOODLES//////////////////-->
 
 
-  <!--/////////////////TRASH EATER STORAGE ABILITY THINGY//////////////////-->
-
-
-  <mod:findName type="event" name="STORAGE_CHECK_JOB">
-
-    <mod-append:choice req="trash_eater" blue="false" hidden="true">
-      <text>Send out the Trash Eater to compact some floating debris.</text>
-      <event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
-    </mod-append:choice>
-
-    <mod:findWithChildLike type="choice" child-type="text">
-      <mod:selector>Nevermind, do something else.</mod:selector>
-      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-    </mod:findWithChildLike>
-  </mod:findName>
-
-
-
-
-
-
-  <eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
-  	<event>
-  		<text>The Trash Eater returns carrying several piles of garbage. You're not sure what their origin is but you don't really care either.</text>
-  		<autoReward level="MED">scrap_only</autoReward>
-  	</event>
-  	<event>
-  		<text>It would seem a wrecked pirate ship was nearby, judging by the purple marks on most of the metal that's been brought back.</text>
-  		<autoReward level="MED">scrap_only</autoReward>
-  	</event>
-  	<event>
-  		<text>Getting more salvage doesn't hurt at all. It doesn't this time either. You do wonder why the Trash Eater has brought several protogen figurines back with them, though. Maybe they thought they were neat.</text>
-  		<autoReward level="MED">scrap_only</autoReward>
-  	</event>
-  	<event>
-  		<text>You're starting to wonder whether the Trash Eater will even return after setting them free, but it seems they're back. And they've brought scrap! What a sensible gift.</text>
-  		<autoReward level="MED">scrap_only</autoReward>
-  	</event>
-  	<event>
-  		<text>The Trash Eater seems to have found so much machinery that he'd be able to make something for you; what exactly do you want?</text>
-      <choice>
-        <text>Continue...</text>
-        <event load="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE"/>
-      </choice>
-  	</event>
-  	<event>
-  		<text>The Trash Eater returned extremely late and brought very little with them. Even worse, you're sure the Fleet is creeping closer by the second.</text>
-  		<modifyPursuit amount="1"/>
-  		<autoReward level="LOW">scrap_only</autoReward>
-  	</event>
-  	<event>
-  		<text>The Trash Eater returned extremely late and brought very little with them. Even worse, you're sure the Fleet is creeping closer by the second.</text>
-  		<modifyPursuit amount="1"/>
-  		<autoReward level="LOW">scrap_only</autoReward>
-  	</event>
-  </eventList>
-
-  <event name="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE">
-    <text>The Trash Eater returns victoriously - They've found some extra electronics and scrap around and asks you what you want it to make.</text>
-
-    <choice>
-      <text>Request that the Eater makes a weapon.</text>
-      <event>
-        <text>The Trash Eater nods and starts his work - and from the complex tango of rust and machinery, a veritable ballad of screws and bolts. You got an abomination of a weapon!</text>
-        <weapon name="TC_SCRAPFLAK"/>
-        <event/>
-      </event>
-    </choice>
-    <choice>
-      <text>Request that the Eater makes a drone.</text>
-      <event>
-        <text>The Trash Eater starts bashing together various pieces of scrounged up machinery and electronics, before presenting to you a fully functional combat drone!</text>
-        <drone name="TC_COMBAT_HEAVY"/>
-        <event/>
-      </event>
-    </choice>
-    <choice>
-      <text>Request that the Eater forges a Scrapper.</text>
-      <event>
-        <text>The Trash Eater nods and starts carving a Lanius-esque figure in metal. You try to explain to it that you don't need a decorative statue, only for it to suddenly spring to life!</text>
-        <crewMember amount="1" class="scrapper">Scrapface Statueman</crewMember>
-      </event>
-    </choice>
-    <choice>
-      <text>Disassemble it all into usable materials.</text>
-      <event>
-        <text>You tell them to not worry about it - there's no such as problem as too much scrap. The Trash Eater helps you get every single piece.</text>
-        <autoReward level="HIGH">stuff</autoReward>
-      </event>
-    </choice>
-  </event>
-
-  <mod:findName type = "event" name = "COMBAT_CHECK_REAL">
-
-  <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602"  blue="true">
-  	<text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it could cause some minor damage to the hull. [Costs: 10~]</text>
-        <event load="COMBAT_CHECK_RAMMING_SCRAP"/>
-      </mod-append:choice>
-
-    <!--<mod-append:choice req="FLAK_ARMOR" lvl="1" max_group="603"  blue="true">
-      <text>Mek armour</text>
-      <event>
-        <triggeredEvent event="FLAK_ARMOR_CREATE" seeded="false" loops="0" thisFight="true" time="0"/>
-      </event>
-    </mod-append:choice>-->
-
-    <!-- Move other menus example options to the bottom -->
-    <mod:findWithChildLike type="choice" child-type="text">
-      <mod:selector>Nevermind..</mod:selector>
-      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-    </mod:findWithChildLike>
-  </mod:findName>
-
-  <event name="COMBAT_CHECK_RAMMING_SCRAP">
-    <text>Are you sure?</text>
-    <choice>
-      <text>Yes.</text>
-      <event>
-        <text>You divert full power to your engines, ramming into the enemy vessel as hard as you can.</text>
-        <item_modify>
-          <item type="scrap" min="-10" max="-10"/>
-        </item_modify>
-        <enemyDamage amount="5" system="engines" effect="fire"/>
-        <choice>
-          <text>Continue the fight!</text>
-          <event/>
-        </choice>
-      </event>
-    </choice>
-    <choice>
-      <text>Nevermind.</text>
-      <event>
-        <loadEvent>COMBAT_CHECK_REAL</loadEvent>
-      </event>
-    </choice>
-  </event>
-
-
-
-
-
-  <!--/////////////////STORAGE CHECK AUGMENTS AND NOODLES//////////////////-->
-  <mod:findName type = "event" name = "STORAGE_CHECK_AUG">
+   <mod:findName type = "event" name = "STORAGE_CHECK_AUG">
     <mod-append:choice req="NOODLE_RATIONS" blue="false" hidden="true">
       <text>Make some instant noodles.</text>
       <event load="STORAGE_CHECK_NOODLES"/>
@@ -365,9 +147,9 @@
 		</choice>
 
     <choice req="NOODLE_RATIONS_UPGRADE" lvl="0" max_lvl="19" blue="false">
-      <text>Upgrade your Noodle Rations to give an additional 1.03x multiplier to movement speed, combat damage, and max health</text>
+      <text>Upgrade your Noodle Rations using fuel to give an additional 1.03x multiplier to movement speed, combat damage, and max health. Don't ask how fuel works to upgrade rations - that's classified.</text>
       <event>
-        <text>You upgrade your Noodle Rations</text>
+        <text>The noodles undergo the process. You are unsure how.</text>
         <hiddenAug>NOODLE_RATIONS_UPGRADE</hiddenAug>
         <item_modify>
 				  <item type="fuel" min="-3" max="-3"/>
@@ -386,6 +168,80 @@
 
   </event>
 
+    <!--///////////////////////////////
+  ////////////// COMBAT CHECK OPTIONS ///////////////
+  ////////////////////////////////-->
+
+  <mod:findName type="event" name="COMBAT_CHECK_REAL">
+
+    <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602"  blue="true">
+      <text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it could cause some minor damage to the hull. [Costs: 10~]</text>
+          <event load="COMBAT_CHECK_RAMMING_SCRAP"/>
+    </mod-append:choice>
+  
+      <!--<mod-append:choice req="FLAK_ARMOR" lvl="1" max_group="603"  blue="true">
+        <text>Mek armour</text>
+        <event>
+          <triggeredEvent event="FLAK_ARMOR_CREATE" seeded="false" loops="0" thisFight="true" time="0"/>
+        </event>
+      </mod-append:choice>-->
+  
+      <!-- Move other menus example options to the bottom -->
+      <mod:findWithChildLike type="choice" child-type="text">
+        <mod:selector>Nevermind..</mod:selector>
+        <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+      </mod:findWithChildLike>
+
+  </mod:findName>
+
+  <event name="COMBAT_CHECK_RAMMING_SCRAP">
+    <text>Are you sure?</text>
+    <choice>
+      <text>Yes.</text>
+      <event>
+        <text>You divert full power to your engines, ramming into the enemy vessel as hard as you can.</text>
+        <item_modify>
+          <item type="scrap" min="-10" max="-10"/>
+        </item_modify>
+        <enemyDamage amount="5" system="engines" effect="fire"/>
+        <choice>
+          <text>Continue the fight!</text>
+          <event/>
+        </choice>
+      </event>
+    </choice>
+    <choice>
+      <text>Nevermind.</text>
+      <event>
+        <loadEvent>COMBAT_CHECK_REAL</loadEvent>
+      </event>
+    </choice>
+  </event>
+
+    <!--///////////////////////////////
+  ////////////// COMPACTOR OPTIONS ///////////////
+  ////////////////////////////////-->
+
+  <event name="FLAK_FORGE">
+    <text>You fire up the Compactor - it hums with power as you stare at the weapon select screen  it seems that you've got quite a few blueprints available. What would you like to create?</text>
+    <choice>
+      <text>Generic Flak Blueprints</text>
+      <event load="FLAK_FORGE_VANILLA"/>
+    </choice>
+    <choice>
+      <text>Trash Eater's Blueprints</text>
+      <event load="FLAK_FORGE_CUSTOM"/>
+    </choice>
+    <choice>
+      <text>Bomb Flak Blueprints</text>
+      <event load="FLAK_FORGE_BOMB"/>
+    </choice>
+    <choice>
+      <text>Flak-Based Drones</text>
+      <event load="FLAK_FORGE_DRONE"/>
+    </choice>
+  </event>
+
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
               CREW TALK AND SCAN OPTIONS
@@ -393,55 +249,217 @@
 -->
 
 
+<mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
 
-  <mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
-      <!--//////////////////PROTOGEN//////////////////-->
-    <mod-append:choice req="LIST_CREW_PROTOGEN" lvl="1" blue="false" hidden="true">
-      <text>Look for Protogen crew.</text>
-      <event load="STORAGE_CHECK_CREW_LIST_PROTOGEN"/>
-    </mod-append:choice>
-     <!--//////////////////SERGAL//////////////////-->
-    <mod-append:choice req="LIST_CREW_SERGAL" lvl="1" blue="false" hidden="true">
-      <text>Look for Sergal crew.</text>
-      <event load="STORAGE_CHECK_CREW_LIST_SERGAL"/>
-    </mod-append:choice>
-    <!--//////////////////KIVIE//////////////////-->
-    <mod-append:choice req="LIST_CREW_KIVIE" lvl="1" blue="false" hidden="true">
-      <text>Look for Kivie crew.</text>
-      <event load="STORAGE_CHECK_CREW_LIST_KIVIE"/>
-    </mod-append:choice>
-    <!--//////////////////ROBOTTOS//////////////////-->
-    <mod-append:choice req="LIST_CREW_ROBOTTOS" lvl="1" blue="false" hidden="true">
-      <text>Look for Sentient crew.</text>
-      <event load="STORAGE_CHECK_CREW_LIST_ROBOTTOS"/>
-    </mod-append:choice>
-      <!--//////////////////AVALI//////////////////-->
-    <mod-append:choice req="LIST_CHECKCREW_AVALI" blue="false" hidden="true">
-      <text>Look for Avali crew.</text>
-      <event load="STORAGE_CHECK_CREW_LIST_AVALI" />
-	  </mod-append:choice>
+  <mod-append:choice req="trash_eater" blue="false" >
+    <text>Look for The Trash Eater.</text>
+    <event load="STORAGE_CHECK_CREW_TRASH"/>
+  </mod-append:choice>
 
-    <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
-      <mod:selector>Nevermind, do something else.</mod:selector>
-      <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
-    </mod:findWithChildLike>
-  </mod:findName>
+  <mod:findWithChildLike type="choice" child-type="text">
+    <mod:selector>Nevermind, do something else.</mod:selector>
+    <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+  </mod:findWithChildLike>
+</mod:findName>
+
+<event name="STORAGE_CHECK_CREW_TRASH">
+  <text>What do you want to do with The Trash Eater?</text>
+  <choice>
+    <text>Nevermind, do something else.</text>
+    <event load="STORAGE_CHECK"/>
+  </choice>
+  <choice>
+    <text id="talk_to_crew"/>
+    <event load="STORAGE_CHECK_CREW_TRASH_TALK"/>
+  </choice>
+  <choice>
+    <text id="scan_crew"/>
+    <event load="STORAGE_CHECK_CREW_TRASH_SCAN"/>
+  </choice>
+</event>
+<event name="STORAGE_CHECK_CREW_TRASH_SCAN">
+  <text>TRASH EATER DETAILS
+    SPECIES? [Lanius] SUBTYPE? [Yes]
+    Subtype Details: Unique
+    Stats: 200 Health, x1.5 sabotage damage, instantly drains oxygen
+    Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
+    Can consume beacons when there is an opportunity for it. This will usually provide a large amount of additional scrap and has a 10% chance of compacting a crew, weapon or done, but has a 10% chance of backfiring and leaving you stranded, boosting the fleet by a jump.
+    Ability (25s cooldown, 15s duration): Does 1 hull damage, and creates a breach in the current room (can damage player ship as well). Heals back to full health immediately. Gains 50 health temporarily.
+    Ability cooldown type: Refills on jump.
+    The Trash Eater is the prince of Lanius, not to be confused with his Beacon Eater brethren. His plan to take over the world consists in absorbing their entire universe and perhaps even the Multiverse itself, creating one gigantic symbiotic World Feeder.
+  </text>
+  <choice>
+    <text>Continue...</text>
+    <event load="STORAGE_CHECK"/>
+  </choice>
+</event>
+<event name="STORAGE_CHECK_CREW_TRASH_TALK">
+  <text load="TEXT_CREW_TALK_TRASH"/>
+  <choice>
+    <text>Continue...</text>
+    <event load="STORAGE_CHECK"/>
+  </choice>
+</event>
+<textList name="TEXT_CREW_TALK_TRASH">
+  <text>The Trash Eater is checking the ship for garbage to consume - trash to eat, if you will.</text>
+  <text>The Trash Eater is wondering how many tin cans one would need to create an entire ship from scratch - you fear the answer may be terrifying and decide not to push further.</text>
+  <text>The Trash Eater has finally said something in your language, but it sounds nonsensical - "Can I get it in beige?" What does that even mean?</text>
+  <text>You catch Trash Eater trying to eat flak. You fail at several attempts to stop them.</text>
+  <text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.</text>
+  <text>The Trash Eater insinuates that they would like to taste the piloting room of your ship - you convince him it has a really bad taste.</text>
+  <text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
+</textList>
+
+<!--//////////////////////////////////// TRASH EATER STORAGE - ABILITY THINGY //////////////////////////////////////-->
+
+<mod:findName type="event" name="STORAGE_CHECK_JOB">
+
+  <mod-append:choice req="trash_eater" blue="false" hidden="true">
+    <text>Send out the Trash Eater to compact some floating debris.</text>
+    <event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
+  </mod-append:choice>
+
+  <mod:findWithChildLike type="choice" child-type="text">
+    <mod:selector>Nevermind, do something else.</mod:selector>
+    <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+  </mod:findWithChildLike>
+</mod:findName>
+
+<eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
+  <event>
+    <text>The Trash Eater returns carrying several piles of garbage. You're not sure what their origin is but you don't really care either.</text>
+    <autoReward level="MED">scrap_only</autoReward>
+  </event>
+  <event>
+    <text>It would seem a wrecked pirate ship was nearby, judging by the purple marks on most of the metal that's been brought back.</text>
+    <autoReward level="MED">scrap_only</autoReward>
+  </event>
+  <event>
+    <text>Getting more salvage doesn't hurt at all. It doesn't this time either. You do wonder why the Trash Eater has brought several protogen figurines back with them, though. Maybe they thought they were neat.</text>
+    <autoReward level="MED">scrap_only</autoReward>
+  </event>
+  <event>
+    <text>You're starting to wonder whether the Trash Eater will even return after setting them free, but it seems they're back. And they've brought scrap! What a sensible gift.</text>
+    <autoReward level="MED">scrap_only</autoReward>
+  </event>
+  <event>
+    <text>The Trash Eater seems to have found so much machinery that he'd be able to make something for you; what exactly do you want?</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE"/>
+    </choice>
+  </event>
+  <event>
+    <text>The Trash Eater returned extremely late and brought very little with them. Even worse, you're sure the Fleet is creeping closer by the second.</text>
+    <modifyPursuit amount="1"/>
+    <autoReward level="LOW">scrap_only</autoReward>
+  </event>
+  <event>
+    <text>The Trash Eater returned extremely late and brought very little with them. Even worse, you're sure the Fleet is creeping closer by the second.</text>
+    <modifyPursuit amount="1"/>
+    <autoReward level="LOW">scrap_only</autoReward>
+  </event>
+</eventList>
+
+<event name="STORAGE_CHECK_JOB_TRASH_COMPACT_CHOICE">
+  <text>The Trash Eater returns victoriously - They've found some extra electronics and scrap around and asks you what you want it to make.</text>
+
+  <choice>
+    <text>Request that the Eater makes a weapon.</text>
+    <event>
+      <text>The Trash Eater nods and starts his work - and from the complex tango of rust and machinery, a veritable ballad of screws and bolts. You got an abomination of a weapon!</text>
+      <weapon name="TC_SCRAPFLAK"/>
+      <event/>
+    </event>
+  </choice>
+  <choice>
+    <text>Request that the Eater makes a drone.</text>
+    <event>
+      <text>The Trash Eater starts bashing together various pieces of scrounged up machinery and electronics, before presenting to you a fully functional combat drone!</text>
+      <drone name="TC_COMBAT_HEAVY"/>
+      <event/>
+    </event>
+  </choice>
+  <choice>
+    <text>Request that the Eater forges a Scrapper.</text>
+    <event>
+      <text>The Trash Eater nods and starts carving a Lanius-esque figure in metal. You try to explain to it that you don't need a decorative statue, only for it to suddenly spring to life!</text>
+      <crewMember amount="1" class="scrapper">Scrapface Statueman</crewMember>
+    </event>
+  </choice>
+  <choice>
+    <text>Disassemble it all into usable materials.</text>
+    <event>
+      <text>You tell them to not worry about it - there's no such as problem as too much scrap. The Trash Eater helps you get every single piece.</text>
+      <autoReward level="HIGH">stuff</autoReward>
+    </event>
+  </choice>
+</event>
+
+    <!--///////////////////////////////
+////////////// STORAGE CHECK APPENDING ///////////////
+////////////////////////////////-->
+
+<mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
+    <!--//////////////////PROTOGEN//////////////////-->
+  <mod-append:choice req="LIST_CREW_PROTOGEN" lvl="1" blue="false" hidden="true">
+    <text>Look for Protogen crew.</text>
+    <event load="STORAGE_CHECK_CREW_LIST_PROTOGEN"/>
+  </mod-append:choice>
+    <!--//////////////////SERGAL//////////////////-->
+  <mod-append:choice req="LIST_CREW_SERGAL" lvl="1" blue="false" hidden="true">
+    <text>Look for Sergal crew.</text>
+    <event load="STORAGE_CHECK_CREW_LIST_SERGAL"/>
+  </mod-append:choice>
+  <!--//////////////////KIVIE//////////////////-->
+  <mod-append:choice req="LIST_CREW_KIVIE" lvl="1" blue="false" hidden="true">
+    <text>Look for Kivie crew.</text>
+    <event load="STORAGE_CHECK_CREW_LIST_KIVIE"/>
+  </mod-append:choice>
+  <!--//////////////////ROBOTTOS//////////////////-->
+  <mod-append:choice req="LIST_CREW_ROBOTTOS" lvl="1" blue="false" hidden="true">
+    <text>Look for Sentient crew.</text>
+    <event load="STORAGE_CHECK_CREW_LIST_ROBOTTOS"/>
+  </mod-append:choice>
+    <!--//////////////////AVALI//////////////////-->
+  <mod-append:choice req="LIST_CHECKCREW_AVALI" blue="false" hidden="true">
+    <text>Look for Avali crew.</text>
+    <event load="STORAGE_CHECK_CREW_LIST_AVALI" />
+  </mod-append:choice>
+
+  <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
+    <mod:selector>Nevermind, do something else.</mod:selector>
+    <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
+  </mod:findWithChildLike>
+
+</mod:findName>
+
+<!--/////////////// HUMAN LIST APPEND //////////////-->
+
+<mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_HUMAN">
+
+  <mod-append:choice req="kora" lvl="1" blue="false" hidden="true">
+    <text>Look for Kora.</text>
+    <event load="STORAGE_CHECK_CREW_KORA"/>
+  </mod-append:choice>
+
+  <mod-append:choice req="human_phoenix" lvl="1" blue="false" hidden="true">
+    <text>Look for your Phoenix Squad Operator.</text>
+    <event load="STORAGE_CHECK_CREW_HUMAN"/>
+  </mod-append:choice>
+
+  <mod-append:choice req="human_hazmat" lvl="1" blue="false" hidden="true">
+    <text>Look for your Scientist.</text>
+    <event load="STORAGE_CHECK_CREW_HUMAN"/>
+  </mod-append:choice>
+
+  <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
+    <mod:selector>Nevermind, do something else.</mod:selector>
+    <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
+  </mod:findWithChildLike>
 
 
-
-  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_HUMAN">
-    <mod-append:choice req="kora" lvl="1" blue="false" hidden="true">
-      <text>Look for Kora.</text>
-      <event load="STORAGE_CHECK_CREW_KORA"/>
-    </mod-append:choice>
-
-    <mod:findWithChildLike type="choice" child-type="text"><!--To make sure that the nevermind choice remains at the bottom-->
-      <mod:selector>Nevermind, do something else.</mod:selector>
-      <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
-    </mod:findWithChildLike>
-
-
-  </mod:findName>
+</mod:findName>
 
 <!--///////////////PROTOGEN TALK TO CREW//////////////-->
 
@@ -479,8 +497,6 @@
   </choice>
 
   </event>
-
-    <!--//////////////////STOARGE CHECK STUFF//////////////////-->
 
   <event name="STORAGE_CHECK_CREW_PROTOGEN">
     <text>What do you want to do with your Protogen?</text>   <!--I'll tell you when you're older...-->
@@ -561,7 +577,6 @@
       <event load="STORAGE_CHECK"/>
     </choice>
   </event>
-
 
   <!--//////PROTOGEN DIALOGUE////////-->
 
@@ -748,7 +763,7 @@
     <text>Your Kivie asks if you can get them a coffee - you ask how they will drink it, and get a nod as an answer.</text>
   </textList>
 
-  <!--///////////////ROBOTTO TALK TO CREW//////////////-->
+  <!--/////////////// ROBOTTO TALK TO CREW //////////////-->
 
   <event name="STORAGE_CHECK_CREW_LIST_ROBOTTOS">
     <text>You look around for some crew to talk to.</text>
@@ -953,8 +968,6 @@
       <text>Your Gunner is whistling some digitized tune as it assembles and disassembles it's custom gun along with all of its accessories.</text>
     </textList>
 
-
-  
     <event name="STORAGE_CHECK_CREW_ROBOTTOS_RESEARCHER">
       <text>What do you want to do with your Researcher?</text>
       <choice>
@@ -997,7 +1010,75 @@
       <text>Your Researcher asks if you've got a cold. It would like to look into any samples of your tissue on a microscope. You politely decline, stating your tissue is better when attached to your body. The Researcher attempts to use the microscope directly on you instead.</text>
     </textList>
 
-  <!--///////////////SERGAL TALK TO CREW//////////////-->
+    <!--/////////////// LEAH TALK TO CREW //////////////-->
+
+    <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_HUMAN">
+      <mod-append:choice req="unique_leah_mfk" blue="false">
+           <text>Look for Leah.</text> 
+           <event load="STORAGE_CHECK_CREW_LEAH"/>
+      </mod-append:choice>
+      </mod:findName> 
+      
+      <event name="STORAGE_CHECK_CREW_LEAH">
+          <text>What do you want to do with Leah?</text>
+          <choice>
+              <text>Nevermind, do something else.</text>
+              <event load="STORAGE_CHECK"/>
+          </choice>
+          <choice hidden="true">
+              <text id="talk_to_crew"/>
+              <event load="STORAGE_CHECK_CREW_LEAH_TALK"/>
+          </choice>
+          <choice hidden="true">
+              <text id="scan_crew"/>
+              <event load="STORAGE_CHECK_CREW_LEAH_SCAN"/>
+          </choice>
+      </event>
+      <event name="STORAGE_CHECK_CREW_LEAH_SCAN">
+          <text>LEAH DETAILS
+          SPECIES? [Human] SUBTYPE? [Yes]
+          Subtype Details: Unique
+          Stats: 100 Health, 1.5x sabotage speed, 0.7x combat damage taken, 2x combat damage, 50% fire and suffocation damage. 
+          Has maximum skill level. Does not lose skills when cloned. Obviously, losing skill would be some kind of... issue.
+          </text>
+          <choice>
+              <text>Continue...</text>
+              <event load="STORAGE_CHECK"/>
+          </choice>
+      </event>
+      
+      <event name="STORAGE_CHECK_CREW_LEAH_TALK">
+          <text load="TEXT_CREW_TALK_LEAH"/>
+          <choice>
+              <text>Continue...</text>
+              <event load="STORAGE_CHECK"/>
+          </choice>
+      </event>
+      
+      <textList name="TEXT_CREW_TALK_LEAH">
+      <text>You enter Leah's quarters, but see no sign of her. An open Hektar magazine is open on her bed advertising various new beam technology.</text>
+      <text>You hear Leah reciting various villain monologues through her door. You decide not to disturb her lest she make you review and critique all of them.</text>
+      <text>You ask Leah why she decided to join the rebellion. She tells you she originally wanted to have an Orchid ship but the sector was too peaceful to find a good nemesis.</text>
+      <text>Leah claims she had no idea that the Rebellion hated aliens so much, as she apparently had been banned from all Rebellion meetings and discussions due to "excessive shouting"</text>
+      <text>Leah complains about how the Rebels are the bad guys because she doesn't get to live out her movie fantasy of being an action hero and blowing an empire up dramatically</text>
+      <text>Leah asks for feedback on her list of potential new nemesis', which includes Sylvan. You gently tell her she should probably just stick to fighting you.</text>
+      <text>Leah whines about how you can't fight when you're working together on the same ship. You tell her that once the flagship is defeated, you'll fight her in a one on one duel.</text>
+      <text>You find Leah breeding tiny terrestrial spiders in her room. She swears that they’ll eventually be combat ready if she trains them well enough.</text>
+      <text>You question Leah on why she likes beams so much. Apparently she once saw a flagship get destroyed with two glaives in one shot and has been fascinated ever since.</text>
+      <text>You ask Leah if she could try getting more personal warp-buttons for each of your crew members. She refuses saying that knowing you won't die removes all tension and makes you a 'certified beyatch'.</text>
+      <text>Leah is busy experimenting with a laser pointer which she swears is the future of space-age combat.</text>
+      <text>Leah is looking out of a ship window wistfully. You ask her what's wrong and she says she’s just practicing poses for if she ever needs to give a dramatic speech during your journey.</text>
+      <text>Leah thinks you should invest more into beam technology. Obviously.</text>
+      <text>Leah hands you a handwritten letter thanking you for being such a great nemesis. It's a sweet gesture but the tilde after your name concerns you a bit.</text>
+      <text>Leah swears she'd sacrifice her life for the sake of the mission. You ask if she really means it and she says she’s not sure but she’s always wanted to say that.</text>
+      <text>You ask Leah what it was like to defect to the Federation. She says one of her warps accidentally teleported her into a Federation barracks and she thought that was a good a time as any to swap sides.</text>
+      <text>Leah blocks your path and says "We meet again Captain, for the last time!" before stuttering and admitting she hasn't written the rest of that speech.</text>
+      <text>Leah politely asks that you don't use shields next time you fight her.</text>
+      <text>Leah has mixed feelings on the Flagship. On one hand, destroying it will save thousands, maybe even millions of lives, however on the other hand she's a massive fan of the ship's paint-job.</text>
+      <text>You stumble into Leah's room to find her playing Squad Fort 2 on her personal terminal. Of course she's a fucking spy main what else would she play?</text>
+      </textList>
+
+  <!--/////////////// SERGAL TALK TO CREW //////////////-->
 
     <event name="STORAGE_CHECK_CREW_LIST_SERGAL">
       <text>You look around for some crew to talk to.</text>
@@ -1152,7 +1233,8 @@
     <text>Kora is crying in a corner. You give him a hug and tell him everything will be fine.</text>
   </textList>
 
-  <!--//////////////AVALI TALK OPTIONS AND LABS AND STUFF///////////////////-->
+  <!--////////////// AVALI TALK OPTIONS + LABS ///////////////////-->
+
   <event name="STORAGE_CHECK_CREW_LIST_AVALI">
   	<text>You look around for some crew to talk to.</text>
   	<choice req="avali" blue="false" hidden="true">
@@ -1179,7 +1261,9 @@
   		<event load="STORAGE_CHECK_CREW_AVALI_SCAN" />
   	</choice>
   </event>
+
   <!--gah, so outdated-->
+
   <event name="STORAGE_CHECK_CREW_AVALI_SCAN">
   	<text>AVALI DETAILS
   	SPECIES? [Avali] SUBTYPE? [None]
@@ -1198,7 +1282,7 @@
   		<event load="STORAGE_CHECK" />
   	</choice>
   </event>
-  <!--need to rewrite and add more-->
+  <!--need to rewrite and add more-->   <!--I actually added more, you're welcome Robin. -TRACKER-->
   <textList name="TEXT_CREW_TALK_AVALI">
   	<text>Your Avali complains that the ship is much too hot. You pretend to lower the temperature - this apparently fixes the problem.</text>
     <text>Your Avali desires to host a convention and invite protogens - you tell them that's a wonderful idea.</text>
@@ -1223,6 +1307,8 @@
   		<mod:setAttributes max_group="582" req="pilot" lvl="1" blue="false"/>
   	</mod:findWithChildLike>
   </mod:findName>
+
+
   <event name="STORAGE_CHECK_LAB_AVALI">
   	<text>You are viewing the lab menu for: [AVALI]</text>
   	<choice req="LAB_AVALI_NOCLONEXP" lvl="1" max_group="0" blue="false" hidden="true">
@@ -1273,6 +1359,7 @@
   		<event load="STORAGE_CHECK_LAB_LOAD" />
   	</choice>
   </event>
+
   <event name="STORAGE_CHECK_LAB_AVALI_CYBERNETIC">
   	<text>You are about to install the Avian Interdependancy modification.
   	[Effects: Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]
@@ -1298,9 +1385,11 @@
   		<event load="STORAGE_CHECK_LAB_LOAD" />
   	</choice>
   </event>
+
   <event name="INSTALL_LAB_AVALI_CYBERNETIC">
   	<event />
   </event>
+
   <event name="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS">
   	<text>You are about to install the Flame Retardent Cloaks modification.
   	[Effects: Avali crew take 35% less damage from fire, and extinguish them 80% faster.]
@@ -1324,9 +1413,11 @@
   		<event load="STORAGE_CHECK_LAB_LOAD" />
   	</choice>
   </event>
+
   <event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
   	<event />
   </event>
+
   <event name="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF">
   	<text>You are about to perform the Dense Fluff modification.
   	[Effects: Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]
@@ -1350,10 +1441,10 @@
   		<event load="STORAGE_CHECK_LAB_LOAD" />
   	</choice>
   </event>
+
   <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
   	<event />
   </event>
-
 
   <!--////// SCRAPPER STORAGE CHECK STUFF ////////-->
 
@@ -1687,7 +1778,7 @@
     </choice>
   </event>
 
-  <!--//////////////////////////////////////////////////////////SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
 <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE">
   <text>Scrappers are unique in the fact that they can upgrade into many other specialised designs. There are 3 tiers of scrappers; Base, Upgraded and Elite.
@@ -2021,69 +2112,142 @@
   <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
 </event>
 
-<mod:findName type = "event" name="STORAGE_CHECK_CREW_LIST_HUMAN">
-<mod-append:choice req="unique_leah_mfk" blue="false">
-     <text>Look for Leah.</text> 
-     <event load="STORAGE_CHECK_CREW_LEAH"/>
-</mod-append:choice>
-</mod:findName> 
+    <!--///////////////////////////////
+////////////// DRONE TOGGLE MENU ///////////////
+////////////////////////////////-->
 
-<event name="STORAGE_CHECK_CREW_LEAH">
-    <text>What do you want to do with Leah?</text>
-    <choice>
-        <text>Nevermind, do something else.</text>
-        <event load="STORAGE_CHECK"/>
-    </choice>
-    <choice hidden="true">
-        <text id="talk_to_crew"/>
-        <event load="STORAGE_CHECK_CREW_LEAH_TALK"/>
-    </choice>
-    <choice hidden="true">
-        <text id="scan_crew"/>
-        <event load="STORAGE_CHECK_CREW_LEAH_SCAN"/>
-    </choice>
-</event>
-<event name="STORAGE_CHECK_CREW_LEAH_SCAN">
-    <text>LEAH DETAILS
-    SPECIES? [Human] SUBTYPE? [Yes]
-    Subtype Details: Unique
-    Stats: 100 Health, 1.5x sabotage speed, 0.7x combat damage taken, 2x combat damage, 50% fire and suffocation damage. Has maximum skill level. Does not lose skills when cloned.
-    </text>
-    <choice>
-        <text>Continue...</text>
-        <event load="STORAGE_CHECK"/>
-    </choice>
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+
+	<!--
+	\\\\\\\\\\\\\\\\\\\\\\\\\
+	  BOARDING DRONE TOGGLE
+	\\\\\\\\\\\\\\\\\\\\\\\\\
+	-->
+  
+	<mod-append:choice req="ROBO_MANT_BOARDER" blue="false">
+		<text>(Boarding Drone) Set the state of the drone. [Current mode: Boarding]</text>
+		<event load="COMBAT_CHECK_ROBO_MANT_BOARDER"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="SILICA_BOARDER" blue="false">
+		<text>(Boarding Drone) Set the state of the drone. [Current mode: Boarding]</text>
+		<event load="COMBAT_CHECK_SILICA_BOARDER"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="ROBO_MANT_DEFEND" blue="false">
+		<text>(Boarding Drone) Set the state of the drone. [Current mode: Anti-Person]</text>
+		<event load="COMBAT_CHECK_ROBO_MANT_DEFEND"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="SILICA_BATTLE" blue="false">
+		<text>(Boarding Drone) Set the state of the drone. [Current mode: Anti-Person]</text>
+		<event load="COMBAT_CHECK_SILICA_BATTLE"/>
+	</mod-append:choice>
+
+</mod:findName>
+
+<event name="COMBAT_CHECK_ROBO_MANT_DEFEND">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Boarding Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="ROBO_MANT_DEFEND"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="ROBO_MANT_BOARDER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
 </event>
 
-<event name="STORAGE_CHECK_CREW_LEAH_TALK">
-    <text load="TEXT_CREW_TALK_LEAH"/>
-    <choice>
-        <text>Continue...</text>
-        <event load="STORAGE_CHECK"/>
-    </choice>
+<event name="COMBAT_CHECK_ROBO_MANT_BOARDER">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Defensive Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="ROBO_MANT_BOARDER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="ROBO_MANT_DEFEND"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
 </event>
 
-<textList name="TEXT_CREW_TALK_LEAH">
-<text>You enter Leah's quarters, but see no sign of her. An open Hektar magazine is open on her bed advertising various new beam technology.</text>
-<text>You hear Leah reciting various villain monologues through her door. You decide not to disturb her lest she make you review and critique all of them.</text>
-<text>You ask Leah why she decided to join the rebellion. She tells you she originally wanted to have an Orchid ship but the sector was too peaceful to find a good nemesis.</text>
-<text>Leah claims she had no idea that the Rebellion hated aliens so much, as she apparently had been banned from all Rebellion meetings and discussions due to "excessive shouting"</text>
-<text>Leah complains about how the Rebels are the bad guys because she doesn't get to live out her movie fantasy of being an action hero and blowing an empire up dramatically</text>
-<text>Leah asks for feedback on her list of potential new nemesis', which includes Sylvan. You gently tell her she should probably just stick to fighting you.</text>
-<text>Leah whines about how you can't fight when you're working together on the same ship. You tell her that once the flagship is defeated, you'll fight her in a one on one duel.</text>
-<text>You find Leah breeding tiny terrestrial spiders in her room. She swears that they’ll eventually be combat ready if she trains them well enough.</text>
-<text>You question Leah on why she likes beams so much. Apparently she once saw a flagship get destroyed with two glaives in one shot and has been fascinated ever since.</text>
-<text>You ask Leah if she could try getting more personal warp-buttons for each of your crew members. She refuses saying that knowing you won't die removes all tension and makes you a 'certified beyatch'.</text>
-<text>Leah is busy experimenting with a laser pointer which she swears is the future of space-age combat.</text>
-<text>Leah is looking out of a ship window wistfully. You ask her what's wrong and she says she’s just practicing poses for if she ever needs to give a dramatic speech during your journey.</text>
-<text>Leah thinks you should invest more into beam technology. Obviously.</text>
-<text>Leah hands you a handwritten letter thanking you for being such a great nemesis. It's a sweet gesture but the tilde after your name concerns you a bit.</text>
-<text>Leah swears she'd sacrifice her life for the sake of the mission. You ask if she really means it and she says she’s not sure but she’s always wanted to say that.</text>
-<text>You ask Leah what it was like to defect to the Federation. She says one of her warps accidentally teleported her into a Federation barracks and she thought that was a good a time as any to swap sides.</text>
-<text>Leah blocks your path and says "We meet again Captain, for the last time!" before stuttering and admitting she hasn't written the rest of that speech.</text>
-<text>Leah politely asks that you don't use shields next time you fight her.</text>
-<text>Leah has mixed feelings on the Flagship. On one hand, destroying it will save thousands, maybe even millions of lives, however on the other hand she's a massive fan of the ship's paint-job.</text>
-<text>You stumble into Leah's room to find her playing Squad Fort 2 on her personal terminal. Of course she's a fucking spy main what else would she play?</text>
-</textList>
+<event name="COMBAT_CHECK_SILICA_BATTLE">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Boarding Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="SILICA_BATTLE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="SILICA_BOARDER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+
+<event name="COMBAT_CHECK_SILICA_BOARDER">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Defensive Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="SILICA_BOARDER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="SILICA_BATTLE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
 
 </FTL>
