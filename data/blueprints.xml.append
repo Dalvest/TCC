@@ -7701,6 +7701,83 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="CRATE_FUEL" />
 </shipBlueprint>
 
+<!--/////// STOLEN REBEL DESIGN  //////-->
+
+<shipBlueprint name="PLAYER_SHIP_HEKTAR_REBEL" layout="player_ship_hektar_rebel" img="player_ship_hektar_rebel">
+	<class>Completely Original Ship (tm)</class>
+	<name>Free Sample</name>
+	<desc>The Hektar Corporation is no stranger to borrowing designs - when the rebel cruiser proved its worth in battle, it's no surprise that Hektar... lent the design. This ship is good both for battles and for carrying cargo.</desc>
+	<systemList>
+		<artillery power="1" room="26" start="true" weapon="ARTILLERY_TC_MODULAR_BEAM" img="room_artillery_dromaius" />
+		<battery power="1" room="13" start="false" img="room_battery_12" />
+		<cloaking power="1" room="24" start="false" img="room_cloaking_11" />
+		<clonebay power="1" room="25" start="false">
+			<slot>
+				<number>2</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="14" start="true" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="1" room="16" start="false" img="room_drones_3" />
+		<engines power="1" room="1" start="true" img="room_engines_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="7" start="false" img="room_hacking_8" />
+		<medbay power="1" room="25" start="true" img="room_medbay_7">
+			<slot>
+				<number>2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="23" start="true" img="room_mind_11" />
+		<oxygen power="1" room="8" start="true" img="room_oxygen_12" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="11" start="false" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="20" start="true" img="room_shields_8">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="2" room="6" start="true" />
+		<weapons power="2" room="21" start="true" img="room_weapons_chaoticgood">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="4" count="4">
+		<weapon name="MODULAR_LASER_BASE" />
+	</weaponList>
+	<droneList drones="2" count="3" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="slug_hektar" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug_saboteur" />
+	<crewCount amount="1" class="blobslug" />
+	<aug name="HEKTAR_GEL" />
+</shipBlueprint>
+
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           JULK'S EXPANDCODE
