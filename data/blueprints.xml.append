@@ -593,7 +593,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark I</title>
 	<short>Bomb Flak I</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>A small, lower power flak cannon reconfigured to shoot bombs instead of flak, ideal for devestating systems. Requires a missile to launch, but does not pierce any shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
 	<radius>42</radius>
@@ -638,7 +638,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark I</title>
 	<short>Bomb Flak I</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
 	<radius>42</radius>
@@ -683,7 +683,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark II</title>
 	<short>Bomb Flak II</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devestating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
 	<radius>45</radius>
@@ -728,7 +728,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark III</title>
 	<short>Bomb Flak III</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 5 hull damage, and 10 system damage. Great at devestating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 5 damage, and 10 system damage.</tooltip>
 	<radius>50</radius>
@@ -773,7 +773,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Gun Mark IV</title>
 	<short>Bomb Flak IV</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 8 hull damage, and 16 system damage. Great at annihilating systems but very hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 8 damage, and 16 system damage.</tooltip>
 	<radius>60</radius>
@@ -818,7 +818,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Breach Bomb Flak Gun</title>
 	<short>B. Bomb Flak</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>A flak cannon reconfigured to shoot breach bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devestating systems and keeping them down but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
 	<radius>47</radius>
@@ -862,7 +862,7 @@
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Chain Flak Gun</title>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<short>B. Chain F.</short>
 	<desc>A bomb flak created using a refurbished Chain Bomb. Fires 3 bombs in a random area that excel at taking down systems. Each shot reduces the cooldown. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
@@ -913,7 +913,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Bomb Flak Charger</title>
 	<short>B. Flak Ch.</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>A specialized bomb flak that can charge up to 3 shots! Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
 	<radius>45</radius>
@@ -1049,7 +1049,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Pre-emptive Bomb Flak</title>
 	<short>Pre-B. Flak</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>This bomb flak uses no power, charges instantly, and fires a burst of 7 bombs at once. However, it can only be shot once per battle. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 7 damage, and 14 system damage.</tooltip>
 	<radius>100</radius>
@@ -1099,7 +1099,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Fire Bomb Flak Gun</title>
 	<short>F-Bomb Flak</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>Fires 4 fire bombs that are guaranteed to start a fire and do double system damage. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
 	<radius>55</radius>
@@ -1144,7 +1144,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Ion Bomb Flak Gun</title>
 	<short>I. Bomb Flak</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<descriptionOverride>This special bomb flak shoots 3 ion bombs that do 4 ion damage each! However, they can't ion shields unless they hit the system itself. Requires a missile to fire, but doesn't go through shields.
 
 	Stats:
@@ -1306,7 +1306,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Lockdown Bomb Flak Gun</title>
 	<short>L. Bomb Flak</short>
-	<tip>tip_flak</tip>
+	<tip>tip_bomb_flak</tip>
 	<desc>Fires 4 bombs that lockdown rooms, do double system damage, and have a low chance of fire and breach. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
 	<radius>55</radius>
