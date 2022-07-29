@@ -61,6 +61,13 @@
 			<text>Continue...</text>
 			<event load="STORE_LOAD_RSA"/>
 		</choice>
+		<choice req="LIST_CREW_LANIUS">
+			<text>(Lanius Crew) Have your Lanius melt the broken missiles down into scrap.</text>
+			<item_modify>
+				<item type="scrap" min="21" max="24"/>
+			</item_modify>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
 	</event>
 	<event>
 		<text>Around half of the missiles inside the box are usable. You grab them, dump the rest and head into the store.</text>
@@ -71,6 +78,13 @@
 			<text>Continue...</text>
 			<event load="STORE_LOAD_RSA"/>
 		</choice>
+		<choice req="LIST_CREW_LANIUS">
+			<text>(Lanius Crew) Have your Lanius melt the broken missiles down into scrap.</text>
+			<item_modify>
+				<item type="scrap" min="12" max="18"/>
+			</item_modify>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
 	</event>
 	<event>
 		<text>Almost all of the missiles are functional! You discard the very few broken ones and head into the store.</text>
@@ -79,6 +93,13 @@
 		</item_modify>
 		<choice>
 			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+		<choice req="LIST_CREW_LANIUS">
+			<text>(Lanius Crew) Have your Lanius melt the broken missiles down into scrap.</text>
+			<item_modify>
+				<item type="scrap" min="3" max="9"/>
+			</item_modify>
 			<event load="STORE_LOAD_RSA"/>
 		</choice>
 	</event>
@@ -104,6 +125,13 @@
 			<text>Continue...</text>
 			<event load="STORE_LOAD_RSA"/>
 		</choice>
+		<choice req="LIST_CREW_LANIUS">
+			<text>(Lanius Crew) Have your Lanius melt the broken droneparts down into scrap.</text>
+			<item_modify>
+				<item type="scrap" min="21" max="24"/>
+			</item_modify>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
 	</event>
 	<event>
 		<text>Around half of the droneparts are usable. This could've gone worse; you pick out the working ones and head into the store.</text>
@@ -114,6 +142,13 @@
 			<text>Continue...</text>
 			<event load="STORE_LOAD_RSA"/>
 		</choice>
+		<choice req="LIST_CREW_LANIUS">
+			<text>(Lanius Crew) Have your Lanius melt the broken droneparts down into scrap.</text>
+			<item_modify>
+				<item type="scrap" min="12" max="18"/>
+			</item_modify>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
 	</event>
 	<event>
 		<text>Almost all of the droneparts are functional! You discard the very few broken ones and head into the store.</text>
@@ -122,6 +157,13 @@
 		</item_modify>
 		<choice>
 			<text>Continue...</text>
+			<event load="STORE_LOAD_RSA"/>
+		</choice>
+		<choice req="LIST_CREW_LANIUS">
+			<text>(Lanius Crew) Have your Lanius melt the broken droneparts down into scrap.</text>
+			<item_modify>
+				<item type="scrap" min="3" max="9"/>
+			</item_modify>
 			<event load="STORE_LOAD_RSA"/>
 		</choice>
 	</event>
