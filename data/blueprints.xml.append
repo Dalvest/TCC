@@ -4212,40 +4212,45 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="ADVANCED_SCRAP" />
 </shipBlueprint>
 
-<shipBlueprint name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD" layout="player_ship_trash_compactor_good" img="player_ship_trash_compactor_good">
-	<class>Trash Compactor Good</class>
-	<name>Trash Compactor Good</name>
-	<unlock id="ship_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_unlock"/>
-	<desc>YOU ARE NOT SUPPOSED TO SEE THIS YET!</desc>
+<!--///////////////////// TRASH EATER'S SHIPPEH //////////////////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_TRASH_EATER" layout="player_ship_trash_eater" img="player_ship_trash_eater">
+	<class>Trash Eater's Cruiser</class>
+	<name>Moarte si Fier</name>
+	<desc>The Prince of Lanius commands his own personal army of Scrappers - he seeks to envelop so much scrap that he'll become one huge, sentient ship, with the eventual goal of eating the world. For now... he's still crew-sized.</desc>
+	<unlock id="ship_PLAYER_SHIP_TRASH_EATER_unlock"/>
 	<systemList>
-		<battery max="2" power="1" room="13" start="false" img="room_battery_scrapper" />
-		<cloaking power="3" room="12" start="true" img="room_cloaking" />
-		<clonebay max="3" power="3" room="9" start="true">
+		<artillery power="1" room="22" start="true" weapon="TC_SHOTGUN_GOLD" img="room_artillery" />
+		<artillery power="1" room="23" start="true" weapon="TC_SHOTGUN_GOLD" img="room_artillery_6" />
+		<battery power="1" room="13" start="true" img="room_battery_scrapper" />
+		<cloaking power="1" room="18" start="true" img="room_cloaking" />
+		<clonebay power="3" room="9" start="true">
 			<slot>
 				<number>0</number>
 			</slot>
 		</clonebay>
-		<medbay max="3" power="3" room="9" start="false" img="room_medbay_2">
-			<slot>
-				<number>-1</number>
-			</slot>
-		</medbay>
-		<doors power="3" room="11" start="true" img="room_doors">
+		<doors power="1" room="11" start="false" img="room_doors">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="4" room="7" start="true" img="room_drones_4" />
-		<engines power="6" room="3" start="true" img="room_engines_8">
+		<drones max="8" power="3" room="7" start="true" img="room_drones_4" />
+		<engines max="8" power="2" room="3" start="true" img="room_engines_8">
 			<slot>
 				<direction>left</direction>
 				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="1" start="false" img="room_hacking" />
+		<hacking power="1" room="19" start="false" img="room_hacking_6" />
+		<medbay power="3" room="9" start="false" img="room_medbay_2">
+			<slot>
+				<number>-1</number>
+			</slot>
+		</medbay>
 		<mind power="1" room="2" start="false" img="room_mind_9" />
-		<pilot power="3" room="0" start="true" img="room_pilot">
+		<oxygen power="1" room="4" start="false" img="room_oxygen_13" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
 			<slot>
 				<direction>right</direction>
 				<number>0</number>
@@ -4257,52 +4262,31 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields max="10" power="10" room="10" start="true" img="room_shields">
+		<shields max="8" power="2" room="10" start="true" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="3" room="4" start="true" />
-		<temporal power="1" room="11" start="false" img="" />
-		<weapons max="20" power="20" room="5" start="true" img="room_weapons_4">
+		<teleporter power="2" room="14" start="true" />
+		<weapons max="8" power="4" room="5" start="false" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
 			</slot>
 		</weapons>
 	</systemList>
-	<weaponSlots>8</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="0" count="8">
-		<weapon name="TC_SHOTGUN_BOMB" />
-		<weapon name="TC_SHOTGUN_BOMB" />
-		<weapon name="TC_SHOTGUN_GOLD" />
-		<weapon name="TC_SHOTGUN_GOLD" />
-		<weapon name="TC_SHOTGUN_UNSTABLE" />
-		<weapon name="TC_SHOTGUN_UNSTABLE" />
-		<weapon name="TC_SHOTGUN_UNSTABLE" />
-		<weapon name="TC_SHOTGUN_UNSTABLE" />
-	</weaponList>
-	<droneList drones="10" count="2">
-		<drone name="FLAK_1_AMP2" />
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="7" count="4" />
+	<droneList drones="10" count="3">
+		<drone name="TC_COMBAT_BOMB" />
 	</droneList>
-	<health amount="35" />
-	<maxPower amount="25" />
-	<crewCount amount="1" class="lanius" />
-	<crewCount amount="1" class="lanius" />
-	<crewCount amount="1" class="lanius" />
-	<crewCount amount="1" class="lanius" />
-	<crewCount amount="1" class="lanius_welder" />
-	<crewCount amount="1" class="lanius_welder" />
-	<crewCount amount="1" class="lanius_welder" />
-	<crewCount amount="1" class="lanius_welder" />
-	<crewCount amount="1" class="unique_eater" />
-	<crewCount amount="1" class="lanius_augmented" />
-	<crewCount amount="1" class="lanius_augmented" />
-	<crewCount amount="1" class="lanius_augmented" />
-	<crewCount amount="1" class="lanius_augmented" />
-	<crewCount amount="1" class="unique_anointed" />
+	<health amount="45" />
+	<maxPower amount="5" />
+	<crewCount amount="1" class="trash_eater" />
+	<crewCount amount="1" class="scrapper_scavenger" />
+	<crewCount amount="5" class="scrapper" />
 	<aug name="COMPACTOR" />
 </shipBlueprint>
 
@@ -7722,8 +7706,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" room="16" start="false" img="room_drones_3" />
-		<engines power="1" room="1" start="true" img="room_engines_9">
+		<drones max="8" power="1" room="16" start="false" img="room_drones_3" />
+		<engines max="8" power="1" room="1" start="true" img="room_engines_9">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -7749,14 +7733,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="20" start="true" img="room_shields_8">
+		<shields max="8" power="2" room="20" start="true" img="room_shields_8">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="2" room="6" start="true" />
-		<weapons power="2" room="21" start="true" img="room_weapons_chaoticgood">
+		<weapons max="8" power="2" room="21" start="true" img="room_weapons_chaoticgood">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>

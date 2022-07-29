@@ -334,26 +334,21 @@ MVAR [name] [value]
       </crew>
     </mod-append:customShip>
 
-    <!--///////SCRAPPER OP SHIP//////-->
+    <!--/////// TRASH EATER'S CRUISER //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD" b="false" c="false" unused="true" noAppend="true">
+    <mod-append:ship name="PLAYER_SHIP_TRASH_EATER" b="false" c="false" unused="true">
 
-      <unlock variant="a" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_LIMIT_3</shipReq>
-        <value>50</value>
-      </unlock>
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
+		  </unlock>
 
     </mod-append:ship>
-    <mod-append:customShip name="PLAYER_SHIP_TRASH_COMPACTOR_GOOD">
-      <crewLimit>16</crewLimit>
+
+    <mod-append:customShip name="PLAYER_SHIP_TRASH_EATER">
+      <crewLimit>20</crewLimit>
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crew>
-        <trash_eater room="0" name="Trash Eater" />
-        <scrapper room="5" name="Zuggo" />
-        <scrapper room="2" name="Ash" />
-      </crew>
       <customReactor maxLevel="50"/>
     </mod-append:customShip>
 
@@ -1292,7 +1287,7 @@ MVAR [name] [value]
 
 	<!--/////// ENEMY SHIPS //////-->
 	
-	<mod-append:ship name="PLAYER_SHIP_HEKTAR_REBEL" b="false" c="false" />
+	<mod-append:ship name="PLAYER_SHIP_HEKTAR_REBEL" b="false" c="false" unused="true" />
 	<mod-append:customShip name="PLAYER_SHIP_HEKTAR_REBEL">
 		<crewLimit>12</crewLimit>
 		<hiddenAug>SHIP_SLUG</hiddenAug>
@@ -1374,7 +1369,7 @@ SHIP HANGAR ORDER
 			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship> <!--Armored Wasp-->
 			<mod-append:ship>PLAYER_SHIP_CORROSUS</mod-append:ship> <!--CorroSUS-->
 			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship> <!--RENT-A-FLAGSHIP-->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_TRASH_EATER</mod-append:ship> <!--TE Cruiser-->
 			<mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
 			<!--Page 2--> <!-- Federation Special Forces -->
