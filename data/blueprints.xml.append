@@ -7096,7 +7096,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="11" start="true" />
-		<weapons max="2" power="2" room="19" start="true" img="room_weapons_2">
+		<weapons max="5" power="2" room="19" start="true" img="room_weapons_2">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -7105,7 +7105,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</systemList>
 	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
-	<droneSlots>4</droneSlots>
+	<droneSlots>6</droneSlots>
 	<weaponList missiles="11" count="2">
 		<weapon name="MINELAUNCHER_1" />
 	</weaponList>
@@ -7887,10 +7887,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
     <short>Scientist</short>
     <rarity>5</rarity>
     <powerList>
-        <power>Inflicts 0.8x damage in combat and moves at 0.8x speed</power>
+        <power>Deals damage and moves at 0.8x</power>
 		<power>Repairs at 1.3x speed owing to technical knowledge</power>
 		<power>Backup battery backpack provides one bar of power to the current system</power>
-        <power>Takes 1.3x damage from combat, half from hazards, is highly resistant to stuns</power>
+        <power>Takes 1.3x damage from combat, half from hazards, has 80 health</power>
         <power>Trained in lvl1 skills</power>
     </powerList>
 </crewBlueprint>
