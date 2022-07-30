@@ -155,6 +155,12 @@
 	</mod:findLike>
 </mod:findName>
 
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="scrapper" rarity="4" />
+	</mod:findLike>
+</mod:findName>
+
 <mod:findName type="sectorDescription" name="SECTOR_LANIUS">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="scrapper" rarity="4" />
