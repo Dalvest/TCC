@@ -120,6 +120,53 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_SHOTGUN_GOLD_ARTILLERY">
+	<type>BURST</type>
+	<title>Dense Gold Flak Artillery</title>
+	<short>Gold Flak Arty</short>
+	<tip>tip_flak</tip>
+	<desc>A modified gold flak cannon that fires denser chunks of gold. Its projectiles are incredibly heavy and sluggish. The fancy outer coat means that it should return a large bounty when sold.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 14 damage.</tooltip>
+	<drone_targetable>1</drone_targetable>
+	<damage>1</damage>
+	<radius>50</radius>
+	<shots>1</shots>
+	<projectiles>
+		<projectile count="5" fake="false">tc_debris_large_gold</projectile>
+		<projectile count="9" fake="false">tc_debris_med_gold</projectile>
+		<projectile count="2" fake="true">tc_debris_small_gold</projectile>
+	</projectiles>
+	<spin>720</spin>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>25</cooldown>
+	<power>3</power>
+	<cost>220</cost>
+	<bp>2</bp>
+	<speed>15</speed>
+	<rarity>0</rarity>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_shotgun_gold</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_SHOTGUN_LEAD">
 	<type>BURST</type>
 	<title>Lead Flak</title>
@@ -1965,6 +2012,7 @@
 	<weaponArt>tc_rescrapflak</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
+
 <blueprintList name="TC_FIREWORK_VARIANTS">
 	<name>TC_FIREWORK_DISPENSER</name>
 </blueprintList>
@@ -4220,8 +4268,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<desc>The Prince of Lanius commands his own personal army of Scrappers - he seeks to envelop so much scrap that he'll become one huge, sentient ship, with the eventual goal of eating the world. For now... he's still crew-sized.</desc>
 	<unlock id="ship_PLAYER_SHIP_TRASH_EATER_unlock"/>
 	<systemList>
-		<artillery power="1" room="22" start="true" weapon="TC_SHOTGUN_GOLD" img="room_artillery" />
-		<artillery power="1" room="23" start="true" weapon="TC_SHOTGUN_GOLD" img="room_artillery_6" />
+		<artillery power="1" room="22" start="true" weapon="TC_SHOTGUN_GOLD_ARTILLERY" img="room_artillery" />
+		<artillery power="1" room="23" start="true" weapon="TC_SHOTGUN_GOLD_ARTILLERY" img="room_artillery_6" />
 		<battery power="1" room="13" start="true" img="room_battery_scrapper" />
 		<cloaking power="1" room="18" start="true" img="room_cloaking" />
 		<clonebay power="3" room="9" start="true">
@@ -4235,8 +4283,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones max="8" power="3" room="7" start="true" img="room_drones_4" />
-		<engines max="8" power="2" room="3" start="true" img="room_engines_8">
+		<drones max="12" power="3" room="7" start="true" img="room_drones_4" />
+		<engines max="12" power="2" room="3" start="true" img="room_engines_8">
 			<slot>
 				<direction>left</direction>
 				<number>2</number>
@@ -4262,14 +4310,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields max="8" power="2" room="10" start="true" img="room_shields">
+		<shields max="12" power="2" room="10" start="true" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="2" room="14" start="true" />
-		<weapons max="8" power="4" room="5" start="false" img="room_weapons_4">
+		<weapons max="12" power="4" room="5" start="false" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -4277,7 +4325,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</weapons>
 	</systemList>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>3</droneSlots>
+	<droneSlots>4</droneSlots>
 	<weaponList missiles="7" count="4" />
 	<droneList drones="10" count="3">
 		<drone name="TC_COMBAT_BOMB" />
@@ -5336,8 +5384,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<artillery power="1" room="17" start="true" weapon="IONARTILLERY" img="room_artillery_5" />
 		<artillery power="1" room="15" start="true" weapon="IONARTILLERY" img="room_artillery_6" />
-		<artillery power="1" room="16" start="true" weapon="TC_FIREWORK_DISPENSER" img="room_artillery" />
-		<artillery power="1" room="14" start="true" weapon="TC_FIREWORK_DISPENSER" img="room_artillery" />
+		<artillery power="1" room="16" start="true" weapon="SINGULARITY_PROJECTOR_1" img="room_artillery" />
+		<artillery power="1" room="14" start="true" weapon="SINGULARITY_PROJECTOR_1" img="room_artillery" />
 		<battery power="1" room="2" start="false" img="room_battery" />
 		<cloaking power="1" room="13" start="true" img="room_cloaking 2x1 01-00-00" />
 		<clonebay power="1" room="10" start="true">
@@ -5853,7 +5901,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="7" count="3">
 		<weapon name="LASER_HEAVY_1" />
-		<weapon name="TC_SINEWAVE" />
+		<weapon name="LASER_PIERCE" />
 	</weaponList>
 	<droneList drones="9" count="3">
 		<drone name="FOCUS_1_AMP2" />
