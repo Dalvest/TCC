@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 
-<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+
+
 <img x="-74" y="-12" w="270" h="375" />
 <offsets>
 	<floor x="68" y="6" />
 	<cloak x="0" y="0" />
 </offsets>
 <weaponMounts>
-	<mount x="160" y="50" rotate="true" mirror="false" gib="-1" slide="no" />
-	<mount x="160" y="325" rotate="true" mirror="true" gib="-1" slide="no" />
-	<mount x="265" y="151" rotate="true" mirror="true" gib="-1" slide="no" />
-	<mount x="265" y="224" rotate="true" mirror="false" gib="-1" slide="no" />
-	<mount x="292" y="172" rotate="true" mirror="false" gib="-1" slide="no" />
+	<mount x="160" y="50" rotate="true" mirror="false" gib="4" slide="no" />
+	<mount x="160" y="325" rotate="true" mirror="true" gib="5" slide="no" />
+	<mount x="265" y="151" rotate="true" mirror="true" gib="3" slide="no" />
+	<mount x="265" y="224" rotate="true" mirror="false" gib="1" slide="no" />
+	<mount x="292" y="172" rotate="true" mirror="false" gib="3" slide="no" />
 </weaponMounts>
-<explosion />
+<explosion><gib1><velocity min="0.10116936418192948" max="0.33723121393976496" /><direction min="219" max="235" /><angular min="-0.5647635363958723" max="0.5647635363958723" /><x>96</x><y>159</y></gib1><gib2><velocity min="0.1" max="0.10578899648935629" /><direction min="71" max="87" /><angular min="-0.7224770642201834" max="0.7224770642201834" /><x>44</x><y>120</y></gib2><gib3><velocity min="0.18701245690575288" max="0.6233748563525097" /><direction min="320" max="336" /><angular min="-0.8224065908563472" max="0.8224065908563472" /><x>88</x><y>69</y></gib3><gib4><velocity min="0.20087389403604003" max="0.6695796467868002" /><direction min="12" max="28" /><angular min="-0.5711350175268947" max="0.5711350175268947" /><x>0</x><y>0</y></gib4><gib5><velocity min="0.20236725738107825" max="0.6745575246035942" /><direction min="151" max="167" /><angular min="-0.5818487808882685" max="0.5818487808882685" /><x>0</x><y>236</y></gib5></explosion>
 

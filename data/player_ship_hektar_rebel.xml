@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 
-<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+
+
 <img x="-72" y="-11" w="511" h="371" />
 <offsets>
 	<floor x="65" y="4" />
 	<cloak x="0" y="0" />
 </offsets>
 <weaponMounts>
-	<mount x="166" y="371" rotate="true" mirror="false" gib="-1" slide="down" />
-	<mount x="402" y="304" rotate="true" mirror="false" gib="-1" slide="down" />
-	<mount x="167" y="2" rotate="true" mirror="true" gib="-1" slide="up" />
-	<mount x="398" y="67" rotate="true" mirror="true" gib="-1" slide="up" />
-	<mount x="453" y="186" rotate="true" mirror="true" gib="-1" slide="no" />
+	<mount x="166" y="371" rotate="true" mirror="false" gib="4" slide="down" />
+	<mount x="402" y="304" rotate="true" mirror="false" gib="2" slide="down" />
+	<mount x="167" y="2" rotate="true" mirror="true" gib="4" slide="up" />
+	<mount x="398" y="67" rotate="true" mirror="true" gib="3" slide="up" />
+	<mount x="453" y="186" rotate="true" mirror="true" gib="2" slide="no" />
 </weaponMounts>
-<explosion />
+<explosion><gib1><velocity min="0.24759057876632642" max="0.8253019292210881" /><direction min="116" max="132" /><angular min="-0.6937461445972083" max="0.6937461445972083" /><x>0</x><y>196</y></gib1><gib2><velocity min="0.12052843913947055" max="0.4017614637982352" /><direction min="262" max="278" /><angular min="-0.4553638952750231" max="0.4553638952750231" /><x>262</x><y>68</y></gib2><gib3><velocity min="0.11680373340742914" max="0.38934577802476383" /><direction min="320" max="336" /><angular min="-0.5098515089229114" max="0.5098515089229114" /><x>168</x><y>0</y></gib3><gib4><velocity min="0.1" max="0.11980369490442831" /><direction min="82" max="98" /><angular min="-0.24180809387584046" max="0.24180809387584046" /><x>0</x><y>0</y></gib4><gib5><velocity min="0.19603009822220435" max="0.6534336607406812" /><direction min="188" max="204" /><angular min="-0.8669107656127513" max="0.8669107656127513" /><x>183</x><y>215</y></gib5></explosion>
 
