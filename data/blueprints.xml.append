@@ -5335,6 +5335,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<unlock id="ship_PLAYER_SHIP_SLUGTON_3_unlock"/>
 	<systemList>
 		<artillery power="1" room="17" start="true" weapon="IONARTILLERY" img="room_artillery_5" />
+		<artillery power="1" room="15" start="true" weapon="IONARTILLERY" img="room_artillery_6" />
+		<artillery power="1" room="16" start="true" weapon="TC_FIREWORK_DISPENSER" img="room_artillery" />
+		<artillery power="1" room="14" start="true" weapon="TC_FIREWORK_DISPENSER" img="room_artillery" />
 		<battery power="1" room="2" start="false" img="room_battery" />
 		<cloaking power="1" room="13" start="true" img="room_cloaking 2x1 01-00-00" />
 		<clonebay power="1" room="10" start="true">
@@ -5348,8 +5351,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="3" max="8" room="11" start="true" img="room_drones_2" />
-		<engines power="3" max="8" room="1" start="true" img="room_engines_chaoticgood">
+		<drones max="8" power="3" room="11" start="false" img="room_drones_2" />
+		<engines max="8" power="3" room="1" start="true" img="room_engines_chaoticgood">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -5375,7 +5378,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" max="8" room="18" start="false" img="room_shields_2.s__c__ComputerAtTopRight">
+		<shields max="8" power="2" room="18" start="false" img="room_shields_2.s__c__ComputerAtTopRight">
 			<slot>
 				<direction>right</direction>
 				<number>0</number>
@@ -5384,16 +5387,17 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<teleporter power="1" room="6" start="true" />
 	</systemList>
 	<systemLimit>9</systemLimit>
-	<weaponSlots>0</weaponSlots>
+	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="0" count="0" />
-	<droneList drones="17" count="4">
-		<drone name="DRONE_SHIELD" />
-		<drone name="DEFENSE_2" />
-	</droneList>
+	<weaponList missiles="0" count="4" />
+	<droneList drones="5" count="4" />
 	<health amount="30" />
-	<maxPower amount="10" />
-	<aug name="ENERGY_SHIELD" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="slug_saboteur" />
+	<crewCount amount="2" class="sergal" />
+	<crewCount amount="1" class="protogen" />
+	<crewCount amount="1" class="protogen_space_scavenger" />
+	<crewCount amount="1" class="human_hazmat" />
 	<aug name="HEKTAR_GEL" />
 </shipBlueprint>
 
@@ -5418,8 +5422,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" room="11" start="false" img="room_drones_2_alt" />
-		<engines power="3" room="7" start="true" img="room_engines_7">
+		<drones max="8" power="1" room="11" start="false" img="room_drones_2_alt" />
+		<engines max="8" power="3" room="7" start="true" img="room_engines_7">
 			<slot>
 				<direction>right</direction>
 				<number>3</number>
@@ -5445,14 +5449,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="9" start="true" img="room_shields_4">
+		<shields max="8" power="2" room="9" start="true" img="room_shields_4">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="15" start="true" />
-		<weapons power="3" room="6" start="true" img="room_weapons">
+		<weapons max="8" power="3" room="6" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -7931,7 +7935,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
     <cost>130</cost>
     <title>'Phoenix' Squad Operator</title>
     <short>Operator</short>
-    <rarity>5</rarity>
+    <rarity>0</rarity>
     <powerList>
         <power>Inflicts 1.5x damage in combat</power>
 		<power>Repairs at 0.6x speed</power>
