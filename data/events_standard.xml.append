@@ -323,6 +323,21 @@
 	</choice>
 </event>
 
+<event name="STOREEVENT_RSA_BOMB_FLAKS">
+	<text>TEST</text>
+	<ship load="RSA_BOMB_FLAK_MANT" hostile="true"/>
+</event>
+
+<event name="DESTROYED_STOREEVENT_RSA_BOMB_FLAKS">
+	<text>cool</text>
+	<autoReward level="MED">scrap</autoReward>
+</event>
+
+<event name="DEAD_CREW_STOREEVENT_RSA_BOMB_FLAKS">
+	<text>epic</text>
+	<autoReward level="HIGH">scrap</autoReward>
+</event>
+
 <mod:findName type="eventList" name="STORELIST_CIVILIAN">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>

@@ -67,4 +67,9 @@
 	</crew>
 </ship>
 
+<ship name="RSA_BOMB_FLAK_MANT" auto_blueprint="RSA_ASSAULT">
+	<destroyed load="DESTROYED_STOREEVENT_RSA_BOMB_FLAKS"/>
+	<deadCrew load="DEAD_CREW_STOREEVENT_RSA_BOMB_FLAKS"/>
+</ship>
+
 </FTL>
