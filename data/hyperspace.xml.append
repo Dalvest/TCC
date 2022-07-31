@@ -299,16 +299,19 @@ MVAR [name] [value]
 
     <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
 
-      <unlock variant="a" silent="false">
-        <type>4</type>
-      </unlock>
-      <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
-        <value>5</value>
-      </unlock>
+	<arrow variant="a" direction="down" tooltip="ship_unlock_victory" image="arrow_v_down.png" unlockedImage="arrow_v_down_on.png">PLAYER_SHIP_TRASH_EATER</arrow>
+
+	<unlock variant="a" silent="false">
+	<type>4</type>
+	</unlock>
+	<unlock variant="b" silent="false">
+	<type>1</type>
+	<shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
+	<value>5</value>
+	</unlock>
 
     </mod-append:ship>
+
     <mod-append:customShip name="PLAYER_SHIP_SCRAPPER">
       <crewLimit>8</crewLimit>
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
@@ -320,6 +323,7 @@ MVAR [name] [value]
         <scrapper room="15"/>
       </crew>
     </mod-append:customShip>
+
     <mod-append:customShip name="PLAYER_SHIP_SCRAPPER_2">
       <crewLimit>10</crewLimit>
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
@@ -357,24 +361,30 @@ MVAR [name] [value]
     <mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true" unused="true">
 
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
+
       <unlock variant="a" silent="false">
         <type>4</type>
       </unlock>
+
       <unlock variant="b" silent="false">
         <type>1</type>
         <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
         <value>5</value>
       </unlock>
+
       <unlock variant="c" silent="false">
         <type>1</type>
         <shipReq>PLAYER_SHIP_TRASH_MINER_2</shipReq>
         <value>5</value>
       </unlock>
+
       <unlock variant="c" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
       </unlock>
+
     </mod-append:ship>
+
     <mod-append:customShip name="PLAYER_SHIP_TRASH_MINER">
       <crewLimit>11</crewLimit>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -1276,13 +1286,50 @@ MVAR [name] [value]
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
     </mod-append:customShip>
 
-	<!--/////// ENEMY SHIPS //////-->
+	<!--/////// HEKTAR REBEL SHIPPEHEHSHIPEHEHHHSHIP //////-->
 	
 	<mod-append:ship name="PLAYER_SHIP_HEKTAR_REBEL" b="false" c="false" unused="true" />
+
 	<mod-append:customShip name="PLAYER_SHIP_HEKTAR_REBEL">
 		<crewLimit>12</crewLimit>
 		<hiddenAug>SHIP_SLUG</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+	</mod-append:customShip>
+
+	<!--/////// AUTO GUN //////-->
+
+	<mod-append:ship name="PLAYER_SHIP_AUTOGUNBOAT" b="true" c="true" unused="true" />
+
+	<mod-append:customShip name="PLAYER_SHIP_AUTOGUNBOAT">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+		<hiddenAug>NO_GHOST</hiddenAug>
+		<crewLimit>4</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_AUTOGUNBOAT_2">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+		<hiddenAug>NO_GHOST</hiddenAug>
+		<crewLimit>4</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_AUTOGUNBOAT_3">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+		<hiddenAug>NO_GHOST</hiddenAug>
+		<crewLimit>6</crewLimit>
+	</mod-append:customShip>
+
+	<!--/////// EXTRAELITE SLOT 2 //////-->
+
+	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE_SLOT2" b="false" c="false" unused="true" />
+	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>NO_GHOST</hiddenAug>
+		<hiddenAug>NO_GHOST</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>1</crewLimit>
 	</mod-append:customShip>
 
     <!--/////// ENEMY SHIPS //////-->
@@ -1376,14 +1423,14 @@ SHIP HANGAR ORDER
 			<mod-append:ship>PLAYER_SHIP_FEDERATION_CARRIER</mod-append:ship> <!-- Federation Carrier -->
 			<!--Page 3--> <!-- Secondary Cast -->
 			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!--Stalwart Defense-->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_AUTOGUNBOAT</mod-append:ship> <!-- Auto GunBoat -->
 			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming Ships -->
 			<mod-append:ship>PLAYER_SHIP_HEKTAR_REBEL</mod-append:ship> <!-- Completely Original Design -->
-			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
 			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
+			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_ROBOTTO</mod-append:ship> <!-- ARS+ Robotto Ships -->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_EXTRAELITE_SLOT2</mod-append:ship> <!-- More Elites -->
 			<mod-append:empty/>
 		</mod:findLike>
 	</mod:findLike>

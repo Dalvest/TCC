@@ -120,6 +120,53 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="TC_SHOTGUN_GOLD_ARTILLERY">
+	<type>BURST</type>
+	<title>Dense Gold Flak Artillery</title>
+	<short>Gold Flak Arty</short>
+	<tip>tip_flak</tip>
+	<desc>A modified gold flak cannon that fires denser chunks of gold. Its projectiles are incredibly heavy and sluggish. The fancy outer coat means that it should return a large bounty when sold.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 14 damage.</tooltip>
+	<drone_targetable>1</drone_targetable>
+	<damage>1</damage>
+	<radius>50</radius>
+	<shots>1</shots>
+	<projectiles>
+		<projectile count="5" fake="false">tc_debris_large_gold</projectile>
+		<projectile count="9" fake="false">tc_debris_med_gold</projectile>
+		<projectile count="2" fake="true">tc_debris_small_gold</projectile>
+	</projectiles>
+	<spin>720</spin>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>25</cooldown>
+	<power>3</power>
+	<cost>220</cost>
+	<bp>2</bp>
+	<speed>15</speed>
+	<rarity>0</rarity>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>tc_shotgun_gold</weaponArt>
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="TC_SHOTGUN_LEAD">
 	<type>BURST</type>
 	<title>Lead Flak</title>
@@ -1346,6 +1393,180 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<!--////////////////////////////////////////////// ARTY ZONE /////////////////////////////////////////////-->
+
+<weaponBlueprint name="ARTILLERY_AUTO_A_MISSILE">
+	<type>MISSILES</type>
+	<title>Assault gun Artillery</title>
+	<short>Assault gun</short>
+	<desc>Artillery: Fires a missile that does decent damage and never misses.
+	Base Cooldown: 12</desc>
+	<tooltip>Artillery: Fires a missile that does decent damage and never misses.</tooltip>
+	<damage>3</damage>
+	<sysDamage>-1</sysDamage>
+	<persDamage>-1</persDamage>
+	<hullBust>1</hullBust>
+	<missiles>0</missiles>
+	<accuracyMod>100</accuracyMod>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>12</cooldown>
+	<power>1</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<image>missile_burst_1</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_auto_a</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_AUTO_B_BIO">
+	<type>BURST</type>
+	<title>Orchid child corpse Rail-shotgun</title>
+	<short>Corpse rail-shotgun</short>
+	<desc>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</desc>
+	<tooltip>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</tooltip>
+	<drone_targetable>1</drone_targetable>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<radius>20</radius>
+	<shots>1</shots>
+	<sp>10</sp>
+	<stun>3</stun>
+	<spin>720</spin>
+	<fireChance>10</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>20</cooldown>
+	<power>0</power>
+	<cost>65</cost>
+	<bp>10</bp>
+	<speed>80</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="4" fake="false">babyorchid</projectile>
+		<projectile count="4" fake="true">babyorchid</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>orchidDeath</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>orchidDeath</sound>
+		<sound>orchidDeath</sound>
+		<sound>orchidDeath</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_auto_b</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_ENERGY_MATH">
+	<type>LASER</type>
+	<title>Integrate function artillery</title>
+	<short>Math Artillery</short>
+	<desc>Strange mathematical artillery that fires energy blasts quicker with each volley.
+	Base Cooldown: 14.5</desc>
+	<tooltip>Strange mathematical artillery that fires energy blasts quicker with each volley.</tooltip>
+	<damage>2</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<ion>2</ion>
+	<speed>40</speed>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>14.5</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<boost>
+		<type>cooldown</type>
+		<amount>2.3</amount>
+		<count>4</count>
+	</boost>
+	<image>energy_shot</image>
+	<explosion>explosion_energy</explosion>
+	<launchSounds>
+		<sound>energy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_auto_c</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_RESONATE_WAVE">
+	<type>BURST</type>
+	<drone_targetable>1</drone_targetable>
+	<title>Resonating Wave Projector</title>
+	<short>Artillery</short>
+	<desc>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.
+	Base Cooldown: 50</desc>
+	<tooltip>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.</tooltip>
+	<radius>25</radius>
+	<damage>1</damage>
+	<sysDamage>4</sysDamage>
+	<persDamage>4</persDamage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>10</sp>
+	<stun>2</stun>
+	<fireChance>0</fireChance>
+	<breachChance>100</breachChance>
+	<cooldown>50</cooldown>
+	<power>0</power>
+	<cost>75</cost>
+	<bp>10</bp>
+	<speed>90</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="5" fake="false">resonating_wave</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ancient_missile</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_auto_elite</weaponArt> 
+</weaponBlueprint>
+
 <!--//////////////////////////////////////////////LASER/////////////////////////////////////////////-->
 
 <weaponBlueprint name="TC_LASER_MARKSMAN">
@@ -1965,6 +2186,7 @@
 	<weaponArt>tc_rescrapflak</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
+
 <blueprintList name="TC_FIREWORK_VARIANTS">
 	<name>TC_FIREWORK_DISPENSER</name>
 </blueprintList>
@@ -4220,8 +4442,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<desc>The Prince of Lanius commands his own personal army of Scrappers - he seeks to envelop so much scrap that he'll become one huge, sentient ship, with the eventual goal of eating the world. For now... he's still crew-sized.</desc>
 	<unlock id="ship_PLAYER_SHIP_TRASH_EATER_unlock"/>
 	<systemList>
-		<artillery power="1" room="22" start="true" weapon="TC_SHOTGUN_GOLD" img="room_artillery" />
-		<artillery power="1" room="23" start="true" weapon="TC_SHOTGUN_GOLD" img="room_artillery_6" />
+		<artillery power="1" room="22" start="true" weapon="TC_SHOTGUN_GOLD_ARTILLERY" img="room_artillery" />
+		<artillery power="1" room="23" start="true" weapon="TC_SHOTGUN_GOLD_ARTILLERY" img="room_artillery_6" />
 		<battery power="1" room="13" start="true" img="room_battery_scrapper" />
 		<cloaking power="1" room="18" start="true" img="room_cloaking" />
 		<clonebay power="3" room="9" start="true">
@@ -4235,8 +4457,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones max="8" power="3" room="7" start="true" img="room_drones_4" />
-		<engines max="8" power="2" room="3" start="true" img="room_engines_8">
+		<drones max="12" power="3" room="7" start="true" img="room_drones_4" />
+		<engines max="12" power="2" room="3" start="true" img="room_engines_8">
 			<slot>
 				<direction>left</direction>
 				<number>2</number>
@@ -4262,14 +4484,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields max="8" power="2" room="10" start="true" img="room_shields">
+		<shields max="12" power="2" room="10" start="true" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="2" room="14" start="true" />
-		<weapons max="8" power="4" room="5" start="false" img="room_weapons_4">
+		<weapons max="12" power="4" room="5" start="false" img="room_weapons_4">
 			<slot>
 				<direction>up</direction>
 				<number>0</number>
@@ -4277,7 +4499,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</weapons>
 	</systemList>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>3</droneSlots>
+	<droneSlots>4</droneSlots>
 	<weaponList missiles="7" count="4" />
 	<droneList drones="10" count="3">
 		<drone name="TC_COMBAT_BOMB" />
@@ -5336,8 +5558,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemList>
 		<artillery power="1" room="17" start="true" weapon="IONARTILLERY" img="room_artillery_5" />
 		<artillery power="1" room="15" start="true" weapon="IONARTILLERY" img="room_artillery_6" />
-		<artillery power="1" room="16" start="true" weapon="TC_FIREWORK_DISPENSER" img="room_artillery" />
-		<artillery power="1" room="14" start="true" weapon="TC_FIREWORK_DISPENSER" img="room_artillery" />
+		<artillery power="1" room="16" start="true" weapon="SINGULARITY_PROJECTOR_1" img="room_artillery" />
+		<artillery power="1" room="14" start="true" weapon="SINGULARITY_PROJECTOR_1" img="room_artillery" />
 		<battery power="1" room="2" start="false" img="room_battery" />
 		<cloaking power="1" room="13" start="true" img="room_cloaking 2x1 01-00-00" />
 		<clonebay power="1" room="10" start="true">
@@ -5853,7 +6075,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="7" count="3">
 		<weapon name="LASER_HEAVY_1" />
-		<weapon name="TC_SINEWAVE" />
+		<weapon name="LASER_PIERCE" />
 	</weaponList>
 	<droneList drones="9" count="3">
 		<drone name="FOCUS_1_AMP2" />
@@ -7673,6 +7895,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>10</systemLimit>
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="3" count="3">
@@ -7751,6 +7974,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>9</systemLimit>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="4" count="4">
@@ -7764,6 +7988,269 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="slug_saboteur" />
 	<crewCount amount="1" class="blobslug" />
 	<aug name="HEKTAR_GEL" />
+</shipBlueprint>
+
+<!--/////// AGB  //////-->
+
+<shipBlueprint name="PLAYER_SHIP_AUTOGUNBOAT" layout="mup_autogunboat_a" img="mup_autogunboat_a">
+	<class>Automated Gunboat</class>
+	<name>Factory Standard</name>
+	<desc>An unassuming ship armed with an equally unassuming but reliable artillery that can be very powerful once fully upgraded. This must be pre-Protogen Revolution tech.</desc>
+	<systemList>
+		<artillery power="1" max="4" room="5" start="true" weapon="ARTILLERY_AUTO_A_MISSILE" img="room_artillery" />
+		<battery power="2" max="2" room="9" start="true" img="room_battery_17" />
+		<cloaking power="1" room="4" start="true" img="room_cloaking_8" />
+		<doors power="2" room="2" start="true" img="room_doors_5">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="3" max="8" room="6" start="true" img="room_drones_13" />
+		<engines power="2" max="7" room="1" start="true" img="room_engines_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="3" start="false" img="room_hacking" />
+		<mind power="1" room="11" start="false" img="room_mind_12" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="10" start="true" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="7" start="false" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="2" max="8" room="8" start="true" img="Little_weapons_room">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<systemLimit>9</systemLimit>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="5" count="3" />
+	<droneList drones="9" count="3">
+		<drone name="BATTLETOG_DEFEND" />
+		<drone name="REPAIR" />
+		<drone name="MANNING" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="2" />
+	<aug name="EX_DEFENSE_SCRAMBLER" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_AUTOGUNBOAT_2" layout="mup_autogunboat_b" img="mup_autogunboat_b">
+	<class>Automated Gunboat</class>
+	<name>Tactical Oddity</name>
+	<desc>The engineers behind this ship clearly prioritized brutality first and morality last, which has forced this ship to use peculiar tactics and.....whatever in the name of all that's holy the artillery is.</desc>
+	<systemList>
+		<artillery power="1" max="4" room="3" start="true" weapon="ARTILLERY_AUTO_B_BIO" img="room_artillery_1x1" />
+		<battery power="1" max="2" room="7" start="false" img="room_battery_7" />
+		<cloaking power="1" room="1" start="false" img="room_cloaking_8" />
+		<doors power="1" room="12" start="true" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="3" max="10" room="10" start="true" img="room_drones_orchid_3" />
+		<engines power="2" room="2" start="true" img="room_engines_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="false" img="room_hacking_2" />
+		<mind power="1" room="11" start="true" img="room_mind_9" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="6" start="true" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="9" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="true" />
+		<weapons power="2" max="8" room="5" start="true" img="Little_weapons_room">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<systemLimit>9</systemLimit>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="5" count="2" />
+	<droneList drones="5" count="4">
+		<drone name="GANA_BATTLE" />
+		<drone name="MANNING" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="8" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_AUTOGUNBOAT_3" layout="mup_autogunboat_c" img="mup_autogunboat_c">
+	<class>Automated Gunboat</class>
+	<name>Crash Course</name>
+	<desc>A group of students has decided that feeding Callie's code with high level maths is going to be hilarious, now they ended up with a very intelligent version of Callie that is also deadly.</desc>
+	<systemList>
+		<artillery power="3" max="4" room="1" start="true" weapon="ARTILLERY_ENERGY_MATH" img="room_artillery_1x1" />
+		<battery power="1" max="2" room="7" start="true" img="room_battery_13" />
+		<cloaking power="2" room="13" start="false" img="room_cloaking_4" />
+		<doors power="2" room="10" start="true" img="room_doors_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" max="8" room="3" start="true" img="room_drones_orchid_3" />
+		<engines power="2" max="7" room="12" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="2" room="2" start="false" img="room_hacking_5" />
+		<medbay power="1" room="8" start="false" img="room_medbay_9">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="2" room="6" start="false" img="room_mind_9" />
+		<oxygen power="1" room="9" start="true" img="room_oxygen_12" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="4" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="5" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="2" max="10" room="11" start="true" img="Little_weapons_room">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<systemLimit>9</systemLimit>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="8" count="4">
+		<weapon name="LOOT_MATH_1" />
+		<weapon name="LOOT_MATH_5" />
+	</weaponList>
+	<droneList drones="12" count="2">
+		<drone name="DOCTOR_DEFENSE" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="5" />
+	<crewCount amount="1" class="robottos" />
+	<crewCount amount="1" class="protogen" />
+	<crewCount amount="1" class="human_phoenix" />
+</shipBlueprint>
+
+<!--/////////////// AGB ELITE ///////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2" layout="mup_autogunboat_elite" img="mup_autogunboat_elite">
+	<class>Elite Automated Gunboat</class>
+	<name>Hardware Reset</name>
+	<desc>Having hijacked a gunboat for testing purposes, CICA has already installed many readily built systems and a very special artillery in the ship. One thing CICA seemed to forgot however, is the reactor itself!</desc>
+	<systemList>
+		<artillery power="2" max="5" room="1" start="true" weapon="ARTILLERY_RESONATE_WAVE" img="room_artillery_1x1" />
+		<battery power="3" max="3" room="4" start="true" img="room_battery_9" />
+		<cloaking power="1" room="6" start="true" img="room_cloaking_9" />
+		<doors power="2" room="13" start="true" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="3" max="10" room="10" start="true" img="room_drones_orchid_3" />
+		<engines power="2" max="8" room="12" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="true" img="room_hacking_5" />
+		<mind power="1" room="11" start="true" img="room_mind_4" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="2" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="5" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="3" max="10" room="9" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<systemLimit>9</systemLimit>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="LASER_BURST_3" />
+	</weaponList>
+	<droneList drones="5" count="3">
+		<drone name="MANNING" />
+		<drone name="MANNING" />
+		<drone name="REPAIR" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="0" />
+	<aug name="EX_DEFENSE_SCRAMBLER" />
+	<aug name="EX_AUTO_COOLDOWN" />
 </shipBlueprint>
 
 <!--

@@ -7,8 +7,6 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-
-
 <!--////////////////// FLAK /////////////////-->
 
 <animSheet name="tc_shotgun_gold" w="296" h="51" fw="37" fh="51">weapon_flak/tc_shotgun_gold.png</animSheet>
@@ -122,6 +120,49 @@
 	<fireFrame>2</fireFrame>
 	<firePoint  x="25" y="4"/>
 	<mountPoint x="7" y="44"/>
+</weaponAnim>
+
+
+<!--////////////////// ARTY ZONE /////////////////-->
+
+<animSheet name="artillery_auto_a" w="174" h="49" fw="29" fh="49">weapon_artillery/artillery_auto_a.png</animSheet>
+<weaponAnim name="artillery_auto_a">
+	<sheet>artillery_auto_a</sheet>
+	<desc length="6" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="14" y="21" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+
+<animSheet name="artillery_auto_b" w="656" h="69" fw="41" fh="69">weapon_artillery/artillery_auto_b.png</animSheet>
+<weaponAnim name="artillery_auto_b">
+	<sheet>artillery_auto_b</sheet>
+	<desc length="16" x="0" y="0" />
+	<chargedFrame>12</chargedFrame>
+	<fireFrame>13</fireFrame>
+	<firePoint x="20" y="4" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+
+<animSheet name="artillery_auto_c" w="403" h="81" fw="31" fh="81">weapon_artillery/artillery_auto_c.png</animSheet>
+<weaponAnim name="artillery_auto_c">
+	<sheet>artillery_auto_c</sheet>
+	<desc length="13" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="15" y="54" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+
+<animSheet name="artillery_auto_elite" w="925" h="75" fw="37" fh="75">weapon_artillery/artillery_auto_elite.png</animSheet>
+<weaponAnim name="artillery_auto_elite">
+	<sheet>artillery_auto_elite</sheet>
+	<desc length="25" x="0" y="0" />
+	<chargedFrame>21</chargedFrame>
+	<fireFrame>22</fireFrame>
+	<firePoint x="18" y="22" />
+	<mountPoint x="0" y="0" />
 </weaponAnim>
 
 <!--////////////////// BOMB FLAK //////////////////-->
@@ -382,13 +423,6 @@
 	<firePoint  x="15" y="2"/>
 	<mountPoint x="2" y="25"/>
 </weaponAnim>
-
-<animSheet name="tc_debuffer_projection" w="300" h="30" fw="75" fh="30">projectiles/tc_debuffer_projection.png</animSheet>
-<anim name="tc_debuffer_projection">
-	<sheet>tc_debuffer_projection</sheet>
-	<desc length="4" x="0" y="0"/>
-	<time>0.3</time>
-</anim>
 
 <!--/////////////////// MISSILES //////////////////-->
 
@@ -838,8 +872,6 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-<!--///////////////////AUTOCANNON PROJECTILES//////////////////-->
-
 <animSheet name="GB_shot_light" w="160" h="16" fw="40" fh="16">projectiles/GB_shot_light_strip4.png</animSheet>
 <anim name="GB_shot_light">
 	<sheet>GB_shot_light</sheet>
@@ -861,8 +893,6 @@
 	<time>0.5</time>
 </anim>
 
-<!--/////TEAR GAS/////-->
-
 <animSheet name="tc_tear_gas" w="110" h="24" fw="11" fh="24">projectiles/tc_tear_gas.png</animSheet>
 <anim name="tc_tear_gas">
 	<sheet>tc_tear_gas</sheet>
@@ -876,9 +906,6 @@
 	<desc length="6" x="0" y="0"/>
 	<time>1</time>
 </anim>
-
-<!--///////////////MISSILE PROJECTILES///////////////-->
-
 
 <animSheet name="tc_stolen_battery_shot_1" w="352" h="35" fw="44" fh="35">projectiles/tc_stolen_battery_shot_1.png</animSheet>
 <anim name="tc_stolen_battery_shot_1">
@@ -964,8 +991,6 @@
 	<time>1</time>
 </anim>
 
-<!--///////////////FLAK PROJECTILES//////////////-->
-
 <animSheet name="tc_debris_large_gold" w="96" h="32" fw="32" fh="32">projectiles/tc_debris_large_gold.png</animSheet>
 <anim name="tc_debris_large_gold">
 	<sheet>tc_debris_large_gold</sheet>
@@ -1029,9 +1054,6 @@
 	<time>1</time>
 </anim>
 
-
-<!--////////////////// SINGULARITY PROJECTILES /////////////////-->
-
 <animSheet name="tc_singularity" w="450" h="59" fw="75" fh="59">projectiles/tc_singularity.png</animSheet>
 <anim name="tc_singularity">
 	<sheet>tc_singularity</sheet>
@@ -1039,16 +1061,12 @@
 	<time>1</time>
 </anim>
 
-<!--////////////////// ELECTRON PROJECTILES /////////////////-->
-
 <animSheet name="tc_electron_explosion" w="288" h="32" fw="32" fh="32">projectiles/tc_electron_explosion.png</animSheet>
 <anim name="tc_electron_explosion">
 	<sheet>tc_electron_explosion</sheet>
 	<desc length="9" x="0" y="0"/>
 	<time>1</time>
 </anim>
-
-<!--////////////////// ION PROJECTILES /////////////////-->
 
 <animSheet name="Ion_Charger_projectile" w="87" h="3" fw="29" fh="3">projectiles/tc_ion.png</animSheet>
 <anim name="Ion_Charger_projectile">
@@ -1071,14 +1089,25 @@
 	<time>1</time>
 </anim>
 
-<!--///////////////LASER PROJECTILES///////////////-->
-
-
 <animSheet name="tc_laser_shot" w="300" h="30" fw="75" fh="30">projectiles/tc_laser_shot.png</animSheet>
 <anim name="tc_laser_shot_shot">
 	<sheet>tc_laser_shot</sheet>
 	<desc length="4" x="0" y="0"/>
 	<time>0.1</time>
+</anim>
+
+<animSheet name="resonating_wave" w="31" h="31" fw="31" fh="31">projectiles/resonating_wave.png</animSheet>
+<anim name="resonating_wave">
+	<sheet>resonating_wave</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>0.5</time>
+</anim>
+
+<animSheet name="tc_debuffer_projection" w="300" h="30" fw="75" fh="30">projectiles/tc_debuffer_projection.png</animSheet>
+<anim name="tc_debuffer_projection">
+	<sheet>tc_debuffer_projection</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.3</time>
 </anim>
 
 <!--
