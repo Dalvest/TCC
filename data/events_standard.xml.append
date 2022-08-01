@@ -324,58 +324,137 @@
 </event>
 
 <event name="STOREEVENT_RSA_BOMB_FLAKS">
-	<text>TEST</text>
-	<ship load="RSA_BOMB_FLAK_MANT" hostile="true"/>
+	<text>As soon as you enter the beacon, you're hailed by an RSA Mantis ship nearby: "I welcome you to our bomb flak store! Here, we selling many bomb flaks! ...And other things, because no one is buying them necause theg are thinking they are filthy minelaunchers! They are not!"</text>
+	<ship load="RSA_BOMB_FLAK_MANT" hostile="false"/>
+	<choice req="BLUELIST_MANTIS_DUMB">
+		<text>(Mantis Crew) "Having anything better?"</text>
+		<event>
+			<text>"You thinking bomb flaks are minelaunchers, huh?! Either that, or you are thinking I having some special, ancient bomb flak made by some, I don't know, sentient cube? But, of course it's the former, right? Well, you are STUPID! And stupid people, even Mantis, must dying!" The ship powers up its weapons and attacks!</text>
+			<ship hostile="true"/>
+			<choice>
+				<text>Prepare for battle.</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="mantis_rsa">
+		<text>(RSA Mantis Crew) Your RSA Mantis expresses sympathy for their plight.</text>
+		<event>
+			<text>"Thank you! We RSA Mantis know better than anyone else the inner workings of bomb flak! If only others knew same... Maybe we needing to work on marketing? Nah, we just need less stupid people in multiverse! Here, have some scrap." The Mantis sends over some supplies, and invites you into their store.</text>
+			<autoReward level="LOW">standard</autoReward>
+			<choice>
+				<text>Check out their store.</text>
+				<event>
+					<store>STORE_RSA_BOMB_FLAKS</store>
+					<text>Before you shop, you still have some time to do something else aboard the ship.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="BLUELIST_MANTIS_SMART">
+		<text>(Smart Mantis Crew) Your Mantis expresses understanding of the difference between minelaunchers and bomb flaks.</text>
+		<event>
+			<text>"A fellow Mantis, not of RSA, understanding difference between bomb flaks and minelaunchers? I can't believing it!" The Mantis' voice lowers to a whisper: "This weapon not ready for public yet, just prototype. But, I think you deserving of it." They send over a bomb flak that seems to be based on a Flak IV! "Now, there are many more bomb flaks here I'm sure you will love. Come on in!"</text>
+			<weapon name="TC_BOMB_SHOTGUN_4"/>
+			<choice>
+				<text>Check out their store.</text>
+				<event>
+					<store>STORE_RSA_BOMB_FLAKS</store>
+					<text>Before you shop, you still have some time to do something else aboard the ship.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Check out their store.</text>
+		<event>
+			<store>STORE_RSA_BOMB_FLAKS</store>
+			<text>Before you shop, you still have some time to do something else aboard the ship.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
 </event>
 
 <event name="DESTROYED_STOREEVENT_RSA_BOMB_FLAKS">
-	<text>cool</text>
-	<autoReward level="MED">scrap</autoReward>
+	<text>You probably shouldn't have let your Mantis insult them like that, but hindsight is 20/20. All of the bomb flaks inside the ship were destroyed, but at least you can scrap the remains of the ship.</text>
+	<autoReward level="MED">standard</autoReward>
 </event>
 
 <event name="DEAD_CREW_STOREEVENT_RSA_BOMB_FLAKS">
-	<text>epic</text>
-	<autoReward level="HIGH">scrap</autoReward>
+	<text>You probably shouldn't have let your Mantis insult them like that, but hindsight is 20/20. Inside the cargo-hold, you find the bomb flaks. You also notice a locked door that seems to hold something important, but you can't open it. You content yourself with taking one of the bomb flaks and scrapping the rest of the ship.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<weapon name="GIFTLIST_BOMB_FLAKS"/>
 </event>
 
 <mod:findName type="eventList" name="STORELIST_CIVILIAN">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+	<mod-append:event load="STOREEVENT_RSA_BOMB_FLAKS"/>
 </mod:findname>
 
 <mod:findName type="eventList" name="STORELIST_MILITIA">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+	<mod-append:event load="STOREEVENT_RSA_BOMB_FLAKS"/>
 </mod:findname>
 
 <mod:findName type="eventList" name="STORELIST_FED">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+	<mod-append:event load="STOREEVENT_RSA_BOMB_FLAKS"/>
 </mod:findname>
 
 <mod:findName type="eventList" name="STORELIST_PIRATE">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+	<mod-append:event load="STOREEVENT_RSA_BOMB_FLAKS"/>
 </mod:findname>
 
 <mod:findName type="eventList" name="STORELIST_MANTIS">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+	<mod-append:event load="STOREEVENT_RSA_BOMB_FLAKS"/>
 </mod:findname>
 
 <mod:findName type="eventList" name="STORELIST_ABANDONED">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+	<mod-append:event load="STOREEVENT_RSA_BOMB_FLAKS"/>
 </mod:findname>
 
 <mod:findName type="eventList" name="STORELIST_LANIUS">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+	<mod-append:event load="STOREEVENT_RSA_BOMB_FLAKS"/>
 </mod:findname>
 
 <mod:findName type="eventList" name="STORELIST_LEECH">
 	<mod-append:event load="STOREEVENT_RSA_RESOURCES"/>
 	<mod-append:event load="STOREEVENT_RSA_RESTORE"/>
+	<mod-append:event load="STOREEVENT_RSA_BOMB_FLAKS"/>
 </mod:findname>
 
 </FIL>
