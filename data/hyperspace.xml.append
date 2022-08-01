@@ -4399,24 +4399,26 @@ CREW
 		</mod-append:drone>
 	</mod:findLike>
 
-	<mod-append:race name="robo_mant">
-		<canFight>true</canFight>
-		<canSabotage>true</canSabotage>
-		<canRepair>false</canRepair>
-		<canSuffocate>false</canSuffocate>
-		<canMan>false</canMan>
-		<maxHealth>150</maxHealth>
-		<stunMultiplier>0.25</stunMultiplier>
-		<resistsMindControl>true</resistsMindControl>	<!-- salvage event -->
-		<droneAI>
-			<fightAI/>
-			<returnToDroneRoom/>
-		</droneAI>
-		<damageMultiplier>1.4</damageMultiplier>
-		<fireDamageMultiplier>0.25</fireDamageMultiplier>
-		<moveSpeedMultiplier>0.8</moveSpeedMultiplier>
-		<controllable>true</controllable>
-	</mod-append:race>
+	<mod:findLike type="crew">
+		<mod-append:race name="robo_mant">
+			<canFight>true</canFight>
+			<canSabotage>true</canSabotage>
+			<canRepair>false</canRepair>
+			<canSuffocate>false</canSuffocate>
+			<canMan>false</canMan>
+			<maxHealth>150</maxHealth>
+			<stunMultiplier>0.25</stunMultiplier>
+			<resistsMindControl>true</resistsMindControl>	<!-- salvage event -->
+			<droneAI>
+				<fightAI/>
+				<returnToDroneRoom/>
+			</droneAI>
+			<damageMultiplier>1.4</damageMultiplier>
+			<fireDamageMultiplier>0.25</fireDamageMultiplier>
+			<moveSpeedMultiplier>0.8</moveSpeedMultiplier>
+			<controllable>true</controllable>
+		</mod-append:race>
+	</mod:findLike>
 
 	<mod:findLike type="drones">
 		<mod-append:drone name="SILICA_BATTLE">
@@ -4429,21 +4431,23 @@ CREW
 		</mod-append:drone>
 	</mod:findLike>
 
-	<mod-append:race name="silica">
-		<controllable>true</controllable>
-		<canFight>true</canFight>
-		<canSabotage>true</canSabotage>
-		<canRepair>true</canRepair>
-		<canMan>true</canMan>
-		<canSuffocate>false</canSuffocate>
-		<canBurn>false</canBurn>
-		<defaultSkillLevel>2</defaultSkillLevel>
-		<maxHealth>100</maxHealth>
-		<damageMultiplier>2.2</damageMultiplier>
-		<healSpeed>2.0</healSpeed>
-		<moveSpeedMultiplier>1.75</moveSpeedMultiplier>
-		<stunMultiplier>0</stunMultiplier>
-	</mod-append:race>
+	<mod:findLike type="crew">
+		<mod-append:race name="silica">
+			<controllable>true</controllable>
+			<canFight>true</canFight>
+			<canSabotage>true</canSabotage>
+			<canRepair>true</canRepair>
+			<canMan>true</canMan>
+			<canSuffocate>false</canSuffocate>
+			<canBurn>false</canBurn>
+			<defaultSkillLevel>2</defaultSkillLevel>
+			<maxHealth>100</maxHealth>
+			<damageMultiplier>2.2</damageMultiplier>
+			<healSpeed>2.0</healSpeed>
+			<moveSpeedMultiplier>1.75</moveSpeedMultiplier>
+			<stunMultiplier>0</stunMultiplier>
+		</mod-append:race>
+	</mod:findLike>
 	
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
