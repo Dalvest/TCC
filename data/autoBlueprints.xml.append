@@ -93,6 +93,20 @@
 	<mod-append:name>mantis_freebusiness</mod-append:name>
 </mod:findName>
 
+<blueprintList name="BLUELIST_MANTIS_DUMB">
+	<name>mantis</name>
+	<name>mantis_free</name>
+	<name>mantis_warlord</name>
+	<name>mantis_suzerain</name>
+	<name>unique_kaz</name> <!--sorry, Kaz-->
+</blueprintList>
+
+<!--mantis_rsa isn't here because it's for an RSA event-->
+<blueprintList name="BLUELIST_MANTIS_SMART">
+	<name>mantis_bishop</name>
+	<name>unique_freddy</name>
+</blueprintList>
+
 <!--/////// LANIUS //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
@@ -380,6 +394,22 @@
 	<name>TC_BOMB_SHOTGUN_LOCK</name>
 </blueprintList>
 
+<blueprintList name="LIST_BOMB_SHOTGUNS_NORMAL">
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_FREE</name>
+	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
 <!--/////// WHY DIDN"T YOU FUCKEN UHHHHHHHH //////-->
 
 <blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH"> <!--just a list of the weapons ariadne can get you-->
@@ -518,6 +548,21 @@
 	<name>TC_BOMB_SHOTGUN_CHARGE</name>
 	<name>TC_BOMB_SHOTGUN_FREE</name>
 	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
+<!--/////// GIFTLISTS ///////-->
+
+<blueprintList name="GIFTLIST_BOMB_FLAKS">
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
 	<name>TC_BOMB_SHOTGUN_INSTANT</name>
 	<name>TC_BOMB_SHOTGUN_FIRE</name>
 	<name>TC_BOMB_SHOTGUN_ION</name>
