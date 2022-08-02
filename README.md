@@ -102,4 +102,4 @@ Update 1.08
 
 # CONTACT/ISSUES
 
-Feel free to DM @Dalvest on the FTL: Multiverse discord with any issue you might have.
+Feel free to DM @Dalvest AND ME on the FTL: Multiverse discord with any issue you might have.
