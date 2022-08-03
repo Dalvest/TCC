@@ -1,0 +1,106 @@
+<FTL>
+
+<event name="SCRAPPER_SLAVES">
+	<text>A Lanius Welder ship is near the beacon, but it doesn't attack. Instead, it hails you: "Slaves sale, 'Scrappers.' Enemies of Swarm. Buy?" The feed then cuts to there cargo hold, inside of which are a variety of Scrappers.</text>
+	<ship load="SHIP_SCRAPPER_SLAVES" hostile="false"/>
+	<choice>
+		<text>Buy a Scrapper Soldier.</text>
+		<event>
+			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-45"/>
+			</item_modify>
+			<crewMember amount="1" class="scrapper_soldier"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Scrapper Engineer.</text>
+		<event>
+			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-45"/>
+			</item_modify>
+			<crewMember amount="1" class="scrapper_engineer"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Scrapper Speedster.</text>
+		<event>
+			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-45"/>
+			</item_modify>
+			<crewMember amount="1" class="scrapper_speed"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Scrapper Defender.</text>
+		<event>
+			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-45"/>
+			</item_modify>
+			<crewMember amount="1" class="scrapper_defender"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Heavy Scrapper.</text>
+		<event>
+			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
+			<item_modify>
+				<item type="scrap" min="-45" max="-55"/>
+			</item_modify>
+			<crewMember amount="1" class="scrapper_heavy"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Attack them, save the Scrappers!</text>
+		<event>
+			<text>No one deserves to be sold into slavery, not even the Scrappers. You power up the weapons, and move in to attack.</text>
+			<ship hostile="true"/>
+			<choice>
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Ignore the Welders.</text>
+		<event>
+			<text>They try to hail you a few more times, but eventually give up and leave you alone.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="DESTROYED_SCRAPPER_SLAVES_NORMAL">
+	<text>The Lanius Welder ship has been destroyed. All of the Scrappers died in the explosion, but at least the Welders won't be able to enslave any more. You scrap the remains of the ship, and move on.</text>
+	<autoReward level="MED">standard</autoReward>
+</event>
+
+<event name="DESTROYED_SCRAPPER_SLAVES_SURVIVOR">
+	<text>The Lanius Welder ship has been destroyed. It seems one of the Scrappers survived the explosion! You rescue them from the abyss, and scrap the wreckage.</text>
+	<autoReward level="MED">standard</autoReward>
+	<crewMember amount="1" class="scrapper"/>
+</event>
+
+<eventList name="DESTROYED_SCRAPPER_SLAVES">
+	<event load="DESTROYED_SCRAPPER_SLAVES_NORMAL"/>
+	<event load="DESTROYED_SCRAPPER_SLAVES_NORMAL"/>
+	<event load="DESTROYED_SCRAPPER_SLAVES_SURVIVOR"/>
+</eventList>
+
+<event name="DEAD_CREW_SCRAPPER_SLAVES">
+	<text>You've successfully killed the Lanius Welder ship's crew. Inside the cargo-hold are the Scrappers, as expected. You bring them aboard your cargo-hold to drop off somewhere else, but a Scrapper Scavenger is so thankful they offer to join your crew!</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<crewMember amount="1" class="scrapper_scavenger"/>
+</event>
+
+</FTL>

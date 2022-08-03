@@ -67,6 +67,11 @@
 	</crew>
 </ship>
 
+<ship name="SHIP_SCRAPPER_SLAVES" auto_blueprint="LIST_SHIPS_LANIUS_ELITE_FIGHT">
+	<destroyed load="DESTROYED_SCRAPPER_SLAVES"/>
+	<deadCrew load="DEAD_CREW_SCRAPPER_SLAVES"/>
+</ship>
+
 <ship name="RSA_BOMB_FLAK_MANT" auto_blueprint="RSA_ASSAULT">
 	<destroyed load="DESTROYED_STOREEVENT_RSA_BOMB_FLAKS"/>
 	<deadCrew load="DEAD_CREW_STOREEVENT_RSA_BOMB_FLAKS"/>
