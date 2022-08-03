@@ -165,6 +165,60 @@
 	<mountPoint x="0" y="0" />
 </weaponAnim>
 
+<animSheet name="artillery_savior_a" w="5977" h="244" fw="139" fh="244">artillery_player/artillery_savior_a.png</animSheet>
+<weaponAnim name="artillery_savior_a">
+	<sheet>artillery_savior_a</sheet>
+	<desc length="43" x="0" y="0"/>
+	<chargedFrame>34</chargedFrame>
+	<fireFrame>35</fireFrame>
+	<firePoint  x="69" y="5"/>
+	<mountPoint x="0" y="0"/>
+</weaponAnim>
+
+
+<animSheet name="artillery_savior_b" w="5977" h="244" fw="139" fh="244">artillery_player/artillery_savior_b.png</animSheet>
+<weaponAnim name="artillery_savior_b">
+	<sheet>artillery_savior_b</sheet>
+	<desc length="43" x="0" y="0"/>
+	<chargedFrame>34</chargedFrame>
+	<fireFrame>35</fireFrame>
+	<firePoint  x="69" y="5"/>
+	<mountPoint x="0" y="0"/>
+</weaponAnim>
+
+
+<animSheet name="artillery_savior_c" w="1807" h="244" fw="139" fh="244">artillery_player/artillery_savior_c.png</animSheet>
+<weaponAnim name="artillery_savior_c">
+	<sheet>artillery_savior_c</sheet>
+	<desc length="13" x="0" y="0"/>
+	<chargedFrame>10</chargedFrame>
+	<fireFrame>11</fireFrame>
+	<firePoint  x="69" y="5"/>
+	<mountPoint x="0" y="0"/>
+</weaponAnim>
+
+<animSheet name="artillery_battleship_laser" w="297" h="68" fw="33" fh="68">artillery_player/artillery_battleship_laser.png</animSheet>
+<weaponAnim name="artillery_battleship_laser">
+	<sheet>artillery_battleship_laser</sheet>
+	<desc length="9" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="16" y="20" />
+	<mountPoint x="0" y="0" />
+	<chargeImage>artillery_player/artillery_battleship_laser_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="fm_minelauncher_ancalagon_remastered2" w="940" h="90" fw="47" fh="90">weapon_newgen/fm_minelauncher_ancalagon_remastered2.png</animSheet>
+<weaponAnim name="fm_minelauncher_ancalagon_remastered2">
+	<sheet>fm_minelauncher_ancalagon_remastered2</sheet>
+	<desc length="20" x="0" y="0" />
+	<chargedFrame>8</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint x="24" y="51" />
+	<mountPoint x="2" y="82" />
+	<chargeImage>weapon_newgen/fm_minelauncher_ancalagon_remastered_glow.png</chargeImage>
+</weaponAnim>
+
 <!--////////////////// BOMB FLAK //////////////////-->
 
 <animSheet name="tc_bomb_shotgun_1" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_1.png</animSheet>
@@ -769,6 +823,29 @@
 	<mountPoint x="5" y="53"/>
 </weaponAnim>
 
+<!--////////// ANCIENT WEAPONS //////////-->
+
+<animSheet name="ancient_lance" w="1728" h="94" fw="36" fh="94">weapon_newgen/ancient_lance.png</animSheet>
+<weaponAnim name="ancient_lance">
+	<sheet>ancient_lance</sheet>
+	<desc length="48" x="0" y="0"/>
+	<chargedFrame>9</chargedFrame>
+	<fireFrame>10</fireFrame>
+	<firePoint  x="18" y="59"/>
+	<mountPoint x="4" y="63"/>
+	<chargeImage>weapon_ancient/ancient_beam3_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="void_laser3" w="290" h="105" fw="58" fh="105">weapon_ancient/void_laser3.png</animSheet>
+<weaponAnim name="void_laser3">
+	<sheet>void_laser3</sheet>
+	<desc length="5" x="0" y="0"/>
+	<chargedFrame>3</chargedFrame>
+	<fireFrame>4</fireFrame>
+	<firePoint  x="28" y="71"/>
+	<mountPoint x="9" y="69"/>
+</weaponAnim>
+
 <!--////////// PRE-EMPTIVE WEAPON RECOLORS AKA INSTANT FLAIR //////////-->
 
 <animSheet name="instant_ion_charge" w="38" h="91" fw="38" fh="91">weapon_instant/instant_ion_chainglow.png</animSheet>
@@ -871,6 +948,27 @@
           PROJECTILES
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
+
+<animSheet name="fm_mine_ancalagon_remastered" w="14" h="14" fw="14" fh="14">projectiles/fm_mine_ancalagon_remastered.png</animSheet>
+<anim name="fm_mine_ancalagon_remastered">
+	<sheet>fm_mine_ancalagon_remastered</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="mine_legion" w="24" h="24" fw="24" fh="24">projectiles/mine_legion.png</animSheet>
+<anim name="mine_legion">
+	<sheet>mine_legion</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="missile_legion" w="80" h="32" fw="80" fh="32">projectiles/missile_legion.png</animSheet>
+<anim name="missile_legion">
+	<sheet>missile_legion</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
 
 <animSheet name="GB_shot_light" w="160" h="16" fw="40" fh="16">projectiles/GB_shot_light_strip4.png</animSheet>
 <anim name="GB_shot_light">
@@ -4548,7 +4646,7 @@
 
 	<!--/////// TRACKER //////-->
 
-	<animSheet name="protogen_tracker" w="315" h="455" fw="35" fh="35">people/protogen_tracker_base.png</animSheet>
+	<animSheet name="protogen_tracker" w="315" h="455" fw="35" fh="35">people/protogen_TRACKER_base.png</animSheet>
 	<anim name="protogen_tracker_clone">
 		<sheet>protogen_tracker</sheet>
 		<desc length="6" x="0" y="2"/>
@@ -5430,7 +5528,579 @@
 		<time>1</time>
 	</anim>
 
+	<!--/////////////////////// RELIC REVIVAL ZONE //////////////////-->
 
-
+	<animSheet name="avatarlegion" w="560" h="280" fw="35" fh="35">people/avatarlegion_base.png</animSheet>
+	<anim name="avatarlegion_clone">
+		<sheet>avatarlegion</sheet>
+		<desc length="10" x="0" y="3" />
+		<time>0.75</time>
+	</anim>
+	<anim name="avatarlegion_death_right">
+		<sheet>avatarlegion</sheet>
+		<desc length="9" x="0" y="5" />
+		<time>2</time>
+	</anim>
+	<anim name="avatarlegion_death_left">
+		<sheet>avatarlegion</sheet>
+		<desc length="9" x="0" y="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="avatarlegion_walk_down">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.6</time>
+	</anim>
+	<anim name="avatarlegion_walk_right">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_walk_up">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_walk_left">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_shoot_down">
+		<sheet>avatarlegion</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_shoot_right">
+		<sheet>avatarlegion</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_shoot_up">
+		<sheet>avatarlegion</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_shoot_left">
+		<sheet>avatarlegion</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_fire_down">
+		<sheet>avatarlegion</sheet>
+		<desc length="10" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegion_fire_right">
+		<sheet>avatarlegion</sheet>
+		<desc length="10" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegion_fire_up">
+		<sheet>avatarlegion</sheet>
+		<desc length="10" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegion_fire_left">
+		<sheet>avatarlegion</sheet>
+		<desc length="10" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegion_repair">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="1" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegion_punch_up">
+		<sheet>avatarlegion</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_punch_down">
+		<sheet>avatarlegion</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegion_teleport">
+		<sheet>avatarlegion</sheet>
+		<desc length="8" x="2" y="0" />
+		<time>0.5</time>
+	</anim>
+	<anim name="avatarlegion_type_right">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>2.0</time>
+	</anim>
+	<anim name="avatarlegion_type_left">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>2.0</time>
+	</anim>
+	<anim name="avatarlegion_type_up">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>2.0</time>
+	</anim>
+	<anim name="avatarlegion_type_down">
+		<sheet>avatarlegion</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>2.0</time>
+	</anim>
+	<anim name="avatarlegion_portrait">
+		<sheet>avatarlegion</sheet>
+		<desc length="1" x="0" y="0" />
+		<time>1</time>
+	</anim>
+	
+	<animSheet name="avatarlegiona" w="560" h="280" fw="35" fh="35">people/avatarlegiona_base.png</animSheet>
+	<anim name="avatarlegiona_clone">
+		<sheet>avatarlegiona</sheet>
+		<desc length="10" x="0" y="3" />
+		<time>0.75</time>
+	</anim>
+	<anim name="avatarlegiona_death_right">
+		<sheet>avatarlegiona</sheet>
+		<desc length="9" x="0" y="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="avatarlegiona_death_left">
+		<sheet>avatarlegiona</sheet>
+		<desc length="9" x="0" y="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="avatarlegiona_walk_down">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegiona_walk_right">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegiona_walk_up">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegiona_walk_left">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegiona_shoot_down">
+		<sheet>avatarlegiona</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegiona_shoot_right">
+		<sheet>avatarlegiona</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegiona_shoot_up">
+		<sheet>avatarlegiona</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegiona_shoot_left">
+		<sheet>avatarlegiona</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegiona_fire_down">
+		<sheet>avatarlegiona</sheet>
+		<desc length="8" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegiona_fire_right">
+		<sheet>avatarlegiona</sheet>
+		<desc length="8" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegiona_fire_up">
+		<sheet>avatarlegiona</sheet>
+		<desc length="8" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegiona_fire_left">
+		<sheet>avatarlegiona</sheet>
+		<desc length="8" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="avatarlegiona_repair">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="1" />
+		<time>0.5</time>
+	</anim>
+	<anim name="avatarlegiona_punch_up">
+		<sheet>avatarlegiona</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegiona_punch_down">
+		<sheet>avatarlegiona</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="avatarlegiona_teleport">
+		<sheet>avatarlegiona</sheet>
+		<desc length="8" x="2" y="0" />
+		<time>0.5</time>
+	</anim>
+	<anim name="avatarlegiona_type_right">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>1.5</time>
+	</anim>
+	<anim name="avatarlegiona_type_left">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>1.5</time>
+	</anim>
+	<anim name="avatarlegiona_type_up">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>1.5</time>
+	</anim>
+	<anim name="avatarlegiona_type_down">
+		<sheet>avatarlegiona</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>1.5</time>
+	</anim>
+	<anim name="avatarlegiona_portrait">
+		<sheet>avatarlegiona</sheet>
+		<desc length="1" x="0" y="0" />
+		<time>1</time>
+	</anim>
+	
+	<animSheet name="saviors" w="560" h="280" fw="35" fh="35">people/saviors_base.png</animSheet>
+	<anim name="saviors_clone">
+		<sheet>saviors</sheet>
+		<desc length="10" x="0" y="3" />
+		<time>0.75</time>
+	</anim>
+	<anim name="saviors_death_right">
+		<sheet>saviors</sheet>
+		<desc length="9" x="0" y="5" />
+		<time>2</time>
+	</anim>
+	<anim name="saviors_death_left">
+		<sheet>saviors</sheet>
+		<desc length="9" x="0" y="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="saviors_walk_down">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.6</time>
+	</anim>
+	<anim name="saviors_walk_right">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_walk_up">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_walk_left">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_shoot_down">
+		<sheet>saviors</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_shoot_right">
+		<sheet>saviors</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_shoot_up">
+		<sheet>saviors</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_shoot_left">
+		<sheet>saviors</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_fire_down">
+		<sheet>saviors</sheet>
+		<desc length="10" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviors_fire_right">
+		<sheet>saviors</sheet>
+		<desc length="10" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviors_fire_up">
+		<sheet>saviors</sheet>
+		<desc length="10" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviors_fire_left">
+		<sheet>saviors</sheet>
+		<desc length="10" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviors_repair">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="1" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviors_punch_up">
+		<sheet>saviors</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_punch_down">
+		<sheet>saviors</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviors_teleport">
+		<sheet>saviors</sheet>
+		<desc length="8" x="2" y="0" />
+		<time>0.5</time>
+	</anim>
+	<anim name="saviors_type_right">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>2.0</time>
+	</anim>
+	<anim name="saviors_type_left">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>2.0</time>
+	</anim>
+	<anim name="saviors_type_up">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>2.0</time>
+	</anim>
+	<anim name="saviors_type_down">
+		<sheet>saviors</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>2.0</time>
+	</anim>
+	<anim name="saviors_portrait">
+		<sheet>saviors</sheet>
+		<desc length="1" x="0" y="0" />
+		<time>1</time>
+	</anim>
+	
+	
+	
+	<animSheet name="saviorsa" w="560" h="280" fw="35" fh="35">people/saviorsa_base.png</animSheet>
+	<anim name="saviorsa_clone">
+		<sheet>saviorsa</sheet>
+		<desc length="10" x="0" y="3" />
+		<time>0.75</time>
+	</anim>
+	<anim name="saviorsa_death_right">
+		<sheet>saviorsa</sheet>
+		<desc length="9" x="0" y="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="saviorsa_death_left">
+		<sheet>saviorsa</sheet>
+		<desc length="9" x="0" y="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="saviorsa_walk_down">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviorsa_walk_right">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviorsa_walk_up">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviorsa_walk_left">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="7" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviorsa_shoot_down">
+		<sheet>saviorsa</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviorsa_shoot_right">
+		<sheet>saviorsa</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviorsa_shoot_up">
+		<sheet>saviorsa</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviorsa_shoot_left">
+		<sheet>saviorsa</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviorsa_fire_down">
+		<sheet>saviorsa</sheet>
+		<desc length="8" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviorsa_fire_right">
+		<sheet>saviorsa</sheet>
+		<desc length="8" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviorsa_fire_up">
+		<sheet>saviorsa</sheet>
+		<desc length="8" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviorsa_fire_left">
+		<sheet>saviorsa</sheet>
+		<desc length="8" x="0" y="4" />
+		<time>0.8</time>
+	</anim>
+	<anim name="saviorsa_repair">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="1" />
+		<time>0.5</time>
+	</anim>
+	<anim name="saviorsa_punch_up">
+		<sheet>saviorsa</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviorsa_punch_down">
+		<sheet>saviorsa</sheet>
+		<desc length="15" x="0" y="6" />
+		<time>1.0</time>
+	</anim>
+	<anim name="saviorsa_teleport">
+		<sheet>saviorsa</sheet>
+		<desc length="8" x="2" y="0" />
+		<time>0.5</time>
+	</anim>
+	<anim name="saviorsa_type_right">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>1.5</time>
+	</anim>
+	<anim name="saviorsa_type_left">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>1.5</time>
+	</anim>
+	<anim name="saviorsa_type_up">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>1.5</time>
+	</anim>
+	<anim name="saviorsa_type_down">
+		<sheet>saviorsa</sheet>
+		<desc length="4" x="0" y="2" />
+		<time>1.5</time>
+	</anim>
+	<anim name="saviorsa_portrait">
+		<sheet>saviorsa</sheet>
+		<desc length="1" x="0" y="0" />
+		<time>1</time>
+	</anim>
+	
+	<!--ION ANOMALY ANIMATIONS ENEMY -->
+	
+	<animSheet name="void_drain_crew_enemy" w="280" h="105" fw="35" fh="35">people/void_drain_crew_base.png</animSheet>
+	
+	<anim name="void_drain_crew_enemy_death_right">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="1"/>
+		<time>20</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_death_left">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="1"/>
+		<time>20</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_walk_down">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_walk_left">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_walk_up">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_walk_right">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	
+	<anim name="void_drain_crew_enemy_shoot_down">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_shoot_right">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_shoot_up">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_shoot_left">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_punch_up">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="8" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_punch_down">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="8" x="0" y="2"/>
+		<time>0.3</time>
+	</anim>
+	
+	<anim name="void_drain_crew_enemy_portrait">
+		<sheet>void_drain_crew_enemy</sheet>
+		<desc length="4" x="0" y="2"/>
+		<time>1</time>
+	</anim>
 
 </FTL>

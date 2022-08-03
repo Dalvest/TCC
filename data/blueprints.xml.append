@@ -16,8 +16,521 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-<!--//////////////////////////////////////////// FLAK ////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////// ARTILLERY ZONE ////////////////////////////////////////////////////////-->
 
+<weaponBlueprint name="ARTILLERY_SAVIOR_ION">
+	<type>LASER</type>
+	<title>Savior Ion Artillery</title>
+	<short>Artillery</short>
+	<desc>Artillery: Fires a burst of 4 strong ions which do heavy ion damage and cause hazards.
+	Base Cooldown: 30</desc>
+	<tooltip>Artillery: Fires a burst of 4 strong ions which do heavy ion damage and cause hazards.</tooltip>
+	<damage>0</damage>
+	<ion>2</ion>
+	<speed>30</speed>
+	<shots>4</shots>
+	<stun>0</stun>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>30</cooldown>
+	<power>0</power>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<image>energy_purple</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_savior_a</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_SAVIOR_LASER">
+	<type>BURST</type>
+	<title>Savior Laser Artillery</title>
+	<short>Artillery</short>
+	<desc>Artillery: Fires a flak of 3 strong heavy lasers which pierce 1 shield and do 3 system damage.
+	Base Cooldown: 40</desc>
+	<tooltip>Artillery: Fires a flak of 3 strong heavy lasers which pierce 1 shield and do 3 system damage.</tooltip>
+	<radius>70</radius>
+	<damage>2</damage>
+	<ion>0</ion>
+	<speed>50</speed>
+	<shots>1</shots>
+	<stun>0</stun>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>40</cooldown>
+	<power>0</power>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">laser_royal</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ancient_laser</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_savior_b</weaponArt>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="ARTILLERY_SAVIOR_FALSE">
+	<type>BURST</type>
+	<title>Savior Laser Artillery</title>
+	<short>Artillery</short>
+	<desc>Artillery: Fires a cluster of missiles, flak, and lasers to do massive damage to the enemy ship.
+	Base Cooldown: 60</desc>
+	<tooltip>Artillery: Fires a cluster of missiles, flak, and lasers to do massive damage to the enemy ship.</tooltip>
+	<radius>30</radius>
+	<damage>1</damage>
+	<ion>0</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<stun>10</stun>
+	<sp>0</sp>
+	<stunChance>6</stunChance>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>60</cooldown>
+	<power>0</power>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">laser_ancient</projectile>
+		<projectile count="2" fake="false" blueprint="MISSILES_LEGION">mine_legion</projectile>
+		<projectile count="4" fake="false" blueprint="SHOTGUN_LEGION">debris_med_gold</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ancient_laser</sound>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+		<sound>flak</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_savior_c</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BATTLESHIP_LASER">
+	<type>BURST</type>
+	<title>Legion Laser Artillery</title>
+	<short>Artillery</short>
+	<desc>Artillery: Fires a burst of 6 heavy lasers, which have a 20% chance to start a fire.
+	Base Cooldown: 50</desc>
+	<tooltip>Artillery: Fires a burst of 6 heavy lasers, which have a 20% chance to start a fire.</tooltip>
+	<radius>45</radius>
+	<damage>2</damage>
+	<ion>0</ion>
+	<speed>50</speed>
+	<shots>1</shots>
+	<stun>0</stun>
+	<sp>0</sp>
+	<fireChance>2</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>50</cooldown>
+	<power>0</power>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="6" fake="false">laser_royal</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ancient_laser</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_battleship_laser</weaponArt>
+</weaponBlueprint>
+
+<!-- ////////////////////////////////////////////////////////////////////Fake Weapons///////////////////////////////////////////////////////////////-->
+
+<weaponBlueprint name="MISSILES_LEGION">
+	<type>MISSILES</type>
+	<tip>tip_missiles_heavy</tip>
+	<title>'Thanatos' Missiles</title>
+	<short>'Thanatos"</short>
+	<desc>A standard Missile Launcher with reasonable bang for its buck.</desc>
+	<tooltip>Fires 1 missile; does 2 system damage; pierces all shields.</tooltip>
+	<damage>1</damage>
+	<sysDamage>2</sysDamage>
+	<missiles>0</missiles>
+	<speed>40</speed>
+	<hullBust>1</hullBust>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>2</fireChance>
+	<breachChance>2</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>0</cooldown>
+	<power>1</power>
+	<cost>45</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>missile_heavy_2</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="SHOTGUN_LEGION">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Legion Flak Gun</title>
+	<tip>tip_flak</tip>
+	<short>Gold Flak</short>
+	<desc>A modified Flak cannon that fires literal chunks of gold. Its projectiles are very heavy and sluggish, but it should return a large bounty when sold.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
+	<radius>20</radius>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown>
+	<power>0</power>
+	<cost>180</cost>
+	<bp>10</bp>
+	<speed>20</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">debris_large_gold</projectile>
+		<projectile count="2" fake="false">debris_med_gold</projectile>
+		<projectile count="3" fake="true">debris_small_gold</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>shotgun_gold</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="FM_MINELAUNCHER_ANCALAGON_REMASTERED2_FAKE">
+	<type>BURST</type>
+	<tip>tip_ancalagon</tip>
+	<flavorType>Aether Minelauncher</flavorType>
+	<title>Starlight Launcher</title>
+	<short>Starlight</short>
+	<desc>A weapon crafted from metals you can't identify and crystals that hum with aberrant power. This one fires 4 low hull damage, no system damage and low hazard mines. A label reads "Property of the Ancalagon Division."</desc>
+	<tooltip>Fires 1 missile; does 1 damage; pierces all shields.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<radius>55</radius>
+	<missiles>1</missiles>
+	<freeMissileChance>20</freeMissileChance>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<crewSpawnChance>2</crewSpawnChance>
+	<cooldown>11</cooldown>
+	<power>3</power>
+	<speed>50</speed>
+	<cost>95</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="5" fake="false">fm_mine_ancalagon_remastered</projectile>
+	</projectiles>
+	<accuracyMod>20</accuracyMod>
+	<spawnCrew>
+        <race>FM_CRYSTAL_LIST</race>
+        <number>1</number>
+        <noSlot>true</noSlot>
+		<name>Anomalous Crystal</name>   
+		<lifetime>120</lifetime>
+       <statBoosts>
+            <statBoost name="noClone">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+          <statBoost name="trueHealAmount">
+                    <boostType>FLAT</boostType>
+                    <amount>-9999999</amount>
+					<affectsSelf>true</affectsSelf>
+                    <shipTarget>PLAYER_SHIP</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+					  <priority>999999</priority>
+						<whiteList>
+							<fm_crystal_red/>
+							<fm_crystal_green/>
+							<fm_crystal_blue/>
+							<fm_crystal_white/>
+							<fm_crystal_black/>
+							</whiteList>
+                  
+					</statBoost>
+        </statBoosts>
+    </spawnCrew>
+	<launchSounds>
+		<sound>ancient_missile</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>fm_minelauncher_ancalagon_remastered2</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<!--//////////////////////////////////////////// ANCIENT TECH ////////////////////////////////////////////////////////-->
+
+<weaponBlueprint name="ANCIENT_LANCE">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Lance Beam MK II</title>
+	<short>Lance II</short>
+	<desc>A Heavily modified Lance Beam, this weapon was modelled after incredibly powerful ancient tech, boosting the signature powers of this already destructive weapon greatly.</desc>
+	<tooltip>Beam weapon, 8 Shield Piercing, 3 damage.</tooltip>
+	<damage>3</damage>
+	<sp>8</sp>
+	<fireChance>3</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>32</cooldown>
+	<power>5</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>170</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>ancient_beam</sound>
+	</launchSounds>
+	<weaponArt>ancient_lance</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="FM_MINELAUNCHER_ANCALAGON_REMASTERED2">
+	<type>BURST</type>
+	<tip>tip_ancalagon</tip>
+	<flavorType>Aether Minelauncher</flavorType>
+	<title>Starlight Launcher</title>
+	<short>Starlight</short>
+	<desc>A weapon crafted from metals you can't identify and crystals that hum with aberrant power. This one fires 4 low hull damage, no system damage and low hazard mines. A label reads "Property of the Ancalagon Division."</desc>
+	<tooltip>Fires 1 missile; does 1 damage; pierces all shields.</tooltip>
+	<damage>1</damage>
+	<sysDamage>-1</sysDamage>
+	<radius>55</radius>
+	<missiles>1</missiles>
+	<freeMissileChance>20</freeMissileChance>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<crewSpawnChance>2</crewSpawnChance>
+	<cooldown>15</cooldown>
+	<power>3</power>
+	<speed>40</speed>
+	<cost>95</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="2" fake="false">fm_mine_ancalagon_remastered</projectile>
+		<projectile count="3" fake="false" blueprint="FM_MINELAUNCHER_ANCALAGON_REMASTERED2_FAKE">fm_mine_ancalagon_remastered</projectile>
+	</projectiles>
+	<accuracyMod>20</accuracyMod>
+	<spawnCrew>
+        <race>FM_CRYSTAL_LIST</race>
+        <number>1</number>
+        <noSlot>true</noSlot>
+		<name>Anomalous Crystal</name>   
+		<lifetime>120</lifetime>
+       <statBoosts>
+            <statBoost name="noClone">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+          <statBoost name="trueHealAmount">
+                    <boostType>FLAT</boostType>
+                    <amount>-9999999</amount>
+					<affectsSelf>true</affectsSelf>
+                    <shipTarget>PLAYER_SHIP</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+					  <priority>999999</priority>
+						<whiteList>
+							<fm_crystal_red/>
+							<fm_crystal_green/>
+							<fm_crystal_blue/>
+							<fm_crystal_white/>
+							<fm_crystal_black/>
+							</whiteList>
+                  
+					</statBoost>
+        </statBoosts>
+    </spawnCrew>
+	<launchSounds>
+		<sound>ancient_missile</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>fm_minelauncher_ancalagon_remastered2</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<!-- //////////////////////////////////////////////////////////Void Weapons///////////////////////////////////////////////////////////////-->
+
+<weaponBlueprint name="VOID_LASER3">
+	<type>LASER</type>
+	<flavorType>Aether Laser</flavorType>
+	<title>Voidbringer</title>
+	<short>Voidbringer</short>
+	<tip>tip_ancient</tip>
+	<desc>A heavily modified burst laser originally manufactured by the royals, but redesigned by 'The Savior' to hunt and kill any and all ancients she came across. Fires 4 shots that pierce through all regular and zoltan shields, doing 1 system damage and limiting the system hit by 1 power per shot for 20 seconds. Any drones that enter the room will be rapidly torn apart, preventing speedy repairs.</desc>
+	<tooltip>Fires 1 shot, causes 2 damage with low chance of fire and breaching.</tooltip>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<shots>4</shots>
+	<accuracyMod>30</accuracyMod>
+	<sp>10</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>23</cooldown>
+	<hullBust>0</hullBust>
+	<power>3</power>
+	<cost>200</cost>
+	<crewSpawnChance>10</crewSpawnChance>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_royal</image>
+	<spawnCrew>
+        <race>void_drain</race>
+        <number>1</number>
+        <noSlot>true</noSlot>
+		<name>Bruh</name>   
+		<lifetime>20</lifetime>
+       <statBoosts>
+            <statBoost name="noClone">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+          <statBoost name="trueHealAmount">
+                    <boostType>FLAT</boostType>
+                    <amount>-9999999</amount>
+					<affectsSelf>true</affectsSelf>
+                    <shipTarget>PLAYER_SHIP</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+					  <priority>999999</priority>
+					</statBoost>
+        </statBoosts>
+    </spawnCrew>
+	<launchSounds>
+		<sound>ancient_laser</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>void_laser3</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<!--//////////////////////////////////////////// FLAK ////////////////////////////////////////////////////////-->
 
 <weaponBlueprint name="TC_SHOTGUN_OMEGA">
 	<type>BURST</type>
@@ -3611,6 +4124,42 @@
 
 <!--/////////////////////FUNCTIONAL AUGS//////////////////////////-->
 
+<augBlueprint name="SAVIOR_SHIELD">
+	<title>Savior Shields</title>
+	<desc>A strange variation of Ancient tech, this Aether powered energy shield only has 5 hitpoints, but heals your crew even without life support powered. Enemy boarders are slowly torn apart on your ship thanks to ancient nano-bots, scaling with power in sensors.  Also boosts standard shield charge rate by 15%.</desc>
+	<cost>125</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="REGEN_SHIELD">
+	<title>Regenerative Shields</title>
+	<desc>A strange variation of Ancient tech, this Aether powered energy shield only has 1 hitpoint, but raises your shield regen to ungodly levels or strength. </desc>
+	<cost>125</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="FALSE_SHIELD">
+	<title>Infernalis Barrier</title>
+	<desc>A powerful variation of Ancient tech, this Aether powered energy shield has a massively upgraded energy shield, with 5 hitpoints and Weapon Pre-Ignition. However, it increases weapon cooldown by 10%.</desc>
+	<cost>175</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="LEGION_LOADER">
+	<title>Legionnares Overclocker</title>
+	<desc>A very powerful reloader that increases charge speed for weapons, shields, and the FTL Drive by 20%. </desc>
+	<cost>175</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
+
 <augBlueprint name="CUSTOM_CRYSTAL">
 	<title>Leah's Vengeance</title>
 	<desc>You're not sure how this works and Leah refuses to tell you. Fires a system damaging pinpoint whenever you take damage</desc>
@@ -4281,7 +4830,7 @@
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-                SHIPS
+                OFFBRAND SHIPYARD
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
@@ -8253,6 +8802,306 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="EX_AUTO_COOLDOWN" />
 </shipBlueprint>
 
+<!--/////////////// SAVIOR ///////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_SAVIOR" layout="mup_savior_a" img="mup_savior_a">
+	<class>Savior Cruiser</class>
+	<name>Their Savior</name>
+	<unlock id="ship_PLAYER_SHIP_SAVIOR_unlock"/>
+	<desc>This strange cruiser was developed by a long dead subrace of demi-god cubes, made for the purpose of protecting your crew at all costs.  </desc>
+	<systemList>
+		<artillery max="4" power="2" room="7" start="true" weapon="ARTILLERY_SAVIOR_ION" img="room_artillery" />
+		<battery max="2" power="1" room="20" start="false" img="room_battery" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking" />
+		<doors power="2" room="0" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="12" power="2" room="10" start="true" img="room_drones" />
+		<engines power="1" room="24" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="9" start="false" img="room_hacking_8" />
+		<mind power="1" room="13" start="false" img="room_mind" />
+		<oxygen power="2" room="30" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="6" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="15" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="23" start="true" />
+		<weapons max="8" power="3" room="18" start="false" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>5</droneSlots>
+	<weaponList missiles="0" count="3">
+	</weaponList>
+	<droneList drones="7" count="3">
+		<drone name="MENDER" />
+	</droneList>
+	<health amount="45" />
+	<maxPower amount="5" />
+	<crewCount amount="1" class="human_soldier" />
+	<crewCount amount="1" class="crystal_sentinel" />
+	<crewCount amount="1" class="shell_radiant" />
+	<crewCount amount="1" class="saviors" />
+	<aug name="SAVIOR_SHIELD" />
+	<shieldImage>mupc_anointed</shieldImage>
+</shipBlueprint>
+
+
+<shipBlueprint name="PLAYER_SHIP_SAVIOR_2" layout="mup_savior_b" img="mup_savior_b">
+	<class>Savior Cruiser</class>
+	<name>Your Savior</name>
+	<unlock id="ship_PLAYER_SHIP_SAVIOR_2_unlock"/>
+	<desc>When this powerful variation of an Ancient Cruiser was designed, they overclocked its shields to make them completely impenetrable by normal lasers. However, doing so broke the System, reducing its capacity to a mere 2 shield bubbles.  </desc>
+	<systemList>
+		<artillery max="5" power="2" room="7" start="true" weapon="ARTILLERY_SAVIOR_LASER" img="room_artillery" />
+		<battery max="2" power="1" room="20" start="false" img="room_battery" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="0" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="8" power="2" room="10" start="false" img="room_drones" />
+		<engines power="1" room="24" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="9" start="false" img="room_hacking_8" />
+		<medbay power="1" room="2" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="13" start="false" img="room_mind" />
+		<oxygen power="1" room="30" start="false" img="room_oxygen_2" />
+		<pilot power="1" room="6" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields max="4" power="2" room="15" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="23" start="false" />
+		<weapons max="8" power="3" room="18" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="3">
+	    <weapon name="ANCIENT_ION_2" />
+	</weaponList>
+	<droneList drones="7" count="3">
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="obelisk_royal" />
+	<crewCount amount="1" class="lanius_augmented" />
+	<crewCount amount="1" class="obelisk_royal" />
+	<crewCount amount="1" class="saviors" />
+	<aug name="REGEN_SHIELD" />
+	<shieldImage>mup_savior_b</shieldImage>
+</shipBlueprint>
+
+
+<shipBlueprint name="PLAYER_SHIP_SAVIOR_3" layout="mup_savior_c" img="mup_savior_c">
+	<class>Savior Cruiser</class>
+    <name>False Savior</name>
+    <unlock id="ship_PLAYER_SHIP_SAVIOR_3_unlock"/>
+    <desc>This vessel was captured by the Legion after striking a deal with a runaway Avatar. Unfortunately for said Avatar, the Legion does not take too kindly to Aliens, and enslaved them, before making its cruiser their own, with some upgrades. </desc>
+	<systemList>
+		<artillery max="5" power="1" room="28" start="true" weapon="ARTILLERY_SAVIOR_FALSE" img="room_artillery" />
+		<battery max="2" power="1" room="23" start="false" img="room_battery_2" />
+		<cloaking power="1" room="9" start="false" img="room_cloaking" />
+		<clonebay power="1" room="8" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="29" start="false" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="8" power="2" room="6" start="false" img="room_drones_12" />
+		<engines power="1" room="21" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_6" />
+		<medbay power="1" room="8" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="12" start="false" img="room_mind_10" />
+		<oxygen power="1" room="3" start="true" img="room_oxygen" />
+		<pilot power="1" room="19" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="30" start="true" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="7" power="2" room="22" start="true" img="room_shields_2">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="1" start="false" />
+		<weapons max="8" power="3" room="7" start="true" img="room_weapons_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="0" count="2">
+		<weapon name="ANCIENT_LANCE" />
+	</weaponList>
+	<droneList drones="3" count="4">
+	</droneList>
+	<health amount="50" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="goldroyal" />
+	<crewCount amount="1" class="human_legion" />
+	<crewCount amount="1" class="avatarlegion" />
+	<aug name="FALSE_SHIELD" />
+	<shieldImage>mup_savior_c</shieldImage>
+</shipBlueprint>
+
+<!--/////////////// LEGION SHIPPY ///////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_BATTLESHIP" layout="mup_battleship_a" img="mup_battleship_a">
+	<class>Legion Battleship</class>
+    <name>The Siege</name>
+    <unlock id="ship_PLAYER_SHIP_BATTLESHIP_unlock"/>
+    <desc>The pride and joy of the legion. While it is not yet fully functional, that doesn't mean it isn't a force to be reckoned with.</desc>
+	<systemList>
+		<artillery max="5" power="1" room="12" start="true" weapon="ARTILLERY_BATTLESHIP_LASER" img="room_artillery" />
+		<cloaking max="5" power="1" room="5" start="false" img="room_cloaking" />
+		<clonebay max="4" power="2" room="9" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors max="3" power="1" room="6" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones max="8" power="1" room="10" start="false" img="room_drones" />
+		<engines max="8" power="1" room="2" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking max="3" power="1" room="3" start="false" img="room_hacking" />
+		<mind max="3" power="1" room="13" start="false" img="room_mind" />
+		<oxygen max="4" power="1" room="11" start="true" img="room_oxygen" />
+		<pilot max="3" power="1" room="1" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors max="3" power="1" room="4" start="true" img="room_sensors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="7" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter max="4" power="2" room="0" start="true" />
+		<weapons max="8" power="2" room="8" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="ZENITH_1" />
+	</weaponList>
+	<droneList drones="3" count="4">
+	</droneList>
+	<health amount="25" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="human_legion" />
+	<crewCount amount="1" class="human_legion" />
+	<crewCount amount="1" class="human_legion" />
+	<aug name="LEGION_LOADER" />
+	<shieldImage>mup_cultist_a</shieldImage>
+</shipBlueprint>
+
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           JULK'S EXPANDCODE
@@ -8292,6 +9141,94 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>While ability is active, moves at half speed and does 3x combat damage</power>
 		<power>Does 1.5x sabotage damage</power>
 	</powerList>
+</crewBlueprint>
+
+<!--///////GENERIC - SAVIORS//////-->
+
+<crewBlueprint name="saviors">
+	<title>Saviors Servant</title>
+	<short>SaviorS</short>
+	<desc>A sentient AI construct built by the Savior for managing her ship. Though confined by limitations set for its own good, under your control you can free it from its shackles.</desc>
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Immune to mind control and sees adjacent rooms</power>
+		<power>Immune to suffocation, takes reduced fire damage</power>
+		<power>Slowly repairs itself out of combat, 125 max health.</power>
+		<power>Can be switched between Control and Liberated modes with a cooldown, losing direct control but granting large boosts to their stats</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="saviorsa">
+	<title>Saviors Servant</title>
+	<short>SaviorS</short>
+	<desc>A sentient AI construct built by the Savior for managing her ship. Though confined by limitations set for its own good, under your control you can free it from its shackles.</desc>
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Immune to mind control and sees adjacent rooms</power>
+		<power>Immune to suffocation, takes reduced fire damage</power>
+		<power>Slowly repairs itself even in combat, 100 max health, 1.75x combat damage</power>
+		<power>Can be switched between Control and Liberated modes with a cooldown, losing direct control but granting large boosts to their stats</power>
+		<power>4x repair speed</power>
+	</powerList>
+</crewBlueprint>
+
+<!--///////GENERIC - OFFBRAND PROTOGEN//////-->
+
+<crewBlueprint name="avatarlegion">
+	<title>Legionnare Avatar</title>
+	<short>LegionA</short>
+	<desc>A former sentient AI construct, now enslaved by the legion to follow their every command. When they enslaved it, they happened to give it a variety of upgrades, however it was given a little bit too much power, and may break free of it's shackles from time to time.</desc>
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Immune to mind control and sees adjacent rooms.</power>
+		<power>Immune to suffocation, and repairs at 2x speed.</power>
+		<power>Quickly repairs itself out of combat, 150 max health.</power>
+		<power>Moves 30% faster, and does 2.7x crew damage.</power>
+		<power>Periodically breaks free, running rampant and losing self-healing capabilities every 25 seconds.</power>
+		<power>Starts with level 2 training in all stats.</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="avatarlegiona">
+	<title>Enslaved Avatar</title>
+	<short>HelpMe</short>
+	<desc>Why won't you help me, you monster?</desc>
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Help Me</power>
+		<power>Help Me</power>
+		<power>Help Me</power>
+		<power>Help Me</power>
+		<power>Help Me</power>
+		<power>Help Me</power>
+	</powerList>
+</crewBlueprint>
+
+<!--///////POWER DRAIN CREW JANK//////-->
+
+<crewBlueprint name="void_drain"> <!--Void Laser Drain-->
+	<desc>Power Drain</desc>
+	<title>Power Drain</title>
+	<short>Power Drain</short>
+	<cost>50</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+       <power>: -Draining 1 power from any system in the room for 20 seconds</power>
+	</powerList>
+	<colorList>
+		<layer>
+		<color r="17" g="255" b="0" a="0.7"/>
+		</layer>
+	</colorList>
 </crewBlueprint>
 
 <!--///////GENERIC - SCRAPPERS//////-->
