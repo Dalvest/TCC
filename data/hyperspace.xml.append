@@ -5,32 +5,19 @@
 <!-- Enables command console in game \\ press L to use
 
 EVENT          Run an event.                           Usage: EVENT <event_id>        Example: EVENT FREE_AUG
-LOAD           Loads a ship blueprint.                 Usage: LOAD <ship_id> <str>    Example: LOAD MANTIS_BOMBER 5 (with 5 sector strength)
-ACH            Unlock achievement.                     Usage: ACH <achievement_id>    Example: ACH ACH_SECTOR_8
 SECTOR         Go to sector type.                      Usage: SECTOR <sector_type>    Example: SECTOR PIRATE_SECTOR
 SCRAP          Add scrap.                              Usage: SCRAP <num_to_add>      Example: SCRAP 500
 WEAPON         Add a weapon blueprint.                 Usage: WEAPON <weapon_id>      Example: WEAPON LASER_BURST_1
-SHIP           Unlock a ship.                          Usage: SHIP <ship_id>          Example: SHIP PLAYER_SHIP_MANTIS
 DRONES         Add drone parts.                        Usage: DRONES <num_to_add>     Example: DRONES 50
-DRONE          Add a drone blueprint.                  Usage: DRONE <drone_id>        Example: DRONE COMBAT_2
-FUEL           Add fuel.                               Usage: FUEL <num_to_add>       Example: FUEL 50
-MISSILES       Add missiles.                           Usage: MISSILES <num_to_add>   Example: MISSILES 50
 RICH           Add 80 of each resource and 1999 scrap. Usage: RICH
 GOD            Fully upgrade every system and reactor. Usage: GOD
 DELETE         Destroys enemy ship.                    Usage: DELETE
 SYS            Add a system.                           Usage: SYS <system_name>       Example: SYS cloaking
 AUG            Add an augmentation.                    Usage: AUG <augment_name>      Example: AUG O2_MASKS
 CREW           Add a crew member.                      Usage: CREW [race_name]        Example: CREW slug
-EXIT           Makes your location an exit beacon      Usage: EXIT
-STORE          Creates a store at your location        Usage: STORE [sector]          Example: STORE 3
-KILL           Kills a person on your ship             Usage: KILL <crew_name>        Example: KILL John
+KILL           Kills a person on your ship             Usage: KILL <crew_name>        Example: KILL John Wick
 DELETECREW     Kills everyone on the enemy ship        Usage: DELETECREW
 SPEED          Changes gamespeed
-VARIABLE [name] [value]
-VAR [name] [value]
-METAVARIABLE [name] [value]
-METAVAR [name] [value]
-MVAR [name] [value]
 -->
 
 <FTL><!--appending to Inferno-Core-->
@@ -1455,6 +1442,66 @@ MVAR [name] [value]
 		<crewLimit>1</crewLimit>
 	</mod-append:customShip>
 
+	<!--/////// SAVIOR SHIPS //////-->
+
+	<mod-append:ship name="PLAYER_SHIP_SAVIOR" b="true" c="true" unused="true">
+
+		<unlock variant="a" silent="false">
+		<type>2</type>
+		<shipReq>PLAYER_SHIP_ANCIENT_2</shipReq>
+		</unlock>
+		<unlock variant="b" silent="false">
+		<type>2</type>
+		<shipReq>PLAYER_SHIP_SAVIOR</shipReq>
+		</unlock>
+		<unlock variant="c" silent="false">
+		<type>4</type>
+		</unlock>
+
+	</mod-append:ship>
+
+	<mod-append:customShip name="PLAYER_SHIP_SAVIOR">
+		<hiddenAug>SHIP_ANCIENT</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>10</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_SAVIOR_2">
+		<hiddenAug>SHIP_ANCIENT</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>10</crewLimit>
+		<rooms>
+		<room id="15"> <!--shield-->
+			<roomAnim renderLayer="0">resist_2x2</roomAnim>
+			<roomAnim renderLayer="3">resist_icon</roomAnim>
+			<sysDamageResistChance>100</sysDamageResistChance>
+		</room>
+	</rooms>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_SAVIOR_3">
+		<hiddenAug>SHIP_ANCIENT</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>12</crewLimit>
+	</mod-append:customShip>
+
+	<!--/////// LEGIONNAIRE BATTLESHIPPEH //////-->
+	
+	<mod-append:ship name="PLAYER_SHIP_BATTLESHIP" b="false" c="false" unused="true">
+
+		<unlock variant="a" silent="false">
+		<type>2</type>
+		<shipReq>ELITE_SHIP_REBEL</shipReq>
+		</unlock>
+
+	</mod-append:ship>
+
+	<mod-append:customShip name="PLAYER_SHIP_BATTLESHIP">
+		<hiddenAug>SHIP_REBEL</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>7</crewLimit>
+	</mod-append:customShip>
+
     <!--/////// ENEMY SHIPS //////-->
 
     <mod-append:customShip name="TC_TRASH_COMPACTOR1">
@@ -1546,15 +1593,26 @@ SHIP HANGAR ORDER
 			<mod-append:ship>PLAYER_SHIP_FEDERATION_CARRIER</mod-append:ship> <!-- Federation Carrier -->
 			<!--Page 3--> <!-- Secondary Cast -->
 			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!--Stalwart Defense-->
-			<mod-append:ship>PLAYER_SHIP_AUTOGUNBOAT</mod-append:ship> <!-- Auto GunBoat -->
-			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming Ships -->
-			<mod-append:ship>PLAYER_SHIP_HEKTAR_REBEL</mod-append:ship> <!-- Completely Original Design -->
+			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_SAVIOR</mod-append:ship> <!-- Savior Ship -->
+			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
 			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_ROBOTTO</mod-append:ship> <!-- ARS+ Robotto Ships -->
-			<mod-append:ship>PLAYER_SHIP_EXTRAELITE_SLOT2</mod-append:ship> <!-- More Elites -->
 			<mod-append:empty/>
+			<mod-append:empty/>
+			<!--Page 4--> <!-- Rebel Guerrila Zone -->
+			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming Ships -->
+			<mod-append:ship>PLAYER_SHIP_HEKTAR_REBEL</mod-append:ship> <!-- Completely Original Design -->
+			<mod-append:ship>PLAYER_SHIP_BATTLESHIP</mod-append:ship> <!-- LEGION BATTLESHIP -->
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_AUTOGUNBOAT</mod-append:ship> <!-- Auto GunBoat -->
+			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_EXTRAELITE_SLOT2</mod-append:ship> <!-- More Elites -->
 		</mod:findLike>
 	</mod:findLike>
 
@@ -3699,6 +3757,7 @@ CREW
 		<deathSound>death2</deathSound>
 	</deathSounds>
 </mod-append:race>
+
 <mod-append:race name="technician">
 	<maxHealth>70</maxHealth>
 	<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
@@ -3819,6 +3878,257 @@ CREW
 				<tori />
 				<technician />
 			</whiteList>
+		</statBoost>
+	</passiveStatBoosts>
+</mod-append:race>
+
+<!--/////// SAVIORS //////-->
+
+<mod-append:race name="saviors">
+		<maxHealth>125</maxHealth>
+		<controllable>true</controllable>
+		<canBurn>false</canBurn>
+		<canSuffocate>false</canSuffocate>
+		<fireDamageMultiplier>0</fireDamageMultiplier>
+		<moveSpeedMultiplier>1</moveSpeedMultiplier>
+		<damageMultiplier>0.9</damageMultiplier>
+		<suffocationModifier>0</suffocationModifier>
+		<passiveHealAmount>4</passiveHealAmount>
+		<passiveHealDelay>1</passiveHealDelay>
+		<isTelepathic>true</isTelepathic>
+		<resistsMindControl>true</resistsMindControl>
+		<detectsLifeforms>true</detectsLifeforms>
+		<animBase>rock</animBase>
+		<defaultSkillLevel>1</defaultSkillLevel>
+		<cloneLoseSkills>false</cloneLoseSkills>
+		<skills>
+			<piloting req="999"/>
+			<engines req="999"/>
+			<shields req="999"/>
+			<weapons req="999"/>
+			<repair req="999"/>
+			<combat req="999"/>
+		</skills>
+		<deathSounds>
+			<deathSound>avatarDeath1</deathSound>
+			<deathSound>avatarDeath2</deathSound>
+			<deathSound>avatarDeath3</deathSound>
+			<deathSound>avatarDeath4</deathSound>
+		</deathSounds>
+		<repairSounds animSoundFrame="-1">
+			<repairSound>shrikeRepair</repairSound>
+		</repairSounds>
+		<powerEffect>
+			<cooldown>10</cooldown>
+			<jumpCooldown>continue</jumpCooldown>
+			<req>
+				<aiDisabled/>
+			</req>
+			<buttonText>LIBERATE</buttonText>
+			<tooltip>Toggle liberated mode. The Cognitive will not be controllable but will gain massive boosts to all of its stats. Cannot be changed back until next jump.</tooltip>
+			<cooldownColor r="255" g="255" b="255"/>
+			<transformRace>saviorsa</transformRace>
+		</powerEffect>
+</mod-append:race> 
+
+<mod-append:race name="saviorsa"> <!-- Automated, do not sell? -->
+	<maxHealth>100</maxHealth>
+	<controllable>false</controllable>
+	<selectable>true</selectable>
+	<canBurn>false</canBurn>
+	<canSuffocate>false</canSuffocate>
+	<fireDamageMultiplier>0</fireDamageMultiplier>
+	<moveSpeedMultiplier>2.5</moveSpeedMultiplier>
+	<damageMultiplier>1.1</damageMultiplier>
+	<repairSpeed>3</repairSpeed>
+	<suffocationModifier>0</suffocationModifier>
+	<passiveHealAmount>1.3</passiveHealAmount>
+	<passiveHealDelay>0</passiveHealDelay>
+	<healSpeed>1.0</healSpeed>
+	<isTelepathic>true</isTelepathic>
+	<resistsMindControl>true</resistsMindControl>
+	<detectsLifeforms>true</detectsLifeforms>
+	<animBase>rock</animBase>
+	<defaultSkillLevel>1</defaultSkillLevel>
+	<cloneLoseSkills>false</cloneLoseSkills>
+	<skills>
+		<piloting req="999"/>
+		<engines req="999"/>
+		<shields req="999"/>
+		<weapons req="999"/>
+		<repair req="999"/>
+		<combat req="999"/>
+	</skills>
+	<deathSounds>
+		<deathSound>avatarDeath1</deathSound>
+		<deathSound>avatarDeath2</deathSound>
+		<deathSound>avatarDeath3</deathSound>
+		<deathSound>avatarDeath4</deathSound>
+	</deathSounds>
+	<repairSounds animSoundFrame="-1">
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<powerEffect>
+		<cooldown>999</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<req>
+			<aiDisabled/>
+		</req>
+		<buttonText>CONTROL</buttonText>
+		<tooltip>Toggle control mode. You will assume full control over the Cognitive, but it will lose its boosted stats. Can only be changed back one per jump.</tooltip>
+		<cooldownColor r="255" g="255" b="255"/>
+		<transformRace>saviors</transformRace>
+	</powerEffect>
+</mod-append:race>
+
+<!--/////// LEGION AVATAR //////-->
+
+<mod-append:race name="avatarlegion">
+		<maxHealth>150</maxHealth>
+		<controllable>true</controllable>
+		<canBurn>true</canBurn>
+		<canSuffocate>false</canSuffocate>
+		<fireDamageMultiplier>1</fireDamageMultiplier>
+		<moveSpeedMultiplier>1.7</moveSpeedMultiplier>
+		<damageMultiplier>2.7</damageMultiplier>
+		<repairSpeed>2</repairSpeed>
+		<suffocationModifier>0</suffocationModifier>
+		<passiveHealAmount>10</passiveHealAmount>
+		<passiveHealDelay>10</passiveHealDelay>
+		<resistsMindControl>true</resistsMindControl>
+		<animBase>rock</animBase>
+		<defaultSkillLevel>2</defaultSkillLevel>
+		<cloneLoseSkills>false</cloneLoseSkills>
+		<skills>
+			<piloting req="999"/>
+			<engines req="999"/>
+			<shields req="999"/>
+			<weapons req="999"/>
+			<repair req="999"/>
+			<combat req="999"/>
+		</skills>
+		<deathSounds>
+			<deathSound>avatarDeath1</deathSound>
+			<deathSound>avatarDeath2</deathSound>
+			<deathSound>avatarDeath3</deathSound>
+			<deathSound>avatarDeath4</deathSound>
+		</deathSounds>
+		<repairSounds animSoundFrame="-1">
+			<repairSound>shrikeRepair</repairSound>
+		</repairSounds>
+		<powerEffect>
+			<cooldown>25</cooldown>
+			<jumpCooldown>continue</jumpCooldown>
+			<req>
+				<aiDisabled/>
+			</req>
+			<buttonText>LIBERATE</buttonText>
+			<tooltip>Every 25 seconds, the cognitive breaks free from its shackles and runs rampant.</tooltip>
+			<cooldownColor r="226" g="40" b="0"/>
+			<activateWhenReady>true</activateWhenReady>
+			<transformRace>avatarlegiona</transformRace>
+		</powerEffect>
+</mod-append:race>
+
+<mod-append:race name="avatarlegiona"> <!--automated-->
+	<maxHealth>150</maxHealth>
+	<controllable>false</controllable>
+	<selectable>true</selectable>
+	<canBurn>true</canBurn>
+	<canSuffocate>false</canSuffocate>
+	<fireDamageMultiplier>1</fireDamageMultiplier>
+	<moveSpeedMultiplier>1.7</moveSpeedMultiplier>
+	<damageMultiplier>2.7</damageMultiplier>
+	<repairSpeed>2</repairSpeed>
+	<suffocationModifier>0</suffocationModifier>
+	<passiveHealAmount>10</passiveHealAmount>
+	<passiveHealDelay>25</passiveHealDelay>
+	<healSpeed>1</healSpeed>
+	<resistsMindControl>true</resistsMindControl>
+	<animBase>rock</animBase>
+	<defaultSkillLevel>2</defaultSkillLevel>
+	<cloneLoseSkills>false</cloneLoseSkills>
+	<skills>
+		<piloting req="999"/>
+		<engines req="999"/>
+		<shields req="999"/>
+		<weapons req="999"/>
+		<repair req="999"/>
+		<combat req="999"/>
+	</skills>
+	<deathSounds>
+		<deathSound>avatarDeath1</deathSound>
+		<deathSound>avatarDeath2</deathSound>
+		<deathSound>avatarDeath3</deathSound>
+		<deathSound>avatarDeath4</deathSound>
+	</deathSounds>
+	<repairSounds animSoundFrame="-1">
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<powerEffect>
+		<cooldown>25</cooldown>
+		<jumpCooldown>continue</jumpCooldown>
+		<req>
+			<aiDisabled/>
+		</req>
+		<buttonText>CONTROL</buttonText>
+		<tooltip>Every 25 seconds, the cognitive breaks free from its shackles and runs rampant.</tooltip>
+		<cooldownColor r="226" g="40" b="0"/>
+		<activateWhenReady>true</activateWhenReady>
+		<transformRace>avatarlegion</transformRace>
+	</powerEffect>
+</mod-append:race>
+
+<mod-append:race name="void_drain">
+	<maxHealth>100</maxHealth>
+	<repairSpeed>0</repairSpeed>
+	<canFight>false</canFight>
+	<canRepair>false</canRepair>
+	<canSabotage>false</canSabotage>
+	<canSuffocate>false</canSuffocate>
+	<fireDamageMultiplier>0</fireDamageMultiplier>
+	<canMan>false</canMan>
+	<noClone>true</noClone>
+	<noSlot>true</noSlot>
+	<noAi>true</noAi>
+	<controllable>false</controllable>
+	<canTeleport>false</canTeleport>
+	<resistsMindControl>true</resistsMindControl>
+	<selectable>false</selectable>
+	<canPhaseThroughDoors>true</canPhaseThroughDoors>
+	<moveSpeedMultiplier>0.00</moveSpeedMultiplier>
+	<sabotageSpeedMultiplier>0.0</sabotageSpeedMultiplier>
+	<damageMultiplier>0</damageMultiplier>
+	<damageTakenMultiplier>0.0</damageTakenMultiplier>
+	<animBase>mantis</animBase>
+	<deathSounds>
+		<deathSound>energyDeath</deathSound>
+	</deathSounds>
+	<shootingSounds>
+		<shootingSound>mantisSpit1</shootingSound>
+		<shootingSound>mantisSpit2</shootingSound>
+		<shootingSound>mantisSpit3</shootingSound>
+	</shootingSounds>
+	<passiveStatBoosts>
+		<statBoost name="powerDrain">
+			<boostType>FLAT</boostType>
+			<amount>1</amount>
+			<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<affectsSelf>true</affectsSelf>
+			<whiteList>
+				<void_drain/>
+			</whiteList>
+		</statBoost>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>-20</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<droneTarget>DRONES</droneTarget>
+			<affectsSelf>false</affectsSelf>
+			<maxStacks>1</maxStacks>
 		</statBoost>
 	</passiveStatBoosts>
 </mod-append:race>
@@ -4474,6 +4784,76 @@ CREW
 				</whiteList>
 			</statBoost>
 		</statBoosts>
+	</aug>
+
+	<aug name="SAVIOR_SHIELD">
+		<function name="SHIELD_RECHARGE" value="0.15" useForReqs="false" warning="false"/>
+		<superShield>
+			<value>5</value>
+			<color r="125" g="147" b="255" a="1.0"/>
+			<shieldImage>ship/enemy_shields_white.png</shieldImage>
+		</superShield>
+				<statBoosts>
+			<statBoost name="passiveHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>2</amount>
+				<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost>
+				
+			<statBoost name="passiveHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>8</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost>
+						<statBoost name="trueHealAmount">
+				<boostType>FLAT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<droneTarget>ALL</droneTarget>
+				<amount>-4</amount>
+				<priority>0</priority>
+				<systemPowerDependency>
+					<sensors/>
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0</noSys>
+					<noPwr>0</noPwr>
+					<onePwr>1</onePwr>
+					<twoPwr>1.3</twoPwr>
+					<threePwr>1.7</threePwr>
+					<fourPwr>2</fourPwr>
+				</systemPowerScaling>
+			</statBoost>
+				</statBoosts>
+	</aug>
+	
+	<aug name="REGEN_SHIELD">
+		<function name="SHIELD_RECHARGE" value="1000" useForReqs="false" warning="false"/>
+		<superShield>
+			<value>1</value>
+			<color r="255" g="0" b="106" a="1.0"/>
+			<shieldImage>ship/enemy_shields_white.png</shieldImage>
+		</superShield>
+	</aug>
+			
+	<aug name="FALSE_SHIELD">
+			<function name="WEAPON_PREIGNITE" value="1" useForReqs="false"/>
+			<function name="AUTO_COOLDOWN" value="-0.1" useForReqs="false"/>
+			<superShield>
+				<value>5</value>
+				<color r="226" g="40" b="0" a="1.0"/>
+				<shieldImage>ship/enemy_shields_white.png</shieldImage>
+			</superShield>
+	</aug>
+			
+	<aug name="LEGION_LOADER">
+			<function name="AUTO_COOLDOWN" value="0.20" useForReqs="false" warning="false"/>
+			<function name="SHIELD_RECHARGE" value="0.20" useForReqs="false" warning="false"/>
+			<function name="FTL_BOOSTER" value="0.20" useForReqs="true" warning="false"/>
 	</aug>
 
 	</augments>
