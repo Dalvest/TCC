@@ -48,7 +48,7 @@
 		<event>
 			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
 			<item_modify>
-				<item type="scrap" min="-45" max="-55"/>
+				<item type="scrap" min="-55" max="-65"/>
 			</item_modify>
 			<crewMember amount="1" class="scrapper_heavy"/>
 		</event>
