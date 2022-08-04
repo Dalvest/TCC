@@ -1558,6 +1558,130 @@
 	<time>1</time>
 </anim>
 
+<!--///////////////ZOG///////////////-->
+
+<animSheet name="scrapper_zog" w="280" h="490" fw="35" fh="35">people/scrapper_zog_base.png</animSheet>
+<anim name="scrapper_zog_clone">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_zog_death_right">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_zog_death_left">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_zog_walk_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_walk_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_walk_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_walk_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_shoot_down">
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_shoot_right">
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_shoot_up">
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_shoot_left">
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_fire_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_fire_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_fire_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_fire_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_repair">
+	<sheet>lanius</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_punch_up">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_punch_down">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_zog_teleport">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="scrapper_zog_type_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_zog_type_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_zog_type_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_zog_type_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_zog_portrait">
+	<sheet>lanius</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 <!--///////////////SCRAPPER BASE///////////////-->
 
 <animSheet name="scrapper" w="280" h="490" fw="35" fh="35">people/scrapper_base.png</animSheet>

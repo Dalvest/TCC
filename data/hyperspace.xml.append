@@ -1693,6 +1693,23 @@ CREW
 			</powerEffect>
 		</mod-append:race>
 
+		<mod-append:race name="scrapper_zog">
+			<maxHealth>175</maxHealth>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>1.75</repairSpeed>
+			<moveSpeedMultiplier>1</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.75</fireDamageMultiplier>
+			<damageMultiplier>2</damageMultiplier>
+			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
+
 		<!--///////GENERIC//////-->
 
 		<mod-append:race name="scrapper">

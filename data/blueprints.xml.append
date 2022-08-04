@@ -9143,6 +9143,21 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
+<crewBlueprint name="scrapper_zog">
+	<title>Zog</title>
+	<short>Zog</short>
+	<desc>The Prince of Lanius has returned to eat again - leading his half-cult half-association of Scrappers, he's on a quest to acquire enough mass to engulf a universe and overthrow the King...</desc>
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Max Health is increased to 200</power>
+		<power>Active Ability: Comsumes part of the ship, overhealing the Trash Eater by 50 health while doing one hull damage</power>
+		<power>While ability is active, moves at half speed and does 3x combat damage</power>
+		<power>Does 1.5x sabotage damage</power>
+	</powerList>
+</crewBlueprint>
+
 <!--///////GENERIC - SAVIORS//////-->
 
 <crewBlueprint name="saviors">
