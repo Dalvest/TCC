@@ -6,22 +6,28 @@
 		<text>Ask Leah about this.</text>
 		<event load="TRUE_VICTORY_CREW_LEAH"/>
 	</mod-append:choice>
+	<mod-append:choice req="protogen_tracker" max_group="600" hidden="true">
+		<text>Ask TRACKER about this.</text>
+		<event load="TRUE_VICTORY_CREW_TRACKER"/>
+	</mod-append:choice>
+	<mod-append:choice req="SHIP_FLAGSHIP" max_group="600" hidden="true">
+		<text>Ask the Flagship about this.</text>
+		<event load="TRUE_VICTORY_CREW_FLAGSHIP"/>
+	</mod-append:choice>
+	<mod-append:choice req="trash_eater" max_group="600" hidden="true">
+		<text>Ask the Trash Eater about this.</text>
+		<event load="TRUE_VICTORY_CREW_TRASH"/>
+	</mod-append:choice>
 </mod:findName>
 
 <event name="TRUE_VICTORY_CREW_LEAH">
 	<text>"We've been through a lot together, haven't we?" Leah turns away from you and looks out at the wreckage of the flagship. "I don't think Wither has the right idea. Sure, multiverse drives are dangerous, but look at us! Think of how many amazing movie-like rivalries we'll be ruining if we detonate that bomb! If we exist then there's plenty more out there." Leah pauses before turning back to you, "Out of all the infinite rivalries in the universe, this one is special, you're not just any old bitch, you're MY beyatch."</text>
+	<unlockCustomShip>PLAYER_SHIP_NEWTONBEAMA_3</unlockCustomShip>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="TRUE_VICTORY_LOAD"/>
 	</choice>
 </event>
-
-<mod:findName type="event" name="TRUE_VICTORY_CREW">
-    <mod-append:choice req="SHIP_FLAGSHIP" max_group="600" hidden="true">
-		<text>Ask the Flagship about this.</text>
-		<event load="TRUE_VICTORY_CREW_FLAGSHIP"/>
-	</mod-append:choice>
-</mod:findName>
 
 <event name="TRUE_VICTORY_CREW_FLAGSHIP">
 	<text>As soon as you say it out loud, you immeditately wonder why you just asked your ship, an inanimate object about what your should do about this multiverse-ending device. Just as you are about to leave the helm of the ship, not knowing how you got here, the comms suddenly turn on, before blurting out a lot of unintelligible garbage, and turning off again. However, as soon as it stops, the ships computer notifies you that you have just uploaded blueprints for a ship. You might never find out what that was about if you decide to end the multiverse, you think to yourself.</text>
@@ -32,15 +38,16 @@
 	</choice>
 </event>
 
-<mod:findName type="event" name="TRUE_VICTORY_CREW">
-    <mod-append:choice req="protogen_tracker" max_group="600" hidden="true">
-		<text>Ask TRACKER about this.</text>
-		<event load="TRUE_VICTORY_CREW_LEAH"/>
-	</mod-append:choice>
-</mod:findName>
-
-<event name="TRUE_VICTORY_CREW_LEAH">
+<event name="TRUE_VICTORY_CREW_TRACKER">
 	<text>"We did it. The Protogen Project has kicked the Rebellion's ass big-time - and it was about time we did. Let's go get a good look at the wreckage. I want to take as many trophies as we can fit in the hold."</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="TRUE_VICTORY_LOAD"/>
+	</choice>
+</event>
+
+<event name="TRUE_VICTORY_CREW_TRASH">
+	<text>"Bong bing boo bing bong bing bing bong bingly bongly boo"</text>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="TRUE_VICTORY_LOAD"/>
