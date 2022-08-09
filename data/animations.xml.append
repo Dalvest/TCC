@@ -664,6 +664,26 @@
 	<mountPoint x="3" y="47" />
 </weaponAnim>
 
+<animSheet name="avali_hunter1" w="264" h="110" fw="33" fh="110">weapon_autocannon/avali_hunter1.png</animSheet>
+<weaponAnim name="avali_hunter1">
+	<sheet>avali_hunter1</sheet>
+	<desc length="8" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>4</fireFrame>
+	<firePoint x="18" y="29" />
+	<mountPoint x="3" y="86" />
+</weaponAnim>
+
+<animSheet name="avali_hunter2" w="264" h="110" fw="33" fh="110">weapon_autocannon/avali_hunter2.png</animSheet>
+<weaponAnim name="avali_hunter2">
+	<sheet>avali_hunter2</sheet>
+	<desc length="8" x="0" y="0" />
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>4</fireFrame>
+	<firePoint x="18" y="29" />
+	<mountPoint x="3" y="86" />
+</weaponAnim>
+
 <animSheet name="crys_50cal" w="483" h="75" fw="21" fh="75">weapon_autocannon/crys_50cal.png</animSheet>
 <weaponAnim name="crys_50cal">
 	<sheet>crys_50cal</sheet>
