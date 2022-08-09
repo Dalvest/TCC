@@ -2479,6 +2479,28 @@ CREW
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
 
+		<!--////////////////////////CREWMATE ZONE (DANGER: KINDA SUS)//////////////////////-->
+
+		<mod-append:race name="crewmate">
+			<maxHealth>100</maxHealth>
+			<repairSpeed>1</repairSpeed>
+			<canFight>true</canFight>
+			<canRepair>true</canRepair>
+			<canSabotage>true</canSabotage>
+			<canSuffocate>true</canSuffocate>
+			<suffocationModifier>1</suffocationModifier>
+			<fireDamageMultiplier>1</fireDamageMultiplier>
+			<canMan>true</canMan>
+			<noClone>false</noClone>
+			<noSlot>false</noSlot>
+			<controllable>true</controllable>
+			<canPhaseThroughDoors>false</canPhaseThroughDoors>
+			<moveSpeedMultiplier>1</moveSpeedMultiplier>
+			<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
+			<damageMultiplier>1</damageMultiplier>
+			<damageTakenMultiplier>1</damageTakenMultiplier>
+		</mod-append:race>
+
 		<!--////////////////////////PROTOGEN ZONE (DANGER: FURRIES AHEAD)//////////////////////-->
 		<!--///////PROTOGEN////////-->
 
