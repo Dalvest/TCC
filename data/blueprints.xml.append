@@ -9833,16 +9833,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--///////CREWMATE AREA (DANGER: KINDA SUS)//////-->
 
 <crewBlueprint name="crewmate">
-	<desc>Fluffy, cute, dangerous, powerful. These genetically and cybernetically augmented anthropomorphic creatures are one of the best choices for spacefaring crew. Legends say they were created by a terrorist rebel cell.</desc>
+	<desc>Kind of suspicious, with no known origin, destination, or even a known language. They are not to be trusted.</desc>
 	<cost>1</cost>
 	<title>Crewmate</title>
 	<short>Crewmate</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>x1.1 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
-		<power>x0.8 movement speed.</power>
-		<power>Slower asphyxiation speed and less fire damage taken.</power>
-		<power>Internal Database makes skills unable to degrade.</power>
+		<power>x1 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
+		<power>x1 movement speed.</power>
 	</powerList>
 	<colorList>
         <layer> <!-- suit -->
@@ -9864,7 +9862,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			<color r="241" g="198" b="208" a="1"/> <!--rose-->
 			<color r="113" g="133" b="147" a="1"/> <!--gray-->
 			<color r="118" g="30" b="28" a="1"/> <!--maroon-->
-        </layer>-->
+        </layer>
+		<layer> <!-- shadow -->
+            <color r="255" g="255" b="255" a="0.5"/>
+        </layer>
+		<layer> <!-- inside -->
+            <color r="255" g="255" b="255" a="0.8"/>
+        </layer>
     </colorList>
 </crewBlueprint>
 
