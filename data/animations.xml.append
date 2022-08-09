@@ -608,14 +608,14 @@
 	<chargeImage>weapon_breach_ion/breach_ion_mini_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="breach_ion" w="261" h="36" fw="29" fh="36">weapon_breach_ion/breach_ion.png</animSheet>
+<animSheet name="breach_ion" w="812" h="28" fw="29" fh="28">weapon_breach_ion/breach_ion.png</animSheet>
 <weaponAnim name="breach_ion">
 	<sheet>breach_ion</sheet>
-	<desc length="9" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>3</fireFrame>
-	<firePoint  x="14" y="7"/>
-	<mountPoint x="4" y="21"/>
+	<desc length="28" x="0" y="0"/>
+	<chargedFrame>20</chargedFrame>
+	<fireFrame>21</fireFrame>
+	<firePoint  x="14" y="6"/>
+	<mountPoint x="1" y="20"/>
 	<chargeImage>weapon_breach_ion/breach_ion_glow.png</chargeImage>
 </weaponAnim>
 

@@ -3188,9 +3188,9 @@
 	<type>LASER</type>
 	<flavorType>Ion</flavorType>
 	<title>Breach Ion Mini</title>
-	<short>BrIoMi</short>
+	<short>Br. Mini</short>
 	<desc>A simple weapon meant to cause breaches without dealing any damage.</desc>
-	<tooltip>always causes breachs, other weapons must be active for this one to function</tooltip>
+	<tooltip>guaranteed breachs, other weapons must be active for this one to function</tooltip>
 	<damage>0</damage>
 	<sysDamage>0</sysDamage>
 	<persDamage>0</persDamage>
@@ -3230,7 +3230,7 @@
 	<type>LASER</type>
 	<flavorType>Ion</flavorType>
 	<title>Breach Ion</title>
-	<short>BrIo</short>
+	<short>Br.Ion</short>
 	<desc>A simple weapon meant to stun and cause breaches.</desc>
 	<tooltip>2 ion damage, high chance to breach</tooltip>
 	<damage>0</damage>
@@ -3272,12 +3272,12 @@
 	<type>LASER</type>
 	<flavorType>Ion</flavorType>
 	<title>Breach Ion Bolt</title>
-	<short>BrIoBl</short>
+	<short>Br. Bolt</short>
 	<desc>An advanced weapon meant to disable systems and breach hulls.</desc>
 	<tooltip>1 hull damage, 2 ion damage, high chance to breach</tooltip>
 	<damage>1</damage>
 	<sysDamage>-1</sysDamage>
-	<persDamage>0</persDamage>
+	<persDamage>1</persDamage>
 	<tip>tip_ion</tip>
 	<shots>1</shots>
 	<sp>0</sp>
@@ -3314,8 +3314,8 @@
 	<type>BEAM</type>
 	<tip>tip_beams</tip>
 	<title>Breach Ion Beam</title>
-	<short>BrIoBe</short>
-	<desc>The pinacle of space scavenger engineering, meant to disable entire vessels and cut up their hulls for easy plundering.</desc>
+	<short>Br. Beam</short>
+	<desc>The pinacle of space scavenger engineering, meant to disable entire vessels and carefully cut into their hulls for easy plundering.</desc>
 	<tooltip>Beam weapon, 1 hull damage, 2 ion damage, high chance to breach, 90 length</tooltip>
 	<damage>1</damage>
 	<sysDamage>0</sysDamage>
@@ -3340,8 +3340,9 @@
 		<g>255</g>
 		<b>6</b>
 	</color>-->
-	<weaponArt>nova_mk3</weaponArt>
-	<iconImage>beam</iconImage>
+	<weaponArt>breach_ion_beam</weaponArt>
+	<iconImage>breach_ion_beam</iconImage>
+	<hideEventTooltip>true</hideEventTooltip>
 	<iconScale>0.80</iconScale>
 </weaponBlueprint>
 
