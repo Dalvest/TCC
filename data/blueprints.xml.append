@@ -2080,6 +2080,46 @@
 	<weaponArt>artillery_auto_elite</weaponArt> 
 </weaponBlueprint>
 
+<weaponBlueprint name="SUS_LASERS">
+	<type>LASER</type>
+	<title>Suspicious Lasers</title>
+	<short>Sus Lasers</short>
+	<tip>tip_charge</tip>
+	<desc>Just as misterious in origin as the ones who were first seen using these, this pair of lasers is not studied and its effects are left to be guessed based on observation.</desc>
+	<tooltip>Fires up to 2 lasers; 1 damage each. 4 seconds per charge.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>4</cooldown>
+	<power>2</power>
+	<cost>1</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>Sus_Lasers</image>
+	<chargeLevels>2</chargeLevels>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>sus_lasers</weaponArt>
+	<iconImage>sus_lasers</iconImage>
+</weaponBlueprint>
+
 <!--//////////////////////////////////////////////LASER/////////////////////////////////////////////-->
 
 <weaponBlueprint name="TC_LASER_MARKSMAN">
