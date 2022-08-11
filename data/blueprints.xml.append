@@ -5662,7 +5662,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_SDM" layout="player_ship_sdm" img="player_ship_sdm">
 	<class>Converted Civilian Cruiser</class>
 	<name>Size Doesn't Matter</name>
-	<desc>We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues.</desc>
+	<desc>We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues. At least the outer plating hasn't been removed.</desc>
 	<unlock id="ship_PLAYER_SHIP_SDM_unlock"/>
 	<systemList>
 		<cloaking power="1" room="12" start="false" img="room_cloaking_4" />
@@ -5720,7 +5720,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="5" count="2" />
 	<health amount="20" />
 	<maxPower amount="6" />
-	<aug name="EX_FTL_BOOSTER" />
+	<aug name="REGEN_ARMOR" />
 	<aug name="CREW_FIREARMS" />
 </shipBlueprint>
 
@@ -8676,7 +8676,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <shipBlueprint name="PLAYER_SHIP_ROBOTTO" layout="ars_tanker" img="ars_tanker">
 	<class>Sentient Fuel Tanker</class>
-	<name>The Tanker</name>
+	<name>Sentient's Cow</name>
 	<desc>This is a fragile but surprsingly well-armed tanker type ship staffed entirely by the Sentients - not to be confused with Engis.</desc>
 	<systemList>
 		<battery power="1" room="6" start="false" img="room_battery" />
