@@ -2080,6 +2080,46 @@
 	<weaponArt>artillery_auto_elite</weaponArt> 
 </weaponBlueprint>
 
+<weaponBlueprint name="SUS_LASERS">
+	<type>LASER</type>
+	<title>Suspicious Lasers</title>
+	<short>Sus Lasers</short>
+	<tip>tip_charge</tip>
+	<desc>Just as misterious in origin as the ones who were first seen using these, this pair of lasers is not studied and its effects are left to be guessed based on observation.</desc>
+	<tooltip>Fires up to 2 lasers; 1 damage each. 4 seconds per charge.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>4</cooldown>
+	<power>2</power>
+	<cost>1</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>Sus_Lasers</image>
+	<chargeLevels>2</chargeLevels>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>sus_lasers</weaponArt>
+	<iconImage>sus_lasers</iconImage>
+</weaponBlueprint>
+
 <!--//////////////////////////////////////////////LASER/////////////////////////////////////////////-->
 
 <weaponBlueprint name="TC_LASER_MARKSMAN">
@@ -3182,6 +3222,169 @@
 	<iconImage>Ion_Charger_1</iconImage>
 </weaponBlueprint>
 
+<!--///////////////////////////////////////////BREACH ION////////////////////////////////////////////////////////////////-->
+
+<weaponBlueprint name="BREACH_ION_MINI">
+	<type>LASER</type>
+	<flavorType>Ion</flavorType>
+	<title>Breach Ion Mini</title>
+	<short>Br. Mini</short>
+	<desc>A simple weapon meant to cause breaches without dealing any damage.</desc>
+	<tooltip>guaranteed breachs, other weapons must be active for this one to function</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<tip>tip_ion</tip>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>12</cooldown>
+	<ion>0</ion>
+	<power>0</power>
+	<speed>40</speed>
+	<cost>80</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>Breach_Ion_Mini</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+	</launchSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+	</hitShieldSounds>
+	<hitShipSounds>
+        <sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+    </hitShipSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>breach_ion_mini</weaponArt>
+	<iconImage>breach_ion_mini</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="BREACH_ION">
+	<type>LASER</type>
+	<flavorType>Ion</flavorType>
+	<title>Breach Ion</title>
+	<short>Br.Ion</short>
+	<desc>A simple weapon meant to stun and cause breaches.</desc>
+	<tooltip>2 ion damage, high chance to breach</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<tip>tip_ion</tip>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>9</breachChance>
+	<cooldown>12</cooldown>
+	<ion>2</ion>
+	<power>1</power>
+	<speed>40</speed>
+	<cost>80</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>Breach_Ion</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+	</launchSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+	</hitShieldSounds>
+	<hitShipSounds>
+        <sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+    </hitShipSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>breach_ion</weaponArt>
+	<iconImage>breach_ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="BREACH_ION_BOLT">
+	<type>LASER</type>
+	<flavorType>Ion</flavorType>
+	<title>Breach Ion Bolt</title>
+	<short>Br. Bolt</short>
+	<desc>An advanced weapon meant to disable systems and breach hulls.</desc>
+	<tooltip>1 hull damage, 2 ion damage, high chance to breach</tooltip>
+	<damage>1</damage>
+	<sysDamage>-1</sysDamage>
+	<persDamage>1</persDamage>
+	<tip>tip_ion</tip>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>9</breachChance>
+	<cooldown>12</cooldown>
+	<ion>2</ion>
+	<power>2</power>
+	<speed>40</speed>
+	<cost>80</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>Breach_Ion_Bolt</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+	</launchSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+	</hitShieldSounds>
+	<hitShipSounds>
+        <sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+    </hitShipSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>breach_ion_bolt</weaponArt>
+	<iconImage>breach_ion_bolt</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="BREACH_ION_BEAM">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Breach Ion Beam</title>
+	<short>Br. Beam</short>
+	<desc>The pinacle of space scavenger engineering, meant to disable entire vessels and carefully cut into their hulls for easy plundering.</desc>
+	<tooltip>Beam weapon, 1 hull damage, 2 ion damage, high chance to breach, 90 length</tooltip>
+	<damage>1</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<ion>2</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<hullbust>0</hullbust>
+	<sp>0</sp>
+	<breachChance>9</breachChance>
+	<cooldown>15</cooldown>
+	<image>beam_contact</image>
+	<power>3</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>90</length>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<!--<color>
+		<r>0</r>
+		<g>255</g>
+		<b>6</b>
+	</color>-->
+	<weaponArt>breach_ion_beam</weaponArt>
+	<iconImage>breach_ion_beam</iconImage>
+	<hideEventTooltip>true</hideEventTooltip>
+	<iconScale>0.80</iconScale>
+</weaponBlueprint>
 
 <!--///////////////////////////////////////////AUTOCANNON////////////////////////////////////////////////////////////////-->
 
@@ -3191,7 +3394,7 @@
 	<type>LASER</type>
 	<title>'RAPTOR' Autocannon</title>
 	<short>R.AC.</short>
-	<desc>It may surprise you, but RAPTOR fought during the Federation-Mantis war. He'd welded his LMG to the side of his ship and started upgrading it bit by bit - it worked surprsingly well.</desc>
+	<desc>It may surprise you, but RAPTOR fought during the Federation Civil War. He'd welded his LMG to the side of his ship and started upgrading it bit by bit - it worked surprsingly well.</desc>
 	<tooltip>1 shot 3 damage weapon, 75% chance to not use ammo, 10% chance to cause a breach.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>75</freeMissileChance>
@@ -3224,6 +3427,92 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>TC_RAPTOR_AUTOCANNON</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<!--BASED ON AUTOCANNON 2-->
+
+<weaponBlueprint name="AVALI_HUNTER1">
+	<type>LASER</type>
+	<title>Avali Hunter-Killer Autocannon I</title>
+	<short>A.HK.Ac.I</short>
+	<desc>Avali engineers are good at many things - including, in this case, making autocannons. It might be older tech but it's definitely reliable.</desc>
+	<tooltip>1 shot 2 damage hullbust weapon, 75% chance to not use ammo, 40% chance to cause a breach, medium radius.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>75</freeMissileChance>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<hullbust>1</hullbust>
+	<radius>20</radius>
+	<breachChance>4</breachChance>
+	<cooldown>7</cooldown>
+	<power>2</power>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<cost>70</cost>
+	<image>GB_shot_medium</image>
+	<launchSounds>
+		<sound>GB_cannonMedium1</sound>
+		<sound>GB_cannonMedium2</sound>
+		<sound>GB_cannonMedium3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>avali_hunter1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AVALI_HUNTER2">
+	<type>LASER</type>
+	<title>Avali Hunter-Killer Autocannon II</title>
+	<short>A.HK.Ac.II</short>
+	<desc>The heaviest Avali-made Autocannon. This weapon alone can bring down warships... provided shields are taken care of.</desc>
+	<tooltip>1 shot 3 damage hullbust weapon, 65% chance to not use ammo, 40% chance to cause a breach, 40% chance to stun</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>65</freeMissileChance>
+	<damage>3</damage>
+	<persDamage>1</persDamage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<hullbust>1</hullbust>
+	<breachChance>4</breachChance>
+	<stunChance>4</stunChance>
+	<cooldown>5</cooldown>
+	<power>3</power>
+	<stun>6</stun>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<cost>40</cost>
+	<image>GB_shot_heavy</image>
+	<launchSounds>
+		<sound>GB_cannonHeavy1</sound>
+		<sound>GB_cannonHeavy2</sound>
+		<sound>GB_cannonHeavy3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>GB_Autocannon_3</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -6624,7 +6913,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="7" count="3">
 		<weapon name="LASER_HEAVY_1" />
-		<weapon name="LASER_PIERCE" />
+		<weapon name="AVALI_HUNTER1" />
 	</weaponList>
 	<droneList drones="9" count="3">
 		<drone name="FOCUS_1_AMP2" />
@@ -9579,6 +9868,48 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>1.2x hazard damage taken, 120hp.</power>
 		<power>Multiversal Uplift active ability makes him and his allies able to teleport at will anywhere for 3 seconds.</power>
 	</powerList>
+</crewBlueprint>
+
+<!--///////CREWMATE AREA (DANGER: KINDA SUS)//////-->
+
+<crewBlueprint name="crewmate">
+	<desc>Kind of suspicious, with no known origin, destination, or even a known language. They are not to be trusted.</desc>
+	<cost>1</cost>
+	<title>Crewmate</title>
+	<short>Crewmate</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>x1 repair, damage and sabotage speeds owing to cybernetic augmentations.</power>
+		<power>x1 movement speed.</power>
+	</powerList>
+	<colorList>
+        <layer> <!-- suit -->
+            <color r="197" g="17" b="17" a="1"/> <!--red-->
+            <color r="19" g="47" b="210" a="1"/> <!--blue-->
+            <color r="16" g="128" b="45" a="1"/> <!--green-->
+            <color r="237" g="83" b="185" a="1"/> <!--pink-->
+            <color r="239" g="125" b="14" a="1"/> <!--orange-->
+            <color r="245" g="245" b="88" a="1"/> <!--yellow-->
+            <color r="63" g="72" b="78" a="1"/> <!--black-->
+			<color r="213" g="224" b="239" a="1"/> <!--white-->
+			<color r="107" g="48" b="188" a="1" /> <!--purple-->
+			<color r="114" g="73" b="30" a="1" /> <!--brown-->
+			<color r="55" g="255" b="217" a="1"/> <!--cyan-->
+			<color r="80" g="239" b="58" a="1"/> <!--lime-->
+			<color r="147" g="136" b="119" a="1" /> <!--tan-->
+			<color r="226" g="112" b="96" a="1"/> <!--coral-->
+			<color r="245" g="228" b="163" a="1"/> <!--banana-->
+			<color r="241" g="198" b="208" a="1"/> <!--rose-->
+			<color r="113" g="133" b="147" a="1"/> <!--gray-->
+			<color r="118" g="30" b="28" a="1"/> <!--maroon-->
+        </layer>
+		<layer> <!-- shadow -->
+            <color r="255" g="255" b="255" a="0.5"/>
+        </layer>
+		<layer> <!-- inside -->
+            <color r="255" g="255" b="255" a="0.8"/>
+        </layer>
+    </colorList>
 </crewBlueprint>
 
 <!--///////PROTOGEN ZONE (DANGER: FURRIES AHEAD)//////-->
