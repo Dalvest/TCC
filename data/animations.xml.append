@@ -219,6 +219,16 @@
 	<chargeImage>weapon_newgen/fm_minelauncher_ancalagon_remastered_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="sus_lasers" w="460" h="80" fw="23" fh="80">weapon_artillery/sus_lasers.png</animSheet>
+<weaponAnim name="sus_lasers">
+	<sheet>sus_lasers</sheet>
+	<desc length="20" x="0" y="0"/>
+	<chargedFrame>0</chargedFrame>
+	<fireFrame>1</fireFrame>
+	<firePoint  x="12" y="20"/>
+	<mountPoint x="12" y="60"/>
+</weaponAnim>
+
 <!--////////////////// BOMB FLAK //////////////////-->
 
 <animSheet name="tc_bomb_shotgun_1" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_1.png</animSheet>
@@ -1290,6 +1300,13 @@
 <animSheet name="Breach_Ion_Bolt" w="14" h="12" fw="14" fh="12">projectiles/breach_ion_bolt.png</animSheet>
 <anim name="Breach_Ion_Bolt">
 	<sheet>Breach_Ion_Bolt</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="Sus_Lasers" w="18" h="7" fw="18" fh="7">projectiles/sus_lasers.png</animSheet>
+<anim name="Sus_Lasers">
+	<sheet>Sus_Lasers</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>

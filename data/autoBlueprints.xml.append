@@ -78,6 +78,17 @@
 	<name>avali</name>
 </blueprintList>
 
+<!--/////// HUMANS ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_HUMAN">
+	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>kiviekith</mod-append:name>
+	<mod-append:name>rsa_technician</mod-append:name>
+	<mod-append:name>unique_leah_mfk</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>human_hazmat</mod-append:name>
+</mod:findName>
+
 <!--/////// MANTIS ZONE //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_MANTIS">
@@ -172,6 +183,13 @@
 	<name>robottos_police</name>
 </blueprintList>
 
+<!--/////// MANTIS ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CHECKCREW_MANTIS">
+	<mod-append:name>mantis_rsa</mod-append:name>
+	<mod-append:name>mantis_freebusiness</mod-append:name>
+</mod:findName>
+
 <!--/////// LANIUS //////-->
 
 <mod:findName type="blueprintList" name="LIST_CHECKCREW_LANIUS">
@@ -182,6 +200,7 @@
 	<mod-append:name>scrapper_engineer</mod-append:name>
 	<mod-append:name>scrapper_speed</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
 </mod:findName>
 
 <!--//////// HUMANS /////////-->
@@ -192,6 +211,40 @@
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>human_phoenix</mod-append:name>
 	<mod-append:name>human_hazmat</mod-append:name>
+</mod:findName>
+
+<!--/////// IT'S MORPHIN' TIME ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_FREEMANTIS">
+	<mod-append:name>mantis_freebusiness</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_MANTIS">
+	<mod-append:name>mantis_rsa</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_HUMAN">
+	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>rsa_technician</mod-append:name>
+	<mod-append:name>unique_leah_mfk</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>human_hazmat</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_LANIUS">
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>scrapper</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_COGNITIVE">
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
 </mod:findName>
 
 <!--/////// UNIQUES //////-->
@@ -223,23 +276,23 @@
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_COGNITIVE">
-<mod-append:name>saviors</mod-append:name>
-<mod-append:name>saviorsa</mod-append:name>
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_RCOGNITIVE">
-<mod-append:name>saviors</mod-append:name>
-<mod-append:name>saviorsa</mod-append:name>
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_COGNITIVE_ALL">
-<mod-append:name>saviors</mod-append:name>
-<mod-append:name>saviorsa</mod-append:name>
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_ANCIENT_ALL">
-<mod-append:name>saviors</mod-append:name>
-<mod-append:name>saviorsa</mod-append:name>
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
 </mod:findName>
 
 	<!--///////////////////////////////
@@ -306,6 +359,11 @@
 	<mod-append:name>TC_OVERLORD</mod-append:name>
 	<mod-append:name>TC_ESKA</mod-append:name>
 	<mod-append:name>TC_TONFA</mod-append:name>
+	<mod-append:name>BREACH_ION_MINI</mod-append:name>
+	<mod-append:name>BREACH_ION</mod-append:name>
+	<mod-append:name>BREACH_ION_BOLT</mod-append:name>
+	<mod-append:name>BREACH_ION_BEAM</mod-append:name>
+	<mod-append:name>SUS_LASERS</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -369,10 +427,6 @@
 	<mod-append:name>TC_OVERLORD</mod-append:name>
 	<mod-append:name>TC_ESKA</mod-append:name>
 	<mod-append:name>TC_TONFA</mod-append:name>
-	<mod-append:name>BREACH_ION_MINI</mod-append:name>
-	<mod-append:name>BREACH_ION</mod-append:name>
-	<mod-append:name>BREACH_ION_BOLT</mod-append:name>
-	<mod-append:name>BREACH_ION_BEAM</mod-append:name>
 </mod:findName>
 
 <!--
