@@ -2570,7 +2570,7 @@
 	<breachChance>1</breachChance>
 	<stunChance>5</stunChance>
 	<cooldown>14</cooldown>
-	<power>3</power>
+	<power>1</power>
 	<speed>35</speed>
 	<cost>60</cost>
 	<bp>2</bp>
@@ -2604,7 +2604,8 @@
 	<short>Cloaker</short>
 	<desc>The safeword is "Hail the rebellion"! This Missile launcher has a micro-cloaker mechanism that automatically hides the missiles it fires from defense drones.</desc>
 	<tooltip>Fires a missile that deals 2 damage, with a medium chance to breach, while also piercing all shields.</tooltip>
-	<damage>2</damage>
+	<damage>3</damage>
+	<accuracyMod>10</accuracyMod>
 	<missiles>1</missiles>
 	<shots>1</shots>
 	<sp>10</sp>
@@ -3562,9 +3563,9 @@
 	<title>Militia Vulcan Rotary Autocannon</title>
 	<short>M.V.R.A.</short>
 	<desc>Highly powerful Vulcan-style autocannon that speeds up every time it fires. Water cooling and multiple barrels do wonder to a .950 autocannon.</desc>
-	<tooltip>1 shot 2 damage weapon that speeds up cooldown every time it fires - 95% chance to not use ammo.</tooltip>
+	<tooltip>1 shot 2 damage weapon that speeds up cooldown every time it fires - 55% chance to not use ammo.</tooltip>
 	<missiles>1</missiles>
-	<freeMissileChance>95</freeMissileChance>
+	<freeMissileChance>55</freeMissileChance>
 	<damage>2</damage>
 	<shots>1</shots>
 	<sp>0</sp>
@@ -3917,10 +3918,10 @@
 	<breachChance>2</breachChance>
 	<cooldown>18</cooldown>
 	<image>beam_contact</image>
-	<power>3</power>
+	<power>2</power>
 	<cost>80</cost>
 	<bp>7</bp>
-	<rarity>5</rarity>
+	<rarity>0</rarity>
 	<length>160</length>
 	<launchSounds>
 		<sound>beam2</sound>
@@ -3950,7 +3951,7 @@
 	<power>2</power>
 	<cost>80</cost>
 	<bp>7</bp>
-	<rarity>5</rarity>
+	<rarity>0</rarity>
 	<length>40</length>
 	<launchSounds>
 		<sound>beam2</sound>
@@ -4187,9 +4188,8 @@
 	<title>'Eska' Beam</title>
 	<short>Eska Beam</short>
 	<desc>High breach chance, high length - the best thing to bring at a Zoltan debate competition.</desc>
-	<tooltip>Beam weapon, 2 damage to hull, 90 length, pierces one shield layer</tooltip>
-	<damage>2</damage>
-	<hullbust>0</hullbust>
+	<tooltip>Beam weapon, 1 damage to hull, 90 length, pierces one shield layer</tooltip>
+	<damage>1</damage>
 	<sp>1</sp>
 	<breachChance>6</breachChance>
 	<cooldown>12</cooldown>
@@ -4198,7 +4198,7 @@
 	<cost>70</cost>
 	<bp>7</bp>
 	<rarity>0</rarity>
-	<length>90</length>
+	<length>150</length>
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
