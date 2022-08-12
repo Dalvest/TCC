@@ -498,7 +498,7 @@ SPEED          Changes gamespeed
     <mod-append:customShip name="PLAYER_SHIP_TRASH_MINER">
       <crewLimit>11</crewLimit>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_GARBAGE_COMPACTOR</hiddenAug>
+      <hiddenAug>SHIP_PROTOGEN_PROJECT</hiddenAug>
       <crew>
         <primagen_raptor room="11" name="RAPTOR" />
         <protogen_tracker room="0" name="TRACKER" />
@@ -561,7 +561,7 @@ SPEED          Changes gamespeed
         <primagen_raptor room="14" name="RAPTOR" />
         <protogen_tracker room="1" name="TRACKER" />
         <sergal_cheese room="11" name="Cheese" />
-        <clonefail_lancer room="3" name="Lancer" />
+        <clonefail_lancer room="9" name="Lancer" />
         <robottos room="2" name="Z3N1TH" />
       </crew>
     </mod-append:customShip>
@@ -1502,6 +1502,21 @@ SPEED          Changes gamespeed
 		<crewLimit>7</crewLimit>
 	</mod-append:customShip>
 
+	<!--/////// ECHO 1-LINER //////-->
+
+	<mod-append:ship name="PLAYER_SHIP_ECHO" b="false" c="false" />
+
+	<mod-append:customShip name="PLAYER_SHIP_ECHO">
+		<hiddenAug>SHIP_PROTOGEN_PROJECT</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>8</crewLimit>
+		<crew>
+			<primagen_raptor room="2" name="RAPTOR" />
+			<protogen_tracker room="0" name="TRACKER" />
+			<sergal_cheese room="11" name="Cheese" />
+		</crew>
+	</mod-append:customShip>
+
     <!--/////// ENEMY SHIPS //////-->
 
     <mod-append:customShip name="TC_TRASH_COMPACTOR1">
@@ -1571,14 +1586,14 @@ SHIP HANGAR ORDER
 		<mod:findLike type="shipOrder">
 			<!--Page 1--> <!-- SCRAPPER, RSA and PROTOGEN PROJECT related ships + the extraelites -->
 			<mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship> <!--Scrapper Dreadnought-->
+			<mod-append:ship>PLAYER_SHIP_TRASH_EATER</mod-append:ship> <!--TE Cruiser-->
 			<mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship> <!--Kestrel Miner-->
 			<mod-append:ship>PLAYER_SHIP_TRASH_REACTOR</mod-append:ship> <!--Reactive Compactor-->
-			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship> <!--Size Does NOT Matter-->
 			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship> <!--Armored Wasp-->
 			<mod-append:ship>PLAYER_SHIP_CORROSUS</mod-append:ship> <!--CorroSUS-->
-			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship> <!--RENT-A-FLAGSHIP-->
-			<mod-append:ship>PLAYER_SHIP_TRASH_EATER</mod-append:ship> <!--TE Cruiser-->
 			<mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
+			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship> <!--RENT-A-FLAGSHIP-->
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
 			<!--Page 2--> <!-- Federation Special Forces -->
 			<mod-append:ship>PLAYER_SHIP_TC_MILSPEC</mod-append:ship> <!-- "Milspec" aka Cargo Carrier Ships -->
@@ -1589,30 +1604,31 @@ SHIP HANGAR ORDER
 			<mod-append:ship>PLAYER_SHIP_CYBER</mod-append:ship> <!-- Cyberwarfare (Malwarebytes???) -->
 			<mod-append:ship>PLAYER_SHIP_MINESWEEPER</mod-append:ship> <!-- Windows Minesweeeper -->
 			<mod-append:ship>PLAYER_SHIP_BLACKOPS</mod-append:ship> <!-- Call of Duty: Black Ops II -->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship> <!--Size Does NOT Matter-->
 			<mod-append:ship>PLAYER_SHIP_FEDERATION_CARRIER</mod-append:ship> <!-- Federation Carrier -->
-			<!--Page 3--> <!-- Secondary Cast -->
-			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!--Stalwart Defense-->
-			<mod-append:empty/>
-			<mod-append:ship>PLAYER_SHIP_SAVIOR</mod-append:ship> <!-- Savior Ship -->
-			<mod-append:empty/>
-			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
-			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
-			<mod-append:empty/>
-			<mod-append:ship>PLAYER_SHIP_ROBOTTO</mod-append:ship> <!-- ARS+ Robotto Ships -->
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<!--Page 4--> <!-- Rebel Guerrila Zone -->
-			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming Ships -->
-			<mod-append:ship>PLAYER_SHIP_HEKTAR_REBEL</mod-append:ship> <!-- Completely Original Design -->
-			<mod-append:ship>PLAYER_SHIP_BATTLESHIP</mod-append:ship> <!-- LEGION BATTLESHIP -->
-			<mod-append:empty/>
+			<!--Page 3--> <!-- Rebel Guerrila Zone -->
+			<mod-append:ship>PLAYER_SHIP_ECHO</mod-append:ship> <!-- Echo 1-Liner -->
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_AUTOGUNBOAT</mod-append:ship> <!-- Auto GunBoat -->
 			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_HEKTAR_REBEL</mod-append:ship> <!-- Completely Original Design -->
+			<mod-append:ship>PLAYER_SHIP_BATTLESHIP</mod-append:ship> <!-- LEGION BATTLESHIP -->
+			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming Ships -->
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE_SLOT2</mod-append:ship> <!-- More Elites -->
+			<!--Page 4--> <!-- Secondary Cast -->
+			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
+			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!--Stalwart Defense-->
+			<mod-append:ship>PLAYER_SHIP_ROBOTTO</mod-append:ship> <!-- ARS+ Robotto Ships -->
+			<mod-append:ship>PLAYER_SHIP_SAVIOR</mod-append:ship> <!-- Savior Ship -->
+			<mod-append:empty/>
+			<mod-append:empty/>
+
 		</mod:findLike>
 	</mod:findLike>
 

@@ -2928,7 +2928,7 @@
 	<breachChance>0</breachChance>
 	<stunChance>1</stunChance>
 	<cooldown>21</cooldown>
-	<power>1</power>
+	<power>3</power>
 	<cost>110</cost>
 	<bp>3</bp>
 	<rarity>0</rarity>
@@ -4578,8 +4578,8 @@
 	<bp>0</bp>
 </augBlueprint>
 
-<augBlueprint name="SHIP_GARBAGE_COMPACTOR">
-	<title>Garbage Compactor Cruiser</title>
+<augBlueprint name="SHIP_PROTOGEN_PROJECT">
+	<title>Ship Related to TRACKER and the gang.</title>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
@@ -7224,7 +7224,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="0" count="2" />
 	<health amount="10" />
 	<maxPower amount="8" />
-	<crewCount amount="1" class="human_angel" />
+	<crewCount amount="1" class="human_phoenix" />
 	<crewCount amount="1" class="shell_mechanic" />
 	<crewCount amount="1" class="human_engineer" />
 	<aug name="EX_CLOAK_FIRE" />
@@ -7300,7 +7300,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="0" count="2" />
 	<health amount="10" />
 	<maxPower amount="9" />
-	<crewCount amount="2" class="human_angel" />
+	<crewCount amount="2" class="human_phoenix" />
 	<crewCount amount="1" class="engi_separatist" />
 	<crewCount amount="1" class="human_engineer" />
 	<aug name="EX_CLOAK_FIRE" />
@@ -7380,7 +7380,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="10" />
 	<maxPower amount="9" />
 	<crewCount amount="1" class="slug_saboteur" />
-	<crewCount amount="1" class="human_angel" />
+	<crewCount amount="1" class="human_phoenix" />
 	<crewCount amount="1" class="orchid_chieftain" />
 	<crewCount amount="1" class="engi_separatist" />
 	<aug name="EX_CLOAK_FIRE" />
@@ -9389,6 +9389,75 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="human_legion" />
 	<aug name="LEGION_LOADER" />
 	<shieldImage>mup_cultist_a</shieldImage>
+</shipBlueprint>
+
+<!--/////////////// ECHO 1-LINER ///////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_ECHO" layout="player_ship_echo" img="player_ship_echo">
+	<class>LPC-Class Hybrid Jet</class>
+	<name>ECHO 1-LINER</name>
+	<desc>This LPC had become infamous during the Protogen Project revolution, when TRACKER and his ragtag team kidnapped several rebel officers and rammed through a blockade in order to defect to the Federation.</desc>
+	<systemList>
+		<battery power="1" room="12" start="true" img="room_battery_orchid_2" />
+		<cloaking power="1" room="5" start="true" img="room_cloaking_2_1x1" />
+		<doors power="1" room="9" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="6" start="true" img="room_drones_15" />
+		<engines power="3" room="11" start="true" img="room_engines_manta_b">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_3_1x1" />
+		<medbay power="1" room="8" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<oxygen power="1" room="10" start="true" img="room_oxygen_9" />
+		<pilot power="1" room="0" start="true" img="room_pilot_fratricide">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="7" start="false" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="true" />
+		<weapons power="4" room="2" start="true" img="room_weapons_echo">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="2" count="4">
+		<weapon name="TC_PULSAR" />
+		<weapon name="TC_PULSAR_SMOL" />
+	</weaponList>
+	<droneList drones="0" count="2">
+		<drone name="BATTLETOG_BOARDER" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="5" />
+	<aug name="CLOAK_RELOADER" />
 </shipBlueprint>
 
 <!--

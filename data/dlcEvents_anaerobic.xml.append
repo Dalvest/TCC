@@ -1,6 +1,6 @@
 <FTL>
 
-<event name="SCRAPPER_SLAVES">
+<event name="SCRAPPER_SLAVES" unused="true">
 	<text>A Lanius Welder ship is near the beacon, but it doesn't attack. Instead, it hails you: "Slaves sale, 'Scrappers.' Enemies of Swarm. Buy?" The feed then cuts to there cargo hold, inside of which are a variety of Scrappers.</text>
 	<ship load="SHIP_SCRAPPER_SLAVES" hostile="false"/>
 	<choice>
