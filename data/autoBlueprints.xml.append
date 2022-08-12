@@ -89,6 +89,32 @@
 	<mod-append:name>human_hazmat</mod-append:name>
 </mod:findName>
 
+<!--/////// ELITES ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_ELITE">
+	<mod-append:name>human_hazmat</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>avatarlegion</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
+</mod:findName>
+
+<!--/////// FEDERATION ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_FEDERATION">
+	<mod-append:name>human_hazmat</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_SOLDIER">
+	<mod-append:name>human_phoenix</mod-append:name>
+</mod:findName>
+
 <!--/////// MANTIS ZONE //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_MANTIS">
