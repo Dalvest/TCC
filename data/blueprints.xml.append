@@ -1908,6 +1908,98 @@
 
 <!--////////////////////////////////////////////// ARTY ZONE /////////////////////////////////////////////-->
 
+<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_C">
+	<type>BOMB</type>
+	<title>Echelon(tm) quick delivery service</title>
+	<short>Artillery</short>
+	<locked>1</locked>
+	<desc>Echelon's convenient delivery service that teleports massive explosive crates onto enemy ship! How nice!
+	Base cooldown : 30</desc>
+	<tooltip>Artillery: Powers a bomb teleporter that deals heavy damage.</tooltip>
+	<damage>3</damage>
+	<sysDamage>5</sysDamage>
+	<persDamage>5</persDamage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>100</fireChance>
+	<cooldown>30</cooldown>
+	<power>1</power>
+	<cost>500</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>bomb_echelon_crate</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>artillery_militiagunboat_c</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_B">
+	<type>BEAM</type>
+	<title>RSA Standard mining beam MK6</title>
+	<short>Artillery</short>
+	<desc>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</desc>
+	<tooltip>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</tooltip>
+	<damage>3</damage>
+	<sysDamage>3</sysDamage>
+	<persDamage>-1</persDamage>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>7</breachChance>
+	<cooldown>25</cooldown>
+	<cost>300</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>60</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>artillery_militiagunboat_b</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_A">
+	<type>MISSILES</type>
+	<title>Avenger Minigun Artillery</title>
+	<short>Artillery</short>
+	<desc>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.
+	Base Cooldown: 25</desc>
+	<tooltip>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.</tooltip>
+	<damage>1</damage>
+	<shots>8</shots>
+	<fireTime>0.05</fireTime>
+	<sp>1</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>25</cooldown>
+	<cost>1000</cost>
+	<bp>2</bp>
+	<speed>90</speed>
+	<rarity>0</rarity>
+	<image>minigun_bullet</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_militiagunboat_a</weaponArt>
+</weaponBlueprint>
+
 <weaponBlueprint name="ARTILLERY_AUTO_A_MISSILE">
 	<type>MISSILES</type>
 	<title>Assault gun Artillery</title>
@@ -8833,7 +8925,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_AUTOGUNBOAT" layout="mup_autogunboat_a" img="mup_autogunboat_a">
 	<class>Automated Gunboat</class>
 	<name>Factory Standard</name>
-	<desc>An unassuming ship armed with an equally unassuming but reliable artillery that can be very powerful once fully upgraded. This must be pre-Protogen Revolution tech.</desc>
+	<desc>An unassuming ship armed with an equally unassuming but reliable artillery that can be very powerful once fully upgraded - courtesy of Echelon Shipyards, partner of RSA. Ad Astra, brother.</desc>
 	<systemList>
 		<artillery power="1" max="4" room="5" start="true" weapon="ARTILLERY_AUTO_A_MISSILE" img="room_artillery" />
 		<battery power="2" max="2" room="9" start="true" img="room_battery_17" />
@@ -9090,6 +9182,218 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="EX_DEFENSE_SCRAMBLER" />
 	<aug name="EX_AUTO_COOLDOWN" />
 </shipBlueprint>
+
+<!--/////////////// MILITIA GB ///////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_MILITIAGUNBOAT" layout="mup_militiagunboat" img="mup_militiagunboat">
+	<class>Militia Gunboat</class>
+	<name>The Intern-ship</name>
+	<desc>Back in it's original form, this ship is ready to conduct commerce through the galaxy, but in turn that has left the ship with little offense or defense and must rely on the crew to make it!</desc>
+	<systemList>
+		<artillery power="3" max="4" room="2" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_C" img="room_artillery_7" />
+		<cloaking power="2" room="5" start="false" img="room_cloaking 2x1 01-00-00" />
+		<clonebay power="1" room="13" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="11" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="4" max="8" room="7" start="true" img="room_drones_2_alt" />
+		<engines power="2" room="1" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="false" img="room_hacking_orchid" />
+		<mind power="1" room="4" start="false" img="room_mind_9" />
+		<oxygen power="1" room="6" start="true" img="room_oxygen_10" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="10" start="true" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="10" room="12" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="true" />
+		<weapons power="2" max="6" room="9" start="false" img="Little_weapons_room">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="0" count="2" />
+	<droneList drones="5" count="3">
+		<drone name="SHIP_REPAIR" />
+		<drone name="DOCTOR_DEFENSE" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="human_medic" />
+	<crewCount amount="1" class="human_soldier" />
+	<crewCount amount="1" class="zoltan_peacekeeper" />
+	<aug name="NOODLE_RATIONS" />
+	<aug name="STORE_BEACON" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_MILITIAGUNBOAT_2" layout="mup_militiagunboat_b" img="mup_militiagunboat_b">
+	<class>Militia Gunboat</class>
+	<name>Fortunate Scrap</name>
+	<desc>Although rusty and damaged, this ship is still very valuable in the eyes of RSA from it's quality. The mining beam also packs much more punch than you'd expect.</desc>
+	<systemList>
+		<artillery power="3" max="4" room="3" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_B" img="room_artillery_7" />
+		<battery power="1" room="10" start="false" img="room_battery_2" />
+		<cloaking power="2" room="13" start="false" img="room_cloaking_9" />
+		<doors power="1" room="5" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="4" max="10" room="8" start="true" img="room_drones_5" />
+		<engines power="2" room="1" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="14" start="true" img="room_hacking_orchid" />
+		<medbay power="1" room="7" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="13" start="false" img="room_mind_9" />
+		<oxygen power="1" room="12" start="true" img="room_oxygen_10" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="9" start="true" img="room_sensors_orchid_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="11" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="2" max="6" room="4" start="false" img="Little_weapons_room">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="0" count="2" />
+	<droneList drones="5" count="4">
+		<drone name="SHIP_REPAIR" />
+		<drone name="MENDER" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="rsa_technician" />
+	<crewCount amount="1" class="mantis_rsa" />
+	<aug name="DRONE_RECOVERY" />
+	<aug name="MAGNET_ARM" />
+	<aug name="REPAIR_ARM" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_MILITIAGUNBOAT_3" layout="mup_militiagunboat_c" img="mup_militiagunboat_c">
+	<class>Militia Gunboat</class>
+	<name>Sechnaill</name>
+	<desc>This ship used to be a merchant ship before it was converted to a war vessel, now it has a massive minigun. How great.</desc>
+	<systemList>
+		<artillery power="3" max="4" room="13" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_A" img="room_artillery_blue_2x1right" />
+		<battery power="1" room="4" start="false" img="room_battery_2" />
+		<cloaking power="2" room="6" start="false" img="room_cloaking_9" />
+		<doors power="1" max="8" room="7" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="3" room="10" start="false" img="room_drones_13" />
+		<engines power="2" room="1" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="5" start="false" img="room_hacking_7" />
+		<medbay power="1" room="9" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="3" start="false" img="room_mind_9" />
+		<oxygen power="1" room="2" start="true" img="room_oxygen_10" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="8" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="12" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="2" max="8" room="11" start="true" img="Little_weapons_room">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="ION_1" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="15" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="human_soldier" />
+	<crewCount amount="1" class="engi" />
+	<aug name="EX_SHIELD_RECHARGE" />
+	<aug name="NOODLE_RATIONS" />
+</shipBlueprint>
+
 
 <!--/////////////// SAVIOR ///////////////-->
 

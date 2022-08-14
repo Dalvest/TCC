@@ -1419,6 +1419,28 @@ SPEED          Changes gamespeed
 		<crewLimit>6</crewLimit>
 	</mod-append:customShip>
 
+	<!--/////// MILITIA GB //////-->
+	
+	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT" b="true" c="true" />
+
+	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_RSA</hiddenAug>
+		<crewLimit>8</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT_2">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_RSA</hiddenAug>
+		<crewLimit>8</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT_3">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_RSA</hiddenAug>
+		<crewLimit>10</crewLimit>
+	</mod-append:customShip>
+
 	<!--/////// EXTRAELITE SLOT 2 //////-->
 
 	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE_SLOT2" b="false" c="false" unused="true" />
@@ -1588,12 +1610,12 @@ SHIP HANGAR ORDER
 
 			<!--Page 2--> <!-- Line 1 - RECLAIM and SALVAGE ASSOCIATION; Line 2 - Echelon Shipyards -->
 			<mod-append:ship>PLAYER_SHIP_CORROSUS</mod-append:ship> <!--CorroSUS-->
+			<mod-append:empty/>
+			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
 			<mod-append:empty/>
 			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_MILITIAGUNBOAT</mod-append:ship> <!-- Militia GunBoat -->
 			<mod-append:ship>PLAYER_SHIP_AUTOGUNBOAT</mod-append:ship> <!-- Auto GunBoat -->
 
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE_SLOT2</mod-append:ship> <!-- More Elites -->

@@ -229,6 +229,48 @@
 	<mountPoint x="12" y="60"/>
 </weaponAnim>
 
+<animSheet name="artillery_militiagunboat_a" w="2781" h="138" fw="103" fh="138">artillery_player/MilitiaGunboatArtilleryA.png</animSheet>
+<weaponAnim name="artillery_militiagunboat_a">
+	<sheet>artillery_militiagunboat_a</sheet>
+	<desc length="27" x="0" y="0" />
+	<chargedFrame>21</chargedFrame>
+	<fireFrame>22</fireFrame>
+	<firePoint x="64" y="34" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+<animSheet name="minigun_bullet" w="39" h="48" fw="13" fh="48">projectiles/MilitiaABullet.png</animSheet>
+<anim name="minigun_bullet">
+	<sheet>minigun_bullet</sheet>
+	<desc length="3" x="0" y="0" />
+	<time>0.5</time>
+</anim>
+
+<animSheet name="artillery_militiagunboat_b" w="2884" h="100" fw="103" fh="100">artillery_player/MilitiaGunboatArtilleryB.png</animSheet>
+<weaponAnim name="artillery_militiagunboat_b">
+	<sheet>artillery_militiagunboat_b</sheet>
+	<desc length="28" x="0" y="0" />
+	<chargedFrame>15</chargedFrame>
+	<fireFrame>16</fireFrame>
+	<firePoint x="51" y="82" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+
+<animSheet name="artillery_militiagunboat_c" w="5253" h="136" fw="103" fh="136">artillery_player/MilitiaGunboatArtilleryC.png</animSheet>
+<weaponAnim name="artillery_militiagunboat_c">
+	<sheet>artillery_militiagunboat_c</sheet>
+	<desc length="51" x="0" y="0" />
+	<chargedFrame>36</chargedFrame>
+	<fireFrame>37</fireFrame>
+	<firePoint x="39" y="27" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+<animSheet name="bomb_echelon_crate" w="525" h="35" fw="35" fh="35">projectiles/bomb_artillery_echelon.png</animSheet>
+<anim name="bomb_echelon_crate">
+	<sheet>bomb_echelon_crate</sheet>
+	<desc length="15" x="0" y="0" />
+	<time>0.35</time>
+</anim>
+
 <!--////////////////// BOMB FLAK //////////////////-->
 
 <animSheet name="tc_bomb_shotgun_1" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_1.png</animSheet>
