@@ -96,6 +96,8 @@
 		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
 		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="4" />
 		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
+		<mod-append:blueprint name="human_phoenix" rarity="5" />
+		<mod-append:blueprint name="human_hazmat" rarity="4" />
 	</mod:findLike>
 </mod:findName>
 
@@ -176,13 +178,6 @@
 		<mod-append:blueprint name="scrapper_speed" rarity="4" />
 		<mod-append:blueprint name="scrapper_defender" rarity="4" />
 		<mod-append:blueprint name="scrapper_heavy" rarity="5" />
-	</mod:findLike>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_FEDERATION">
-	<mod:findLike type="rarityList">
-		<mod-append:blueprint name="human_phoenix" rarity="5" />
-		<mod-append:blueprint name="human_hazmat" rarity="4" />
 	</mod:findLike>
 </mod:findName>
 
