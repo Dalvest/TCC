@@ -814,20 +814,6 @@ SPEED          Changes gamespeed
 
     <!--/////// PORTED SHIPS //////-->
 
-    <!--mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true">
-      <unlock variant="a" silent="false">
-        <type>3</type>
-        <shipReq>CREW_SHIP_SLOT2_2</shipReq>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_DEFENSE">
-      <hiddenAug>SHIP_SPLICE</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>8</crewLimit>
-    </mod-append:customShip>-->
-
-
     <mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="false" unused="true">
       <unlock variant="a" silent="false">
         <type>3</type>
@@ -1421,7 +1407,7 @@ SPEED          Changes gamespeed
 
 	<!--/////// MILITIA GB //////-->
 	
-	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT" b="true" c="true" />
+	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT" b="true" c="true" unused="true" />
 
 	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT">
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -1443,13 +1429,26 @@ SPEED          Changes gamespeed
 
 	<!--/////// EXTRAELITE SLOT 2 //////-->
 
-	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE_SLOT2" b="false" c="false" unused="true" />
+	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE_SLOT2" b="true" c="true" unused="true" />
+
 	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2">
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>NO_GHOST</hiddenAug>
 		<hiddenAug>NO_GHOST</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crewLimit>1</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2_2">
+		<hiddenAug>SHIP_SPLICE</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>8</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2_3">
+		<hiddenAug>SHIP_REBEL</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>7</crewLimit>
 	</mod-append:customShip>
 
 	<!--/////// SAVIOR SHIPS //////-->
@@ -1493,23 +1492,6 @@ SPEED          Changes gamespeed
 		<hiddenAug>SHIP_ANCIENT</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crewLimit>12</crewLimit>
-	</mod-append:customShip>-->
-
-	<!--/////// LEGIONNAIRE BATTLESHIPPEH //////-->
-	
-	<!--<mod-append:ship name="PLAYER_SHIP_BATTLESHIP" b="false" c="false" unused="true">
-
-		<unlock variant="a" silent="false">
-		<type>2</type>
-		<shipReq>ELITE_SHIP_REBEL</shipReq>
-		</unlock>
-
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_BATTLESHIP">
-		<hiddenAug>SHIP_REBEL</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crewLimit>7</crewLimit>
 	</mod-append:customShip>-->
 
 	<!--/////// ECHO 1-LINER //////-->

@@ -6706,13 +6706,77 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="ANTI_ANAEROBIC_GRID" />
 </shipBlueprint>
 
-<!--/////////////////////STALWART DEFENSE//////////////////////////-->
+<!--/////////////// EXTRA ELITE SHIP PACK SLOT 2 ///////////////-->
 
-<shipBlueprint name="PLAYER_SHIP_DEFENSE" layout="defense" img="defense">
+<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2" layout="mup_autogunboat_elite" img="mup_autogunboat_elite">
+	<class>Elite Automated Gunboat</class>
+	<name>Hardware Reset</name>
+	<desc>Having hijacked a gunboat for testing purposes, CICA has already installed many readily built systems and a very special artillery in the ship. One thing CICA seemed to forgot however, is the reactor itself!</desc>
+	<systemList>
+		<artillery power="2" max="5" room="1" start="true" weapon="ARTILLERY_RESONATE_WAVE" img="room_artillery_1x1" />
+		<battery power="3" max="3" room="4" start="true" img="room_battery_9" />
+		<cloaking power="1" room="6" start="true" img="room_cloaking_9" />
+		<doors power="2" room="13" start="true" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="3" max="10" room="10" start="true" img="room_drones_orchid_3" />
+		<engines power="2" max="8" room="12" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="true" img="room_hacking_5" />
+		<mind power="1" room="11" start="true" img="room_mind_4" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="2" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="5" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="3" max="10" room="9" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<systemLimit>9</systemLimit>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="LASER_BURST_3" />
+	</weaponList>
+	<droneList drones="5" count="3">
+		<drone name="MANNING" />
+		<drone name="MANNING" />
+		<drone name="REPAIR" />
+	</droneList>
+	<health amount="15" />
+	<maxPower amount="0" />
+	<aug name="EX_DEFENSE_SCRAMBLER" />
+	<aug name="EX_AUTO_COOLDOWN" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_2" layout="defense" img="defense">
 	<class>Salvaged Federation Cruiser</class>
 	<name>Stalwart Defense</name>
 	<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The spliced nature of the craft makes it hard to manuever.</desc>
-	<unlock id="ship_PLAYER_SHIP_DEFENSE_unlock"/>
 	<systemList>
 		<artillery power="2" room="5" start="true" weapon="ARTILLERY_BEAM" img="room_artillery" />
 		<battery power="1" room="12" start="true" img="room_battery_6" />
@@ -6783,6 +6847,76 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="ANCIENT_SHIELD" />
 	<aug name="PALADIN_ARMOR" />
 	<aug name="SYSTEM_CASING_NEW" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_3" layout="mup_battleship_a" img="mup_battleship_a">
+	<class>Legion Battleship</class>
+    <name>The Siege</name>
+    <desc>The pride and joy of the legion. While it is not yet fully functional, that doesn't mean it isn't a force to be reckoned with.</desc>
+	<systemList>
+		<artillery max="5" power="1" room="12" start="true" weapon="ARTILLERY_BATTLESHIP_LASER" img="room_artillery" />
+		<cloaking max="5" power="1" room="5" start="false" img="room_cloaking" />
+		<clonebay max="4" power="2" room="9" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors max="3" power="1" room="6" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones max="8" power="1" room="10" start="false" img="room_drones" />
+		<engines max="8" power="1" room="2" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking max="3" power="1" room="3" start="false" img="room_hacking" />
+		<mind max="3" power="1" room="13" start="false" img="room_mind" />
+		<oxygen max="4" power="1" room="11" start="true" img="room_oxygen" />
+		<pilot max="3" power="1" room="1" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors max="3" power="1" room="4" start="true" img="room_sensors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="7" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter max="4" power="2" room="0" start="true" />
+		<weapons max="8" power="2" room="8" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="ZENITH_1" />
+	</weaponList>
+	<droneList drones="3" count="4">
+	</droneList>
+	<health amount="25" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="human_legion" />
+	<crewCount amount="1" class="human_legion" />
+	<crewCount amount="1" class="human_legion" />
+	<aug name="LEGION_LOADER" />
+	<shieldImage>mup_cultist_a</shieldImage>
 </shipBlueprint>
 
 <!--///////////////////// POTENTIAL //////////////////////////-->
@@ -9116,73 +9250,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="human_phoenix" />
 </shipBlueprint>
 
-<!--/////////////// AGB ELITE ///////////////-->
-
-<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2" layout="mup_autogunboat_elite" img="mup_autogunboat_elite">
-	<class>Elite Automated Gunboat</class>
-	<name>Hardware Reset</name>
-	<desc>Having hijacked a gunboat for testing purposes, CICA has already installed many readily built systems and a very special artillery in the ship. One thing CICA seemed to forgot however, is the reactor itself!</desc>
-	<systemList>
-		<artillery power="2" max="5" room="1" start="true" weapon="ARTILLERY_RESONATE_WAVE" img="room_artillery_1x1" />
-		<battery power="3" max="3" room="4" start="true" img="room_battery_9" />
-		<cloaking power="1" room="6" start="true" img="room_cloaking_9" />
-		<doors power="2" room="13" start="true" img="room_doors_9">
-			<slot>
-				<direction>right</direction>
-				<number>1</number>
-			</slot>
-		</doors>
-		<drones power="3" max="10" room="10" start="true" img="room_drones_orchid_3" />
-		<engines power="2" max="8" room="12" start="true" img="room_engines_8">
-			<slot>
-				<direction>left</direction>
-				<number>1</number>
-			</slot>
-		</engines>
-		<hacking power="1" room="8" start="true" img="room_hacking_5" />
-		<mind power="1" room="11" start="true" img="room_mind_4" />
-		<pilot power="1" room="0" start="true" img="room_pilot">
-			<slot>
-				<direction>right</direction>
-				<number>0</number>
-			</slot>
-		</pilot>
-		<sensors power="1" room="2" start="true" img="room_sensors">
-			<slot>
-				<direction>down</direction>
-				<number>1</number>
-			</slot>
-		</sensors>
-		<shields power="2" max="8" room="5" start="true" img="room_shields_11">
-			<slot>
-				<direction>down</direction>
-				<number>1</number>
-			</slot>
-		</shields>
-		<weapons power="3" max="10" room="9" start="true" img="room_weapons_8">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</weapons>
-	</systemList>
-	<systemLimit>9</systemLimit>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>3</droneSlots>
-	<weaponList missiles="5" count="4">
-		<weapon name="LASER_BURST_3" />
-	</weaponList>
-	<droneList drones="5" count="3">
-		<drone name="MANNING" />
-		<drone name="MANNING" />
-		<drone name="REPAIR" />
-	</droneList>
-	<health amount="15" />
-	<maxPower amount="0" />
-	<aug name="EX_DEFENSE_SCRAMBLER" />
-	<aug name="EX_AUTO_COOLDOWN" />
-</shipBlueprint>
-
 <!--/////////////// MILITIA GB ///////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_MILITIAGUNBOAT" layout="mup_militiagunboat" img="mup_militiagunboat">
@@ -9620,79 +9687,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="avatarlegion" />
 	<aug name="FALSE_SHIELD" />
 	<shieldImage>mup_savior_c</shieldImage>
-</shipBlueprint>
-
-<!--/////////////// LEGION SHIPPY ///////////////-->
-
-<shipBlueprint name="PLAYER_SHIP_BATTLESHIP" layout="mup_battleship_a" img="mup_battleship_a">
-	<class>Legion Battleship</class>
-    <name>The Siege</name>
-    <unlock id="ship_PLAYER_SHIP_BATTLESHIP_unlock"/>
-    <desc>The pride and joy of the legion. While it is not yet fully functional, that doesn't mean it isn't a force to be reckoned with.</desc>
-	<systemList>
-		<artillery max="5" power="1" room="12" start="true" weapon="ARTILLERY_BATTLESHIP_LASER" img="room_artillery" />
-		<cloaking max="5" power="1" room="5" start="false" img="room_cloaking" />
-		<clonebay max="4" power="2" room="9" start="true">
-			<slot>
-				<number>1</number>
-			</slot>
-		</clonebay>
-		<doors max="3" power="1" room="6" start="true" img="room_doors">
-			<slot>
-				<direction>up</direction>
-				<number>0</number>
-			</slot>
-		</doors>
-		<drones max="8" power="1" room="10" start="false" img="room_drones" />
-		<engines max="8" power="1" room="2" start="true" img="room_engines">
-			<slot>
-				<direction>down</direction>
-				<number>2</number>
-			</slot>
-		</engines>
-		<hacking max="3" power="1" room="3" start="false" img="room_hacking" />
-		<mind max="3" power="1" room="13" start="false" img="room_mind" />
-		<oxygen max="4" power="1" room="11" start="true" img="room_oxygen" />
-		<pilot max="3" power="1" room="1" start="true" img="room_pilot">
-			<slot>
-				<direction>right</direction>
-				<number>0</number>
-			</slot>
-		</pilot>
-		<sensors max="3" power="1" room="4" start="true" img="room_sensors">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</sensors>
-		<shields max="8" power="2" room="7" start="true" img="room_shields">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</shields>
-		<teleporter max="4" power="2" room="0" start="true" />
-		<weapons max="8" power="2" room="8" start="true" img="room_weapons">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</weapons>
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="0" count="4">
-		<weapon name="ZENITH_1" />
-	</weaponList>
-	<droneList drones="3" count="4">
-	</droneList>
-	<health amount="25" />
-	<maxPower amount="7" />
-	<crewCount amount="1" class="human_legion" />
-	<crewCount amount="1" class="human_legion" />
-	<crewCount amount="1" class="human_legion" />
-	<aug name="LEGION_LOADER" />
-	<shieldImage>mup_cultist_a</shieldImage>
 </shipBlueprint>
 
 <!--/////////////// ECHO 1-LINER ///////////////-->
