@@ -5497,133 +5497,135 @@
 		<desc y="0" x="0" length="1" />
 		<time>1</time>
 	</anim>
+
 	<!--illuminant-->
-	<animSheet fh="35" fw="35" h="455" w="315" name="illuminant">people/avali_base.png</animSheet>
-	<anim name="avali_clone">
-		<sheet>avali</sheet>
-		<desc y="2" x="0" length="6" />
+	<animSheet fh="35" fw="35" h="455" w="350" name="avali_illuminant">people/avali_illuminant_base.png</animSheet>
+	<anim name="avali_illuminant_clone">
+		<sheet>avali_illuminant</sheet>
+		<desc y="2" x="0" length="7" />
 		<time>0.75</time>
 	</anim>
-	<anim name="avali_death_right">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_death_right">
+		<sheet>avali_illuminant</sheet>
 		<desc y="0" x="3" length="5" />
 		<time>0.75</time>
 	</anim>
-	<anim name="avali_death_left">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_death_left">
+		<sheet>avali_illuminant</sheet>
 		<desc y="2" x="0" length="5" />
 		<time>0.75</time>
 	</anim>
-	<anim name="avali_walk_down">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_walk_down">
+		<sheet>avali_illuminant</sheet>
 		<desc y="12" x="0" length="4" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_walk_right">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_walk_right">
+		<sheet>avali_illuminant</sheet>
 		<desc y="12" x="4" length="4" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_walk_up">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_walk_up">
+		<sheet>avali_illuminant</sheet>
 		<desc y="11" x="0" length="4" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_walk_left">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_walk_left">
+		<sheet>avali_illuminant</sheet>
 		<desc y="11" x="4" length="4" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_shoot_down">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_shoot_down">
+		<sheet>avali_illuminant</sheet>
 		<desc y="10" x="0" length="3" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_shoot_right">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_shoot_right">
+		<sheet>avali_illuminant</sheet>
 		<desc y="10" x="3" length="3" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_shoot_up">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_shoot_up">
+		<sheet>avali_illuminant</sheet>
 		<desc y="10" x="6" length="3" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_shoot_left">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_shoot_left">
+		<sheet>avali_illuminant</sheet>
 		<desc y="1" x="0" length="3" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_fire_down">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_fire_down">
+		<sheet>avali_illuminant</sheet>
 		<desc y="9" x="0" length="4" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_fire_right">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_fire_right">
+		<sheet>avali_illuminant</sheet>
 		<desc y="9" x="4" length="4" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_fire_up">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_fire_up">
+		<sheet>avali_illuminant</sheet>
 		<desc y="8" x="0" length="4" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_fire_left">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_fire_left">
+		<sheet>avali_illuminant</sheet>
 		<desc y="8" x="4" length="4" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_repair">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_repair">
+		<sheet>avali_illuminant</sheet>
 		<desc y="7" x="0" length="9" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_punch_up">
-		<sheet>avali</sheet>
-		<desc y="1" x="3" length="6" />
+	<anim name="avali_illuminant_punch_up">
+		<sheet>avali_illuminant</sheet>
+		<desc y="1" x="3" length="7" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_punch_down">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_punch_down">
+		<sheet>avali_illuminant</sheet>
 		<desc y="6" x="0" length="8" />
 		<time>1.0</time>
 	</anim>
-	<anim name="avali_teleport">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_teleport">
+		<sheet>avali_illuminant</sheet>
 		<desc y="3" x="0" length="7" />
 		<time>0.5</time>
 	</anim>
-	<anim name="avali_type_right">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_type_right">
+		<sheet>avali_illuminant</sheet>
 		<desc y="5" x="0" length="4" />
 		<time>0.75</time>
 	</anim>
-	<anim name="avali_type_left">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_type_left">
+		<sheet>avali_illuminant</sheet>
 		<desc y="5" x="4" length="4" />
 		<time>0.75</time>
 	</anim>
-	<anim name="avali_type_up">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_type_up">
+		<sheet>avali_illuminant</sheet>
 		<desc y="4" x="0" length="4" />
 		<time>0.75</time>
 	</anim>
-	<anim name="avali_type_down">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_type_down">
+		<sheet>avali_illuminant</sheet>
 		<desc y="4" x="4" length="4" />
 		<time>0.75</time>
 	</anim>
 	<anim name="crewLaser">
-		<sheet>avali</sheet>
+		<sheet>avali_illuminant</sheet>
 		<desc y="0" x="1" length="1" />
 		<time>0.5</time>
 	</anim>
-	<anim name="avali_portrait">
-		<sheet>avali</sheet>
+	<anim name="avali_illuminant_portrait">
+		<sheet>avali_illuminant</sheet>
 		<desc y="0" x="0" length="1" />
 		<time>1</time>
 	</anim>
+
 	<!--tori-->
 	<animSheet fh="35" fw="35" h="455" w="315" name="tori">people/avali_base.png</animSheet>
 	<anim name="avali_clone">

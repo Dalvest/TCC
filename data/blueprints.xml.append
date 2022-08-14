@@ -5945,7 +5945,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP" layout="player_ship_tc_armored_wasp" img="player_ship_tc_armored_wasp">
 	<class>"Gladiator" Corvette</class>
 	<name>Armored Wasp</name>
-	<desc>This ship was rebuilt out of junk to be Lancer's personal shuttle - now it's a fast and extremely combat capable ship, although it's a bit cramped and fragile.</desc>
+	<desc>This ship has actually been made by the Avali - it's highly powerful but also quite cramped. It uses top-of-the-line singularity projection tech, making it one of the most effective warships... provided that the enemy it sitting completely still.</desc>
 	<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_unlock"/>
 	<systemList>
 		<cloaking power="1" room="7" start="false" img="room_cloaking_2_1x1" />
@@ -6005,7 +6005,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="12" count="4">
-		<weapon name="SINGULARITY_PROJECTOR_1" />
+		<weapon name="AVALI_HUNTER1" />
 		<weapon name="TC_TEAR_GAS" />
 	</weaponList>
 	<droneList drones="9" count="4">
@@ -10288,14 +10288,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		</layer>
 	</colorList>
 </crewBlueprint>
-<crewBlueprint name="illuminant">
-	<desc>Elite Avali Crew. The highest ranks of the Illuminate's military, and an inspiring leader for their fellow avians.</desc>
+
+<crewBlueprint name="avali_illuminant">
+	<desc>Elite Avali Crew. The highest ranks of the Illuminate's military, an inspiring leader and extremely adept biotech engineer among their fellow avians.</desc>
 	<cost>120</cost>
 	<title>Avali Illuminant</title>
 	<short>Illuminant</short>
 	<rarity>0</rarity>
 	<powerList>
-		<power>YOU SHOULD NEVER SEE THIS</power>
 		<power>Moves at 2x speed.</power>
 		<power>Takes 1.5x damage from fire - extinguishes them at 0.8x speed.</power>
 		<power>Has 90 HP, deals normal damage.</power>
@@ -10303,6 +10303,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Additionally, buffs all friendly Avali in the room, giving them +10 HP, +10% combat damage resistance and +15% damage dealt. Stacks with the ship wide buffs.</power>
 	</powerList>
 </crewBlueprint>
+
 <crewBlueprint name="technician">
 	<desc>repair birds or whatever</desc>
 	<cost>70</cost>
