@@ -160,36 +160,33 @@
           </event>
           <event req="TC_DEAD" lvl="5">
             <quest event="ENCOUNTER_TC6"/>
-            <variable name="tc_call_marker" op="set" val="0"/>
-            <loadEvent>TRUENOTHING</loadEvent>
+            <loadEvent>TC_SPAWNER_END</loadEvent>
           </event>
           <event req="TC_DEAD" lvl="4">
             <quest event="ENCOUNTER_TC5"/>
-            <variable name="tc_call_marker" op="set" val="0"/>
-            <loadEvent>TRUENOTHING</loadEvent>
+            <loadEvent>TC_SPAWNER_END</loadEvent>
           </event>
           <event req="TC_DEAD" lvl="3">
             <quest event="ENCOUNTER_TC4"/>
-            <variable name="tc_call_marker" op="set" val="0"/>
-            <loadEvent>TRUENOTHING</loadEvent>
+            <loadEvent>TC_SPAWNER_END</loadEvent>
           </event>
           <event req="TC_DEAD" lvl="2">
             <quest event="ENCOUNTER_TC3"/>
-            <variable name="tc_call_marker" op="set" val="0"/>
-            <loadEvent>TRUENOTHING</loadEvent>
+            <loadEvent>TC_SPAWNER_END</loadEvent>
           </event>
           <event req="TC_DEAD" lvl="1">
             <quest event="ENCOUNTER_TC2"/>
-            <variable name="tc_call_marker" op="set" val="0"/>
-            <loadEvent>TRUENOTHING</loadEvent>
+            <loadEvent>TC_SPAWNER_END</loadEvent>
           </event>
           <event req="tc_call_marker" lvl="1">
             <quest event="ENCOUNTER_TC1"/>
-            <variable name="tc_call_marker" op="set" val="0"/>
-            <loadEvent>TRUENOTHING</loadEvent>
+            <loadEvent>TC_SPAWNER_END</loadEvent>
           </event>
         </loadEventList>
       </event>
     </loadEventList>
   </event>
+	<event name="TC_SPAWNER_END">
+		<variable name="tc_call_marker" op="set" val="0"/>
+	</event>
 </FTL>
