@@ -125,6 +125,16 @@
 
 <!--////////////////// ARTY ZONE /////////////////-->
 
+<animSheet name="artillery_militiagunboat_elite" w="2575" h="283" fw="103" fh="283">artillery_player/MilitiaGunboatArtilleryElite.png</animSheet>
+<weaponAnim name="artillery_militiagunboat_elite">
+	<sheet>artillery_militiagunboat_elite</sheet>
+	<desc length="25" x="0" y="0" />
+	<chargedFrame>13</chargedFrame>
+	<fireFrame>14</fireFrame>
+	<firePoint x="51" y="71" />
+	<mountPoint x="0" y="0" />
+</weaponAnim>
+
 <animSheet name="artillery_auto_a" w="174" h="49" fw="29" fh="49">weapon_artillery/artillery_auto_a.png</animSheet>
 <weaponAnim name="artillery_auto_a">
 	<sheet>artillery_auto_a</sheet>
@@ -4293,6 +4303,129 @@
 		<time>1</time>
 	</anim>
 
+<!--/////////////// BLACK ROSE //////////////-->
+
+<animSheet name="black_rose" w="315" h="455" fw="35" fh="35">people/black_rose_base.png</animSheet>
+	<anim name="black_rose_clone">
+		<sheet>black_rose</sheet>
+		<desc length="6" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="black_rose_death_right">
+		<sheet>black_rose</sheet>
+		<desc length="5" x="3" y="0"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="black_rose_death_left">
+		<sheet>black_rose</sheet>
+		<desc length="5" x="0" y="2"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="black_rose_walk_down">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="0" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_walk_right">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="4" y="12"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_walk_up">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="0" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_walk_left">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="4" y="11"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_shoot_down">
+		<sheet>black_rose</sheet>
+		<desc length="3" x="0" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_shoot_right">
+		<sheet>black_rose</sheet>
+		<desc length="3" x="3" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_shoot_up">
+		<sheet>black_rose</sheet>
+		<desc length="3" x="6" y="10"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_shoot_left">
+		<sheet>black_rose</sheet>
+		<desc length="3" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_fire_down">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="0" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_fire_right">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="4" y="9"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_fire_up">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="0" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_fire_left">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="4" y="8"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_repair">
+		<sheet>black_rose</sheet>
+		<desc length="9" x="0" y="7"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_punch_up">
+		<sheet>black_rose</sheet>
+		<desc length="6" x="3" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_punch_down">
+		<sheet>black_rose</sheet>
+		<desc length="6" x="0" y="6"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="black_rose_teleport">
+		<sheet>black_rose</sheet>
+		<desc length="9" x="0" y="3"/>
+		<time>0.5</time>
+	</anim>
+	<anim name="black_rose_type_right">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="0" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="black_rose_type_left">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="4" y="5"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="black_rose_type_up">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="0" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="black_rose_type_down">
+		<sheet>black_rose</sheet>
+		<desc length="4" x="4" y="4"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="black_rose_portrait">
+		<sheet>black_rose</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
 
 <!--/////////////// SERGALS //////////////-->
 

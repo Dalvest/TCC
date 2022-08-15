@@ -1416,8 +1416,18 @@ SPEED          Changes gamespeed
 
 	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT_3">
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<hiddenAug>SHIP_RSA</hiddenAug>
+		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
 		<crewLimit>10</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT_ELITE" b="false" c="false" unused="true" />
+
+	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT_ELITE">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
+		<crewLimit>6</crewLimit>
+		<customReactor maxLevel="20">
+		</customReactor>
 	</mod-append:customShip>
 
 	<!--/////// EXTRAELITE SLOT 2 //////-->
@@ -1600,7 +1610,7 @@ SHIP HANGAR ORDER
 			<mod-append:ship>PLAYER_SHIP_AUTOGUNBOAT</mod-append:ship> <!-- Auto GunBoat -->
 
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE_SLOT2</mod-append:ship> <!-- More Elites -->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_MILITIAGUNBOAT_ELITE</mod-append:ship> <!-- Even More Elites, this time Echelon themed -->
 
 			<!--Page 3--> <!-- Line 1 - Avali/Protogen Project Ships; Line 2 - Hektar Ships -->
 			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
