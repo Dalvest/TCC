@@ -1908,6 +1908,48 @@
 
 <!--////////////////////////////////////////////// ARTY ZONE /////////////////////////////////////////////-->
 
+<weaponBlueprint name="ARTILLERY_CIVILIAN_JUSTICE">
+	<type>LASER</type>
+	<title>CDEG Super vulcan artillery</title>
+	<short>Artillery</short>
+	<desc>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.
+	Base Cooldown: 15</desc>
+	<tooltip>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<fireTime>0.25</fireTime>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>15</cooldown>
+	<cost>1000</cost>
+	<bp>2</bp>
+	<speed>80</speed>
+	<rarity>0</rarity>
+	<image>laser_stun</image>
+	<boost>
+        	<type>cooldown</type>
+        	<amount>2.95</amount>
+        	<count>5</count>
+    	</boost>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_militiagunboat_elite</weaponArt>
+</weaponBlueprint>
+
 <weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_C">
 	<type>BOMB</type>
 	<title>Echelon(tm) quick delivery service</title>
@@ -5759,8 +5801,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <shipBlueprint name="PLAYER_SHIP_ECHO" layout="tcp_echo" img="tcp_echo">
 	<class>LPC-Class Hybrid Jet</class>
-	<name>ECHO 1-LINER</name>
-	<desc>This LPC had become infamous during the Protogen Project revolution, when TRACKER and his ragtag team kidnapped several rebel officers and rammed through a blockade in order to defect to the Federation.</desc>
+	<name>TRACKER 1-1</name>
+	<desc>This particular LPC had become infamous during the Protogen Project revolution, when TRACKER and his ragtag team kidnapped several rebel officers and rammed through a blockade in order to defect to the Federation.</desc>
 	<systemList>
 		<battery power="1" room="12" start="true" img="room_battery_orchid_2" />
 		<cloaking power="1" room="5" start="true" img="room_cloaking_2_1x1" />
@@ -5770,8 +5812,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="2" room="6" start="true" img="room_drones_15" />
-		<engines power="3" room="11" start="true" img="room_engines_manta_b">
+		<drones power="2" max="8" room="6" start="true" img="room_drones_15" />
+		<engines power="3" max="8" room="11" start="true" img="room_engines_manta_b">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -5796,14 +5838,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="7" start="false" img="room_shields">
+		<shields power="2" max="8" room="7" start="false" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="4" start="true" />
-		<weapons power="4" room="2" start="true" img="room_weapons_echo">
+		<weapons power="4" max="8" room="2" start="true" img="room_weapons_echo">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -5822,6 +5864,74 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="20" />
 	<maxPower amount="5" />
 	<aug name="CLOAK_RELOADER" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ECHO_2" layout="tcp_echo_2" img="tcp_echo_2">
+	<class>LPC-Class Hybrid Jet</class>
+	<name>ECHO 1-LINER</name>
+	<desc>This is the original version of the TRACKER 1-1, before it was repainted to look inconspicuous. Rebel scum may still be on-board, but hey, at least they'd get past rebel blockades more easily.</desc>
+	<systemList>
+		<battery power="1" room="12" start="false" img="room_battery_orchid_2" />
+		<cloaking power="1" room="5" start="true" img="room_cloaking_2_1x1" />
+		<doors power="1" room="9" start="false" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" max="8" room="6" start="true" img="room_drones_15" />
+		<engines power="2" max="8" room="11" start="true" img="room_engines_manta_b">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_3_1x1" />
+		<medbay power="1" room="8" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<oxygen power="1" room="10" start="true" img="room_oxygen_9" />
+		<pilot power="1" room="0" start="true" img="room_pilot_fratricide">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="1" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="7" start="false" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="false" />
+		<weapons power="2" max="8" room="2" start="true" img="room_weapons_echo">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="13" count="4">
+		<weapon name="TC_CLOAKER" />
+	</weaponList>
+	<droneList drones="9" count="2">
+		<drone name="DEFENSE_1" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="7" />
+	<aug name="REBEL_ID" />
+	<crewCount amount="3" class="human_rebel" />
+	<crewCount amount="1" class="human_legion_pyro" />
 </shipBlueprint>
 
 <!--/////////////////////SIZE DOESN'T MATTER//////////////////////////-->
@@ -9536,6 +9646,66 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="NOODLE_RATIONS" />
 </shipBlueprint>
 
+<shipBlueprint name="PLAYER_SHIP_MILITIAGUNBOAT_ELITE" layout="tcp_militiagunboat_elite" img="tcp_militiagunboat_elite">
+	<class>CDEG Gunboat</class>
+	<name>Little Chonker</name>
+	<desc>A very specific model of the gunboat has been made to solely fit this one mostrosity of a gun. It may be very powerful, but that has left it's other systems less powered that normal! ....And storing explosives makes it more fragile too.</desc>
+	<systemList>
+		<artillery power="5" max="5" room="12" start="true" weapon="ARTILLERY_CIVILIAN_JUSTICE" img="room_artillery_blue_2x1right" />
+		<battery power="1" max="2" room="11" start="true" img="room_battery_14" />
+		<cloaking power="2" max="3" room="4" start="true" img="room_cloaking_9" />
+		<doors power="1" room="10" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<engines power="2" max="5" room="1" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" max="2" room="7" start="false" img="room_hacking_orchid" />
+		<medbay power="1" max="2" room="9" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" max="1" room="3" start="false" img="room_mind_9" />
+		<oxygen power="1" max="1" room="6" start="true" img="room_oxygen_10" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="2" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="3" max="6" room="8" start="false" img="room_shields_3">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</shields>
+	</systemList>
+	<weaponSlots>0</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="0" />
+	<droneList drones="0" count="0" />
+	<health amount="10" />
+	<maxPower amount="5" />
+	<crewCount amount="1" class="human_mfk" />
+	<crewCount amount="1" class="engi_defender" />
+	<crewCount amount="1" class="zoltan_peacekeeper" />
+	<crewCount amount="1" class="orchid_chieftain" />
+	<aug name="SHIELD_RECHARGE" />
+	<aug name="EX_AUTO_COOLDOWN" />
+</shipBlueprint>
 
 <!--/////////////// SAVIOR ///////////////-->
 
@@ -9808,7 +9978,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <crewBlueprint name="scrapper_zog">
 	<title>Zog</title>
 	<short>Zog</short>
-	<desc>The Prince of Lanius has returned to eat again - leading his half-cult half-association of Scrappers, he's on a quest to acquire enough mass to engulf a universe and overthrow the King...</desc>
+	<desc>You're not sure why this one is orange; he seems different than the others... more intelligent, too.</desc>
 	<cost>120</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
@@ -10110,6 +10280,21 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Max Health is 70, x1.5 movement speed</power>
 		<power>Fights and sabotages with x2.2 strength</power>
 		<power>Cannot repair, extinguish, or man systems</power>
+	</powerList>
+</crewBlueprint>
+
+<!--///////BLACK ROSE - RSA//////-->
+
+<crewBlueprint name="black_rose">
+	<desc>Black Rose is a last of her kind prototype; she's currently high ranking in the RSA, taking command over the rebuilt Corrosus after Cheese wrecked it by flying it into a building.</desc>
+	<title>BLK-R053</title>
+	<short>Black Rose</short>
+	<cost>69</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Inflicts 1.2x damage in combat</power>
+		<power>Movement speed is 1.3x</power>
 	</powerList>
 </crewBlueprint>
 
