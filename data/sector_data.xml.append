@@ -1,4 +1,58 @@
 <FTL>
+
+<!--//////////////// AVALI SECTOR /////////////////-->
+
+<!--<mod:findName type="sectorType" name="OVERRIDE_SECTOR_LIST_GENERIC_FRIENDLY">
+	<mod-append:sector>AVALI</mod-append:sector>
+</mod:findName>
+
+<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC_FRIENDLY">
+	<mod-append:sector>AVALI</mod-append:sector>
+</mod:findName>
+
+<mod:findName type="sectorType" name="CIVILIAN">
+	<mod-append:sector>AVALI</mod-append:sector>
+</mod:findName>
+
+<sectorDescription name="AVALI" unique="false">   
+	<nameList>
+		<name>Avali Collective</name>
+		<name>Avali Outer Reaches</name>
+		<name>Avali Homeworlds</name>
+		<name>Avali-Protogen Refuge</name>
+	</nameList>
+	<trackList>
+		<track>avali</track>
+		<track>lostship</track>
+		<track>hacking</track>
+		<track>deepspace</track>
+	</trackList>
+	Here, you can set crew, weapons, and augments to have a different rarity in this sector. You should probably add specific rarities to all normal MV crew, unlike shown here.
+	<rarityList>
+		<blueprint name="avali" rarity="4"/>
+		<blueprint name="protogen" rarity="3"/>
+		<blueprint name="protogen_space_scavenger" rarity="3"/>
+		<blueprint name="CATALYZER" rarity="4"/>
+	</rarityList>
+	<startEvent>ENTER_EXAMPLE</startEvent> I think this is the event that appears when you are entering the sector in hyperspeed. These are loxated in events_lightspeed.
+	<exitBeacon event="FINISH_BEACON" nebulaEvent="FINISH_BEACON_NEBULA" rebelEvent="FINISH_BEACON_FLEET_ELITE"/> The event that appears at the end of the sector.
+	<rebelBeacon event="FLEET_THREAT_MEDIUM" nebulaEvent="FLEET_THREAT_MEDIUM_NEBULA"/> The Rebel fleet events.
+	<removeFirstBeaconNebula/> Prevents the first beacon from being in a nebula. 
+	The event lists that can appear in the sector. Event lists for sectors are located in their respective events files, but store lists are located in events_standard.
+	<event name="STORELIST_EXAMPLE" min="2" max="3"/>
+	<event name="MV_TRAVELER" min="1" max="1"/>
+	<event name="NEMESIS_ENCOUNTER" min="0" max="1"/>
+	<event name="PIRACY_LIST" min="2" max="4"/>
+	<event name="DISTRESS_EXAMPLE" min="2" max="3"/>
+	<event name="HOSTILE_EXAMPLE" min="6" max="7"/>
+	<event name="ITEMS_EXAMPLE" min="2" max="4"/>
+	<event name="QUEST_EXAMPLE" min="1" max="1"/>
+	<event name="NEUTRAL_EZAMPLE" min="6" max="7"/>
+	<event name="EMPTY_EXAMPLE" min="1" max="2"/>
+</sectorDescription>-->
+
+<!--//////////////// APPEND TCC EVENTS TO EXISTENT SECTORS /////////////////-->
+
 <mod:findName type="sectorDescription" name="STANDARD_SPACE">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
 </mod:findName>
