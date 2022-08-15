@@ -5388,7 +5388,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</doors>
 		<drones max="12" power="3" room="7" start="true" img="room_drones_4" />
-		<engines max="12" power="2" room="3" start="true" img="room_engines_8">
+		<engines max="8" power="2" room="3" start="true" img="room_engines_8">
 			<slot>
 				<direction>left</direction>
 				<number>2</number>
@@ -5764,8 +5764,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="2" room="6" start="true" img="room_drones_15" />
-		<engines power="3" room="11" start="true" img="room_engines_manta_b">
+		<drones power="2" max="8" room="6" start="true" img="room_drones_15" />
+		<engines power="3" max="8" room="11" start="true" img="room_engines_manta_b">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
@@ -5790,14 +5790,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="2" room="7" start="false" img="room_shields">
+		<shields power="2" max="8" room="7" start="false" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="4" start="true" />
-		<weapons power="4" room="2" start="true" img="room_weapons_echo">
+		<weapons power="4" max="8" room="2" start="true" img="room_weapons_echo">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -5816,6 +5816,74 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="20" />
 	<maxPower amount="5" />
 	<aug name="CLOAK_RELOADER" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ECHO_2" layout="tcp_echo_2" img="tcp_echo_2">
+	<class>LPC-Class Hybrid Jet</class>
+	<name>ECHO 1-LINER</name>
+	<desc>This is the original version of the TRACKER 1-1, before it was repainted to look inconspicuous. Rebel scum may still be on-board, but hey, at least they'd get past rebel blockades more easily.</desc>
+	<systemList>
+		<battery power="1" room="12" start="false" img="room_battery_orchid_2" />
+		<cloaking power="1" room="5" start="true" img="room_cloaking_2_1x1" />
+		<doors power="1" room="9" start="false" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" max="8" room="6" start="true" img="room_drones_15" />
+		<engines power="2" max="8" room="11" start="true" img="room_engines_manta_b">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_3_1x1" />
+		<medbay power="1" room="8" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<oxygen power="1" room="10" start="true" img="room_oxygen_9" />
+		<pilot power="1" room="0" start="true" img="room_pilot_fratricide">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="1" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="7" start="false" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="false" />
+		<weapons power="2" max="8" room="2" start="true" img="room_weapons_echo">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="13" count="4">
+		<weapon name="TC_CLOAKER" />
+	</weaponList>
+	<droneList drones="9" count="2">
+		<drone name="DEFENSE_1" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="7" />
+	<aug name="REBEL_ID" />
+	<crewCount amount="3" class="human_rebel" />
+	<crewCount amount="1" class="human_legion_pyro" />
 </shipBlueprint>
 
 <!--/////////////////////SIZE DOESN'T MATTER//////////////////////////-->

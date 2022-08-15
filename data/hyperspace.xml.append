@@ -1489,7 +1489,7 @@ SPEED          Changes gamespeed
 
 	<!--/////// ECHO 1-LINER //////-->
 
-	<mod-append:ship name="PLAYER_SHIP_ECHO" b="false" c="false" unused="true"/>
+	<mod-append:ship name="PLAYER_SHIP_ECHO" b="true" c="false" unused="true"/>
 
 	<mod-append:customShip name="PLAYER_SHIP_ECHO">
 		<hiddenAug>SHIP_PROTOGEN_PROJECT</hiddenAug>
@@ -1500,6 +1500,12 @@ SPEED          Changes gamespeed
 			<protogen_tracker room="0" name="TRACKER" />
 			<sergal_cheese room="11" name="Cheese" />
 		</crew>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_ECHO_2">
+		<hiddenAug>SHIP_REBEL</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>8</crewLimit>
 	</mod-append:customShip>
 
     <!--/////// ENEMY SHIPS //////-->
