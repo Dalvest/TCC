@@ -1118,6 +1118,27 @@
 	<time>0.5</time>
 </anim>
 
+<animSheet name="GB_magnetic_slug_light" w="200" h="16" fw="50" fh="16">projectiles/GB_magnetic_slug_light_strip4.png</animSheet>
+<anim name="GB_magnetic_slug_light">
+	<sheet>GB_magnetic_slug_light</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>0.5</time>
+</anim>
+
+<animSheet name="GB_magnetic_slug_medium" w="200" h="16" fw="50" fh="16">projectiles/GB_magnetic_slug_medium_strip4.png</animSheet>
+<anim name="GB_magnetic_slug_medium">
+	<sheet>GB_magnetic_slug_medium</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>0.5</time>
+</anim>
+
+<animSheet name="GB_magnetic_slug_heavy" w="200" h="16" fw="50" fh="16">projectiles/GB_magnetic_slug_heavy_strip4.png</animSheet>
+<anim name="GB_magnetic_slug_heavy">
+	<sheet>GB_magnetic_slug_heavy</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>0.5</time>
+</anim>
+
 <animSheet name="tc_tear_gas" w="110" h="24" fw="11" fh="24">projectiles/tc_tear_gas.png</animSheet>
 <anim name="tc_tear_gas">
 	<sheet>tc_tear_gas</sheet>
@@ -4550,7 +4571,7 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
-	
+
 <!--/////////////// SERGALS //////////////-->
 
 <animSheet name="sergal" w="315" h="455" fw="35" fh="35">people/sergal_base.png</animSheet>

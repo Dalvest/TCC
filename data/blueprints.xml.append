@@ -3565,28 +3565,27 @@
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
-<!--BASED ON AUTOCANNON 2-->
+<!-- BASED ON RAILGUNS -->
 
 <weaponBlueprint name="AVALI_HUNTER1">
 	<type>LASER</type>
-	<title>Avali Hunter-Killer Autocannon I</title>
-	<short>A.HK.Ac.I</short>
-	<desc>Avali engineers are good at many things - including, in this case, making autocannons. It might be older tech but it's definitely reliable.</desc>
-	<tooltip>1 shot 2 damage hullbust weapon, 75% chance to not use ammo, 40% chance to cause a breach, medium radius.</tooltip>
+	<title>Avali Hunter-Killer Railgun I</title>
+	<short>A.HK.R.I</short>
+	<desc>Avali engineers are good at many things - including, in this case, making railguns. As expected, this mass driver is capable of firing heavy shield piercing kinetic projectiles.</desc>
+	<tooltip>1 shot 2 damage, double damage on systemless rooms, 75% chance to not use ammo, 40% chance to cause a breach, pierces 2 shields.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>75</freeMissileChance>
 	<damage>2</damage>
 	<shots>1</shots>
-	<sp>0</sp>
+	<sp>2</sp>
 	<hullbust>1</hullbust>
-	<radius>20</radius>
 	<breachChance>4</breachChance>
 	<cooldown>7</cooldown>
 	<power>2</power>
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<cost>70</cost>
-	<image>GB_shot_medium</image>
+	<image>GB_magnetic_slug_medium</image>
 	<launchSounds>
 		<sound>GB_cannonMedium1</sound>
 		<sound>GB_cannonMedium2</sound>
@@ -3610,16 +3609,16 @@
 
 <weaponBlueprint name="AVALI_HUNTER2">
 	<type>LASER</type>
-	<title>Avali Hunter-Killer Autocannon II</title>
-	<short>A.HK.Ac.II</short>
-	<desc>The heaviest Avali-made Autocannon. This weapon alone can bring down warships... provided shields are taken care of.</desc>
-	<tooltip>1 shot 3 damage hullbust weapon, 65% chance to not use ammo, 40% chance to cause a breach, 40% chance to stun</tooltip>
+	<title>Avali Hunter-Killer Railgun II</title>
+	<short>A.HK.R.II</short>
+	<desc>The heaviest Avali-made railgun. This weapon alone can bring down warships...</desc>
+	<tooltip>1 shot 3 damage hullbust weapon, double damage on systemless rooms, 40% chance to cause a breach, 40% chance to stun, breaches 3 shields.</tooltip>
 	<missiles>1</missiles>
 	<freeMissileChance>65</freeMissileChance>
 	<damage>3</damage>
 	<persDamage>1</persDamage>
 	<shots>1</shots>
-	<sp>0</sp>
+	<sp>3</sp>
 	<hullbust>1</hullbust>
 	<breachChance>4</breachChance>
 	<stunChance>4</stunChance>
@@ -3629,7 +3628,7 @@
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<cost>40</cost>
-	<image>GB_shot_heavy</image>
+	<image>GB_magnetic_slug_heavy</image>
 	<launchSounds>
 		<sound>GB_cannonHeavy1</sound>
 		<sound>GB_cannonHeavy2</sound>
@@ -3647,7 +3646,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>GB_Autocannon_3</weaponArt>
+	<weaponArt>avali_hunter2</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
