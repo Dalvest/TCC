@@ -401,15 +401,25 @@
 ////////////////////////////////-->
 
 <mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
-    <!--//////////////////PROTOGEN//////////////////-->
+  <!--//////////////////PROTOGEN//////////////////-->
   <mod-append:choice req="LIST_CREW_PROTOGEN" lvl="1" blue="false" hidden="true">
     <text>Look for Protogen crew.</text>
     <event load="STORAGE_CHECK_CREW_LIST_PROTOGEN"/>
   </mod-append:choice>
-    <!--//////////////////SERGAL//////////////////-->
+  <!--//////////////////SERGAL//////////////////-->
   <mod-append:choice req="LIST_CREW_SERGAL" lvl="1" blue="false" hidden="true">
     <text>Look for Sergal crew.</text>
     <event load="STORAGE_CHECK_CREW_LIST_SERGAL"/>
+  </mod-append:choice>
+  <!--//////////////////BLACK ROSE//////////////////-->
+  <mod-append:choice req="black_rose" lvl="1" blue="false" hidden="true">
+      <text>Look for Black Rose.</text>
+      <event load="STORAGE_CHECK_CREW_LIST_BLACK_ROSE"/>
+  </mod-append:choice>
+  <!--//////////////////TABAXI//////////////////-->
+  <mod-append:choice req="LIST_CREW_TABAXI" lvl="1" blue="false" hidden="true">
+      <text>Look for Tabaxi crew.</text>
+      <event load="STORAGE_CHECK_CREW_LIST_TABAXI"/>
   </mod-append:choice>
   <!--//////////////////KIVIE//////////////////-->
   <mod-append:choice req="LIST_CREW_KIVIE" lvl="1" blue="false" hidden="true">
@@ -1183,6 +1193,110 @@
     <text>Cheese asks you for permission to click the "hot gay furs in your sector" ad. You yell at him that he's an idiot.</text>
     <text>Cheese's fur seems completely impractical for any enviroment, unless he plans to disguise himself as a Hektar billboard.</text>
     <text>Cheese asks you to let him download Hektarsoft Flight Simulator on the ship mainframe. You politely inform him commiting game piracy would be equivalent to a war crime.</text>
+  </textList>
+
+  <!--/////////////// BLACK ROSE TALK TO CREW //////////////-->
+
+    <event name="STORAGE_CHECK_CREW_LIST_BLACK_ROSE">
+      <text>You look around for some crew to talk to.</text>
+
+    <choice req="black_rose" blue="false" hidden="true">
+        <text>Ask Black Rose to talk to you.</text>
+        <event load="STORAGE_CHECK_CREW_BLACK_ROSE"/>
+    </choice>
+
+    </event>
+
+  <event name="STORAGE_CHECK_CREW_BLACK_ROSE">
+    <text>What do you want to do with your Black Rose?</text> 
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_BLACK_ROSE_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_BLACK_ROSE_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_BLACK_ROSE_SCAN">
+    <text>BLK-R053'S DETAILS
+      SPECIES? [Android Prototype] UNIQUE? [Yes]
+      Stats: 110 Health, unaable to suffocate, x2 melee damage, x0.7 ranged damage, x1.5 sabotage damage
+      Black Rose's origins are not completely unclear - according to leaked RSA documents, she's a prototype that was meant to rival the Protogen.
+      She's moody sometimes but she's always lovely to talk to. She's also hgihly dangerous.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_BLACK_ROSE_TALK">
+    <text load="TEXT_CREW_TALK_BLACK_ROSE"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_BLACK_ROSE">
+    <text>Black Rose is sharpening her collection of swords. She has piles upon piles of them.</text>
+    <text>Black Rose offers to drink with you - you'd agree, but she cannot drink.</text>
+    <text>Black Rose is trying to explain to you that her name is NOT Black Rose, it's BLK-R053.</text>
+  </textList>
+
+    <!--/////////////// TABAXI TALK TO CREW //////////////-->
+
+    <event name="STORAGE_CHECK_CREW_LIST_TABAXI">
+      <text>You look around for some crew to talk to.</text>
+  
+    <choice req="cheetah" blue="false" hidden="true">
+        <text>Look for your Cheetah.</text>
+        <event load="STORAGE_CHECK_CREW_CHEETAH"/>
+    </choice>
+
+    </event>
+  
+  <event name="STORAGE_CHECK_CREW_CHEETAH">
+    <text>What do you want to do with your Cheetah?</text> 
+    <choice>
+      <text id="talk_to_crew"/>
+      <event load="STORAGE_CHECK_CREW_CHEETAH_TALK"/>
+    </choice>
+    <choice>
+      <text id="scan_crew"/>
+      <event load="STORAGE_CHECK_CREW_CHEETAH_SCAN"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_CHEETAH_SCAN">
+    <text>CHEETAH'S DETAILS
+      SPECIES? [Cheetah] UNIQUE? [No]
+      Stats: 100 Health, x1.5 hazard damage taken, x1.3 damage
+      The Cheetah's origins are strange - it is suspected that they are related to Tabaxis, however research is still underway to ascertain their exact origin.
+      Like Tabaxis, they're relatively new players in the Multiverse Wars.</text>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <event name="STORAGE_CHECK_CREW_CHEETAH_TALK">
+    <text load="TEXT_CREW_TALK_CHEETAH"/>
+    <choice>
+      <text>Continue...</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  <textList name="TEXT_CREW_TALK_CHEETAH">
+    <text>Your Cheetah made an incredibly cute noise. You're not sure if you should be concerned.</text>
+    <text>Your Cheetah would like to take a shuttle to a planetside bar and have a few drinks with whoever they'd meet there. You can't help but agree, that seems to be a good plan.</text>
+    <text>You ask your Cheetah if they like the rations - they respond with "Needs more meat!".</text>
   </textList>
 
   <!--////// KORA'S DIALOGUE ////////-->

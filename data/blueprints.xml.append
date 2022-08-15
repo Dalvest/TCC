@@ -6503,10 +6503,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="13" count="4" />
 	<health amount="15" />
 	<maxPower amount="8" />
-	<crewCount amount="1" class="rsa_technician" />
-	<crewCount amount="1" class="robottos" />
-	<crewCount amount="1" class="scrapper" />
-	<crewCount amount="1" class="kiviekith" />
 	<aug name="SALVAGE_ARRAY" />
 	<aug name="AUTOMATED_QUARTERMASTER" />
 </shipBlueprint>
@@ -10277,18 +10273,37 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</powerList>
 </crewBlueprint>
 
-<!--///////BLACK ROSE - RSA//////-->
+<!--/////// UNIQUE - BLACK ROSE - RSA //////-->
 
 <crewBlueprint name="black_rose">
-	<desc>Black Rose is a last of her kind prototype; she's currently high ranking in the RSA, taking command over the rebuilt Corrosus after Cheese wrecked it by flying it into a building.</desc>
+	<desc>Black Rose is a last of her kind prototype; she's currently got a high rank in the RSA. She took command over the rebuilt Corrosus after Cheese wrecked it by flying it into a building.</desc>
 	<title>BLK-R053</title>
 	<short>Black Rose</short>
 	<cost>69</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Inflicts 1.2x damage in combat</power>
+		<power>Inflicts 2x damage in melee combat owing to extreme skill</power>
+		<power>110 HP owing to inbuilt armor.</power>
+		<power>x0.7 repair speed and ranged combat damage, sabotages at x1.5 speed.</power>
+		<power>Unable to suffocate.</power>
 		<power>Movement speed is 1.3x</power>
+	</powerList>
+</crewBlueprint>
+
+<!--/////// UNIQUE - CHEETAH - AVALI SECTOR//////-->
+
+<crewBlueprint name="cheetah">
+	<desc>A fairly strange specimen of tabaxi that has spots and their frame is larger than usual.</desc>
+	<title>Cheetah</title>
+	<short>Cheetah</short>
+	<cost>69</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Inflicts 1.3x damage</power>
+		<power>Movement speed is 1.1x, takes 0.9x damage</power>
+		<power>Takes 1.5x hazard damage</power>
 	</powerList>
 </crewBlueprint>
 
@@ -10587,7 +10602,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 		<power>Normal movement speed due to improved training and leg augments.</power>
 		<power>Provides two bars of power to the current system thanks to his highly efficient onboard power generator.</power>
 		<power>Internal Database makes skills unable to degrade.</power>
-		<power>Heavy armor mitigates incoming damage (x0.6 damage taken).</power>
+		<power>Heavy inbuilt armor mitigates incoming damage (x0.6 damage taken).</power>
 	</powerList>
 </crewBlueprint>
 

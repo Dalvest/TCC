@@ -40,6 +40,8 @@
 	<mod-append:name>robottos_police</mod-append:name>
 	<mod-append:name>mantis_rsa</mod-append:name>
 	<mod-append:name>mantis_freebusiness</mod-append:name>
+	<mod-append:name>cheetah</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
 </mod:findName>
 
 <!--/////// SCRAPPERS //////-->
@@ -102,6 +104,7 @@
 	<mod-append:name>scrapper_speed</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
 </mod:findName>
 
 <!--/////// FEDERATION ///////-->
@@ -114,6 +117,12 @@
 <mod:findName type="blueprintList" name="LIST_CREW_SOLDIER">
 	<mod-append:name>human_phoenix</mod-append:name>
 </mod:findName>
+
+<!--/////// TABAXI ZONE //////-->
+
+<blueprintList name="LIST_CREW_TABAXI">
+	<name>cheetah</name>
+</blueprintList>
 
 <!--/////// MANTIS ZONE //////-->
 
@@ -179,6 +188,7 @@
 	<name>mantis_rsa</name>
 	<name>kiviekith</name>
 	<name>rsa_technician</name>
+	<name>black_rose</name>
 </blueprintList>
 
 <!--/////// AVALI //////-->
@@ -283,6 +293,7 @@
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
@@ -293,12 +304,14 @@
 	<mod-append:name>clonefail_lancer</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
 	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_COGNITIVE">

@@ -50,6 +50,11 @@
 		<destroyed load="TC3_LESSER_DESTROY"/>
 		<deadCrew load="TC3_LESSER_CREW"/>
 	</ship>
+	<ship name="TC_TRASH_MINER_QUEST" auto_blueprint="TC_TRASH_MINER_QUEST">
+	    <ship hostile="true"/>
+		<destroyed load="KM_DESTROY"/>
+		<deadCrew load="KM_CREW"/>
+	</ship>
 <ship name="SHIP_FREEMANTIS_BOMB_FLAKS" auto_blueprint="LIST_SHIPS_FREEMANTIS_FIGHT">
 	<destroyed load="DESTROYED_FREEMANTIS_BOMB_FLAKS"/>
 	<deadCrew load="DEAD_CREW_FREEMANTIS_BOMB_FLAKS"/>

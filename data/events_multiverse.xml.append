@@ -286,7 +286,7 @@
 	</event>
 
 	<event name="KM_DESTROY">
-		<text>YAYAYAYAY you did it!!!!!</text>
+		<text>You've destroyed the bigger ship... and you got their stuff. Let's hope this was worth it. </text>
 		<autoReward level="MED">stuff</autoReward>
 		<choice>
 		<text>coolio</text>
@@ -298,7 +298,7 @@
 	</event>
 
 	<event name="KM_CREW">
-		<text>YOYOYOYOY yiu dod ot!!!!!</text>
+		<text>You've emptied the bigger ship... and you got their stuff. It reeks of malformed corpses. Let's hope this was worth it.</text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<choice>
 		<text>K then</text>
@@ -1338,12 +1338,12 @@
 		</event>
 
 <event name="KM_QUEST_1">
-	<text>CHOOSE YOUR CHOOSE</text>
+	<text>TRACKER is here - he seems busy, though. "Oh hi, you again... Please, uh, help me."</text>
 	<beaconType id="map_icon_trash" global="true">
         <color r="110" g="32" b="9" a="1.0"/>
-        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <unvisitedTooltip>HELP PLEASE.</unvisitedTooltip>
         <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
-        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+        <undiscoveredTooltip>HELP PLEASE.</undiscoveredTooltip>
     </beaconType>
 	<choice>
 		<text>HElb Garbage Compactr</text>
