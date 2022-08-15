@@ -89,6 +89,13 @@
 				</choice>
 			</event>
 		</choice>
+		<choice req="pilot" lvl="1" max_group="4" hidden="false" blue="true">
+			<text>WEEEEEEEEEEEOOOOOOOOOOOOOOEEEEEEEEEEEEEEEEEOOOOOOOOOOOOOOOOEEEEEEEEEEEEEEEEEEEOOOOOOOOOOOOOOOOOW</text>
+			<event>
+			<text>Beep Boop Quest Moment </text>
+				<quest event="KM_QUEST_1"/>
+			</event>
+		</choice>
 		<choice>
 			<text>Nevermind.</text>
 			<event load="STORAGE_CHECK"/>
@@ -278,6 +285,29 @@
 		<hiddenAug>TC6_DEAD</hiddenAug>
 	</event>
 
+	<event name="KM_DESTROY">
+		<text>YAYAYAYAY you did it!!!!!</text>
+		<autoReward level="MED">stuff</autoReward>
+		<choice>
+		<text>coolio</text>
+		<event>
+			<text>Thats all folks!</text>
+			<event/>
+		</event>
+		</choice>
+	</event>
+
+	<event name="KM_CREW">
+		<text>YOYOYOYOY yiu dod ot!!!!!</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+		<text>K then</text>
+		<event>
+			<text>PERHAOPS</text>
+			<event/>
+		</event>
+		</choice>
+	</event>
 	</FTL>
 
 <!--///////////////////////////////////////FLAK MAKING///////////////////////////////////////////////////////////////-->
@@ -1306,6 +1336,37 @@
 			</event>
 		</choice>
 		</event>
+
+<event name="KM_QUEST_1">
+	<text>CHOOSE YOUR CHOOSE</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+    </beaconType>
+	<choice>
+		<text>HElb Garbage Compactr</text>
+		<event>
+			<text>ggg</text>
+			<ship load="TC_TRASH_MINER_QUEST" hostile="true"/>
+			<choice hidden="true">
+				<text>ok</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>nah bro im out</text>
+		<event>
+			<text>Tsure i guess1</text>
+			<choice hidden="true">
+				<text>ok</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+</event>
 
 
 		<mod:findName type="event" name="SYLVAN_ROYAL_NORMAL">
