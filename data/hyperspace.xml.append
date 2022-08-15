@@ -409,8 +409,6 @@ SPEED          Changes gamespeed
 
     <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
 
-	<arrow variant="a" direction="down" tooltip="ship_unlock_victory" image="arrow_v_down.png" unlockedImage="arrow_v_down_on.png">PLAYER_SHIP_TRASH_EATER</arrow>
-
 	<unlock variant="a" silent="false">
 	<type>4</type>
 	</unlock>
@@ -469,8 +467,6 @@ SPEED          Changes gamespeed
     <!--///////KESTREL MINER//////-->
 
     <mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true" unused="true">
-
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
 
       <unlock variant="a" silent="false">
         <type>4</type>
@@ -536,7 +532,6 @@ SPEED          Changes gamespeed
 
     <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="false" c="false" unused="true">
 
-      <arrow variant="a" direction="down" tooltip="ship_unlock_victory" image="arrow_v_down.png" unlockedImage="arrow_v_down_on.png">PLAYER_SHIP_SDM</arrow>
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
@@ -569,8 +564,6 @@ SPEED          Changes gamespeed
     <!--///////SIZE DOESN'T MATTER//////-->
 
     <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
-
-      <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_TC_ARMORED_WASP</arrow>
 
       <unlock variant="a" silent="false">
         <type>2</type>
@@ -621,7 +614,7 @@ SPEED          Changes gamespeed
     <!--///////ARMORED WASP//////-->
 
     <mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
-      <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_CORROSUS</arrow>
+
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_SDM</shipReq>
@@ -717,7 +710,7 @@ SPEED          Changes gamespeed
     <!--///////CORROSUS//////-->
 
     <mod-append:ship name="PLAYER_SHIP_CORROSUS" b="false" c="false" unused="true">
-      <arrow variant="a" direction="left" tooltip="ship_unlock_victory" image="arrow_v_left.png" unlockedImage="arrow_v_left_on.png">PLAYER_SHIP_SLUGTON</arrow>
+
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
