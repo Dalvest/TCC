@@ -3521,6 +3521,95 @@
 	<iconScale>0.80</iconScale>
 </weaponBlueprint>
 
+<!--///////////////////////////////////////////RAILGUN////////////////////////////////////////////////////////////////-->
+
+<!-- BASED ON RAILGUNS -->
+
+<weaponBlueprint name="AVALI_HUNTER1">
+	<type>LASER</type>
+	<title>Avali Hunter-Killer Railgun I</title>
+	<short>A.HK.R.I</short>
+	<desc>Avali engineers are good at many things - including, in this case, making railguns. As expected, this mass driver is capable of firing heavy shield piercing kinetic projectiles.</desc>
+	<tooltip>1 shot 2 damage, 10% more accuracy, double damage on systemless rooms, 65% chance to not use ammo, 8% chance to cause a breach, pierces 2 shields.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>65</freeMissileChance>
+	<accuracyMod>10</accuracyMod>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>2</sp>
+	<hullbust>1</hullbust>
+	<breachChance>8</breachChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<cost>70</cost>
+	<image>GB_magnetic_slug_medium</image>
+	<launchSounds>
+		<sound>GB_cannonMedium1</sound>
+		<sound>GB_cannonMedium2</sound>
+		<sound>GB_cannonMedium3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>avali_hunter1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AVALI_HUNTER2">
+	<type>LASER</type>
+	<title>Avali Hunter-Killer Railgun II</title>
+	<short>A.HK.R.II</short>
+	<desc>The heaviest Avali-made railgun. This weapon alone can bring down warships...</desc>
+	<tooltip>1 shot 3 damage hullbust weapon, 30% more accuracy, double damage on systemless rooms, 55% chance not to use ammo, 100% chance to cause a breach, 40% chance to stun, breaches 3 shields.</tooltip>
+	<missiles>1</missiles>
+	<freeMissileChance>55</freeMissileChance>
+	<accuracyMod>30</accuracyMod>
+	<damage>3</damage>
+	<persDamage>1</persDamage>
+	<shots>1</shots>
+	<sp>3</sp>
+	<hullbust>1</hullbust>
+	<breachChance>10</breachChance>
+	<stunChance>4</stunChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<stun>6</stun>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<cost>40</cost>
+	<image>GB_magnetic_slug_heavy</image>
+	<launchSounds>
+		<sound>GB_cannonHeavy1</sound>
+		<sound>GB_cannonHeavy2</sound>
+		<sound>GB_cannonHeavy3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>avali_hunter2</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <!--///////////////////////////////////////////AUTOCANNON////////////////////////////////////////////////////////////////-->
 
 <!--BASED ON AUTOCANNON 2-->
@@ -3562,91 +3651,6 @@
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>TC_RAPTOR_AUTOCANNON</weaponArt>
-	<iconImage>laser</iconImage>
-</weaponBlueprint>
-
-<!-- BASED ON RAILGUNS -->
-
-<weaponBlueprint name="AVALI_HUNTER1">
-	<type>LASER</type>
-	<title>Avali Hunter-Killer Railgun I</title>
-	<short>A.HK.R.I</short>
-	<desc>Avali engineers are good at many things - including, in this case, making railguns. As expected, this mass driver is capable of firing heavy shield piercing kinetic projectiles.</desc>
-	<tooltip>1 shot 2 damage, double damage on systemless rooms, 75% chance to not use ammo, 40% chance to cause a breach, pierces 2 shields.</tooltip>
-	<missiles>1</missiles>
-	<freeMissileChance>75</freeMissileChance>
-	<damage>2</damage>
-	<shots>1</shots>
-	<sp>2</sp>
-	<hullbust>1</hullbust>
-	<breachChance>4</breachChance>
-	<cooldown>7</cooldown>
-	<power>2</power>
-	<bp>4</bp>
-	<rarity>0</rarity>
-	<cost>70</cost>
-	<image>GB_magnetic_slug_medium</image>
-	<launchSounds>
-		<sound>GB_cannonMedium1</sound>
-		<sound>GB_cannonMedium2</sound>
-		<sound>GB_cannonMedium3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>avali_hunter1</weaponArt>
-	<iconImage>laser</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="AVALI_HUNTER2">
-	<type>LASER</type>
-	<title>Avali Hunter-Killer Railgun II</title>
-	<short>A.HK.R.II</short>
-	<desc>The heaviest Avali-made railgun. This weapon alone can bring down warships...</desc>
-	<tooltip>1 shot 3 damage hullbust weapon, double damage on systemless rooms, 40% chance to cause a breach, 40% chance to stun, breaches 3 shields.</tooltip>
-	<missiles>1</missiles>
-	<freeMissileChance>65</freeMissileChance>
-	<damage>3</damage>
-	<persDamage>1</persDamage>
-	<shots>1</shots>
-	<sp>3</sp>
-	<hullbust>1</hullbust>
-	<breachChance>4</breachChance>
-	<stunChance>4</stunChance>
-	<cooldown>5</cooldown>
-	<power>3</power>
-	<stun>6</stun>
-	<bp>4</bp>
-	<rarity>0</rarity>
-	<cost>40</cost>
-	<image>GB_magnetic_slug_heavy</image>
-	<launchSounds>
-		<sound>GB_cannonHeavy1</sound>
-		<sound>GB_cannonHeavy2</sound>
-		<sound>GB_cannonHeavy3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>avali_hunter2</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
