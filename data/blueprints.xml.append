@@ -275,7 +275,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>shotgun_gold</weaponArt> 
+	<weaponArt>shotgun_gold</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -311,7 +311,7 @@
         <race>FM_CRYSTAL_LIST</race>
         <number>1</number>
         <noSlot>true</noSlot>
-		<name>Anomalous Crystal</name>   
+		<name>Anomalous Crystal</name>
 		<lifetime>120</lifetime>
        <statBoosts>
             <statBoost name="noClone">
@@ -335,7 +335,7 @@
 							<fm_crystal_white/>
 							<fm_crystal_black/>
 							</whiteList>
-                  
+
 					</statBoost>
         </statBoosts>
     </spawnCrew>
@@ -417,7 +417,7 @@
         <race>FM_CRYSTAL_LIST</race>
         <number>1</number>
         <noSlot>true</noSlot>
-		<name>Anomalous Crystal</name>   
+		<name>Anomalous Crystal</name>
 		<lifetime>120</lifetime>
        <statBoosts>
             <statBoost name="noClone">
@@ -441,7 +441,7 @@
 							<fm_crystal_white/>
 							<fm_crystal_black/>
 							</whiteList>
-                  
+
 					</statBoost>
         </statBoosts>
     </spawnCrew>
@@ -492,7 +492,7 @@
         <race>void_drain</race>
         <number>1</number>
         <noSlot>true</noSlot>
-		<name>Bruh</name>   
+		<name>Bruh</name>
 		<lifetime>20</lifetime>
        <statBoosts>
             <statBoost name="noClone">
@@ -1856,7 +1856,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>tc_bomb_shotgun_bio</weaponArt> 
+	<weaponArt>tc_bomb_shotgun_bio</weaponArt>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -2124,7 +2124,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>artillery_auto_b</weaponArt> 
+	<weaponArt>artillery_auto_b</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="ARTILLERY_ENERGY_MATH">
@@ -2172,7 +2172,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>artillery_auto_c</weaponArt> 
+	<weaponArt>artillery_auto_c</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="ARTILLERY_RESONATE_WAVE">
@@ -2211,7 +2211,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>artillery_auto_elite</weaponArt> 
+	<weaponArt>artillery_auto_elite</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="SUS_LASERS">
@@ -4988,7 +4988,7 @@
     <title>Silica</title>
     <short>Silica</short>
     <desc>[CURRENT MODE: Shipboard] A terraformer and tactician drone created by the R.S.T. and Pinnacle Robotics - in a distant Universe, he discovered a problematic infestation. He likes gardening and gardening accessories.
-    
+
 -2.2x combat damage, 1.75x movement speed
 -Immune to fire and stun
 -Can man systems at lv2 skill level</desc>
@@ -5006,7 +5006,7 @@
     <title>Silica</title>
     <short>Silica</short>
     <desc>[CURRENT MODE: Boarding] A terraformer and tactician drone created by the R.S.T. and Pinnacle Robotics - in a distant Universe, he discovered a problematic infestation. He likes gardening and gardening accessories.
-    
+
 -2.2x combat damage, 1.75x movement speed
 -Immune to fire and stun
 -Can man systems at lv2 skill level</desc>
@@ -5478,9 +5478,15 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	</droneList>
 	<health amount="45" />
 	<maxPower amount="5" />
-	<crewCount amount="1" class="trash_eater" />
-	<crewCount amount="1" class="scrapper_scavenger" />
-	<crewCount amount="5" class="scrapper" />
+	<crew>
+		<trash_eater room="0" name="Trash Eater"/>
+		<scrapper_scavenger room="10"/>
+		<scrapper room="3"/>
+		<scrapper room="6"/>
+		<scrapper room="7"/>
+		<scrapper room="14"/>
+		<scrapper room="14"/>
+	</crew>
 	<aug name="COMPACTOR" />
 </shipBlueprint>
 
