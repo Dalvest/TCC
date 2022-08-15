@@ -235,4 +235,65 @@
 	</mod:findLike>
 </mod:findName>
 
+<!--/////////////// EXAMPLE ON HOW TO MAKE A SECTOR ///////////////
+
+Append the sector ID to OVERRIDE_SECTOR_LIST_GENERIC_FRIENDLY/HOSTILE/NEBULA depending on what kind of sector you want it to be.
+
+<mod:findName type="sectorType" name="OVERRIDE_SECTOR_LIST_GENERIC_FRIENDLY/HOSTILE/NEBULA">
+	<mod-append:sector>SECTOR_EXAMPLE</mod-append:sector>
+</mod:findName>
+
+Additionally, append the sector ID to SECTOR_LIST_GENERIC_FRIENDLY/HOSTILE/NEBULA depending on what kind of sector you want it to be.
+
+<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC_FRIENDLY/HOSTILE/NEBULA">
+	<mod-append:sector>SECTOR_EXAMPLE</mod-append:sector>
+</mod:findName>
+
+Finally, append the sector ID to CIVILIAN/HOSTILE/NEBULA to set its colof on the sector map.
+
+<mod:findName type="sectorType" name="CIVILIAN/HOSTILE/NEBULA">
+	<mod-append:sector>SECTOR_EXAMPLE</mod-append:sector>
+</mod:findName>
+
+NOW FOR THE SECTOR ITSELF!
+
+<sectorDescription name="SECTOR_EXAMPLE" unique="false">   
+	<nameList> The list of names the sector can appear as.
+		<name>Example Sector</name>
+		<name>Example Frontier</name>
+		<name>Example Territory</name>
+		<name>Example Region</name>
+		<name>Example Space</name>
+		<name>Example Colonies</name>
+	</nameList>
+	<trackList> The music that can play in the sector.
+		<track>shrike</track>
+		<track>lostship</track>
+		<track>hacking</track>
+		<track>deepspace</track>
+	</trackList>
+	Here, you can set crew, weapons, and augments to have a different rarity in this sector. You should probably add specific rarities to all normal MV crew, unlike shown here.
+	<rarityList>
+		<blueprint name="mantis_rsa" rarity="3"/>
+		<blueprint name="CATALYZER" rarity="4"/>
+	</rarityList>
+	<startEvent>ENTER_EXAMPLE</startEvent> I think this is the event that appears when you are entering the sector in hyperspeed. These are loxated in events_lightspeed.
+	<exitBeacon event="FINISH_BEACON" nebulaEvent="FINISH_BEACON_NEBULA" rebelEvent="FINISH_BEACON_FLEET_ELITE"/> The event that appears at the end of the sector.
+	<rebelBeacon event="FLEET_THREAT_MEDIUM" nebulaEvent="FLEET_THREAT_MEDIUM_NEBULA"/> The Rebel fleet events.
+	<removeFirstBeaconNebula/> Prevents the first beacon from being in a nebula. 
+	The event lists that can appear in the sector. Event lists for sectors are located in their respective events files, but store lists are located in events_standard.
+	<event name="STORELIST_EXAMPLE" min="2" max="3"/>
+	<event name="MV_TRAVELER" min="1" max="1"/>
+	<event name="NEMESIS_ENCOUNTER" min="0" max="1"/>
+	<event name="PIRACY_LIST" min="2" max="4"/>
+	<event name="DISTRESS_EXAMPLE" min="2" max="3"/>
+	<event name="HOSTILE_EXAMPLE" min="6" max="7"/>
+	<event name="ITEMS_EXAMPLE" min="2" max="4"/>
+	<event name="QUEST_EXAMPLE" min="1" max="1"/>
+	<event name="NEUTRAL_EZAMPLE" min="6" max="7"/>
+	<event name="EMPTY_EXAMPLE" min="1" max="2"/>
+</sectorDescription>
+
+-->
+
 </FTL>
