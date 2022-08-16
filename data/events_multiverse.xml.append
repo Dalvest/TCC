@@ -90,9 +90,9 @@
 			</event>
 		</choice>
 		<choice req="pilot" lvl="1" max_group="4" hidden="false" blue="true">
-			<text>WEEEEEEEEEEEOOOOOOOOOOOOOOEEEEEEEEEEEEEEEEEOOOOOOOOOOOOOOOOEEEEEEEEEEEEEEEEEEEOOOOOOOOOOOOOOOOOW</text>
+			<text>There's a rotary phone hanging on the side of the machine...</text>
 			<event>
-			<text>Beep Boop Quest Moment </text>
+			<text>...so you pick the receiver up. It seems that you didn't have to dial anything. A rough, metallic voice picks up. "Hey. You're an. Uhm." Papers are being flipped next to the other line's receiver. "Right. Sorry. Renegade. My name's TRACKER, I'm a... freelancer. I need your help. Come and meet me." The receiver is filled with static again. He hung up.</text>
 				<quest event="KM_QUEST_1"/>
 			</event>
 		</choice>
@@ -333,7 +333,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-50" max="-50"/>
+					<item type="scrap" min="-40" max="-40"/>
 				</item_modify>
 			<weapon name="SHOTGUN_1"/>
 		</event>
@@ -399,7 +399,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-100" max="-100"/>
+					<item type="scrap" min="-60" max="-60"/>
 				</item_modify>
 			<weapon name="SHOTGUN_INSTANT"/>
 		</event>
@@ -410,7 +410,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-90" max="-90"/>
+					<item type="scrap" min="-70" max="-70"/>
 				</item_modify>
 			<weapon name="SHOTGUN_FIRE"/>
 		</event>
@@ -421,7 +421,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-90" max="-90"/>
+					<item type="scrap" min="-70" max="-70"/>
 				</item_modify>
 			<weapon name="SHOTGUN_ION"/>
 		</event>
@@ -432,7 +432,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-90" max="-90"/>
+					<item type="scrap" min="-70" max="-70"/>
 				</item_modify>
 			<weapon name="SHOTGUN_TOXIC"/>
 		</event>
@@ -574,7 +574,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-60" max="-60"/>
+					<item type="scrap" min="-50" max="-50"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_1"/>
 		</event>
@@ -651,7 +651,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-62" max="-62"/>
+					<item type="scrap" min="-52" max="-52"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_FREE"/>
 		</event>
@@ -662,7 +662,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-60" max="-60"/>
+					<item type="scrap" min="-50" max="-50"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE"/>
 		</event>
@@ -673,7 +673,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-100" max="-100"/>
+					<item type="scrap" min="-70" max="-70"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_INSTANT"/>
 		</event>
@@ -684,7 +684,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-95" max="-95"/>
+					<item type="scrap" min="-80" max="-80"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_FIRE"/>
 		</event>
@@ -695,7 +695,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-100" max="-100"/>
+					<item type="scrap" min="-80" max="-80"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_ION"/>
 		</event>
@@ -706,7 +706,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-95" max="-95"/>
+					<item type="scrap" min="-80" max="-80"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_BIO"/>
 		</event>

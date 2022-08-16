@@ -1168,7 +1168,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>10</cooldown>
 	<power>1</power>
-	<cost>65</cost>
+	<cost>55</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>0</rarity>
@@ -1213,7 +1213,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>10</cooldown>
 	<power>2</power>
-	<cost>65</cost>
+	<cost>55</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>0</rarity>
@@ -1534,7 +1534,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>15</cooldown>
 	<power>1</power>
-	<cost>72</cost>
+	<cost>62</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>0</rarity>
@@ -1579,7 +1579,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>13</cooldown>
 	<power>0</power>
-	<cost>65</cost>
+	<cost>55</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>0</rarity>
@@ -1612,7 +1612,7 @@
 	<tip>tip_bomb_flak</tip>
 	<desc>This bomb flak uses no power, charges instantly, and fires a burst of 7 bombs at once. However, it can only be shot once per battle. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 7 damage, and 14 system damage.</tooltip>
-	<radius>100</radius>
+	<radius>60</radius>
 	<damage>1</damage>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
@@ -1624,7 +1624,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>1</cooldown>
 	<power>0</power>
-	<cost>110</cost>
+	<cost>80</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>0</rarity>
@@ -1674,7 +1674,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>17</cooldown>
 	<power>3</power>
-	<cost>105</cost>
+	<cost>90</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>0</rarity>
@@ -1719,7 +1719,7 @@
 	Base Hull Damage: 1
 	Ion Damage: 4
 
-	Buy/Sell Price: 110~/55~</descriptionOverride>
+	Buy/Sell Price: 90~/45~</descriptionOverride>
 	<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
 	<radius>55</radius>
 	<damage>1</damage>
@@ -1757,7 +1757,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>17</cooldown>
 	<power>3</power>
-	<cost>110</cost>
+	<cost>90</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>0</rarity>
@@ -1836,7 +1836,7 @@
 	<breachChance>3</breachChance>
 	<cooldown>16</cooldown>
 	<power>3</power>
-	<cost>105</cost>
+	<cost>90</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>0</rarity>
@@ -6957,80 +6957,80 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="EX_AUTO_COOLDOWN" />
 </shipBlueprint>
 
-<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_2" layout="defense" img="defense">
-	<class>Salvaged Federation Cruiser</class>
-	<name>Stalwart Defense</name>
-	<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The spliced nature of the craft makes it hard to manuever.</desc>
+<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_2" layout="ars_tanker" img="ars_tanker">
+	<class>Sentient Fuel Tanker</class>
+	<name>Sentient's Cow</name>
+	<desc>This is a fragile but surprsingly well-armed tanker type ship staffed entirely by the Sentients - not to be confused with Engis.</desc>
 	<systemList>
-		<artillery power="2" room="5" start="true" weapon="ARTILLERY_BEAM" img="room_artillery" />
-		<battery power="1" room="12" start="true" img="room_battery_6" />
-		<clonebay power="1" room="2" start="false">
+		<battery power="1" room="6" start="false" img="room_battery" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking" />
+		<clonebay power="1" room="5" start="false" >
 			<slot>
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="1" start="false" img="room_doors_9">
+		<doors power="2" room="10" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" max="8" room="8" start="true" img="room_drones" />
+		<engines power="3" max="8" room="1" start="true" img="room_engines_nightowl">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
 			</slot>
-		</doors>
-		<drones max="8" power="2" room="4" start="true" img="room_drones_3" />
-		<engines max="4" power="1" room="11" start="true" img="room_engines_5">
-			<slot>
-				<direction>up</direction>
-				<number>0</number>
-			</slot>
 		</engines>
-		<hacking power="1" room="7" start="false" img="room_hacking_3" />
-		<medbay power="1" room="2" start="true" img="room_medbay_5">
+		<hacking power="1" room="12" start="false" img="room_hacking" />
+		<medbay power="1" room="5" start="true" img="room_medbay">
 			<slot>
 				<number>1</number>
 			</slot>
 		</medbay>
-		<oxygen power="1" room="3" start="true" img="room_oxygen" />
-		<pilot power="1" room="10" start="true" img="room_pilot">
-			<slot>
-				<direction>right</direction>
-				<number>0</number>
-			</slot>
-		</pilot>
-		<sensors power="1" room="6" start="false" img="room_sensors_3">
+		<mind power="1" room="11" start="false" img="room_mind_1x1" />
+		<oxygen power="1" room="13" start="false" img="room_oxygen" />
+		<pilot power="1" room="0" start="true" img="room_pilot_7">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
 			</slot>
+		</pilot>
+		<sensors power="1" room="9" start="true" img="room_sensors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
 		</sensors>
-		<shields max="16" power="2" room="0" start="true" img="room_shields_4">
+		<shields power="2" max="8" room="2" start="true" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="8" start="false" />
-		<weapons max="8" power="1" room="9" start="true" img="room_weapons_4">
+		<teleporter power="1" room="4" start="false" />
+		<weapons power="1" max="8" room="7" start="true" img="room_weapons">
 			<slot>
 				<direction>up</direction>
-				<number>0</number>
+				<number>1</number>
 			</slot>
 		</weapons>
 	</systemList>
+	<systemLimit>10</systemLimit>
 	<weaponSlots>3</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="5" count="3">
-		<weapon name="LASER_CHAINGUN_2" />
-		<weapon name="BOMB_HEAL_SYSTEM" />
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="3" count="3">
+		<weapon name="TC_BURST_1" />
 	</weaponList>
-	<droneList drones="8" count="2">
-		<drone name="DEFENSE_1" />
+	<droneList drones="15" count="3">
+		<drone name="BATTLETOG_BOARDER" />
 	</droneList>
-	<health amount="46" /> <!-- math based on ship hulls used, first number is highest for that class (the actual value taking that specific variant into account/missing pieces)((calculation with least efficency)): 14(10)+12(9)+9((4))+11=46(39)((34))-->
-	<maxPower amount="2" />
-	<crewCount amount="1" class="rock_crusader" />
-	<crewCount amount="1" class="zoltan_peacekeeper" />
-	<aug name="ANCIENT_SHIELD" />
-	<aug name="PALADIN_ARMOR" />
-	<aug name="SYSTEM_CASING_NEW" />
+	<health amount="25" />
+	<maxPower amount="11" />
+	<crewCount amount="3" class="robottos" />
+	<crewCount amount="1" class="robottos_machinist" />
+	<crewCount amount="1" class="robottos_gunner" />
+	<aug name="CRATE_FUEL" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_3" layout="tcp_battleship_a" img="tcp_battleship_a">
@@ -7257,6 +7257,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="DRONE_RECOVERY" />
 </shipBlueprint>
 
+
 <shipBlueprint name="PLAYER_SHIP_POTENTIAL_3" layout="potential_3" img="potential_3">
 	<class>Unstable Federation Cruiser</class>
 	<name>Positron</name>
@@ -7328,6 +7329,85 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="30" />
 	<maxPower amount="3" />
 </shipBlueprint>
+
+<!--////////////////// STALWART DEFENSE //////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_DEFENSE" layout="defense" img="defense">
+	<class>Salvaged Federation Cruiser</class>
+	<name>Stalwart Defense</name>
+	<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The spliced nature of the craft makes it hard to manuever.</desc>
+	<systemList>
+		<artillery power="2" room="5" start="true" weapon="ARTILLERY_BEAM" img="room_artillery" />
+		<battery power="1" room="12" start="true" img="room_battery_6" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="1" start="false" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones max="8" power="2" room="4" start="true" img="room_drones_3" />
+		<engines max="4" power="1" room="11" start="true" img="room_engines_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="7" start="false" img="room_hacking_3" />
+		<medbay power="1" room="2" start="true" img="room_medbay_5">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<oxygen power="1" room="3" start="true" img="room_oxygen" />
+		<pilot power="1" room="10" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="6" start="false" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="16" power="2" room="0" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="8" start="false" />
+		<weapons max="8" power="1" room="9" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="5" count="3">
+		<weapon name="LASER_CHAINGUN_2" />
+		<weapon name="BOMB_HEAL_SYSTEM" />
+	</weaponList>
+	<droneList drones="8" count="2">
+		<drone name="DEFENSE_1" />
+	</droneList>
+	<health amount="46" /> <!-- math based on ship hulls used, first number is highest for that class (the actual value taking that specific variant into account/missing pieces)((calculation with least efficency)): 14(10)+12(9)+9((4))+11=46(39)((34))-->
+	<maxPower amount="2" />
+	<crewCount amount="1" class="rock_crusader" />
+	<crewCount amount="1" class="zoltan_peacekeeper" />
+	<aug name="ANCIENT_SHIELD" />
+	<aug name="PALADIN_ARMOR" />
+	<aug name="SYSTEM_CASING_NEW" />
+</shipBlueprint>
+
 <!--////////////////// AVALI SHIPS //////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_AVALI" layout="tcp_avali_A" img="tcp_avali_A">
@@ -9151,84 +9231,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<health amount="30" />
 	<maxPower amount="9" />
 	<aug name="CUSTOM_CRYSTAL" />
-</shipBlueprint>
-
-<!--/////// ROBOTTOS ARS+ SHIPS //////-->
-
-<shipBlueprint name="PLAYER_SHIP_ROBOTTO" layout="ars_tanker" img="ars_tanker">
-	<class>Sentient Fuel Tanker</class>
-	<name>Sentient's Cow</name>
-	<desc>This is a fragile but surprsingly well-armed tanker type ship staffed entirely by the Sentients - not to be confused with Engis.</desc>
-	<systemList>
-		<battery power="1" room="6" start="false" img="room_battery" />
-		<cloaking power="1" room="3" start="false" img="room_cloaking" />
-		<clonebay power="1" room="5" start="false" >
-			<slot>
-				<number>1</number>
-			</slot>
-		</clonebay>
-		<doors power="2" room="10" start="true" img="room_doors">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</doors>
-		<drones power="2" max="8" room="8" start="true" img="room_drones" />
-		<engines power="3" max="8" room="1" start="true" img="room_engines_nightowl">
-			<slot>
-				<direction>right</direction>
-				<number>1</number>
-			</slot>
-		</engines>
-		<hacking power="1" room="12" start="false" img="room_hacking" />
-		<medbay power="1" room="5" start="true" img="room_medbay">
-			<slot>
-				<number>1</number>
-			</slot>
-		</medbay>
-		<mind power="1" room="11" start="false" img="room_mind_1x1" />
-		<oxygen power="1" room="13" start="false" img="room_oxygen" />
-		<pilot power="1" room="0" start="true" img="room_pilot_7">
-			<slot>
-				<direction>right</direction>
-				<number>1</number>
-			</slot>
-		</pilot>
-		<sensors power="1" room="9" start="true" img="room_sensors">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</sensors>
-		<shields power="2" max="8" room="2" start="true" img="room_shields">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</shields>
-		<teleporter power="1" room="4" start="false" />
-		<weapons power="1" max="8" room="7" start="true" img="room_weapons">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</weapons>
-	</systemList>
-	<systemLimit>10</systemLimit>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>3</droneSlots>
-	<weaponList missiles="3" count="3">
-		<weapon name="TC_BURST_1" />
-	</weaponList>
-	<droneList drones="15" count="3">
-		<drone name="BATTLETOG_BOARDER" />
-	</droneList>
-	<health amount="25" />
-	<maxPower amount="11" />
-	<crewCount amount="3" class="robottos" />
-	<crewCount amount="1" class="robottos_machinist" />
-	<crewCount amount="1" class="robottos_gunner" />
-	<aug name="CRATE_FUEL" />
 </shipBlueprint>
 
 <!--/////// STOLEN REBEL DESIGN  //////-->
