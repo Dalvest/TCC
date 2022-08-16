@@ -276,6 +276,18 @@
 		<hiddenAug>TC6_DEAD</hiddenAug>
 	</event>
 
+	<event name="DESTROYED_BLACK_ROSE_ENCOUNTER">
+		<text>The Corrosus is gone - amidst the sea of corrugated metal, you manage to salvage a strange machine.</text>
+		<autoReward level="MED">stuff</autoReward>
+		<augment name="AUTOMATED_QUARTERMASTER"/>
+	</event>
+
+	<event name="DEAD_CREW_BLACK_ROSE_ENCOUNTER">
+		<text>The Corrosus is now silent - amidst the sea of corrugated metal, you manage to salvage a strange machine.</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<augment name="AUTOMATED_QUARTERMASTER"/>
+	</event>
+
 	<event name="TC6_CREW">
 		<text>The Trash Compactor is now empty, forever. The wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! </text>
 		<autoReward level="HIGH">stuff</autoReward>
