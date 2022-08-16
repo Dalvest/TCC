@@ -79,6 +79,7 @@ SPEED          Changes gamespeed
     <bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
     <!--sector stuff-->
     <eventFile>avali</eventFile>
+	<eventFile>rsa</eventFile>
   </events>
 
 
@@ -1573,6 +1574,17 @@ SPEED          Changes gamespeed
       </shipIcons>
       <noFuelStalemate/>
       <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+	
+	<mod-append:customShip name="RSA_DROPSHIP">
+		<shipIcons>
+			<shipIcon>icon_threat</shipIcon>
+		</shipIcons>
+		<crew>
+            <black_rose room="14" name="Black Rose"/>
+        </crew>
+		<noFuelStalemate/>
+		<autoShipForce>false</autoShipForce>
     </mod-append:customShip>
 
   </mod:findLike>
@@ -5025,6 +5037,7 @@ CREW
 	<bossShip>TC_TRASH_COMPACTOR5</bossShip>
 	<bossShip>TC_TRASH_COMPACTOR6</bossShip>
 	<bossShip>TC_TRASH_MINER</bossShip>
+	<bossShip>RSA_DROPSHIP</bossShip>
 	</events>
 
 	<!--
