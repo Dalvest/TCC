@@ -7159,13 +7159,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</shields>
 		<teleporter power="1" room="14" start="false" />
+		<temporal power="1" room="6" start="false" img="room_temporal_3" />
 		<weapons max="16" power="1" room="9" start="true" img="room_weapons_7">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</weapons>
-		<temporal power="1" room="6" start="false" img="room_temporal_3" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>3</droneSlots>
@@ -7257,6 +7257,77 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="DRONE_RECOVERY" />
 </shipBlueprint>
 
+<shipBlueprint name="PLAYER_SHIP_POTENTIAL_3" layout="potential_3" img="potential_3">
+	<class>Unstable Federation Cruiser</class>
+	<name>Positron</name>
+	<desc>Having been stolen by a cult worshipping some Finnish guy and his dimensions this ship was refitted to run on infinity power and time shards, which you don't have access to because it was recaptured.</desc>
+	<systemList>
+		<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
+		<battery power="1" room="9" start="false" img="room_battery_orchid" />
+		<cloaking power="1" room="4" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="10" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="13" start="false" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" max="16" room="0" start="false" img="room_drones_15" />
+		<engines power="1" room="15" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="14" start="false" img="room_hacking_6" />
+		<medbay power="1" room="10" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="7" start="false" img="fm_room_mind_10_modified" />
+		<oxygen power="1" room="11" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="2" start="true" img="room_pilot_doubledeal">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="3" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="16" room="1" start="true" img="room_shields_2.s__c__">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="12" start="false" />
+		<temporal power="1" room="6" start="false" img="room_temporal_3" />
+		<weapons power="1" max="16" room="8" start="true" img="room_weapons_nightowl">
+			<slot>
+				<direction>down</direction>
+				<number>6</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>8</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="8">
+		<weapon name="LASER_HEAVY_PIERCE" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<crewCount amount="1" class="human" />
+	<health amount="30" />
+	<maxPower amount="3" />
+</shipBlueprint>
 <!--////////////////// AVALI SHIPS //////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_AVALI" layout="tcp_avali_A" img="tcp_avali_A">

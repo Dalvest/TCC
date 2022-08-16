@@ -1404,6 +1404,19 @@
 	<time>0.5</time>
 </anim>
 
+<animSheet name="mup_fed_thruster_purple" w="88" h="70" fw="22" fh="70">effects/mup_thrusters_on_purple.png</animSheet>
+<anim name="mup_fed_thruster_purple">
+	<sheet>mup_fed_thruster_purple</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
+<animSheet name="mup_fed_scout_thruster_purple" w="88" h="22" fw="22" fh="22">effects/mup_fed_scout_thrusters_purple.png</animSheet>
+<anim name="mup_fed_scout_thruster_purple">
+	<sheet>mup_fed_scout_thruster_purple</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           DRONES
@@ -4695,7 +4708,7 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
-	
+
 <animSheet name="sergal_cheese" w="315" h="455" fw="35" fh="35">people/sergal_cheese_base.png</animSheet>
 	<anim name="sergal_cheese_clone">
 		<sheet>sergal_cheese</sheet>
@@ -6324,7 +6337,7 @@
 		<desc length="1" x="0" y="0" />
 		<time>1</time>
 	</anim>
-	
+
 	<animSheet name="avatarlegiona" w="560" h="280" fw="35" fh="35">people/avatarlegiona_base.png</animSheet>
 	<anim name="avatarlegiona_clone">
 		<sheet>avatarlegiona</sheet>
@@ -6446,7 +6459,7 @@
 		<desc length="1" x="0" y="0" />
 		<time>1</time>
 	</anim>
-	
+
 	<animSheet name="saviors" w="560" h="280" fw="35" fh="35">people/saviors_base.png</animSheet>
 	<anim name="saviors_clone">
 		<sheet>saviors</sheet>
@@ -6568,9 +6581,9 @@
 		<desc length="1" x="0" y="0" />
 		<time>1</time>
 	</anim>
-	
-	
-	
+
+
+
 	<animSheet name="saviorsa" w="560" h="280" fw="35" fh="35">people/saviorsa_base.png</animSheet>
 	<anim name="saviorsa_clone">
 		<sheet>saviorsa</sheet>
@@ -6692,84 +6705,84 @@
 		<desc length="1" x="0" y="0" />
 		<time>1</time>
 	</anim>
-	
+
 	<!--ION ANOMALY ANIMATIONS ENEMY -->
-	
+
 	<animSheet name="void_drain_crew_enemy" w="280" h="105" fw="35" fh="35">people/void_drain_crew_base.png</animSheet>
-	
+
 	<anim name="void_drain_crew_enemy_death_right">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="1"/>
 		<time>20</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_death_left">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="1"/>
 		<time>20</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_walk_down">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_walk_left">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_walk_up">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_walk_right">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
-	
+
+
 	<anim name="void_drain_crew_enemy_shoot_down">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_shoot_right">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_shoot_up">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_shoot_left">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_punch_up">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="8" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_punch_down">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="8" x="0" y="2"/>
 		<time>0.3</time>
 	</anim>
-	
+
 	<anim name="void_drain_crew_enemy_portrait">
 		<sheet>void_drain_crew_enemy</sheet>
 		<desc length="4" x="0" y="2"/>

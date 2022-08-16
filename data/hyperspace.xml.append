@@ -160,7 +160,7 @@ SPEED          Changes gamespeed
       <chance>65</chance>
     </category>
   </mod-append:customStore>
-  
+
 	<mod-append:customStore id="STORE_RSA">
         <hullRepair>
 			<price min="2" max="4"/>
@@ -182,19 +182,19 @@ SPEED          Changes gamespeed
             <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
 			<item>
                 <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier> 
-                <price>-1</price>
-				<mysteryItem>true</mysteryItem>
-            </item> 
-			<item>
-                <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier> 
+				<modifier flat="false">0.6</modifier>
                 <price>-1</price>
 				<mysteryItem>true</mysteryItem>
             </item>
 			<item>
                 <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier> 
+				<modifier flat="false">0.6</modifier>
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item>
+			<item>
+                <blueprint>GIFTLIST_RUSTY</blueprint>
+				<modifier flat="false">0.6</modifier>
                 <price>-1</price>
 				<mysteryItem>true</mysteryItem>
             </item>
@@ -264,7 +264,7 @@ SPEED          Changes gamespeed
 			<chance>65</chance>
         </category>
     </mod-append:customStore>
-	
+
 	<mod-append:customStore id="STORE_RSA_BOMB_FLAKS">
         <hullRepair>
 			<price min="2" max="4"/>
@@ -286,19 +286,19 @@ SPEED          Changes gamespeed
             <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
 			<item>
                 <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier> 
-                <price>-1</price>
-				<mysteryItem>true</mysteryItem>
-            </item> 
-			<item>
-                <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier> 
+				<modifier flat="false">0.6</modifier>
                 <price>-1</price>
 				<mysteryItem>true</mysteryItem>
             </item>
 			<item>
                 <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier> 
+				<modifier flat="false">0.6</modifier>
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item>
+			<item>
+                <blueprint>GIFTLIST_RUSTY</blueprint>
+				<modifier flat="false">0.6</modifier>
                 <price>-1</price>
 				<mysteryItem>true</mysteryItem>
             </item>
@@ -316,17 +316,17 @@ SPEED          Changes gamespeed
             <customTitle>BOMB FLAKS [20% OFF]</customTitle>
 			<item>
                 <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-				<modifier flat="false">0.80</modifier> 
+				<modifier flat="false">0.80</modifier>
                 <price>-1</price>
             </item>
             <item>
                 <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-				<modifier flat="false">0.80</modifier> 
+				<modifier flat="false">0.80</modifier>
                 <price>-1</price>
             </item>
             <item>
                 <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-				<modifier flat="false">0.80</modifier> 
+				<modifier flat="false">0.80</modifier>
                 <price>-1</price>
             </item>
 			<chance>100</chance>
@@ -813,7 +813,7 @@ SPEED          Changes gamespeed
 
     <!--/////// PORTED SHIPS //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="true" unused="true">
       <unlock variant="a" silent="false">
         <type>3</type>
         <shipReq>CREW_SHIP_SLOT1_2</shipReq>
@@ -840,6 +840,13 @@ SPEED          Changes gamespeed
       <crewLimit>8</crewLimit>
       <customReactor maxLevel="60"/>
     </mod-append:customShip>
+
+    <mod-append:customShip name="PLAYER_SHIP_POTENTIAL_3">
+      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+      <crewLimit>16</crewLimit>
+      <customReactor maxLevel="2147483647"/>
+		</mod-append:customShip>
 
 
     <!--/////////////////// AVALI ZONE //////////////// -->
@@ -1370,7 +1377,7 @@ SPEED          Changes gamespeed
     </mod-append:customShip>-->
 
 	<!--/////// HEKTAR REBEL SHIPPEHEHSHIPEHEHHHSHIP //////-->
-	
+
 	<mod-append:ship name="PLAYER_SHIP_HEKTAR_REBEL" b="false" c="false" unused="true" />
 
 	<mod-append:customShip name="PLAYER_SHIP_HEKTAR_REBEL">
@@ -1405,7 +1412,7 @@ SPEED          Changes gamespeed
 	</mod-append:customShip>
 
 	<!--/////// MILITIA GB //////-->
-	
+
 	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT" b="true" c="true" unused="true" />
 
 	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT">
@@ -2068,7 +2075,7 @@ CREW
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>true</cloneLoseSkills>
 		</mod-append:race>
-		
+
 		<!--////////////////////// CHEETAH ///////////////////////-->
 
 		<mod-append:race name="cheetah">
@@ -2980,7 +2987,7 @@ CREW
 				</whiteList>
 			</statBoost>
 		</passiveStatBoosts>
-	
+
 		<deathSounds>
 			<deathSound>death1</deathSound>
 			<deathSound>death2</deathSound>
@@ -4072,7 +4079,7 @@ CREW
 			<cooldownColor r="255" g="255" b="255"/>
 			<transformRace>saviorsa</transformRace>
 		</powerEffect>
-</mod-append:race> 
+</mod-append:race>
 
 <mod-append:race name="saviorsa"> <!-- Automated, do not sell? -->
 	<maxHealth>100</maxHealth>
@@ -4944,7 +4951,7 @@ CREW
 				<crewTarget>ALLIES</crewTarget>
 				<priority>0</priority>
 			</statBoost>
-				
+
 			<statBoost name="passiveHealAmount">
 				<boostType>FLAT</boostType>
 				<amount>8</amount>
@@ -4973,7 +4980,7 @@ CREW
 			</statBoost>
 				</statBoosts>
 	</aug>
-	
+
 	<aug name="REGEN_SHIELD">
 		<function name="SHIELD_RECHARGE" value="1000" useForReqs="false" warning="false"/>
 		<superShield>
@@ -4982,7 +4989,7 @@ CREW
 			<shieldImage>ship/enemy_shields_white.png</shieldImage>
 		</superShield>
 	</aug>
-			
+
 	<aug name="FALSE_SHIELD">
 			<function name="WEAPON_PREIGNITE" value="1" useForReqs="false"/>
 			<function name="AUTO_COOLDOWN" value="-0.1" useForReqs="false"/>
@@ -4992,7 +4999,7 @@ CREW
 				<shieldImage>ship/enemy_shields_white.png</shieldImage>
 			</superShield>
 	</aug>
-			
+
 	<aug name="LEGION_LOADER">
 			<function name="AUTO_COOLDOWN" value="0.20" useForReqs="false" warning="false"/>
 			<function name="SHIELD_RECHARGE" value="0.20" useForReqs="false" warning="false"/>
@@ -5033,7 +5040,7 @@ CREW
 	A DRONE THING
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-	
+
 	<mod:findLike type="drones">
 		<mod-append:drone name="ROBO_MANT_DEFEND">
 			<crewBlueprint>robo_mant</crewBlueprint>
@@ -5094,7 +5101,7 @@ CREW
 			<stunMultiplier>0</stunMultiplier>
 		</mod-append:race>
 	</mod:findLike>
-	
+
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
