@@ -55,6 +55,10 @@
 		<destroyed load="KM_DESTROY"/>
 		<deadCrew load="KM_CREW"/>
 	</ship>
+	<ship name="SHIP_BLACK_ROSE" auto_blueprint="RSA_DROPSHIP">
+		<destroyed load="DESTROYED_BLACK_ROSE_ENCOUNTER"/>
+		<deadCrew load="DEAD_CREW_BLACK_ROSE_ENCOUNTER"/>
+	</ship>
 <ship name="SHIP_FREEMANTIS_BOMB_FLAKS" auto_blueprint="LIST_SHIPS_FREEMANTIS_FIGHT">
 	<destroyed load="DESTROYED_FREEMANTIS_BOMB_FLAKS"/>
 	<deadCrew load="DEAD_CREW_FREEMANTIS_BOMB_FLAKS"/>
