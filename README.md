@@ -26,32 +26,27 @@ We also ported several ships to Hyperspace + MV, such as the Potential, Stalwart
 
 FTL: Multiverse (and by extension Hyperspace) is absolutely necessary for this mod to run! Load it as your first mod.
 
-We also RECOMMEND that you get Forgemaster, Inferno-Core and Go Ballistic and load them BEFORE the TCC. They are completely optional, though.
-
-Load other things such as Generated Gibs after the content packs, e.g. the mods mentioned earlier.
+We RECOMMEND that you get Inferno-Core and load it BEFORE the TCC. We also recommend Forgemaster, Go Ballistic and Generated Gibs (loaded AFTER the TCC).
 
 # DESCRIPTION
 
-Adds lots of new weapons, amazing ships, diverse races and variations and a new questline - plenty of things are waiting to be found in the abandoned sectors of the Multiverse.
-TRACKER sends his regards.
+NEW WEAPONS
+    Singularity Projectors, Mass Drivers, big gatling guns, Flaks of all kinds, sizes and shapes and so much more!
 
-- Adds the Scrapper race, a new race of lanius that you can attach scrap to to upgrade them. (just talk to them!)
-- Custom made ships such as the "Fiare Vechi", "Corossus" and "Reactive Compactor". 
-- Reccuring Trash Compactor boss fight with cool new loot and increasing rewards for each fight. Once you get a certain augment in the first sector, you can summon the TC whenever at a storage check.
-- The Transmitter is now a hidden aug! There is now NO reason you shouldn't get it (please!)
-- PROTOGENS! FTL always needed cool floofy robots!
+NEW SHIPS
+    Featuring the Scrapper Lanius ship line as well as Protogen Project, Avali, RECLAIM and SALVAGE + an entire page of Federation military ships!
+    Also featuring the Extraelite packs - hunt down specific targets with specific, high-powered setups!
 
-Coming soon: a second questline, the RECLAIM & SALVAGE ASSOCIATION, Black Rose the android renegade, Scrapper Graveyard and more!
-P.S. The protogen spritesheet exists as an outline - if you wish to fill it in and include it in the mod, please give Dalvest a DM. Thanks! 
+NEW RACES
+    Lanius Scrappers, Protogens, Avali, Sergals, Sentient Robots, Kivies, Tabaxis and quite a few more!
 
-There's a lore doc in mod-appendix too, btw.
-
-Good Luck! Don't get compacted!
+NEW SECTORS AND EVENTS
+    The Ship Graveyard (Scrapper and RSA hostile sector) and Avali Collective (Avali and Protogen friendly sector)
 
 # HOW TO INSTALL
 
 1.  Make sure you have the latest FTL Multiverse version, right now that is 5.2.3.
-2.  Make sure you have the latest Hyperspace beta .dll and lua .dll taken from the FTL Multiverse discord.
+2.  Make sure you have the latest Hyperspace .dll and lua .dll taken from the FTL Multiverse discord (#hyperspace-betas channel)
 (OPTIONAL) If you have Forgemaster and/or Inferno-Core, please patch them before the TCC!
 3.  Compress the 4 folders (audio/,img/,data/ and mod-appendix/) into a zip file then rename the extension to .ftl (not necessary if you're using a pre-compiled version)
 4.  Place it in your mods/ folder and patch it using Slipstream. Make sure the load order is correct (first MV, then Forgemaster and Inferno-Core IF you have them, then the TCC, then other mods you might have).

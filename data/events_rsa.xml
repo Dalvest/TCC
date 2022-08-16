@@ -2,32 +2,32 @@
 
 <event name="BLACK_ROSE_ENCOUNTER">
 	<text>You're hailed by a well mannered, but suggestively clothed robotic humanoid: "Hello, dear traveler, my name is BLK-R053. I am 93.64% pleased to make your acquaintance. You have resources that would be more useful in my possession. Do you wish to hand them over, or shall I collect them after your termination?" You hardly fail to notice her pixel matrix express a particular joy in what she's said.</text>
-	<ship load="SHIP_BLACK_ROSE" hostile="false"
-	<choice>
-		<text>Fine.</text>
-		<event>
-			<text>"It is completely logical - you appreciate [BEING ALIVE] and would like to continue doing said activity. Thank for you reaching a sensible conclusion. [:D]"</text>
-			<item_modify>
-				<item type="scrap" min="-30" max="-30"/>
-				<item type="fuel" min="-5" max="-5"/>
-			</item_modify>
-			<instantEscape/>
-		</event>
-	</choice>
-	<choice>
-		<text>No.</text>
-		<event>
-			<text>"This outcome has been expected with a likelihood of 93.51%. I will now proceed to take over your resources by force - please do not resist! [:(]"</text>
-			<ship hostile="true">
-		</event>
-	</choice>
-	<choice hidden="true" req="hacking" lvl="2">
-		<text>(Upg. Hacking) Neither.</text>
-		<event>
-			<text>"You seem to misunderstand the options I have gi-given y-y-you [calculated] as negotiable. Interestingly, your behavior does not coincide with any outcome i simulated. There is novel Information to be gathered! [;)]"</text>
-			<crewMember amount="1" class="black_rose">Black Rose</crewMember>
-		</event>
-	</choice>
+	<ship load="SHIP_BLACK_ROSE" hostile="false" />
+		<choice>
+			<text>(Pay Tribute) Fine...</text>
+			<event>
+				<text>"It is completely logical - you appreciate [BEING ALIVE] and would like to continue doing said activity. Thank for you reaching a sensible conclusion. [:D]"</text>
+				<item_modify>
+					<item type="scrap" min="-30" max="-30"/>
+					<item type="fuel" min="-5" max="-5"/>
+				</item_modify>
+				<instantEscape/>
+			</event>
+		</choice>
+		<choice>
+			<text>No.</text>
+			<event>
+				<text>"This outcome has been expected with a likelihood of 93.51%. I will now proceed to take over your resources by force - please do not resist! [:(]"</text>
+				<ship hostile="true"/>
+			</event>
+		</choice>
+		<choice hidden="true" req="hacking" lvl="2">
+			<text>(Upg. Hacking) Neither.</text>
+			<event>
+				<text>"You seem to misunderstand the options I have gi-given y-y-you [calculated] as negotiable. Interestingly, your behavior does not coincide with any outcome i simulated. There is novel Information to be gathered! [;)]"</text>
+				<crewMember amount="1" class="black_rose">Black Rose</crewMember>
+			</event>
+		</choice>
 </event>
 
 </FTL>
