@@ -846,7 +846,7 @@ SPEED          Changes gamespeed
       <hiddenAug>SHIP_FEDERATION</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <crewLimit>16</crewLimit>
-      <customReactor maxLevel="2147483647"/>
+      <customReactor maxLevel="308"/><!--2147483646,1073741822,536870911-->
 		</mod-append:customShip>
 
 
@@ -1575,7 +1575,7 @@ SPEED          Changes gamespeed
       <noFuelStalemate/>
       <autoShipForce>false</autoShipForce>
     </mod-append:customShip>
-	
+
 	<mod-append:customShip name="RSA_DROPSHIP">
 		<shipIcons>
 			<shipIcon>icon_threat</shipIcon>
