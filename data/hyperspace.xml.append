@@ -406,6 +406,8 @@ SPEED          Changes gamespeed
 
   <mod:findLike type="ships">
 
+  	<!--////////////////////////// PAGE 1 // SCRAPPER LINE // PROTOGEN PROJECT LINE // EXTRAELITES PACK 1 ////////////////////////////-->
+
     <!--///////SCRAPPER DREADNOUGHT//////-->
 
     <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
@@ -562,6 +564,114 @@ SPEED          Changes gamespeed
       </crew>
     </mod-append:customShip>
 
+	<!--///////EXTRA ELITE SHIP PACK//////-->
+
+	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
+		<unlock variant="a" silent="false">
+			<type>3</type>
+			<otherUnlocks>
+			<ship>PLAYER_SHIP_SCRAPPER</ship>
+			<ship>PLAYER_SHIP_TRASH_MINER</ship>
+			<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+			<ship>PLAYER_SHIP_SDM</ship>
+			<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
+			<ship>PLAYER_SHIP_CORROSUS</ship>
+			<ship>PLAYER_SHIP_SLUGTON</ship>
+			</otherUnlocks>
+		</unlock>
+		<unlock variant="b" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
+		</unlock>
+		</mod-append:ship>
+	
+		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
+		<crewLimit>20</crewLimit>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_SLUG</hiddenAug>
+		</mod-append:customShip>
+	
+		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
+		<crewLimit>10</crewLimit>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_SCRAPPER</hiddenAug>
+		<crew>
+			<protogen room="2" />
+			<kiviekith room="7" name="Orvech Vonor" />
+			<kiviekith room="14" name="Altan" />
+			<kora room="0" name="Kora" />
+			<scrapper room="15" />
+		</crew>
+	</mod-append:customShip>
+
+	<!--////////////////////////// PAGE 2 // RSA LINE // ECHELON SHIPYARDS LINE // EXTRAELITES PACK 2 ////////////////////////////-->
+
+	<!--/////////// CORROSUS //////////-->
+
+	<mod-append:ship name="PLAYER_SHIP_CORROSUS" b="false" c="false" unused="true">
+
+	<unlock variant="a" silent="false">
+		<type>2</type>
+		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
+	</unlock>
+	<unlock variant="a" silent="false">
+		<type>2</type>
+		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
+	</unlock>
+	<unlock variant="a" silent="false">
+		<type>2</type>
+		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
+	</unlock>
+
+	</mod-append:ship>
+
+	<mod-append:customShip name="PLAYER_SHIP_CORROSUS">
+	<crewLimit>12</crewLimit>
+	<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+	<hiddenAug>SHIP_RSA</hiddenAug>
+	<crew>
+		<rsa_technician room="10" />
+		<black_rose room="0" name="Black Rose" />
+		<robottos room="6" />
+		<kiviekith room="12" />
+	</crew>
+	</mod-append:customShip>
+
+	<!--/////// CONSTRUCTION CREW KESTREL //////-->
+
+	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="true" c="false" unused="true">
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_ROBOTTO</shipReq>
+		</unlock>
+	
+		<unlock variant="b" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_TC_CONSTRUCTION_2</shipReq>
+		</unlock>
+	
+		<unlock variant="b" silent="false">
+			<type>5</type>
+			<shipReq>PLAYER_SHIP_TC_CONSTRUCTION_2</shipReq>
+		</unlock>
+	</mod-append:ship>
+	
+	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION">
+		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>11</crewLimit>
+		<crew>
+			<rsa_technician room="1" />
+			<mantis_rsa room="0" />
+		</crew>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION_2">
+		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>11</crewLimit>
+	</mod-append:customShip>
+  
     <!--///////SIZE DOESN'T MATTER//////-->
 
     <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
@@ -673,72 +783,6 @@ SPEED          Changes gamespeed
       </crew>
     </mod-append:customShip>
 
-    <!--/////// CONSTRUCTION CREW KESTREL //////-->
-
-	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="true" c="false" unused="true">
-	<unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_ROBOTTO</shipReq>
-	</unlock>
-
-	<unlock variant="b" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_TC_CONSTRUCTION_2</shipReq>
-	</unlock>
-
-	<unlock variant="b" silent="false">
-        <type>5</type>
-        <shipReq>PLAYER_SHIP_TC_CONSTRUCTION_2</shipReq>
-	</unlock>
-    </mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION">
-		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crewLimit>11</crewLimit>
-		<crew>
-			<rsa_technician room="1" />
-			<mantis_rsa room="0" />
-		</crew>
-	</mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION_2">
-		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crewLimit>11</crewLimit>
-	</mod-append:customShip>
-
-    <!--///////CORROSUS//////-->
-
-    <mod-append:ship name="PLAYER_SHIP_CORROSUS" b="false" c="false" unused="true">
-
-      <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
-      </unlock>
-      <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
-      </unlock>
-      <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
-      </unlock>
-
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_CORROSUS">
-      <crewLimit>12</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_RSA</hiddenAug>
-	  <crew>
-        <rsa_technician room="10" />
-        <black_rose room="0" name="Black Rose" />
-        <robottos room="6" />
-        <kiviekith room="12" />
-      </crew>
-    </mod-append:customShip>
-
     <!--///////RENT-A-FLAGSHIP//////-->
 
     <mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
@@ -790,27 +834,6 @@ SPEED          Changes gamespeed
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <hiddenAug>SHIP_TRASH</hiddenAug>
     </mod-append:customShip>
-
-    <!--///////EXTRA ELITE SHIP PACK//////-->
-
-    <mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
-      <unlock variant="a" silent="false">
-        <type>3</type>
-        <otherUnlocks>
-          <ship>PLAYER_SHIP_SCRAPPER</ship>
-          <ship>PLAYER_SHIP_TRASH_MINER</ship>
-          <ship>PLAYER_SHIP_TRASH_REACTOR</ship>
-          <ship>PLAYER_SHIP_SDM</ship>
-          <ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
-          <ship>PLAYER_SHIP_CORROSUS</ship>
-          <ship>PLAYER_SHIP_SLUGTON</ship>
-        </otherUnlocks>
-      </unlock>
-      <unlock variant="b" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
-      </unlock>
-    </mod-append:ship>
 
     <!--/////// PORTED SHIPS //////-->
 
@@ -928,45 +951,7 @@ SPEED          Changes gamespeed
       </crew>
     </mod-append:customShip>
 
-    <!--///////EXTRA ELITE SHIP PACK//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
-      <unlock variant="a" silent="false">
-        <type>3</type>
-        <otherUnlocks>
-          <ship>PLAYER_SHIP_SCRAPPER</ship>
-          <ship>PLAYER_SHIP_TRASH_MINER</ship>
-          <ship>PLAYER_SHIP_TRASH_REACTOR</ship>
-          <ship>PLAYER_SHIP_SDM</ship>
-          <ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
-          <ship>PLAYER_SHIP_CORROSUS</ship>
-          <ship>PLAYER_SHIP_SLUGTON</ship>
-        </otherUnlocks>
-      </unlock>
-      <unlock variant="b" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
-      <crewLimit>20</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_SLUG</hiddenAug>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
-      <crewLimit>10</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_SCRAPPER</hiddenAug>
-      <crew>
-        <protogen room="2" />
-        <kiviekith room="7" name="Orvech Vonor" />
-        <kiviekith room="14" name="Altan" />
-        <kora room="0" name="Kora" />
-        <scrapper room="15" />
-      </crew>
-    </mod-append:customShip>
 
     <!--/////// FSF BLACK OPS //////-->
 
