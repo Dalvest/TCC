@@ -2712,7 +2712,7 @@
 	<power>3</power>
 	<cost>90</cost>
 	<bp>4</bp>
-	<rarity>5</rarity>
+	<rarity>0</rarity>
 	<image>tc_singularity</image>
 	<launchSounds>
 		<sound>Singularity</sound>
@@ -5974,6 +5974,159 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="human_legion_pyro" />
 </shipBlueprint>
 
+<!--/////////////////////EXTRA ELITE SHIP PACK//////////////////////////-->
+
+<shipBlueprint name="PLAYER_SHIP_EXTRAELITE" layout="tcp_extraelite" img="tcp_extraelite">
+	<class>Captured Slug Dropship</class>
+	<name>Nerve Center</name>
+	<desc>This ship was made to carry a lot of tasty looking cargo. Maybe that's why so many Scrappers are on it? No, it can't be...</desc>
+	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_unlock"/>
+	<systemList>
+		<battery power="1" room="3" start="false" img="room_battery_2" />
+		<cloaking power="1" room="13" start="false" img="room_cloaking_orchid_3" />
+		<clonebay power="1" room="5" start="false">
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="2" start="true" img="room_doors_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones max="8" power="1" room="11" start="false" img="room_drones_2_alt" />
+		<engines max="8" power="3" room="7" start="true" img="room_engines_7">
+			<slot>
+				<direction>right</direction>
+				<number>3</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="10" start="false" img="room_hacking_7_MSFED" />
+		<medbay power="1" room="5" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="14" start="true" img="room_mind_4" />
+		<oxygen power="1" room="8" start="false" img="room_oxygen_20" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="false" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields max="8" power="2" room="9" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="15" start="true" />
+		<weapons max="8" power="3" room="6" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<systemLimit>9</systemLimit>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="5" count="4">
+		<weapon name="TC_HARMONIZER" />
+	</weaponList>
+	<droneList drones="8" count="4" />
+	<health amount="30" />
+	<maxPower amount="12" />
+	<crewCount amount="1" class="trash_eater" />
+	<crewCount amount="2" class="scrapper" />
+	<crewCount amount="1" class="scrapper_scavenger" />
+	<aug name="MERCURY_GEL" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="tcp_extraelite_2" img="tcp_extraelite_2">
+	<class>Scrapper Dreadnought Hunter</class>
+	<name>Carpenter</name>
+	<desc>The ultimate ship for killing rogue Scrapper renegades - destroy your anaerobic enemies with the varied arsenal on this ship. A true bounty hunter, loyal to whoemever pays the best.</desc>
+	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_2_unlock"/>
+	<systemList>
+		<battery power="1" room="16" start="false" img="room_battery_scrapper" />
+		<cloaking power="1" room="13" start="false" img="room_cloaking" />
+		<clonebay power="1" room="10" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="7" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="4" max="8" room="6" start="true" img="room_drones_4" />
+		<engines power="1" max="8" room="2" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="12" start="false" img="room_hacking_8" />
+		<medbay power="1" room="10" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="8" start="true" img="room_mind" />
+		<oxygen power="1" room="9" start="true" img="room_oxygen_TCC" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="14" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" max="8" room="5" start="true" img="room_shields_TCC">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="false" />
+		<weapons power="2" max="8" room="15" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<systemLimit>9</systemLimit>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="16" count="4">
+		<weapon name="TC_BOMB_SHOTGUN_INSTANT" />
+		<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE" />
+		<weapon name="TC_MINIGUN_MK1" />
+	</weaponList>
+	<droneList drones="6" count="4">
+		<drone name="DEFENSE_3" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="9" />
+	<aug name="ANTI_ANAEROBIC_GRID" />
+</shipBlueprint>
+
 <!--/////////////////////SIZE DOESN'T MATTER//////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_SDM" layout="tcp_sdm" img="tcp_sdm">
@@ -6772,159 +6925,6 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<crewCount amount="1" class="protogen_space_scavenger" />
 	<crewCount amount="1" class="human_hazmat" />
 	<aug name="HEKTAR_GEL" />
-</shipBlueprint>
-
-<!--/////////////////////EXTRA ELITE SHIP PACK//////////////////////////-->
-
-<shipBlueprint name="PLAYER_SHIP_EXTRAELITE" layout="tcp_extraelite" img="tcp_extraelite">
-	<class>Captured Slug Dropship</class>
-	<name>Nerve Center</name>
-	<desc>This ship was made to carry a lot of tasty looking cargo. Maybe that's why so many Scrappers are on it? No, it can't be...</desc>
-	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_unlock"/>
-	<systemList>
-		<battery power="1" room="3" start="false" img="room_battery_2" />
-		<cloaking power="1" room="13" start="false" img="room_cloaking_orchid_3" />
-		<clonebay power="1" room="5" start="false">
-			<slot>
-				<number>3</number>
-			</slot>
-		</clonebay>
-		<doors power="2" room="2" start="true" img="room_doors_4">
-			<slot>
-				<direction>right</direction>
-				<number>0</number>
-			</slot>
-		</doors>
-		<drones max="8" power="1" room="11" start="false" img="room_drones_2_alt" />
-		<engines max="8" power="3" room="7" start="true" img="room_engines_7">
-			<slot>
-				<direction>right</direction>
-				<number>3</number>
-			</slot>
-		</engines>
-		<hacking power="1" room="10" start="false" img="room_hacking_7_MSFED" />
-		<medbay power="1" room="5" start="true" img="room_medbay_3">
-			<slot>
-				<number>3</number>
-			</slot>
-		</medbay>
-		<mind power="1" room="14" start="true" img="room_mind_4" />
-		<oxygen power="1" room="8" start="false" img="room_oxygen_20" />
-		<pilot power="1" room="0" start="true" img="room_pilot">
-			<slot>
-				<direction>right</direction>
-				<number>0</number>
-			</slot>
-		</pilot>
-		<sensors power="1" room="1" start="false" img="room_sensors_6">
-			<slot>
-				<direction>right</direction>
-				<number>1</number>
-			</slot>
-		</sensors>
-		<shields max="8" power="2" room="9" start="true" img="room_shields_4">
-			<slot>
-				<direction>left</direction>
-				<number>0</number>
-			</slot>
-		</shields>
-		<teleporter power="1" room="15" start="true" />
-		<weapons max="8" power="3" room="6" start="true" img="room_weapons">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</weapons>
-	</systemList>
-	<systemLimit>9</systemLimit>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
-	<weaponList missiles="5" count="4">
-		<weapon name="TC_HARMONIZER" />
-	</weaponList>
-	<droneList drones="8" count="4" />
-	<health amount="30" />
-	<maxPower amount="12" />
-	<crewCount amount="1" class="trash_eater" />
-	<crewCount amount="2" class="scrapper" />
-	<crewCount amount="1" class="scrapper_scavenger" />
-	<aug name="MERCURY_GEL" />
-</shipBlueprint>
-
-<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="tcp_extraelite_2" img="tcp_extraelite_2">
-	<class>Scrapper Dreadnought Hunter</class>
-	<name>Carpenter</name>
-	<desc>The ultimate ship for killing rogue Scrapper renegades - destroy your anaerobic enemies with the varied arsenal on this ship. A true bounty hunter, loyal to whoemever pays the best.</desc>
-	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_2_unlock"/>
-	<systemList>
-		<battery power="1" room="16" start="false" img="room_battery_scrapper" />
-		<cloaking power="1" room="13" start="false" img="room_cloaking" />
-		<clonebay power="1" room="10" start="true">
-			<slot>
-				<number>1</number>
-			</slot>
-		</clonebay>
-		<doors power="2" room="7" start="true" img="room_doors">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</doors>
-		<drones power="4" max="8" room="6" start="true" img="room_drones_4" />
-		<engines power="1" max="8" room="2" start="true" img="room_engines_8">
-			<slot>
-				<direction>left</direction>
-				<number>2</number>
-			</slot>
-		</engines>
-		<hacking power="1" room="12" start="false" img="room_hacking_8" />
-		<medbay power="1" room="10" start="false" img="room_medbay">
-			<slot>
-				<number>1</number>
-			</slot>
-		</medbay>
-		<mind power="1" room="8" start="true" img="room_mind" />
-		<oxygen power="1" room="9" start="true" img="room_oxygen_TCC" />
-		<pilot power="1" room="0" start="true" img="room_pilot">
-			<slot>
-				<direction>right</direction>
-				<number>0</number>
-			</slot>
-		</pilot>
-		<sensors power="1" room="14" start="true" img="room_sensors">
-			<slot>
-				<direction>down</direction>
-				<number>1</number>
-			</slot>
-		</sensors>
-		<shields power="2" max="8" room="5" start="true" img="room_shields_TCC">
-			<slot>
-				<direction>up</direction>
-				<number>0</number>
-			</slot>
-		</shields>
-		<teleporter power="1" room="3" start="false" />
-		<weapons power="2" max="8" room="15" start="true" img="room_weapons_8">
-			<slot>
-				<direction>up</direction>
-				<number>1</number>
-			</slot>
-		</weapons>
-	</systemList>
-	<systemLimit>9</systemLimit>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
-	<weaponList missiles="16" count="4">
-		<weapon name="TC_BOMB_SHOTGUN_INSTANT" />
-		<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE" />
-		<weapon name="TC_MINIGUN_MK1" />
-	</weaponList>
-	<droneList drones="6" count="4">
-		<drone name="DEFENSE_3" />
-	</droneList>
-	<health amount="30" />
-	<maxPower amount="9" />
-	<aug name="ANTI_ANAEROBIC_GRID" />
 </shipBlueprint>
 
 <!--/////////////// EXTRA ELITE SHIP PACK SLOT 2 ///////////////-->
