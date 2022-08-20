@@ -6149,7 +6149,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<systemLimit>9</systemLimit>
 	<weaponSlots>2</weaponSlots>
 	<droneSlots>2</droneSlots>
-	<weaponList missiles="3" count="2" />
+	<weaponList missiles="3" count="2">
+		<weapon name="TC_BURST_1" />
+	</weaponList>
 	<droneList drones="5" count="2" />
 	<health amount="20" />
 	<maxPower amount="6" />

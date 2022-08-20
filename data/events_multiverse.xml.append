@@ -471,6 +471,28 @@
 		</event>
 	</choice>
 
+	<choice hidden="false" blue="false">
+		<text>Crystal Scatter Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-70" max="-70"/>
+				</item_modify>
+			<weapon name="CRYSTAL_BURST_1"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Elite Crystal Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-90" max="-90"/>
+				</item_modify>
+			<weapon name="CRYSTAL_BURST_2"/>
+		</event>
+	</choice>
+
 	<choice hidden="false" blue="true">
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK"/>
