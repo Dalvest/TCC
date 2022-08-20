@@ -1,0 +1,197 @@
+<FTL>
+<!-- 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+									
+									SCRAPPER
+									
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+									TRASH EATER
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+<event name="SOCIALIZE_TRASH_EATER_LIST">
+	<metaVariable name="prof_socialization" op="add" val="1"/>
+	<queueEvent>STORAGE_CHECK_CREW</queueEvent>
+	<loadEventList seeded="true" default="SOCIALIZE_TRASH_EATER_NOTHING">
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_1"/>
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_2"/>
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_3"/>
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_4"/>
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_5"/>
+		<event name="SOCIALIZE_TRASH_EATER_EATER_1" req="unique_eater"/>
+		<event name="SOCIALIZE_TRASH_EATER_TRACKER_1" req="protogen_tracker"/>
+	</loadEventList>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_NOTHING">
+	<text>The Trash Eater appears to be resting in his cabin. He's standing up, completely immobile. "HEAD EMPTY. NO TRASH IN HEAD. ADD TRASH TO HEAD. PLEASE.". Perhaps it's better to leave them alone.</text>
+</event>
+
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   GENERIC                                                                                         
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_1" unique="true">
+	<text>The Trash Eater is checking the ship for garbage to consume. You ask them why junk is so important to him; they answer with...
+"MY LOYAL SUBJECTS AND I GOT INTERCEPT ONCE. WE NEAR DEATH. MAYBE WE EVEN DIED. WE ATE SHIPS AND THE THINGS THAT WERE INSIDE OF THEM. THAT'S THE FOOD WHEN I LEFT. I EVENTUALLY RETURNED, OF COURSE, TO THE MY SUBJECTS. THEY WERE... DIFFERENT."</text>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_2" unique="true">
+	<text>You ask the Trash Eater about the legend of the World Feeder.
+"AH, YOU SEE! THE WORLD FEEDER... IS ME, OR MY COUNTERPART FROM OTHER UNIVERSE! AN ARTIFACT EXISTS, YES. BEACON. MARKS THE UNIVERSE AS FOOD, SHOULD IT BE ACTIVATED. NO BEACON, NO EAT."</text>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_3" unique="true">
+	<text>You ask the Trash Eater if it knows the Beacon Eater.
+"IS THE KING. I AM THE PRINCE. THE TITLE IS GIVEN WITH POWER. HE IS THE MOST POWER. I AM CLOSE. WORLD FEEDER IS THE MOST OF THE MOST POWER. IS GOAL FOR ME."
+	</text>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_4" unique="true">
+	<text>The Trash Eater is wondering how many tin cans they would need to recreate their flagship from scratch. You could try making up a number.</text>
+	<choice hidden="true">
+		<text>Make up an answer to solve their dilemma.</text>
+		<event>
+			<text>"FIFTY GAJJILLIZION? IS THAT MORE THAN THREE?" You reassure the Trash Eater that "gajjillizion" is indeed more than three.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Apologize and let them think.</text>
+		<event/>
+	</choice>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_5" unique="true">
+	<text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.
+"HUMAN FOOD IS THE INTERESTING. I DO NOT EAT THE HUMAN, OF COURSE. IS DISTURBING TO YOU AND ME. THE CAN IS DELICIOUS AND SOCIAL ACCEPTANCE, I THINK."
+	</text>
+</event>
+
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/BEACON EATER                                                                                        
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRASH_EATER_EATER_1" unique="true">
+	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. "You are trash, false prince! Complete trash!", the Beacon Eater screams. "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!", yells his rival. "I will- ...Captain is here. Stop it. You're annoying.". The two notice your presence, exchange one last spiteful look and return to their usual duties.</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/TRACKER                                                                                       
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRASH_EATER_TRACKER_1" unique="true">
+	<text>The Trash Eater is sitting down in Tracker's quarters. You're expecting to have to break up a fight but they're actually talking casually.
+"You know, I'm fascinated by the legend of the World Feeder." Tracker is sitting sleazily on his chair, looking intently at the Eater.  "What can you tell me about it?"
+"OH. PROTOGEN FASCINATED! I LIKE WHEN OTHERS PAY ATTENTION. WORLD FEEDER IS ME WHEN I MANAGE ABSORB OF SHIP. I BECOME SHIP, MASSIVE SHIP. EAT THE UNIVERSE... ALL OF IT. WORLD FEEDER." The Trash Eater gives the protogen a stoic, regal look.
+"Yeah, but, why? Wouldn't that make you... fairly... alone?" Tracker readjusts himself. "Hypothetically speaking, of course. I don't mind being alone."
+"NO, NO, THE OPPOSITE. I AM ONE WITH EVERYONE. THE WHOLE UNIVERSE IS TOGETHER. THERE IS NO BATTLE, NO NOTHING."
+"How would you achieve that?" Tracker is shuffling in his seat, seemingly mildly distressed.
+"ONCE ARTIFACT IS ACTIVE, I METAMORPHOSIS TO FIRST STAGE, SHIP. EAT UNTIL INNER BLACK HOLE. USE INNER BLACK HOLE FOR ENERGY... USE ENERGY TO DEFEAT ANYONE."
+"And that would include me? Your... (sigh) friend?" 
+"THERE IS GREAT FRIENDSHIP IN COMPLETE UNION."
+"I see." Tracker shoos the Eater away from this room and pulls you aside to talk. "This guy is completely insane. If he does the slightest thing wrong I will NOT hesitate to put him down, you understand?"
+Tracker shoos you away from his quarters as well, returning to his usual anxious shuffling.</text>
+</event>
+
+<!-- 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+									
+									PROTOGEN
+									
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+									TRACKER
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+<!-- <event name="SOCIALIZE_TRACKER_LIST">
+	<metaVariable name="prof_socialization" op="add" val="1"/>
+	<queueEvent>STORAGE_CHECK_CREW</queueEvent>
+	<loadEventList seeded="true" default="SOCIALIZE_TRACKER_NOTHING">
+		<event name="SOCIALIZE_TRACKER_GENERIC_1"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_2"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_3"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_4"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_5"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_6"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_7"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_8"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_9"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_10"/>
+		<event name="SOCIALIZE_TRACKER_FREDDY_1" req="LIST_CREW_FREDDY"/>
+		<event name="SOCIALIZE_TRACKER_FREDDY_2" req="LIST_CREW_FREDDY"/>
+		<event name="SOCIALIZE_TRACKER_KAZ_1" req="unique_kaz"/>
+	</loadEventList>
+</event>
+<event name="SOCIALIZE_HAYNES_NOTHING">
+	<text>You find Haynes pacing the hallways, talking to himself and looking at the floor. When he sees you, he pauses momentarily. "Sorry, lost in thought. Maybe go talk to someone else right now, I'm mulling things over. Detective stuff, and all that."</text>
+</event> -->
+
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   GENERIC                                                                                         
+********************************************************************************************************************************************************************************************************************************************
+-->
+
+<!-- <event name="SOCIALIZE_HAYNES_GENERIC_1" unique="true">
+	<text>"No offense, but I've never really liked the label 'Renegade'. People seem to slap it on anyone who travels between realities nowadays that isn't a Rebel, but it carries a certain stigma. I've never really been the mercenary type."</text>
+	<choice hidden="true">
+		<text>Doesn't working for us make you a Renegade now?</text>
+		<event>
+			<text>"I... I suppose it does. Fair point. I have been... humbled?" Haynes temporarily removes his pipe from his mouth. "Grrr, I guess I'm a murder hobo now. I kill babies. Or something. But uh... please try to refrain from warcrimes while I'm onboard. I get that you can get away with a lot in this profession, but I'd at least like to be able to sleep at night after this."</text>
+		</event>
+	</choice>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_2" unique="true">
+	<text>Before he started travelling the Multiverse himself, Haynes used to live on Earth. However, he had to leave his home behind when Archive Inc. could no longer hold back the Vek threat. It's quite the sad story, and his isn't the only one like it out there.</text>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_3" unique="true">
+	<text>"My parents were huge history buffs. Everyone who lived in Archive was. Makes sense, it's even in the name. There's some famous runes about a guy named Sherlock Holmes who lived in the ancient empire of Britannia who could solve any mystery. My mother loved to read the legends, and though she didn't believe Sherlock was real, she jumped at the chance to name her son after him. That son being me, of course. No siblings. There can only be one 'greatest detective'."</text>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_4" unique="true">
+	<text>You ask Haynes if he smokes or not, since you never seem to smell it. He looks surprised at the notion and removes his pipe from his mouth. "What? Oh, of course not. Great deductive skills though! No no, tobacco's quite rare now that Earth's flooded and the drug market's saturated with all kinds of Slug junk. The pipe was a gift from my grandfather, who got it from his grandfather, who got it from his... and so on. They say it belonged to a guy named... er... Star-line? Stelen? Oh, father would be so disappointed in me for forgetting. Either way, it's a precious heirloom. I hate to admit it, but it's kind of fun chewing on the end. Clearly grandfather agrees, because there were toothmarks even before my own."</text>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_5" unique="true">
+	<text>You overhear some screaming from somewhere else on the ship and race towards it. Expecting intruders of some sort of worse, someone's fingers falling off from another space plague, instead you find Haynes screaming like a child in a corner of the ship as a tiny arachnid scuttles around on the floor. Carefully, he draws his blaster and aims it at the bug, blasting it to smithereenes. Only after it's dead does he see you watching him, and meagerly slinks away in shame.</text>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_6" unique="true">
+	<text>You find Haynes contemplating something in his quarters. "There was a time I might have considered myself a patriot. Now, I'm not capitalist nor a warm-blooded Unionite, but I was proud of, if nothing else, the raw achievement and progress the Human race was able to accomplish against all the odds. Most species have some access to Aether or were from a time when Aether was still being made, but Humans? We paved our way all on our own. And we used to be grateful to be a part of the galaxy! The Engi, the Zoltans, they were our friends! We fought arm in arm against the Hive, but that BASTARD Vance had to change everything! And his cohorts, Tanaka and Stimly, god what I wouldn't give to be the one to put lead in all three of their skulls. I doubt anyone need to tell you this, but the Rebellion is the scourge of the galaxy; I can only hope the Union will some day get past this and we can all see the Rebellion for what it really is. It's not a glorious movement of human progress - it threatens to set the whole damn Multiverse back to the metaphorical stone age."</text>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_7" unique="true">
+	<text>"You ever wonder what becomes of the people in the cases you solve? Well, I guess you wouldn't. But as a detective, I can't help but think about it. I think about it a lot, actually. Poor Amy and Daniel, not only did they have to deal with the death of their coworker and the arrest of another, but the twist they were working with two spies at once." Haynes sits down in a nearby chair and pulls out his pipe and goes to light it, only to remember he doesn't smoke. "God. Maybe I'm just stupid, you know? Even the greatest detective in the Multiverse can be an idiot sometimes. Worrying about nonsense like this when so much more is at stake."</text>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_8" unique="true">
+	<text>As you approach, Haynes smoothens out his jacket and straightens his hat. "You know, it's the outfit that makes the man!" He contemplates that piece of wisdom for a moment, shrugs, and walks off.</text>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_9" unique="true">
+	<text>You find Haynes reading a book titled "A Study in Scarlet", which he closes when he spots you. "Ever wonder why it is people call me by my last name? I mean, I'm literally named after a legendary icon of Old Earth culture and yet everyone just calls me Haynes! It drove my mother to the brink of madness, but I always found it humorous. Oh well."</text>
+</event>
+<event name="SOCIALIZE_HAYNES_GENERIC_10" unique="true">
+	<text>You spot Haynes doing some trick shots for the other crew with his pistol. He's a pretty good shot, but those bullets have to go somewhere - and you don't like the number of holes you've been noticing around the ship lately. You make a mental note to talk to him about it, but not right now. Never discipline a crewmate while they're holding a gun, even if they're usually wellmannered like Haynes.</text>
+</event> -->
+
+</FTL>

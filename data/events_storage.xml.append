@@ -242,75 +242,9 @@
     </choice>
   </event>
 
-<!--
-◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-              CREW TALK AND SCAN OPTIONS
-◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
--->
-
-
-<mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
-
-  <mod-append:choice req="trash_eater" blue="false" >
-    <text>Look for The Trash Eater.</text>
-    <event load="STORAGE_CHECK_CREW_TRASH"/>
-  </mod-append:choice>
-
-  <mod:findWithChildLike type="choice" child-type="text">
-    <mod:selector>Nevermind, do something else.</mod:selector>
-    <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-  </mod:findWithChildLike>
-</mod:findName>
-
-<event name="STORAGE_CHECK_CREW_TRASH">
-  <text>What do you want to do with The Trash Eater?</text>
-  <choice>
-    <text>Nevermind, do something else.</text>
-    <event load="STORAGE_CHECK"/>
-  </choice>
-  <choice>
-    <text id="talk_to_crew"/>
-    <event load="STORAGE_CHECK_CREW_TRASH_TALK"/>
-  </choice>
-  <choice>
-    <text id="scan_crew"/>
-    <event load="STORAGE_CHECK_CREW_TRASH_SCAN"/>
-  </choice>
-</event>
-<event name="STORAGE_CHECK_CREW_TRASH_SCAN">
-  <text>TRASH EATER DETAILS
-    SPECIES? [Lanius] SUBTYPE? [Yes]
-    Subtype Details: Unique
-    Stats: 200 Health, x1.5 sabotage damage, instantly drains oxygen
-    Inherited Stats: Drains oxygen at 0.5oxy/s, immune to suffocation.
-    Can consume beacons when there is an opportunity for it. This will usually provide a large amount of additional scrap and has a 10% chance of compacting a crew, weapon or done, but has a 10% chance of backfiring and leaving you stranded, boosting the fleet by a jump.
-    Ability (25s cooldown, 15s duration): Does 1 hull damage, and creates a breach in the current room (can damage player ship as well). Heals back to full health immediately. Gains 50 health temporarily.
-    Ability cooldown type: Refills on jump.
-    The Trash Eater is the prince of Lanius, not to be confused with his Beacon Eater brethren. His plan to take over the world consists in absorbing their entire universe and perhaps even the Multiverse itself, creating one gigantic symbiotic World Feeder.
-  </text>
-  <choice>
-    <text>Continue...</text>
-    <event load="STORAGE_CHECK"/>
-  </choice>
-</event>
-<event name="STORAGE_CHECK_CREW_TRASH_TALK">
-  <text load="TEXT_CREW_TALK_TRASH"/>
-  <choice>
-    <text>Continue...</text>
-    <event load="STORAGE_CHECK"/>
-  </choice>
-</event>
-<textList name="TEXT_CREW_TALK_TRASH">
-  <text>The Trash Eater is checking the ship for garbage to consume - trash to eat, if you will.</text>
-  <text>The Trash Eater is wondering how many tin cans one would need to create an entire ship from scratch - you fear the answer may be terrifying and decide not to push further.</text>
-  <text>The Trash Eater has finally said something in your language, but it sounds nonsensical - "Can I get it in beige?" What does that even mean?</text>
-  <text>You catch Trash Eater trying to eat flak. You fail at several attempts to stop them.</text>
-  <text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.</text>
-  <text>The Trash Eater insinuates that they would like to taste the piloting room of your ship - you convince him it has a really bad taste.</text>
-  <text>You ask the Trash Eater if it is sentient - it excitedly answers with "on Tuesday!".</text>
-</textList>
-
-<!--//////////////////////////////////// TRASH EATER STORAGE - ABILITY THINGY //////////////////////////////////////-->
+    <!--//////////////////////////////////////////////////////////
+  ////////////// TRASH EATER STORAGE CHECK ABILITY ///////////////
+  ///////////////////////////////////////////////////////////-->
 
 <mod:findName type="event" name="STORAGE_CHECK_JOB">
 
@@ -395,6 +329,32 @@
     </event>
   </choice>
 </event>
+
+<!--
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+                   CREW TALK
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+-->
+
+
+<mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
+
+	<mod-append:choice req="trash_eater" blue="false" hidden="true">
+		<text>Look for the Trash Eater.</text>
+		<event load="SOCIALIZE_TRASH_EATER_LIST"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="protogen_tracker" blue="false" hidden="true">
+		<text>Look for the TRACKER.</text>
+		<event load="SOCIALIZE_TRACKER_LIST"/>
+	</mod-append:choice>
+
+  <mod:findWithChildLike type="choice" child-type="text"> <!--To make sure that the nevermind choice remains at the bottom-->
+    <mod:selector>Nevermind, do something else.</mod:selector>
+    <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
+  </mod:findWithChildLike>
+
+</mod:findName>
 
     <!--///////////////////////////////
 ////////////// STORAGE CHECK APPENDING ///////////////
