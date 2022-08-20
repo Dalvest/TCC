@@ -1,5 +1,5 @@
 <FTL>
-<event name="TRASH_CALL">
+<event name="TRASH_CALL" unused="true">
     <text>You notice a strange signal coming from a location on your map. We should check it out.</text>
     <quest event="TRASH_MEET"/>
 </event>
@@ -51,4 +51,12 @@
         </event>
     </choice>
 </event>
+
+<mod:findName type="event" name="START_BEACON_PRESELECT">
+    <mod-append:choice req="FALSE_SHIELD" max_group="600" hidden="true">
+	    <text>Activate your shield's Prototype Aether Batteries. (Energy Shield Recharge)</text>
+		<event load="FALSE_SHIELD_TRACKER"/>
+	</mod-append:choice>
+</mod:findName>
+
 </FTL>

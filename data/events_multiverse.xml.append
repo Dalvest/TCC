@@ -89,6 +89,13 @@
 				</choice>
 			</event>
 		</choice>
+		<choice req="pilot" lvl="1" max_group="4" hidden="false" blue="true">
+			<text>There's a rotary phone hanging on the side of the machine...</text>
+			<event>
+			<text>...so you pick the receiver up. It seems that you didn't have to dial anything. A rough, metallic voice picks up. "Hey. You're an. Uhm." Papers are being flipped next to the other line's receiver. "Right. Sorry. Renegade. My name's TRACKER, I'm a... freelancer. I need your help. Come and meet me." The receiver is filled with static again. He hung up.</text>
+				<quest event="KM_QUEST_1"/>
+			</event>
+		</choice>
 		<choice>
 			<text>Nevermind.</text>
 			<event load="STORAGE_CHECK"/>
@@ -269,6 +276,18 @@
 		<hiddenAug>TC6_DEAD</hiddenAug>
 	</event>
 
+	<event name="DESTROYED_BLACK_ROSE_ENCOUNTER">
+		<text>The Corrosus is gone - amidst the sea of corrugated metal, you manage to salvage a strange machine.</text>
+		<autoReward level="MED">stuff</autoReward>
+		<augment name="AUTOMATED_QUARTERMASTER"/>
+	</event>
+
+	<event name="DEAD_CREW_BLACK_ROSE_ENCOUNTER">
+		<text>The Corrosus is now silent - amidst the sea of corrugated metal, you manage to salvage a strange machine.</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<augment name="AUTOMATED_QUARTERMASTER"/>
+	</event>
+
 	<event name="TC6_CREW">
 		<text>The Trash Compactor is now empty, forever. The wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! </text>
 		<autoReward level="HIGH">stuff</autoReward>
@@ -278,6 +297,29 @@
 		<hiddenAug>TC6_DEAD</hiddenAug>
 	</event>
 
+	<event name="KM_DESTROY">
+		<text>You've destroyed the bigger ship... and you got their stuff. Let's hope this was worth it. </text>
+		<autoReward level="MED">stuff</autoReward>
+		<choice>
+		<text>coolio</text>
+		<event>
+			<text>Thats all folks!</text>
+			<event/>
+		</event>
+		</choice>
+	</event>
+
+	<event name="KM_CREW">
+		<text>You've emptied the bigger ship... and you got their stuff. It reeks of malformed corpses. Let's hope this was worth it.</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+		<text>K then</text>
+		<event>
+			<text>PERHAOPS</text>
+			<event/>
+		</event>
+		</choice>
+	</event>
 	</FTL>
 
 <!--///////////////////////////////////////FLAK MAKING///////////////////////////////////////////////////////////////-->
@@ -291,7 +333,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-50" max="-50"/>
+					<item type="scrap" min="-40" max="-40"/>
 				</item_modify>
 			<weapon name="SHOTGUN_1"/>
 		</event>
@@ -357,7 +399,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-100" max="-100"/>
+					<item type="scrap" min="-60" max="-60"/>
 				</item_modify>
 			<weapon name="SHOTGUN_INSTANT"/>
 		</event>
@@ -368,7 +410,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-90" max="-90"/>
+					<item type="scrap" min="-70" max="-70"/>
 				</item_modify>
 			<weapon name="SHOTGUN_FIRE"/>
 		</event>
@@ -379,7 +421,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-90" max="-90"/>
+					<item type="scrap" min="-70" max="-70"/>
 				</item_modify>
 			<weapon name="SHOTGUN_ION"/>
 		</event>
@@ -390,7 +432,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-90" max="-90"/>
+					<item type="scrap" min="-70" max="-70"/>
 				</item_modify>
 			<weapon name="SHOTGUN_TOXIC"/>
 		</event>
@@ -426,6 +468,28 @@
 					<item type="scrap" min="-125" max="-125"/>
 				</item_modify>
 			<weapon name="SHOTGUN_TOGGLE_TOXIC"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Crystal Scatter Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-70" max="-70"/>
+				</item_modify>
+			<weapon name="CRYSTAL_BURST_1"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Elite Crystal Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-90" max="-90"/>
+				</item_modify>
+			<weapon name="CRYSTAL_BURST_2"/>
 		</event>
 	</choice>
 
@@ -532,7 +596,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-60" max="-60"/>
+					<item type="scrap" min="-50" max="-50"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_1"/>
 		</event>
@@ -609,7 +673,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-62" max="-62"/>
+					<item type="scrap" min="-52" max="-52"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_FREE"/>
 		</event>
@@ -620,7 +684,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-60" max="-60"/>
+					<item type="scrap" min="-50" max="-50"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE"/>
 		</event>
@@ -631,7 +695,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-100" max="-100"/>
+					<item type="scrap" min="-70" max="-70"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_INSTANT"/>
 		</event>
@@ -642,7 +706,7 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-95" max="-95"/>
+					<item type="scrap" min="-80" max="-80"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_FIRE"/>
 		</event>
@@ -653,9 +717,20 @@
 		<event>
 			<text>Done!</text>
 			<item_modify>
-					<item type="scrap" min="-100" max="-100"/>
+					<item type="scrap" min="-80" max="-80"/>
 			</item_modify>
 			<weapon name="TC_BOMB_SHOTGUN_ION"/>
+		</event>
+	</choice>
+	
+	<choice hidden="false" blue="false">
+		<text>Rad Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_BIO"/>
 		</event>
 	</choice>
 	
@@ -1295,6 +1370,37 @@
 			</event>
 		</choice>
 		</event>
+
+<event name="KM_QUEST_1">
+	<text>TRACKER is here - he seems busy, though. "Oh hi, you again... Please, uh, help me."</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>HELP PLEASE.</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>HELP PLEASE.</undiscoveredTooltip>
+    </beaconType>
+	<choice>
+		<text>HElb Garbage Compactr</text>
+		<event>
+			<text>ggg</text>
+			<ship load="TC_TRASH_MINER_QUEST" hostile="true"/>
+			<choice hidden="true">
+				<text>ok</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>nah bro im out</text>
+		<event>
+			<text>Tsure i guess1</text>
+			<choice hidden="true">
+				<text>ok</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+</event>
 
 
 		<mod:findName type="event" name="SYLVAN_ROYAL_NORMAL">

@@ -2,36 +2,49 @@
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-          BLUEPRINTS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          LISTS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-<!--
-<blueprintList name="LIST_NON_RARITY_0_THINGS"> (Just here for reference)
-	<name>TC_LIGHT_SHOW</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_TAGGER</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_RESOLVER</name>
-	<name>TC_SINEWAVE</name>
-	<name>RSA_BIOHAZARD</name>
-	<name>SINGULARITY_PROJECTOR_1</name>
-	<name>NOVA_MK1</name>
-	<name>NOVA_MK2</name>
-	<name>NOVA_MK3</name>
-	<name>SUPERNOVA_CATALYZER</name>
-	<name>CATALYZER</name>
-	<name>NOODLE_RATIONS</name>
-	<name>scrapper</name>
-	<name>kiviekith</name>
-	<name>rsa_technician</name>
-	<name>robottos</name>
-	<name>mantis_rsa</name>
-	<name>protogen</name>
-	<name>protogen_space_scavenger</name>
-	<name>avali</name>
-</blueprintList>
--->
+	<!--///////////////////////////////
+////////////// CREW ZONE ///////////////
+////////////////////////////////-->
+
+<!--/////// ALIENS LIST - HIGHLY IMPORTANT //////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_ALIENS">
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>scrapper</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>protogen</mod-append:name>
+	<mod-append:name>protogen_pete</mod-append:name>
+	<mod-append:name>protogen_space_scavenger</mod-append:name>
+	<mod-append:name>protogen_tracker</mod-append:name>
+	<mod-append:name>primagen_raptor</mod-append:name>
+	<mod-append:name>clonefail_lancer</mod-append:name>
+	<mod-append:name>sergal_cheese</mod-append:name>
+	<mod-append:name>sergal</mod-append:name>
+	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>avali</mod-append:name>
+	<mod-append:name>robottos</mod-append:name>
+	<mod-append:name>robottos_gunner</mod-append:name>
+	<mod-append:name>robottos_machinist</mod-append:name>
+	<mod-append:name>robottos_researcher</mod-append:name>
+	<mod-append:name>robottos_police</mod-append:name>
+	<mod-append:name>mantis_rsa</mod-append:name>
+	<mod-append:name>mantis_freebusiness</mod-append:name>
+	<mod-append:name>cheetah</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
+</mod:findName>
+
+<!--/////// SCRAPPERS //////-->
 
 <blueprintList name="LIST_CREW_SCRAPPER">
 	<name>scrapper</name>
@@ -43,12 +56,16 @@
 	<name>scrapper_defender</name>
 </blueprintList>
 
+<!--/////// SCRAPPERS T2 //////-->
+
 <blueprintList name="LIST_SCRAPPER_TIER_2">
 	<name>scrapper_soldier</name>
 	<name>scrapper_engineer</name>
 	<name>scrapper_speed</name>
 	<name>scrapper_defender</name>
 </blueprintList>
+
+<!--/////// SCRAPPER ELITE COMPAT //////-->
 
 <blueprintList name="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE">
 	<name>scrapper</name>
@@ -57,77 +74,57 @@
 	<name>scrapper_speed</name>
 </blueprintList>
 
-<blueprintList name="LIST_BOMB_SHOTGUNS">
-	<name>TC_BOMB_SHOTGUN_1</name>
-	<name>TC_BOMB_SHOTGUN_1_ENEMY</name>
-	<name>TC_BOMB_SHOTGUN_2</name>
-	<name>TC_BOMB_SHOTGUN_3</name>
-	<name>TC_BOMB_SHOTGUN_4</name>
-	<name>TC_BOMB_SHOTGUN_BREACH</name>
-	<name>TC_BOMB_SHOTGUN_CHAIN</name>
-	<name>TC_BOMB_SHOTGUN_CHARGE</name>
-	<name>TC_BOMB_SHOTGUN_FREE</name>
-	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
-	<name>TC_BOMB_SHOTGUN_INSTANT</name>
-	<name>TC_BOMB_SHOTGUN_FIRE</name>
-	<name>TC_BOMB_SHOTGUN_LOCK</name>
-	<name>TC_BOMB_SHOTGUN_ION</name>
-</blueprintList>
+<!--/////// LITERALLY ALL OF THE BIRDS //////-->
 
 <blueprintList name="LIST_CHECKCREW_AVALI">
 	<name>avali</name>
 </blueprintList>
 
+<!--/////// HUMANS ///////-->
 
-<blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH"> <!--just a list of the weapons ariadne can get you-->
-	<name>LIST_WEAPONS_LOSTSUN</name>
-</blueprintList>
-<blueprintList name="LIST_DRONES_MADOK">
-	<name>REPAIR</name>
-	<!--placeholders until loot versions added-->
-	<name>ION_1_AMP2</name>
-	<name>HELLRAISER_HULL</name>
-	<name>MANNING</name>
-	<name>BATTLETOG2_DEFEND</name>
+<mod:findName type="blueprintList" name="LIST_CREW_HUMAN">
+	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>kiviekith</mod-append:name>
+	<mod-append:name>rsa_technician</mod-append:name>
+	<mod-append:name>unique_leah_mfk</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>human_hazmat</mod-append:name>
+</mod:findName>
+
+<!--/////// ELITES ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_ELITE">
+	<mod-append:name>human_hazmat</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>avatarlegion</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
+</mod:findName>
+
+<!--/////// FEDERATION ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_FEDERATION">
+	<mod-append:name>human_hazmat</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_SOLDIER">
+	<mod-append:name>human_phoenix</mod-append:name>
+</mod:findName>
+
+<!--/////// TABAXI ZONE //////-->
+
+<blueprintList name="LIST_CREW_TABAXI">
+	<name>cheetah</name>
 </blueprintList>
 
-<blueprintList name="SHIP_AVALI_FIGHT">
-	<name>AVALI_SKIRMISHER</name>
-</blueprintList>
-
-<blueprintList name="LIST_DRONES_AVALI">
-	<name>REPAIR</name>
-	<name>GUARDIAN_1_DRONE</name>
-	<name>GUARDIAN_1_MISSILE</name>
-	<name>DEFENSE_1_ENEMY</name>
-	<name>AMPHI_COMBAT</name>
-	<name>COMBAT_1_LASER</name>
-	<name>COMBAT_1_BEAM</name>
-	<name>COMBAT_2_LASER</name>
-	<name>COMBAT_2_BEAM</name>
-	<name>PEST_RAD_ENEMY</name>
-	<name>ION_1_AMP3_ENEMY</name>
-	<name>ION_1_AMP2_ENEMY</name>
-	<name>ENERGY_1_AMP2_ENEMY</name>
-	<name>BATTLETOG2_BOARDER</name>
-</blueprintList>
-
-<blueprintList name="LIST_WEAPONS_AVALI">
-	<name>LASER_BURST_1</name>
-	<name>LASER_BURST_2_ENEMY</name>
-	<name>LASER_HEAVY_CHAINGUN</name>
-	<name>LASER_CHAINGUN_ENEMY</name>
-	<name>LASER_CHAINGUN_2</name>
-	<name>ION_FIRE</name>
-	<name>ION_STUN</name>
-	<name>ION_CHAINGUN</name>
-	<name>MISSILES_2_ENEMY</name>
-	<name>MISSILES_1</name>
-	<name>TC_SINEWAVE</name>
-	<name>TC_MINIGUN_MK1</name>
-	<name>LASER_CHAINGUN_DAMAGE</name>
-	<name>LASER_LIGHT</name>
-</blueprintList>
+<!--/////// MANTIS ZONE //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_MANTIS">
 	<mod-append:name>mantis_rsa</mod-append:name>
@@ -142,30 +139,21 @@
 	<mod-append:name>mantis_freebusiness</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="LIST_CREW_ALIENS">
-	<mod-append:name>trash_eater</mod-append:name>
-	<mod-append:name>scrapper</mod-append:name>
-	<mod-append:name>scrapper_soldier</mod-append:name>
-	<mod-append:name>scrapper_heavy</mod-append:name>
-	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_speed</mod-append:name>
-	<mod-append:name>scrapper_scavenger</mod-append:name>
-	<mod-append:name>scrapper_defender</mod-append:name>
-	<mod-append:name>protogen</mod-append:name>
-	<mod-append:name>protogen_space_scavenger</mod-append:name>
-	<mod-append:name>protogen_tracker</mod-append:name>
-	<mod-append:name>primagen_raptor</mod-append:name>
-	<mod-append:name>clonefail_lancer</mod-append:name>
-	<mod-append:name>sergal_cheese</mod-append:name>
-	<mod-append:name>kora</mod-append:name>
-	<mod-append:name>avali</mod-append:name>
-	<mod-append:name>robottos</mod-append:name>
-	<mod-append:name>robottos_gunner</mod-append:name>
-	<mod-append:name>robottos_machinist</mod-append:name>
-	<mod-append:name>robottos_researcher</mod-append:name>
-	<mod-append:name>mantis_rsa</mod-append:name>
-	<mod-append:name>mantis_freebusiness</mod-append:name>
-</mod:findName>
+<blueprintList name="BLUELIST_MANTIS_DUMB">
+	<name>mantis</name>
+	<name>mantis_free</name>
+	<name>mantis_warlord</name>
+	<name>mantis_suzerain</name>
+	<name>unique_kaz</name> <!--sorry, Kaz-->
+</blueprintList>
+
+<!--mantis_rsa isn't here because it's for an RSA event-->
+<blueprintList name="BLUELIST_MANTIS_SMART">
+	<name>mantis_bishop</name>
+	<name>unique_freddy</name>
+</blueprintList>
+
+<!--/////// LANIUS //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
 	<mod-append:name>trash_eater</mod-append:name>
@@ -185,10 +173,12 @@
 	<name>primagen_raptor</name>
 	<name>clonefail_lancer</name>
 	<name>protogen_space_scavenger</name>
+	<name>protogen_pete</name>
 </blueprintList>
 
 <!--/////// SERGALS //////-->
 <blueprintList name="LIST_CREW_SERGAL">
+	<name>sergal</name>
 	<name>sergal_cheese</name>
 </blueprintList>
 
@@ -198,6 +188,7 @@
 	<name>mantis_rsa</name>
 	<name>kiviekith</name>
 	<name>rsa_technician</name>
+	<name>black_rose</name>
 </blueprintList>
 
 <!--/////// AVALI //////-->
@@ -225,7 +216,15 @@
 	<name>robottos_gunner</name>
 	<name>robottos_machinist</name>
 	<name>robottos_researcher</name>
+	<name>robottos_police</name>
 </blueprintList>
+
+<!--/////// MANTIS ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CHECKCREW_MANTIS">
+	<mod-append:name>mantis_rsa</mod-append:name>
+	<mod-append:name>mantis_freebusiness</mod-append:name>
+</mod:findName>
 
 <!--/////// LANIUS //////-->
 
@@ -237,13 +236,51 @@
 	<mod-append:name>scrapper_engineer</mod-append:name>
 	<mod-append:name>scrapper_speed</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
 </mod:findName>
 
 <!--//////// HUMANS /////////-->
 
 <mod:findName type="blueprintList" name="LIST_CHECKCREW_HUMAN">
 	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>rsa_technician</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>human_hazmat</mod-append:name>
+</mod:findName>
+
+<!--/////// IT'S MORPHIN' TIME ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_FREEMANTIS">
+	<mod-append:name>mantis_freebusiness</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_MANTIS">
+	<mod-append:name>mantis_rsa</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_HUMAN">
+	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>rsa_technician</mod-append:name>
+	<mod-append:name>unique_leah_mfk</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>human_hazmat</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_LANIUS">
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>scrapper</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_COGNITIVE">
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
 </mod:findName>
 
 <!--/////// UNIQUES //////-->
@@ -256,6 +293,7 @@
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
@@ -266,26 +304,39 @@
 	<mod-append:name>clonefail_lancer</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
 	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>black_rose</mod-append:name>
 </mod:findName>
 
-<!--/////// STORE LISTS //////-->
+<mod:findName type="blueprintList" name="LIST_CREW_COGNITIVE">
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
+</mod:findName>
 
-<blueprintList name="SHOP_ITEM_WEAPONS_INSTANOODLE">
-	<name>ION_INSTANT</name>
-	<name>SHOTGUN_INSTANT</name>
-	<name>BEAM_FIRE_INSTANT</name>
-	<name>TC_BOMB_SHOTGUN_INSTANT</name>
-	<name>LOOT_MATH_5</name>
-	<name>BIG_ION</name>
-</blueprintList>
+<mod:findName type="blueprintList" name="LIST_CREW_RCOGNITIVE">
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
+</mod:findName>
 
-<!--/////// WEAPONS ALL //////-->
+<mod:findName type="blueprintList" name="LIST_CREW_COGNITIVE_ALL">
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_ANCIENT_ALL">
+	<mod-append:name>saviors</mod-append:name>
+	<mod-append:name>saviorsa</mod-append:name>
+</mod:findName>
+
+	<!--///////////////////////////////
+////////////// WEAPON ZONE ///////////////
+////////////////////////////////-->
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
 	<mod-append:name>TC_SHOTGUN_BOMB</mod-append:name>
@@ -308,12 +359,14 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_CONSERVATIVE</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_INSTANT</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_BIO</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
 	<mod-append:name>TC_LASER_LEGION</mod-append:name>
 	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
 	<mod-append:name>ION_CHARGER_1</mod-append:name>
+	<mod-append:name>REBEL_DART</mod-append:name>
 	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
 	<mod-append:name>RSA_MINICANNON</mod-append:name>
 	<mod-append:name>RSA_TAGGER</mod-append:name>
@@ -323,6 +376,7 @@
 	<mod-append:name>TC_SINEWAVE</mod-append:name>
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
 	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_CLOAKER</mod-append:name>
 	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
 	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
@@ -344,6 +398,11 @@
 	<mod-append:name>TC_OVERLORD</mod-append:name>
 	<mod-append:name>TC_ESKA</mod-append:name>
 	<mod-append:name>TC_TONFA</mod-append:name>
+	<mod-append:name>BREACH_ION_MINI</mod-append:name>
+	<mod-append:name>BREACH_ION</mod-append:name>
+	<mod-append:name>BREACH_ION_BOLT</mod-append:name>
+	<mod-append:name>BREACH_ION_BEAM</mod-append:name>
+	<mod-append:name>SUS_LASERS</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -366,12 +425,14 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_CONSERVATIVE</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_INSTANT</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_BIO</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
 	<mod-append:name>TC_LASER_LEGION</mod-append:name>
 	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
 	<mod-append:name>ION_CHARGER_1</mod-append:name>
+	<mod-append:name>REBEL_DART</mod-append:name>
 	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
 	<mod-append:name>RSA_MINICANNON</mod-append:name>
 	<mod-append:name>RSA_TAGGER</mod-append:name>
@@ -383,6 +444,7 @@
 	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
 	<mod-append:name>TC_UNSCRAPFLAK</mod-append:name>
 	<mod-append:name>TC_SCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_CLOAKER</mod-append:name>
 	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
 	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
@@ -406,6 +468,227 @@
 	<mod-append:name>TC_TONFA</mod-append:name>
 </mod:findName>
 
+<!--
+<blueprintList name="LIST_NON_RARITY_0_THINGS"> (Just here for reference)
+	<name>TC_LIGHT_SHOW</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_TAGGER</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_RESOLVER</name>
+	<name>TC_SINEWAVE</name>
+	<name>RSA_BIOHAZARD</name>
+	<name>SINGULARITY_PROJECTOR_1</name>
+	<name>CATALYZER</name>
+	<name>NOODLE_RATIONS</name>
+	<name>scrapper</name>
+	<name>kiviekith</name>
+	<name>rsa_technician</name>
+	<name>robottos</name>
+	<name>mantis_rsa</name>
+	<name>protogen</name>
+	<name>protogen_space_scavenger</name>
+	<name>avali</name>
+</blueprintList>
+-->
+
+<!--/////// BOMB SHOTGUN ZONE //////-->
+
+<blueprintList name="LIST_BOMB_SHOTGUNS">
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_1_ENEMY</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_4</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_FREE</name>
+	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
+<blueprintList name="LIST_BOMB_SHOTGUNS_NORMAL">
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_FREE</name>
+	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
+<!--/////// WHY DIDN"T YOU FUCKEN UHHHHHHHH //////-->
+
+<blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH"> <!--just a list of the weapons ariadne can get you-->
+	<name>LIST_WEAPONS_LOSTSUN</name>
+</blueprintList>
+
+<!--/////// MADOK LIST //////-->
+
+<blueprintList name="LIST_DRONES_MADOK">
+	<name>REPAIR</name>
+	<!--placeholders until loot versions added-->
+	<name>ION_1_AMP2</name>
+	<name>HELLRAISER_HULL</name>
+	<name>MANNING</name>
+	<name>BATTLETOG2_DEFEND</name>
+</blueprintList>
+
+<!--/////// THIS DOESNT FUCKEN WORK BY THE WAY. //////-->
+
+<blueprintList name="SHIP_AVALI_FIGHT">
+	<name>AVALI_SKIRMISHER</name>
+</blueprintList>
+
+<!--/////// DRONE LIST - AVALI //////-->
+
+<blueprintList name="LIST_DRONES_AVALI">
+	<name>REPAIR</name>
+	<name>GUARDIAN_1_DRONE</name>
+	<name>GUARDIAN_1_MISSILE</name>
+	<name>DEFENSE_1_ENEMY</name>
+	<name>AMPHI_COMBAT</name>
+	<name>COMBAT_1_LASER</name>
+	<name>COMBAT_1_BEAM</name>
+	<name>COMBAT_2_LASER</name>
+	<name>COMBAT_2_BEAM</name>
+	<name>PEST_RAD_ENEMY</name>
+	<name>ION_1_AMP3_ENEMY</name>
+	<name>ION_1_AMP2_ENEMY</name>
+	<name>ENERGY_1_AMP2_ENEMY</name>
+	<name>BATTLETOG2_BOARDER</name>
+</blueprintList>
+
+<!--/////// WEAPON LIST - AVALI //////-->
+
+<blueprintList name="LIST_WEAPONS_AVALI">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2_ENEMY</name>
+	<name>LASER_HEAVY_CHAINGUN</name>
+	<name>LASER_CHAINGUN_ENEMY</name>
+	<name>LASER_CHAINGUN_2</name>
+	<name>ION_FIRE</name>
+	<name>ION_STUN</name>
+	<name>ION_CHAINGUN</name>
+	<name>MISSILES_2_ENEMY</name>
+	<name>MISSILES_1</name>
+	<name>TC_SINEWAVE</name>
+	<name>TC_ESKA</name>
+	<name>TC_OVERLORD</name>
+	<name>LASER_LIGHT</name>
+</blueprintList>
+
+<!--/////// WEAPON LIST - RSA //////-->
+
+<blueprintList name="LIST_WEAPONS_RSA">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2_ENEMY</name>
+	<name>LASER_HEAVY_CHAINGUN</name>
+	<name>LASER_CHAINGUN_ENEMY</name>
+	<name>LASER_CHAINGUN_2</name>
+	<name>ION_FIRE</name>
+	<name>ION_STUN</name>
+	<name>ION_CHAINGUN</name>
+	<name>MISSILES_2_ENEMY</name>
+	<name>MISSILES_1</name>
+	<name>RSA_BIOHAZARD</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_TAGGER</name>
+	<name>TC_ESKA</name>
+	<name>TC_OVERLORD</name>
+	<name>TC_MINIGUN_MK1</name>
+	<name>TC_MINIGUN_MK2</name>
+	<name>TC_MINIGUN_MK3</name>
+	<name>TC_SCRAPFLAK</name>
+	<name>TC_RESCRAPFLAK</name>
+	<name>TC_BOMB_SHOTGUN_1_ENEMY</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+</blueprintList>
+
+<!-- Duplicates are for increasing the chance to appear -->
+
+<blueprintList name="SHOP_RSA_ITEM_CREW">
+	<name>mantis_rsa</name>
+	<name>mantis_rsa</name>
+	<name>kiviekith</name>
+	<name>kiviekith</name>
+	<name>rsa_technician</name>
+</blueprintList>
+
+<!--/////// STORE LISTS //////-->
+
+<blueprintList name="SHOP_ITEM_WEAPONS_INSTANOODLE"> <!--/// INSTANT_ISSUES ///-->
+	<name>ION_INSTANT</name>
+	<name>SHOTGUN_INSTANT</name>
+	<name>BEAM_FIRE_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>ION_INSTANT</name>
+	<name>SHOTGUN_INSTANT</name>
+	<name>BEAM_FIRE_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>LOOT_MATH_5</name>
+	<name>BIG_ION</name>
+</blueprintList>
+
+<blueprintList name="SHOP_RSA_ITEM_WEAPONS"> <!--/// RSA STORE ///-->
+	<name>RSA_MINICANNON</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_MINICANNON</name>
+	<name>RSA_TAGGER</name>
+	<name>RSA_TAGGER</name>
+	<name>RSA_TAGGER</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_DECONSTRUCTOR</name>
+	<name>TC_RESOLVER</name>
+	<name>TC_RESOLVER</name>
+	<name>TC_RESOLVER</name>
+	<name>CATALYZER</name>
+	<name>CATALYZER</name>
+	<name>CATALYZER</name>
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_FREE</name>
+	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
+<!--/////// GIFTLISTS ///////-->
+
+<blueprintList name="GIFTLIST_BOMB_FLAKS">
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_3</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_FIRE</name>
+	<name>TC_BOMB_SHOTGUN_ION</name>
+	<name>TC_BOMB_SHOTGUN_BIO</name>
+	<name>TC_BOMB_SHOTGUN_LOCK</name>
+</blueprintList>
+
+<!--/////// FLAKS FOR BOSS FIGHTS //////-->
+
 <mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
 	<mod-append:name>TC_SHOTGUN_BOMB</mod-append:name>
 	<mod-append:name>TC_SHOTGUN_UNSTABLE</mod-append:name>
@@ -420,20 +703,41 @@
 	<mod-append:name>TC_MILITIA_2</mod-append:name>
 </mod:findName>
 
+	<!--///////////////////////////////
+////////////// DRONE ZONE ///////////////
+////////////////////////////////-->
+
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
 	<mod-append:name>TC_DRONE_GOLD_COMBAT</mod-append:name>
 	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
+	<mod-append:name>TC_COMBAT_HEAVY_COMBAT</mod-append:name>
+	<mod-append:name>ROBO_MANT_DEFEND</mod-append:name>
+	<mod-append:name>SILICA_BATTLE</mod-append:name>
+	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
+	<mod-append:name>SILICA_BOARDER</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
 	<mod-append:name>TC_DRONE_GOLD_COMBAT</mod-append:name>
 	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
+	<mod-append:name>TC_COMBAT_HEAVY_COMBAT</mod-append:name>
+	<mod-append:name>ROBO_MANT_DEFEND</mod-append:name>
+	<mod-append:name>SILICA_BATTLE</mod-append:name>
+	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
+	<mod-append:name>SILICA_BOARDER</mod-append:name>
 </mod:findName>
 
-<!--////////// GIFTLISTS ////////// -->
+	<!--///////////////////////////////
+////////////// GIFTLISTS ///////////////
+////////////////////////////////-->
 
-<mod:findName type="blueprintList" name="GIFTLIST_CRYSTAL">
+<!--<mod:findName type="blueprintList" name="GIFTLIST_CRYSTAL">
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+</mod:findName>-->
+
+<mod:findName type="blueprintList" name="GIFTLIST_REBEL">
+	<mod-append:name>NOVA_MK2</mod-append:name>
+	<mod-append:name>REBEL_DART</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="GIFTLIST_MANTIS">
@@ -447,33 +751,29 @@
 	<!--<mod-append:name>TC_BOMB_SHOTGUN_CONSERVATIVE</mod-append:name>-->
 	<mod-append:name>TC_BOMB_SHOTGUN_INSTANT</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_BIO</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 </mod:findName>
 
 <!--////////// STORELISTS ////////// -->
 
-<mod:findName type="blueprintList" name="SHOP_CRYSTAL_ITEM_WEAPONS">
+<!--<mod:findName type="blueprintList" name="SHOP_CRYSTAL_ITEM_WEAPONS">
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="SHOP_CRYSTAL_ITEM_WEAPONS_CRYSTAL">
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+</mod:findName>-->
+
+<mod:findName type="blueprintList" name="SHOP_REBEL_ITEM_WEAPONS_LASERS">
+	<mod-append:name>REBEL_DART</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="SHOP_MANTIS_ITEM_WEAPONS_BOMB">
 	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_BREACH</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_CHAIN</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_CHARGE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_FREE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_CONSERVATIVE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_INSTANT</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_MANTIS">
@@ -484,8 +784,9 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_CHAIN</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_CHARGE</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_BIO</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_SUZERAIN">
@@ -496,8 +797,9 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_CHAIN</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_CHARGE</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_BIO</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_COALITION">
@@ -508,8 +810,9 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_CHAIN</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_CHARGE</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
-	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_ION</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_BIO</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_LOCK</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="JUDGELIST_ROCK_SPECIAL_LOOT">
@@ -517,9 +820,201 @@
 	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
 </mod:findName>
 
+<!--////////// BLUE LISTS AND THE LIKE //////////-->
+
+<mod:findName type="blueprintList" name="LIST_CHECK_WEAPONS">
+	<mod-append:name>TC_BOMB_SHOTGUN_FREE</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_AETHER">
+	<mod-append:name>ANCIENT_LANCE</mod-append:name>
+	<mod-append:name>FM_MINELAUNCHER_ANCALAGON_REMASTERED2</mod-append:name>
+	<mod-append:name>VOID_LASER3</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_OBELISK">
+	<mod-append:name>VOID_LASER3</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_NEWGEN">
+	<mod-append:name>ANCIENT_LANCE</mod-append:name>
+	<mod-append:name>FM_MINELAUNCHER_ANCALAGON_REMASTERED2</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_MINING">
+	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ION">
+	<mod-append:name>ARTILLERY_SAVIOR_ION</mod-append:name>
+	<mod-append:name>TC_PULSAR</mod-append:name>
+	<mod-append:name>TC_PULSAR_SMOL</mod-append:name>
+	<mod-append:name>TC_HARMONIZER</mod-append:name>
+	<mod-append:name>IONARTILLERY</mod-append:name>
+	<mod-append:name>TC_LIGHT_SHOW</mod-append:name>
+	<mod-append:name>ION_CHARGER_1</mod-append:name>
+	<mod-append:name>BREACH_ION</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ENERGY">
+	<mod-append:name>ARTILLERY_ENERGY_MATH</mod-append:name>
+	<mod-append:name>BREACH_ION_BOLT</mod-append:name>
+	<mod-append:name>BREACH_ION_BEAM</mod-append:name>
+	<mod-append:name>TC_TONFA</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_MISSILES_ALL">
+	<mod-append:name>ARTILLERY_SAVIOR_FALSE</mod-append:name>
+	<mod-append:name>MISSILES_LEGION</mod-append:name>
+	<mod-append:name>ARTILLERY_AUTO_A_MISSILE</mod-append:name>
+	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
+	<mod-append:name>TC_CLOAKER</mod-append:name>
+	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
+	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_MISSILES_DAMAGE">
+	<mod-append:name>ARTILLERY_SAVIOR_FALSE</mod-append:name>
+	<mod-append:name>MISSILES_LEGION</mod-append:name>
+	<mod-append:name>ARTILLERY_AUTO_A_MISSILE</mod-append:name>
+	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
+	<mod-append:name>TC_CLOAKER</mod-append:name>
+	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
+	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_MINELAUNCHERS_ALL">
+	<mod-append:name>FM_MINELAUNCHER_ANCALAGON_REMASTERED2_FAKE</mod-append:name>
+	<mod-append:name>FM_MINELAUNCHER_ANCALAGON_REMASTERED2</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_RECYCLER">
+	<mod-append:name>TC_BOMB_SHOTGUN_FREE</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
+	<mod-append:name>ANCIENT_LANCE</mod-append:name>
+	<mod-append:name>BREACH_ION_BEAM</mod-append:name>
+	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
+	<mod-append:name>TC_RESOLVER</mod-append:name>
+	<mod-append:name>TC_SINEWAVE</mod-append:name>
+	<mod-append:name>ARTILLERY_TC_MODULAR_BEAM</mod-append:name>
+	<mod-append:name>NOVA_MK1</mod-append:name>
+	<mod-append:name>NOVA_MK2</mod-append:name>
+	<mod-append:name>NOVA_MK3</mod-append:name>
+	<mod-append:name>SUPERNOVA_CATALYZER</mod-append:name>
+	<mod-append:name>TC_ESKA</mod-append:name>
+	<mod-append:name>TC_TONFA</mod-append:name>
+	<mod-append:name>BIO_1_LEAH</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
+	<mod-append:name>ANCIENT_LANCE</mod-append:name>
+	<mod-append:name>BREACH_ION_BEAM</mod-append:name>
+	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
+	<mod-append:name>TC_SINEWAVE</mod-append:name>
+	<mod-append:name>ARTILLERY_TC_MODULAR_BEAM</mod-append:name>
+	<mod-append:name>NOVA_MK1</mod-append:name>
+	<mod-append:name>NOVA_MK2</mod-append:name>
+	<mod-append:name>NOVA_MK3</mod-append:name>
+	<mod-append:name>SUPERNOVA_CATALYZER</mod-append:name>
+	<mod-append:name>TC_ESKA</mod-append:name>
+	<mod-append:name>TC_TONFA</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
+	<mod-append:name>CATALYZER</mod-append:name>
+	<mod-append:name>FOCUS_1_LEAH</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
+	<mod-append:name>CATALYZER</mod-append:name>
+	<mod-append:name>FOCUS_1_LEAH</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HEAVY">
+	<mod-append:name>ARTILLERY_SAVIOR_LASER</mod-append:name>
+	<mod-append:name>ARTILLERY_SAVIOR_FALSE</mod-append:name>
+	<mod-append:name>ARTILLERY_BATTLESHIP_LASER</mod-append:name>
+	<mod-append:name>ANCIENT_LANCE</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_GOLD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_GOLD_ARTILLERY</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_LEAD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_BOMB</mod-append:name>
+	<mod-append:name>TC_RAPTORS_OWN</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_4</mod-append:name>
+	<mod-append:name>TC_BOMB_SHOTGUN_INSTANT</mod-append:name>
+	<mod-append:name>ARTILLERY_AUTO_A_MISSILE</mod-append:name>
+	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
+	<mod-append:name>TC_LASER_LEGION</mod-append:name>
+	<mod-append:name>TC_OVERLORD</mod-append:name>
+	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
+	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
+	<mod-append:name>TC_RAPTOR_AUTOCANNON</mod-append:name>
+	<mod-append:name>AVALI_HUNTER1</mod-append:name>
+	<mod-append:name>AVALI_HUNTER2</mod-append:name>
+	<mod-append:name>TC_VULCAN_CANNON</mod-append:name>
+	<mod-append:name>RSA_TAGGER</mod-append:name>
+	<mod-append:name>RSA_AVENGER_ARTILLERY</mod-append:name>
+	<mod-append:name>SUPERNOVA_CATALYZER</mod-append:name>
+	<mod-append:name>FOCUS_1_LEAH</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
+	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ANTIBIO">
+	<mod-append:name>TC_BOMB_SHOTGUN_BIO</mod-append:name>
+	<mod-append:name>ARTILLERY_AUTO_B_BIO</mod-append:name>
+	<mod-append:name>BIO_1_LEAH</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NODAMAGE">
+	<mod-append:name>ARTILLERY_AUTO_B_BIO</mod-append:name>
+	<mod-append:name>BIO_1_LEAH</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
+	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_FIRE_BALLISTIC">
+	<mod-append:name>TC_BOMB_SHOTGUN_FIRE</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_WEAPONS_CRYSTAL">
+	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_DRONES_BOARDING">
+	<mod-append:name>ROBO_MANT_DEFEND</mod-append:name>
+	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ARMOR">
+	<mod-append:name>ADVANCED_SCRAP</mod-append:name>
+	<mod-append:name>LOCKED_SCRAP_ARMOR</mod-append:name>
+	<!--<mod-append:name>FLAK_ARMOR</mod-append:name> It's literally falling apart. -->
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ENERGY_SHIELD">
+	<mod-append:name>SAVIOR_SHIELD</mod-append:name>
+	<mod-append:name>REGEN_SHIELD</mod-append:name>
+	<mod-append:name>FALSE_SHIELD</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ARM">
+	<mod-append:name>SALVAGE_ARRAY</mod-append:name>
+</mod:findName>
+
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           ENEMY SHIP BLUEPRINTS
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
@@ -597,13 +1092,14 @@
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
 		<teleporter power="1" max="1" room="9" start="true" />
-		<weapons power="4" max="4" room="11" start="true" />
+		<weapons power="5" max="7" room="11" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="0" count="4">
 		<weapon name="TC_SHOTGUN_LEAD" />
 		<weapon name="TC_BOMB_SHOTGUN_2" />
+		<weapon name="TC_SHOTGUN_BOMB" />
 	</weaponList>
 	<droneList drones="0" count="0" />
 	<health amount="9" />
@@ -754,7 +1250,43 @@
 <!--///////////////////// THE KM /////////////////-->
 
 <shipBlueprint name="TC_TRASH_MINER" layout="tc_trash_miner" img="tc_trash_miner">
-	<class>TRACKER's Garbage Ccompactor</class>
+	<class>TRACKER's Garbage Compactor</class>
+	<minSector>1</minSector>
+	<maxSector>1</maxSector>
+	<systemList>
+		<artillery power="2" max="4" room="10" start="true" weapon="ARTILLERY_FLAK" />
+		<battery power="1" max="1" room="1" start="true" />
+		<cloaking power="1" max="3" room="16" start="true" />
+		<clonebay power="3" max="3" room="15" start="true" />
+		<doors power="1" max="2" room="3" start="true" />
+		<engines power="3" max="5" room="11" start="true" />
+		<oxygen power="1" max="2" room="14" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="6" room="6" start="true" />
+		<teleporter power="1" max="2" room="12" start="true" />
+		<weapons power="6" max="7" room="5" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="13" count="4">
+		<weapon name="TC_RAPTOR_AUTOCANNON" />
+		<weapon name="TC_OVERLORD" />
+	</weaponList>
+	<droneList drones="0" count="0" />
+	<health amount="11" />
+	<maxPower amount="30" />
+	<crew>
+            <primagen_raptor room="5" name="RAPTOR" />
+            <protogen_tracker room="0" name="TRACKER" />
+            <sergal_cheese room="11" name="Cheese" />
+            <clonefail_lancer room="12" name="Lancer" />
+	</crew>
+	<boardingAI>sabotage</boardingAI>
+	<forceAutoShip>false</forceAutoShip>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_MINER_QUEST" layout="tc_trash_miner" img="tc_trash_miner">
+	<class>TRACKER's Garbage Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
 	<systemList>
@@ -837,30 +1369,6 @@
 	<maxPower amount="15" />
 	<crewCount amount="2" max="4" class="kiviekith" />
 	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="MU_ENGI_FIGHTER_KIVIE" layout="mu_engi_fighter_a" img="mu_engi_fighter_a">
-	<class>Engi Fighter</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<drones power="2" max="8" room="2" start="true" />
-		<engines power="1" max="2" room="6" start="true" />
-		<medbay power="1" max="2" room="4" start="false" />
-		<oxygen power="1" max="2" room="5" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="8" room="3" start="true" />
-		<weapons power="2" max="7" room="1" start="true" />
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>3</droneSlots>
-	<weaponList missiles="0" count="3" load="LIST_WEAPONS_ENGI" />
-	<droneList drones="10" count="3" load="LIST_DRONES_ENGI" />
-	<health amount="10" />
-	<maxPower amount="9" />
-	<crewCount amount="2" max="6" class="engi" />
-	<boardingAI>sabotage</boardingAI>
-	<aug name="UPG_MEDBAY_NANO" />
 </shipBlueprint>
 
 <shipBlueprint name="KIVIE_BOMBER" layout="KIVIE_BOMBER" img="KIVIE_BOMBER">
@@ -1170,8 +1678,6 @@
 	<aug name="HEKTAR_GEL" />
 </shipBlueprint>
 
-<!--/////////////////////AVALI ENEMY SHIP BLUEPRINTS/////////////////-->
-
 <shipBlueprint name="AVALI_SKIRMISHER" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
 	<class>Avali Skirmisher</class>
 	<minSector>1</minSector>
@@ -1212,6 +1718,67 @@
 	<droneList drones="3" count="0" />
 	<health amount="11" />
 	<maxPower amount="6" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="RSA_ASSAULT" layout="rsa_assault" img="rsa_assault">
+	<class>RSA Assault</class>
+	<minSector>2</minSector>
+	<maxSector>7</maxSector>
+	<systemList>
+		<doors power="1" max="1" room="9" start="false" />
+		<drones power="1" max="1" room="5" start="false" />
+		<engines power="1" max="1" room="3" start="true" />
+		<medbay power="1" max="2" room="1" start="false" />
+		<oxygen power="1" max="1" room="7" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="2" start="true" />
+		<weapons power="1" max="1" room="6" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="12" count="3" load="LIST_WEAPONS_RSA" />
+	<droneList drones="5" count="2" load="LIST_DRONES_ENEMY_COMBAT_BORING" />
+	<health amount="11" />
+	<maxPower amount="8" />
+	<crewCount amount="1" max="2" class="kiviekith" />
+	<crewCount amount="2" max="3" class="mantis_rsa" />
+	<crewCount amount="0" max="1" class="protogen" />
+	<crewCount amount="0" max="1" class="random" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+
+<shipBlueprint name="RSA_DROPSHIP" layout="rsa_dropship" img="rsa_dropship">
+	<class>RSA Dropship</class>
+	<minSector>1</minSector>
+	<maxSector>5</maxSector>
+	<systemList>
+		<artillery power="2" max="4" room="20" start="true" weapon="RSA_AVENGER_ARTILLERY" />
+		<battery power="1" max="2" room="22" start="false" />
+		<doors power="1" max="2" room="8" start="true" />
+		<drones power="2" max="4" room="12" start="true" />
+		<engines power="4" max="6" room="17" start="true" />
+		<hacking power="1" max="1" room="11" start="false" />
+		<medbay power="1" max="2" room="13" start="true" />
+		<mind power="1" max="2" room="23" start="false" />
+		<oxygen power="1" max="2" room="3" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="4" room="6" start="true" />
+		<teleporter power="1" max="2" room="14" start="true" />
+		<weapons power="1" max="1" room="24" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="15" count="4" load="LIST_WEAPONS_RSA" />
+	<droneList drones="15" count="4">
+		<drone name="SILICA_BOARDER" />
+	</droneList>
+	<crewCount amount="1" max="3" class="mantis_rsa" />
+	<crewCount amount="1" max="2" class="rsa_technician" />
+	<crewCount amount="1" max="2" class="kiviekith" />
+	<health amount="12" />
+	<maxPower amount="10" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 

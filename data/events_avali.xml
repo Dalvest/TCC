@@ -2,12 +2,10 @@
 
 <FTL>
 	<!--normal events-->
-	<eventList name="AVALI_EVENT_QUEST"></eventList>
-	<eventList name="AVALI_EVENT_HOSTILE">
-		<event load="AVALI_FIGHT" />
+	<eventList name="AVALI_EVENT_QUEST" unused="true"></eventList>
+	<eventList name="AVALI_EVENT_HOSTILE" unused="true">
 		<event load="AVALI_REBEL_LIST" />
 		<event load="ENCOUNTER_PIRATE" />
-		<event load="AVALI_FIGHT" />
 		<event load="ENCOUNTER_PIRATE" />
 	</eventList>
 
@@ -23,18 +21,6 @@
 		<event load="ENCOUNTER_REBEL" />
 		<event load="ENCOUNTER_REBEL_SPY" />
 	</eventList>
-
-	<event name="AVALI_FIGHT">
-		<text load="TEXT_AVALI_FIGHT" />
-		<ship load="SHIP_AVALI_FIGHT" hostile="true" />
-		<choice hidden="true">
-			<text>Continue...</text>
-			<event load="COMBAT_CHECK" />
-		</choice>
-	</event>
-	<textList name="TEXT_AVALI_FIGHT">
-		<text>bird fight!!!!!!!</text>
-	</textList>
 
 	<event name="ENCOUNTER_REBEL_AVALI">
 		<text load="TEXT_ENCOUNTER_REBEL_AVALI" />
@@ -55,16 +41,14 @@
 		<text>You're hailed by a Rebel ship: "When the rebellion is complete you'll see the safer world we provide. Well, you won't, but you get the point." They arm weapons.</text>
 	</textList>
 	<!--homeworlds events-->
-	<eventList name="AVALI_EVENT_HOMEWORLDS_IMPORTANT"></eventList>
-	<eventList name="AVALI_EVENT_HOMEWORLDS_QUEST"></eventList>
-	<eventList name="AVALI_EVENT_HOMEWORLDS_HOSTILE">
-		<event load="AVALI_FIGHT" />
+	<eventList name="AVALI_EVENT_HOMEWORLDS_IMPORTANT" unused="true"></eventList>
+	<eventList name="AVALI_EVENT_HOMEWORLDS_QUEST" unused="true"></eventList>
+	<eventList name="AVALI_EVENT_HOMEWORLDS_HOSTILE" unused="true">
 		<event load="AVALI_REBEL_LIST" />
 		<event load="ENCOUNTER_PIRATE" />
 		<event load="AVALI_ARGUMENT" />
-		<event load="ILLUMINANT_FIGHT" />
 	</eventList>
-	<eventList name="AVALI_EVENT_HOMEWORLDS_NEUTRAL">
+	<eventList name="AVALI_EVENT_HOMEWORLDS_NEUTRAL" unused="true">
 		<event load="AVALI_LOSTSUN_TEACH" />
 	</eventList>
 	<event name="AVALI_LOSTSUN_TEACH" unique="true">

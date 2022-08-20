@@ -16,17 +16,17 @@
 				<mod-append:choice hidden="true" max_group="1" req="SHIP_TRASH" blue="false">
 					<text>Contact Federation command.</text>
 					<event>
-						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "I've been waiting for someone to come and clean the military shipyard- what, you're a military ship? You don't look the part, although I'm guessing that's a camouflage tactic."</text>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "I've been waiting for someone to come and clean the main shipyard- what, you're a military ship? You don't look the part, although I'm guessing that's a camouflage tactic."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
 							</choice>
 					</event>
 				</mod-append:choice>
-				<mod-append:choice hidden="true" max_group="1" req="SHIP_GARBAGE_COMPACTOR" blue="false">
+				<mod-append:choice hidden="true" max_group="1" req="SHIP_PROTOGEN_PROJECT" blue="false">
 					<text>Contact Federation command.</text>
 					<event>
-						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "It would seem the Protogen project has been succesful, considering the fact you made it all the way here. Captain, we need urgent help. You're our last hope."</text>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "I remember you, you're the first revolutionaries in the Protogen Project's uprising. This is your chance to get revenge on the faction that created and enslaved you - destroy them all, Captain. You're our last hope."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
@@ -36,7 +36,7 @@
 				<mod-append:choice hidden="true" max_group="1" req="SHIP_ARMOREDWASP" blue="false">
 					<text>Contact Federation command.</text>
 					<event>
-						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "That's an... uh... slug... Lanius... Mantis... What is that ship? ...Well, hopefully, this ship will be the end of the Rebellion... in this Universe, at least."</text>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "That's an... uh... slug... lanius... mantis... What even is that ship? ...Well, hopefully, this ship will be the end of the Rebellion... in this Universe, at least."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
@@ -46,7 +46,7 @@
 				<mod-append:choice hidden="true" max_group="1" req="SHIP_RSA" blue="false">
 					<text>Contact Federation command.</text>
 					<event>
-						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "The RECLAIM and SALVAGE ASSOCIATION... or was it RECYCLING? Anyway, I know about the dealings between the Federation and your association, and while I do not approve of morally grey companies, it'd seem we have one big transaction to take care of - get rid of the Flagship."</text>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "The RECLAIM and SALVAGE ASSOCIATION... or was it RECYCLING? Anyway, I know about the dealings between the Federation and your association, and while I personally do not approve of morally grey companies, it'd seem we have one big transaction to take care of - get rid of the Flagship and I'll make sure there will be compensation."</text>
 							<choice hidden="true">
 								<text>Continue...</text>
 								<event load="LAST_STAND_START_2"/>
@@ -66,7 +66,7 @@
 				<mod-append:choice hidden="true" max_group="1" req="SHIP_MILITARY_FEDERATION" blue="false">
 					<text>Contact Federation command.</text>
 					<event>
-						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "Finally, we've got some pretty heavy Federation backup. Find the Rebel Flagship and get rid of it - your specialized military ship should make short work of it."</text>
+						<text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. "Finally, we've got heavy Federation military backup. Find the Rebel Flagship and dispose of it - your specialized military equipment should make short work of it. Good luck, Captain."</text>
 						<choice hidden="true">
 							<text>Continue...</text>
 							<event load="LAST_STAND_START_2"/>

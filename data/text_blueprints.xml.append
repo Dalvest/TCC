@@ -18,6 +18,8 @@
 <text name="text_KIVIE_FIGHTER_ENGI_class">Kivie Fighter</text>
 <text name="text_MU_ENGI_FIGHTER_KIVIE_class">Engi Fighter</text>
 <text name="text_KIVIE_AUTO_class">Kivie Auto</text>
+<text name="text_RSA_ASSAULT_class">RSA Assault</text>
+<text name="text_RSA_DROPSHIP_class">RSA Dropship</text>
 
 <!--///////////////////// SCRAPPER DREADNOUGHT //////////////////////////-->
 
@@ -34,10 +36,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <!--///////////////////// TCG - DEPRECATED //////////////////////////-->
 
-<text name="text_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_class">Trash Compactor</text>
-<text name="text_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_name">Trash Compactor</text>
-<text name="text_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_desc">OMEGA Ship.</text>
-<text name="ship_PLAYER_SHIP_TRASH_COMPACTOR_GOOD_unlock">Thats the neat part, you (probably) won't.</text>
+<text name="text_PLAYER_SHIP_TRASH_EATER_class">Trash Eater's Cruiser</text>
+<text name="text_PLAYER_SHIP_TRASH_EATER_name">Moarte si Fier</text>
+<text name="text_PLAYER_SHIP_TRASH_EATER_desc">The Prince of Lanius commands his own personal army of Scrappers - he seeks to envelop so much scrap that he'll become one huge, sentient ship, with the eventual goal of eating the world. For now... he's still crew-sized.</text>
+<text name="ship_PLAYER_SHIP_TRASH_EATER_unlock">Beat the game with the Scrapper Dreadnought.</text>
 
 <!--///////////////////// KESTREL MINER //////////////////////////-->
 
@@ -70,12 +72,16 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_SDM_desc">We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues.</text>
 <text name="ship_PLAYER_SHIP_SDM_unlock">Win the Game with the Reactive Compactor</text>
 
+<text name="ship_PLAYER_SHIP_SDM_2_unlock">Reach sector 5 with Type A</text>
+
 <!--///////////////////// CONSTRUCTION CREW KESTREL //////////////////////////-->
 
 <text name="text_PLAYER_SHIP_TC_CONSTRUCTION_class">Construction Crew Kestrel</text>
 <text name="text_PLAYER_SHIP_TC_CONSTRUCTION_name">The Original</text>
 <text name="text_PLAYER_SHIP_TC_CONSTRUCTION_desc">This is a completely functional version of the Kestrel Miner from the time it was actually used for mining - before TRACKER and the gang got it.</text>
 <text name="ship_PLAYER_SHIP_TC_CONSTRUCTION_unlock">Win the Game with any layout of the Sentients' Tanker</text>
+
+<text name="ship_PLAYER_SHIP_TC_CONSTRUCTION_2_unlock">Reach sector 5 with Type A</text>
 
 <!--///////////////////// ARMORED WASP //////////////////////////-->
 
@@ -182,17 +188,17 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_class">Federation Carrier</text>
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_name">Star Sovereign</text>
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_desc">This is a highly drone-focused Federation Fleet Support carrier - it's got some pretty old spec equipment, but it'll do...</text>
-<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_unlock">Unlock four Federation military ships from this Page to unlock this Cruiser.</text>
+<text name="ship_PLAYER_SHIP_FEDERATION_CARRIER_unlock">Unlock four Federation military ships from this Page to unlock this Cruiser.</text>
 
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_2_class">Federation Carrier</text>
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_2_name">The Scylla</text>
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_2_desc">This ship was modified by a militia group and features a chain ion artillery as well as a minigun.</text>
-<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_2_unlock">Reach sector 5 with Type A.</text>
+<text name="ship_PLAYER_SHIP_FEDERATION_CARRIER_2_unlock">Reach sector 5 with Type A.</text>
 
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_3_class">Federation Carrier</text>
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_3_name">The Interceptor</text>
 <text name="text_PLAYER_SHIP_FEDERATION_CARRIER_3_desc">This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured by the Federation and quickly refit to get back into battle.</text>
-<text name="text_PLAYER_SHIP_FEDERATION_CARRIER_3_unlock">Reach sector 5 with Type B or win with Type A.</text>
+<text name="ship_PLAYER_SHIP_FEDERATION_CARRIER_3_unlock">Reach sector 5 with Type B or win with Type A.</text>
 
 <!--//////////////////////// MILSPEC //////////////////////////////-->
 
@@ -201,7 +207,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_TC_MILSPEC_desc">This ship is a highly experimental Cargo Liner made by the Fedeartion - it's been specially outfitted with an Automated Quartermaster unit to help the crew create weaponry if needed.</text>
 <text name="text_PLAYER_SHIP_TC_MILSPEC_unlock">Win the Game with any layout of the Avali Ship.</text>
 
-<text name="text_PLAYER_SHIP_TC_MILSPEC_2_class">Milspec Crystal Cruiser</text>
+<text name="text_PLAYER_SHIP_TC_MILSPEC_class">Experimental Cargo Liner</text>
 <text name="text_PLAYER_SHIP_TC_MILSPEC_2_name">'Outpost 31'</text>
 <text name="text_PLAYER_SHIP_TC_MILSPEC_2_desc">This Cruiser was carrying an alien specimen found on a derelict base - the alien specimen has escaped, much to the extreme paranoia of the crew.</text>
 <text name="text_PLAYER_SHIP_TC_MILSPEC_2_unlock">Reach sector 5 with Type A.</text>
@@ -232,8 +238,31 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_ROBOTTO_desc">This is a fragile but surprsingly well-armed tanker type ship staffed entirely by the Sentient race of robots - also known as Robottos and not to be confused with Engis.</text>
 <text name="text_PLAYER_SHIP_ROBOTTO_unlock">Unlock all 4 Civilian ships.</text>
 
+<!--//////////////////////// COMPLETELY ORIGINAL SHIPPEH //////////////////////////////-->
+
+<text name="text_PLAYER_SHIP_HEKTAR_REBEL_class">Completely Original Ship (tm)</text>
+<text name="text_PLAYER_SHIP_HEKTAR_REBEL_name">Free Sample</text>
+<text name="text_PLAYER_SHIP_HEKTAR_REBEL_desc">The Hektar Corporation is no stranger to borrowing designs - when the rebel cruiser proved its worth in battle, it's no surprise that Hektar... lent the design. This ship is good both for battles and for carrying cargo.</text>
+
 <!--//////////////////////// PORTED SHIPS //////////////////////////////-->
 
 <text name="ship_PLAYER_SHIP_DEFENSE_unlock">Unlock the cruiser of a certain terrorist.</text>
 <text name="ship_PLAYER_SHIP_POTENTIAL_unlock">Unlock the cruiser of a certain Federation figure.</text>
 <text name="ship_PLAYER_SHIP_POTENTIAL_2_unlock">Win the game with Type A.</text>
+
+<!--//////////////////////// RELIC REVIVAL SHIPS //////////////////////////////-->
+
+<text name="ship_PLAYER_SHIP_SAVIOR_unlock">Win using the blueprints for a Cruiser made by a race of long forgotten Demi-God Royalty.</text>
+<text name="ship_PLAYER_SHIP_SAVIOR_2_unlock">Win using the experimental Ancient Prototype, long forgotten by a dying race of royals.</text>
+<text name="ship_PLAYER_SHIP_SAVIOR_3_unlock">Ask a certain flagship about what to do with a certain device.</text>
+<text name="ship_PLAYER_SHIP_BATTLESHIP_unlock">Beat the Flagship with the type A layout of an Elite Rebel Cruiser.</text>
+
+<!--//////////////////////// ECHO 1 LINER //////////////////////////////-->
+
+<text name="text_PLAYER_SHIP_ECHO_class">LPC-Class Hybrid Jet</text>
+<text name="text_PLAYER_SHIP_HARD_name">ECHO 1-LINER</text>
+<text name="text_PLAYER_SHIP_ECHO_desc">This LPC had become infamous during the Protogen Project revolution, when TRACKER and his ragtag team kidnapped several rebel officers and rammed through a blockade in order to defect to the Federation.</text>
+
+<text name="text_PLAYER_SHIP_ECHO_class">LPC-Class Hybrid Jet</text>
+<text name="text_PLAYER_SHIP_ECHO_name">ECHO 1-LINER</text>
+<text name="text_PLAYER_SHIP_ECHO_desc">This is the original version of the TRACKER 1-1, before it was repainted to look inconspicuous. Rebel scum may still be on-board, but hey, at least they'd get past rebel blockades more easily.</text>
