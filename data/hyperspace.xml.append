@@ -640,20 +640,17 @@ SPEED          Changes gamespeed
 	<!--/////// CONSTRUCTION CREW KESTREL //////-->
 
 	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="true" c="false" unused="true">
+		
 		<unlock variant="a" silent="false">
 			<type>2</type>
-			<shipReq>PLAYER_SHIP_ROBOTTO</shipReq>
+			<shipReq>PLAYER_SHIP_CORROSUS</shipReq>
 		</unlock>
 	
 		<unlock variant="b" silent="false">
 			<type>2</type>
-			<shipReq>PLAYER_SHIP_TC_CONSTRUCTION_2</shipReq>
+			<shipReq>PLAYER_SHIP_TC_CONSTRUCTION</shipReq>
 		</unlock>
-	
-		<unlock variant="b" silent="false">
-			<type>5</type>
-			<shipReq>PLAYER_SHIP_TC_CONSTRUCTION_2</shipReq>
-		</unlock>
+
 	</mod-append:ship>
 	
 	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION">
