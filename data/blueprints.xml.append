@@ -732,7 +732,7 @@
 	<title>High-Explosive Flak</title>
 	<short>HE Flak</short>
 	<tip>tip_flak</tip>
-	<desc>An explosive flak cannon that fires HE charges - not to be confused with a Minelauncher or a Bomb Flak.</desc>
+	<desc>An explosive flak cannon that fires High Explosive (HE) digital trigger charges - not to be confused with a Minelauncher or a Bomb Flak.</desc>
 	<tooltip>Fires 3 bombs across a random area doing a huge amount of hull damage.</tooltip>
 	<drone_targetable>1</drone_targetable>
 	<damage>2</damage>
@@ -868,7 +868,7 @@
 	<title>Flakking Hell</title>
 	<short>Flakking Hell</short>
 	<tip>tip_flak</tip>
-	<desc>A strange flak cannon created by forging scrap. It is very unstable but also very strong. Unleash hell on your foes. </desc>
+	<desc>A strange flak cannon created by forging scrap. It is very unstable but also very strong. It will rip and tear until it is done. </desc>
 	<tooltip>Fires 10 shots across a random area.</tooltip>
 	<drone_targetable>1</drone_targetable>
 	<damage>1</damage>
@@ -916,7 +916,7 @@
 	<title>'Raptor's Right Hand' Flak</title>
 	<short>Raptor's RH</short>
 	<tip>tip_flak</tip>
-	<desc>An old militia flak cannon heavily upgraded and modified by the Primagen RAPTOR. Make no mistake, this flak cannon is surprsingly powerful. </desc>
+	<desc>An old militia flak cannon heavily upgraded and modified by the Primagen RAPTOR. Don't judge a book by it's cover; This scrappy flak cannon is surprsingly powerful. </desc>
 	<tooltip>Fires a blast of debris across a random area doing 8+ damage.</tooltip>
 	<radius>65</radius>
 	<damage>1</damage>
@@ -1191,7 +1191,7 @@
 	<title>Bomb Flak Gun Mark I</title>
 	<short>Bomb Flak I</short>
 	<tip>tip_bomb_flak</tip>
-	<desc>A small, lower power flak cannon reconfigured to shoot bombs instead of flak, ideal for devestating systems. Requires a missile to launch, but does not pierce any shields.</desc>
+	<desc>A small, low power flak cannon reconfigured to shoot bombs instead of flak, ideal for devestating systems. Requires a missile to launch, but does not pierce any shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
 	<radius>42</radius>
 	<damage>1</damage>
@@ -1281,7 +1281,7 @@
 	<title>Bomb Flak Gun Mark II</title>
 	<short>Bomb Flak II</short>
 	<tip>tip_bomb_flak</tip>
-	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devestating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
+	<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devastating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
 	<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
 	<radius>45</radius>
 	<damage>1</damage>
@@ -2538,7 +2538,7 @@
 	<title>'OVERLORD' Supercharger Laser</title>
 	<short>Overlord</short>
 	<tip>tip_charge</tip>
-	<desc>One of RAPTOR's weirder ideas was a combination between a Vulcan and a few broken laser weapons - this is one of the better weapons he'd managed to create, though.</desc>
+	<desc>One of RAPTOR's weirder ideas was a combination between a Vulcan and a few broken laser weapons - this is one of the better weapons he's managed to create.</desc>
 	<tooltip>Fires up to 8 lasers; 1 damage each. 4 seconds per charge, 20 seconds max cooldown.</tooltip>
 	<damage>1</damage>
 	<shots>1</shots>
@@ -2578,7 +2578,7 @@
 	<tip>tip_laser</tip>
 	<title>Rebel 'Dart' Laser</title>
 	<short>Dart Laser</short>
-	<desc>This weapon of Rebel design fires a short burst of lasers.</desc>
+	<desc>A weapon designed by the rebels that fires a small burst of lasers.</desc>
 	<tooltip>Fires 1 laser that deals low system and crew damage, has a 20% to cause a fire - it is too light to affect the enemy's hull.</tooltip>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
@@ -2730,7 +2730,7 @@
 	<tip>tip_old</tip>
 	<title>RSA Biohazard Missile</title>
 	<short>RSA Biohazard</short>
-	<desc>This launcher may be of an older design, torn from some poor sap's ship and then reffited, but can still be effective. Don't let the rust fool you - the custom-made Flakked Warhead missiles are surprsingly powerful.</desc>
+	<desc>A launcher of an outdated era of weaponry, torn from some poor sap's ship and then retrofitted, can still be effective. Don't let the rust fool you - the custom-made Flakked Warhead missiles are surprsingly powerful.</desc>
 	<tooltip>Fires a missile with poor accuracy; does 2 damage, stunning crew and causing fires, while also piercing all shields.</tooltip>
 	<radius>52</radius>
 	<damage>2</damage>
@@ -3228,7 +3228,7 @@
 	<short>Ion Art.</short>
 	<locked>1</locked>
 	<tip>tip_chain_ion</tip>
-	<desc>This ion artillery decreases in cooldown the more it fires. After 3 bursts it reaches its maximum firering rate.</desc>
+	<desc>This ion artillery decreases in cooldown the more it fires. After 3 bursts it reaches its maximum fire rate.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
 	<damage>0</damage>
 	<ion>1</ion>
@@ -4780,7 +4780,7 @@
 <!--///////////////LAB AUGMENTS//////////////-->
 <augBlueprint name="LAB_PROTOGEN_AWARENESS">
 	<title>Unstable Awareness Field</title>
-	<desc>Protogen now lose skills when cloned, but are immune to mind control and can see adjacent rooms, as well as sense lifeforms when sensors are down.</desc>
+	<desc>Protogens now lose skills when cloned, but are immune to mind control and can see adjacent rooms, as well as sense lifeforms when sensors are down.</desc>
 	<cost>10</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4788,7 +4788,7 @@
 
 <augBlueprint name="LAB_PROTOGEN_BOOP">
 	<title>"Boop" Overdrive</title>
-	<desc>Protogen now gain the ability to "Boop" all allied crew in the current room, boosting their movement speed and combat damage by PLACEHOLDER VALUE.</desc>
+	<desc>Protogens now gain the ability to "Boop" all allied crew in the current room, boosting their movement speed and combat damage by PLACEHOLDER VALUE.</desc>
 	<cost>10</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4796,7 +4796,7 @@
 
 <augBlueprint name="LAB_PROTOGEN_OXYGEN">
 	<title>Internal Oxygen Supply</title>
-	<desc>Protogen no longer require oxygen.</desc>
+	<desc>Protogens no longer require oxygen.</desc>
 	<cost>10</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4804,7 +4804,7 @@
 
 <augBlueprint name="LAB_PROTOGEN_SIPHONS">
 	<title>Battery Siphons</title>
-	<desc>Protogen now drain one power fromm all systems, and gain a buff whenever able to do so.</desc>
+	<desc>Protogens now drain one power fromm all systems, and gain a buff whenever able to do so.</desc>
 	<cost>10</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4812,7 +4812,7 @@
 
 <augBlueprint name="LAB_PROTOGEN_HEAVY">
 	<title>Heavy Metal</title>
-	<desc>Protogen now drain take 0.7x damage from combat, but move at 2/3 their normal speed.</desc>
+	<desc>Protogens now take 0.7x damage from combat, but move at 2/3 their normal speed.</desc>
 	<cost>10</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4820,7 +4820,7 @@
 
 <augBlueprint name="LAB_PROTOGEN_TEAMWORK">
 	<title>Teamwork Network</title>
-	<desc>Protogen gain 15% repair speed and combat damage every other protogen in the room.</desc>
+	<desc>Protogens gain 15% repair speed and combat damage for every other protogen in the room.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4888,7 +4888,7 @@
 
 <augBlueprint name="LOCKED_SCRAP_ARMOR">
 	<title>Scrap Plating</title>
-	<desc>The hull of this ship is modified with a magnetic alloy - it absorbs 25% of the scrap it comes in contact with, but also gives a chance of 25% to resist damage. It can also ram enemies using its hull while also taking minor damage.</desc>
+	<desc>The hull of this ship is modified with a magnetic alloy - it absorbs 25% of the scrap it comes in contact with, but also gives a 25% chance to resist damage. It can also ram enemies using its hull while taking minor damage.</desc>
 	<cost>10</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -7453,7 +7453,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Avali Cruiser</class>
 	<name>Oryzivora</name>
 	<unlock id="ship_PLAYER_SHIP_AVALI_unlock" />
-	<desc>This powerful Avali-made cruiser comes with one critical weakness; it does not have shields. Hopefully, its powerful weapons are enough to compensate.</desc>
+	<desc>This powerful Avali-made cruiser comes with one critical weakness; it completely lacks shields. Hopefully, its powerful weapons are enough to compensate.</desc>
 	<systemList>
 		<battery power="1" room="17" max="2" start="false" img="room_battery_15" />
 		<cloaking power="1" room="14" start="true" img="room_cloaking_orchid_2" />
@@ -8070,7 +8070,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_MINESWEEPER_2" layout="MinesweeperB" img="MinesweeperB">
 	<class>Minesweeper Cruiser</class>
 	<name>Hohlladungs-4672</name>
-	<desc>This ship was designed to disarm minefields using controlled, high-power explosives. Turns out this also makes it excellent at exploding other things. Like enemies!</desc>
+	<desc>This ship was designed to disarm minefields using controlled, high-power explosives. Turns out this also makes it excellent at exploding other things. Like Rebels!</desc>
 	<unlock id="ship_PLAYER_SHIP_MINESWEEPER_2_unlock"/>
 	<systemList>
 		<battery power="1" room="19" start="false" img="room_battery_6" />
@@ -9138,7 +9138,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<class>Leah's Cruiser</class>
 	<name>The Rulebook</name>
 	<unlock id="ship_PLAYER_SHIP_NEWTONBEAMA_2_unlock"/>
-	<desc>With a permenant mind control rig installed on the Beam Master's ship, her ship was quickly painted in federation colours and turned into a multiverse capable cruiser.</desc>
+	<desc>With a permanent mind control rig installed on the Beam Master's ship, her ship was quickly painted in federation colours and turned into a multiverse capable cruiser.</desc>
 	<systemList>
 		<artillery power="1" max="5" room="3" start="true" weapon="BIO_1_LEAH" img="room_artillery_3" />
 		<battery power="1" max="2" room="10" start="false" img="room_battery_14" />
@@ -10605,7 +10605,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// ^^ i used the above thingy when renaming ^^ //////-->
 
 <crewBlueprint name="protogen">
-	<desc>Fluffy, cute, dangerous, powerful. These genetically and cybernetically augmented anthropomorphic creatures are one of the best choices for spacefaring crew. Legends say they were created by a terrorist rebel cell.</desc>
+	<desc>Fluffy, cute, dangerous, powerful. These genetically and cybernetically augmented anthropomorphic creatures are one of the best choices for spacefaring crew. Legends say they were created by a rebel cell during the Protogen Project.</desc>
 	<cost>60</cost>
 	<title>Protogen</title>
 	<short>Protogen</short>
