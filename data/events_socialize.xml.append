@@ -143,7 +143,7 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 	</loadEventList>
 </event>
 <event name="SOCIALIZE_TRACKER_NOTHING">
-	<text></text>
+	<text>Tracker looks completely zoned out, showing no emotion his screenface. He does not appear to be responsive. Maybe he's charging?</text>
 </event>
 
 <!-- 
@@ -183,13 +183,13 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 	</choice>
 </event>
 <event name="SOCIALIZE_TRACKER_GENERIC_3" unique="true">
-	<text>"My parents were huge history buffs. Everyone who lived in Archive was. Makes sense, it's even in the name. There's some famous runes about a guy named Sherlock Holmes who lived in the ancient empire of Britannia who could solve any mystery. My mother loved to read the legends, and though she didn't believe Sherlock was real, she jumped at the chance to name her son after him. That son being me, of course. No siblings. There can only be one 'greatest detective'."</text>
+	<text>You find TRACKER polishing his assault rifle and you kind of wish he never found it at all... its ammo is just too hard to find. It appears to be a custom-built SCAR-LHE (Semi-Automatic Assault Rifle, Light High Explosive) with 100-round double drum magazine.</text>
 </event>
 <event name="SOCIALIZE_TRACKER_GENERIC_4" unique="true">
-	<text>You ask Haynes if he smokes or not, since you never seem to smell it. He looks surprised at the notion and removes his pipe from his mouth. "What? Oh, of course not. Great deductive skills though! No no, tobacco's quite rare now that Earth's flooded and the drug market's saturated with all kinds of Slug junk. The pipe was a gift from my grandfather, who got it from his grandfather, who got it from his... and so on. They say it belonged to a guy named... er... Star-line? Stelen? Oh, father would be so disappointed in me for forgetting. Either way, it's a precious heirloom. I hate to admit it, but it's kind of fun chewing on the end. Clearly grandfather agrees, because there were toothmarks even before my own."</text>
+	<text>TRACKER is examining a dissected rotary phone, the analog kind. It's surprisingly complex. You see that he's done some kind of modification to it, too. "I like hiding top-of-the-line tech in older machinery... and I love retro items. They're very nostalgic for some reason, despite me not being alive back when they were used."</text>
 </event>
 <event name="SOCIALIZE_TRACKER_GENERIC_5" unique="true">
-	<text>You overhear some screaming from somewhere else on the ship and race towards it. Expecting intruders of some sort of worse, someone's fingers falling off from another space plague, instead you find Haynes screaming like a child in a corner of the ship as a tiny arachnid scuttles around on the floor. Carefully, he draws his blaster and aims it at the bug, blasting it to smithereenes. Only after it's dead does he see you watching him, and meagerly slinks away in shame.</text>
+	<text>TRACKER has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them. They appear to be .50 Action Express which would match the caliber of his sidearm of choice.</text>
 </event>
 
 <!-- 
@@ -198,7 +198,15 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_RAPTOR_1" unique="true">
-	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. "You are trash, false prince! Complete trash!", the Beacon Eater screams. "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!", yells his rival. "I will- ...Captain is here. Stop it. You're annoying.". The two notice your presence, exchange one last spiteful look and return to their usual duties.</text>
+	<text>You stumble upon Tracker and Raptor sharing stories while playing cards.
+"Raise. So, you've actually managed to escape a bunch of rebels firing a mounted machine gun directly at you?" Tracker nods approvingly, then looks at his hand.
+"Raise. Yeah, I'm almost completely bulletproof. I took a lot of hits but it'll take more than that to take me down." Raptor is keeping his calm, not showing the slightest hint of emotion.
+"I call. ...What, really?" Tracker looks... off.
+"Let's see your cards." Raptor puts his cards face up on the table.
+"Three of a kind." says Tracker, looking smug.
+"Full house. I win." Raptor's correctly read his opponent.
+Raptor slides three boxes of Instant Noodles sitting on the table to his side. Not having a face is the best ever poker face, after all.
+	</text>
 </event>
 
 <!-- 
@@ -207,7 +215,12 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_LANCER_1" unique="true">
-	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. "You are trash, false prince! Complete trash!", the Beacon Eater screams. "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!", yells his rival. "I will- ...Captain is here. Stop it. You're annoying.". The two notice your presence, exchange one last spiteful look and return to their usual duties.</text>
+	<text>Tracker is trying to help Lancer mend his torso bleeding.
+"Analysis of the air indicates presence of friend" quips Lancer in his usual broken voicelines.
+"Yeah, yeah, just sit still." Tracker is trying to clip his malformed friend's left abdomen back together.
+"In the event of software malfunction, please press two!"
+You leave the two to... whatever they're trying to do here.
+	</text>
 </event>
 
 <!-- 
@@ -216,7 +229,11 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_CHEESE_1" unique="true">
-	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. "You are trash, false prince! Complete trash!", the Beacon Eater screams. "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!", yells his rival. "I will- ...Captain is here. Stop it. You're annoying.". The two notice your presence, exchange one last spiteful look and return to their usual duties.</text>
+	<text>Tracker yells through Cheese's quarters door. "HEY CHEESE! DO YOU MIND IF I CALL YOU FIREBRAND?"
+"No, please, let my old codename rest in peace." answers the mechanic from inside.
+"Understood."
+Tracker leaves before you can ask him about Cheese's codename(s).
+	</text>
 </event>
 
 <!-- 
@@ -225,7 +242,11 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_KAZ_1" unique="true">
-	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. "You are trash, false prince! Complete trash!", the Beacon Eater screams. "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!", yells his rival. "I will- ...Captain is here. Stop it. You're annoying.". The two notice your presence, exchange one last spiteful look and return to their usual duties.</text>
+	<text>Kazaaakplethkilik approaches Tracker and asks him a question. "Protogens, do you feel anything when you killings?"
+The overeager protogen sighs and says "Yes. Usually guilt. Sometimes fear. I'm not proud of it, you know."
+"You are weakling. Must become like Kaz. Strong and proud, everyone kneel when they see Kaz. Especially attractive mantis females."
+The Mantis looks confident. He'd asserted his dominance.
+	</text>
 </event>
 
 </FTL>
