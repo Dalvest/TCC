@@ -45,20 +45,22 @@
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRASH_EATER_GENERIC_1" unique="true">
-	<text>The Trash Eater is checking the ship for garbage to consume. You ask them why junk is so important to him; they answer with...
+	<text>You're walking through the ship corridor and stumble upon the Trash Eater. They're checking the ship for garbage to consume. You ask them why junk is so important to him; they answer with...
 "MY LOYAL SUBJECTS AND I GOT INTERCEPT ONCE. WE NEAR DEATH. MAYBE WE EVEN DIED. WE ATE SHIPS AND THE THINGS THAT WERE INSIDE OF THEM. THAT'S THE FOOD WHEN I LEFT. I EVENTUALLY RETURNED, OF COURSE, TO THE MY SUBJECTS. THEY WERE... DIFFERENT."</text>
 </event>
 <event name="SOCIALIZE_TRASH_EATER_GENERIC_2" unique="true">
-	<text>You ask the Trash Eater about the legend of the World Feeder.
-"AH, YOU SEE! THE WORLD FEEDER... IS ME, OR MY COUNTERPART FROM OTHER UNIVERSE! AN ARTIFACT EXISTS, YES. BEACON. MARKS THE UNIVERSE AS FOOD, SHOULD IT BE ACTIVATED. NO BEACON, NO EAT."</text>
+	<text>You enter the Trash Eater's quarters and ask him about the legend of the World Feeder.
+He excitedly states "AH, YOU SEE! THE WORLD FEEDER... IS ME, OR MY COUNTERPART FROM OTHER UNIVERSE! AN ARTIFACT EXISTS, YES. BEACON. MARKS THE UNIVERSE AS FOOD, SHOULD IT BE ACTIVATED. NO BEACON, NO EAT."
+You thank him for this information.
+</text>
 </event>
 <event name="SOCIALIZE_TRASH_EATER_GENERIC_3" unique="true">
-	<text>You ask the Trash Eater if it knows the Beacon Eater.
-"IS THE KING. I AM THE PRINCE. THE TITLE IS GIVEN WITH POWER. HE IS THE MOST POWER. I AM CLOSE. WORLD FEEDER IS THE MOST OF THE MOST POWER. IS GOAL FOR ME."
+	<text>In the designated Rec Room, you ask the Trash Eater if it knows the Beacon Eater.
+He seems quite distraught. "IS THE KING. I AM THE PRINCE. THE TITLE IS GIVEN WITH POWER. HE IS THE MOST POWER. I AM CLOSE. WORLD FEEDER IS THE MOST OF THE MOST POWER. IS GOAL FOR ME."
 	</text>
 </event>
 <event name="SOCIALIZE_TRASH_EATER_GENERIC_4" unique="true">
-	<text>The Trash Eater is wondering how many tin cans they would need to recreate their flagship from scratch. You could try making up a number.</text>
+	<text>The Trash Eater casually enters your cabin. He's wondering how many tin cans they would need to recreate their flagship from scratch. You could try making up a number.</text>
 	<choice hidden="true">
 		<text>Make up an answer to solve their dilemma.</text>
 		<event>
@@ -66,13 +68,14 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Apologize and let them think.</text>
+		<text>Apologize and tell them to leave.</text>
 		<event/>
 	</choice>
 </event>
 <event name="SOCIALIZE_TRASH_EATER_GENERIC_5" unique="true">
-	<text>You're relieved to find the Trash Eater eating a normal can of beans until you realize they're just eating the can.
+	<text>The Trash Eater is in the cafeteria, as evidenced by the lack of oxygen. He appears to be eating a normal can of beans...
 "HUMAN FOOD IS THE INTERESTING. I DO NOT EAT THE HUMAN, OF COURSE. IS DISTURBING TO YOU AND ME. THE CAN IS DELICIOUS AND SOCIAL ACCEPTANCE, I THINK."
+...he's just eating the can.
 	</text>
 </event>
 
@@ -83,7 +86,10 @@
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRASH_EATER_EATER_1" unique="true">
-	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. "You are trash, false prince! Complete trash!", the Beacon Eater screams. "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!", yells his rival. "I will- ...Captain is here. Stop it. You're annoying.". The two notice your presence, exchange one last spiteful look and return to their usual duties.</text>
+	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. 
+The King yells "You are trash, false prince! Complete trash!"
+The Prince retorts with "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!"
+The two have finally noticed your presence. "I will- ...Captain is here. Stop it. You're annoying." They exchange one last spiteful look and return to their usual duties.</text>
 </event>
 
 <!-- 
@@ -138,8 +144,10 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 		<event name="SOCIALIZE_TRACKER_GENERIC_5"/>
 		<event name="SOCIALIZE_TRACKER_RAPTOR_1" req="primagen_raptor"/>
 		<event name="SOCIALIZE_TRACKER_LANCER_1" req="clonefail_lancer"/>
+		<event name="SOCIALIZE_TRACKER_LANCER_2" req="clonefail_lancer"/>
 		<event name="SOCIALIZE_TRACKER_CHEESE_1" req="sergal_cheese"/>
 		<event name="SOCIALIZE_TRACKER_KAZ_1" req="unique_kaz"/>
+		<event name="SOCIALIZE_TRACKER_KORA_1" req="kora"/>
 	</loadEventList>
 </event>
 <event name="SOCIALIZE_TRACKER_NOTHING">
@@ -223,6 +231,12 @@ You leave the two to... whatever they're trying to do here.
 	</text>
 </event>
 
+<event name="SOCIALIZE_TRACKER_LANCER_2" unique="true">
+	<text>Tracker is furiously typing at his PC. It would seem he's trying to see what kind of software Lancer even uses. It'd seem has most of the machinery of a protogen but it's isn't exactly active...
+Perhaps he could figure out a way for Lancer to somehow self-repair, but you're pretty sure he won't have any success until after the Flagship has been defeated.
+	</text>
+</event>
+
 <!-- 
 ********************************************************************************************************************************************************************************************************************************************
 																							   W/CHEESE                                                                                        
@@ -245,8 +259,31 @@ Tracker leaves before you can ask him about Cheese's codename(s).
 	<text>Kazaaakplethkilik approaches Tracker and asks him a question. "Protogens, do you feel anything when you killings?"
 The overeager protogen sighs and says "Yes. Usually guilt. Sometimes fear. I'm not proud of it, you know."
 "You are weakling. Must become like Kaz. Strong and proud, everyone kneel when they see Kaz. Especially attractive mantis females."
-The Mantis looks confident. He'd asserted his dominance.
+The Mantis looks confident. He's asserted his dominance.
 	</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/KORA                                                                                        
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRACKER_KORA_1" unique="true">
+	<text>You walk into Tracker's quarters and are surprised to see Kora;
+"Oh... Hi... I wanted to talk to Tracker to see if he's figured out the multiversal uplift thing...". Kora sighs.
+<choice hidden="true">
+	<text>Has Tracker had any success?</text>
+	<event>
+		<text>"No... Not really... He's really trying to help me, though... He's also looking at me weird..." Kora sighs again.</text>
+	</event>
+</choice>
+<choice hidden="true">
+	<text>Don't you know anything about it?</text>
+	<event>
+		<text>"Oh... Only theories. My universe was particularly off... with many rifts through the multiverse... I can travel with ease at short distances... It's useful in combat, I hope."</text>
+	</event>
+</choice>
+</text>
 </event>
 
 </FTL>
