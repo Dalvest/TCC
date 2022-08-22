@@ -90,305 +90,305 @@ SPEED          Changes gamespeed
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
- <mod:findLike type="store">
-  <mod-append:customStore id="STORE_NOODLE">
-    <hullRepair>
-      <price min="2" max="4"/>
-      <sectorScaled/>
-    </hullRepair>
-    <resource>
-      <type>fuel</type>
-      <count min="5" max="10"/>
-    </resource>
-    <resource>
-      <type>missiles</type>
-      <count min="3" max="7"/>
-    </resource>
-    <resource>
-      <type>drones</type>
-      <count min="6" max="11"/>
-    </resource>
-    <category type="WEAPONS">
-      <item>
-        <modifier min="1" max="1.5" flat="false"/><!--Multiplier to price-->
-        <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
-        <price>-1</price><!--You can set the price of the item here, -1 defaults to the price in the weapon blueprint-->
-        <mysteryItem>false</mysteryItem><!--"Item of the day"-->
-      </item>
-	  <item>
-        <modifier min="1" max="1.5" flat="false"/>
-        <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
-        <price>-1</price>
-        <mysteryItem>false</mysteryItem>
-      </item>
-	  <item>
-        <modifier min="1" max="1.5" flat="false"/>
-        <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
-        <price>-1</price>
-        <mysteryItem>false</mysteryItem>
-      </item>
-      <chance>100</chance>
-    </category>
-    <category type="SYSTEMS">
-      <customTitle>ESSENTIAL SYSTEMS</customTitle>
-      <guaranteedSystems>
-        <weapons/>
-        <shields/>
-        <oxygen/>
-      </guaranteedSystems>
-      <item>
-        <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-      </item>
-      <item>
-        <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-      </item>
-      <item>
-        <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-      </item>
-      <chance>100</chance>
-    </category>
-    <category type="SYSTEMS">
-      <customTitle>AUXILIARY SYSTEMS</customTitle>
-      <item>
-        <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-      </item>
-      <item>
-        <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-      </item>
-      <item>
-        <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-      </item>
-      <chance>65</chance>
-    </category>
-  </mod-append:customStore>
-
-	<mod-append:customStore id="STORE_RSA">
-        <hullRepair>
-			<price min="2" max="4"/>
-			<sectorScaled/>
-		</hullRepair>
-		<resource>
-			<type>fuel</type>
-			<count min="5" max="10"/>
-		</resource>
-		<resource>
-			<type>missiles</type>
-			<count min="3" max="7"/>
-		</resource>
-		<resource>
-			<type>drones</type>
-			<count min="6" max="11"/>
-		</resource>
-		<category type="WEAPONS" group="1">
-            <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
-			<item>
-                <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier>
-                <price>-1</price>
-				<mysteryItem>true</mysteryItem>
-            </item>
-			<item>
-                <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier>
-                <price>-1</price>
-				<mysteryItem>true</mysteryItem>
-            </item>
-			<item>
-                <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier>
-                <price>-1</price>
-				<mysteryItem>true</mysteryItem>
-            </item>
-			<chance>100</chance>
-        </category>
-		<category type="WEAPONS">
-            <item/>
-            <item/>
-            <item>
-				<blueprint>SHOP_RSA_ITEM_WEAPONS</blueprint>
-			</item>
-			<chance>100</chance>
-        </category>
-		<category type="DRONES" group="0">
-            <item/>
-            <item/>
-            <item/>
-			<chance>65</chance>
-			<groupChance>50</groupChance>
-        </category>
-		<category type="AUGMENTS" group="0">
-            <item/>
-            <item/>
-            <item/>
-			<chance>65</chance>
-			<groupChance>50</groupChance>
-        </category>
-		<category type="CREW">
-			<customTitle>DECKHANDS</customTitle>
-		    <allowDuplicates/>
-			<item/>
-            <item/>
-            <item>
-				<blueprint>SHOP_RSA_ITEM_CREW</blueprint>
-			</item>
-			<chance>100</chance>
-        </category>
-		<category type="SYSTEMS">
-            <customTitle>ESSENTIAL SYSTEMS</customTitle>
-			<guaranteedSystems>
-                <weapons/>
-				<shields/>
-				<oxygen/>
-            </guaranteedSystems>
-			<item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-			<chance>100</chance>
-        </category>
-		<category type="SYSTEMS">
-			<customTitle>AUXILIARY SYSTEMS</customTitle>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-			<chance>65</chance>
-        </category>
+  <mod:findLike type="store">
+    <mod-append:customStore id="STORE_NOODLE">
+      <hullRepair>
+        <price min="2" max="4"/>
+        <sectorScaled/>
+      </hullRepair>
+      <resource>
+        <type>fuel</type>
+        <count min="5" max="10"/>
+      </resource>
+      <resource>
+        <type>missiles</type>
+        <count min="3" max="7"/>
+      </resource>
+      <resource>
+        <type>drones</type>
+        <count min="6" max="11"/>
+      </resource>
+      <category type="WEAPONS">
+        <item>
+          <modifier min="1" max="1.5" flat="false"/><!--Multiplier to price-->
+          <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
+          <price>-1</price><!--You can set the price of the item here, -1 defaults to the price in the weapon blueprint-->
+          <mysteryItem>false</mysteryItem><!--"Item of the day"-->
+        </item>
+        <item>
+          <modifier min="1" max="1.5" flat="false"/>
+          <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
+          <price>-1</price>
+          <mysteryItem>false</mysteryItem>
+        </item>
+        <item>
+          <modifier min="1" max="1.5" flat="false"/>
+          <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
+          <price>-1</price>
+          <mysteryItem>false</mysteryItem>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="SYSTEMS">
+        <customTitle>ESSENTIAL SYSTEMS</customTitle>
+        <guaranteedSystems>
+          <weapons/>
+          <shields/>
+          <oxygen/>
+        </guaranteedSystems>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="SYSTEMS">
+        <customTitle>AUXILIARY SYSTEMS</customTitle>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <chance>65</chance>
+      </category>
     </mod-append:customStore>
 
-	<mod-append:customStore id="STORE_RSA_BOMB_FLAKS">
-        <hullRepair>
-			<price min="2" max="4"/>
-			<sectorScaled/>
-		</hullRepair>
-		<resource>
-			<type>fuel</type>
-			<count min="5" max="10"/>
-		</resource>
-		<resource>
-			<type>missiles</type>
-			<count min="3" max="7"/>
-		</resource>
-		<resource>
-			<type>drones</type>
-			<count min="6" max="11"/>
-		</resource>
-		<category type="WEAPONS" group="1">
-            <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
-			<item>
-                <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier>
-                <price>-1</price>
-				<mysteryItem>true</mysteryItem>
-            </item>
-			<item>
-                <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier>
-                <price>-1</price>
-				<mysteryItem>true</mysteryItem>
-            </item>
-			<item>
-                <blueprint>GIFTLIST_RUSTY</blueprint>
-				<modifier flat="false">0.6</modifier>
-                <price>-1</price>
-				<mysteryItem>true</mysteryItem>
-            </item>
-			<chance>100</chance>
-        </category>
-		<category type="WEAPONS">
-            <item/>
-            <item/>
-            <item>
-				<blueprint>SHOP_RSA_ITEM_WEAPONS</blueprint>
-			</item>
-			<chance>100</chance>
-        </category>
-		<category type="WEAPONS">
-            <customTitle>BOMB FLAKS [20% OFF]</customTitle>
-			<item>
-                <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-				<modifier flat="false">0.80</modifier>
-                <price>-1</price>
-            </item>
-            <item>
-                <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-				<modifier flat="false">0.80</modifier>
-                <price>-1</price>
-            </item>
-            <item>
-                <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-				<modifier flat="false">0.80</modifier>
-                <price>-1</price>
-            </item>
-			<chance>100</chance>
-        </category>
-		<category type="DRONES" group="0">
-            <item/>
-            <item/>
-            <item/>
-			<chance>65</chance>
-			<groupChance>50</groupChance>
-        </category>
-		<category type="AUGMENTS" group="0">
-            <item/>
-            <item/>
-            <item/>
-			<chance>65</chance>
-			<groupChance>50</groupChance>
-        </category>
-		<category type="CREW">
-			<customTitle>DECKHANDS</customTitle>
-		    <allowDuplicates/>
-			<item/>
-            <item/>
-            <item>
-				<blueprint>SHOP_RSA_ITEM_CREW</blueprint>
-			</item>
-			<chance>100</chance>
-        </category>
-		<category type="SYSTEMS">
-            <customTitle>ESSENTIAL SYSTEMS</customTitle>
-			<guaranteedSystems>
-                <weapons/>
-				<shields/>
-				<oxygen/>
-            </guaranteedSystems>
-			<item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-            </item>
-			<chance>100</chance>
-        </category>
-		<category type="SYSTEMS">
-			<customTitle>AUXILIARY SYSTEMS</customTitle>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-            <item>
-                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-            </item>
-			<chance>65</chance>
-        </category>
+    <mod-append:customStore id="STORE_RSA">
+      <hullRepair>
+        <price min="2" max="4"/>
+        <sectorScaled/>
+      </hullRepair>
+      <resource>
+        <type>fuel</type>
+        <count min="5" max="10"/>
+      </resource>
+      <resource>
+        <type>missiles</type>
+        <count min="3" max="7"/>
+      </resource>
+      <resource>
+        <type>drones</type>
+        <count min="6" max="11"/>
+      </resource>
+      <category type="WEAPONS" group="1">
+        <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
+        <item>
+          <blueprint>GIFTLIST_RUSTY</blueprint>
+          <modifier flat="false">0.6</modifier>
+          <price>-1</price>
+          <mysteryItem>true</mysteryItem>
+        </item>
+        <item>
+          <blueprint>GIFTLIST_RUSTY</blueprint>
+          <modifier flat="false">0.6</modifier>
+          <price>-1</price>
+          <mysteryItem>true</mysteryItem>
+        </item>
+        <item>
+          <blueprint>GIFTLIST_RUSTY</blueprint>
+          <modifier flat="false">0.6</modifier>
+          <price>-1</price>
+          <mysteryItem>true</mysteryItem>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="WEAPONS">
+        <item/>
+        <item/>
+        <item>
+          <blueprint>SHOP_RSA_ITEM_WEAPONS</blueprint>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="DRONES" group="0">
+        <item/>
+        <item/>
+        <item/>
+        <chance>65</chance>
+        <groupChance>50</groupChance>
+      </category>
+      <category type="AUGMENTS" group="0">
+        <item/>
+        <item/>
+        <item/>
+        <chance>65</chance>
+        <groupChance>50</groupChance>
+      </category>
+      <category type="CREW">
+        <customTitle>DECKHANDS</customTitle>
+        <allowDuplicates/>
+        <item/>
+        <item/>
+        <item>
+          <blueprint>SHOP_RSA_ITEM_CREW</blueprint>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="SYSTEMS">
+        <customTitle>ESSENTIAL SYSTEMS</customTitle>
+        <guaranteedSystems>
+          <weapons/>
+          <shields/>
+          <oxygen/>
+        </guaranteedSystems>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="SYSTEMS">
+        <customTitle>AUXILIARY SYSTEMS</customTitle>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <chance>65</chance>
+      </category>
     </mod-append:customStore>
-</mod:findLike>
+
+    <mod-append:customStore id="STORE_RSA_BOMB_FLAKS">
+      <hullRepair>
+        <price min="2" max="4"/>
+        <sectorScaled/>
+      </hullRepair>
+      <resource>
+        <type>fuel</type>
+        <count min="5" max="10"/>
+      </resource>
+      <resource>
+        <type>missiles</type>
+        <count min="3" max="7"/>
+      </resource>
+      <resource>
+        <type>drones</type>
+        <count min="6" max="11"/>
+      </resource>
+      <category type="WEAPONS" group="1">
+        <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
+        <item>
+          <blueprint>GIFTLIST_RUSTY</blueprint>
+          <modifier flat="false">0.6</modifier>
+          <price>-1</price>
+          <mysteryItem>true</mysteryItem>
+        </item>
+        <item>
+          <blueprint>GIFTLIST_RUSTY</blueprint>
+          <modifier flat="false">0.6</modifier>
+          <price>-1</price>
+          <mysteryItem>true</mysteryItem>
+        </item>
+        <item>
+          <blueprint>GIFTLIST_RUSTY</blueprint>
+          <modifier flat="false">0.6</modifier>
+          <price>-1</price>
+          <mysteryItem>true</mysteryItem>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="WEAPONS">
+        <item/>
+        <item/>
+        <item>
+          <blueprint>SHOP_RSA_ITEM_WEAPONS</blueprint>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="WEAPONS">
+        <customTitle>BOMB FLAKS [20% OFF]</customTitle>
+        <item>
+          <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
+          <modifier flat="false">0.80</modifier>
+          <price>-1</price>
+        </item>
+        <item>
+          <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
+          <modifier flat="false">0.80</modifier>
+          <price>-1</price>
+        </item>
+        <item>
+          <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
+          <modifier flat="false">0.80</modifier>
+          <price>-1</price>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="DRONES" group="0">
+        <item/>
+        <item/>
+        <item/>
+        <chance>65</chance>
+        <groupChance>50</groupChance>
+      </category>
+      <category type="AUGMENTS" group="0">
+        <item/>
+        <item/>
+        <item/>
+        <chance>65</chance>
+        <groupChance>50</groupChance>
+      </category>
+      <category type="CREW">
+        <customTitle>DECKHANDS</customTitle>
+        <allowDuplicates/>
+        <item/>
+        <item/>
+        <item>
+          <blueprint>SHOP_RSA_ITEM_CREW</blueprint>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="SYSTEMS">
+        <customTitle>ESSENTIAL SYSTEMS</customTitle>
+        <guaranteedSystems>
+          <weapons/>
+          <shields/>
+          <oxygen/>
+        </guaranteedSystems>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+        </item>
+        <chance>100</chance>
+      </category>
+      <category type="SYSTEMS">
+        <customTitle>AUXILIARY SYSTEMS</customTitle>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <item>
+          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+        </item>
+        <chance>65</chance>
+      </category>
+    </mod-append:customStore>
+  </mod:findLike>
 
 
   <!--
@@ -411,15 +411,15 @@ SPEED          Changes gamespeed
     <!--///////SCRAPPER DREADNOUGHT//////-->
 
     <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
-
-	<unlock variant="a" silent="false">
-	<type>4</type>
-	</unlock>
-	<unlock variant="b" silent="false">
-	<type>1</type>
-	<shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
-	<value>5</value>
-	</unlock>
+      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_EATER/arrow>
+    	<unlock variant="a" silent="false">
+    	   <type>4</type>
+    	</unlock>
+    	<unlock variant="b" silent="false">
+    	   <type>1</type>
+    	   <shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
+    	   <value>5</value>
+    	</unlock>
 
     </mod-append:ship>
 
@@ -470,7 +470,7 @@ SPEED          Changes gamespeed
     <!--///////KESTREL MINER//////-->
 
     <mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true" unused="true">
-
+      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
       <unlock variant="a" silent="false">
         <type>4</type>
       </unlock>
@@ -534,7 +534,7 @@ SPEED          Changes gamespeed
     <!--///////TRASH REACTOR//////-->
 
     <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="false" c="false" unused="true">
-
+      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_</arrow>
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
@@ -584,13 +584,13 @@ SPEED          Changes gamespeed
 			<shipReq>PLAYER_SHIP_EXTRAELITE</shipReq>
 		</unlock>
 		</mod-append:ship>
-	
+
 		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
 		<crewLimit>20</crewLimit>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>SHIP_SLUG</hiddenAug>
 		</mod-append:customShip>
-	
+
 		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
 		<crewLimit>10</crewLimit>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -610,31 +610,31 @@ SPEED          Changes gamespeed
 
 	<mod-append:ship name="PLAYER_SHIP_CORROSUS" b="false" c="false" unused="true">
 
-	<unlock variant="a" silent="false">
-		<type>2</type>
-		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
-	</unlock>
-	<unlock variant="a" silent="false">
-		<type>2</type>
-		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
-	</unlock>
-	<unlock variant="a" silent="false">
-		<type>2</type>
-		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
-	</unlock>
+  	<unlock variant="a" silent="false">
+  		<type>2</type>
+  		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
+  	</unlock>
+  	<unlock variant="a" silent="false">
+  		<type>2</type>
+  		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
+  	</unlock>
+  	<unlock variant="a" silent="false">
+  		<type>2</type>
+  		<shipReq>PLAYER_SHIP_TC_ARMORED_WASP_3</shipReq>
+  	</unlock>
 
 	</mod-append:ship>
 
 	<mod-append:customShip name="PLAYER_SHIP_CORROSUS">
-	<crewLimit>12</crewLimit>
-	<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-	<hiddenAug>SHIP_RSA</hiddenAug>
-	<crew>
-		<rsa_technician room="10" />
-		<black_rose room="0" name="Black Rose" />
-		<robottos room="6" />
-		<kiviekith room="12" />
-	</crew>
+  	<crewLimit>12</crewLimit>
+  	<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+  	<hiddenAug>SHIP_RSA</hiddenAug>
+  	<crew>
+  		<rsa_technician room="10" />
+  		<black_rose room="0" name="Black Rose" />
+  		<robottos room="6" />
+  		<kiviekith room="12" />
+  	</crew>
 	</mod-append:customShip>
 
 	<!--/////// CONSTRUCTION CREW KESTREL //////-->
@@ -644,18 +644,18 @@ SPEED          Changes gamespeed
 			<type>2</type>
 			<shipReq>PLAYER_SHIP_ROBOTTO</shipReq>
 		</unlock>
-	
+
 		<unlock variant="b" silent="false">
 			<type>2</type>
 			<shipReq>PLAYER_SHIP_TC_CONSTRUCTION_2</shipReq>
 		</unlock>
-	
+
 		<unlock variant="b" silent="false">
 			<type>5</type>
 			<shipReq>PLAYER_SHIP_TC_CONSTRUCTION_2</shipReq>
 		</unlock>
 	</mod-append:ship>
-	
+
 	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION">
 		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -671,7 +671,7 @@ SPEED          Changes gamespeed
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crewLimit>11</crewLimit>
 	</mod-append:customShip>
-  
+
     <!--///////SIZE DOESN'T MATTER//////-->
 
     <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
@@ -946,7 +946,7 @@ SPEED          Changes gamespeed
       <hiddenAug>SHIP_AVALI</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <crewLimit>12</crewLimit>
-	  <crew>
+	    <crew>
         <robottos_gunner room="0" />
       </crew>
     </mod-append:customShip>
@@ -980,7 +980,7 @@ SPEED          Changes gamespeed
       </unlock>
       <unlock variant="c" silent="false">
         <type>2</type>
-        <shipReq>PLAYER_SHIP_BLACKOPS_3</shipReq>
+        <shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
         <silent>false</silent>
       </unlock>
     </mod-append:ship>
@@ -1010,11 +1010,11 @@ SPEED          Changes gamespeed
         <type>2</type>
         <shipReq>PLAYER_SHIP_BLACKOPS</shipReq>
       </unlock>
-	  <unlock variant="a" silent="false">
+	     <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_BLACKOPS_2</shipReq>
       </unlock>
-	  <unlock variant="a" silent="false">
+	     <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_BLACKOPS_3</shipReq>
       </unlock>
@@ -1035,7 +1035,7 @@ SPEED          Changes gamespeed
         <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
         <silent>false</silent>
       </unlock>
-	  <unlock variant="c" silent="false">
+	    <unlock variant="c" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
         <silent>false</silent>
@@ -1097,11 +1097,11 @@ SPEED          Changes gamespeed
         <type>2</type>
         <shipReq>PLAYER_SHIP_MINESWEEPER</shipReq>
       </unlock>
-	  <unlock variant="a" silent="false">
+	    <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_MINESWEEPER_2</shipReq>
       </unlock>
-	  <unlock variant="a" silent="false">
+	    <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_MINESWEEPER_3</shipReq>
       </unlock>
@@ -1122,7 +1122,7 @@ SPEED          Changes gamespeed
         <shipReq>PLAYER_SHIP_CYBER</shipReq>
         <silent>false</silent>
       </unlock>
-	  <unlock variant="c" silent="false">
+	    <unlock variant="c" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_CYBER_2</shipReq>
         <silent>false</silent>
@@ -1155,11 +1155,11 @@ SPEED          Changes gamespeed
         <type>2</type>
         <shipReq>PLAYER_SHIP_CYBER</shipReq>
       </unlock>
-	  <unlock variant="a" silent="false">
+	    <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_CYBER_2</shipReq>
       </unlock>
-	  <unlock variant="a" silent="false">
+	    <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_CYBER_3</shipReq>
       </unlock>
@@ -1180,7 +1180,7 @@ SPEED          Changes gamespeed
         <shipReq>PLAYER_SHIP_NBC</shipReq>
         <silent>false</silent>
       </unlock>
-	  <unlock variant="c" silent="false">
+	    <unlock variant="c" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_NBC_2</shipReq>
         <silent>false</silent>
@@ -1491,7 +1491,18 @@ SPEED          Changes gamespeed
 
 	<!--/////// ECHO 1-LINER //////-->
 
-	<mod-append:ship name="PLAYER_SHIP_ECHO" b="true" c="false" unused="true"/>
+	<mod-append:ship name="PLAYER_SHIP_ECHO" b="true" c="false" unused="true">
+    <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_MILITIA</arrow>
+    <unlock variant="a" silent="false">
+       <type>1</type>
+       <shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
+    </unlock>
+    <unlock variant="b" silent="false">
+       <type>1</type>
+       <shipReq>PLAYER_SHIP_ECHO</shipReq>
+       <value>5</value>
+    </unlock>
+  </mod-append:ship>
 
 	<mod-append:customShip name="PLAYER_SHIP_ECHO">
 		<hiddenAug>SHIP_PROTOGEN_PROJECT</hiddenAug>
@@ -1510,56 +1521,56 @@ SPEED          Changes gamespeed
 		<crewLimit>8</crewLimit>
 	</mod-append:customShip>
 
-    <!--/////// ENEMY SHIPS //////-->
+  <!--/////// ENEMY SHIPS //////-->
 
-    <mod-append:customShip name="TC_TRASH_COMPACTOR1">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR2">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR3">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR4">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR5">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR6">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
+  <mod-append:customShip name="TC_TRASH_COMPACTOR1">
+    <shipIcons>
+      <shipIcon>icon_threat</shipIcon>
+      <shipIcon>icon_no2</shipIcon>
+    </shipIcons>
+    <noFuelStalemate/>
+    <autoShipForce>false</autoShipForce>
+  </mod-append:customShip>
+  <mod-append:customShip name="TC_TRASH_COMPACTOR2">
+    <shipIcons>
+      <shipIcon>icon_threat</shipIcon>
+      <shipIcon>icon_no2</shipIcon>
+    </shipIcons>
+    <noFuelStalemate/>
+    <autoShipForce>false</autoShipForce>
+  </mod-append:customShip>
+  <mod-append:customShip name="TC_TRASH_COMPACTOR3">
+    <shipIcons>
+      <shipIcon>icon_threat</shipIcon>
+      <shipIcon>icon_no2</shipIcon>
+    </shipIcons>
+    <noFuelStalemate/>
+    <autoShipForce>false</autoShipForce>
+  </mod-append:customShip>
+  <mod-append:customShip name="TC_TRASH_COMPACTOR4">
+    <shipIcons>
+      <shipIcon>icon_threat</shipIcon>
+      <shipIcon>icon_no2</shipIcon>
+    </shipIcons>
+    <noFuelStalemate/>
+    <autoShipForce>false</autoShipForce>
+  </mod-append:customShip>
+  <mod-append:customShip name="TC_TRASH_COMPACTOR5">
+    <shipIcons>
+      <shipIcon>icon_threat</shipIcon>
+      <shipIcon>icon_no2</shipIcon>
+    </shipIcons>
+    <noFuelStalemate/>
+    <autoShipForce>false</autoShipForce>
+  </mod-append:customShip>
+  <mod-append:customShip name="TC_TRASH_COMPACTOR6">
+    <shipIcons>
+      <shipIcon>icon_threat</shipIcon>
+      <shipIcon>icon_no2</shipIcon>
+    </shipIcons>
+    <noFuelStalemate/>
+    <autoShipForce>false</autoShipForce>
+  </mod-append:customShip>
 
 	<mod-append:customShip name="RSA_DROPSHIP">
 		<shipIcons>
