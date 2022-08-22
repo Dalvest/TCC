@@ -1399,9 +1399,9 @@ SPEED          Changes gamespeed
 
 	<!--/////// MGB //////-->
 
-	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT_ELITE" b="false" c="false" unused="true" />
+	<mod-append:ship name="PLAYER_SHIP_ECHELON_ELITE" b="false" c="false" unused="true" />
 
-	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT_ELITE">
+	<mod-append:customShip name="PLAYER_SHIP_ECHELON_ELITE">
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
 		<crewLimit>6</crewLimit>
@@ -1445,7 +1445,7 @@ SPEED          Changes gamespeed
 
 	<!--/////// SAVIOR SHIPS //////-->
 
-	<!--<mod-append:ship name="PLAYER_SHIP_SAVIOR" b="true" c="true" unused="true">
+	<mod-append:ship name="PLAYER_SHIP_SAVIOR" b="true" c="true" unused="true">
 
 		<unlock variant="a" silent="false">
 		<type>2</type>
@@ -1484,7 +1484,7 @@ SPEED          Changes gamespeed
 		<hiddenAug>SHIP_ANCIENT</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crewLimit>12</crewLimit>
-	</mod-append:customShip>-->
+	</mod-append:customShip>
 
 	<!--/////// ECHO 1-LINER //////-->
 
@@ -1610,7 +1610,7 @@ SHIP HANGAR ORDER
 			<mod-append:ship>PLAYER_SHIP_AUTOGUNBOAT</mod-append:ship> <!-- Auto GunBoat -->
 
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE_SLOT2</mod-append:ship> <!-- More Elites -->
-			<mod-append:ship>PLAYER_SHIP_MILITIAGUNBOAT_ELITE</mod-append:ship> <!-- Even More Elites, this time Echelon themed -->
+			<mod-append:ship>PLAYER_SHIP_ECHELON_ELITE</mod-append:ship> <!-- Echelon themed Elites -->
 
 			<!--Page 3--> <!-- Line 1 - Avali/Protogen Project Ships; Line 2 - Hektar Ships -->
 			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
@@ -1628,8 +1628,8 @@ SHIP HANGAR ORDER
 			<!--Page 4--> <!-- Federation Special Forces -->
 			<mod-append:ship>PLAYER_SHIP_TC_MILSPEC</mod-append:ship> <!-- "Milspec" aka Cargo Carrier Ships -->
 			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship> <!--(lack of) Potential-->
-			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship> <!--Size Does NOT Matter-->
+			<mod-append:ship>PLAYER_SHIP_SAVIOR</mod-append:ship> <!--Saviors-->
 			<mod-append:ship>PLAYER_SHIP_NBC</mod-append:ship> <!-- NBC -->
 			<mod-append:ship>PLAYER_SHIP_CYBER</mod-append:ship> <!-- Cyberwarfare (Malwarebytes???) -->
 			<mod-append:ship>PLAYER_SHIP_MINESWEEPER</mod-append:ship> <!-- Windows Minesweeeper -->
