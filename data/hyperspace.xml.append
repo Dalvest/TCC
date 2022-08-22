@@ -411,7 +411,7 @@ SPEED          Changes gamespeed
     <!--///////SCRAPPER DREADNOUGHT//////-->
 
     <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_EATER/arrow>
+      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_EATER</arrow>
     	<unlock variant="a" silent="false">
     	   <type>4</type>
     	</unlock>
