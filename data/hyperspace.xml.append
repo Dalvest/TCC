@@ -570,13 +570,15 @@ SPEED          Changes gamespeed
 		<unlock variant="a" silent="false">
 			<type>3</type>
 			<otherUnlocks>
-			<ship>PLAYER_SHIP_SCRAPPER</ship>
-			<ship>PLAYER_SHIP_TRASH_MINER</ship>
-			<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
-			<ship>PLAYER_SHIP_SDM</ship>
-			<ship>PLAYER_SHIP_TC_ARMORED_WASP</ship>
-			<ship>PLAYER_SHIP_CORROSUS</ship>
-			<ship>PLAYER_SHIP_SLUGTON</ship>
+  			<ship>PLAYER_SHIP_SCRAPPER</ship>
+        <ship>PLAYER_SHIP_SCRAPPER_2</ship>
+        <ship>PLAYER_SHIP_TRASH_EATER</ship>
+  			<ship>PLAYER_SHIP_TRASH_MINER</ship>
+        <ship>PLAYER_SHIP_TRASH_MINER_2</ship>
+        <ship>PLAYER_SHIP_TRASH_MINER_3</ship>
+  			<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+  			<ship>PLAYER_SHIP_ECHO</ship>
+        <ship>PLAYER_SHIP_ECHO_2</ship>
 			</otherUnlocks>
 		</unlock>
 		<unlock variant="b" silent="false">

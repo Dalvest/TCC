@@ -5847,6 +5847,7 @@
 		<class>LPC-Class Hybrid Jet</class>
 		<name>TRACKER 1-1</name>
 		<desc>This particular LPC had become infamous during the Protogen Project revolution, when TRACKER and his ragtag team kidnapped several rebel officers and rammed through a blockade in order to defect to the Federation.</desc>
+		<unlock id="ship_PLAYER_SHIP_ECHO_unlock"/>
 		<systemList>
 			<battery power="1" room="12" start="true" img="room_battery_orchid_2" />
 			<cloaking power="1" room="5" start="true" img="room_cloaking_2_1x1" />
@@ -5914,6 +5915,7 @@
 		<class>LPC-Class Hybrid Jet</class>
 		<name>ECHO 1-LINER</name>
 		<desc>This is the original version of the TRACKER 1-1, before it was repainted to look inconspicuous. Rebel scum may still be on-board, but hey, at least they'd get past rebel blockades more easily.</desc>
+		<unlock id="ship_PLAYER_SHIP_ECHO_2_unlock"/>
 		<systemList>
 			<battery power="1" room="12" start="false" img="room_battery_orchid_2" />
 			<cloaking power="1" room="5" start="true" img="room_cloaking_2_1x1" />
