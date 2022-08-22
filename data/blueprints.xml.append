@@ -3320,15 +3320,15 @@
 	<title>Arcadia 'Light Show' Ion</title>
 	<short>Light Show</short>
 	<desc>An interesting and quite useful prototype weapon - the 'Light Show' has been developed to suppress shields effectively. Light 'em up.</desc>
-	<tooltip>Fires 3 projectiles that stun rooms for quite a bit of time.</tooltip>
+	<tooltip>Fires 1 projectile that stuns rooms for quite a long amount of time.</tooltip>
 	<damage>0</damage>
 	<tip>tip_ion</tip>
-	<shots>3</shots>
+	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>19</cooldown>
-	<ion>2</ion>
+	<cooldown>12</cooldown>
+	<ion>3</ion>
 	<power>2</power>
 	<speed>70</speed>
 	<cost>80</cost>
@@ -5533,9 +5533,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////////////////////KESTREL MINER//////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_TRASH_MINER" layout="tcp_trash_miner" img="tcp_trash_miner">
-	<class>Kestrel Miner</class>
+	<class>Kestrel-Class Trash Collection</class>
 	<name>Garbage Compactor</name>
-	<desc>An old Kestrel class ship intended for light asteroid mining and garbage removal. Refitted for combat by the Sergal Engineer Cheese, who was joined by the Protogen TRACKER and Primagen RAPTOR. A malfunction in the clonebay's DNA Backup created Lancer.</desc>
+	<desc>An old Kestrel class ship initially fitted for light asteroid mining and garbage removal as a part of a larger fleet. Refitted for combat by Cheese the Mechanic, who was joined by his friends TRACKER and RAPTOR. A malfunction in the clonebay's DNA Backup created Lancer who is now in the crew as well.</desc>
 	<unlock id="ship_PLAYER_SHIP_TRASH_MINER_unlock"/>
 	<systemList>
 		<artillery power="1" room="16" start="true" weapon="ARTILLERY_FLAK" img="room_artillery" />
@@ -5609,9 +5609,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_TRASH_MINER_2" layout="tcp_trash_miner_b" img="tcp_trash_miner_b">
-	<class>Kestrel Miner</class>
+	<class>Kestrel-Class Trash Collection</class>
 	<name>Ice Cool Ion</name>
-	<desc>Ice Ice Ion. Lancer had way too much fun remaking the Garbage Compactor to suit his weird needs, and has made the ultimate boarding ship - as long as you ignore the tiny size of the teleporter. Ice Ice Ion.</desc>
+	<desc>Lancer had way too much fun remaking the Garbage Compactor to suit his weird needs, and has made the ultimate boarding ship - as long as you ignore the tiny size of the teleporter. There's enough liquid nitrogen sitting everywhere now. Ice Ice Ion.</desc>
 	<unlock id="ship_PLAYER_SHIP_TRASH_MINER_2_unlock"/>
 	<systemList>
 		<artillery power="1" room="16" start="true" weapon="CRYSTAL_FREEZER" img="room_artillery" />
@@ -5685,9 +5685,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_TRASH_MINER_3" layout="tcp_trash_miner_c" img="tcp_trash_miner_c">
-	<class>Kestrel Miner</class>
+	<class>Kestrel-Class Trash Collection</class>
 	<name>Morningstar</name>
-	<desc>Three certain RSA Grunts took over this ship, and decided to modify it a little. Kill your enemies in a blitz of fire with this helluva ship.</desc>
+	<desc>This Multiversal renegade is crewed by two Kivies and an Avali. They decided to modify the ship a little to give it more personality - as a result, they made one helluva ship.</desc>
 	<unlock id="ship_PLAYER_SHIP_TRASH_MINER_3_unlock"/>
 	<systemList>
 		<artillery power="2" room="16" start="true" weapon="ARTILLERY_FLAK" img="room_artillery" />
@@ -5760,9 +5760,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////////////////////TRASH REACTOR//////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_TRASH_REACTOR" layout="tcp_trash_reactor" img="tcp_trash_reactor">
-	<class>Customized Kestrel Miner</class>
+	<class>//CORRUPTED//CLASS//</class>
 	<name>Reactive Compactor</name>
-	<desc>Rebuilt from the Garbage Compactor, and the remains of a Zoltan and Hektar ship - the Hektar ship was carrying very odd exoskeleton pieces - we could use them to our benefit. The paintjob was rushed but it looks the part.</desc>
+	<desc>This is a ship rebuilt out of three - the Garbage Compactor, Rent-a-Flagship and a Ministry Bomber. The paintjob was rushed but it looks the part. The original crew is still on-board, joined by two mercenaries.</desc>
 	<unlock id="ship_PLAYER_SHIP_TRASH_REACTOR_unlock"/>
 	<systemList>
 		<artillery power="2" room="0" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_6" />
@@ -5977,7 +5977,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////////////////////EXTRA ELITE SHIP PACK//////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE" layout="tcp_extraelite" img="tcp_extraelite">
-	<class>Captured Slug Dropship</class>
+	<class>Kleptocracy Carrier</class>
 	<name>Nerve Center</name>
 	<desc>This ship was made to carry a lot of tasty looking cargo. Maybe that's why so many Scrappers are on it? No, it can't be...</desc>
 	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_unlock"/>
@@ -6052,9 +6052,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="tcp_extraelite_2" img="tcp_extraelite_2">
-	<class>Scrapper Dreadnought Hunter</class>
+	<class>Broadsword Shrike</class>
 	<name>Carpenter</name>
-	<desc>The ultimate ship for killing rogue Scrapper renegades - destroy your anaerobic enemies with the varied arsenal on this ship. A true bounty hunter, loyal to whoemever pays the best.</desc>
+	<desc>The ultimate ship assembled by a team of mercenaries intended for hunting down rogue Scrapper renegades. It's been refitted with a unique Anti-Anaerobic Grid. Designed for a true bounty hunter, loyal to whoemever pays the best.</desc>
 	<unlock id="ship_PLAYER_SHIP_EXTRAELITE_2_unlock"/>
 	<systemList>
 		<battery power="1" room="16" start="false" img="room_battery_scrapper" />
@@ -6130,7 +6130,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////////////////////SIZE DOESN'T MATTER//////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_SDM" layout="tcp_sdm" img="tcp_sdm">
-	<class>Converted Civilian Cruiser</class>
+	<class>Converted Transporter</class>
 	<name>Size Doesn't Matter</name>
 	<desc>We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues. At least the outer plating hasn't been removed.</desc>
 	<unlock id="ship_PLAYER_SHIP_SDM_unlock"/>
@@ -6197,7 +6197,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_SDM_2" layout="tcp_sdm_2" img="tcp_sdm_2">
-	<class>Converted Civilian Cruiser</class>
+	<class>Converted Transporter</class>
 	<name>Size Difference</name>
 	<desc>A strange Free Mantis has remade this ship almost entirely in order for its layout to "make sense". Given the lack of a gigantic and terribly inconvenient teleporter, this ship might even look... normal...</desc>
 	<unlock id="ship_PLAYER_SHIP_SDM_2_unlock"/>
@@ -6266,9 +6266,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////////////////////CONSTRUCTION KESTREL/////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_TC_CONSTRUCTION" layout="tcp_construction" img="tcp_construction">
-	<class>Construction Crew Kestrel</class>
+	<class>Construction-Class Fenek</class>
 	<name>'The Original'</name>
-	<desc>This is a completely functional version of the Kestrel Miner from the time it was actually used for mining - before TRACKER and the gang got it. It was owned by Zulqifar Industries and sports an outdated, worn-out paintjob.</desc>
+	<desc>This is a ship older than the Kestrel, made for corporations and intended for mining. It was owned by Zulqifar Industries and sports an outdated, worn-out paintjob.</desc>
 	<unlock id="ship_PLAYER_SHIP_TC_CONSTRUCTION_unlock"/>
 	<systemList>
 		<battery power="1" room="5" start="false" img="room_battery_6" />
@@ -6339,9 +6339,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_TC_CONSTRUCTION_2" layout="tcp_construction_2" img="tcp_construction_2">
-	<class>Construction Crew Kestrel</class>
+	<class>Supervisor-Class Fenek</class>
 	<name>Quality Control</name>
-	<desc>Wentworth Industries used to use this Kestrel variant for ships designated to carry crew such as Technicians. This wasn't made for combat, though...</desc>
+	<desc>Wentworth Industries used to use this Fenek to carry Technicians around. As such, it's a fairly well crewed ship with excellent drone carrying potential. it just wasn't made for combat, though...</desc>
 	<unlock id="ship_PLAYER_SHIP_TC_CONSTRUCTION_2_unlock"/>
 	<systemList>
 		<battery power="1" room="5" start="false" img="room_battery_6" />
@@ -6415,7 +6415,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////////////////////ARMORED WASP/////////////////////////-->
 
 <shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP" layout="tcp_armored_wasp" img="tcp_armored_wasp">
-	<class>"Gladiator" Corvette</class>
+	<class>Gladiator-Class Corvette</class>
 	<name>Armored Wasp</name>
 	<desc>This ship has actually been made by the Avali - it's highly powerful but also quite cramped. It uses top-of-the-line singularity projection tech, making it one of the most effective warships... provided that the enemy it sitting completely still.</desc>
 	<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_unlock"/>
@@ -6488,13 +6488,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP_2" layout="tcp_armored_wasp_2" img="tcp_armored_wasp_2">
-	<class>"Gladiator" Corvette</class>
+	<class>Gladiator-Class Corvette</class>
 	<name>Starsector</name>
-	<desc>This Corvette is agile and swift - it's been refit for the Federation Army's scouting and light assault division.</desc>
+	<desc>This Corvette is agile and swift - it's been refit to support the Federation's Fleet, carrying out forward scouting operations.</desc>
 	<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_2_unlock"/>
 	<systemList>
 		<cloaking power="1" room="7" start="false" img="room_cloaking_2_1x1" />
-		<clonebay power="1" room="6" start="true">
+		<clonebay power="1" room="6" start="false">
 			<slot>
 				<number>1</number>
 			</slot>
@@ -6506,14 +6506,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</doors>
 		<drones power="1" max="8" room="8" start="false" img="room_drones_2_alt" />
-		<engines power="1" max="8" room="5" start="true" img="room_engines_10">
+		<engines power="2" max="8" room="5" start="true" img="room_engines_10">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</engines>
-		<hacking power="2" room="12" start="true" img="room_hacking_3" />
-		<medbay power="1" room="6" start="false" img="room_medbay">
+		<hacking power="2" room="12" start="false" img="room_hacking_3" />
+		<medbay power="1" room="6" start="true" img="room_medbay">
 			<slot>
 				<number>1</number>
 			</slot>
@@ -6526,7 +6526,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 				<number>0</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="11" start="true" img="room_doors_9">
+		<sensors power="3" room="11" start="true" img="room_doors_9">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -6555,12 +6555,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<droneList drones="3" count="4" />
 	<health amount="25" />
 	<maxPower amount="8" />
+	<aug name="ADV_SCANNERS" />
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP_3" layout="tcp_armored_wasp_3" img="tcp_armored_wasp_3">
-	<class>"Gladiator" Corvette</class>
+	<class>Gladiator-Class Corvette</class>
 	<name>Steel Dawn</name>
-	<desc>This ship is a highly stealthy one - try not to get hit, though. Cramped but agile, strong yet fragile. </desc>
+	<desc>This is an extremely stealth-based ship - as long as you're cloaked or otherwise hidden, you're safe. Kora's very used to hiding, after all.</desc>
 	<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_3_unlock"/>
 	<systemList>
 		<cloaking power="2" room="7" start="true" img="room_cloaking_2_1x1" />
@@ -6637,7 +6638,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_CORROSUS" layout="tc_corrosus" img="tc_corrosus">
 	<class>RSA Dropship</class>
 	<name>Corrosus</name>
-	<desc>An old, rusting amalgmation constructed out of the remains of several other ships. The Reclaim and Salvage Association staffed it with a diverse crew, including a captured Scrapper.</desc>
+	<desc>An old, rusting amalgmation constructed out of the remains of several other ships. The Reclaim and Salvage Association staffed it with a diverse crew, including one of their CEOs, Black Rose.</desc>
 	<unlock id="ship_PLAYER_SHIP_CORROSUS_unlock"/>
 	<systemList>
 		<artillery power="1" room="10" start="true" weapon="RSA_AVENGER_ARTILLERY" img="room_artillery" />
@@ -6713,7 +6714,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <shipBlueprint name="PLAYER_SHIP_SLUGTON" layout="tcp_slugton" img="tcp_slugton">
 	<class>Rent-a-Flagship</class>
 	<name>RENT-A-FLAGSHIP</name>
-	<desc>WELCOME TO [TRIAL VERSION] OF [moderate difficulty ship]!!! PLAY NOW PLAY NOW - BECOME [bigshot]! ACQUIRE [UWU]!</desc>
+	<desc>WELCOME TO [TRIAL VERSION] OF [moderate difficulty ship]!!! PLAY NOW PLAY NOW - BECOME [bigshot]! ACQUIRE maximum [UWU]! BUSINESS IS (completely and utterly mandatory lmao)!</desc>
 	<unlock id="ship_PLAYER_SHIP_SLUGTON_unlock"/>
 	<systemList>
 		<cloaking power="1" room="14" start="false" img="room_cloaking 2x1 01-00-00" />
@@ -6785,7 +6786,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <shipBlueprint name="PLAYER_SHIP_SLUGTON_2" layout="tcp_slugton_2" img="tcp_slugton_2">
 	<class>Rent-a-Flagship</class>
-	<name>Bandit Exordium</name>
+	<name>Yars</name>
 	<desc>This ship belonged to the Slug Kleptocracy - unsurprisingly, it's now a bandit ship preying on civilians.</desc>
 	<unlock id="ship_PLAYER_SHIP_SLUGTON_2_unlock"/>
 	<systemList>
@@ -6997,9 +6998,9 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_2" layout="ars_tanker" img="ars_tanker">
-	<class>Sentient Fuel Tanker</class>
-	<name>Sentient's Cow</name>
-	<desc>This is a fragile but surprsingly well-armed tanker type ship staffed entirely by the Sentients - not to be confused with Engis.</desc>
+	<class>Prometheus-Class Tanker</class>
+	<name>Navarro</name>
+	<desc>This is a fragile but surprsingly well-armed tanker type ship is staffed entirely by the Sentients.</desc>
 	<systemList>
 		<battery power="1" room="6" start="false" img="room_battery" />
 		<cloaking power="1" room="3" start="false" img="room_cloaking" />
@@ -7073,8 +7074,8 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_3" layout="tcp_battleship_a" img="tcp_battleship_a">
-	<class>Legion Battleship</class>
-    <name>The Siege</name>
+	<class>Strategic Frigate</class>
+    <name>Sevastopol</name>
     <desc>The pride and joy of the legion. While it is not yet fully functional, that doesn't mean it isn't a force to be reckoned with.</desc>
 	<systemList>
 		<artillery max="5" power="1" room="12" start="true" weapon="ARTILLERY_BATTLESHIP_LASER" img="room_artillery" />
@@ -7296,11 +7297,10 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<aug name="DRONE_RECOVERY" />
 </shipBlueprint>
 
-
 <shipBlueprint name="PLAYER_SHIP_POTENTIAL_3" layout="potential_3" img="potential_3">
 	<class>Unstable Federation Cruiser</class>
 	<name>Positron</name>
-	<desc>Having been stolen by a cult worshipping some Finnish guy and his dimensions this ship was refitted to run on infinity power and time shards, which you don't have access to because it was recaptured.</desc>
+	<desc>Having been stolen by a cult worshipping some Finnish guy and his dimensions, this ship was refitted to run on infinity power and time shards, which you don't have access to because it was recaptured.</desc>
 	<systemList>
 		<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
 		<battery power="1" room="9" start="false" img="room_battery_orchid" />
@@ -8953,6 +8953,11 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking power="1" room="1" start="false" img="room_hacking_7" />
+		<medbay power="1" room="13" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
 		<mind power="1" room="12" start="false" img="room_mind_1x1" />
 		<oxygen power="1" room="8" start="true" img="room_oxygen_10" />
 		<pilot power="1" room="0" start="true" img="room_pilot_doubledeal">
@@ -9000,14 +9005,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 	<unlock id="text_PLAYER_SHIP_TC_MILSPEC_2_unlock"/>
 	<systemList>
 		<artillery power="1" room="11" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_3" />
-		<battery power="1" room="2" start="true" img="room_battery_8" />
+		<battery power="2" room="2" start="true" img="room_battery_8" />
 		<cloaking power="1" room="3" start="true" img="room_cloaking_11" />
-		<clonebay power="1" room="13" start="true">
+		<clonebay power="1" room="13" start="false">
 			<slot>
 				<number>0</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="10" start="true" img="room_doors_6">
+		<doors power="2" room="10" start="true" img="room_doors_6">
 			<slot>
 				<direction>right</direction>
 				<number>1</number>
@@ -9021,9 +9026,14 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 			</slot>
 		</engines>
 		<hacking power="1" room="1" start="false" img="room_hacking_7" />
+		<medbay power="13" room="1" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
 		<mind power="1" room="12" start="false" img="room_mind_1x1" />
-		<oxygen power="1" room="8" start="true" img="room_oxygen_10" />
-		<pilot power="1" room="0" start="true" img="room_pilot_doubledeal">
+		<oxygen power="2" room="8" start="true" img="room_oxygen_10" />
+		<pilot power="2" room="0" start="true" img="room_pilot_doubledeal">
 			<slot>
 				<direction>right</direction>
 				<number>0</number>
@@ -9275,7 +9285,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <!--/////// STOLEN REBEL DESIGN  //////-->
 
 <shipBlueprint name="PLAYER_SHIP_HEKTAR_REBEL" layout="tcp_hektar_rebel" img="tcp_hektar_rebel">
-	<class>Completely Original Ship (tm)</class>
+	<class>Original Design(tm)</class>
 	<name>Free Sample</name>
 	<desc>The Hektar Corporation is no stranger to borrowing designs - when the rebel cruiser proved its worth in battle, it's no surprise that Hektar... lent the design. This ship is good both for battles and for carrying cargo.</desc>
 	<systemList>
