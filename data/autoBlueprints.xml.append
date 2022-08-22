@@ -298,13 +298,13 @@
 
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
 	<mod-append:name>trash_eater</mod-append:name>
-	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>protogen_tracker</mod-append:name>
 	<mod-append:name>primagen_raptor</mod-append:name>
 	<mod-append:name>clonefail_lancer</mod-append:name>
 	<mod-append:name>kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
 	<mod-append:name>black_rose</mod-append:name>
+	<mod-append:name>unique_leah_mfk</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
@@ -841,10 +841,6 @@
 	<mod-append:name>FM_MINELAUNCHER_ANCALAGON_REMASTERED2</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="BLUELIST_MINING">
-	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
-</mod:findName>
-
 <mod:findName type="blueprintList" name="BLUELIST_ION">
 	<mod-append:name>ARTILLERY_SAVIOR_ION</mod-append:name>
 	<mod-append:name>TC_PULSAR</mod-append:name>
@@ -998,12 +994,6 @@
 	<mod-append:name>ADVANCED_SCRAP</mod-append:name>
 	<mod-append:name>LOCKED_SCRAP_ARMOR</mod-append:name>
 	<!--<mod-append:name>FLAK_ARMOR</mod-append:name> It's literally falling apart. -->
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_ENERGY_SHIELD">
-	<mod-append:name>SAVIOR_SHIELD</mod-append:name>
-	<mod-append:name>REGEN_SHIELD</mod-append:name>
-	<mod-append:name>FALSE_SHIELD</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_ARM">

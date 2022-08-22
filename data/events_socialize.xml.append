@@ -1,0 +1,289 @@
+<FTL>
+<!-- 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+									
+									SCRAPPER
+									
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+									TRASH EATER
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+<event name="SOCIALIZE_TRASH_EATER_LIST">
+	<metaVariable name="prof_socialization" op="add" val="1"/>
+	<queueEvent>STORAGE_CHECK_CREW</queueEvent>
+	<loadEventList seeded="true" default="SOCIALIZE_TRASH_EATER_NOTHING">
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_1"/>
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_2"/>
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_3"/>
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_4"/>
+		<event name="SOCIALIZE_TRASH_EATER_GENERIC_5"/>
+		<event name="SOCIALIZE_TRASH_EATER_EATER_1" req="unique_eater"/>
+		<event name="SOCIALIZE_TRASH_EATER_TRACKER_1" req="protogen_tracker"/>
+	</loadEventList>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_NOTHING">
+	<text>The Trash Eater appears to be resting in his cabin. He's standing up, completely immobile. "HEAD EMPTY. NO TRASH IN HEAD. ADD TRASH TO HEAD. PLEASE.". Perhaps it's better to leave them alone.</text>
+</event>
+
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   GENERIC                                                                                         
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_1" unique="true">
+	<text>You're walking through the ship corridor and stumble upon the Trash Eater. They're checking the ship for garbage to consume. You ask them why junk is so important to him; they answer with...
+"MY LOYAL SUBJECTS AND I GOT INTERCEPT ONCE. WE NEAR DEATH. MAYBE WE EVEN DIED. WE ATE SHIPS AND THE THINGS THAT WERE INSIDE OF THEM. THAT'S THE FOOD WHEN I LEFT. I EVENTUALLY RETURNED, OF COURSE, TO THE MY SUBJECTS. THEY WERE... DIFFERENT."</text>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_2" unique="true">
+	<text>You enter the Trash Eater's quarters and ask him about the legend of the World Feeder.
+He excitedly states "AH, YOU SEE! THE WORLD FEEDER... IS ME, OR MY COUNTERPART FROM OTHER UNIVERSE! AN ARTIFACT EXISTS, YES. BEACON. MARKS THE UNIVERSE AS FOOD, SHOULD IT BE ACTIVATED. NO BEACON, NO EAT."
+You thank him for this information.
+</text>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_3" unique="true">
+	<text>In the designated Rec Room, you ask the Trash Eater if it knows the Beacon Eater.
+He seems quite distraught. "IS THE KING. I AM THE PRINCE. THE TITLE IS GIVEN WITH POWER. HE IS THE MOST POWER. I AM CLOSE. WORLD FEEDER IS THE MOST OF THE MOST POWER. IS GOAL FOR ME."
+	</text>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_4" unique="true">
+	<text>The Trash Eater casually enters your cabin. He's wondering how many tin cans they would need to recreate their flagship from scratch. You could try making up a number.</text>
+	<choice hidden="true">
+		<text>Make up an answer to solve their dilemma.</text>
+		<event>
+			<text>"FIFTY GAJJILLIZION? IS THAT MORE THAN THREE?" You reassure the Trash Eater that "gajjillizion" is indeed more than three.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Apologize and tell them to leave.</text>
+		<event/>
+	</choice>
+</event>
+<event name="SOCIALIZE_TRASH_EATER_GENERIC_5" unique="true">
+	<text>The Trash Eater is in the cafeteria, as evidenced by the lack of oxygen. He appears to be eating a normal can of beans...
+"HUMAN FOOD IS THE INTERESTING. I DO NOT EAT THE HUMAN, OF COURSE. IS DISTURBING TO YOU AND ME. THE CAN IS DELICIOUS AND SOCIAL ACCEPTANCE, I THINK."
+...he's just eating the can.
+	</text>
+</event>
+
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/BEACON EATER                                                                                        
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRASH_EATER_EATER_1" unique="true">
+	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. 
+The King yells "You are trash, false prince! Complete trash!"
+The Prince retorts with "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!"
+The two have finally noticed your presence. "I will- ...Captain is here. Stop it. You're annoying." They exchange one last spiteful look and return to their usual duties.</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/TRACKER                                                                                       
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRASH_EATER_TRACKER_1" unique="true">
+	<text>The Trash Eater is sitting down in Tracker's quarters. You're expecting to have to break up a fight but they're actually talking casually.
+"You know, I'm fascinated by the legend of the World Feeder." Tracker is sitting sleazily on his chair, looking intently at the Eater.  "What can you tell me about it?"
+"OH. PROTOGEN FASCINATED! I LIKE WHEN OTHERS PAY ATTENTION. WORLD FEEDER IS ME WHEN I MANAGE ABSORB OF SHIP. I BECOME SHIP, MASSIVE SHIP. EAT THE UNIVERSE... ALL OF IT. WORLD FEEDER." The Trash Eater gives the protogen a stoic, regal look.
+"Yeah, but, why? Wouldn't that make you... fairly... alone?" Tracker readjusts himself. "Hypothetically speaking, of course. I don't mind being alone."
+"NO, NO, THE OPPOSITE. I AM ONE WITH EVERYONE. THE WHOLE UNIVERSE IS TOGETHER. THERE IS NO BATTLE, NO NOTHING."
+"How would you achieve that?" Tracker is shuffling in his seat, seemingly mildly distressed.
+"ONCE ARTIFACT IS ACTIVE, I METAMORPHOSIS TO FIRST STAGE, SHIP. EAT UNTIL INNER BLACK HOLE. USE INNER BLACK HOLE FOR ENERGY... USE ENERGY TO DEFEAT ANYONE."
+"And that would include me? Your... (sigh) friend?" 
+"THERE IS GREAT FRIENDSHIP IN COMPLETE UNION."
+"I see." Tracker shoos the Eater away from this room and pulls you aside to talk. "This guy is completely insane. If he does the slightest thing wrong I will NOT hesitate to put him down, you understand?"
+Tracker shoos you away from his quarters as well, returning to his usual anxious shuffling.</text>
+</event>
+
+<!-- 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+									
+									PROTOGEN
+									
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+									TRACKER
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+<event name="SOCIALIZE_TRACKER_LIST">
+	<metaVariable name="prof_socialization" op="add" val="1"/>
+	<queueEvent>STORAGE_CHECK_CREW</queueEvent>
+	<loadEventList seeded="true" default="SOCIALIZE_TRACKER_NOTHING">
+		<event name="SOCIALIZE_TRACKER_GENERIC_1"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_2"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_3"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_4"/>
+		<event name="SOCIALIZE_TRACKER_GENERIC_5"/>
+		<event name="SOCIALIZE_TRACKER_RAPTOR_1" req="primagen_raptor"/>
+		<event name="SOCIALIZE_TRACKER_LANCER_1" req="clonefail_lancer"/>
+		<event name="SOCIALIZE_TRACKER_LANCER_2" req="clonefail_lancer"/>
+		<event name="SOCIALIZE_TRACKER_CHEESE_1" req="sergal_cheese"/>
+		<event name="SOCIALIZE_TRACKER_KAZ_1" req="unique_kaz"/>
+		<event name="SOCIALIZE_TRACKER_KORA_1" req="kora"/>
+	</loadEventList>
+</event>
+<event name="SOCIALIZE_TRACKER_NOTHING">
+	<text>Tracker looks completely zoned out, showing no emotion his screenface. He does not appear to be responsive. Maybe he's charging?</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   GENERIC                                                                                         
+********************************************************************************************************************************************************************************************************************************************
+-->
+
+<event name="SOCIALIZE_TRACKER_GENERIC_1" unique="true">
+	<text>"Hey, have you seen my charger anywhere?" asks Tracker, showing a slightly concerned face on his visor. "I had it in my room the last time I checked."</text>
+	<choice hidden="true">
+		<text>I haven't seen it, but... haven't you other ways to recharge?</text>
+		<event>
+			<text>"Yes, I do, it's called eating food. I still have a digestive tract. ...I would prefer my charger, though." Tracker sighs. "Maybe I should go raid the fridge."</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>I haven't seen it, sorry.</text>
+		<event>
+			<text>"Understood. Thank you." Tracker nods and goes back to his room. "Maybe I'd left it inside my personal quarters...". Tracker leaves, still looking concerned.</text>
+		</event>
+	</choice>
+</event>
+<event name="SOCIALIZE_TRACKER_GENERIC_2" unique="true">
+	<text>You ask Tracker about the Protogen Revolution - he nods and sighs "Ah yeah. We had to take several hostages. There were five of us and tens of Rebels everywhere. The searchlights, the noise wailing in my head... I lost it. Completely.".</text>
+	<choice hidden="true">
+		<text>You lost it?</text>
+		<event>
+			<text>"Yes, I did. Psychosis. I still have it. I had a panic attack, or... I don't know. I snapped. I lost it. I don't know what happened. Ask RAPTOR about it. He was there and was holding it together better than me."</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>There were five of you?</text>
+		<event>
+			<text>"Correct. Myself, RAPTOR and Cheese... we called him Firebrand back then, but that's not his real name either. Six was in our ship... and Rot was bleeding out in the cargo hold. Scrapface was already 10 feet deep."</text>
+		</event>
+	</choice>
+</event>
+<event name="SOCIALIZE_TRACKER_GENERIC_3" unique="true">
+	<text>You find TRACKER polishing his assault rifle and you kind of wish he never found it at all... its ammo is just too hard to find. It appears to be a custom-built SCAR-LHE (Semi-Automatic Assault Rifle, Light High Explosive) with 100-round double drum magazine.</text>
+</event>
+<event name="SOCIALIZE_TRACKER_GENERIC_4" unique="true">
+	<text>TRACKER is examining a dissected rotary phone, the analog kind. It's surprisingly complex. You see that he's done some kind of modification to it, too. "I like hiding top-of-the-line tech in older machinery... and I love retro items. They're very nostalgic for some reason, despite me not being alive back when they were used."</text>
+</event>
+<event name="SOCIALIZE_TRACKER_GENERIC_5" unique="true">
+	<text>TRACKER has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them. They appear to be .50 Action Express which would match the caliber of his sidearm of choice.</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/RAPTOR                                                                                        
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRACKER_RAPTOR_1" unique="true">
+	<text>You stumble upon Tracker and Raptor sharing stories while playing cards.
+"Raise. So, you've actually managed to escape a bunch of rebels firing a mounted machine gun directly at you?" Tracker nods approvingly, then looks at his hand.
+"Raise. Yeah, I'm almost completely bulletproof. I took a lot of hits but it'll take more than that to take me down." Raptor is keeping his calm, not showing the slightest hint of emotion.
+"I call. ...What, really?" Tracker looks... off.
+"Let's see your cards." Raptor puts his cards face up on the table.
+"Three of a kind." says Tracker, looking smug.
+"Full house. I win." Raptor's correctly read his opponent.
+Raptor slides three boxes of Instant Noodles sitting on the table to his side. Not having a face is the best ever poker face, after all.
+	</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/LANCER                                                                                        
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRACKER_LANCER_1" unique="true">
+	<text>Tracker is trying to help Lancer mend his torso bleeding.
+"Analysis of the air indicates presence of friend" quips Lancer in his usual broken voicelines.
+"Yeah, yeah, just sit still." Tracker is trying to clip his malformed friend's left abdomen back together.
+"In the event of software malfunction, please press two!"
+You leave the two to... whatever they're trying to do here.
+	</text>
+</event>
+
+<event name="SOCIALIZE_TRACKER_LANCER_2" unique="true">
+	<text>Tracker is furiously typing at his PC. It would seem he's trying to see what kind of software Lancer even uses. It'd seem has most of the machinery of a protogen but it's isn't exactly active...
+Perhaps he could figure out a way for Lancer to somehow self-repair, but you're pretty sure he won't have any success until after the Flagship has been defeated.
+	</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/CHEESE                                                                                        
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRACKER_CHEESE_1" unique="true">
+	<text>Tracker yells through Cheese's quarters door. "HEY CHEESE! DO YOU MIND IF I CALL YOU FIREBRAND?"
+"No, please, let my old codename rest in peace." answers the mechanic from inside.
+"Understood."
+Tracker leaves before you can ask him about Cheese's codename(s).
+	</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/KAZ                                                                                        
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRACKER_KAZ_1" unique="true">
+	<text>Kazaaakplethkilik approaches Tracker and asks him a question. "Protogens, do you feel anything when you killings?"
+The overeager protogen sighs and says "Yes. Usually guilt. Sometimes fear. I'm not proud of it, you know."
+"You are weakling. Must become like Kaz. Strong and proud, everyone kneel when they see Kaz. Especially attractive mantis females."
+The Mantis looks confident. He's asserted his dominance.
+	</text>
+</event>
+
+<!-- 
+********************************************************************************************************************************************************************************************************************************************
+																							   W/KORA                                                                                        
+********************************************************************************************************************************************************************************************************************************************
+-->
+<event name="SOCIALIZE_TRACKER_KORA_1" unique="true">
+	<text>You walk into Tracker's quarters and are surprised to see Kora;
+"Oh. Hi. I wanted to talk to Tracker to see if he's figured out the multiversal uplift thing." Kora sighs.
+<choice hidden="true">
+	<text>Has Tracker had any success?</text>
+	<event>
+		<text>"No. Not really. He's really trying to help me, though. He's also looking at me weird. I'd smash his visor in if I could sometimes." Kora sighs again.</text>
+	</event>
+</choice>
+<choice hidden="true">
+	<text>Don't you know anything about it?</text>
+	<event>
+		<text>"Oh. Only theories. My universe was particularly off. with many rifts through the multiverse. I can travel with ease at short distances. It's useful in combat, I hope."</text>
+	</event>
+</choice>
+</text>
+</event>
+
+</FTL>
