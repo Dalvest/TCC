@@ -534,7 +534,7 @@ SPEED          Changes gamespeed
     <!--///////TRASH REACTOR//////-->
 
     <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="false" c="false" unused="true">
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_</arrow>
+      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_ECHO</arrow>
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_TRASH_MINER</shipReq>
@@ -1496,7 +1496,6 @@ SPEED          Changes gamespeed
 	<!--/////// ECHO 1-LINER //////-->
 
 	<mod-append:ship name="PLAYER_SHIP_ECHO" b="true" c="false" unused="true">
-    <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_MILITIA</arrow>
     <unlock variant="a" silent="false">
        <type>1</type>
        <shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
