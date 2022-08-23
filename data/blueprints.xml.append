@@ -6833,9 +6833,9 @@
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_2" layout="ars_tanker" img="ars_tanker">
-		<class>Prometheus-Class Tanker</class>
-		<name>Navarro</name>
-		<desc>This is a fragile but surprsingly well-armed tanker type ship is staffed entirely by the Sentients.</desc>
+		<class>Dram-Class Tanker</class>
+		<name>ISS Skylark</name>
+		<desc>Support to a fleet includes refueling - that's what this ship provides. Perfect for long range missions with little hope of refueling across the way - as long as you keep the fragile hull intact.</desc>
 		<systemList>
 			<battery power="1" room="6" start="false" img="room_battery" />
 			<cloaking power="1" room="3" start="false" img="room_cloaking" />
@@ -6905,6 +6905,8 @@
 		<crewCount amount="3" class="robottos" />
 		<crewCount amount="1" class="robottos_machinist" />
 		<crewCount amount="1" class="robottos_gunner" />
+		<aug name="CRATE_FUEL" />
+		<aug name="CRATE_FUEL" />
 		<aug name="CRATE_FUEL" />
 	</shipBlueprint>
 
