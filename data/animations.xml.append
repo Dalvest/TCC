@@ -459,6 +459,17 @@
 
 <!--/////////////////// LASER //////////////////-->
 
+<animSheet name="DLX_molot" w="204" h="84" fw="34" fh="84">weapon_laser/DLX_molot.png</animSheet>
+<weaponAnim name="DLX_molot">
+	<sheet>DLX_molot</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="18" y="3"/>
+	<mountPoint x="4" y="70"/>
+	<chargeImage>weapon_laser/DLX_molot_color.png</chargeImage>
+</weaponAnim>
+
 <animSheet name="tc_laser_marksman" w="392" h="95" fw="28" fh="95">weapon_laser/tc_laser_marksman.png</animSheet>
 <weaponAnim name="tc_laser_marksman">
 	<sheet>tc_laser_marksman</sheet>
