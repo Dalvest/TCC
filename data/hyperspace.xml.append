@@ -757,7 +757,7 @@ SPEED          Changes gamespeed
     <mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP">
       <crewLimit>9</crewLimit>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_ARMOREDWASP</hiddenAug>
+      <hiddenAug>SHIP_AVALI</hiddenAug>
       <crew>
         <protogen room="11" />
         <avali_illuminant room="0" />
@@ -778,7 +778,7 @@ SPEED          Changes gamespeed
     </mod-append:customShip>
 
     <mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_3">
-      <hiddenAug>SHIP_STEALTH</hiddenAug>
+      <hiddenAug>SHIP_ARMOREDWASP</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <crewLimit>9</crewLimit>
       <crew>
@@ -1258,6 +1258,16 @@ SPEED          Changes gamespeed
       <crewLimit>8</crewLimit>
     </mod-append:customShip>
 
+	<!--/////// FALCON FRIGATE //////-->
+	
+	<mod-append:ship name="PLAYER_SHIP_FALCON_FRIGATE" b="false" c="false" unused="true"/>
+
+	<mod-append:customShip name="PLAYER_SHIP_FALCON_FRIGATE">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_AVALI</hiddenAug>
+		<crewLimit>8</crewLimit>
+	</mod-append:customShip>
+
     <!--/////// MILSPEC //////-->
 
     <mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false" unused="true">
@@ -1632,7 +1642,7 @@ SHIP HANGAR ORDER
 			<!--Page 3--> <!-- Line 1 - Avali/Protogen Project Ships; Line 2 - Hektar Ships -->
 			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
 			<mod-append:empty/>
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_FALCON_FRIGATE</mod-append:ship> <!--Falcon Frigate-->
 			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship> <!--Armored Wasp-->
 			<mod-append:empty/>
 			<mod-append:empty/>
@@ -2115,6 +2125,46 @@ CREW
 			<healSpeed>1.0</healSpeed>
 			<defaultSkillLevel>0</defaultSkillLevel>
 			<cloneLoseSkills>true</cloneLoseSkills>
+		</mod-append:race>
+
+		<!--////////////////////// Remote Control "Lightning" Drone ///////////////////////-->
+
+		<mod-append:race name="rc_ld">
+				<controllable>true</controllable>
+				<maxHealth>15</maxHealth>
+				<canFight>false</canFight>
+				<canRepair>false</canRepair>
+				<canMan>false</canMan>
+				<canSabotage>false</canSabotage>
+				<canBurn>false</canBurn>
+				<canSuffocate>false</canSuffocate>
+				<stunMultiplier>0</stunMultiplier>
+				<noSlot>true</noSlot>
+				<hasDeathExplosion>true</hasDeathExplosion>
+				<deathSounds>
+					<deathSound>explosion1</deathSound>
+				</deathSounds>
+				<deathEffect>
+					<persDamage>3</persDamage>
+					<sysDamage>1</sysDamage>
+					<damage>1</damage>
+					<friendlyFire>true</friendlyFire>
+					<shipFriendlyFire>true</shipFriendlyFire>
+				</deathEffect>
+				<passiveStatBoosts>     
+					<statBoost name="trueHealAmount">
+							<boostType>FLAT</boostType>
+							<amount>-9999</amount>
+							<affectsSelf>true</affectsSelf>
+							<shipTarget>PLAYER_SHIP</shipTarget>
+							<crewTarget>ALL</crewTarget>
+							<priority>9999</priority>
+							<whiteList>
+								<boomer/>
+							</whiteList>
+						
+					</statBoost>
+				</passiveStatBoosts>
 		</mod-append:race>
 
 		<!--////////////////////// SPECIAL FORCES ///////////////////////-->

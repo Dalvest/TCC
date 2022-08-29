@@ -957,6 +957,66 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 
+	<weaponBlueprint name="RC_LD_LAUNCHER">
+		<type>BURST</type>
+		<flavorType>Crew Launcher</flavorType>
+		<drone_targetable>0</drone_targetable>
+		<title>RC 'Lightning' Drone Launcher</title>
+		<short>RC-LD Flak</short>
+		<tip>tip_flak</tip>
+		<desc>A specialized weapon that deploys RC-LDs on impact - these drones damage the enemy ship's hull, crew and systems. Impact also has a medium chance to cause breaches and fires.</desc>
+		<tooltip>---</tooltip>
+		<radius>60</radius>
+		<missiles>1</missiles>
+		<damage>0</damage>
+		<hullBust>0</hullBust>
+		<shots>1</shots>
+		<sp>10</sp>
+		<fireChance>3</fireChance>
+		<breachChance>3</breachChance>
+		<cooldown>20</cooldown>
+		<power>2</power>
+		<cost>90</cost>
+		<bp>10</bp>
+		<speed>25</speed>
+		<crewSpawnChance>10</crewSpawnChance>
+		<spawnCrew>
+			<race>rc_ld</race>
+			<number>1</number>
+			<noSlot>true</noSlot>
+			<lifetime>30</lifetime>
+			<statBoosts>
+				<statBoost name="noClone">
+					<boostType>SET</boostType>
+					<value>true</value>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>ALL</crewTarget>
+					<priority>999</priority>
+				</statBoost>
+			</statBoosts>
+		</spawnCrew>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="3" fake="false">bomb_small</projectile>
+		</projectiles>
+		<launchSounds>
+			<sound>bombTeleport</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>ionHit1</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>rc_ld_launcher</weaponArt>  
+		<iconImage>missile</iconImage>
+	</weaponBlueprint>
+
 	<weaponBlueprint name="TC_SCRAPFLAK">
 		<type>BURST</type>
 		<title>SCRAPFLAK</title>
@@ -7746,7 +7806,7 @@
 					<number>1</number>
 				</slot>
 			</pilot>
-			<sensors power="1" room="2" start="false" img="room_sensors">
+			<sensors power="1" room="2" start="true" img="room_sensors">
 				<slot>
 					<direction>down</direction>
 					<number>1</number>
@@ -7759,7 +7819,7 @@
 				</slot>
 			</shields>
 			<teleporter power="2" room="4" start="true" />
-			<weapons power="1" max="8" room="7" start="true" img="room_weapons_10_2x1">
+			<weapons power="2" max="8" room="7" start="true" img="room_weapons_10_2x1">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
@@ -7770,7 +7830,7 @@
 		<weaponSlots>2</weaponSlots>
 		<droneSlots>2</droneSlots>
 		<weaponList missiles="3" count="2">
-			<weapon name="TC_BURST_1" />
+			<weapon name="RC_LD_LAUNCHER" />
 		</weaponList>
 		<droneList drones="5" count="2" />
 		<health amount="20" />
@@ -9400,6 +9460,81 @@
 		<aug name="ROCK_ARMOR" />
 	</shipBlueprint>
 
+	<!--/////// FALCON FRIGATE //////-->
+
+	<shipBlueprint name="PLAYER_SHIP_FALCON_FRIGATE" layout="tcp_falcon_frigate" img="tcp_falcon_frigate">
+		<class>Falcon-Class Frigate</class>
+		<name>Navarin</name>
+		<desc>When you want reliable, powerful tech, you can always count on an Avali engineer. Despite it being old, this ship is still reliable for stealth and infiltration. Some say it was a crucial backbone during the Protogen Revolution.</desc>
+		<systemList>
+			<battery power="1" room="18" start="false" img="room_battery_3" />
+			<cloaking power="2" room="2" start="true" img="room_cloaking_7" />
+			<clonebay power="1" room="4" start="false">
+				<slot>
+					<number>3</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="5" start="true" img="room_doors_4">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</doors>
+			<drones max="8" power="2" room="10" start="false" img="room_drones_15" />
+			<engines power="4" room="1" start="true" img="room_engines_5">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="14" start="false" img="room_hacking_2" />
+			<medbay power="1" room="4" start="true" img="room_medbay_3">
+				<slot>
+					<number>3</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="17" start="false" img="room_mind_3" />
+			<oxygen power="1" room="9" start="true" img="room_oxygen_2" />
+			<pilot power="2" room="0" start="true" img="room_pilot_2">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="2" room="15" start="true" img="room_sensors">
+				<slot>
+					<direction>down</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields max="8" power="2" room="3" start="false" img="room_shields_5">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="16" start="false" />
+			<weapons max="8" power="4" room="7" start="true" img="room_weapons_11">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>2</droneSlots>
+		<weaponList missiles="1" count="4">
+			<weapon name="LASER_BURST_2" />
+		</weaponList>
+		<droneList drones="1" count="2" />
+		<health amount="30" />
+		<maxPower amount="9" />
+		<crewCount amount="1" class="protogen" />
+		<crewCount amount="2" class="avali" />
+		<crewCount amount="1" class="avali_illuminant" />
+		<aug name="EX_CLOAK_FIRE" />
+	</shipBlueprint>
+
 	<!--/////// MILSPEC //////-->
 
 	<shipBlueprint name="PLAYER_SHIP_TC_MILSPEC" layout="tcp_milspec" img="tcp_milspec">
@@ -10209,6 +10344,22 @@
 			<color r="17" g="255" b="0" a="0.7"/>
 			</layer>
 		</colorList>
+	</crewBlueprint>
+
+	<!--/////// OK BOOMER //////-->
+
+	<crewBlueprint name="rc_ld">
+		<desc>This contraption is a simple mine rigged on a remote control mech. Pilot it in the heart of the enemy ship and watch the fireworks.</desc>
+		<title>Remote Control "Lightning" Drone</title>
+		<short>RC-LD</short>
+		<cost>999</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<powerList>
+			<power>Explodes when it runs out of health, dealing 1 hull damage, 1 system damage and 45 crew damage</power>
+			<power>Has 15HP, allowing it to manuever to its target room</power>
+			<power>Cannot attack, man, or repair and takes no hazard damage.</power>
+		</powerList>
 	</crewBlueprint>
 
 	<!--///////GENERIC - SCRAPPERS//////-->
