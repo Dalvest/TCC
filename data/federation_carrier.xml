@@ -2,6 +2,7 @@
 
 
 
+
 <img x="-140" y="-131" w="726" h="542" />
 <offsets>
 	<floor x="134" y="125" />
@@ -14,7 +15,7 @@
 	<mount x="284" y="509" rotate="true" mirror="false" gib="5" slide="down" />
 </weaponMounts>
 <explosion>
-	<gib1><velocity min="0.26682058981965134" max="0.8894019660655045" /><direction min="97" max="113" /><angular min="-1.3481689589349517" max="1.3481689589349517" /><x>121</x><y>211</y></gib1><gib2><velocity min="0.44999999999999996" max="1.5" /><direction min="262" max="278" /><angular min="-1.6314896641592134" max="1.6314896641592134" /><x>501</x><y>183</y></gib2><gib3><velocity min="0.1" max="0.16876997987825607" /><direction min="274" max="290" /><angular min="-1.2459319235553543" max="1.2459319235553543" /><x>262</x><y>175</y></gib3><gib4><velocity min="0.23068841888381925" max="0.7689613962793975" /><direction min="53" max="69" /><angular min="-0.7425177916756522" max="0.7425177916756522" /><x>32</x><y>32</y></gib4><gib5><velocity min="0.2961624501353167" max="0.9872081671177224" /><direction min="115" max="131" /><angular min="-0.9027412165705295" max="0.9027412165705295" /><x>32</x><y>287</y></gib5></explosion>
+	<gib1><velocity min="0.26682058981965134" max="0.8894019660655045" /><direction min="97" max="113" /><angular min="-1.3481689589349517" max="1.3481689589349517" /><x>121</x><y>211</y></gib1><gib2><velocity min="0.44999999999999996" max="1.5" /><direction min="262" max="278" /><angular min="-1.6314896641592134" max="1.6314896641592134" /><x>501</x><y>183</y></gib2><gib3><velocity min="0.1" max="0.15971146917854767" /><direction min="276" max="292" /><angular min="-1.259807903402854" max="1.259807903402854" /><x>262</x><y>175</y></gib3><gib4><velocity min="0.23068841888381925" max="0.7689613962793975" /><direction min="53" max="69" /><angular min="-0.7425177916756522" max="0.7425177916756522" /><x>32</x><y>32</y></gib4><gib5><velocity min="0.2901590630692773" max="0.967196876897591" /><direction min="115" max="131" /><angular min="-0.8907140085370585" max="0.8907140085370585" /><x>32</x><y>281</y></gib5></explosion>
 
 <thrusters sync="true">
     <thruster x="23" y="45">federation_carrier_thrusters_on</thruster>
