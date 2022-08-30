@@ -1575,8 +1575,10 @@ SPEED          Changes gamespeed
 
   	<mod-append:ship name="PLAYER_SHIP_ECHO" b="true" c="false" unused="true">
       <unlock variant="a" silent="false">
-         <type>1</type>
-         <shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
+        <type>5</type>
+        <victories>
+          <victory>PLAYER_SHIP_TRASH_REACTOR</victory>
+        </victories>
       </unlock>
       <unlock variant="b" silent="false">
          <type>1</type>

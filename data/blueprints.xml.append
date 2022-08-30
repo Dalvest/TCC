@@ -5911,7 +5911,8 @@
 		</droneList>
 		<health amount="20" />
 		<maxPower amount="5" />
-		<aug name="CLOAK_RELOADER" />
+		<aug name="EX_AUTO_COOLDOWN" />
+		<aug name="EX_CLOAK_FIRE"/>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_ECHO_2" layout="tcp_echo_2" img="tcp_echo_2">
@@ -7042,7 +7043,7 @@
 		<crewCount amount="1" class="engi_defender" />
 		<crewCount amount="1" class="zoltan_peacekeeper" />
 		<crewCount amount="1" class="orchid_chieftain" />
-		<aug name="SHIELD_RECHARGE" />
+		<aug name="EX_SHIELD_RECHARGE" />
 		<aug name="EX_AUTO_COOLDOWN" />
 	</shipBlueprint>
 
