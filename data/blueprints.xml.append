@@ -9,6 +9,8 @@
 		<bp>0</bp>
 	</augBlueprint>
 </FTL>
+
+
 <FTL><!--weapons-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -17,6 +19,383 @@
 	-->
 
 	<!--//////////////////////////////////////////// ARTILLERY ZONE ////////////////////////////////////////////////////////-->
+
+	<weaponBlueprint name="ARTILLERY_TC_MODULAR_BEAM">
+		<type>BEAM</type>
+		<tip>tip_beams</tip>
+		<title>Hektar(tm) Modular Artillery Beam</title>
+		<short>Mod. Arty</short>
+		<desc>YOU SHOULDNT SEE THIS</desc>
+		<tooltip>Beam weapon, 1 damage to hull, low chance to breach, 70 length</tooltip>
+		<damage>1</damage>
+		<hullbust>1</hullbust>
+		<sp>0</sp>
+		<breachChance>2</breachChance>
+		<cooldown>11</cooldown>
+		<image>beam_contact</image>
+		<power>2</power>
+		<cost>70</cost>
+		<bp>7</bp>
+		<rarity>0</rarity>
+		<length>150</length>
+		<launchSounds>
+			<sound>beam2</sound>
+		</launchSounds>
+		<!--<color>
+			<r>0</r>
+			<g>255</g>
+			<b>6</b>
+		</color>-->
+		<weaponArt>Modular_Beam_Artillery</weaponArt>
+		<iconImage>beam</iconImage>
+		<iconScale>0.80</iconScale>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_CIVILIAN_JUSTICE">
+		<type>LASER</type>
+		<title>CDEG Super vulcan artillery</title>
+		<short>Artillery</short>
+		<desc>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.
+		Base Cooldown: 15</desc>
+		<tooltip>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.</tooltip>
+		<damage>2</damage>
+		<shots>1</shots>
+		<fireTime>0.25</fireTime>
+		<sp>0</sp>
+		<fireChance>0</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>15</cooldown>
+		<cost>1000</cost>
+		<bp>2</bp>
+		<speed>80</speed>
+		<rarity>0</rarity>
+		<image>laser_stun</image>
+		<boost>
+	        	<type>cooldown</type>
+	        	<amount>2.95</amount>
+	        	<count>5</count>
+	    	</boost>
+		<launchSounds>
+			<sound>smallMissile1</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>hitHull2</sound>
+			<sound>hitHull3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_militiagunboat_elite</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_C">
+		<type>BOMB</type>
+		<title>Echelon(tm) quick delivery service</title>
+		<short>Artillery</short>
+		<locked>1</locked>
+		<desc>Echelon's convenient delivery service that teleports massive explosive crates onto enemy ship! How nice!
+		Base cooldown : 30</desc>
+		<tooltip>Artillery: Powers a bomb teleporter that deals heavy damage.</tooltip>
+		<damage>3</damage>
+		<sysDamage>5</sysDamage>
+		<persDamage>5</persDamage>
+		<missiles>0</missiles>
+		<shots>1</shots>
+		<sp>10</sp>
+		<fireChance>100</fireChance>
+		<cooldown>30</cooldown>
+		<power>1</power>
+		<cost>500</cost>
+		<bp>5</bp>
+		<rarity>0</rarity>
+		<image>bomb_echelon_crate</image>
+		<explosion>explosion_random</explosion>
+		<launchSounds>
+			<sound>bombTeleport</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<weaponArt>artillery_militiagunboat_c</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_B">
+		<type>BEAM</type>
+		<title>RSA Standard mining beam MK6</title>
+		<short>Artillery</short>
+		<desc>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</desc>
+		<tooltip>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</tooltip>
+		<damage>3</damage>
+		<sysDamage>3</sysDamage>
+		<persDamage>-1</persDamage>
+		<sp>1</sp>
+		<fireChance>0</fireChance>
+		<breachChance>7</breachChance>
+		<cooldown>25</cooldown>
+		<cost>300</cost>
+		<bp>7</bp>
+		<rarity>0</rarity>
+		<length>60</length>
+		<image>beam_contact</image>
+		<launchSounds>
+			<sound>beam2</sound>
+		</launchSounds>
+		<weaponArt>artillery_militiagunboat_b</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_A">
+		<type>MISSILES</type>
+		<title>Avenger Minigun Artillery</title>
+		<short>Artillery</short>
+		<desc>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.
+		Base Cooldown: 25</desc>
+		<tooltip>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.</tooltip>
+		<damage>1</damage>
+		<shots>8</shots>
+		<fireTime>0.05</fireTime>
+		<sp>1</sp>
+		<fireChance>1</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>25</cooldown>
+		<cost>1000</cost>
+		<bp>2</bp>
+		<speed>90</speed>
+		<rarity>0</rarity>
+		<image>minigun_bullet</image>
+		<launchSounds>
+			<sound>smallMissile1</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>hitHull2</sound>
+			<sound>hitHull3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_militiagunboat_a</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_AUTO_A_MISSILE">
+		<type>MISSILES</type>
+		<title>Assault gun Artillery</title>
+		<short>Assault gun</short>
+		<desc>Artillery: Fires a missile that does decent damage and never misses.
+		Base Cooldown: 12</desc>
+		<tooltip>Artillery: Fires a missile that does decent damage and never misses.</tooltip>
+		<damage>3</damage>
+		<sysDamage>-1</sysDamage>
+		<persDamage>-1</persDamage>
+		<hullBust>1</hullBust>
+		<missiles>0</missiles>
+		<accuracyMod>100</accuracyMod>
+		<shots>1</shots>
+		<sp>10</sp>
+		<fireChance>0</fireChance>
+		<breachChance>10</breachChance>
+		<cooldown>12</cooldown>
+		<power>1</power>
+		<cost>80</cost>
+		<bp>7</bp>
+		<rarity>0</rarity>
+		<image>missile_burst_1</image>
+		<launchSounds>
+			<sound>smallMissile1</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_auto_a</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_AUTO_B_BIO">
+		<type>BURST</type>
+		<title>Orchid child corpse Rail-shotgun</title>
+		<short>Corpse rail-shotgun</short>
+		<desc>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</desc>
+		<tooltip>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</tooltip>
+		<drone_targetable>1</drone_targetable>
+		<damage>0</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<radius>20</radius>
+		<shots>1</shots>
+		<sp>10</sp>
+		<stun>3</stun>
+		<spin>720</spin>
+		<fireChance>10</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>20</cooldown>
+		<power>0</power>
+		<cost>65</cost>
+		<bp>10</bp>
+		<speed>80</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="4" fake="false">babyorchid</projectile>
+			<projectile count="4" fake="true">babyorchid</projectile>
+		</projectiles>
+		<launchSounds>
+			<sound>smallMissile1</sound>
+			<sound>smallMissile2</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>orchidDeath</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>orchidDeath</sound>
+			<sound>orchidDeath</sound>
+			<sound>orchidDeath</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_auto_b</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_ENERGY_MATH">
+		<type>LASER</type>
+		<title>Integrate function artillery</title>
+		<short>Math Artillery</short>
+		<desc>Strange mathematical artillery that fires energy blasts quicker with each volley.
+		Base Cooldown: 14.5</desc>
+		<tooltip>Strange mathematical artillery that fires energy blasts quicker with each volley.</tooltip>
+		<damage>2</damage>
+		<noSysDamage>true</noSysDamage>
+		<noPersDamage>true</noPersDamage>
+		<ion>2</ion>
+		<speed>40</speed>
+		<shots>2</shots>
+		<sp>0</sp>
+		<fireChance>0</fireChance>
+		<breachChance>0</breachChance>
+		<stunChance>0</stunChance>
+		<cooldown>14.5</cooldown>
+		<power>1</power>
+		<cost>70</cost>
+		<bp>3</bp>
+		<rarity>0</rarity>
+		<boost>
+			<type>cooldown</type>
+			<amount>2.3</amount>
+			<count>4</count>
+		</boost>
+		<image>energy_shot</image>
+		<explosion>explosion_energy</explosion>
+		<launchSounds>
+			<sound>energy</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>ionHit1</sound>
+			<sound>ionHit2</sound>
+			<sound>ionHit3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>ionShields1</sound>
+			<sound>ionShields2</sound>
+			<sound>ionShields3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_auto_c</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_RESONATE_WAVE">
+		<type>BURST</type>
+		<drone_targetable>1</drone_targetable>
+		<title>Resonating Wave Projector</title>
+		<short>Artillery</short>
+		<desc>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.
+		Base Cooldown: 50</desc>
+		<tooltip>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.</tooltip>
+		<radius>25</radius>
+		<damage>1</damage>
+		<sysDamage>4</sysDamage>
+		<persDamage>4</persDamage>
+		<spin>720</spin>
+		<shots>1</shots>
+		<sp>10</sp>
+		<stun>2</stun>
+		<fireChance>0</fireChance>
+		<breachChance>100</breachChance>
+		<cooldown>50</cooldown>
+		<power>0</power>
+		<cost>75</cost>
+		<bp>10</bp>
+		<speed>90</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="5" fake="false">resonating_wave</projectile>
+		</projectiles>
+		<launchSounds>
+			<sound>ancient_missile</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_auto_elite</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="SUS_LASERS">
+		<type>LASER</type>
+		<title>Suspicious Lasers</title>
+		<short>Sus Lasers</short>
+		<tip>tip_charge</tip>
+		<desc>Just as misterious in origin as the ones who were first seen using these, this pair of lasers is not studied and its effects are left to be guessed based on observation.</desc>
+		<tooltip>Fires up to 2 lasers; 1 damage each. 4 seconds per charge.</tooltip>
+		<damage>2</damage>
+		<shots>1</shots>
+		<sp>1</sp>
+		<fireChance>0</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>4</cooldown>
+		<power>2</power>
+		<cost>1</cost>
+		<bp>4</bp>
+		<rarity>0</rarity>
+		<image>Sus_Lasers</image>
+		<chargeLevels>2</chargeLevels>
+		<launchSounds>
+			<sound>heavyLaser1</sound>
+			<sound>heavyLaser2</sound>
+			<sound>heavyLaser3</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>hitHull2</sound>
+			<sound>hitHull3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>sus_lasers</weaponArt>
+		<iconImage>sus_lasers</iconImage>
+	</weaponBlueprint>
 
 	<weaponBlueprint name="ARTILLERY_SAVIOR_ION">
 		<type>LASER</type>
@@ -186,7 +565,7 @@
 		<weaponArt>artillery_battleship_laser</weaponArt>
 	</weaponBlueprint>
 
-	<!-- ////////////////////////////////////////////////////////////////////Fake Weapons///////////////////////////////////////////////////////////////-->
+	<!-- //////////////////////////////////////////////////////////////////// SAVIOR WEAPONS ///////////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="MISSILES_LEGION">
 		<type>MISSILES</type>
@@ -384,7 +763,7 @@
 		<iconImage>beam</iconImage>
 	</weaponBlueprint>
 
-	<weaponBlueprint name="FM_MINELAUNCHER_ANCALAGON_REMASTERED2">
+	<weaponBlueprint name="TC_MINELAUNCHER_ANCALAGON">
 		<type>BURST</type>
 		<tip>tip_ancalagon</tip>
 		<flavorType>Aether Minelauncher</flavorType>
@@ -463,7 +842,7 @@
 		<iconImage>missile</iconImage>
 	</weaponBlueprint>
 
-	<!-- //////////////////////////////////////////////////////////Void Weapons///////////////////////////////////////////////////////////////-->
+	<!-- ////////////////////////////////////////////////////////// VOID-BASED TECH ///////////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="VOID_LASER3">
 		<type>LASER</type>
@@ -772,7 +1151,7 @@
 	<weaponBlueprint name="TC_SHOTGUN_UNSTABLE">
 		<type>BURST</type>
 		<title>Unstable Flak</title>
-		<short>Unstable Flak</short>
+		<short>U. Flak</short>
 		<tip>tip_flak</tip>
 		<desc>An experimental flak cannon that fires tons of projectiles. It is extremely useful in taking down shields, however it has a hard time hitting ships. </desc>
 		<tooltip>Fires 10 shots across a huge area.</tooltip>
@@ -819,7 +1198,7 @@
 	<weaponBlueprint name="TC_SHOTGUN_BATTERY">
 		<type>BURST</type>
 		<title>Battery Flak</title>
-		<short>Battery Flak</short>
+		<short>Batt. Flak</short>
 		<tip>tip_flak</tip>
 		<desc>A flak weapon combined with a battery beam, giving two bars of power to the weapon on the right while still being able to fire normally. </desc>
 		<tooltip>Fires 3 shots across a random area.</tooltip>
@@ -914,7 +1293,7 @@
 	<weaponBlueprint name="TC_RAPTORS_OWN">
 		<type>BURST</type>
 		<title>'Raptor's Right Hand' Flak</title>
-		<short>Raptor's RH</short>
+		<short>Raptor's RH F</short>
 		<tip>tip_flak</tip>
 		<desc>An old militia flak cannon heavily upgraded and modified by the Primagen RAPTOR. Don't judge a book by it's cover; This scrappy flak cannon is surprsingly powerful. </desc>
 		<tooltip>Fires a blast of debris across a random area doing 8+ damage.</tooltip>
@@ -1209,9 +1588,9 @@
 			<type>BURST</type>
 			<title>Utterly Broken Flak</title>
 			<short>UBF</short>
-			<desc>An utterly broken flak, it was found in a trash container!</desc>
-			<tooltip>Artillery: Charges a ball of energy that breaks off into a number of smaller bolts, each doing high degrees of damage.</tooltip>
-			<damage>5</damage>
+			<desc>An utterly broken flak - metaphorically, at least. Legends say it was found in a trash container.</desc>
+			<tooltip>Charges a ball of energy that breaks off into a number of smaller bolts, each doing one hull damage. Pierces all shields.</tooltip>
+			<damage>1</damage>
 			<persDamage>0</persDamage>
 			<ion>0</ion>
 			<shots>5</shots>
@@ -2003,354 +2382,6 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 
-	<!--////////////////////////////////////////////// ARTY ZONE /////////////////////////////////////////////-->
-
-	<weaponBlueprint name="ARTILLERY_CIVILIAN_JUSTICE">
-		<type>LASER</type>
-		<title>CDEG Super vulcan artillery</title>
-		<short>Artillery</short>
-		<desc>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.
-		Base Cooldown: 15</desc>
-		<tooltip>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.</tooltip>
-		<damage>2</damage>
-		<shots>1</shots>
-		<fireTime>0.25</fireTime>
-		<sp>0</sp>
-		<fireChance>0</fireChance>
-		<breachChance>0</breachChance>
-		<cooldown>15</cooldown>
-		<cost>1000</cost>
-		<bp>2</bp>
-		<speed>80</speed>
-		<rarity>0</rarity>
-		<image>laser_stun</image>
-		<boost>
-	        	<type>cooldown</type>
-	        	<amount>2.95</amount>
-	        	<count>5</count>
-	    	</boost>
-		<launchSounds>
-			<sound>smallMissile1</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>hitHull2</sound>
-			<sound>hitHull3</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>hitShield1</sound>
-			<sound>hitShield2</sound>
-			<sound>hitShield3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_militiagunboat_elite</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_C">
-		<type>BOMB</type>
-		<title>Echelon(tm) quick delivery service</title>
-		<short>Artillery</short>
-		<locked>1</locked>
-		<desc>Echelon's convenient delivery service that teleports massive explosive crates onto enemy ship! How nice!
-		Base cooldown : 30</desc>
-		<tooltip>Artillery: Powers a bomb teleporter that deals heavy damage.</tooltip>
-		<damage>3</damage>
-		<sysDamage>5</sysDamage>
-		<persDamage>5</persDamage>
-		<missiles>0</missiles>
-		<shots>1</shots>
-		<sp>10</sp>
-		<fireChance>100</fireChance>
-		<cooldown>30</cooldown>
-		<power>1</power>
-		<cost>500</cost>
-		<bp>5</bp>
-		<rarity>0</rarity>
-		<image>bomb_echelon_crate</image>
-		<explosion>explosion_random</explosion>
-		<launchSounds>
-			<sound>bombTeleport</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>smallExplosion</sound>
-		</hitShipSounds>
-		<weaponArt>artillery_militiagunboat_c</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_B">
-		<type>BEAM</type>
-		<title>RSA Standard mining beam MK6</title>
-		<short>Artillery</short>
-		<desc>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</desc>
-		<tooltip>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</tooltip>
-		<damage>3</damage>
-		<sysDamage>3</sysDamage>
-		<persDamage>-1</persDamage>
-		<sp>1</sp>
-		<fireChance>0</fireChance>
-		<breachChance>7</breachChance>
-		<cooldown>25</cooldown>
-		<cost>300</cost>
-		<bp>7</bp>
-		<rarity>0</rarity>
-		<length>60</length>
-		<image>beam_contact</image>
-		<launchSounds>
-			<sound>beam2</sound>
-		</launchSounds>
-		<weaponArt>artillery_militiagunboat_b</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_A">
-		<type>MISSILES</type>
-		<title>Avenger Minigun Artillery</title>
-		<short>Artillery</short>
-		<desc>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.
-		Base Cooldown: 25</desc>
-		<tooltip>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.</tooltip>
-		<damage>1</damage>
-		<shots>8</shots>
-		<fireTime>0.05</fireTime>
-		<sp>1</sp>
-		<fireChance>1</fireChance>
-		<breachChance>0</breachChance>
-		<cooldown>25</cooldown>
-		<cost>1000</cost>
-		<bp>2</bp>
-		<speed>90</speed>
-		<rarity>0</rarity>
-		<image>minigun_bullet</image>
-		<launchSounds>
-			<sound>smallMissile1</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>hitHull2</sound>
-			<sound>hitHull3</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>hitShield1</sound>
-			<sound>hitShield2</sound>
-			<sound>hitShield3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_militiagunboat_a</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_AUTO_A_MISSILE">
-		<type>MISSILES</type>
-		<title>Assault gun Artillery</title>
-		<short>Assault gun</short>
-		<desc>Artillery: Fires a missile that does decent damage and never misses.
-		Base Cooldown: 12</desc>
-		<tooltip>Artillery: Fires a missile that does decent damage and never misses.</tooltip>
-		<damage>3</damage>
-		<sysDamage>-1</sysDamage>
-		<persDamage>-1</persDamage>
-		<hullBust>1</hullBust>
-		<missiles>0</missiles>
-		<accuracyMod>100</accuracyMod>
-		<shots>1</shots>
-		<sp>10</sp>
-		<fireChance>0</fireChance>
-		<breachChance>10</breachChance>
-		<cooldown>12</cooldown>
-		<power>1</power>
-		<cost>80</cost>
-		<bp>7</bp>
-		<rarity>0</rarity>
-		<image>missile_burst_1</image>
-		<launchSounds>
-			<sound>smallMissile1</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>smallExplosion</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>hitShield1</sound>
-			<sound>hitShield2</sound>
-			<sound>hitShield3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_auto_a</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_AUTO_B_BIO">
-		<type>BURST</type>
-		<title>Orchid child corpse Rail-shotgun</title>
-		<short>Corpse rail-shotgun</short>
-		<desc>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</desc>
-		<tooltip>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</tooltip>
-		<drone_targetable>1</drone_targetable>
-		<damage>0</damage>
-		<sysDamage>1</sysDamage>
-		<persDamage>1</persDamage>
-		<radius>20</radius>
-		<shots>1</shots>
-		<sp>10</sp>
-		<stun>3</stun>
-		<spin>720</spin>
-		<fireChance>10</fireChance>
-		<breachChance>0</breachChance>
-		<cooldown>20</cooldown>
-		<power>0</power>
-		<cost>65</cost>
-		<bp>10</bp>
-		<speed>80</speed>
-		<rarity>0</rarity>
-		<projectiles>
-			<projectile count="4" fake="false">babyorchid</projectile>
-			<projectile count="4" fake="true">babyorchid</projectile>
-		</projectiles>
-		<launchSounds>
-			<sound>smallMissile1</sound>
-			<sound>smallMissile2</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>orchidDeath</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>orchidDeath</sound>
-			<sound>orchidDeath</sound>
-			<sound>orchidDeath</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_auto_b</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_ENERGY_MATH">
-		<type>LASER</type>
-		<title>Integrate function artillery</title>
-		<short>Math Artillery</short>
-		<desc>Strange mathematical artillery that fires energy blasts quicker with each volley.
-		Base Cooldown: 14.5</desc>
-		<tooltip>Strange mathematical artillery that fires energy blasts quicker with each volley.</tooltip>
-		<damage>2</damage>
-		<noSysDamage>true</noSysDamage>
-		<noPersDamage>true</noPersDamage>
-		<ion>2</ion>
-		<speed>40</speed>
-		<shots>2</shots>
-		<sp>0</sp>
-		<fireChance>0</fireChance>
-		<breachChance>0</breachChance>
-		<stunChance>0</stunChance>
-		<cooldown>14.5</cooldown>
-		<power>1</power>
-		<cost>70</cost>
-		<bp>3</bp>
-		<rarity>0</rarity>
-		<boost>
-			<type>cooldown</type>
-			<amount>2.3</amount>
-			<count>4</count>
-		</boost>
-		<image>energy_shot</image>
-		<explosion>explosion_energy</explosion>
-		<launchSounds>
-			<sound>energy</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>ionHit1</sound>
-			<sound>ionHit2</sound>
-			<sound>ionHit3</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>ionShields1</sound>
-			<sound>ionShields2</sound>
-			<sound>ionShields3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_auto_c</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_RESONATE_WAVE">
-		<type>BURST</type>
-		<drone_targetable>1</drone_targetable>
-		<title>Resonating Wave Projector</title>
-		<short>Artillery</short>
-		<desc>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.
-		Base Cooldown: 50</desc>
-		<tooltip>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.</tooltip>
-		<radius>25</radius>
-		<damage>1</damage>
-		<sysDamage>4</sysDamage>
-		<persDamage>4</persDamage>
-		<spin>720</spin>
-		<shots>1</shots>
-		<sp>10</sp>
-		<stun>2</stun>
-		<fireChance>0</fireChance>
-		<breachChance>100</breachChance>
-		<cooldown>50</cooldown>
-		<power>0</power>
-		<cost>75</cost>
-		<bp>10</bp>
-		<speed>90</speed>
-		<rarity>0</rarity>
-		<projectiles>
-			<projectile count="5" fake="false">resonating_wave</projectile>
-		</projectiles>
-		<launchSounds>
-			<sound>ancient_missile</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>smallExplosion</sound>
-		</hitShipSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_auto_elite</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="SUS_LASERS">
-		<type>LASER</type>
-		<title>Suspicious Lasers</title>
-		<short>Sus Lasers</short>
-		<tip>tip_charge</tip>
-		<desc>Just as misterious in origin as the ones who were first seen using these, this pair of lasers is not studied and its effects are left to be guessed based on observation.</desc>
-		<tooltip>Fires up to 2 lasers; 1 damage each. 4 seconds per charge.</tooltip>
-		<damage>2</damage>
-		<shots>1</shots>
-		<sp>1</sp>
-		<fireChance>0</fireChance>
-		<breachChance>0</breachChance>
-		<cooldown>4</cooldown>
-		<power>2</power>
-		<cost>1</cost>
-		<bp>4</bp>
-		<rarity>0</rarity>
-		<image>Sus_Lasers</image>
-		<chargeLevels>2</chargeLevels>
-		<launchSounds>
-			<sound>heavyLaser1</sound>
-			<sound>heavyLaser2</sound>
-			<sound>heavyLaser3</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>hitHull2</sound>
-			<sound>hitHull3</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>hitShield1</sound>
-			<sound>hitShield2</sound>
-			<sound>hitShield3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>sus_lasers</weaponArt>
-		<iconImage>sus_lasers</iconImage>
-	</weaponBlueprint>
-
 	<!--//////////////////////////////////////////////LASER/////////////////////////////////////////////-->
 
 	<weaponBlueprint name="TC_LASER_MARKSMAN">
@@ -2715,9 +2746,9 @@
 		<weaponArt>rebel_dart</weaponArt>
 	</weaponBlueprint>
 
-	<!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
+	<!--////////////////////////////////////////////// DEBUFFER-CLASS /////////////////////////////////////////////-->
 
-	<weaponBlueprint name="TCC_DEBUFF_SLOW_1">
+	<weaponBlueprint name="TC_DEBUFF_SLOW_1">
 		<type>LASER</type>
 		<title>Debuffer (Movement)</title>
 		<short>Debuffer (M)</short>
@@ -2794,7 +2825,7 @@
 		<iconImage>laser</iconImage>
 	</weaponBlueprint>
 
-	<!--//////////////////////////////////////////////////SINGULARITY////////////////////////////////////////////////////-->
+	<!--////////////////////////////////////////////////// SINGULARITY ////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="SINGULARITY_PROJECTOR_1">
 		<type>BOMB</type>
@@ -2823,7 +2854,7 @@
 		<weaponArt>tc_singularity_projector</weaponArt>
 	</weaponBlueprint>
 
-	<!--/////////////////////////////////////////////////////MISSILES/////////////////////////////////////////////////////////-->
+	<!--///////////////////////////////////////////////////// MISSILES ////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="RSA_BIOHAZARD">
 		<type>MISSILES</type>
@@ -4189,7 +4220,7 @@
 		<type>BEAM</type>
 		<tip>tip_beams</tip>
 		<title>Deconstructor Beam</title>
-		<short>Deconstructor</short>
+		<short>Decon.Beam</short>
 		<desc>This combination of a bomb flak shell and a mining beam is surprsingly powerful - it deals 1 damage while also piercing one shield layer.</desc>
 		<tooltip>Beam weapon, 1 damage to hull, 160 beam length</tooltip>
 		<damage>1</damage>
@@ -4250,7 +4281,7 @@
 		<tip>tip_beams</tip>
 		<title>Sinewave Beam</title>
 		<short>Sinewave</short>
-		<desc>A nimble and strong laser - efficient, fast and fun.</desc>
+		<desc>This is a prototype made by avali engineers - it doesn't have an outer shell yet but it works regardless. A nimble and strong laser - efficient, fast and fun.</desc>
 		<tooltip>Beam weapon, 1 damage to hull, low chance to breach, 70 length</tooltip>
 		<damage>1</damage>
 		<sp>0</sp>
@@ -4271,37 +4302,6 @@
 			<b>6</b>
 		</color>-->
 		<weaponArt>tc_sinewave</weaponArt>
-		<iconImage>beam</iconImage>
-		<iconScale>0.80</iconScale>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_TC_MODULAR_BEAM">
-		<type>BEAM</type>
-		<tip>tip_beams</tip>
-		<title>Hektar(tm) Modular Artillery Beam</title>
-		<short>Mod. Arty</short>
-		<desc>YOU SHOULDNT SEE THIS</desc>
-		<tooltip>Beam weapon, 1 damage to hull, low chance to breach, 70 length</tooltip>
-		<damage>1</damage>
-		<hullbust>1</hullbust>
-		<sp>0</sp>
-		<breachChance>2</breachChance>
-		<cooldown>11</cooldown>
-		<image>beam_contact</image>
-		<power>2</power>
-		<cost>70</cost>
-		<bp>7</bp>
-		<rarity>0</rarity>
-		<length>150</length>
-		<launchSounds>
-			<sound>beam2</sound>
-		</launchSounds>
-		<!--<color>
-			<r>0</r>
-			<g>255</g>
-			<b>6</b>
-		</color>-->
-		<weaponArt>Modular_Beam_Artillery</weaponArt>
 		<iconImage>beam</iconImage>
 		<iconScale>0.80</iconScale>
 	</weaponBlueprint>
@@ -4675,7 +4675,10 @@
 		</mod:findLike>
 	</mod:findName>
 </FTL>
+
+
 <FTL><!--augemnts-->
+
 	<!--◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 	               AUGMENTS
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -4811,7 +4814,9 @@
 		<stackable>true</stackable>
 	</augBlueprint>
 
-	<!--//////////////////////// SHIP ATTRIBUTION //////////////////////////-->
+	<!--—————————————————————
+	SHIP ATTRIBUTION
+	——————————————————————-->
 
 	<augBlueprint name="SHIP_SCRAPPER">
 		<title>Scrapper Cruiser</title>
@@ -4883,7 +4888,10 @@
 		<stackable>false</stackable>
 	</augBlueprint>
 
-	<!--///////////////LAB AUGMENTS//////////////-->
+	<!--—————————————————————
+	LAB AUGMENTS
+	——————————————————————-->
+
 	<augBlueprint name="LAB_PROTOGEN_AWARENESS">
 		<title>Unstable Awareness Field</title>
 		<desc>Protogens now lose skills when cloned, but are immune to mind control and can see adjacent rooms, as well as sense lifeforms when sensors are down.</desc>
@@ -4931,8 +4939,51 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
+	
+	<augBlueprint name="LAB_AVALI_FLAMECLOAKS">
+		<!--descs of these ones dont matter, theyre internals-->
+		<title>Flame Retardent Cloaks</title>
+		<desc>Avali take less damage from fire, and extinguish them faster.</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
 
-	<!--/////////////////////QUEST AUGS//////////////////////////-->
+	<augBlueprint name="LAB_AVALI_DENSEFLUFF">
+		<title>Dense Fluff</title>
+		<desc>Avali move slower, take more fire damage, and less combat damage.</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="LAB_AVALI_NOCLONEXP">
+		<title>Enhanced Cybernetics</title>
+		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
+		<cost>40</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="LAB_AVALI_INSTALLED">
+		<title>Avali</title>
+		<desc>Avali upgrade installed.</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="EX_LAB_AVALI_NOCLONEXP">
+		<title>Enhanced Cybernetics [L]</title>
+		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
+		<cost>40</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<!--—————————————————————
+	QUEST AUGS
+	——————————————————————-->
 
 	<augBlueprint name="TC_DEAD">
 	    <title>Trash Compactor is dead.</title>
@@ -4990,7 +5041,9 @@
 	    <stackable>true</stackable>
 	</augBlueprint>
 
-	<!--/////////////////////ARMOR//////////////////////////-->
+	<!--—————————————————————
+	ARMOR
+	——————————————————————-->
 
 	<augBlueprint name="LOCKED_SCRAP_ARMOR">
 		<title>Scrap Plating</title>
@@ -5007,53 +5060,8 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
-
-	<!--//////////////////////// AVALI AUGMENTS ////////////////////-->
-	<!--old adv cybernetics? cringe
-		<augBlueprint name="LAB_AVALI_CYBERNETIC">
-			<title>Enhanced Cybernetics</title>
-			<desc>Avali gain increased movement speed and melee damage, and reduced fire damage and healing speed.</desc>
-			<cost>0</cost>
-			<rarity>0</rarity>
-			<stackable>false</stackable>
-		</augBlueprint>-->
-	<augBlueprint name="LAB_AVALI_FLAMECLOAKS">
-		<!--descs of these ones dont matter, theyre internals-->
-		<title>Flame Retardent Cloaks</title>
-		<desc>Avali take less damage from fire, and extinguish them faster.</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-	<augBlueprint name="LAB_AVALI_DENSEFLUFF">
-		<title>Dense Fluff</title>
-		<desc>Avali move slower, take more fire damage, and less combat damage.</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-	<augBlueprint name="LAB_AVALI_NOCLONEXP">
-		<title>Enhanced Cybernetics</title>
-		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
-		<cost>40</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-	<augBlueprint name="LAB_AVALI_INSTALLED">
-		<title>Avali</title>
-		<desc>Avali upgrade installed.</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-	<augBlueprint name="EX_LAB_AVALI_NOCLONEXP">
-		<title>Enhanced Cybernetics [L]</title>
-		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
-		<cost>40</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
 </FTL>
+
 <FTL><!--crew drones-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -5164,6 +5172,7 @@
 	    <iconImage>boarder</iconImage>
 	</droneBlueprint>
 </FTL>
+
 <FTL><!--combat drones-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -5399,6 +5408,7 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 </FTL>
+
 <FTL><!--ships-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -10167,7 +10177,6 @@
 		<shieldImage>tcp_savior_b</shieldImage>
 	</shipBlueprint>
 
-
 	<shipBlueprint name="PLAYER_SHIP_SAVIOR_3" layout="tcp_savior_c" img="tcp_savior_c">
 		<class>Savior Cruiser</class>
 	    <name>False Savior</name>
@@ -10245,6 +10254,7 @@
 		<shieldImage>tcp_savior_c</shieldImage>
 	</shipBlueprint>
 </FTL>
+
 <FTL><!--system stuff-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -10252,7 +10262,7 @@
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 	-->
 	<!--not like we *really* need this unless we have a ship that has to upgrade to that level-->
-	<mod:findName type="systemBlueprint" name="weapons">
+	<mod:findName type="systemBlueprint" name="weapons"> <!--re: dalvest - some ships do indeed upgrade to higher levels-->
 	    <mod:findLike type="maxPower">
 	        <mod:setValue>20</mod:setValue>
 	    </mod:findLike>
@@ -10264,6 +10274,7 @@
 	    </mod:findLike>
 	</mod:findName>
 </FTL>
+
 <FTL><!--crew-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -10271,7 +10282,7 @@
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 	-->
 
-	<!--///////UNIQUE//////-->
+	<!--/////// SCRAPPER UNIQUES //////-->
 
 	<crewBlueprint name="trash_eater">
 		<title>Trash Eater</title>
@@ -10336,7 +10347,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--///////GENERIC - OFFBRAND PROTOGEN//////-->
+	<!--///////GENERIC - AVATARS//////-->
 
 	<crewBlueprint name="avatarlegion">
 		<title>Legionnare Avatar</title>
@@ -10372,26 +10383,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--///////POWER DRAIN CREW JANK//////-->
-
-	<crewBlueprint name="void_drain"> <!--Void Laser Drain-->
-		<desc>Power Drain</desc>
-		<title>Power Drain</title>
-		<short>Power Drain</short>
-		<cost>50</cost>
-		<bp>2</bp>
-		<rarity>0</rarity>
-		<powerList>
-	       <power>: -Draining 1 power from any system in the room for 20 seconds</power>
-		</powerList>
-		<colorList>
-			<layer>
-			<color r="17" g="255" b="0" a="0.7"/>
-			</layer>
-		</colorList>
-	</crewBlueprint>
-
-	<!--/////// OK BOOMER //////-->
+	<!--/////// GENERIC - REMOTE CONTROL DRONE //////-->
 
 	<crewBlueprint name="rc_ld">
 		<desc>This contraption is a simple mine rigged on a remote control mech. Pilot it in the heart of the enemy ship and watch the fireworks.</desc>
@@ -10528,7 +10520,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--/////// SPECIAL FORCES //////-->
+	<!--/////// GENERIC - SPECIAL FORCES //////-->
 
 	<crewBlueprint name="human_phoenix">
 	    <desc>Super Elite Federation Crew. This soldier is one of the best of the best available in the Federation - trained to maximum combat capability and heavily armored.</desc>
@@ -10560,8 +10552,7 @@
 	    </powerList>
 	</crewBlueprint>
 
-	<!--///////GENERIC - RSA//////-->
-	<!--///////REMEMBER, MOST UNCOMMON IS 5//////-->
+	<!--/////// GENERIC - RSA //////-->
 
 	<crewBlueprint name="kiviekith">
 		<desc>After years of genetic tampering, these former humans are forced to wear their bulky suits in order to survive. The RSA gladly accepted these misfits into their ranks.</desc>
@@ -10597,6 +10588,80 @@
 		</colorList>
 	</crewBlueprint>
 
+	<!--/////// GENERIC - ROBOTTOS //////-->
+
+	<crewBlueprint name="robottos">
+		<desc>These guys were built for ship construction and spatial exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
+		<cost>50</cost>
+		<title>Sentient</title>
+		<short>Sentient</short>
+		<rarity>5</rarity>
+		<powerList>
+			<power>80 HP owing to their frail and simple construction.</power>
+			<power>x0.7 repair speed and combat damage.</power>
+			<power>Unable to suffocate.</power>
+			<power>Takes x1.25 damage from fires.</power>
+			<power>Can be upgraded using scrap and drone parts.</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="robottos_machinist">
+		<desc>Elite Sentient Crew. This dedicated repair variant of the Sentient is made for maintaining ships in highly dangerous enviroments - perfect for combat situations.</desc>
+		<cost>70</cost>
+		<title>Sentient Machinist</title>
+		<short>Machinist</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>80 HP owing to their frail and simple construction</power>
+			<power>x2 repair speed, x0.7 combat damage</power>
+			<power>Unable to suffocate, completely fireproof</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="robottos_researcher">
+		<desc>Elite Sentient Crew. The brainy variant of the Sentient - an amazing dedicated system manner that cannot lose skills and starts with higher default skills, but is still as frail as the base Robotto.</desc>
+		<cost>70</cost>
+		<title>Sentient Researcher</title>
+		<short>Researcher</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>80 HP owing to their frail and simple construction.</power>
+			<power>x2 movement speed, x0.7 repair speed and combat damage, x1.3 sabotage speed</power>
+			<power>Unable to suffocate, does not lose skills when cloned.</power>
+			<power>takes x1.25 damage from fires, provides a bar of power to the current room</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="robottos_gunner">
+		<desc>Elite Sentient Crew. You'd expect some Sentients to specialize in fighting - and you'd be right. The gunner has a specialized targeting system and a stronger gun than the base version.</desc>
+		<cost>70</cost>
+		<title>Sentient Gunner</title>
+		<short>Gunner</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>80 HP owing to their frail and simple construction</power>
+			<power>x0.7 repair speed</power>
+			<power>Unable to suffocate</power>
+			<power>takes x1.25 damage from fires</power>
+			<power>x1.6 movement speed, takes x0.5 damage, deals x1.2 damage and x1.7 in ranged combat</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="robottos_police">
+		<desc>Elite Sentient Crew. A dedicated law enforcement Sentient - while not exactly following its original directives, this robot has joined the Militia in order to help uphold the law.</desc>
+		<cost>70</cost>
+		<title>Sentient Law Enforcement Scout</title>
+		<short>Scout</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>100 HP due to their durable armor</power>
+			<power>x0.7 repair speed</power>
+			<power>Unable to suffocate</power>
+			<power>takes x1.25 damage from fires</power>
+			<power>x1.6 movement speed, deals x1.4 damage, heals x2 faster</power>
+		</powerList>
+	</crewBlueprint>
+
 	<!--/////// RSA TANK //////-->
 
 	<crewBlueprint name="rsa_tank">
@@ -10630,100 +10695,9 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--/////// UNIQUE - CHEETAH - AVALI SECTOR//////-->
-
-	<crewBlueprint name="cheetah">
-		<desc>A fairly strange specimen of tabaxi that has spots and their frame is larger than usual.</desc>
-		<title>Cheetah</title>
-		<short>Cheetah</short>
-		<cost>69</cost>
-		<bp>2</bp>
-		<rarity>0</rarity>
-		<powerList>
-			<power>Inflicts 1.3x damage</power>
-			<power>Movement speed is 1.1x, takes 0.9x damage</power>
-			<power>Takes 1.5x hazard damage</power>
-		</powerList>
-	</crewBlueprint>
-
-	<!--/////// ROBOTTOS //////-->
-
-	<crewBlueprint name="robottos">
-		<desc>These guys were built for ship construction and spatial exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
-		<cost>50</cost>
-		<title>Sentient</title>
-		<short>Sentient</short>
-		<rarity>5</rarity>
-		<powerList>
-			<power>80 HP owing to their frail and simple construction.</power>
-			<power>x0.7 repair speed and combat damage.</power>
-			<power>Unable to suffocate.</power>
-			<power>Takes x1.25 damage from fires.</power>
-			<power>Can be upgraded using scrap and drone parts.</power>
-		</powerList>
-	</crewBlueprint>
-
-	<crewBlueprint name="robottos_machinist">
-		<desc>This dedicated repair variant of the Sentient is made for maintaining ships in highly dangerous enviroments - perfect for combat situations.</desc>
-		<cost>70</cost>
-		<title>Sentient Machinist</title>
-		<short>Machinist</short>
-		<rarity>0</rarity>
-		<powerList>
-			<power>80 HP owing to their frail and simple construction</power>
-			<power>x2 repair speed, x0.7 combat damage</power>
-			<power>Unable to suffocate, completely fireproof</power>
-		</powerList>
-	</crewBlueprint>
-
-	<crewBlueprint name="robottos_researcher">
-		<desc>The brainy variant of the Sentient - an amazing dedicated system manner that cannot lose skills and starts with higher default skills, but is still as frail as the base Robotto.</desc>
-		<cost>70</cost>
-		<title>Sentient Researcher</title>
-		<short>Researcher</short>
-		<rarity>0</rarity>
-		<powerList>
-			<power>80 HP owing to their frail and simple construction.</power>
-			<power>x2 movement speed, x0.7 repair speed and combat damage, x1.3 sabotage speed</power>
-			<power>Unable to suffocate, does not lose skills when cloned.</power>
-			<power>takes x1.25 damage from fires, provides a bar of power to the current room</power>
-		</powerList>
-	</crewBlueprint>
-
-	<crewBlueprint name="robottos_gunner">
-		<desc>You'd expect some Sentients to specialize in fighting - and you'd be right. The gunner has a specialized targeting system and a stronger gun than the base version.</desc>
-		<cost>70</cost>
-		<title>Sentient Gunner</title>
-		<short>Gunner</short>
-		<rarity>0</rarity>
-		<powerList>
-			<power>80 HP owing to their frail and simple construction</power>
-			<power>x0.7 repair speed</power>
-			<power>Unable to suffocate</power>
-			<power>takes x1.25 damage from fires</power>
-			<power>x1.6 movement speed, takes x0.5 damage, deals x1.2 damage and x1.7 in ranged combat</power>
-		</powerList>
-	</crewBlueprint>
-
-	<crewBlueprint name="robottos_police">
-		<desc>A dedicated law enforcement Sentient - while not exactly following its original directives, this robot has joined the Militia in order to help uphold the law.</desc>
-		<cost>70</cost>
-		<title>Sentient Law Enforcement Scout</title>
-		<short>Scout</short>
-		<rarity>0</rarity>
-		<powerList>
-			<power>100 HP due to their durable armor</power>
-			<power>x0.7 repair speed</power>
-			<power>Unable to suffocate</power>
-			<power>takes x1.25 damage from fires</power>
-			<power>x1.6 movement speed, deals x1.4 damage, heals x2 faster</power>
-		</powerList>
-	</crewBlueprint>
-
-
 	<!--/////// MANTIS //////-->
 
-	<crewBlueprint name="mantis_freebusiness">
+	<crewBlueprint name="mantis_freebusiness"> <!-- UNIQUE -->
 		<desc>Slugton's ultraliberal Free Mantis sidekick, armed with two sharp claws, a love for jogging and an iconic faceplate scar from RAPTOR's claws. Sigma grindset not included.</desc>
 		<title>Free Business Mantis</title>
 		<short>Businessmantis</short>
@@ -10738,7 +10712,7 @@
 	</crewBlueprint>
 
 	<crewBlueprint name="mantis_rsa">
-		<desc>A Hive Mantis with prosthetic claws - they are frail and terrible in combat but work surprsingly well in repairs. They might not fit in with their brethren in the Hive, but they're always welcome in the RECLAIM and SALVAGE ASSOCIATION.</desc>
+		<desc>Elite RSA Crew. A Hive Mantis with prosthetic claws - they are frail and terrible in combat but work surprsingly well in repairs. They might not fit in with their brethren in the Hive, but they're always welcome in the RECLAIM and SALVAGE ASSOCIATION.</desc>
 		<title>RSA Hive Mantis</title>
 		<short>RSA Mantis</short>
 		<cost>60</cost>
@@ -10760,7 +10734,7 @@
 		</colorList>
 	</crewBlueprint>
 
-	<!--///////UNIQUES//////-->
+	<!--////// /UNIQUES - MULTIVERSAL TRAVELERS //////-->
 
 	<crewBlueprint name="kora">
 		<desc>A multiversal traveler from a highly different world - one with cosmic horrors and magic, but similar war crimes to ours. This albino "Nireshirai" is as dangerous as he is stubborn.</desc>
@@ -10776,7 +10750,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--///////CREWMATE AREA (DANGER: KINDA SUS)//////-->
+	<!--/////// CREWMATE AREA (DANGER: KINDA SUS) //////-->
 
 	<crewBlueprint name="crewmate">
 		<desc>Kind of suspicious, with no known origin, destination, or even a known language. They are not to be trusted.</desc>
@@ -10898,7 +10872,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="protogen_pete">
+	<crewBlueprint name="protogen_pete"> <!-- UNIQUE -->
 		<desc>When asked what P.E.T.E. stands for, he will simply start a talk about something called P.I.R.A.T.E..</desc>
 		<cost>1</cost>
 		<title>P.E.T.E.</title>
@@ -10916,7 +10890,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="protogen_tracker">
+	<crewBlueprint name="protogen_tracker"> <!-- UNIQUE -->
 		<desc>TRACKER ONLINE! Badass but lazy, this protogen ship captain probably knows what he's doing... sometimes.</desc>
 		<cost>80</cost>
 		<title>TRACKER</title>
@@ -10930,7 +10904,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="primagen_raptor">
+	<crewBlueprint name="primagen_raptor"> <!-- UNIQUE -->
 		<desc>This primagen (not protogen!) is TRACKER's highly augmented friend. He's an excellent weapon technician and a highly capable soldier.</desc>
 		<cost>80</cost>
 		<title>RAPTOR</title>
@@ -10945,7 +10919,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="clonefail_lancer">
+	<crewBlueprint name="clonefail_lancer"> <!-- UNIQUE -->
 		<desc>The abhorrent half-protogen and half-sergal failed DNA splice that... i guess, is Lancer. He's a... clonefail, probably? His tongue is probably the most dangerous weapon he has.</desc>
 		<cost>80</cost>
 		<title>Lancer</title>
@@ -11004,7 +10978,7 @@
 		</colorList>
 	</crewBlueprint>
 
-	<crewBlueprint name="sergal_cheese">
+	<crewBlueprint name="sergal_cheese"> <!-- UNIQUE -->
 		<desc>RAPTOR's boyfriend, sergal, ex-RSA mechanic, Ship Engineer aboard the legendary Garbage Compactor. Created many contraptions. Loves noodles.</desc>
 		<cost>80</cost>
 		<title>Cheese</title>
@@ -11060,6 +11034,20 @@
 	            <color r="175" g="87" b="32" a="1"/> <!--rust-->
 	        </layer>
 		</colorList>
+	</crewBlueprint>
+
+	<crewBlueprint name="cheetah">
+		<desc>A fairly strange specimen of tabaxi that has spots and their frame is larger than usual.</desc>
+		<title>Cheetah</title>
+		<short>Cheetah</short>
+		<cost>69</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<powerList>
+			<power>Inflicts 1.3x damage</power>
+			<power>Movement speed is 1.1x, takes 0.9x damage</power>
+			<power>Takes 1.5x hazard damage</power>
+		</powerList>
 	</crewBlueprint>
 
 	<!--/////////////// BIRB BRIBRBIIBRIBRB BIRB BIRBBIRBBIRBIRB //////////////////////-->
@@ -11156,9 +11144,10 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--///////Functional crew//////-->
+	<!--/////// CREWJANKS //////-->
+
 	<crewBlueprint name="tcc_generic_crewjank">
-		<desc>Jank</desc>
+		<desc>DEBUFFER CREWJANK</desc>
 		<title>Jank</title>
 		<short>Jank</short>
 		<cost>50</cost>
@@ -11175,4 +11164,21 @@
 		</colorList>
 	</crewBlueprint>
 
+	<crewBlueprint name="void_drain"> <!--Void Laser Drain-->
+		<desc>Power Drain</desc>
+		<title>Power Drain</title>
+		<short>Power Drain</short>
+		<cost>50</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<powerList>
+			<power>: -Draining 1 power from any system in the room for 20 seconds</power>
+		</powerList>
+		<colorList>
+			<layer>
+			<color r="17" g="255" b="0" a="0.7"/>
+			</layer>
+		</colorList>
+	</crewBlueprint>
+	
 </FTL>
