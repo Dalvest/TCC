@@ -7,7 +7,7 @@ Current Version: 1.15
 
 Lead Devs: Dalvest, Zuggo
 
-Coders: Choosechee, Kommandant_Julk, Typerim, Vertaalfout, Zandoware
+Coders: Choosechee, Kommandant_Julk, Typerim, Vertaalfout, Untitled
 
 Artists: Ashley Hecker, Choosechee, ConMan, Cryntolov, Enchanter, Land Green, NitronEXE, Pedrosian96, Skye, SillySillyMan, Typerim, Wabbles
 
@@ -17,10 +17,10 @@ Special Thanks to Cyrus106 for inspiring me to do this and helping me begin my j
 
 # FEATURED MODS
 
-A "side quest" of ours is to try and compile similar high quality mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair, Avali, FEDERATION SPECIAL FORCES, Leah Gaming and Relic Revival! 
+A "side quest" of ours is to try and compile similar high quality mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair, Avali, FEDERATION SPECIAL FORCES, Leah Gaming, Relic Revival and RSC! 
 Credits to LandGreen, Choosechee, Alder, Robinthedragon2, Pedrosian96, NewtonsFourth, Protosteel and mr_eazy_money for the sprites they've provided.
 
-We also ported several ships to Hyperspace + MV, such as the Potential, Stalwart Defense and Sovereign Star!
+We also ported several ships to Hyperspace + MV, such as the Potential and Stalwart Defense!
 
 ### LOAD ORDER SHENANIGANS
 

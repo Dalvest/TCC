@@ -580,6 +580,17 @@
 	</choice>
 
 	<choice hidden="false" blue="true">
+		<text>RC-LD Launcher Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+				</item_modify>
+			<weapon name="RC_LD_LAUNCHER"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK"/>
 	</choice>

@@ -9,6 +9,8 @@
 		<bp>0</bp>
 	</augBlueprint>
 </FTL>
+
+
 <FTL><!--weapons-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -17,6 +19,383 @@
 	-->
 
 	<!--//////////////////////////////////////////// ARTILLERY ZONE ////////////////////////////////////////////////////////-->
+
+	<weaponBlueprint name="ARTILLERY_TC_MODULAR_BEAM">
+		<type>BEAM</type>
+		<tip>tip_beams</tip>
+		<title>Hektar(tm) Modular Artillery Beam</title>
+		<short>Mod. Arty</short>
+		<desc>YOU SHOULDNT SEE THIS</desc>
+		<tooltip>Beam weapon, 1 damage to hull, low chance to breach, 70 length</tooltip>
+		<damage>1</damage>
+		<hullbust>1</hullbust>
+		<sp>0</sp>
+		<breachChance>2</breachChance>
+		<cooldown>11</cooldown>
+		<image>beam_contact</image>
+		<power>2</power>
+		<cost>70</cost>
+		<bp>7</bp>
+		<rarity>0</rarity>
+		<length>150</length>
+		<launchSounds>
+			<sound>beam2</sound>
+		</launchSounds>
+		<!--<color>
+			<r>0</r>
+			<g>255</g>
+			<b>6</b>
+		</color>-->
+		<weaponArt>Modular_Beam_Artillery</weaponArt>
+		<iconImage>beam</iconImage>
+		<iconScale>0.80</iconScale>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_CIVILIAN_JUSTICE">
+		<type>LASER</type>
+		<title>CDEG Super vulcan artillery</title>
+		<short>Artillery</short>
+		<desc>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.
+		Base Cooldown: 15</desc>
+		<tooltip>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.</tooltip>
+		<damage>2</damage>
+		<shots>1</shots>
+		<fireTime>0.25</fireTime>
+		<sp>0</sp>
+		<fireChance>0</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>15</cooldown>
+		<cost>1000</cost>
+		<bp>2</bp>
+		<speed>80</speed>
+		<rarity>0</rarity>
+		<image>laser_stun</image>
+		<boost>
+	        	<type>cooldown</type>
+	        	<amount>2.95</amount>
+	        	<count>5</count>
+	    	</boost>
+		<launchSounds>
+			<sound>smallMissile1</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>hitHull2</sound>
+			<sound>hitHull3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_militiagunboat_elite</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_C">
+		<type>BOMB</type>
+		<title>Echelon(tm) quick delivery service</title>
+		<short>Artillery</short>
+		<locked>1</locked>
+		<desc>Echelon's convenient delivery service that teleports massive explosive crates onto enemy ship! How nice!
+		Base cooldown : 30</desc>
+		<tooltip>Artillery: Powers a bomb teleporter that deals heavy damage.</tooltip>
+		<damage>3</damage>
+		<sysDamage>5</sysDamage>
+		<persDamage>5</persDamage>
+		<missiles>0</missiles>
+		<shots>1</shots>
+		<sp>10</sp>
+		<fireChance>100</fireChance>
+		<cooldown>30</cooldown>
+		<power>1</power>
+		<cost>500</cost>
+		<bp>5</bp>
+		<rarity>0</rarity>
+		<image>bomb_echelon_crate</image>
+		<explosion>explosion_random</explosion>
+		<launchSounds>
+			<sound>bombTeleport</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<weaponArt>artillery_militiagunboat_c</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_B">
+		<type>BEAM</type>
+		<title>RSA Standard mining beam MK6</title>
+		<short>Artillery</short>
+		<desc>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</desc>
+		<tooltip>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</tooltip>
+		<damage>3</damage>
+		<sysDamage>3</sysDamage>
+		<persDamage>-1</persDamage>
+		<sp>1</sp>
+		<fireChance>0</fireChance>
+		<breachChance>7</breachChance>
+		<cooldown>25</cooldown>
+		<cost>300</cost>
+		<bp>7</bp>
+		<rarity>0</rarity>
+		<length>60</length>
+		<image>beam_contact</image>
+		<launchSounds>
+			<sound>beam2</sound>
+		</launchSounds>
+		<weaponArt>artillery_militiagunboat_b</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_A">
+		<type>MISSILES</type>
+		<title>Avenger Minigun Artillery</title>
+		<short>Artillery</short>
+		<desc>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.
+		Base Cooldown: 25</desc>
+		<tooltip>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.</tooltip>
+		<damage>1</damage>
+		<shots>8</shots>
+		<fireTime>0.05</fireTime>
+		<sp>1</sp>
+		<fireChance>1</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>25</cooldown>
+		<cost>1000</cost>
+		<bp>2</bp>
+		<speed>90</speed>
+		<rarity>0</rarity>
+		<image>minigun_bullet</image>
+		<launchSounds>
+			<sound>smallMissile1</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>hitHull2</sound>
+			<sound>hitHull3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_militiagunboat_a</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_AUTO_A_MISSILE">
+		<type>MISSILES</type>
+		<title>Assault gun Artillery</title>
+		<short>Assault gun</short>
+		<desc>Artillery: Fires a missile that does decent damage and never misses.
+		Base Cooldown: 12</desc>
+		<tooltip>Artillery: Fires a missile that does decent damage and never misses.</tooltip>
+		<damage>3</damage>
+		<sysDamage>-1</sysDamage>
+		<persDamage>-1</persDamage>
+		<hullBust>1</hullBust>
+		<missiles>0</missiles>
+		<accuracyMod>100</accuracyMod>
+		<shots>1</shots>
+		<sp>10</sp>
+		<fireChance>0</fireChance>
+		<breachChance>10</breachChance>
+		<cooldown>12</cooldown>
+		<power>1</power>
+		<cost>80</cost>
+		<bp>7</bp>
+		<rarity>0</rarity>
+		<image>missile_burst_1</image>
+		<launchSounds>
+			<sound>smallMissile1</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_auto_a</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_AUTO_B_BIO">
+		<type>BURST</type>
+		<title>Orchid child corpse Rail-shotgun</title>
+		<short>Corpse rail-shotgun</short>
+		<desc>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</desc>
+		<tooltip>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</tooltip>
+		<drone_targetable>1</drone_targetable>
+		<damage>0</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<radius>20</radius>
+		<shots>1</shots>
+		<sp>10</sp>
+		<stun>3</stun>
+		<spin>720</spin>
+		<fireChance>10</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>20</cooldown>
+		<power>0</power>
+		<cost>65</cost>
+		<bp>10</bp>
+		<speed>80</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="4" fake="false">babyorchid</projectile>
+			<projectile count="4" fake="true">babyorchid</projectile>
+		</projectiles>
+		<launchSounds>
+			<sound>smallMissile1</sound>
+			<sound>smallMissile2</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>orchidDeath</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>orchidDeath</sound>
+			<sound>orchidDeath</sound>
+			<sound>orchidDeath</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_auto_b</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_ENERGY_MATH">
+		<type>LASER</type>
+		<title>Integrate function artillery</title>
+		<short>Math Artillery</short>
+		<desc>Strange mathematical artillery that fires energy blasts quicker with each volley.
+		Base Cooldown: 14.5</desc>
+		<tooltip>Strange mathematical artillery that fires energy blasts quicker with each volley.</tooltip>
+		<damage>2</damage>
+		<noSysDamage>true</noSysDamage>
+		<noPersDamage>true</noPersDamage>
+		<ion>2</ion>
+		<speed>40</speed>
+		<shots>2</shots>
+		<sp>0</sp>
+		<fireChance>0</fireChance>
+		<breachChance>0</breachChance>
+		<stunChance>0</stunChance>
+		<cooldown>14.5</cooldown>
+		<power>1</power>
+		<cost>70</cost>
+		<bp>3</bp>
+		<rarity>0</rarity>
+		<boost>
+			<type>cooldown</type>
+			<amount>2.3</amount>
+			<count>4</count>
+		</boost>
+		<image>energy_shot</image>
+		<explosion>explosion_energy</explosion>
+		<launchSounds>
+			<sound>energy</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>ionHit1</sound>
+			<sound>ionHit2</sound>
+			<sound>ionHit3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>ionShields1</sound>
+			<sound>ionShields2</sound>
+			<sound>ionShields3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_auto_c</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="ARTILLERY_RESONATE_WAVE">
+		<type>BURST</type>
+		<drone_targetable>1</drone_targetable>
+		<title>Resonating Wave Projector</title>
+		<short>Artillery</short>
+		<desc>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.
+		Base Cooldown: 50</desc>
+		<tooltip>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.</tooltip>
+		<radius>25</radius>
+		<damage>1</damage>
+		<sysDamage>4</sysDamage>
+		<persDamage>4</persDamage>
+		<spin>720</spin>
+		<shots>1</shots>
+		<sp>10</sp>
+		<stun>2</stun>
+		<fireChance>0</fireChance>
+		<breachChance>100</breachChance>
+		<cooldown>50</cooldown>
+		<power>0</power>
+		<cost>75</cost>
+		<bp>10</bp>
+		<speed>90</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="5" fake="false">resonating_wave</projectile>
+		</projectiles>
+		<launchSounds>
+			<sound>ancient_missile</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>artillery_auto_elite</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="SUS_LASERS">
+		<type>LASER</type>
+		<title>Suspicious Lasers</title>
+		<short>Sus Lasers</short>
+		<tip>tip_charge</tip>
+		<desc>Just as misterious in origin as the ones who were first seen using these, this pair of lasers is not studied and its effects are left to be guessed based on observation.</desc>
+		<tooltip>Fires up to 2 lasers; 1 damage each. 4 seconds per charge.</tooltip>
+		<damage>2</damage>
+		<shots>1</shots>
+		<sp>1</sp>
+		<fireChance>0</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>4</cooldown>
+		<power>2</power>
+		<cost>1</cost>
+		<bp>4</bp>
+		<rarity>0</rarity>
+		<image>Sus_Lasers</image>
+		<chargeLevels>2</chargeLevels>
+		<launchSounds>
+			<sound>heavyLaser1</sound>
+			<sound>heavyLaser2</sound>
+			<sound>heavyLaser3</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>hitHull2</sound>
+			<sound>hitHull3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>sus_lasers</weaponArt>
+		<iconImage>sus_lasers</iconImage>
+	</weaponBlueprint>
 
 	<weaponBlueprint name="ARTILLERY_SAVIOR_ION">
 		<type>LASER</type>
@@ -186,7 +565,7 @@
 		<weaponArt>artillery_battleship_laser</weaponArt>
 	</weaponBlueprint>
 
-	<!-- ////////////////////////////////////////////////////////////////////Fake Weapons///////////////////////////////////////////////////////////////-->
+	<!-- //////////////////////////////////////////////////////////////////// SAVIOR WEAPONS ///////////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="MISSILES_LEGION">
 		<type>MISSILES</type>
@@ -384,7 +763,7 @@
 		<iconImage>beam</iconImage>
 	</weaponBlueprint>
 
-	<weaponBlueprint name="FM_MINELAUNCHER_ANCALAGON_REMASTERED2">
+	<weaponBlueprint name="TC_MINELAUNCHER_ANCALAGON">
 		<type>BURST</type>
 		<tip>tip_ancalagon</tip>
 		<flavorType>Aether Minelauncher</flavorType>
@@ -463,7 +842,7 @@
 		<iconImage>missile</iconImage>
 	</weaponBlueprint>
 
-	<!-- //////////////////////////////////////////////////////////Void Weapons///////////////////////////////////////////////////////////////-->
+	<!-- ////////////////////////////////////////////////////////// VOID-BASED TECH ///////////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="VOID_LASER3">
 		<type>LASER</type>
@@ -772,7 +1151,7 @@
 	<weaponBlueprint name="TC_SHOTGUN_UNSTABLE">
 		<type>BURST</type>
 		<title>Unstable Flak</title>
-		<short>Unstable Flak</short>
+		<short>U. Flak</short>
 		<tip>tip_flak</tip>
 		<desc>An experimental flak cannon that fires tons of projectiles. It is extremely useful in taking down shields, however it has a hard time hitting ships. </desc>
 		<tooltip>Fires 10 shots across a huge area.</tooltip>
@@ -819,7 +1198,7 @@
 	<weaponBlueprint name="TC_SHOTGUN_BATTERY">
 		<type>BURST</type>
 		<title>Battery Flak</title>
-		<short>Battery Flak</short>
+		<short>Batt. Flak</short>
 		<tip>tip_flak</tip>
 		<desc>A flak weapon combined with a battery beam, giving two bars of power to the weapon on the right while still being able to fire normally. </desc>
 		<tooltip>Fires 3 shots across a random area.</tooltip>
@@ -914,7 +1293,7 @@
 	<weaponBlueprint name="TC_RAPTORS_OWN">
 		<type>BURST</type>
 		<title>'Raptor's Right Hand' Flak</title>
-		<short>Raptor's RH</short>
+		<short>Raptor's RH F</short>
 		<tip>tip_flak</tip>
 		<desc>An old militia flak cannon heavily upgraded and modified by the Primagen RAPTOR. Don't judge a book by it's cover; This scrappy flak cannon is surprsingly powerful. </desc>
 		<tooltip>Fires a blast of debris across a random area doing 8+ damage.</tooltip>
@@ -955,6 +1334,66 @@
 		</missSounds>
 		<weaponArt>tc_raptors_own</weaponArt>
 		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="RC_LD_LAUNCHER">
+		<type>BURST</type>
+		<flavorType>Crew Launcher</flavorType>
+		<drone_targetable>0</drone_targetable>
+		<title>RC 'Lightning' Drone Launcher</title>
+		<short>RC-LD Flak</short>
+		<tip>tip_flak</tip>
+		<desc>A specialized weapon that deploys RC-LDs on impact - these drones damage the enemy ship's hull, crew and systems. Impact also has a medium chance to cause breaches and fires.</desc>
+		<tooltip>---</tooltip>
+		<radius>60</radius>
+		<missiles>1</missiles>
+		<damage>0</damage>
+		<hullBust>0</hullBust>
+		<shots>1</shots>
+		<sp>10</sp>
+		<fireChance>3</fireChance>
+		<breachChance>3</breachChance>
+		<cooldown>20</cooldown>
+		<power>2</power>
+		<cost>90</cost>
+		<bp>10</bp>
+		<speed>25</speed>
+		<crewSpawnChance>10</crewSpawnChance>
+		<spawnCrew>
+			<race>rc_ld</race>
+			<number>1</number>
+			<noSlot>true</noSlot>
+			<lifetime>30</lifetime>
+			<statBoosts>
+				<statBoost name="noClone">
+					<boostType>SET</boostType>
+					<value>true</value>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>ALL</crewTarget>
+					<priority>999</priority>
+				</statBoost>
+			</statBoosts>
+		</spawnCrew>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="3" fake="false">bomb_small</projectile>
+		</projectiles>
+		<launchSounds>
+			<sound>bombTeleport</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>ionHit1</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>rc_ld_launcher</weaponArt>
+		<iconImage>missile</iconImage>
 	</weaponBlueprint>
 
 	<weaponBlueprint name="TC_SCRAPFLAK">
@@ -1149,9 +1588,9 @@
 			<type>BURST</type>
 			<title>Utterly Broken Flak</title>
 			<short>UBF</short>
-			<desc>An utterly broken flak, it was found in a trash container!</desc>
-			<tooltip>Artillery: Charges a ball of energy that breaks off into a number of smaller bolts, each doing high degrees of damage.</tooltip>
-			<damage>5</damage>
+			<desc>An utterly broken flak - metaphorically, at least. Legends say it was found in a trash container.</desc>
+			<tooltip>Charges a ball of energy that breaks off into a number of smaller bolts, each doing one hull damage. Pierces all shields.</tooltip>
+			<damage>1</damage>
 			<persDamage>0</persDamage>
 			<ion>0</ion>
 			<shots>5</shots>
@@ -1943,354 +2382,6 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 
-	<!--////////////////////////////////////////////// ARTY ZONE /////////////////////////////////////////////-->
-
-	<weaponBlueprint name="ARTILLERY_CIVILIAN_JUSTICE">
-		<type>LASER</type>
-		<title>CDEG Super vulcan artillery</title>
-		<short>Artillery</short>
-		<desc>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.
-		Base Cooldown: 15</desc>
-		<tooltip>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.</tooltip>
-		<damage>2</damage>
-		<shots>1</shots>
-		<fireTime>0.25</fireTime>
-		<sp>0</sp>
-		<fireChance>0</fireChance>
-		<breachChance>0</breachChance>
-		<cooldown>15</cooldown>
-		<cost>1000</cost>
-		<bp>2</bp>
-		<speed>80</speed>
-		<rarity>0</rarity>
-		<image>laser_stun</image>
-		<boost>
-	        	<type>cooldown</type>
-	        	<amount>2.95</amount>
-	        	<count>5</count>
-	    	</boost>
-		<launchSounds>
-			<sound>smallMissile1</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>hitHull2</sound>
-			<sound>hitHull3</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>hitShield1</sound>
-			<sound>hitShield2</sound>
-			<sound>hitShield3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_militiagunboat_elite</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_C">
-		<type>BOMB</type>
-		<title>Echelon(tm) quick delivery service</title>
-		<short>Artillery</short>
-		<locked>1</locked>
-		<desc>Echelon's convenient delivery service that teleports massive explosive crates onto enemy ship! How nice!
-		Base cooldown : 30</desc>
-		<tooltip>Artillery: Powers a bomb teleporter that deals heavy damage.</tooltip>
-		<damage>3</damage>
-		<sysDamage>5</sysDamage>
-		<persDamage>5</persDamage>
-		<missiles>0</missiles>
-		<shots>1</shots>
-		<sp>10</sp>
-		<fireChance>100</fireChance>
-		<cooldown>30</cooldown>
-		<power>1</power>
-		<cost>500</cost>
-		<bp>5</bp>
-		<rarity>0</rarity>
-		<image>bomb_echelon_crate</image>
-		<explosion>explosion_random</explosion>
-		<launchSounds>
-			<sound>bombTeleport</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>smallExplosion</sound>
-		</hitShipSounds>
-		<weaponArt>artillery_militiagunboat_c</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_B">
-		<type>BEAM</type>
-		<title>RSA Standard mining beam MK6</title>
-		<short>Artillery</short>
-		<desc>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</desc>
-		<tooltip>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</tooltip>
-		<damage>3</damage>
-		<sysDamage>3</sysDamage>
-		<persDamage>-1</persDamage>
-		<sp>1</sp>
-		<fireChance>0</fireChance>
-		<breachChance>7</breachChance>
-		<cooldown>25</cooldown>
-		<cost>300</cost>
-		<bp>7</bp>
-		<rarity>0</rarity>
-		<length>60</length>
-		<image>beam_contact</image>
-		<launchSounds>
-			<sound>beam2</sound>
-		</launchSounds>
-		<weaponArt>artillery_militiagunboat_b</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_A">
-		<type>MISSILES</type>
-		<title>Avenger Minigun Artillery</title>
-		<short>Artillery</short>
-		<desc>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.
-		Base Cooldown: 25</desc>
-		<tooltip>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.</tooltip>
-		<damage>1</damage>
-		<shots>8</shots>
-		<fireTime>0.05</fireTime>
-		<sp>1</sp>
-		<fireChance>1</fireChance>
-		<breachChance>0</breachChance>
-		<cooldown>25</cooldown>
-		<cost>1000</cost>
-		<bp>2</bp>
-		<speed>90</speed>
-		<rarity>0</rarity>
-		<image>minigun_bullet</image>
-		<launchSounds>
-			<sound>smallMissile1</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>hitHull2</sound>
-			<sound>hitHull3</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>hitShield1</sound>
-			<sound>hitShield2</sound>
-			<sound>hitShield3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_militiagunboat_a</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_AUTO_A_MISSILE">
-		<type>MISSILES</type>
-		<title>Assault gun Artillery</title>
-		<short>Assault gun</short>
-		<desc>Artillery: Fires a missile that does decent damage and never misses.
-		Base Cooldown: 12</desc>
-		<tooltip>Artillery: Fires a missile that does decent damage and never misses.</tooltip>
-		<damage>3</damage>
-		<sysDamage>-1</sysDamage>
-		<persDamage>-1</persDamage>
-		<hullBust>1</hullBust>
-		<missiles>0</missiles>
-		<accuracyMod>100</accuracyMod>
-		<shots>1</shots>
-		<sp>10</sp>
-		<fireChance>0</fireChance>
-		<breachChance>10</breachChance>
-		<cooldown>12</cooldown>
-		<power>1</power>
-		<cost>80</cost>
-		<bp>7</bp>
-		<rarity>0</rarity>
-		<image>missile_burst_1</image>
-		<launchSounds>
-			<sound>smallMissile1</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>smallExplosion</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>hitShield1</sound>
-			<sound>hitShield2</sound>
-			<sound>hitShield3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_auto_a</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_AUTO_B_BIO">
-		<type>BURST</type>
-		<title>Orchid child corpse Rail-shotgun</title>
-		<short>Corpse rail-shotgun</short>
-		<desc>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</desc>
-		<tooltip>A weapon for when you have no respect for the dead. Fires a blast of highly accelerated corpses.</tooltip>
-		<drone_targetable>1</drone_targetable>
-		<damage>0</damage>
-		<sysDamage>1</sysDamage>
-		<persDamage>1</persDamage>
-		<radius>20</radius>
-		<shots>1</shots>
-		<sp>10</sp>
-		<stun>3</stun>
-		<spin>720</spin>
-		<fireChance>10</fireChance>
-		<breachChance>0</breachChance>
-		<cooldown>20</cooldown>
-		<power>0</power>
-		<cost>65</cost>
-		<bp>10</bp>
-		<speed>80</speed>
-		<rarity>0</rarity>
-		<projectiles>
-			<projectile count="4" fake="false">babyorchid</projectile>
-			<projectile count="4" fake="true">babyorchid</projectile>
-		</projectiles>
-		<launchSounds>
-			<sound>smallMissile1</sound>
-			<sound>smallMissile2</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>orchidDeath</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>orchidDeath</sound>
-			<sound>orchidDeath</sound>
-			<sound>orchidDeath</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_auto_b</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_ENERGY_MATH">
-		<type>LASER</type>
-		<title>Integrate function artillery</title>
-		<short>Math Artillery</short>
-		<desc>Strange mathematical artillery that fires energy blasts quicker with each volley.
-		Base Cooldown: 14.5</desc>
-		<tooltip>Strange mathematical artillery that fires energy blasts quicker with each volley.</tooltip>
-		<damage>2</damage>
-		<noSysDamage>true</noSysDamage>
-		<noPersDamage>true</noPersDamage>
-		<ion>2</ion>
-		<speed>40</speed>
-		<shots>2</shots>
-		<sp>0</sp>
-		<fireChance>0</fireChance>
-		<breachChance>0</breachChance>
-		<stunChance>0</stunChance>
-		<cooldown>14.5</cooldown>
-		<power>1</power>
-		<cost>70</cost>
-		<bp>3</bp>
-		<rarity>0</rarity>
-		<boost>
-			<type>cooldown</type>
-			<amount>2.3</amount>
-			<count>4</count>
-		</boost>
-		<image>energy_shot</image>
-		<explosion>explosion_energy</explosion>
-		<launchSounds>
-			<sound>energy</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>ionHit1</sound>
-			<sound>ionHit2</sound>
-			<sound>ionHit3</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>ionShields1</sound>
-			<sound>ionShields2</sound>
-			<sound>ionShields3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_auto_c</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_RESONATE_WAVE">
-		<type>BURST</type>
-		<drone_targetable>1</drone_targetable>
-		<title>Resonating Wave Projector</title>
-		<short>Artillery</short>
-		<desc>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.
-		Base Cooldown: 50</desc>
-		<tooltip>Artillery: Fires a burst of 5 energy bubbles that leave enemy systems beyond repair.</tooltip>
-		<radius>25</radius>
-		<damage>1</damage>
-		<sysDamage>4</sysDamage>
-		<persDamage>4</persDamage>
-		<spin>720</spin>
-		<shots>1</shots>
-		<sp>10</sp>
-		<stun>2</stun>
-		<fireChance>0</fireChance>
-		<breachChance>100</breachChance>
-		<cooldown>50</cooldown>
-		<power>0</power>
-		<cost>75</cost>
-		<bp>10</bp>
-		<speed>90</speed>
-		<rarity>0</rarity>
-		<projectiles>
-			<projectile count="5" fake="false">resonating_wave</projectile>
-		</projectiles>
-		<launchSounds>
-			<sound>ancient_missile</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>smallExplosion</sound>
-		</hitShipSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>artillery_auto_elite</weaponArt>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="SUS_LASERS">
-		<type>LASER</type>
-		<title>Suspicious Lasers</title>
-		<short>Sus Lasers</short>
-		<tip>tip_charge</tip>
-		<desc>Just as misterious in origin as the ones who were first seen using these, this pair of lasers is not studied and its effects are left to be guessed based on observation.</desc>
-		<tooltip>Fires up to 2 lasers; 1 damage each. 4 seconds per charge.</tooltip>
-		<damage>2</damage>
-		<shots>1</shots>
-		<sp>1</sp>
-		<fireChance>0</fireChance>
-		<breachChance>0</breachChance>
-		<cooldown>4</cooldown>
-		<power>2</power>
-		<cost>1</cost>
-		<bp>4</bp>
-		<rarity>0</rarity>
-		<image>Sus_Lasers</image>
-		<chargeLevels>2</chargeLevels>
-		<launchSounds>
-			<sound>heavyLaser1</sound>
-			<sound>heavyLaser2</sound>
-			<sound>heavyLaser3</sound>
-		</launchSounds>
-		<hitShipSounds>
-			<sound>hitHull2</sound>
-			<sound>hitHull3</sound>
-		</hitShipSounds>
-		<hitShieldSounds>
-			<sound>hitShield1</sound>
-			<sound>hitShield2</sound>
-			<sound>hitShield3</sound>
-		</hitShieldSounds>
-		<missSounds>
-			<sound>miss</sound>
-		</missSounds>
-		<weaponArt>sus_lasers</weaponArt>
-		<iconImage>sus_lasers</iconImage>
-	</weaponBlueprint>
-
 	<!--//////////////////////////////////////////////LASER/////////////////////////////////////////////-->
 
 	<weaponBlueprint name="TC_LASER_MARKSMAN">
@@ -2414,6 +2505,48 @@
 			<sound>miss</sound>
 		</missSounds>
 		<weaponArt>tc_laser_charger</weaponArt>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="DLX_MOLOT">
+		<type>LASER</type>
+		<flavorType>Laser</flavorType>
+		<title>DLX 'Molot'</title>
+		<short>DLX-M</short>
+		<tip>tip_laser</tip>
+		<desc>Some say this used to be an autocannon fielded in a rebellion long, long ago - back when ships couldn't easily leave the atmosphere of a planet. Whatever its history, this is its latest iteration.</desc>
+		<tooltip>Fires three lasers that deal one hull damage each but don't hurt systems or crew.</tooltip>
+		<damage>1</damage>
+		<shots>3</shots>
+		<sysDamage>-1</sysDamage>
+		<persDamage>-1</persDamage>
+		<sp>0</sp>
+		<fireChance>0</fireChance>
+		<breachChance>1</breachChance>
+		<cooldown>12</cooldown>
+		<power>2</power>
+		<cost>60</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<image>tc_laser_shot_shot</image>
+		<launchSounds>
+			<sound>lightLaser1</sound>
+			<sound>lightLaser2</sound>
+			<sound>lightLaser3</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>hitHull2</sound>
+			<sound>hitHull3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>DLX_molot</weaponArt>
+		<iconImage>laser</iconImage>
 	</weaponBlueprint>
 
 	<weaponBlueprint name="TC_BURST_1">
@@ -2613,9 +2746,9 @@
 		<weaponArt>rebel_dart</weaponArt>
 	</weaponBlueprint>
 
-	<!--//////////////////////////////////////////////DEBUFFER/////////////////////////////////////////////-->
+	<!--////////////////////////////////////////////// DEBUFFER-CLASS /////////////////////////////////////////////-->
 
-	<weaponBlueprint name="TCC_DEBUFF_SLOW_1">
+	<weaponBlueprint name="TC_DEBUFF_SLOW_1">
 		<type>LASER</type>
 		<title>Debuffer (Movement)</title>
 		<short>Debuffer (M)</short>
@@ -2692,7 +2825,7 @@
 		<iconImage>laser</iconImage>
 	</weaponBlueprint>
 
-	<!--//////////////////////////////////////////////////SINGULARITY////////////////////////////////////////////////////-->
+	<!--////////////////////////////////////////////////// SINGULARITY ////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="SINGULARITY_PROJECTOR_1">
 		<type>BOMB</type>
@@ -2721,7 +2854,7 @@
 		<weaponArt>tc_singularity_projector</weaponArt>
 	</weaponBlueprint>
 
-	<!--/////////////////////////////////////////////////////MISSILES/////////////////////////////////////////////////////////-->
+	<!--///////////////////////////////////////////////////// MISSILES ////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="RSA_BIOHAZARD">
 		<type>MISSILES</type>
@@ -4087,7 +4220,7 @@
 		<type>BEAM</type>
 		<tip>tip_beams</tip>
 		<title>Deconstructor Beam</title>
-		<short>Deconstructor</short>
+		<short>Decon.Beam</short>
 		<desc>This combination of a bomb flak shell and a mining beam is surprsingly powerful - it deals 1 damage while also piercing one shield layer.</desc>
 		<tooltip>Beam weapon, 1 damage to hull, 160 beam length</tooltip>
 		<damage>1</damage>
@@ -4148,7 +4281,7 @@
 		<tip>tip_beams</tip>
 		<title>Sinewave Beam</title>
 		<short>Sinewave</short>
-		<desc>A nimble and strong laser - efficient, fast and fun.</desc>
+		<desc>This is a prototype made by avali engineers - it doesn't have an outer shell yet but it works regardless. A nimble and strong laser - efficient, fast and fun.</desc>
 		<tooltip>Beam weapon, 1 damage to hull, low chance to breach, 70 length</tooltip>
 		<damage>1</damage>
 		<sp>0</sp>
@@ -4169,37 +4302,6 @@
 			<b>6</b>
 		</color>-->
 		<weaponArt>tc_sinewave</weaponArt>
-		<iconImage>beam</iconImage>
-		<iconScale>0.80</iconScale>
-	</weaponBlueprint>
-
-	<weaponBlueprint name="ARTILLERY_TC_MODULAR_BEAM">
-		<type>BEAM</type>
-		<tip>tip_beams</tip>
-		<title>Hektar(tm) Modular Artillery Beam</title>
-		<short>Mod. Arty</short>
-		<desc>YOU SHOULDNT SEE THIS</desc>
-		<tooltip>Beam weapon, 1 damage to hull, low chance to breach, 70 length</tooltip>
-		<damage>1</damage>
-		<hullbust>1</hullbust>
-		<sp>0</sp>
-		<breachChance>2</breachChance>
-		<cooldown>11</cooldown>
-		<image>beam_contact</image>
-		<power>2</power>
-		<cost>70</cost>
-		<bp>7</bp>
-		<rarity>0</rarity>
-		<length>150</length>
-		<launchSounds>
-			<sound>beam2</sound>
-		</launchSounds>
-		<!--<color>
-			<r>0</r>
-			<g>255</g>
-			<b>6</b>
-		</color>-->
-		<weaponArt>Modular_Beam_Artillery</weaponArt>
 		<iconImage>beam</iconImage>
 		<iconScale>0.80</iconScale>
 	</weaponBlueprint>
@@ -4573,7 +4675,10 @@
 		</mod:findLike>
 	</mod:findName>
 </FTL>
+
+
 <FTL><!--augemnts-->
+
 	<!--◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 	               AUGMENTS
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -4709,7 +4814,9 @@
 		<stackable>true</stackable>
 	</augBlueprint>
 
-	<!--//////////////////////// SHIP ATTRIBUTION //////////////////////////-->
+	<!--—————————————————————
+	SHIP ATTRIBUTION
+	——————————————————————-->
 
 	<augBlueprint name="SHIP_SCRAPPER">
 		<title>Scrapper Cruiser</title>
@@ -4781,7 +4888,10 @@
 		<stackable>false</stackable>
 	</augBlueprint>
 
-	<!--///////////////LAB AUGMENTS//////////////-->
+	<!--—————————————————————
+	LAB AUGMENTS
+	——————————————————————-->
+
 	<augBlueprint name="LAB_PROTOGEN_AWARENESS">
 		<title>Unstable Awareness Field</title>
 		<desc>Protogens now lose skills when cloned, but are immune to mind control and can see adjacent rooms, as well as sense lifeforms when sensors are down.</desc>
@@ -4830,7 +4940,50 @@
 		<stackable>false</stackable>
 	</augBlueprint>
 
-	<!--/////////////////////QUEST AUGS//////////////////////////-->
+	<augBlueprint name="LAB_AVALI_FLAMECLOAKS">
+		<!--descs of these ones dont matter, theyre internals-->
+		<title>Flame Retardent Cloaks</title>
+		<desc>Avali take less damage from fire, and extinguish them faster.</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="LAB_AVALI_DENSEFLUFF">
+		<title>Dense Fluff</title>
+		<desc>Avali move slower, take more fire damage, and less combat damage.</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="LAB_AVALI_NOCLONEXP">
+		<title>Enhanced Cybernetics</title>
+		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
+		<cost>40</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="LAB_AVALI_INSTALLED">
+		<title>Avali</title>
+		<desc>Avali upgrade installed.</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="EX_LAB_AVALI_NOCLONEXP">
+		<title>Enhanced Cybernetics [L]</title>
+		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
+		<cost>40</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<!--—————————————————————
+	QUEST AUGS
+	——————————————————————-->
 
 	<augBlueprint name="TC_DEAD">
 	    <title>Trash Compactor is dead.</title>
@@ -4888,7 +5041,9 @@
 	    <stackable>true</stackable>
 	</augBlueprint>
 
-	<!--/////////////////////ARMOR//////////////////////////-->
+	<!--—————————————————————
+	ARMOR
+	——————————————————————-->
 
 	<augBlueprint name="LOCKED_SCRAP_ARMOR">
 		<title>Scrap Plating</title>
@@ -4905,53 +5060,8 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
-
-	<!--//////////////////////// AVALI AUGMENTS ////////////////////-->
-	<!--old adv cybernetics? cringe
-		<augBlueprint name="LAB_AVALI_CYBERNETIC">
-			<title>Enhanced Cybernetics</title>
-			<desc>Avali gain increased movement speed and melee damage, and reduced fire damage and healing speed.</desc>
-			<cost>0</cost>
-			<rarity>0</rarity>
-			<stackable>false</stackable>
-		</augBlueprint>-->
-	<augBlueprint name="LAB_AVALI_FLAMECLOAKS">
-		<!--descs of these ones dont matter, theyre internals-->
-		<title>Flame Retardent Cloaks</title>
-		<desc>Avali take less damage from fire, and extinguish them faster.</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-	<augBlueprint name="LAB_AVALI_DENSEFLUFF">
-		<title>Dense Fluff</title>
-		<desc>Avali move slower, take more fire damage, and less combat damage.</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-	<augBlueprint name="LAB_AVALI_NOCLONEXP">
-		<title>Enhanced Cybernetics</title>
-		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
-		<cost>40</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-	<augBlueprint name="LAB_AVALI_INSTALLED">
-		<title>Avali</title>
-		<desc>Avali upgrade installed.</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-	<augBlueprint name="EX_LAB_AVALI_NOCLONEXP">
-		<title>Enhanced Cybernetics [L]</title>
-		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
-		<cost>40</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
 </FTL>
+
 <FTL><!--crew drones-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -5062,6 +5172,7 @@
 	    <iconImage>boarder</iconImage>
 	</droneBlueprint>
 </FTL>
+
 <FTL><!--combat drones-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -5297,6 +5408,7 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 </FTL>
+
 <FTL><!--ships-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -5462,7 +5574,7 @@
 		<unlock id="ship_PLAYER_SHIP_TRASH_EATER_unlock"/>
 		<systemList>
 			<artillery power="1" room="22" start="true" weapon="TC_SHOTGUN_GOLD_ARTILLERY" img="room_artillery" />
-			<artillery power="1" room="23" start="true" weapon="TC_SHOTGUN_GOLD_ARTILLERY" img="room_artillery_6" />
+			<artillery power="1" room="23" start="true" weapon="TC_SHOTGUN_UNSTABLE" img="room_artillery_6" />
 			<battery power="1" room="13" start="true" img="room_battery_scrapper" />
 			<cloaking power="1" room="18" start="true" img="room_cloaking" />
 			<clonebay power="3" room="9" start="true">
@@ -7047,7 +7159,313 @@
 		<aug name="EX_AUTO_COOLDOWN" />
 	</shipBlueprint>
 
-	<!--/////////////////////ARMORED WASP/////////////////////////-->
+	<!--////////////////// AVALI SHIPS //////////////-->
+
+	<shipBlueprint name="PLAYER_SHIP_AVALI" layout="tcp_avali_A" img="tcp_avali_A">
+		<class>Avali Cruiser</class>
+		<name>Oryzivora</name>
+		<unlock id="ship_PLAYER_SHIP_AVALI_unlock" />
+		<desc>This powerful Avali-made cruiser comes with one critical weakness; it completely lacks shields. Hopefully, its powerful weapons are enough to compensate.</desc>
+		<systemList>
+			<battery power="1" room="17" max="2" start="false" img="room_battery_15" />
+			<cloaking power="1" room="14" start="true" img="room_cloaking_orchid_2" />
+			<clonebay power="1" room="9" start="false">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="13" start="true" img="room_doors_2">
+				<slot>
+					<direction>down</direction>
+					<number>0</number>
+				</slot>
+			</doors>
+			<drones power="2" room="5" max="8" start="true" img="room_drones_3" />
+			<engines max="8" power="2" room="15" start="true" img="room_engines_4">
+				<slot>
+					<direction>down</direction>
+					<number>2</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="6" start="false" img="room_hacking_2" />
+			<medbay power="1" room="9" start="true" img="room_medbay">
+				<slot>
+					<number>1</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="3" start="false" img="room_mind_5" />
+			<oxygen power="1" room="2" start="true" img="room_oxygen_2" />
+			<pilot power="1" room="0" start="true" img="room_pilot">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="12" start="true" img="room_sensors_2">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</sensors>
+			<shields power="2" room="8" max="8" start="false" img="room_shields">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="16" start="false" />
+			<weapons power="3" room="1" max="8" start="true" img="room_weapons">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>3</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="7" count="3">
+			<weapon name="LASER_HEAVY_1" />
+			<weapon name="AVALI_HUNTER1" />
+		</weaponList>
+		<droneList drones="9" count="3">
+			<drone name="FOCUS_1_AMP2" />
+		</droneList>
+		<health amount="30" />
+		<maxPower amount="8" />
+		<crewCount amount="4" class="avali" />
+		<aug name="PRE_SCANNER" />
+	</shipBlueprint>
+
+	<shipBlueprint name="PLAYER_SHIP_AVALI_2" layout="tcp_avali_B" img="tcp_avali_B">
+		<class>Avali Cruiser</class>
+		<name>Trochilidae</name>
+		<unlock id="ship_PLAYER_SHIP_AVALI_2_unlock" />
+		<desc>This cruiser, while lacking shields and cloaking, has a powerful arsenal of drones and an extremely capable drone system.</desc>
+		<systemList>
+			<battery power="1" room="8" max="2" start="false" img="room_battery" />
+			<cloaking power="1" room="3" start="false" img="room_cloaking_orchid_3" />
+			<clonebay power="1" room="6" start="false">
+				<slot>
+					<number>2</number>
+				</slot>
+			</clonebay>
+			<doors power="2" room="7" start="true" img="room_doors_2">
+				<slot>
+					<direction>down</direction>
+					<number>0</number>
+				</slot>
+			</doors>
+			<drones power="5" room="0" max="8" start="true" img="room_drones_avali_2" />
+			<engines max="8" power="2" room="5" start="true" img="room_engines_4">
+				<slot>
+					<direction>down</direction>
+					<number>2</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="9" start="false" img="room_hacking_9" />
+			<medbay power="1" room="6" start="true" img="room_medbay_7">
+				<slot>
+					<number>2</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="10" start="false" img="room_mind_3" />
+			<oxygen power="1" room="16" start="true" img="room_oxygen_9" />
+			<pilot power="1" room="2" start="true" img="room_pilot_4">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</pilot>
+			<sensors power="2" room="12" start="true" img="room_sensors_4">
+				<slot>
+					<direction>left</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields power="1" room="1" max="8" start="true" img="room_shields_5">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="15" start="false" />
+			<weapons power="1" room="11" max="8" start="true" img="room_weapons_11">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>2</weaponSlots>
+		<droneSlots>4</droneSlots>
+		<weaponList missiles="2" count="2">
+		</weaponList>
+		<droneList drones="13" count="4">
+			<drone name="ION_1_AMP2" />
+			<drone name="DEFENSE_1" />
+			<drone name="TC_COMBAT_BOMB" />
+		</droneList>
+		<health amount="30" />
+		<maxPower amount="8" />
+		<aug name="DRONE_RECOVERY" />
+		<aug name="COMBAT_SHIELDS_JAMMER" />
+		<crewCount amount="4" class="avali" />
+		<crewCount amount="1" class="robottos_machinist" />
+	</shipBlueprint>
+
+	<shipBlueprint name="PLAYER_SHIP_AVALI_3" layout="tcp_avali_C" img="tcp_avali_c">
+		<class>Avali Cruiser</class>
+		<name>Cathartes Aura</name>
+		<unlock id="ship_PLAYER_SHIP_AVALI_3_unlock" />
+		<desc>This cruiser, whilst struggling to get through shields, specializes in disrupting and manipulating the enemy crew in a variety of ways.</desc>
+		<systemList>
+			<battery power="1" room="2" max="2" start="false" img="room_battery_6" />
+			<cloaking power="1" room="8" start="false" img="room_cloaking_3" />
+			<clonebay power="1" room="6" start="true">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="7" start="true" img="room_doors_7">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones power="2" room="10" max="8" start="true" img="room_drones_4" />
+			<engines max="8" power="2" room="9" start="true" img="room_engines_4">
+				<slot>
+					<direction>down</direction>
+					<number>2</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="0" start="false" img="room_hacking_7" />
+			<medbay power="1" room="6" start="false" img="room_medbay">
+				<slot>
+					<number>1</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="4" start="true" img="room_mind_7" />
+			<oxygen power="1" room="11" start="true" img="room_oxygen_2" />
+			<pilot power="1" room="13" start="true" img="room_pilot_5">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="2" room="3" start="true" img="room_sensors">
+				<slot>
+					<direction>down</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields power="2" room="1" max="8" start="true" img="room_shields_6">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="12" start="false" />
+			<weapons power="3" room="5" max="8" start="true" img="room_weapons">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>3</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="15" count="3">
+			<weapon name="ION_FIRE" />
+			<weapon name="BOMB_LOCK" />
+		</weaponList>
+		<droneList drones="15" count="3">
+			<drone name="PEST_RAD" />
+			<drone name="PEST_DEBUFF" />
+		</droneList>
+		<crewCount amount="1" class="phantom" />
+		<crewCount amount="3" class="avali" />
+		<aug name="DRONE_RECOVERY" />
+		<health amount="30" />
+		<maxPower amount="8" />
+	</shipBlueprint>
+
+	<!--/////// FALCON FRIGATE //////-->
+
+	<shipBlueprint name="PLAYER_SHIP_FALCON_FRIGATE" layout="tcp_falcon_frigate" img="tcp_falcon_frigate">
+		<class>Falcon-Class Frigate</class>
+		<name>Navarin</name>
+		<desc>When you want reliable, powerful tech, you can always count on an Avali engineer. Despite it being old, this ship is still reliable for stealth and infiltration. Some say it was a crucial backbone during the Protogen Revolution.</desc>
+		<systemList>
+			<battery power="1" room="18" start="false" img="room_battery_3" />
+			<cloaking power="2" room="2" start="true" img="room_cloaking_7" />
+			<clonebay power="1" room="4" start="false">
+				<slot>
+					<number>3</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="5" start="true" img="room_doors_4">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</doors>
+			<drones max="8" power="2" room="10" start="false" img="room_drones_15" />
+			<engines power="4" room="1" start="true" img="room_engines_5">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="14" start="false" img="room_hacking_2" />
+			<medbay power="1" room="4" start="true" img="room_medbay_3">
+				<slot>
+					<number>3</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="17" start="false" img="room_mind_3" />
+			<oxygen power="1" room="9" start="true" img="room_oxygen_2" />
+			<pilot power="2" room="0" start="true" img="room_pilot_2">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="2" room="15" start="true" img="room_sensors">
+				<slot>
+					<direction>down</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields max="8" power="2" room="3" start="false" img="room_shields_5">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="16" start="false" />
+			<weapons max="8" power="4" room="7" start="true" img="room_weapons_11">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>2</droneSlots>
+		<weaponList missiles="1" count="4">
+			<weapon name="LASER_BURST_2" />
+		</weaponList>
+		<droneList drones="1" count="2" />
+		<health amount="30" />
+		<maxPower amount="9" />
+		<crewCount amount="1" class="protogen" />
+		<crewCount amount="2" class="avali" />
+		<crewCount amount="1" class="avali_illuminant" />
+		<aug name="EX_CLOAK_FIRE" />
+	</shipBlueprint>
+
+	<!--///////////////////// ARMORED WASP /////////////////////////-->
 
 	<shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP" layout="tcp_armored_wasp" img="tcp_armored_wasp">
 		<class>Gladiator-Class Corvette</class>
@@ -7267,6 +7685,83 @@
 		<aug name="EX_CLOAK_FIRE" />
 	</shipBlueprint>
 
+	<!--///////////////////// AVALI SLOT 2 /////////////////////////-->
+
+	<shipBlueprint name="PLAYER_SHIP_AVALI_SLOT2" layout="tcp_avali_D" img="tcp_avali_D">
+		<class>Avali Merchant Cruiser</class>
+		<name>Accipitridae</name>
+		<desc>This merchant cruiser was halfway through loading with junk to sell before it was pushed into military service. Luckily it's cargo teleporter can serve as an offense.</desc>
+		<unlock id="ship_PLAYER_SHIP_AVALI_SLOT2_unlock"/>
+		<systemList>
+			<battery power="1" room="17" start="false" img="room_battery_6" />
+			<cloaking power="1" room="9" start="false" img="room_cloaking_3" />
+			<clonebay power="1" room="1" start="false">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="12" start="true" img="room_doors_4">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</doors>
+			<drones max="8" power="2" room="8" start="false" img="room_drones_rand_4" />
+			<engines max="8" power="2" room="5" start="true" img="room_engines_2">
+				<slot>
+					<direction>down</direction>
+					<number>2</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="7" start="false" img="room_hacking_2" />
+			<medbay power="1" room="1" start="true" img="room_medbay_4">
+				<slot>
+					<number>0</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="10" start="false" img="room_mind_5" />
+			<oxygen power="1" room="6" start="true" img="room_oxygen_3" />
+			<pilot power="2" room="2" start="true" img="room_pilot">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="11" start="true" img="room_sensors_6">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields max="8" power="2" room="4" start="true" img="room_shields_4">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="0" start="true" />
+			<weapons max="8" power="2" room="3" start="true" img="room_weapons">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>2</droneSlots>
+		<weaponList missiles="8" count="4">
+			<weapon name="TC_FIREWORK_DISPENSER" />
+			<weapon name="TC_FIREWORK_DISPENSER" />
+		</weaponList>
+		<droneList drones="5" count="2" />
+		<aug name="STORE_BEACON" />
+		<health amount="30" />
+		<maxPower amount="8" />
+		<crewCount amount="3" class="avali" />
+		<crewCount amount="1" class="robottos_machinist" />
+	</shipBlueprint>
+
+
 	<!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
 
 	<shipBlueprint name="PLAYER_SHIP_SLUGTON" layout="tcp_slugton" img="tcp_slugton">
@@ -7332,7 +7827,7 @@
 		<weaponSlots>4</weaponSlots>
 		<droneSlots>4</droneSlots>
 		<weaponList missiles="18" count="4">
-			<weapon name="TC_BOMB_SHOTGUN_3" />
+			<weapon name="DLX_MOLOT" />
 			<weapon name="BOMB_CONSERVATIVE" />
 		</weaponList>
 		<droneList drones="7" count="4" />
@@ -7476,7 +7971,7 @@
 		<systemLimit>9</systemLimit>
 		<weaponSlots>4</weaponSlots>
 		<droneSlots>4</droneSlots>
-		<weaponList missiles="0" count="4" />
+		<weaponList missiles="2" count="2" />
 		<droneList drones="5" count="4" />
 		<health amount="30" />
 		<maxPower amount="7" />
@@ -7487,6 +7982,444 @@
 		<crewCount amount="1" class="human_hazmat" />
 		<aug name="HEKTAR_GEL" />
 	</shipBlueprint>
+
+	<!--/////// STOLEN REBEL DESIGN  //////-->
+
+	<shipBlueprint name="PLAYER_SHIP_HEKTAR_REBEL" layout="tcp_hektar_rebel" img="tcp_hektar_rebel">
+		<class>Original Design(tm)</class>
+		<name>Free Sample</name>
+		<desc>The Hektar Corporation is no stranger to borrowing designs - when the rebel cruiser proved its worth in battle, it's no surprise that Hektar... lent the design. This ship is good both for battles and for carrying cargo.</desc>
+		<systemList>
+			<artillery power="1" room="26" start="true" weapon="ARTILLERY_TC_MODULAR_BEAM" img="room_artillery_dromaius" />
+			<battery power="1" room="13" start="false" img="room_battery_12" />
+			<cloaking power="1" room="24" start="false" img="room_cloaking_11" />
+			<clonebay power="1" room="25" start="false">
+				<slot>
+					<number>2</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="14" start="true" img="room_doors_9">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones max="8" power="1" room="16" start="false" img="room_drones_3" />
+			<engines max="8" power="1" room="1" start="true" img="room_engines_9">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="7" start="false" img="room_hacking_8" />
+			<medbay power="1" room="25" start="true" img="room_medbay_7">
+				<slot>
+					<number>2</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="23" start="true" img="room_mind_11" />
+			<oxygen power="1" room="8" start="true" img="room_oxygen_12" />
+			<pilot power="1" room="0" start="true" img="room_pilot">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="11" start="false" img="room_sensors_3">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields max="8" power="2" room="20" start="true" img="room_shields_8">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="2" room="6" start="true" />
+			<weapons max="8" power="2" room="21" start="true" img="room_weapons_chaoticgood">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<systemLimit>9</systemLimit>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="4" count="4">
+			<weapon name="MODULAR_LASER_BASE" />
+		</weaponList>
+		<droneList drones="2" count="3" />
+		<health amount="30" />
+		<maxPower amount="8" />
+		<crewCount amount="1" class="slug_hektar" />
+		<crewCount amount="1" class="slug" />
+		<crewCount amount="1" class="slug_saboteur" />
+		<crewCount amount="1" class="blobslug" />
+		<aug name="HEKTAR_GEL" />
+	</shipBlueprint>
+
+	<!--/////// LEAH'S SHIPS //////-->
+
+	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA" layout="newtonbeam" img="newtonbeam_base">
+		<class>Leah's Cruiser</class>
+		<name>The Beam Master</name>
+		<desc>The ship of the Infamous Beam Master, better known as Leo... or, wait was it Liam? Leviticus? Lizzy???</desc>
+		<systemList>
+			<battery power="1" max="2" room="12" start="false" img="room_battery_3" />
+			<cloaking power="1" room="1" start="false" img="room_cloaking_9" />
+			<clonebay power="1" room="6" start="false" >
+				<slot>
+					<number>0</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="10" start="true" img="room_doors">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones power="1" max="8" room="9" start="false" img="room_drones" />
+			<engines power="2" room="5" start="true" img="room_engines">
+				<slot>
+					<direction>down</direction>
+					<number>2</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="8" start="true" img="room_hacking_5" />
+			<medbay power="1" room="6" start="true" img="USE">
+				<slot>
+					<number>-2</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="13" start="false" img="room_mind_3" />
+			<oxygen power="1" room="3" start="true" img="room_oxygen" />
+			<pilot power="1" room="4" start="true" img="room_pilot_2">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="11" start="true" img="room_sensors">
+				<slot>
+					<direction>down</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields power="2" max="8" room="0" start="true" img="room_shields_9">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="2" start="false" />
+			<weapons power="2" max="8" room="7" start="true" img="room_weapons_6">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>2</droneSlots>
+		<weaponList missiles="3" count="4">
+			<weapon name="BEAM_PIERCE" />
+		</weaponList>
+		<droneList drones="10" count="2">
+			<drone name="REPAIR_BOARDER" />
+		</droneList>
+		<health amount="30" />
+		<maxPower amount="8" />
+		<aug name="CUSTOM_CRYSTAL" />
+	</shipBlueprint>
+
+	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_2" layout="newtonbeam_2" img="newtonbeam_2">
+		<class>Leah's Cruiser</class>
+		<name>The Rulebook</name>
+		<unlock id="ship_PLAYER_SHIP_NEWTONBEAMA_2_unlock"/>
+		<desc>With a permanent mind control rig installed on the Beam Master's ship, her ship was quickly painted in federation colours and turned into a multiverse capable cruiser.</desc>
+		<systemList>
+			<artillery power="1" max="5" room="3" start="true" weapon="BIO_1_LEAH" img="room_artillery_3" />
+			<battery power="1" max="2" room="10" start="false" img="room_battery_14" />
+			<cloaking power="1" max="5" room="2" start="false" img="room_cloaking_9" />
+			<clonebay power="1" max="4" room="14" start="true">
+				<slot>
+					<number>0</number>
+				</slot>
+			</clonebay>
+			<doors power="2" room="7" start="true" img="room_doors">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones power="1" max="8" room="4" start="false" img="room_drones_15" />
+			<engines power="2" max="8" room="5" start="true" img="room_engines_8">
+				<slot>
+					<direction>left</direction>
+					<number>1</number>
+				</slot>
+			</engines>
+			<hacking power="1" max="3" room="11" start="false" img="room_hacking_2" />
+			<medbay power="1" max="4" room="14" start="false" img="room_medbay">
+				<slot>
+					<number>2</number>
+				</slot>
+			</medbay>
+			<mind power="1" max="3" room="9" start="true" img="room_mind_11" />
+			<oxygen power="1" max="4" room="13" start="true" img="room_oxygen_12" />
+			<pilot power="1" max="3" room="0" start="true" img="room_pilot_2">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="1" max="3" room="6" start="true" img="room_sensors">
+				<slot>
+					<direction>down</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields power="2" max="8" room="8" start="true" img="room_shields_4">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="2" max="4" room="1" start="true" />
+			<weapons power="2" max="8" room="12" start="false" img="room_weapons_11">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>2</weaponSlots>
+		<droneSlots>4</droneSlots>
+		<weaponList missiles="0" count="2">
+			<weapon name="NOVA_MK2" />
+		</weaponList>
+		<droneList drones="3" count="4" />
+		<health amount="30" />
+		<maxPower amount="5" />
+		<aug name="CUSTOM_CRYSTAL" />
+	</shipBlueprint>
+
+	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_3" layout="newtonbeam_3" img="newtonbeam_3">
+		<class>Leah's Cruiser</class>
+		<name>The Semi-Competent</name>
+		<unlock id="ship_PLAYER_SHIP_NEWTONBEAMA_3_unlock"/>
+		<desc>After careful thought, Leah realized her old ship wasn't ready for the challenges of the multiverse. However, in her haste to upgrade her ship, she forgot to make it compatible with shields. Oops.</desc>
+		<systemList>
+			<battery power="1" room="12" start="false" img="room_battery_2" />
+			<cloaking power="2" room="1" start="true" img="room_cloaking_10" />
+			<clonebay power="1" room="3" start="false" >
+				<slot>
+					<number>0</number>
+				</slot>
+			</clonebay>
+			<doors power="2" room="6" start="true" img="room_doors_8">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</doors>
+			<drones power="1" max="8" room="10" start="false" img="room_drones_15" />
+			<engines power="3" max="8" room="5" start="true" img="room_engines">
+				<slot>
+					<direction>down</direction>
+					<number>2</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="13" start="false" img="room_hacking_3" />
+			<medbay power="1" room="3" start="true" img="room_medbay_9">
+				<slot>
+					<number>-2</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="9" start="false" img="room_mind_3" />
+			<oxygen power="1" room="11" start="true" img="room_oxygen_6" />
+			<pilot power="1" room="0" start="true" img="room_pilot_2">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="2" start="false" img="room_sensors">
+				<slot>
+					<direction>down</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<teleporter power="1" room="4" start="false" />
+			<weapons power="3" max="8" room="8" start="true" img="room_weapons">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>3</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="3" count="3">
+			<weapon name="NOVA_MK1" />
+			<weapon name="BEAM_MINING" />
+		</weaponList>
+		<droneList drones="3" count="3" />
+		<health amount="30" />
+		<maxPower amount="9" />
+		<aug name="CUSTOM_CRYSTAL" />
+	</shipBlueprint>
+
+	<!--////////////// MILSPEC //////////////////-->
+
+	<shipBlueprint name="PLAYER_SHIP_TC_MILSPEC" layout="tcp_milspec" img="tcp_milspec">
+		<class>Experimental Cargo Liner</class>
+		<name>Military Surplus</name>
+		<desc>This ship is a highly experimental Cargo Liner made by the Federation - it's been specially outfitted with an Automated Quartermaster unit purchased from the RSA in order to help the crew create weaponry if needed.</desc>
+		<unlock id="text_PLAYER_SHIP_TC_MILSPEC_unlock"/>
+		<systemList>
+			<artillery power="1" room="11" start="true" weapon="ARTILLERY_FIRE" img="room_artillery_3" />
+			<battery power="1" room="2" start="false" img="room_battery_8" />
+			<cloaking power="1" room="3" start="false" img="room_cloaking_11" />
+			<clonebay power="1" room="13" start="true">
+				<slot>
+					<number>0</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="10" start="false" img="room_doors_6">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones power="1" room="4" max="8" start="false" img="room_drones_1._s__w_" />
+			<engines power="3" room="6" max="8" start="true" img="room_engines_9">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="1" start="false" img="room_hacking_7" />
+			<medbay power="1" room="13" start="false" img="room_medbay">
+				<slot>
+					<number>1</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="12" start="false" img="room_mind_1x1" />
+			<oxygen power="1" room="8" start="true" img="room_oxygen_10" />
+			<pilot power="1" room="0" start="true" img="room_pilot_doubledeal">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</pilot>
+			<sensors power="2" room="7" start="true" img="room_sensors_4">
+				<slot>
+					<direction>left</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields power="2" max="8" room="5" start="true" img="room_shields_7">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</shields>
+			<weapons power="3" max="8" room="9" start="true" img="room_weapons_4">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="12" count="4" />
+		<droneList drones="8" count="3" />
+		<health amount="30" />
+		<maxPower amount="7" />
+		<crewCount amount="1" class="engi" />
+		<crewCount amount="1" class="human_soldier" />
+		<crewCount amount="1" class="human_phoenix" />
+		<crewCount amount="1" class="mantis_free" />
+		<aug name="AUTOMATED_QUARTERMASTER" />
+	</shipBlueprint>
+
+	<shipBlueprint name="PLAYER_SHIP_TC_MILSPEC_2" layout="tcp_milspec_2" img="tcp_milspec_2">
+		<class>Experimental Cargo Liner</class>
+		<name>'Outpost 31'</name>
+		<desc>This Cruiser was carrying an alien specimen found on a derelict base - the alien specimen has escaped, much to the extreme paranoia of the crew.</desc>
+		<unlock id="text_PLAYER_SHIP_TC_MILSPEC_2_unlock"/>
+		<systemList>
+			<artillery power="1" room="11" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_3" />
+			<battery power="2" room="2" start="true" img="room_battery_8" />
+			<cloaking power="1" room="3" start="true" img="room_cloaking_11" />
+			<clonebay power="1" room="13" start="false">
+				<slot>
+					<number>0</number>
+				</slot>
+			</clonebay>
+			<doors power="2" room="10" start="true" img="room_doors_6">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones power="2" max="8" room="4" start="true" img="room_drones_1._s__w_" />
+			<engines power="3" max="8" room="6" start="true" img="room_engines_9">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="1" start="false" img="room_hacking_7" />
+			<medbay power="13" room="1" start="true" img="room_medbay">
+				<slot>
+					<number>1</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="12" start="false" img="room_mind_1x1" />
+			<oxygen power="2" room="8" start="true" img="room_oxygen_10" />
+			<pilot power="2" room="0" start="true" img="room_pilot_doubledeal">
+				<slot>
+					<direction>right</direction>
+					<number>0</number>
+				</slot>
+			</pilot>
+			<sensors power="2" room="7" start="false" img="room_sensors_4">
+				<slot>
+					<direction>left</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields power="2" max="8" room="5" start="false" img="room_shields_7">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</shields>
+			<weapons power="2" max="8" room="9" start="true" img="room_weapons_4">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="12" count="4">
+			<weapon name="TC_RAPTOR_AUTOCANNON" />
+		</weaponList>
+		<droneList drones="8" count="3">
+			<drone name="DRONE_SHIELD_PLAYER" />
+		</droneList>
+		<health amount="30" />
+		<maxPower amount="6" />
+	</shipBlueprint>
+
 
 	<!--///////////////////// POTENTIAL //////////////////////////-->
 
@@ -7750,7 +8683,7 @@
 					<number>1</number>
 				</slot>
 			</pilot>
-			<sensors power="1" room="2" start="false" img="room_sensors">
+			<sensors power="1" room="2" start="true" img="room_sensors">
 				<slot>
 					<direction>down</direction>
 					<number>1</number>
@@ -7763,7 +8696,7 @@
 				</slot>
 			</shields>
 			<teleporter power="2" room="4" start="true" />
-			<weapons power="1" max="8" room="7" start="true" img="room_weapons_10_2x1">
+			<weapons power="2" max="8" room="7" start="true" img="room_weapons_10_2x1">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
@@ -7774,7 +8707,7 @@
 		<weaponSlots>2</weaponSlots>
 		<droneSlots>2</droneSlots>
 		<weaponList missiles="3" count="2">
-			<weapon name="TC_BURST_1" />
+			<weapon name="RC_LD_LAUNCHER" />
 		</weaponList>
 		<droneList drones="5" count="2" />
 		<health amount="20" />
@@ -7848,6 +8781,233 @@
 		<health amount="20" />
 		<maxPower amount="5" />
 		<aug name="MANTIS_RELOADER" />
+	</shipBlueprint>
+
+	<!--/////////////// SAVIOR ///////////////-->
+
+	<shipBlueprint name="PLAYER_SHIP_SAVIOR" layout="tcp_savior_a" img="tcp_savior_a">
+		<class>Savior Cruiser</class>
+		<name>Their Savior</name>
+		<unlock id="ship_PLAYER_SHIP_SAVIOR_unlock"/>
+		<desc>This strange cruiser was developed by a long dead subrace of demi-god cubes. The tech was eventually found by the Federation and remade for the simple purpose of protecting your crew at all costs.  </desc>
+		<systemList>
+			<artillery max="4" power="2" room="7" start="true" weapon="ARTILLERY_SAVIOR_ION" img="room_artillery" />
+			<battery max="2" power="1" room="20" start="false" img="room_battery" />
+			<cloaking power="1" room="3" start="false" img="room_cloaking" />
+			<doors power="2" room="0" start="true" img="room_doors">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones max="12" power="2" room="10" start="true" img="room_drones" />
+			<engines power="1" room="24" start="true" img="room_engines_8">
+				<slot>
+					<direction>left</direction>
+					<number>1</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="9" start="false" img="room_hacking_8" />
+			<mind power="1" room="13" start="false" img="room_mind" />
+			<oxygen power="2" room="30" start="true" img="room_oxygen_2" />
+			<pilot power="1" room="6" start="true" img="room_pilot_3">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="1" start="true" img="room_sensors_2">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</sensors>
+			<shields max="8" power="2" room="15" start="true" img="room_shields_7">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="23" start="true" />
+			<weapons max="8" power="3" room="18" start="false" img="room_weapons">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>2</weaponSlots>
+		<droneSlots>5</droneSlots>
+		<weaponList missiles="0" count="3">
+		</weaponList>
+		<droneList drones="7" count="3">
+			<drone name="MENDER" />
+		</droneList>
+		<health amount="45" />
+		<maxPower amount="5" />
+		<crewCount amount="1" class="human_hazmat" />
+		<crewCount amount="1" class="protogen" />
+		<crewCount amount="1" class="crystal_sentinel" />
+		<crewCount amount="1" class="shell_radiant" />
+		<crewCount amount="1" class="saviors" />
+		<aug name="SAVIOR_SHIELD" />
+		<shieldImage>tcpc_anointed</shieldImage>
+	</shipBlueprint>
+
+
+	<shipBlueprint name="PLAYER_SHIP_SAVIOR_2" layout="tcp_savior_b" img="tcp_savior_b">
+		<class>Savior Cruiser</class>
+		<name>Your Savior</name>
+		<unlock id="ship_PLAYER_SHIP_SAVIOR_2_unlock"/>
+		<desc>When this powerful variation of an Ancient Cruiser was designed, they overclocked its shields to make them completely impenetrable by normal lasers. However, doing so broke the System, reducing its capacity to a mere 2 shield bubbles.  </desc>
+		<systemList>
+			<artillery max="5" power="2" room="7" start="true" weapon="ARTILLERY_SAVIOR_LASER" img="room_artillery" />
+			<battery max="2" power="1" room="20" start="false" img="room_battery" />
+			<cloaking power="1" room="3" start="false" img="room_cloaking" />
+			<clonebay power="1" room="2" start="false">
+				<slot>
+					<number>3</number>
+				</slot>
+			</clonebay>
+			<doors power="2" room="0" start="true" img="room_doors">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones max="8" power="2" room="10" start="false" img="room_drones" />
+			<engines power="1" room="24" start="true" img="room_engines_8">
+				<slot>
+					<direction>left</direction>
+					<number>1</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="9" start="false" img="room_hacking_8" />
+			<medbay power="1" room="2" start="true" img="room_medbay_3">
+				<slot>
+					<number>3</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="13" start="false" img="room_mind" />
+			<oxygen power="1" room="30" start="false" img="room_oxygen_2" />
+			<pilot power="1" room="6" start="true" img="room_pilot_3">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="1" start="true" img="room_sensors_2">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</sensors>
+			<shields max="4" power="2" room="15" start="true" img="room_shields_7">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="23" start="false" />
+			<weapons max="8" power="3" room="18" start="true" img="room_weapons">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>2</droneSlots>
+		<weaponList missiles="0" count="3">
+			<weapon name="ANCIENT_ION_2" />
+		</weaponList>
+		<droneList drones="7" count="3">
+		</droneList>
+		<health amount="30" />
+		<maxPower amount="7" />
+		<crewCount amount="1" class="obelisk_royal" />
+		<crewCount amount="1" class="lanius_augmented" />
+		<crewCount amount="1" class="obelisk_royal" />
+		<crewCount amount="1" class="saviors" />
+		<aug name="REGEN_SHIELD" />
+		<shieldImage>tcp_savior_b</shieldImage>
+	</shipBlueprint>
+
+	<shipBlueprint name="PLAYER_SHIP_SAVIOR_3" layout="tcp_savior_c" img="tcp_savior_c">
+		<class>Savior Cruiser</class>
+		<name>False Savior</name>
+		<unlock id="ship_PLAYER_SHIP_SAVIOR_3_unlock"/>
+		<desc>This vessel was captured by the Legion after striking a deal with an Avatar wishing to get away from the Federation. Unfortunately for said Avatar, the Legion does not take too kindly to "dirty traitors"... </desc>
+		<systemList>
+			<artillery max="5" power="1" room="28" start="true" weapon="ARTILLERY_SAVIOR_FALSE" img="room_artillery" />
+			<battery max="2" power="1" room="23" start="false" img="room_battery_2" />
+			<cloaking power="1" room="9" start="false" img="room_cloaking" />
+			<clonebay power="1" room="8" start="false">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
+			<doors power="2" room="29" start="false" img="room_doors_9">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones max="8" power="2" room="6" start="false" img="room_drones_12" />
+			<engines power="1" room="21" start="true" img="room_engines_8">
+				<slot>
+					<direction>left</direction>
+					<number>2</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="13" start="false" img="room_hacking_6" />
+			<medbay power="1" room="8" start="false" img="room_medbay">
+				<slot>
+					<number>1</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="12" start="false" img="room_mind_10" />
+			<oxygen power="1" room="3" start="true" img="room_oxygen" />
+			<pilot power="1" room="19" start="true" img="room_pilot_3">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="30" start="true" img="room_sensors_3">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields max="7" power="2" room="22" start="true" img="room_shields_2">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="1" start="false" />
+			<weapons max="8" power="3" room="7" start="true" img="room_weapons_7">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>2</weaponSlots>
+		<droneSlots>4</droneSlots>
+		<weaponList missiles="0" count="2">
+			<weapon name="ANCIENT_LANCE" />
+		</weaponList>
+		<droneList drones="3" count="4">
+		</droneList>
+		<health amount="50" />
+		<maxPower amount="7" />
+		<crewCount amount="1" class="goldroyal" />
+		<crewCount amount="1" class="human_legion" />
+		<crewCount amount="1" class="avatarlegion" />
+		<aug name="FALSE_SHIELD" />
+		<shieldImage>tcp_savior_c</shieldImage>
 	</shipBlueprint>
 
 	<!--////////////////// STALWART DEFENSE //////////////-->
@@ -7926,311 +9086,6 @@
 		<aug name="ANCIENT_SHIELD" />
 		<aug name="PALADIN_ARMOR" />
 		<aug name="SYSTEM_CASING_NEW" />
-	</shipBlueprint>
-
-	<!--////////////////// AVALI SHIPS //////////////-->
-
-	<shipBlueprint name="PLAYER_SHIP_AVALI" layout="tcp_avali_A" img="tcp_avali_A">
-		<class>Avali Cruiser</class>
-		<name>Oryzivora</name>
-		<unlock id="ship_PLAYER_SHIP_AVALI_unlock" />
-		<desc>This powerful Avali-made cruiser comes with one critical weakness; it completely lacks shields. Hopefully, its powerful weapons are enough to compensate.</desc>
-		<systemList>
-			<battery power="1" room="17" max="2" start="false" img="room_battery_15" />
-			<cloaking power="1" room="14" start="true" img="room_cloaking_orchid_2" />
-			<clonebay power="1" room="9" start="false">
-				<slot>
-					<number>1</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="13" start="true" img="room_doors_2">
-				<slot>
-					<direction>down</direction>
-					<number>0</number>
-				</slot>
-			</doors>
-			<drones power="2" room="5" max="8" start="true" img="room_drones_3" />
-			<engines max="8" power="2" room="15" start="true" img="room_engines_4">
-				<slot>
-					<direction>down</direction>
-					<number>2</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="6" start="false" img="room_hacking_2" />
-			<medbay power="1" room="9" start="true" img="room_medbay">
-				<slot>
-					<number>1</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="3" start="false" img="room_mind_5" />
-			<oxygen power="1" room="2" start="true" img="room_oxygen_2" />
-			<pilot power="1" room="0" start="true" img="room_pilot">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="12" start="true" img="room_sensors_2">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</sensors>
-			<shields power="2" room="8" max="8" start="false" img="room_shields">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="16" start="false" />
-			<weapons power="3" room="1" max="8" start="true" img="room_weapons">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>3</weaponSlots>
-		<droneSlots>3</droneSlots>
-		<weaponList missiles="7" count="3">
-			<weapon name="LASER_HEAVY_1" />
-			<weapon name="AVALI_HUNTER1" />
-		</weaponList>
-		<droneList drones="9" count="3">
-			<drone name="FOCUS_1_AMP2" />
-		</droneList>
-		<health amount="30" />
-		<maxPower amount="8" />
-		<crewCount amount="4" class="avali" />
-		<aug name="PRE_SCANNER" />
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_AVALI_2" layout="tcp_avali_B" img="tcp_avali_B">
-		<class>Avali Cruiser</class>
-		<name>Trochilidae</name>
-		<unlock id="ship_PLAYER_SHIP_AVALI_2_unlock" />
-		<desc>This cruiser, while lacking shields and cloaking, has a powerful arsenal of drones and an extremely capable drone system.</desc>
-		<systemList>
-			<battery power="1" room="8" max="2" start="false" img="room_battery" />
-			<cloaking power="1" room="3" start="false" img="room_cloaking_orchid_3" />
-			<clonebay power="1" room="6" start="false">
-				<slot>
-					<number>2</number>
-				</slot>
-			</clonebay>
-			<doors power="2" room="7" start="true" img="room_doors_2">
-				<slot>
-					<direction>down</direction>
-					<number>0</number>
-				</slot>
-			</doors>
-			<drones power="5" room="0" max="8" start="true" img="room_drones_avali_2" />
-			<engines max="8" power="2" room="5" start="true" img="room_engines_4">
-				<slot>
-					<direction>down</direction>
-					<number>2</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="9" start="false" img="room_hacking_9" />
-			<medbay power="1" room="6" start="true" img="room_medbay_7">
-				<slot>
-					<number>2</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="10" start="false" img="room_mind_3" />
-			<oxygen power="1" room="16" start="true" img="room_oxygen_9" />
-			<pilot power="1" room="2" start="true" img="room_pilot_4">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</pilot>
-			<sensors power="2" room="12" start="true" img="room_sensors_4">
-				<slot>
-					<direction>left</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields power="1" room="1" max="8" start="true" img="room_shields_5">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="15" start="false" />
-			<weapons power="1" room="11" max="8" start="true" img="room_weapons_11">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>2</weaponSlots>
-		<droneSlots>4</droneSlots>
-		<weaponList missiles="2" count="2">
-		</weaponList>
-		<droneList drones="13" count="4">
-			<drone name="ION_1_AMP2" />
-			<drone name="DEFENSE_1" />
-			<drone name="TC_COMBAT_BOMB" />
-		</droneList>
-		<health amount="30" />
-		<maxPower amount="8" />
-		<aug name="DRONE_RECOVERY" />
-		<aug name="COMBAT_SHIELDS_JAMMER" />
-		<crewCount amount="4" class="avali" />
-		<crewCount amount="1" class="robottos_machinist" />
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_AVALI_3" layout="tcp_avali_C" img="tcp_avali_c">
-		<class>Avali Cruiser</class>
-		<name>Cathartes Aura</name>
-		<unlock id="ship_PLAYER_SHIP_AVALI_3_unlock" />
-		<desc>This cruiser, whilst struggling to get through shields, specializes in disrupting and manipulating the enemy crew in a variety of ways.</desc>
-		<systemList>
-			<battery power="1" room="2" max="2" start="false" img="room_battery_6" />
-			<cloaking power="1" room="8" start="false" img="room_cloaking_3" />
-			<clonebay power="1" room="6" start="true">
-				<slot>
-					<number>1</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="7" start="true" img="room_doors_7">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones power="2" room="10" max="8" start="true" img="room_drones_4" />
-			<engines max="8" power="2" room="9" start="true" img="room_engines_4">
-				<slot>
-					<direction>down</direction>
-					<number>2</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="0" start="false" img="room_hacking_7" />
-			<medbay power="1" room="6" start="false" img="room_medbay">
-				<slot>
-					<number>1</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="4" start="true" img="room_mind_7" />
-			<oxygen power="1" room="11" start="true" img="room_oxygen_2" />
-			<pilot power="1" room="13" start="true" img="room_pilot_5">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="2" room="3" start="true" img="room_sensors">
-				<slot>
-					<direction>down</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields power="2" room="1" max="8" start="true" img="room_shields_6">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="12" start="false" />
-			<weapons power="3" room="5" max="8" start="true" img="room_weapons">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>3</weaponSlots>
-		<droneSlots>3</droneSlots>
-		<weaponList missiles="15" count="3">
-			<weapon name="ION_FIRE" />
-			<weapon name="BOMB_LOCK" />
-		</weaponList>
-		<droneList drones="15" count="3">
-			<drone name="PEST_RAD" />
-			<drone name="PEST_DEBUFF" />
-		</droneList>
-		<crewCount amount="1" class="phantom" />
-		<crewCount amount="3" class="avali" />
-		<aug name="DRONE_RECOVERY" />
-		<health amount="30" />
-		<maxPower amount="8" />
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_AVALI_SLOT2" layout="tcp_avali_D" img="tcp_avali_D">
-		<class>Avali Merchant Cruiser</class>
-		<name>Accipitridae</name>
-		<desc>This merchant cruiser was halfway through loading with junk to sell before it was pushed into military service. Luckily it's cargo teleporter can serve as an offense.</desc>
-		<unlock id="ship_PLAYER_SHIP_AVALI_SLOT2_unlock"/>
-		<systemList>
-			<battery power="1" room="17" start="false" img="room_battery_6" />
-			<cloaking power="1" room="9" start="false" img="room_cloaking_3" />
-			<clonebay power="1" room="1" start="false">
-				<slot>
-					<number>1</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="12" start="true" img="room_doors_4">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</doors>
-			<drones max="8" power="2" room="8" start="false" img="room_drones_rand_4" />
-			<engines max="8" power="2" room="5" start="true" img="room_engines_2">
-				<slot>
-					<direction>down</direction>
-					<number>2</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="7" start="false" img="room_hacking_2" />
-			<medbay power="1" room="1" start="true" img="room_medbay_4">
-				<slot>
-					<number>0</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="10" start="false" img="room_mind_5" />
-			<oxygen power="1" room="6" start="true" img="room_oxygen_3" />
-			<pilot power="2" room="2" start="true" img="room_pilot">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="11" start="true" img="room_sensors_6">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields max="8" power="2" room="4" start="true" img="room_shields_4">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="0" start="true" />
-			<weapons max="8" power="2" room="3" start="true" img="room_weapons">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>4</weaponSlots>
-		<droneSlots>2</droneSlots>
-		<weaponList missiles="8" count="4">
-			<weapon name="TC_FIREWORK_DISPENSER" />
-			<weapon name="TC_FIREWORK_DISPENSER" />
-		</weaponList>
-		<droneList drones="5" count="2" />
-		<aug name="STORE_BEACON" />
-		<health amount="30" />
-		<maxPower amount="8" />
-		<crewCount amount="3" class="avali" />
-		<crewCount amount="1" class="robottos_machinist" />
 	</shipBlueprint>
 
 	<!--/////// FSF BLACK OPS //////-->
@@ -9404,671 +10259,8 @@
 		<aug name="ROCK_ARMOR" />
 	</shipBlueprint>
 
-	<!--/////// MILSPEC //////-->
-
-	<shipBlueprint name="PLAYER_SHIP_TC_MILSPEC" layout="tcp_milspec" img="tcp_milspec">
-		<class>Experimental Cargo Liner</class>
-		<name>Military Surplus</name>
-		<desc>This ship is a highly experimental Cargo Liner made by the Federation - it's been specially outfitted with an Automated Quartermaster unit purchased from the RSA in order to help the crew create weaponry if needed.</desc>
-		<unlock id="text_PLAYER_SHIP_TC_MILSPEC_unlock"/>
-		<systemList>
-			<artillery power="1" room="11" start="true" weapon="ARTILLERY_FIRE" img="room_artillery_3" />
-			<battery power="1" room="2" start="false" img="room_battery_8" />
-			<cloaking power="1" room="3" start="false" img="room_cloaking_11" />
-			<clonebay power="1" room="13" start="true">
-				<slot>
-					<number>0</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="10" start="false" img="room_doors_6">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones power="1" room="4" max="8" start="false" img="room_drones_1._s__w_" />
-			<engines power="3" room="6" max="8" start="true" img="room_engines_9">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="1" start="false" img="room_hacking_7" />
-			<medbay power="1" room="13" start="false" img="room_medbay">
-				<slot>
-					<number>1</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="12" start="false" img="room_mind_1x1" />
-			<oxygen power="1" room="8" start="true" img="room_oxygen_10" />
-			<pilot power="1" room="0" start="true" img="room_pilot_doubledeal">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</pilot>
-			<sensors power="2" room="7" start="true" img="room_sensors_4">
-				<slot>
-					<direction>left</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields power="2" max="8" room="5" start="true" img="room_shields_7">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</shields>
-			<weapons power="3" max="8" room="9" start="true" img="room_weapons_4">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>4</weaponSlots>
-		<droneSlots>3</droneSlots>
-		<weaponList missiles="12" count="4" />
-		<droneList drones="8" count="3" />
-		<health amount="30" />
-		<maxPower amount="7" />
-		<crewCount amount="1" class="engi" />
-		<crewCount amount="1" class="human_soldier" />
-		<crewCount amount="1" class="human_phoenix" />
-		<crewCount amount="1" class="mantis_free" />
-		<aug name="AUTOMATED_QUARTERMASTER" />
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_TC_MILSPEC_2" layout="tcp_milspec_2" img="tcp_milspec_2">
-		<class>Experimental Cargo Liner</class>
-		<name>'Outpost 31'</name>
-		<desc>This Cruiser was carrying an alien specimen found on a derelict base - the alien specimen has escaped, much to the extreme paranoia of the crew.</desc>
-		<unlock id="text_PLAYER_SHIP_TC_MILSPEC_2_unlock"/>
-		<systemList>
-			<artillery power="1" room="11" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_3" />
-			<battery power="2" room="2" start="true" img="room_battery_8" />
-			<cloaking power="1" room="3" start="true" img="room_cloaking_11" />
-			<clonebay power="1" room="13" start="false">
-				<slot>
-					<number>0</number>
-				</slot>
-			</clonebay>
-			<doors power="2" room="10" start="true" img="room_doors_6">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones power="2" max="8" room="4" start="true" img="room_drones_1._s__w_" />
-			<engines power="3" max="8" room="6" start="true" img="room_engines_9">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="1" start="false" img="room_hacking_7" />
-			<medbay power="13" room="1" start="true" img="room_medbay">
-				<slot>
-					<number>1</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="12" start="false" img="room_mind_1x1" />
-			<oxygen power="2" room="8" start="true" img="room_oxygen_10" />
-			<pilot power="2" room="0" start="true" img="room_pilot_doubledeal">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</pilot>
-			<sensors power="2" room="7" start="false" img="room_sensors_4">
-				<slot>
-					<direction>left</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields power="2" max="8" room="5" start="false" img="room_shields_7">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</shields>
-			<weapons power="2" max="8" room="9" start="true" img="room_weapons_4">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>4</weaponSlots>
-		<droneSlots>3</droneSlots>
-		<weaponList missiles="12" count="4">
-			<weapon name="TC_RAPTOR_AUTOCANNON" />
-		</weaponList>
-		<droneList drones="8" count="3">
-			<drone name="DRONE_SHIELD_PLAYER" />
-		</droneList>
-		<health amount="30" />
-		<maxPower amount="6" />
-	</shipBlueprint>
-
-	<!--/////// LEAH'S SHIPS //////-->
-
-	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA" layout="newtonbeam" img="newtonbeam_base">
-		<class>Leah's Cruiser</class>
-		<name>The Beam Master</name>
-		<desc>The ship of the Infamous Beam Master, better known as Leo... or, wait was it Liam? Leviticus? Lizzy???</desc>
-		<systemList>
-			<battery power="1" max="2" room="12" start="false" img="room_battery_3" />
-			<cloaking power="1" room="1" start="false" img="room_cloaking_9" />
-			<clonebay power="1" room="6" start="false" >
-				<slot>
-					<number>0</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="10" start="true" img="room_doors">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones power="1" max="8" room="9" start="false" img="room_drones" />
-			<engines power="2" room="5" start="true" img="room_engines">
-				<slot>
-					<direction>down</direction>
-					<number>2</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="8" start="true" img="room_hacking_5" />
-			<medbay power="1" room="6" start="true" img="USE">
-				<slot>
-					<number>-2</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="13" start="false" img="room_mind_3" />
-			<oxygen power="1" room="3" start="true" img="room_oxygen" />
-			<pilot power="1" room="4" start="true" img="room_pilot_2">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="11" start="true" img="room_sensors">
-				<slot>
-					<direction>down</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields power="2" max="8" room="0" start="true" img="room_shields_9">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="2" start="false" />
-			<weapons power="2" max="8" room="7" start="true" img="room_weapons_6">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>4</weaponSlots>
-		<droneSlots>2</droneSlots>
-		<weaponList missiles="3" count="4">
-			<weapon name="BEAM_PIERCE" />
-		</weaponList>
-		<droneList drones="10" count="2">
-			<drone name="REPAIR_BOARDER" />
-		</droneList>
-		<health amount="30" />
-		<maxPower amount="8" />
-		<aug name="CUSTOM_CRYSTAL" />
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_2" layout="newtonbeam_2" img="newtonbeam_2">
-		<class>Leah's Cruiser</class>
-		<name>The Rulebook</name>
-		<unlock id="ship_PLAYER_SHIP_NEWTONBEAMA_2_unlock"/>
-		<desc>With a permanent mind control rig installed on the Beam Master's ship, her ship was quickly painted in federation colours and turned into a multiverse capable cruiser.</desc>
-		<systemList>
-			<artillery power="1" max="5" room="3" start="true" weapon="BIO_1_LEAH" img="room_artillery_3" />
-			<battery power="1" max="2" room="10" start="false" img="room_battery_14" />
-			<cloaking power="1" max="5" room="2" start="false" img="room_cloaking_9" />
-			<clonebay power="1" max="4" room="14" start="true">
-				<slot>
-					<number>0</number>
-				</slot>
-			</clonebay>
-			<doors power="2" room="7" start="true" img="room_doors">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones power="1" max="8" room="4" start="false" img="room_drones_15" />
-			<engines power="2" max="8" room="5" start="true" img="room_engines_8">
-				<slot>
-					<direction>left</direction>
-					<number>1</number>
-				</slot>
-			</engines>
-			<hacking power="1" max="3" room="11" start="false" img="room_hacking_2" />
-			<medbay power="1" max="4" room="14" start="false" img="room_medbay">
-				<slot>
-					<number>2</number>
-				</slot>
-			</medbay>
-			<mind power="1" max="3" room="9" start="true" img="room_mind_11" />
-			<oxygen power="1" max="4" room="13" start="true" img="room_oxygen_12" />
-			<pilot power="1" max="3" room="0" start="true" img="room_pilot_2">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" max="3" room="6" start="true" img="room_sensors">
-				<slot>
-					<direction>down</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields power="2" max="8" room="8" start="true" img="room_shields_4">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="2" max="4" room="1" start="true" />
-			<weapons power="2" max="8" room="12" start="false" img="room_weapons_11">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>2</weaponSlots>
-		<droneSlots>4</droneSlots>
-		<weaponList missiles="0" count="2">
-			<weapon name="NOVA_MK2" />
-		</weaponList>
-		<droneList drones="3" count="4" />
-		<health amount="30" />
-		<maxPower amount="5" />
-		<aug name="CUSTOM_CRYSTAL" />
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_3" layout="newtonbeam_3" img="newtonbeam_3">
-		<class>Leah's Cruiser</class>
-		<name>The Semi-Competent</name>
-		<unlock id="ship_PLAYER_SHIP_NEWTONBEAMA_3_unlock"/>
-		<desc>After careful thought, Leah realized her old ship wasn't ready for the challenges of the multiverse. However, in her haste to upgrade her ship, she forgot to make it compatible with shields. Oops.</desc>
-		<systemList>
-			<battery power="1" room="12" start="false" img="room_battery_2" />
-			<cloaking power="2" room="1" start="true" img="room_cloaking_10" />
-			<clonebay power="1" room="3" start="false" >
-				<slot>
-					<number>0</number>
-				</slot>
-			</clonebay>
-			<doors power="2" room="6" start="true" img="room_doors_8">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</doors>
-			<drones power="1" max="8" room="10" start="false" img="room_drones_15" />
-			<engines power="3" max="8" room="5" start="true" img="room_engines">
-				<slot>
-					<direction>down</direction>
-					<number>2</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="13" start="false" img="room_hacking_3" />
-			<medbay power="1" room="3" start="true" img="room_medbay_9">
-				<slot>
-					<number>-2</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="9" start="false" img="room_mind_3" />
-			<oxygen power="1" room="11" start="true" img="room_oxygen_6" />
-			<pilot power="1" room="0" start="true" img="room_pilot_2">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="2" start="false" img="room_sensors">
-				<slot>
-					<direction>down</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<teleporter power="1" room="4" start="false" />
-			<weapons power="3" max="8" room="8" start="true" img="room_weapons">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>3</weaponSlots>
-		<droneSlots>3</droneSlots>
-		<weaponList missiles="3" count="3">
-			<weapon name="NOVA_MK1" />
-			<weapon name="BEAM_MINING" />
-		</weaponList>
-		<droneList drones="3" count="3" />
-		<health amount="30" />
-		<maxPower amount="9" />
-		<aug name="CUSTOM_CRYSTAL" />
-	</shipBlueprint>
-
-	<!--/////// STOLEN REBEL DESIGN  //////-->
-
-	<shipBlueprint name="PLAYER_SHIP_HEKTAR_REBEL" layout="tcp_hektar_rebel" img="tcp_hektar_rebel">
-		<class>Original Design(tm)</class>
-		<name>Free Sample</name>
-		<desc>The Hektar Corporation is no stranger to borrowing designs - when the rebel cruiser proved its worth in battle, it's no surprise that Hektar... lent the design. This ship is good both for battles and for carrying cargo.</desc>
-		<systemList>
-			<artillery power="1" room="26" start="true" weapon="ARTILLERY_TC_MODULAR_BEAM" img="room_artillery_dromaius" />
-			<battery power="1" room="13" start="false" img="room_battery_12" />
-			<cloaking power="1" room="24" start="false" img="room_cloaking_11" />
-			<clonebay power="1" room="25" start="false">
-				<slot>
-					<number>2</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="14" start="true" img="room_doors_9">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones max="8" power="1" room="16" start="false" img="room_drones_3" />
-			<engines max="8" power="1" room="1" start="true" img="room_engines_9">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="7" start="false" img="room_hacking_8" />
-			<medbay power="1" room="25" start="true" img="room_medbay_7">
-				<slot>
-					<number>2</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="23" start="true" img="room_mind_11" />
-			<oxygen power="1" room="8" start="true" img="room_oxygen_12" />
-			<pilot power="1" room="0" start="true" img="room_pilot">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="11" start="false" img="room_sensors_3">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields max="8" power="2" room="20" start="true" img="room_shields_8">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="2" room="6" start="true" />
-			<weapons max="8" power="2" room="21" start="true" img="room_weapons_chaoticgood">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<systemLimit>9</systemLimit>
-		<weaponSlots>4</weaponSlots>
-		<droneSlots>3</droneSlots>
-		<weaponList missiles="4" count="4">
-			<weapon name="MODULAR_LASER_BASE" />
-		</weaponList>
-		<droneList drones="2" count="3" />
-		<health amount="30" />
-		<maxPower amount="8" />
-		<crewCount amount="1" class="slug_hektar" />
-		<crewCount amount="1" class="slug" />
-		<crewCount amount="1" class="slug_saboteur" />
-		<crewCount amount="1" class="blobslug" />
-		<aug name="HEKTAR_GEL" />
-	</shipBlueprint>
-
-	<!--/////////////// SAVIOR ///////////////-->
-
-	<shipBlueprint name="PLAYER_SHIP_SAVIOR" layout="tcp_savior_a" img="tcp_savior_a">
-		<class>Savior Cruiser</class>
-		<name>Their Savior</name>
-		<unlock id="ship_PLAYER_SHIP_SAVIOR_unlock"/>
-		<desc>This strange cruiser was developed by a long dead subrace of demi-god cubes. The tech was eventually found by the Federation and remade for the simple purpose of protecting your crew at all costs.  </desc>
-		<systemList>
-			<artillery max="4" power="2" room="7" start="true" weapon="ARTILLERY_SAVIOR_ION" img="room_artillery" />
-			<battery max="2" power="1" room="20" start="false" img="room_battery" />
-			<cloaking power="1" room="3" start="false" img="room_cloaking" />
-			<doors power="2" room="0" start="true" img="room_doors">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones max="12" power="2" room="10" start="true" img="room_drones" />
-			<engines power="1" room="24" start="true" img="room_engines_8">
-				<slot>
-					<direction>left</direction>
-					<number>1</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="9" start="false" img="room_hacking_8" />
-			<mind power="1" room="13" start="false" img="room_mind" />
-			<oxygen power="2" room="30" start="true" img="room_oxygen_2" />
-			<pilot power="1" room="6" start="true" img="room_pilot_3">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="1" start="true" img="room_sensors_2">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</sensors>
-			<shields max="8" power="2" room="15" start="true" img="room_shields_7">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="23" start="true" />
-			<weapons max="8" power="3" room="18" start="false" img="room_weapons">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>2</weaponSlots>
-		<droneSlots>5</droneSlots>
-		<weaponList missiles="0" count="3">
-		</weaponList>
-		<droneList drones="7" count="3">
-			<drone name="MENDER" />
-		</droneList>
-		<health amount="45" />
-		<maxPower amount="5" />
-		<crewCount amount="1" class="human_hazmat" />
-		<crewCount amount="1" class="protogen" />
-		<crewCount amount="1" class="crystal_sentinel" />
-		<crewCount amount="1" class="shell_radiant" />
-		<crewCount amount="1" class="saviors" />
-		<aug name="SAVIOR_SHIELD" />
-		<shieldImage>tcpc_anointed</shieldImage>
-	</shipBlueprint>
-
-
-	<shipBlueprint name="PLAYER_SHIP_SAVIOR_2" layout="tcp_savior_b" img="tcp_savior_b">
-		<class>Savior Cruiser</class>
-		<name>Your Savior</name>
-		<unlock id="ship_PLAYER_SHIP_SAVIOR_2_unlock"/>
-		<desc>When this powerful variation of an Ancient Cruiser was designed, they overclocked its shields to make them completely impenetrable by normal lasers. However, doing so broke the System, reducing its capacity to a mere 2 shield bubbles.  </desc>
-		<systemList>
-			<artillery max="5" power="2" room="7" start="true" weapon="ARTILLERY_SAVIOR_LASER" img="room_artillery" />
-			<battery max="2" power="1" room="20" start="false" img="room_battery" />
-			<cloaking power="1" room="3" start="false" img="room_cloaking" />
-			<clonebay power="1" room="2" start="false">
-				<slot>
-					<number>3</number>
-				</slot>
-			</clonebay>
-			<doors power="2" room="0" start="true" img="room_doors">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones max="8" power="2" room="10" start="false" img="room_drones" />
-			<engines power="1" room="24" start="true" img="room_engines_8">
-				<slot>
-					<direction>left</direction>
-					<number>1</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="9" start="false" img="room_hacking_8" />
-			<medbay power="1" room="2" start="true" img="room_medbay_3">
-				<slot>
-					<number>3</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="13" start="false" img="room_mind" />
-			<oxygen power="1" room="30" start="false" img="room_oxygen_2" />
-			<pilot power="1" room="6" start="true" img="room_pilot_3">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="1" start="true" img="room_sensors_2">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</sensors>
-			<shields max="4" power="2" room="15" start="true" img="room_shields_7">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="23" start="false" />
-			<weapons max="8" power="3" room="18" start="true" img="room_weapons">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>4</weaponSlots>
-		<droneSlots>2</droneSlots>
-		<weaponList missiles="0" count="3">
-		    <weapon name="ANCIENT_ION_2" />
-		</weaponList>
-		<droneList drones="7" count="3">
-		</droneList>
-		<health amount="30" />
-		<maxPower amount="7" />
-		<crewCount amount="1" class="obelisk_royal" />
-		<crewCount amount="1" class="lanius_augmented" />
-		<crewCount amount="1" class="obelisk_royal" />
-		<crewCount amount="1" class="saviors" />
-		<aug name="REGEN_SHIELD" />
-		<shieldImage>tcp_savior_b</shieldImage>
-	</shipBlueprint>
-
-
-	<shipBlueprint name="PLAYER_SHIP_SAVIOR_3" layout="tcp_savior_c" img="tcp_savior_c">
-		<class>Savior Cruiser</class>
-	    <name>False Savior</name>
-	    <unlock id="ship_PLAYER_SHIP_SAVIOR_3_unlock"/>
-	    <desc>This vessel was captured by the Legion after striking a deal with an Avatar wishing to get away from the Federation. Unfortunately for said Avatar, the Legion does not take too kindly to "dirty traitors"... </desc>
-		<systemList>
-			<artillery max="5" power="1" room="28" start="true" weapon="ARTILLERY_SAVIOR_FALSE" img="room_artillery" />
-			<battery max="2" power="1" room="23" start="false" img="room_battery_2" />
-			<cloaking power="1" room="9" start="false" img="room_cloaking" />
-			<clonebay power="1" room="8" start="false">
-				<slot>
-					<number>1</number>
-				</slot>
-			</clonebay>
-			<doors power="2" room="29" start="false" img="room_doors_9">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones max="8" power="2" room="6" start="false" img="room_drones_12" />
-			<engines power="1" room="21" start="true" img="room_engines_8">
-				<slot>
-					<direction>left</direction>
-					<number>2</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="13" start="false" img="room_hacking_6" />
-			<medbay power="1" room="8" start="false" img="room_medbay">
-				<slot>
-					<number>1</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="12" start="false" img="room_mind_10" />
-			<oxygen power="1" room="3" start="true" img="room_oxygen" />
-			<pilot power="1" room="19" start="true" img="room_pilot_3">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="30" start="true" img="room_sensors_3">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields max="7" power="2" room="22" start="true" img="room_shields_2">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="1" start="false" />
-			<weapons max="8" power="3" room="7" start="true" img="room_weapons_7">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>2</weaponSlots>
-		<droneSlots>4</droneSlots>
-		<weaponList missiles="0" count="2">
-			<weapon name="ANCIENT_LANCE" />
-		</weaponList>
-		<droneList drones="3" count="4">
-		</droneList>
-		<health amount="50" />
-		<maxPower amount="7" />
-		<crewCount amount="1" class="goldroyal" />
-		<crewCount amount="1" class="human_legion" />
-		<crewCount amount="1" class="avatarlegion" />
-		<aug name="FALSE_SHIELD" />
-		<shieldImage>tcp_savior_c</shieldImage>
-	</shipBlueprint>
 </FTL>
+
 <FTL><!--system stuff-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -10076,7 +10268,7 @@
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 	-->
 	<!--not like we *really* need this unless we have a ship that has to upgrade to that level-->
-	<mod:findName type="systemBlueprint" name="weapons">
+	<mod:findName type="systemBlueprint" name="weapons"> <!--re: dalvest - some ships do indeed upgrade to higher levels-->
 	    <mod:findLike type="maxPower">
 	        <mod:setValue>20</mod:setValue>
 	    </mod:findLike>
@@ -10088,6 +10280,7 @@
 	    </mod:findLike>
 	</mod:findName>
 </FTL>
+
 <FTL><!--crew-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -10095,7 +10288,7 @@
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 	-->
 
-	<!--///////UNIQUE//////-->
+	<!--/////// SCRAPPER UNIQUES //////-->
 
 	<crewBlueprint name="trash_eater">
 		<title>Trash Eater</title>
@@ -10160,7 +10353,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--///////GENERIC - OFFBRAND PROTOGEN//////-->
+	<!--///////GENERIC - AVATARS//////-->
 
 	<crewBlueprint name="avatarlegion">
 		<title>Legionnare Avatar</title>
@@ -10196,23 +10389,20 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--///////POWER DRAIN CREW JANK//////-->
+	<!--/////// GENERIC - REMOTE CONTROL DRONE //////-->
 
-	<crewBlueprint name="void_drain"> <!--Void Laser Drain-->
-		<desc>Power Drain</desc>
-		<title>Power Drain</title>
-		<short>Power Drain</short>
-		<cost>50</cost>
+	<crewBlueprint name="rc_ld">
+		<desc>This contraption is a simple mine rigged on a remote control mech. Pilot it in the heart of the enemy ship and watch the fireworks.</desc>
+		<title>Remote Control "Lightning" Drone</title>
+		<short>RC-LD</short>
+		<cost>999</cost>
 		<bp>2</bp>
 		<rarity>0</rarity>
 		<powerList>
-	       <power>: -Draining 1 power from any system in the room for 20 seconds</power>
+			<power>Explodes when it runs out of health, dealing 1 hull damage, 1 system damage and 45 crew damage</power>
+			<power>Has 15HP, allowing it to manuever to its target room</power>
+			<power>Cannot attack, man, or repair and takes no hazard damage.</power>
 		</powerList>
-		<colorList>
-			<layer>
-			<color r="17" g="255" b="0" a="0.7"/>
-			</layer>
-		</colorList>
 	</crewBlueprint>
 
 	<!--///////GENERIC - SCRAPPERS//////-->
@@ -10336,7 +10526,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--/////// SPECIAL FORCES //////-->
+	<!--/////// GENERIC - SPECIAL FORCES //////-->
 
 	<crewBlueprint name="human_phoenix">
 	    <desc>Super Elite Federation Crew. This soldier is one of the best of the best available in the Federation - trained to maximum combat capability and heavily armored.</desc>
@@ -10368,8 +10558,7 @@
 	    </powerList>
 	</crewBlueprint>
 
-	<!--///////GENERIC - RSA//////-->
-	<!--///////REMEMBER, MOST UNCOMMON IS 5//////-->
+	<!--/////// GENERIC - RSA //////-->
 
 	<crewBlueprint name="kiviekith">
 		<desc>After years of genetic tampering, these former humans are forced to wear their bulky suits in order to survive. The RSA gladly accepted these misfits into their ranks.</desc>
@@ -10405,6 +10594,80 @@
 		</colorList>
 	</crewBlueprint>
 
+	<!--/////// GENERIC - ROBOTTOS //////-->
+
+	<crewBlueprint name="robottos">
+		<desc>These guys were built for ship construction and spatial exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
+		<cost>50</cost>
+		<title>Sentient</title>
+		<short>Sentient</short>
+		<rarity>5</rarity>
+		<powerList>
+			<power>80 HP owing to their frail and simple construction.</power>
+			<power>x0.7 repair speed and combat damage.</power>
+			<power>Unable to suffocate.</power>
+			<power>Takes x1.25 damage from fires.</power>
+			<power>Can be upgraded using scrap and drone parts.</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="robottos_machinist">
+		<desc>Elite Sentient Crew. This dedicated repair variant of the Sentient is made for maintaining ships in highly dangerous enviroments - perfect for combat situations.</desc>
+		<cost>70</cost>
+		<title>Sentient Machinist</title>
+		<short>Machinist</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>80 HP owing to their frail and simple construction</power>
+			<power>x2 repair speed, x0.7 combat damage</power>
+			<power>Unable to suffocate, completely fireproof</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="robottos_researcher">
+		<desc>Elite Sentient Crew. The brainy variant of the Sentient - an amazing dedicated system manner that cannot lose skills and starts with higher default skills, but is still as frail as the base Robotto.</desc>
+		<cost>70</cost>
+		<title>Sentient Researcher</title>
+		<short>Researcher</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>80 HP owing to their frail and simple construction.</power>
+			<power>x2 movement speed, x0.7 repair speed and combat damage, x1.3 sabotage speed</power>
+			<power>Unable to suffocate, does not lose skills when cloned.</power>
+			<power>takes x1.25 damage from fires, provides a bar of power to the current room</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="robottos_gunner">
+		<desc>Elite Sentient Crew. You'd expect some Sentients to specialize in fighting - and you'd be right. The gunner has a specialized targeting system and a stronger gun than the base version.</desc>
+		<cost>70</cost>
+		<title>Sentient Gunner</title>
+		<short>Gunner</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>80 HP owing to their frail and simple construction</power>
+			<power>x0.7 repair speed</power>
+			<power>Unable to suffocate</power>
+			<power>takes x1.25 damage from fires</power>
+			<power>x1.6 movement speed, takes x0.5 damage, deals x1.2 damage and x1.7 in ranged combat</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="robottos_police">
+		<desc>Elite Sentient Crew. A dedicated law enforcement Sentient - while not exactly following its original directives, this robot has joined the Militia in order to help uphold the law.</desc>
+		<cost>70</cost>
+		<title>Sentient Law Enforcement Scout</title>
+		<short>Scout</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>100 HP due to their durable armor</power>
+			<power>x0.7 repair speed</power>
+			<power>Unable to suffocate</power>
+			<power>takes x1.25 damage from fires</power>
+			<power>x1.6 movement speed, deals x1.4 damage, heals x2 faster</power>
+		</powerList>
+	</crewBlueprint>
+
 	<!--/////// RSA TANK //////-->
 
 	<crewBlueprint name="rsa_tank">
@@ -10438,100 +10701,9 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--/////// UNIQUE - CHEETAH - AVALI SECTOR//////-->
-
-	<crewBlueprint name="cheetah">
-		<desc>A fairly strange specimen of tabaxi that has spots and their frame is larger than usual.</desc>
-		<title>Cheetah</title>
-		<short>Cheetah</short>
-		<cost>69</cost>
-		<bp>2</bp>
-		<rarity>0</rarity>
-		<powerList>
-			<power>Inflicts 1.3x damage</power>
-			<power>Movement speed is 1.1x, takes 0.9x damage</power>
-			<power>Takes 1.5x hazard damage</power>
-		</powerList>
-	</crewBlueprint>
-
-	<!--/////// ROBOTTOS //////-->
-
-	<crewBlueprint name="robottos">
-		<desc>These guys were built for ship construction and spatial exploration, not war. They do make for good crew as long as you have no better alternative.</desc>
-		<cost>50</cost>
-		<title>Sentient</title>
-		<short>Sentient</short>
-		<rarity>5</rarity>
-		<powerList>
-			<power>80 HP owing to their frail and simple construction.</power>
-			<power>x0.7 repair speed and combat damage.</power>
-			<power>Unable to suffocate.</power>
-			<power>Takes x1.25 damage from fires.</power>
-			<power>Can be upgraded using scrap and drone parts.</power>
-		</powerList>
-	</crewBlueprint>
-
-	<crewBlueprint name="robottos_machinist">
-		<desc>This dedicated repair variant of the Sentient is made for maintaining ships in highly dangerous enviroments - perfect for combat situations.</desc>
-		<cost>70</cost>
-		<title>Sentient Machinist</title>
-		<short>Machinist</short>
-		<rarity>0</rarity>
-		<powerList>
-			<power>80 HP owing to their frail and simple construction</power>
-			<power>x2 repair speed, x0.7 combat damage</power>
-			<power>Unable to suffocate, completely fireproof</power>
-		</powerList>
-	</crewBlueprint>
-
-	<crewBlueprint name="robottos_researcher">
-		<desc>The brainy variant of the Sentient - an amazing dedicated system manner that cannot lose skills and starts with higher default skills, but is still as frail as the base Robotto.</desc>
-		<cost>70</cost>
-		<title>Sentient Researcher</title>
-		<short>Researcher</short>
-		<rarity>0</rarity>
-		<powerList>
-			<power>80 HP owing to their frail and simple construction.</power>
-			<power>x2 movement speed, x0.7 repair speed and combat damage, x1.3 sabotage speed</power>
-			<power>Unable to suffocate, does not lose skills when cloned.</power>
-			<power>takes x1.25 damage from fires, provides a bar of power to the current room</power>
-		</powerList>
-	</crewBlueprint>
-
-	<crewBlueprint name="robottos_gunner">
-		<desc>You'd expect some Sentients to specialize in fighting - and you'd be right. The gunner has a specialized targeting system and a stronger gun than the base version.</desc>
-		<cost>70</cost>
-		<title>Sentient Gunner</title>
-		<short>Gunner</short>
-		<rarity>0</rarity>
-		<powerList>
-			<power>80 HP owing to their frail and simple construction</power>
-			<power>x0.7 repair speed</power>
-			<power>Unable to suffocate</power>
-			<power>takes x1.25 damage from fires</power>
-			<power>x1.6 movement speed, takes x0.5 damage, deals x1.2 damage and x1.7 in ranged combat</power>
-		</powerList>
-	</crewBlueprint>
-
-	<crewBlueprint name="robottos_police">
-		<desc>A dedicated law enforcement Sentient - while not exactly following its original directives, this robot has joined the Militia in order to help uphold the law.</desc>
-		<cost>70</cost>
-		<title>Sentient Law Enforcement Scout</title>
-		<short>Scout</short>
-		<rarity>0</rarity>
-		<powerList>
-			<power>100 HP due to their durable armor</power>
-			<power>x0.7 repair speed</power>
-			<power>Unable to suffocate</power>
-			<power>takes x1.25 damage from fires</power>
-			<power>x1.6 movement speed, deals x1.4 damage, heals x2 faster</power>
-		</powerList>
-	</crewBlueprint>
-
-
 	<!--/////// MANTIS //////-->
 
-	<crewBlueprint name="mantis_freebusiness">
+	<crewBlueprint name="mantis_freebusiness"> <!-- UNIQUE -->
 		<desc>Slugton's ultraliberal Free Mantis sidekick, armed with two sharp claws, a love for jogging and an iconic faceplate scar from RAPTOR's claws. Sigma grindset not included.</desc>
 		<title>Free Business Mantis</title>
 		<short>Businessmantis</short>
@@ -10546,7 +10718,7 @@
 	</crewBlueprint>
 
 	<crewBlueprint name="mantis_rsa">
-		<desc>A Hive Mantis with prosthetic claws - they are frail and terrible in combat but work surprsingly well in repairs. They might not fit in with their brethren in the Hive, but they're always welcome in the RECLAIM and SALVAGE ASSOCIATION.</desc>
+		<desc>Elite RSA Crew. A Hive Mantis with prosthetic claws - they are frail and terrible in combat but work surprsingly well in repairs. They might not fit in with their brethren in the Hive, but they're always welcome in the RECLAIM and SALVAGE ASSOCIATION.</desc>
 		<title>RSA Hive Mantis</title>
 		<short>RSA Mantis</short>
 		<cost>60</cost>
@@ -10568,7 +10740,7 @@
 		</colorList>
 	</crewBlueprint>
 
-	<!--///////UNIQUES//////-->
+	<!--////// /UNIQUES - MULTIVERSAL TRAVELERS //////-->
 
 	<crewBlueprint name="kora">
 		<desc>A multiversal traveler from a highly different world - one with cosmic horrors and magic, but similar war crimes to ours. This albino "Nireshirai" is as dangerous as he is stubborn.</desc>
@@ -10584,7 +10756,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--///////CREWMATE AREA (DANGER: KINDA SUS)//////-->
+	<!--/////// CREWMATE AREA (DANGER: KINDA SUS) //////-->
 
 	<crewBlueprint name="crewmate">
 		<desc>Kind of suspicious, with no known origin, destination, or even a known language. They are not to be trusted.</desc>
@@ -10706,7 +10878,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="protogen_pete">
+	<crewBlueprint name="protogen_pete"> <!-- UNIQUE -->
 		<desc>When asked what P.E.T.E. stands for, he will simply start a talk about something called P.I.R.A.T.E..</desc>
 		<cost>1</cost>
 		<title>P.E.T.E.</title>
@@ -10724,7 +10896,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="protogen_tracker">
+	<crewBlueprint name="protogen_tracker"> <!-- UNIQUE -->
 		<desc>TRACKER ONLINE! Badass but lazy, this protogen ship captain probably knows what he's doing... sometimes.</desc>
 		<cost>80</cost>
 		<title>TRACKER</title>
@@ -10738,7 +10910,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="primagen_raptor">
+	<crewBlueprint name="primagen_raptor"> <!-- UNIQUE -->
 		<desc>This primagen (not protogen!) is TRACKER's highly augmented friend. He's an excellent weapon technician and a highly capable soldier.</desc>
 		<cost>80</cost>
 		<title>RAPTOR</title>
@@ -10753,7 +10925,7 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="clonefail_lancer">
+	<crewBlueprint name="clonefail_lancer"> <!-- UNIQUE -->
 		<desc>The abhorrent half-protogen and half-sergal failed DNA splice that... i guess, is Lancer. He's a... clonefail, probably? His tongue is probably the most dangerous weapon he has.</desc>
 		<cost>80</cost>
 		<title>Lancer</title>
@@ -10812,7 +10984,7 @@
 		</colorList>
 	</crewBlueprint>
 
-	<crewBlueprint name="sergal_cheese">
+	<crewBlueprint name="sergal_cheese"> <!-- UNIQUE -->
 		<desc>RAPTOR's boyfriend, sergal, ex-RSA mechanic, Ship Engineer aboard the legendary Garbage Compactor. Created many contraptions. Loves noodles.</desc>
 		<cost>80</cost>
 		<title>Cheese</title>
@@ -10868,6 +11040,20 @@
 	            <color r="175" g="87" b="32" a="1"/> <!--rust-->
 	        </layer>
 		</colorList>
+	</crewBlueprint>
+
+	<crewBlueprint name="cheetah">
+		<desc>A fairly strange specimen of tabaxi that has spots and their frame is larger than usual.</desc>
+		<title>Cheetah</title>
+		<short>Cheetah</short>
+		<cost>69</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<powerList>
+			<power>Inflicts 1.3x damage</power>
+			<power>Movement speed is 1.1x, takes 0.9x damage</power>
+			<power>Takes 1.5x hazard damage</power>
+		</powerList>
 	</crewBlueprint>
 
 	<!--/////////////// BIRB BRIBRBIIBRIBRB BIRB BIRBBIRBBIRBIRB //////////////////////-->
@@ -10964,9 +11150,10 @@
 		</powerList>
 	</crewBlueprint>
 
-	<!--///////Functional crew//////-->
+	<!--/////// CREWJANKS //////-->
+
 	<crewBlueprint name="tcc_generic_crewjank">
-		<desc>Jank</desc>
+		<desc>DEBUFFER CREWJANK</desc>
 		<title>Jank</title>
 		<short>Jank</short>
 		<cost>50</cost>
@@ -10979,6 +11166,23 @@
 		<colorList>
 			<layer>
 				<color r="17" g="255" b="0" a="0.7"/>
+			</layer>
+		</colorList>
+	</crewBlueprint>
+
+	<crewBlueprint name="void_drain"> <!--Void Laser Drain-->
+		<desc>Power Drain</desc>
+		<title>Power Drain</title>
+		<short>Power Drain</short>
+		<cost>50</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<powerList>
+			<power>: -Draining 1 power from any system in the room for 20 seconds</power>
+		</powerList>
+		<colorList>
+			<layer>
+			<color r="17" g="255" b="0" a="0.7"/>
 			</layer>
 		</colorList>
 	</crewBlueprint>

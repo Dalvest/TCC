@@ -41,13 +41,13 @@
 	<mountPoint x="3" y="34"/>
 </weaponAnim>
 
-<animSheet name="tc_shotgun_unstable" w="296" h="49" fw="37" fh="49">weapon_flak/tc_shotgun_unstable.png</animSheet>
+<animSheet name="tc_shotgun_unstable" w="312" h="56" fw="39" fh="56">weapon_flak/tc_shotgun_unstable.png</animSheet>
 <weaponAnim name="tc_shotgun_unstable">
 	<sheet>tc_shotgun_unstable</sheet>
 	<desc length="8" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>3</fireFrame>
-	<firePoint  x="14" y="26"/>
+	<firePoint  x="14" y="8s"/>
 	<mountPoint x="3" y="34"/>
 </weaponAnim>
 
@@ -122,6 +122,17 @@
 	<mountPoint x="7" y="44"/>
 </weaponAnim>
 
+<animSheet name="rc_ld_launcher" w="407" h="53" fw="37" fh="53">weapon_flak/rc_ld_launcher.png</animSheet>
+<weaponAnim name="rc_ld_launcher">
+	<sheet>rc_ld_launcher</sheet>
+	<desc length="11" x="0" y="0"/>
+	<chargedFrame>3</chargedFrame>
+	<fireFrame>6</fireFrame>
+	<firePoint  x="14" y="22"/>
+	<mountPoint x="3" y="33"/>
+	<chargeImage>weapon_flak/rc_ld_launcher_glow.png</chargeImage>
+</weaponAnim>
+
 
 <!--////////////////// ARTY ZONE /////////////////-->
 
@@ -185,7 +196,6 @@
 	<mountPoint x="0" y="0"/>
 </weaponAnim>
 
-
 <animSheet name="artillery_savior_b" w="5977" h="244" fw="139" fh="244">artillery_player/artillery_savior_b.png</animSheet>
 <weaponAnim name="artillery_savior_b">
 	<sheet>artillery_savior_b</sheet>
@@ -195,7 +205,6 @@
 	<firePoint  x="69" y="5"/>
 	<mountPoint x="0" y="0"/>
 </weaponAnim>
-
 
 <animSheet name="artillery_savior_c" w="1807" h="244" fw="139" fh="244">artillery_player/artillery_savior_c.png</animSheet>
 <weaponAnim name="artillery_savior_c">
@@ -447,6 +456,17 @@
 </weaponAnim>
 
 <!--/////////////////// LASER //////////////////-->
+
+<animSheet name="DLX_molot" w="204" h="84" fw="34" fh="84">weapon_laser/DLX_molot.png</animSheet>
+<weaponAnim name="DLX_molot">
+	<sheet>DLX_molot</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="18" y="3"/>
+	<mountPoint x="4" y="70"/>
+	<chargeImage>weapon_laser/DLX_molot_color.png</chargeImage>
+</weaponAnim>
 
 <animSheet name="tc_laser_marksman" w="392" h="95" fw="28" fh="95">weapon_laser/tc_laser_marksman.png</animSheet>
 <weaponAnim name="tc_laser_marksman">
@@ -6334,6 +6354,64 @@
 	<anim name="avatarlegion_portrait">
 		<sheet>avatarlegion</sheet>
 		<desc length="1" x="0" y="0" />
+		<time>1</time>
+	</anim>
+
+	<!--/////// OK BOOMER //////-->
+	<animSheet name="rc_ld" w="315" h="70" fw="35" fh="35">people/rc_ld_base.png</animSheet>
+	<anim name="rc_ld_death_right">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="0"/>
+		<time>0.8</time>
+	</anim>
+	<anim name="rc_ld_death_left">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="0"/>
+		<time>0.8</time>
+	</anim>
+	<anim name="rc_ld_walk_down">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="1"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="rc_ld_walk_right">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="1"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="rc_ld_walk_up">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="1"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="rc_ld_walk_left">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="1"/>
+		<time>0.75</time>
+	</anim>
+	<anim name="rc_ld_shoot_down">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rc_ld_shoot_right">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rc_ld_shoot_up">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rc_ld_shoot_left">
+		<sheet>rc_ld</sheet>
+		<desc length="9" x="0" y="1"/>
+		<time>1.0</time>
+	</anim>
+	<anim name="rc_ld_portrait">
+		<sheet>rc_ld</sheet>
+		<desc length="1" x="0" y="1"/>
 		<time>1</time>
 	</anim>
 
