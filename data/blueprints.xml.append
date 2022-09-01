@@ -5885,8 +5885,8 @@
 		<unlock id="ship_PLAYER_SHIP_TRASH_REACTOR_unlock"/>
 		<systemList>
 			<artillery power="2" room="0" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_6" />
-			<battery power="1" max="2" room="17" start="false" img="room_battery_10" />
-			<cloaking power="1" room="7" start="false" img="room_cloaking_3" />
+			<battery power="1" room="17" start="false" img="room_battery_10" />
+			<cloaking power="1" room="22" start="false" img="room_cloaking_3" />
 			<clonebay power="1" room="16" start="true">
 				<slot>
 					<number>1</number>
@@ -5898,7 +5898,7 @@
 					<number>1</number>
 				</slot>
 			</doors>
-			<drones power="2" room="13" start="false" img="room_drones" />
+			<drones power="2" max="8" room="13" start="false" img="room_drones" />
 			<engines power="2" max="8" room="11" start="true" img="room_engines_TCC">
 				<slot>
 					<direction>left</direction>
@@ -5931,29 +5931,24 @@
 					<number>0</number>
 				</slot>
 			</shields>
-			<teleporter power="1" room="3" start="false" />
-			<temporal power="1" room="8" start="false" img="" />
-			<weapons power="4" max="8" room="2" start="true" img="room_weapons">
+			<teleporter power="1" room="21" start="false" />
+			<weapons power="2" max="8" room="2" start="true" img="room_weapons">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</weapons>
 		</systemList>
-		<systemLimit>10</systemLimit>
 		<weaponSlots>4</weaponSlots>
 		<droneSlots>3</droneSlots>
 		<weaponList missiles="7" count="4">
-			<weapon name="TC_OVERLORD" />
+			<weapon name="BOMB_BIO" />
 		</weaponList>
-		<droneList drones="15" count="4">
-			<drone name="REPAIR" />
-		</droneList>
+		<droneList drones="8" count="4" />
 		<health amount="30" />
 		<maxPower amount="6" />
 		<aug name="LOCKED_SCRAP_ARMOR" />
 		<aug name="ANCIENT_DNA" />
-		<aug name="ENERGY_SHIELD" />
 	</shipBlueprint>
 
 	<!--/////////////// ECHO 1-LINER ///////////////-->
@@ -6004,8 +5999,8 @@
 					<number>0</number>
 				</slot>
 			</shields>
-			<teleporter power="1" room="4" start="true" />
-			<weapons power="4" max="8" room="2" start="true" img="room_weapons_echo">
+			<teleporter power="1" room="4" start="false" />
+			<weapons power="3" max="8" room="2" start="true" img="room_weapons_echo">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
@@ -6015,8 +6010,7 @@
 		<weaponSlots>4</weaponSlots>
 		<droneSlots>2</droneSlots>
 		<weaponList missiles="2" count="4">
-			<weapon name="TC_PULSAR" />
-			<weapon name="TC_PULSAR_SMOL" />
+			<weapon name="TC_OVERLORD" />
 		</weaponList>
 		<droneList drones="0" count="2">
 			<drone name="BATTLETOG_BOARDER" />
@@ -6073,7 +6067,7 @@
 					<number>0</number>
 				</slot>
 			</shields>
-			<teleporter power="1" room="4" start="false" />
+			<teleporter power="1" room="4" start="true" />
 			<weapons power="2" max="8" room="2" start="true" img="room_weapons_echo">
 				<slot>
 					<direction>up</direction>
@@ -6084,7 +6078,7 @@
 		<weaponSlots>4</weaponSlots>
 		<droneSlots>2</droneSlots>
 		<weaponList missiles="13" count="4">
-			<weapon name="TC_CLOAKER" />
+			<weapon name="TC_PULSAR" />
 		</weaponList>
 		<droneList drones="9" count="2">
 			<drone name="DEFENSE_1" />
@@ -6490,8 +6484,8 @@
 					<number>1</number>
 				</slot>
 			</doors>
-			<drones power="4" room="13" start="true" img="room_drones_orchid_2" />
-			<engines power="2" room="0" start="true" img="room_engines_10">
+			<drones power="4" max="8" room="13" start="true" img="room_drones_orchid_2" />
+			<engines power="2" max="8" room="0" start="true" img="room_engines_10">
 				<slot>
 					<direction>left</direction>
 					<number>0</number>
@@ -6517,14 +6511,14 @@
 					<number>0</number>
 				</slot>
 			</sensors>
-			<shields power="2" room="6" start="true" img="room_shields_9">
+			<shields power="2" max="8" room="6" start="true" img="room_shields_9">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</shields>
 			<teleporter power="2" room="14" start="true" />
-			<weapons power="2" room="8" start="false" img="room_weapons_6">
+			<weapons power="2" max="8" room="8" start="false" img="room_weapons_6">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
@@ -7490,8 +7484,8 @@
 					<number>0</number>
 				</slot>
 			</doors>
-			<drones power="2" room="10" start="false" img="room_drones_15" />
-			<engines power="2" room="1" start="true" img="room_engines_5">
+			<drones power="2" max="8" room="10" start="false" img="room_drones_15" />
+			<engines power="2" max="8" room="1" start="true" img="room_engines_5">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
@@ -7517,14 +7511,14 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields power="2" room="3" start="false" img="room_shields_5">
+			<shields power="2" max="8" room="3" start="false" img="room_shields_5">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
 				</slot>
 			</shields>
 			<teleporter power="1" room="16" start="false" />
-			<weapons power="4" room="7" start="true" img="room_weapons_11">
+			<weapons power="4" max="8" room="7" start="true" img="room_weapons_11">
 				<slot>
 					<direction>right</direction>
 					<number>1</number>
