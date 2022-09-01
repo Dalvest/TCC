@@ -974,6 +974,29 @@ SPEED          Changes gamespeed
       <crewLimit>12</crewLimit>
     </mod-append:customShip>
 
+	<!--/////////////////// FALCON FRIGATE //////////////// -->
+
+	<mod-append:ship name="PLAYER_SHIP_FALCON_FRIGATE" b="false" c="false" unused="true" >
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_AVALI</shipReq>
+		</unlock>
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_AVALI_2</shipReq>
+		</unlock>
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_AVALI_3</shipReq>
+		</unlock>
+	</mod-append:ship>
+
+	<mod-append:customShip name="PLAYER_SHIP_FALCON_FRIGATE">
+		<hiddenAug>SHIP_AVALI</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>12</crewLimit>
+	</mod-append:customShip>
+
     <!--/////////////////// AVALI SLOT 2 //////////////// -->
 
     <mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" >
@@ -991,8 +1014,6 @@ SPEED          Changes gamespeed
         <robottos_gunner room="0" />
       </crew>
     </mod-append:customShip>
-
-
 
     <!--/////// FSF BLACK OPS //////-->
 
@@ -1736,7 +1757,7 @@ SPEED          Changes gamespeed
 			<!--Page 3--> <!-- Line 1 - Avali/Protogen Project Ships; Line 2 - Hektar Ships -->
 			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
 			<mod-append:empty/>
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_FALCON_FRIGATE</mod-append:ship> <!--Falcon Frigate-->
 			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship> <!--Armored Wasp-->
 			<mod-append:empty/>
 			<mod-append:empty/>

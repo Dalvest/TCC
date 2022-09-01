@@ -5899,7 +5899,7 @@
 				</slot>
 			</doors>
 			<drones power="2" room="13" start="false" img="room_drones" />
-			<engines power="2" max="8" room="11" start="true" img="room_engines_8ManningTopLeft">
+			<engines power="2" max="8" room="11" start="true" img="room_engines_TCC">
 				<slot>
 					<direction>left</direction>
 					<number>0</number>
@@ -6117,14 +6117,14 @@
 					<number>0</number>
 				</slot>
 			</doors>
-			<drones max="8" power="1" room="11" start="false" img="room_drones_2_alt" />
+			<drones max="8" power="1" room="11" start="false" img="room_drones_TCC_2" />
 			<engines max="8" power="3" room="7" start="true" img="room_engines_7">
 				<slot>
 					<direction>right</direction>
 					<number>3</number>
 				</slot>
 			</engines>
-			<hacking power="1" room="10" start="false" img="room_hacking_7_MSFED" />
+			<hacking power="1" room="10" start="false" img="room_hacking_7_TCC" />
 			<medbay power="1" room="5" start="true" img="room_medbay_3">
 				<slot>
 					<number>3</number>
@@ -6757,7 +6757,7 @@
 		<desc>Back in it's original form, this ship is ready to conduct commerce through the galaxy, but in turn that has left the ship with little offense or defense and must rely on the crew to make it!</desc>
 		<systemList>
 			<artillery power="3" max="4" room="2" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_C" img="room_artillery_7" />
-			<cloaking power="2" room="5" start="false" img="room_cloaking 2x1 01-00-00" />
+			<cloaking power="2" room="5" start="false" img="room_cloaking_TCC" />
 			<clonebay power="1" room="13" start="true">
 				<slot>
 					<number>1</number>
@@ -6769,7 +6769,7 @@
 					<number>1</number>
 				</slot>
 			</doors>
-			<drones power="4" max="8" room="7" start="true" img="room_drones_2_alt" />
+			<drones power="4" max="8" room="7" start="true" img="room_drones_TCC_2" />
 			<engines power="2" room="1" start="true" img="room_engines_8">
 				<slot>
 					<direction>left</direction>
@@ -7058,7 +7058,7 @@
 					<number>1</number>
 				</slot>
 			</medbay>
-			<mind power="1" room="11" start="false" img="room_mind_1x1" />
+			<mind power="1" room="11" start="false" img="room_mind_TCC" />
 			<oxygen power="1" room="13" start="false" img="room_oxygen" />
 			<pilot power="1" room="0" start="true" img="room_pilot_7">
 				<slot>
@@ -7475,6 +7475,7 @@
 		<class>Falcon-Class Frigate</class>
 		<name>Kormorant</name>
 		<desc>When you want reliable, powerful tech, you can always count on an Avali engineer. Despite it being old, this ship is still reliable for stealth and infiltration. Some say it was a crucial backbone during the Protogen Revolution.</desc>
+		<unlock id="ship_PLAYER_SHIP_FALCON_FRIGATE_unlock" />
 		<systemList>
 			<battery power="1" room="18" start="false" img="room_battery_3" />
 			<cloaking power="1" room="21" start="true" img="room_cloaking_doubledeal" />
@@ -7565,7 +7566,7 @@
 					<number>0</number>
 				</slot>
 			</doors>
-			<drones power="2" max="8" room="8" start="true" img="room_drones_2_alt" />
+			<drones power="2" max="8" room="8" start="true" img="room_drones_TCC_2" />
 			<engines power="1" max="8" room="5" start="true" img="room_engines_10">
 				<slot>
 					<direction>left</direction>
@@ -7578,8 +7579,8 @@
 					<number>1</number>
 				</slot>
 			</medbay>
-			<mind power="1" room="10" start="true" img="room_mind_1x1" />
-			<oxygen power="1" room="4" start="true" img="room_oxygen_FM_2" />
+			<mind power="1" room="10" start="true" img="room_mind_TCC" />
+			<oxygen power="1" room="4" start="true" img="room_oxygen_TCC_2" />
 			<pilot power="2" room="0" start="true" img="room_pilot">
 				<slot>
 					<direction>right</direction>
@@ -7592,7 +7593,7 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields power="2" max="6" room="3" start="false" img="room_shields_2.s__c__">
+			<shields power="2" max="6" room="3" start="false" img="room_shields_TCC_2">
 				<slot>
 					<direction>down</direction>
 					<number>1</number>
@@ -7638,7 +7639,7 @@
 					<number>0</number>
 				</slot>
 			</doors>
-			<drones power="1" max="8" room="8" start="false" img="room_drones_2_alt" />
+			<drones power="1" max="8" room="8" start="false" img="room_drones_TCC_2" />
 			<engines power="2" max="8" room="5" start="true" img="room_engines_10">
 				<slot>
 					<direction>left</direction>
@@ -7651,8 +7652,8 @@
 					<number>1</number>
 				</slot>
 			</medbay>
-			<mind power="1" room="10" start="false" img="room_mind_1x1" />
-			<oxygen power="1" room="4" start="true" img="room_oxygen_FM_2" />
+			<mind power="1" room="10" start="false" img="room_mind_TCC" />
+			<oxygen power="1" room="4" start="true" img="room_oxygen_TCC_2" />
 			<pilot power="1" room="0" start="true" img="room_pilot">
 				<slot>
 					<direction>right</direction>
@@ -7665,7 +7666,7 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields power="2" max="6" room="3" start="true" img="room_shields_2.s__c__">
+			<shields power="2" max="6" room="3" start="true" img="room_shields_TCC_2">
 				<slot>
 					<direction>down</direction>
 					<number>1</number>
@@ -7709,7 +7710,7 @@
 					<number>0</number>
 				</slot>
 			</doors>
-			<drones power="2" max="8" room="8" start="true" img="room_drones_2_alt" />
+			<drones power="2" max="8" room="8" start="true" img="room_drones_TCC_2" />
 			<engines power="1" max="8" room="5" start="true" img="room_engines_10">
 				<slot>
 					<direction>left</direction>
@@ -7722,8 +7723,8 @@
 					<number>1</number>
 				</slot>
 			</medbay>
-			<mind power="1" room="10" start="false" img="room_mind_1x1" />
-			<oxygen power="1" room="4" start="true" img="room_oxygen_FM_2" />
+			<mind power="1" room="10" start="false" img="room_mind_TCC" />
+			<oxygen power="1" room="4" start="true" img="room_oxygen_TCC_2" />
 			<pilot power="2" room="0" start="true" img="room_pilot">
 				<slot>
 					<direction>right</direction>
@@ -7736,7 +7737,7 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields power="2" max="6" room="3" start="false" img="room_shields_2.s__c__">
+			<shields power="2" max="6" room="3" start="false" img="room_shields_TCC_2">
 				<slot>
 					<direction>down</direction>
 					<number>1</number>
@@ -7850,7 +7851,7 @@
 		<desc>WELCOME TO [TRIAL VERSION] OF [moderate difficulty ship]!!! PLAY NOW PLAY NOW - BECOME [bigshot]! ACQUIRE maximum [UWU]! BUSINESS IS (completely and utterly mandatory lmao)!</desc>
 		<unlock id="ship_PLAYER_SHIP_SLUGTON_unlock"/>
 		<systemList>
-			<cloaking power="1" room="14" start="false" img="room_cloaking 2x1 01-00-00" />
+			<cloaking power="1" room="14" start="false" img="room_cloaking_TCC" />
 			<clonebay power="1" room="11" start="false">
 				<slot>
 					<number>1</number>
@@ -7924,7 +7925,7 @@
 		<unlock id="ship_PLAYER_SHIP_SLUGTON_2_unlock"/>
 		<systemList>
 			<battery power="1" room="2" start="true" img="room_battery" />
-			<cloaking power="1" room="14" start="false" img="room_cloaking 2x1 01-00-00" />
+			<cloaking power="1" room="14" start="false" img="room_cloaking_TCC" />
 			<clonebay power="1" room="11" start="true">
 				<slot>
 					<number>1</number>
@@ -8001,7 +8002,7 @@
 			<artillery power="1" room="16" start="true" weapon="SINGULARITY_PROJECTOR_1" img="room_artillery" />
 			<artillery power="1" room="14" start="true" weapon="SINGULARITY_PROJECTOR_1" img="room_artillery" />
 			<battery power="1" room="2" start="false" img="room_battery" />
-			<cloaking power="1" room="13" start="true" img="room_cloaking 2x1 01-00-00" />
+			<cloaking power="1" room="13" start="true" img="room_cloaking_TCC" />
 			<clonebay power="1" room="10" start="true">
 				<slot>
 					<number>1</number>
@@ -8040,7 +8041,7 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields max="8" power="2" room="18" start="false" img="room_shields_2.s__c__ComputerAtTopRight">
+			<shields max="8" power="2" room="18" start="false" img="room_shields_TCC_3">
 				<slot>
 					<direction>right</direction>
 					<number>0</number>
@@ -8375,7 +8376,7 @@
 					<number>1</number>
 				</slot>
 			</doors>
-			<drones power="1" room="4" max="8" start="false" img="room_drones_1._s__w_" />
+			<drones power="1" room="4" max="8" start="false" img="room_drones_TCC" />
 			<engines power="3" room="6" max="8" start="true" img="room_engines_9">
 				<slot>
 					<direction>up</direction>
@@ -8388,7 +8389,7 @@
 					<number>1</number>
 				</slot>
 			</medbay>
-			<mind power="1" room="12" start="false" img="room_mind_1x1" />
+			<mind power="1" room="12" start="false" img="room_mind_TCC" />
 			<oxygen power="1" room="8" start="true" img="room_oxygen_10" />
 			<pilot power="1" room="0" start="true" img="room_pilot_doubledeal">
 				<slot>
@@ -8448,7 +8449,7 @@
 					<number>1</number>
 				</slot>
 			</doors>
-			<drones power="2" max="8" room="4" start="true" img="room_drones_1._s__w_" />
+			<drones power="2" max="8" room="4" start="true" img="room_drones_TCC" />
 			<engines power="3" max="8" room="6" start="true" img="room_engines_9">
 				<slot>
 					<direction>up</direction>
@@ -8461,7 +8462,7 @@
 					<number>1</number>
 				</slot>
 			</medbay>
-			<mind power="1" room="12" start="false" img="room_mind_1x1" />
+			<mind power="1" room="12" start="false" img="room_mind_TCC" />
 			<oxygen power="2" room="8" start="true" img="room_oxygen_10" />
 			<pilot power="2" room="0" start="true" img="room_pilot_doubledeal">
 				<slot>
@@ -8701,7 +8702,7 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields power="2" max="16" room="1" start="true" img="room_shields_2.s__c__">
+			<shields power="2" max="16" room="1" start="true" img="room_shields_TCC_2">
 				<slot>
 					<direction>down</direction>
 					<number>1</number>
@@ -8755,8 +8756,8 @@
 				</slot>
 			</engines>
 			<hacking power="1" room="8" start="false" img="room_hacking_6" />
-			<mind power="1" room="9" start="false" img="room_mind_1x1" />
-			<oxygen power="1" room="10" start="true" img="room_oxygen_FM_2" />
+			<mind power="1" room="9" start="false" img="room_mind_TCC" />
+			<oxygen power="1" room="10" start="true" img="room_oxygen_TCC_2" />
 			<pilot power="1" room="6" start="true" img="room_pilot_fratricide">
 				<slot>
 					<direction>right</direction>
@@ -8815,15 +8816,15 @@
 				</slot>
 			</doors>
 			<drones power="2" max="8" room="7" start="true" img="room_drones_14" />
-			<engines power="1" max="8" room="9" start="true" img="room_engines_8ManningTopLeft">
+			<engines power="1" max="8" room="9" start="true" img="room_engines_TCC">
 				<slot>
 					<direction>left</direction>
 					<number>0</number>
 				</slot>
 			</engines>
 			<hacking power="1" room="5" start="false" img="room_hacking_7" />
-			<mind power="1" room="12" start="true" img="room_mind_1x1" />
-			<oxygen power="1" room="2" start="true" img="room_oxygen_FM_2" />
+			<mind power="1" room="12" start="true" img="room_mind_TCC" />
+			<oxygen power="1" room="2" start="true" img="room_oxygen_TCC_2" />
 			<pilot power="1" room="6" start="true" img="room_pilot_fratricide">
 				<slot>
 					<direction>right</direction>
