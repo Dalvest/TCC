@@ -6473,6 +6473,80 @@
 		<crewCount amount="1" class="human_engineer" />
 		<aug name="CRATE_DRONES" />
 	</shipBlueprint>
+	
+	<!--/////// THE TECHLANCE //////-->
+	
+	<shipBlueprint name="PLAYER_SHIP_TECHLANCE" layout="tcp_techlance" img="tcp_techlance">
+		<class>Techlance Cruiser</class>
+		<name>WANDERER</name>
+		<desc>Whatever the origin of the Sentients may be - constructed by a warmorgering group of humans or fresh out of an RSA RnD laboratory, it's clear that these robotic would've built their own ship eventually.</desc>
+		<systemList>
+			<artillery power="1" room="16" start="false" weapon="ARTILLERY_FED" img="room_artillery_7" />
+			<battery power="1" room="9" start="true" img="room_battery_orchid" />
+			<cloaking power="1" room="5" start="true" img="room_cloaking_2" />
+			<doors power="1" room="12" start="false" img="room_doors_tl">
+				<slot>
+					<direction>left</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones power="4" room="13" start="true" img="room_drones_orchid_2" />
+			<engines power="2" room="0" start="true" img="room_engines_10">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="2" start="true" img="room_hacking_5" />
+			<medbay power="1" room="10" start="false" img="room_medbay_3">
+				<slot>
+					<number>3</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="11" start="false" img="room_mind_7" />
+			<oxygen power="1" room="1" start="true" img="room_oxygen_tl" />
+			<pilot power="1" room="7" start="true" img="room_pilot_2">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="4" start="false" img="room_sensors_tl">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</sensors>
+			<shields power="2" room="6" start="true" img="room_shields_9">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</shields>
+			<teleporter power="2" room="14" start="true" />
+			<weapons power="2" room="8" start="false" img="room_weapons_6">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>3</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="6" count="3" />
+		<droneList drones="18" count="3">
+			<drone name="DEFENSE_1" />
+			<drone name="SILICA_BOARDER" />
+			<drone name="MANNING" />
+		</droneList>
+		<health amount="30" />
+		<maxPower amount="5" />
+		<crewCount amount="1" class="robottos"/>
+		<crewCount amount="1" class="robottos_police"/>
+		<crewCount amount="1" class="robottos_machinist"/>
+		<crewCount amount="1" class="robottos_researcher"/>
+		<aug name="DRONE_RECOVERY" />
+	</shipBlueprint>
 
 	<!--/////// AGB  //////-->
 

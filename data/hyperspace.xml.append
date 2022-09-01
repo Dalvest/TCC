@@ -683,11 +683,32 @@ SPEED          Changes gamespeed
   		</crew>
   	</mod-append:customShip>
 
-  	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION_2">
-  		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>11</crewLimit>
-  	</mod-append:customShip>
+	<!--/////// TECHLANCE //////-->
+
+	<mod-append:ship name="PLAYER_SHIP_TECHLANCE" b="false" c="false" unused="true">
+		
+		<unlock variant="a" silent="false">
+			<type>5</type>
+			<victories>
+			  <victory>PLAYER_SHIP_TC_CONSTRUCTION</victory>
+			</victories>
+		  </unlock>
+
+		  <unlock variant="a" silent="false">
+			<type>5</type>
+			<victories>
+			  <victory>PLAYER_SHIP_TC_CONSTRUCTION_2</victory>
+			</victories>
+		  </unlock>
+
+	</mod-append:ship>
+
+	<mod-append:customShip name="PLAYER_SHIP_TECHLANCE">
+		<hiddenAug>SHIP_RSA</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>8</crewLimit>
+	</mod-append:customShip>
+
 
     <!--///////SIZE DOESN'T MATTER//////-->
 
@@ -1701,8 +1722,8 @@ SPEED          Changes gamespeed
 
 			<!--Page 2--> <!-- Line 1 - RECLAIM and SALVAGE ASSOCIATION; Line 2 - Echelon Shipyards -->
 			<mod-append:ship>PLAYER_SHIP_CORROSUS</mod-append:ship> <!--CorroSUS-->
-      <mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
-			<mod-append:empty/>
+  		    <mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
+  		    <mod-append:ship>PLAYER_SHIP_TECHLANCE</mod-append:ship> <!--Techlance-->
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:empty/>
