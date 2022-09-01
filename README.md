@@ -9,7 +9,7 @@ Lead Devs: Dalvest, Zuggo
 
 Coders: Choosechee, Kommandant_Julk, Typerim, Vertaalfout, Untitled
 
-Artists: Ashley Hecker, Choosechee, ConMan, Cryntolov, Enchanter, Land Green, NitronEXE, Pedrosian96, Skye, SillySillyMan, Typerim, Wabbles
+Artists: Ashley Hecker, Choosechee, ConMan, Cryntolov, Enchanter, JamesTripleQ, Land Green, NitronEXE, Pedrosian96, Skye, SillySillyMan, Typerim, Wabbles
 
 Playtesters: DemonFusionGamer, Lex, marcrusian, The Ghost Hugger
 
