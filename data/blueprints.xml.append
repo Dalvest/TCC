@@ -7394,11 +7394,11 @@
 
 	<shipBlueprint name="PLAYER_SHIP_FALCON_FRIGATE" layout="tcp_falcon_frigate" img="tcp_falcon_frigate">
 		<class>Falcon-Class Frigate</class>
-		<name>Navarin</name>
+		<name>Kormorant</name>
 		<desc>When you want reliable, powerful tech, you can always count on an Avali engineer. Despite it being old, this ship is still reliable for stealth and infiltration. Some say it was a crucial backbone during the Protogen Revolution.</desc>
 		<systemList>
 			<battery power="1" room="18" start="false" img="room_battery_3" />
-			<cloaking power="2" room="2" start="true" img="room_cloaking_7" />
+			<cloaking power="1" room="21" start="true" img="room_cloaking_doubledeal" />
 			<clonebay power="1" room="4" start="false">
 				<slot>
 					<number>3</number>
@@ -7410,8 +7410,8 @@
 					<number>0</number>
 				</slot>
 			</doors>
-			<drones max="8" power="2" room="10" start="false" img="room_drones_15" />
-			<engines power="4" room="1" start="true" img="room_engines_5">
+			<drones power="2" room="10" start="false" img="room_drones_15" />
+			<engines power="2" room="1" start="true" img="room_engines_5">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
@@ -7437,14 +7437,14 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields max="8" power="2" room="3" start="false" img="room_shields_5">
+			<shields power="2" room="3" start="false" img="room_shields_5">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
 				</slot>
 			</shields>
 			<teleporter power="1" room="16" start="false" />
-			<weapons max="8" power="4" room="7" start="true" img="room_weapons_11">
+			<weapons power="4" room="7" start="true" img="room_weapons_11">
 				<slot>
 					<direction>right</direction>
 					<number>1</number>
@@ -7453,14 +7453,15 @@
 		</systemList>
 		<weaponSlots>4</weaponSlots>
 		<droneSlots>2</droneSlots>
-		<weaponList missiles="1" count="4">
+		<weaponList missiles="5" count="4">
 			<weapon name="LASER_BURST_2" />
+			<weapon name="LASER_BURST_2" />
+			<weapon name="TC_SINEWAVE" />
 		</weaponList>
 		<droneList drones="1" count="2" />
 		<health amount="30" />
 		<maxPower amount="9" />
-		<crewCount amount="1" class="protogen" />
-		<crewCount amount="2" class="avali" />
+		<crewCount amount="3" class="avali" />
 		<crewCount amount="1" class="avali_illuminant" />
 		<aug name="EX_CLOAK_FIRE" />
 	</shipBlueprint>
