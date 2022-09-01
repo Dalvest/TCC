@@ -6524,7 +6524,7 @@
 				</slot>
 			</weapons>
 		</systemList>
-		<systemLimit>9</systemLimit>
+		<systemLimit>8</systemLimit>
 		<weaponSlots>3</weaponSlots>
 		<droneSlots>3</droneSlots>
 		<weaponList missiles="5" count="3" />
@@ -6607,6 +6607,11 @@
 			<artillery power="3" max="4" room="1" start="true" weapon="ARTILLERY_ENERGY_MATH" img="room_artillery_1x1" />
 			<battery power="1" max="2" room="7" start="true" img="room_battery_13" />
 			<cloaking power="2" room="13" start="false" img="room_cloaking_4" />
+			<clonebay power="1" room="8" start="false">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
 			<doors power="2" room="10" start="true" img="room_doors_7">
 				<slot>
 					<direction>up</direction>
