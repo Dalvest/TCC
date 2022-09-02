@@ -1008,6 +1008,21 @@ SPEED          Changes gamespeed
 		<crewLimit>12</crewLimit>
 	</mod-append:customShip>
 
+    <!--/////////////////// SMEW BATTLECRUISER //////////////// -->
+
+	<mod-append:ship name="PLAYER_SHIP_SMEW_BATTLECRUISER" b="false" c="false" unused="true" >
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>PLAYER_SHIP_FALCON_FRIGATE</shipReq>
+		</unlock>
+	</mod-append:ship>
+
+	<mod-append:customShip name="PLAYER_SHIP_SMEW_BATTLECRUISER">
+		<hiddenAug>SHIP_AVALI</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>8</crewLimit>
+	</mod-append:customShip>
+
     <!--/////////////////// AVALI SLOT 2 //////////////// -->
 
     <mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" >
@@ -1766,16 +1781,16 @@ SPEED          Changes gamespeed
 			<mod-append:ship>PLAYER_SHIP_ECHELON_ELITE</mod-append:ship> <!-- Echelon themed Elites -->
 
 			<!--Page 3--> <!-- Line 1 - Avali/Protogen Project Ships; Line 2 - Hektar Ships -->
-			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Avali Slot 1 -->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Harrier Cruiser -->
 			<mod-append:ship>PLAYER_SHIP_FALCON_FRIGATE</mod-append:ship> <!--Falcon Frigate-->
+			<mod-append:ship>PLAYER_SHIP_SMEW_BATTLECRUISER</mod-append:ship> <!--Smew Battlecruiser-->
 			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship> <!--Armored Wasp-->
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_HEKTAR_REBEL</mod-append:ship> <!-- Completely Original Design -->
 			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship> <!--RENT-A-FLAGSHIP-->
 
-			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
+			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- Harrier Mercantile -->
 			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming -->
 
 			<!--Page 4--> <!-- Federation Special Forces -->

@@ -7363,10 +7363,10 @@
 	<!--////////////////// AVALI SHIPS //////////////-->
 
 	<shipBlueprint name="PLAYER_SHIP_AVALI" layout="tcp_avali_A" img="tcp_avali_A">
-		<class>Avali Cruiser</class>
+		<class>Harrier-Class Cruiser</class>
 		<name>Oryzivora</name>
 		<unlock id="ship_PLAYER_SHIP_AVALI_unlock" />
-		<desc>This powerful Avali-made cruiser comes with one critical weakness; it completely lacks shields. Hopefully, its powerful weapons are enough to compensate.</desc>
+		<desc>This civilian-class Avali-made cruiser comes with one critical weakness; it completely lacks shields. Hopefully, its powerful weapons are enough to compensate.</desc>
 		<systemList>
 			<battery power="1" room="17" max="2" start="false" img="room_battery_15" />
 			<cloaking power="1" room="14" start="true" img="room_cloaking_orchid_2" />
@@ -7438,10 +7438,10 @@
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_AVALI_2" layout="tcp_avali_B" img="tcp_avali_B">
-		<class>Avali Cruiser</class>
+		<class>Harrier-Class Cruiser</class>
 		<name>Trochilidae</name>
 		<unlock id="ship_PLAYER_SHIP_AVALI_2_unlock" />
-		<desc>This cruiser, while lacking shields and cloaking, has a powerful arsenal of drones and an extremely capable drone system.</desc>
+		<desc>This cruiser lacks shields and cloaking but it has a powerful arsenal of drones and an extremely capable drone system.</desc>
 		<systemList>
 			<battery power="1" room="8" max="2" start="false" img="room_battery" />
 			<cloaking power="1" room="3" start="false" img="room_cloaking_orchid_3" />
@@ -7515,7 +7515,7 @@
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_AVALI_3" layout="tcp_avali_C" img="tcp_avali_c">
-		<class>Avali Cruiser</class>
+		<class>Harrier-Class Cruiser</class>
 		<name>Cathartes Aura</name>
 		<unlock id="ship_PLAYER_SHIP_AVALI_3_unlock" />
 		<desc>This cruiser, whilst struggling to get through shields, specializes in disrupting and manipulating the enemy crew in a variety of ways.</desc>
@@ -7591,6 +7591,76 @@
 		<maxPower amount="8" />
 	</shipBlueprint>
 
+	<!--///////////////////// SMEW BATTLECRUISER /////////////////////////-->
+
+	<shipBlueprint name="PLAYER_SHIP_SMEW_BATTLECRUISER" layout="tcp_smew_battlecruiser" img="tcp_smew_battlecruiser">
+		<class>Smew Battlecruiser</class>
+		<name>Intrepid</name>
+		<desc>The Smew is the mule of the Avali military fleet - wherever you look, you'll see at least one. It's practical, fast and efficient... exactly what the Avali need.</desc>
+		<systemList>
+			<battery power="1" room="5" start="false" img="room_battery_14" />
+			<cloaking power="1" room="6" start="true" img="room_cloaking_3" />
+			<clonebay power="1" room="1" start="true">
+				<slot>
+					<number>3</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="9" start="false" img="room_doors_13">
+				<slot>
+					<direction>up</direction>
+					<number>0</number>
+				</slot>
+			</doors>
+			<drones power="2" room="3" start="true" img="room_drones_orchid_3" />
+			<engines power="2" room="12" start="true" img="room_engines_10">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="4" start="false" img="room_hacking_8" />
+			<mind power="1" room="2" start="true" img="room_mind_9" />
+			<oxygen power="1" room="14" start="true" img="room_oxygen_5" />
+			<pilot power="2" room="0" start="true" img="room_pilot_2">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="2" room="10" start="true" img="room_sensors_6">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</sensors>
+			<shields power="2" room="7" start="true" img="room_shields_7">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="11" start="false" />
+			<weapons power="3" room="8" start="true" img="room_weapons_3">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>4</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="5" count="4">
+			<weapon name="AVALI_HUNTER2" />
+		</weaponList>
+		<droneList drones="8" count="3">
+			<drone name="COMBAT_MISSILE" />
+		</droneList>
+		<health amount="25" />
+		<maxPower amount="8" />
+		<crewCount amount="2" class="avali" />
+		<crewCount amount="1" class="protogen" />
+	</shipBlueprint>
+
 	<!--/////// FALCON FRIGATE //////-->
 
 	<shipBlueprint name="PLAYER_SHIP_FALCON_FRIGATE" layout="tcp_falcon_frigate" img="tcp_falcon_frigate">
@@ -7663,7 +7733,8 @@
 		<droneList drones="1" count="2" />
 		<health amount="30" />
 		<maxPower amount="9" />
-		<crewCount amount="3" class="avali" />
+		<crewCount amount="2" class="avali" />
+		<crewCount amount="1" class="protogen" />
 		<crewCount amount="1" class="avali_illuminant" />
 		<aug name="EX_CLOAK_FIRE" />
 	</shipBlueprint>
@@ -7671,9 +7742,9 @@
 	<!--///////////////////// ARMORED WASP /////////////////////////-->
 
 	<shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP" layout="tcp_armored_wasp" img="tcp_armored_wasp">
-		<class>Gladiator-Class Corvette</class>
+		<class>Vulture-Class Corvette</class>
 		<name>Armored Wasp</name>
-		<desc>This ship has actually been made by the Avali - it's highly powerful but also quite cramped. It uses top-of-the-line singularity projection tech, making it one of the most effective warships... provided that the enemy it sitting completely still.</desc>
+		<desc>This ship is a joint effort between Protogen and Avali engineers and the first ever Protogen ship. It uses top-of-the-line singularity projection tech, making it one of the most effective warships... provided that the enemy is sitting completely still.</desc>
 		<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_unlock"/>
 		<systemList>
 			<cloaking power="1" room="7" start="false" img="room_cloaking_2_1x1" />
@@ -7744,7 +7815,7 @@
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP_2" layout="tcp_armored_wasp_2" img="tcp_armored_wasp_2">
-		<class>Gladiator-Class Corvette</class>
+		<class>Vulture-Class Corvette</class>
 		<name>Starsector</name>
 		<desc>This Corvette is agile and swift - it's been refit to support the Federation's Fleet, carrying out forward scouting operations.</desc>
 		<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_2_unlock"/>
@@ -7815,7 +7886,7 @@
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP_3" layout="tcp_armored_wasp_3" img="tcp_armored_wasp_3">
-		<class>Gladiator-Class Corvette</class>
+		<class>Vulture-Class Corvette</class>
 		<name>Steel Dawn</name>
 		<desc>This is an extremely stealth-based ship - as long as you're cloaked or otherwise hidden, you're safe. Kora's very used to hiding, after all.</desc>
 		<unlock id="ship_PLAYER_SHIP_TC_ARMORED_WASP_3_unlock"/>
@@ -7888,12 +7959,12 @@
 		<aug name="EX_CLOAK_FIRE" />
 	</shipBlueprint>
 
-	<!--///////////////////// AVALI SLOT 2 /////////////////////////-->
+	<!--//////////////////////// HARRIER MERCANTILE CRUISER //////////////////////////-->
 
 	<shipBlueprint name="PLAYER_SHIP_AVALI_SLOT2" layout="tcp_avali_D" img="tcp_avali_D">
-		<class>Avali Merchant Cruiser</class>
+		<class>Harrier Mercantile Cruiser</class>
 		<name>Accipitridae</name>
-		<desc>This merchant cruiser was halfway through loading with junk to sell before it was pushed into military service. Luckily it's cargo teleporter can serve as an offense.</desc>
+		<desc>This merchant cruiser was halfway through being loaded with junk to sell before it was pushed into military service. Luckily, its cargo teleporter can serve as a solid offense.</desc>
 		<unlock id="ship_PLAYER_SHIP_AVALI_SLOT2_unlock"/>
 		<systemList>
 			<battery power="1" room="17" start="false" img="room_battery_6" />
@@ -7965,7 +8036,7 @@
 	</shipBlueprint>
 
 
-	<!--/////////////////////RENT-A-FLAGSHIP//////////////////////////-->
+	<!--///////////////////// RENT-A-FLAGSHIP //////////////////////////-->
 
 	<shipBlueprint name="PLAYER_SHIP_SLUGTON" layout="tcp_slugton" img="tcp_slugton">
 		<class>Rent-a-Flagship</class>
