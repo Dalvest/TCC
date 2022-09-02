@@ -4892,6 +4892,7 @@
 	LAB AUGMENTS
 	——————————————————————-->
 
+	<!-- ============== PROTOGEN ============ -->
 	<augBlueprint name="LAB_PROTOGEN_AWARENESS">
 		<title>Unstable Awareness Field</title>
 		<desc>Protogens now lose skills when cloned, but are immune to mind control and can see adjacent rooms, as well as sense lifeforms when sensors are down.</desc>
@@ -4940,6 +4941,8 @@
 		<stackable>false</stackable>
 	</augBlueprint>
 
+
+	<!-- ============== AVAILI ============ -->
 	<augBlueprint name="LAB_AVALI_FLAMECLOAKS">
 		<!--descs of these ones dont matter, theyre internals-->
 		<title>Flame Retardent Cloaks</title>
@@ -4977,6 +4980,57 @@
 		<title>Enhanced Cybernetics [L]</title>
 		<desc>Avali gain 30% fire, stun and suffocation resist, and no longer lose skills from cloning.</desc>
 		<cost>40</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<!-- ============== ROBOTTO ============ -->
+	<augBlueprint name="LAB_TCC_ROBOTTO_UPGRADE1">
+		<title>__upgrade1__</title>
+		<desc>Robottos ......</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+	
+	<augBlueprint name="LAB_TCC_ROBOTTO_UPGRADE2">
+		<title>__upgrade2__</title>
+		<desc>Robottos ......</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="LAB_TCC_ROBOTTO_UPGRADE3">
+		<title>__upgrade3__</title>
+		<desc>Robottos ......</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+
+	<!-- ============== SCRAPPER ============ -->
+	<augBlueprint name="LAB_TCC_SCRAPPER_UPGRADE1">
+		<title>__upgrade1__</title>
+		<desc>Scrappers ......</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+	
+	<augBlueprint name="LAB_TCC_SCRAPPER_UPGRADE2">
+		<title>__upgrade2__</title>
+		<desc>Scrappers ......</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
+	<augBlueprint name="LAB_TCC_SCRAPPER_UPGRADE3">
+		<title>__upgrade3__</title>
+		<desc>Scrappers ......</desc>
+		<cost>0</cost>
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
