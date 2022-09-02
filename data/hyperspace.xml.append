@@ -565,7 +565,7 @@ SPEED          Changes gamespeed
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <hiddenAug>SHIP_TRASH</hiddenAug>
       <crew>
-        <kora room="12" name="Kora" />
+        <unique_kora room="12" name="Kora" />
         <protogen room="14" />
         <protogen room="1" />
       </crew>
@@ -577,8 +577,8 @@ SPEED          Changes gamespeed
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<hiddenAug>SHIP_TRASH</hiddenAug>
 		<crew>
-		  <kora room="2" name="Kora" />
-		  <avali_illuminant room="14" name="Skygirr" />
+		  <unique_kora room="2" name="Kora" />
+		  <unique_skygirr room="14" name="Skygirr" />
 		  <protogen_tracker room="1" name="Tracker" />
 		  <cheetah room="12" name="Raul" />
 		  <scrapper_zog room="21" name="Zog" />
@@ -624,7 +624,7 @@ SPEED          Changes gamespeed
   			<protogen room="2" />
   			<kiviekith room="7" name="Orvech Vonor" />
   			<kiviekith room="14" name="Altan" />
-  			<kora room="0" name="Kora" />
+  			<unique_kora room="0" name="Kora" />
   			<scrapper room="15" />
   		</crew>
   	</mod-append:customShip>
@@ -659,7 +659,7 @@ SPEED          Changes gamespeed
     	<hiddenAug>SHIP_RSA</hiddenAug>
     	<crew>
     		<rsa_technician room="10" />
-    		<black_rose room="0" name="Black Rose" />
+    		<unique_black_rose room="0" name="Black Rose" />
     		<robottos room="6" />
     		<kiviekith room="12" />
     	</crew>
@@ -829,7 +829,7 @@ SPEED          Changes gamespeed
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <crewLimit>9</crewLimit>
       <crew>
-        <kora room="1" name="Kora" />
+        <unique_kora room="1" name="Kora" />
         <clonefail_lancer room="0" name="Lancer" />
       </crew>
     </mod-append:customShip>
@@ -1716,7 +1716,7 @@ SPEED          Changes gamespeed
   			<shipIcon>icon_threat</shipIcon>
   		</shipIcons>
   		<crew>
-              <black_rose room="14" name="Black Rose"/>
+              <unique_black_rose room="14" name="Black Rose"/>
           </crew>
   		<noFuelStalemate/>
   		<autoShipForce>false</autoShipForce>
@@ -1776,7 +1776,7 @@ SPEED          Changes gamespeed
 			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship> <!--RENT-A-FLAGSHIP-->
 
 			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
-			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- birb, uh, Avali Slot 2 -->
+			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming -->
 
 			<!--Page 4--> <!-- Federation Special Forces -->
 			<mod-append:ship>PLAYER_SHIP_TC_MILSPEC</mod-append:ship> <!-- "Milspec" aka Cargo Carrier Ships -->
@@ -2182,7 +2182,7 @@ SPEED          Changes gamespeed
 
 		<!--////////////////////// BLACK ROSE ///////////////////////-->
 
-		<mod-append:race name="black_rose">
+		<mod-append:race name="unique_black_rose">
 			<maxHealth>110</maxHealth>
 			<repairSpeed>0.7</repairSpeed>
 			<canFight>true</canFight>
@@ -2402,7 +2402,7 @@ SPEED          Changes gamespeed
 
 		<!--/////// KORA ////////-->
 
-		<mod-append:race name="kora">
+		<mod-append:race name="unique_kora">
 			<maxHealth>120</maxHealth>
 			<repairSpeed>1</repairSpeed>
 			<canFight>true</canFight>
@@ -3929,6 +3929,8 @@ SPEED          Changes gamespeed
     		<deathSound>death2</deathSound>
     	</deathSounds>
     </mod-append:race>
+
+
     <mod-append:race name="avali_illuminant">
     	<maxHealth>90</maxHealth>
     	<moveSpeedMultiplier>2</moveSpeedMultiplier>
@@ -4048,7 +4050,7 @@ SPEED          Changes gamespeed
     	</deathSounds>
     </mod-append:race>
 
-    <mod-append:race name="technician">
+    <mod-append:race name="avali_technician">
     	<maxHealth>70</maxHealth>
     	<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
     	<repairSpeed>1.5</repairSpeed>
@@ -4170,6 +4172,148 @@ SPEED          Changes gamespeed
     			</whiteList>
     		</statBoost>
     	</passiveStatBoosts>
+    </mod-append:race>
+
+	<mod-append:race name="unique_skygirr">
+    	<maxHealth>90</maxHealth>
+    	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+    	<repairSpeed>1.5</repairSpeed>
+    	<fireRepairMultiplier>0.8</fireRepairMultiplier>
+    	<damageMultiplier>1</damageMultiplier>
+    	<fireDamageMultiplier>1</fireDamageMultiplier>
+    	<damageTakenMultiplier>0.9</damageTakenMultiplier>
+    	<passiveStatBoosts>
+    		<statBoost name="maxHealth">
+    			<boostType>FLAT</boostType>
+    			<amount>10</amount>
+    			<shipTarget>CURRENT_ROOM</shipTarget>
+    			<crewTarget>ALLIES</crewTarget>
+    			<affectsSelf>false</affectsSelf>
+    			<priority>0</priority>
+    			<whiteList>
+    				<avali />
+    				<avali_illuminant />
+    				<tori />
+    				<technician />
+    			</whiteList>
+    		</statBoost>
+    		<statBoost name="maxHealth">
+    			<boostType>FLAT</boostType>
+    			<amount>10</amount>
+    			<shipTarget>CURRENT_ALL</shipTarget>
+    			<crewTarget>ALLIES</crewTarget>
+    			<affectsSelf>false</affectsSelf>
+    			<priority>0</priority>
+    			<whiteList>
+    				<avali />
+    				<avali_illuminant />
+    				<tori />
+    				<technician />
+    			</whiteList>
+    		</statBoost>
+    		<statBoost name="damageMultiplier">
+    			<boostType>FLAT</boostType>
+    			<amount>0.15</amount>
+    			<shipTarget>CURRENT_ROOM</shipTarget>
+    			<crewTarget>ALLIES</crewTarget>
+    			<affectsSelf>false</affectsSelf>
+    			<priority>0</priority>
+    			<whiteList>
+    				<avali />
+    				<avali_illuminant />
+    				<tori />
+    				<technician />
+    			</whiteList>
+    		</statBoost>
+    		<statBoost name="damageMultiplier">
+    			<boostType>FLAT</boostType>
+    			<amount>0.1</amount>
+    			<shipTarget>CURRENT_ALL</shipTarget>
+    			<crewTarget>ALLIES</crewTarget>
+    			<affectsSelf>false</affectsSelf>
+    			<priority>0</priority>
+    			<whiteList>
+    				<avali />
+    				<avali_illuminant />
+    				<tori />
+    				<technician />
+    			</whiteList>
+    		</statBoost>
+    		<statBoost name="damageTakenMultiplier">
+    			<boostType>FLAT</boostType>
+    			<amount>-0.1</amount>
+    			<shipTarget>CURRENT_ROOM</shipTarget>
+    			<crewTarget>ALLIES</crewTarget>
+    			<affectsSelf>false</affectsSelf>
+    			<priority>0</priority>
+    			<whiteList>
+    				<avali />
+    				<avali_illuminant />
+    				<tori />
+    				<technician />
+    			</whiteList>
+    		</statBoost>
+    		<statBoost name="damageTakenMultiplier">
+    			<boostType>FLAT</boostType>
+    			<amount>-0.05</amount>
+    			<shipTarget>CURRENT_ROOM</shipTarget>
+    			<crewTarget>ALLIES</crewTarget>
+    			<affectsSelf>false</affectsSelf>
+    			<priority>0</priority>
+    			<whiteList>
+    				<avali />
+    				<avali_illuminant />
+    				<tori />
+    				<technician />
+    			</whiteList>
+    		</statBoost>
+    		<statBoost name="moveSpeedMultiplier">
+    			<boostType>FLAT</boostType>
+    			<amount>0.5</amount>
+    			<shipTarget>CURRENT_ROOM</shipTarget>
+    			<crewTarget>ALLIES</crewTarget>
+    			<affectsSelf>false</affectsSelf>
+    			<priority>0</priority>
+    			<whiteList>
+    				<avali />
+    				<avali_illuminant />
+    				<tori />
+    				<technician />
+    			</whiteList>
+    		</statBoost>
+    	</passiveStatBoosts>
+    	<animBase>human</animBase>
+    	<deathSounds>
+    		<deathSound>death1</deathSound>
+    		<deathSound>death2</deathSound>
+    	</deathSounds>
+    	<deathSounds>
+    		<deathSound>death1</deathSound>
+    		<deathSound>death2</deathSound>
+    	</deathSounds>
+		<powerEffect>
+			<cooldown>20</cooldown>
+			<jumpCooldown>full</jumpCooldown>
+			<powerCharges>1</powerCharges>
+			<chargesPerJump>1</chargesPerJump>
+			<powerSounds>
+				<powerSound>explosionShell</powerSound>
+			</powerSounds>
+			<req type="enemy">
+				<systemInRoom damaged="true"/>
+				<playerShip/> <!--enemy ship-->
+			</req>
+			<sysDamage>-5</sysDamage>
+			<damage>-1</damage>
+			<effectAnim>tele_effect</effectAnim>
+			<animFrame>4</animFrame>
+			<friendlyFire>true</friendlyFire>
+			<shipFriendlyFire>true</shipFriendlyFire>
+			<buttonText>E-REPAIR</buttonText>
+			<tooltip>Ready: Repair 5 system and 1 hull damage.</tooltip>
+			<cooldownColor r="202" g="79" b="226"/>
+			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+		</powerEffect>
     </mod-append:race>
 
     <!--/////// SAVIORS //////-->

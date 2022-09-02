@@ -31,7 +31,7 @@
 	<mod-append:name>clonefail_lancer</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
 	<mod-append:name>sergal</mod-append:name>
-	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>avali</mod-append:name>
 	<mod-append:name>robottos</mod-append:name>
 	<mod-append:name>robottos_gunner</mod-append:name>
@@ -41,7 +41,7 @@
 	<mod-append:name>mantis_rsa</mod-append:name>
 	<mod-append:name>mantis_freebusiness</mod-append:name>
 	<mod-append:name>cheetah</mod-append:name>
-	<mod-append:name>black_rose</mod-append:name>
+	<mod-append:name>unique_black_rose</mod-append:name>
 </mod:findName>
 
 <!--/////// SCRAPPERS //////-->
@@ -83,7 +83,7 @@
 <!--/////// HUMANS ///////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_HUMAN">
-	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>kiviekith</mod-append:name>
 	<mod-append:name>rsa_technician</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
@@ -104,7 +104,7 @@
 	<mod-append:name>scrapper_speed</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
-	<mod-append:name>black_rose</mod-append:name>
+	<mod-append:name>unique_black_rose</mod-append:name>
 </mod:findName>
 
 <!--/////// FEDERATION ///////-->
@@ -188,13 +188,16 @@
 	<name>mantis_rsa</name>
 	<name>kiviekith</name>
 	<name>rsa_technician</name>
-	<name>black_rose</name>
+	<name>unique_black_rose</name>
 </blueprintList>
 
 <!--/////// AVALI //////-->
 
 <blueprintList name="LIST_CREW_AVALI">
 	<name>avali</name>
+	<name>avali_illuminant</name>
+	<name>avali_technician</name>
+	<name>unique_skygirr</name>
 </blueprintList>
 
 <!--/////// KIVIES //////-->
@@ -242,7 +245,7 @@
 <!--//////// HUMANS /////////-->
 
 <mod:findName type="blueprintList" name="LIST_CHECKCREW_HUMAN">
-	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>rsa_technician</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>human_phoenix</mod-append:name>
@@ -260,7 +263,7 @@
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_MORPH_HUMAN">
-	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>rsa_technician</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>human_phoenix</mod-append:name>
@@ -291,9 +294,10 @@
 	<mod-append:name>primagen_raptor</mod-append:name>
 	<mod-append:name>clonefail_lancer</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
-	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
-	<mod-append:name>black_rose</mod-append:name>
+	<mod-append:name>unique_black_rose</mod-append:name>
+	<mod-append:name>unique_skygirr</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
@@ -301,17 +305,18 @@
 	<mod-append:name>protogen_tracker</mod-append:name>
 	<mod-append:name>primagen_raptor</mod-append:name>
 	<mod-append:name>clonefail_lancer</mod-append:name>
-	<mod-append:name>kora</mod-append:name>
+	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
-	<mod-append:name>black_rose</mod-append:name>
+	<mod-append:name>unique_black_rose</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
+	<mod-append:name>unique_skygirr</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
 	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
-	<mod-append:name>kora</mod-append:name>
-	<mod-append:name>black_rose</mod-append:name>
+	<mod-append:name>unique_kora</mod-append:name>
+	<mod-append:name>unique_black_rose</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_COGNITIVE">

@@ -3607,124 +3607,124 @@
 
 <!--/////////////// KORA //////////////-->
 
-<animSheet name="kora" w="315" h="455" fw="35" fh="35">people/kora_base.png</animSheet>
-	<anim name="kora_clone">
-		<sheet>kora</sheet>
+<animSheet name="unique_kora" w="315" h="455" fw="35" fh="35">people/unique_kora_base.png</animSheet>
+	<anim name="unique_kora_clone">
+		<sheet>unique_kora</sheet>
 		<desc length="6" x="0" y="2"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="kora_death_right">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_death_right">
+		<sheet>unique_kora</sheet>
 		<desc length="5" x="3" y="0"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="kora_death_left">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_death_left">
+		<sheet>unique_kora</sheet>
 		<desc length="5" x="0" y="2"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="kora_walk_down">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_walk_down">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="0" y="12"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_walk_right">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_walk_right">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="4" y="12"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_walk_up">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_walk_up">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="0" y="11"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_walk_left">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_walk_left">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="4" y="11"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_shoot_down">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_shoot_down">
+		<sheet>unique_kora</sheet>
 		<desc length="3" x="0" y="10"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_shoot_right">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_shoot_right">
+		<sheet>unique_kora</sheet>
 		<desc length="3" x="3" y="10"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_shoot_up">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_shoot_up">
+		<sheet>unique_kora</sheet>
 		<desc length="3" x="6" y="10"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_shoot_left">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_shoot_left">
+		<sheet>unique_kora</sheet>
 		<desc length="3" x="0" y="1"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_fire_down">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_fire_down">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="0" y="9"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_fire_right">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_fire_right">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="4" y="9"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_fire_up">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_fire_up">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="0" y="8"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_fire_left">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_fire_left">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="4" y="8"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_repair">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_repair">
+		<sheet>unique_kora</sheet>
 		<desc length="9" x="0" y="7"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_punch_up">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_punch_up">
+		<sheet>unique_kora</sheet>
 		<desc length="6" x="3" y="1"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_punch_down">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_punch_down">
+		<sheet>unique_kora</sheet>
 		<desc length="6" x="0" y="6"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="kora_teleport">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_teleport">
+		<sheet>unique_kora</sheet>
 		<desc length="9" x="0" y="3"/>
 		<time>0.5</time>
 	</anim>
-	<anim name="kora_type_right">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_type_right">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="0" y="5"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="kora_type_left">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_type_left">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="4" y="5"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="kora_type_up">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_type_up">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="0" y="4"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="kora_type_down">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_type_down">
+		<sheet>unique_kora</sheet>
 		<desc length="4" x="4" y="4"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="kora_portrait">
-		<sheet>kora</sheet>
+	<anim name="unique_kora_portrait">
+		<sheet>unique_kora</sheet>
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
@@ -4351,124 +4351,124 @@
 
 <!--/////////////// BLACK ROSE //////////////-->
 
-<animSheet name="black_rose" w="315" h="455" fw="35" fh="35">people/black_rose_base.png</animSheet>
-	<anim name="black_rose_clone">
-		<sheet>black_rose</sheet>
+<animSheet name="unique_black_rose" w="315" h="455" fw="35" fh="35">people/unique_black_rose_base.png</animSheet>
+	<anim name="unique_black_rose_clone">
+		<sheet>unique_black_rose</sheet>
 		<desc length="6" x="0" y="2"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="black_rose_death_right">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_death_right">
+		<sheet>unique_black_rose</sheet>
 		<desc length="5" x="3" y="0"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="black_rose_death_left">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_death_left">
+		<sheet>unique_black_rose</sheet>
 		<desc length="5" x="0" y="2"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="black_rose_walk_down">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_walk_down">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="0" y="12"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_walk_right">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_walk_right">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="4" y="12"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_walk_up">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_walk_up">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="0" y="11"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_walk_left">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_walk_left">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="4" y="11"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_shoot_down">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_shoot_down">
+		<sheet>unique_black_rose</sheet>
 		<desc length="3" x="0" y="10"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_shoot_right">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_shoot_right">
+		<sheet>unique_black_rose</sheet>
 		<desc length="3" x="3" y="10"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_shoot_up">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_shoot_up">
+		<sheet>unique_black_rose</sheet>
 		<desc length="3" x="6" y="10"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_shoot_left">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_shoot_left">
+		<sheet>unique_black_rose</sheet>
 		<desc length="3" x="0" y="1"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_fire_down">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_fire_down">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="0" y="9"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_fire_right">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_fire_right">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="4" y="9"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_fire_up">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_fire_up">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="0" y="8"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_fire_left">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_fire_left">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="4" y="8"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_repair">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_repair">
+		<sheet>unique_black_rose</sheet>
 		<desc length="9" x="0" y="7"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_punch_up">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_punch_up">
+		<sheet>unique_black_rose</sheet>
 		<desc length="6" x="3" y="1"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_punch_down">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_punch_down">
+		<sheet>unique_black_rose</sheet>
 		<desc length="6" x="0" y="6"/>
 		<time>1.0</time>
 	</anim>
-	<anim name="black_rose_teleport">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_teleport">
+		<sheet>unique_black_rose</sheet>
 		<desc length="9" x="0" y="3"/>
 		<time>0.5</time>
 	</anim>
-	<anim name="black_rose_type_right">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_type_right">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="0" y="5"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="black_rose_type_left">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_type_left">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="4" y="5"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="black_rose_type_up">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_type_up">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="0" y="4"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="black_rose_type_down">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_type_down">
+		<sheet>unique_black_rose</sheet>
 		<desc length="4" x="4" y="4"/>
 		<time>0.75</time>
 	</anim>
-	<anim name="black_rose_portrait">
-		<sheet>black_rose</sheet>
+	<anim name="unique_black_rose_portrait">
+		<sheet>unique_black_rose</sheet>
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
@@ -5839,6 +5839,134 @@
 	</anim>
 	<anim name="avali_portrait">
 		<sheet>avali</sheet>
+		<desc y="0" x="0" length="1" />
+		<time>1</time>
+	</anim>
+
+	<!--skygirr-->
+	<animSheet fh="35" fw="35" h="455" w="350" name="unique_skygirr">people/unique_skygirr_base.png</animSheet>
+	<anim name="unique_skygirr_clone">
+		<sheet>unique_skygirr</sheet>
+		<desc y="2" x="0" length="7" />
+		<time>0.75</time>
+	</anim>
+	<anim name="unique_skygirr_death_right">
+		<sheet>unique_skygirr</sheet>
+		<desc y="0" x="3" length="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="unique_skygirr_death_left">
+		<sheet>unique_skygirr</sheet>
+		<desc y="2" x="0" length="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="unique_skygirr_walk_down">
+		<sheet>unique_skygirr</sheet>
+		<desc y="12" x="0" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_walk_right">
+		<sheet>unique_skygirr</sheet>
+		<desc y="12" x="4" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_walk_up">
+		<sheet>unique_skygirr</sheet>
+		<desc y="11" x="0" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_walk_left">
+		<sheet>unique_skygirr</sheet>
+		<desc y="11" x="4" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_shoot_down">
+		<sheet>unique_skygirr</sheet>
+		<desc y="10" x="0" length="3" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_shoot_right">
+		<sheet>unique_skygirr</sheet>
+		<desc y="10" x="3" length="3" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_shoot_up">
+		<sheet>unique_skygirr</sheet>
+		<desc y="10" x="6" length="3" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_shoot_left">
+		<sheet>unique_skygirr</sheet>
+		<desc y="1" x="0" length="3" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_fire_down">
+		<sheet>unique_skygirr</sheet>
+		<desc y="9" x="0" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_fire_right">
+		<sheet>unique_skygirr</sheet>
+		<desc y="9" x="4" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_fire_up">
+		<sheet>unique_skygirr</sheet>
+		<desc y="8" x="0" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_fire_left">
+		<sheet>unique_skygirr</sheet>
+		<desc y="8" x="4" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_repair">
+		<sheet>unique_skygirr</sheet>
+		<desc y="7" x="0" length="9" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_punch_up">
+		<sheet>unique_skygirr</sheet>
+		<desc y="1" x="3" length="7" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_punch_down">
+		<sheet>unique_skygirr</sheet>
+		<desc y="6" x="0" length="8" />
+		<time>1.0</time>
+	</anim>
+	<anim name="unique_skygirr_teleport">
+		<sheet>unique_skygirr</sheet>
+		<desc y="3" x="0" length="7" />
+		<time>0.5</time>
+	</anim>
+	<anim name="unique_skygirr_type_right">
+		<sheet>unique_skygirr</sheet>
+		<desc y="5" x="0" length="4" />
+		<time>0.75</time>
+	</anim>
+	<anim name="unique_skygirr_type_left">
+		<sheet>unique_skygirr</sheet>
+		<desc y="5" x="4" length="4" />
+		<time>0.75</time>
+	</anim>
+	<anim name="unique_skygirr_type_up">
+		<sheet>unique_skygirr</sheet>
+		<desc y="4" x="0" length="4" />
+		<time>0.75</time>
+	</anim>
+	<anim name="unique_skygirr_type_down">
+		<sheet>unique_skygirr</sheet>
+		<desc y="4" x="4" length="4" />
+		<time>0.75</time>
+	</anim>
+	<anim name="crewLaser">
+		<sheet>unique_skygirr</sheet>
+		<desc y="0" x="1" length="1" />
+		<time>0.5</time>
+	</anim>
+	<anim name="unique_skygirr_portrait">
+		<sheet>unique_skygirr</sheet>
 		<desc y="0" x="0" length="1" />
 		<time>1</time>
 	</anim>

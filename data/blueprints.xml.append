@@ -10888,7 +10888,7 @@
 
 	<!--/////// UNIQUE - BLACK ROSE - RSA //////-->
 
-	<crewBlueprint name="black_rose">
+	<crewBlueprint name="unique_black_rose">
 		<desc>Black Rose is a last of her kind prototype; she's currently got a high rank in the RSA. She took command over the rebuilt Corrosus after Cheese wrecked it by flying it into a building.</desc>
 		<title>BLK-R053</title>
 		<short>Black Rose</short>
@@ -10945,7 +10945,7 @@
 
 	<!--////// /UNIQUES - MULTIVERSAL TRAVELERS //////-->
 
-	<crewBlueprint name="kora">
+	<crewBlueprint name="unique_kora">
 		<desc>A multiversal traveler from a highly different world - one with cosmic horrors and magic, but similar war crimes to ours. This albino "Nireshirai" is as dangerous as he is stubborn.</desc>
 		<cost>90</cost>
 		<title>Kora</title>
@@ -11136,7 +11136,7 @@
 		<rarity>0</rarity>
 		<powerList>
 			<power>Using his mutated tongue and highly adaptive combat skills, Lancer can deal 2x damage in combat.</power>
-			<power>Completely anaerobic owing to his highly modified anatomy.</power>
+			<power>Completely anaerobic owing to his highly defective anatomy.</power>
 			<power>1.3x speed owing to his unstable and light frame (60hp, x0.7 damage taken)</power>
 			<power>Internal Database makes skills unable to degrade.</power>
 			<power>Lancer doesn't know how to repair systems, nor is he able to learn how to.</power>
@@ -11338,7 +11338,36 @@
 		</powerList>
 	</crewBlueprint>
 
-	<crewBlueprint name="technician">
+	<crewBlueprint name="unique_skygirr">
+		<desc>A cute Avali technician. Obsessed with exotic ship parts, heavy armaments and fluffy protogens. Legends say she's fought during the Protogen Revolution and even helped reverse-engineer self-destruct implants.</desc>
+		<cost>120</cost>
+		<title>Skygirr</title>
+		<short>Skygirr</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>Moves at and repairs at 1.5x speed.</power>
+			<power>Takes normal damage from fire - extinguishes them at 0.8x speed.</power>
+			<power>Has 90 HP, deals normal damage.</power>
+			<power>Buffs all friendly Avali on the ship, granting them +5% combat damage resistance, +0.5x movespeed, +10 HP and +10% damage dealt.</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="unique_tori">
+		<desc>Elite Avali Crew. The highest ranks of the Illuminate's military, an inspiring leader and extremely adept biotech engineer among their fellow avians.</desc>
+		<cost>120</cost>
+		<title>Avali Illuminant</title>
+		<short>Illuminant</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>Moves at 2x speed.</power>
+			<power>Takes 1.5x damage from fire - extinguishes them at 0.8x speed.</power>
+			<power>Has 90 HP, deals normal damage.</power>
+			<power>Buffs all friendly Avali on the ship, granting them +5% combat damage resistance, +0.5x movespeed, +10 HP and +10% damage dealt.</power>
+			<power>Additionally, buffs all friendly Avali in the room, giving them +10 HP, +10% combat damage resistance and +15% damage dealt. Stacks with the ship wide buffs.</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="avali_technician">
 		<desc>repair birds or whatever</desc>
 		<cost>70</cost>
 		<title>Avali Technician</title>
