@@ -712,9 +712,9 @@
 ////////////////////////////////-->
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
-	<mod-append:name>TC_DRONE_GOLD_COMBAT</mod-append:name>
-	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
-	<mod-append:name>TC_COMBAT_HEAVY_COMBAT</mod-append:name>
+	<mod-append:name>TC_COMBAT_GOLD</mod-append:name>
+	<mod-append:name>TC_COMBAT_UNSTABLE</mod-append:name>
+	<mod-append:name>TC_COMBAT_HEAVY</mod-append:name>
 	<mod-append:name>ROBO_MANT_DEFEND</mod-append:name>
 	<mod-append:name>SILICA_BATTLE</mod-append:name>
 	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
@@ -722,11 +722,9 @@
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
-	<mod-append:name>TC_DRONE_GOLD_COMBAT</mod-append:name>
-	<mod-append:name>TC_DRONE_UNSTABLE_COMBAT</mod-append:name>
-	<mod-append:name>TC_COMBAT_HEAVY_COMBAT</mod-append:name>
-	<mod-append:name>ROBO_MANT_DEFEND</mod-append:name>
-	<mod-append:name>SILICA_BATTLE</mod-append:name>
+	<mod-append:name>TC_COMBAT_GOLD</mod-append:name>
+	<mod-append:name>TC_COMBAT_UNSTABLE</mod-append:name>
+	<mod-append:name>TC_COMBAT_HEAVY</mod-append:name>
 	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
 	<mod-append:name>SILICA_BOARDER</mod-append:name>
 </mod:findName>
