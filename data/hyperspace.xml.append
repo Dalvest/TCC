@@ -5244,4 +5244,41 @@ SPEED          Changes gamespeed
 		<!--HARD-->
 		<drone difficulty="2" name="DEFENSE_1" count="40"/>
 	</surgeDrones>
+
+
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	LAB AUGMENTS & VARIABLES
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <!--vars-->
+	<events>
+		<variable name="tcc_labs_robotto_installed" op="set" val="0"/>
+		<variable name="tcc_labs_scrapper_installed" op="set" val="0"/>
+	</events>
+
+	<!--augments-->
+	<mod:findLike type="augments">
+
+		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE1">
+			
+		</mod-append:aug>
+		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE2">
+			
+		</mod-append:aug>
+		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE3">
+			
+		</mod-append:aug>
+		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE1">
+			
+		</mod-append:aug>
+		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE2">
+			
+		</mod-append:aug>
+		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE3">
+			
+		</mod-append:aug>
+	</mod:findLike>
 </FTL>
