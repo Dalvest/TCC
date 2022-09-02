@@ -537,7 +537,7 @@ SPEED          Changes gamespeed
 
     <!--///////TRASH REACTOR//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="false" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="true" c="false" unused="true">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_ECHO</arrow>
       <unlock variant="a" silent="false">
         <type>5</type>
@@ -570,6 +570,20 @@ SPEED          Changes gamespeed
         <protogen room="1" />
       </crew>
     </mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR_2">
+		<crewLimit>12</crewLimit>
+		<customReactor maxLevel="50"/>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_TRASH</hiddenAug>
+		<crew>
+		  <kora room="2" name="Kora" />
+		  <avali_illuminant room="14" name="Skygirr" />
+		  <protogen_tracker room="1" name="Tracker" />
+		  <cheetah room="12" name="Raul" />
+		  <scrapper_zog room="21" name="Zog" />
+		</crew>
+	  </mod-append:customShip>
 
   	<!--///////EXTRA ELITE SHIP PACK//////-->
 

@@ -392,7 +392,7 @@
 <event name="STORAGE_CHECK_LAB_ROBOTTO">
 	<text>You are viewing the lab menu for: [SENTIENT]</text>
 
-	<choice req="LAB_TCC_ROBOTTO_UPGRADE1" lvl="1" max_group="0" blue="false" hidden="true">
+	<!--<choice req="LAB_TCC_ROBOTTO_UPGRADE1" lvl="1" max_group="0" blue="false" hidden="true">
 		<text>Currently Installed: __robotto_upgrade1__. [some buff]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
@@ -434,6 +434,11 @@
 	<choice req="tcc_labs_robotto_installed" lvl="0" max_group="3" blue="false" hidden="true">
 		<text>Pri: __robotto_upgrade3__. [Cost: 69420{]</text>
 		<event load="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG3"/>
+	</choice>-->
+
+  <choice req="robottos" max_group="4" blue="false" hidden="true">
+		<text>Upgrade your Sentient.</text>
+		<event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE"/>
 	</choice>
 
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
@@ -442,7 +447,7 @@
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG1">
+<!--<event name="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG1">
 	<text>You are about to install the __robotto_upgrade1__ modification. 
 [Effects: some buff] 
 
@@ -527,14 +532,14 @@
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-</event>
+</event>-->
 
 
 <!-- ================= SCRAPPER ================ -->
 <event name="STORAGE_CHECK_LAB_SCRAPPER">
 	<text>You are viewing the lab menu for: [SCRAPPER]</text>
 
-	<choice req="LAB_TCC_SCRAPPER_UPGRADE1" lvl="1" max_group="0" blue="false" hidden="true">
+	<!--<choice req="LAB_TCC_SCRAPPER_UPGRADE1" lvl="1" max_group="0" blue="false" hidden="true">
 		<text>Currently Installed: __scrapper_upgrade1__. [some buff]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
@@ -576,6 +581,11 @@
 	<choice req="tcc_labs_scrapper_installed" lvl="0" max_group="3" blue="false" hidden="true">
 		<text>Pri: __scrapper_upgrade3__. [Cost: 69420{]</text>
 		<event load="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG3"/>
+	</choice>-->
+
+  <choice req="scrapper" max_group="4" blue="false" hidden="true">
+		<text>Upgrade your Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE"/>
 	</choice>
 
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
@@ -584,7 +594,7 @@
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG1">
+<!--<event name="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG1">
 	<text>You are about to install the __scrapper_upgrade1__ modification. 
 [Effects: some buff] 
 
@@ -669,7 +679,7 @@
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-</event>
+</event>-->
 
 
   <event name="STORAGE_CHECK_LAB_AVALI">
@@ -814,26 +824,6 @@
           SCRAPPER UPGRADE MENU
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
-
-
-  <mod:findName type="event" name="STORAGE_CHECK_CREW_LIST_LANIUS">
-    <mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" >
-      <text>Look for your Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER"/>
-    </mod-append:choice>
-  </mod:findName>
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER">
-    <text>What do you want to do with your Scrapper?</text>
-    <choice>
-      <text>Add some scrap to your Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE"/>
-    </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
-  </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE">
     <text>You've got a Scrapper you can upgrade - with some basic tools and machinery, you may upgrade a Scrapper into one of the following:</text>

@@ -658,7 +658,7 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 
-	<weaponBlueprint name="FM_MINELAUNCHER_ANCALAGON_REMASTERED2_FAKE">
+	<weaponBlueprint name="TC_MINELAUNCHER_ANCALAGON">
 		<type>BURST</type>
 		<tip>tip_ancalagon</tip>
 		<flavorType>Aether Minelauncher</flavorType>
@@ -5939,7 +5939,7 @@
 		<unlock id="ship_PLAYER_SHIP_TRASH_REACTOR_unlock"/>
 		<systemList>
 			<artillery power="2" room="0" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_6" />
-			<battery power="1" room="17" start="false" img="room_battery_10" />
+			<battery power="2" room="17" start="true" img="room_battery_10" />
 			<cloaking power="1" room="22" start="false" img="room_cloaking_3" />
 			<clonebay power="1" room="16" start="true">
 				<slot>
@@ -5985,7 +5985,7 @@
 					<number>0</number>
 				</slot>
 			</shields>
-			<teleporter power="1" room="21" start="false" />
+			<teleporter power="1" room="21" start="true" />
 			<weapons power="2" max="8" room="2" start="true" img="room_weapons">
 				<slot>
 					<direction>up</direction>
@@ -5995,14 +5995,88 @@
 		</systemList>
 		<weaponSlots>4</weaponSlots>
 		<droneSlots>3</droneSlots>
-		<weaponList missiles="7" count="4">
+		<weaponList missiles="14" count="4">
+			<weapon name="BOMB_BIO" />
 			<weapon name="BOMB_BIO" />
 		</weaponList>
-		<droneList drones="8" count="4" />
+		<droneList drones="6" count="3" />
 		<health amount="30" />
 		<maxPower amount="6" />
 		<aug name="LOCKED_SCRAP_ARMOR" />
 		<aug name="ANCIENT_DNA" />
+	</shipBlueprint>
+
+	<shipBlueprint name="PLAYER_SHIP_TRASH_REACTOR_2" layout="tcp_trash_reactor_2" img="tcp_trash_reactor_2">
+		<class>//CORRUPTED//CLASS//</class>
+		<name>Prideful Partisan</name>
+		<desc>Same broken class chip, same teleporter. This ship's strength is its world-class crew. Mercs of any and all kinds are welcome.</desc>
+		<systemList>
+			<artillery power="1" room="0" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_6" />
+			<battery power="1" room="17" start="true" img="room_battery_10" />
+			<cloaking power="1" room="22" start="false" img="room_cloaking_3" />
+			<clonebay power="1" room="16" start="true">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
+			<doors power="1" room="9" start="false" img="room_doors">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</doors>
+			<drones power="2" room="13" start="true" img="room_drones" />
+			<engines power="2" room="11" start="true" img="room_engines_TCC">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</engines>
+			<hacking power="1" room="6" start="false" img="room_hacking_9" />
+			<medbay power="1" room="16" start="false" img="room_medbay">
+				<slot>
+					<number>1</number>
+				</slot>
+			</medbay>
+			<mind power="1" room="5" start="true" img="room_mind" />
+			<oxygen power="1" room="10" start="true" img="room_oxygen_6" />
+			<pilot power="2" room="1" start="true" img="ancient_pilot">
+				<slot>
+					<direction>right</direction>
+					<number>1</number>
+				</slot>
+			</pilot>
+			<sensors power="1" room="12" start="true" img="room_sensors_7">
+				<slot>
+					<direction>down</direction>
+					<number>3</number>
+				</slot>
+			</sensors>
+			<shields power="2" room="14" start="true" img="room_shields_2">
+				<slot>
+					<direction>left</direction>
+					<number>0</number>
+				</slot>
+			</shields>
+			<teleporter power="1" room="21" start="true" />
+			<weapons power="3" room="2" start="true" img="room_weapons">
+				<slot>
+					<direction>up</direction>
+					<number>1</number>
+				</slot>
+			</weapons>
+		</systemList>
+		<weaponSlots>3</weaponSlots>
+		<droneSlots>3</droneSlots>
+		<weaponList missiles="7" count="3">
+			<weapon name="TC_MINELAUNCHER_ANCALAGON" />
+		</weaponList>
+		<droneList drones="0" count="3">
+			<drone name="BATTLETOG_BOARDER" />
+			<drone name="MANNING" />
+		</droneList>
+		<health amount="30" />
+		<maxPower amount="6" />
 	</shipBlueprint>
 
 	<!--/////////////// ECHO 1-LINER ///////////////-->
