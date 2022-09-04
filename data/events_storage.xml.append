@@ -349,6 +349,11 @@
 		<event load="SOCIALIZE_TRACKER_LIST"/>
 	</mod-append:choice>
 
+  <mod-append:choice req="unique_skygirr" blue="false" hidden="true">
+		<text>Look for Skygirr.</text>
+		<event load="SOCIALIZE_SKYGIRR_LIST"/>
+	</mod-append:choice>
+
   <mod:findWithChildLike type="choice" child-type="text"> <!--To make sure that the nevermind choice remains at the bottom-->
     <mod:selector>Nevermind, do something else.</mod:selector>
     <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>

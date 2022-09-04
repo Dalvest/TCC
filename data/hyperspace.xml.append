@@ -1,6 +1,6 @@
-<mod:findLike type="version"><!--Adjusts version check, remove later or adjust as necessary-->
+<!--<mod:findLike type="version">Adjusts version check, remove later or adjust as necessary, not currently needed.
   <mod:setValue>^1.2.0</mod:setValue>
-</mod:findLike>
+</mod:findLike>-->
 
 <!-- Enables command console in game \\ press L to use
 
@@ -19,7 +19,11 @@ KILL           Kills a person on your ship             Usage: KILL <crew_name>  
 DELETECREW     Kills everyone on the enemy ship        Usage: DELETECREW
 SPEED          Changes gamespeed
 -->
-
+<FTL>
+  <mod:findLike type="scripts">
+    <mod-append:script>data/tcc_scripts/dependency.lua</mod-append:script>
+  </mod:findLike>
+</FTL>
 <FTL><!--appending to Inferno-Core-->
 	<events>
 		<variable name="tcc_called_compactor" op="set" val="0"/>
@@ -697,7 +701,7 @@ SPEED          Changes gamespeed
 	<!--/////// TECHLANCE //////-->
 
 	<mod-append:ship name="PLAYER_SHIP_TECHLANCE" b="false" c="false" unused="true">
-		
+
 		<unlock variant="a" silent="false">
 			<type>5</type>
 			<victories>
@@ -5436,22 +5440,22 @@ SPEED          Changes gamespeed
 	<mod:findLike type="augments">
 
 		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE1">
-			
+
 		</mod-append:aug>
 		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE2">
-			
+
 		</mod-append:aug>
 		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE3">
-			
+
 		</mod-append:aug>
 		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE1">
-			
+
 		</mod-append:aug>
 		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE2">
-			
+
 		</mod-append:aug>
 		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE3">
-			
+
 		</mod-append:aug>
 	</mod:findLike>
 </FTL>
