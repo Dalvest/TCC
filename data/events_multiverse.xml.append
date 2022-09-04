@@ -213,7 +213,7 @@
 			<item_modify>
 				<item type="scrap" min="-20" max="-20"/>
 			</item_modify>
-			<crewMember amount="1" class="trash_eater" name="Trash Eater" all_skills="2"/>
+			<crewMember amount="1" class="trash_eater" all_skills="2">Trash Eater</crewMember>
 		</event>
 		</choice>
 	</event>
@@ -246,7 +246,7 @@
 			<item_modify>
 				<item type="scrap" min="-50" max="-50"/>
 			</item_modify>
-			<crewMember amount="1" class="trash_eater" name="Trash Eater" all_skills="2"/>
+			<crewMember amount="1" class="trash_eater" all_skills="2">Trash Eater</crewMember>
 		</event>
 		</choice>
 	</event>
@@ -645,7 +645,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_4"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Breach Bomb Flak</text>
 		<event>
@@ -667,7 +667,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_CHAIN"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Bomb Flak Charger</text>
 		<event>
@@ -711,7 +711,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_INSTANT"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Fire Bomb Flak</text>
 		<event>
@@ -722,7 +722,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_FIRE"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Ion Bomb Flak</text>
 		<event>
@@ -733,7 +733,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_ION"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Rad Bomb Flak</text>
 		<event>
@@ -744,7 +744,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_BIO"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Lockdown Bomb Flak</text>
 		<event>
@@ -834,7 +834,7 @@
 		ch33s3W4sH3r3////RSA FOREVER
 		...SELECT YOUR WEAPON FROM THE LIST OF PRESET .GCODE FILES...
 		</text>
-	
+
 		<choice hidden="false" blue="false">
 			<text>MILITIA TAGGER</text>
 			<event>
@@ -1010,7 +1010,7 @@
 				<weapon name="TC_TONFA"/>
 			</event>
 		</choice>
-	
+
 		<choice hidden="false" blue="true">
 			<text>////CANCEL TRANSACTION////</text>
 			<event load="STORAGE_CHECK"/>
@@ -1418,7 +1418,7 @@
 <mod:findLike type="choice" start="0" limit="1">
 <mod:findLike type="event">
 <mod-append:choice req="LIST_CREW_LEAH" blue="true">
-    <text>Have Leah stand next to you while you respond to her hail.</text> 
+    <text>Have Leah stand next to you while you respond to her hail.</text>
 	<event load="SYLVAN_ROYAL_LEAH_DIALOGUE"/>
 </mod-append:choice>
 </mod:findLike>
@@ -1426,7 +1426,7 @@
 </mod:findName>
 
 <event name="SYLVAN_ROYAL_LEAH_DIALOGUE">
-    <text>"No way. No way you did this. No way you found… ANOTHER LEAH? What about us? What about our rivalry, the most legendary rivalry to ever exist, and you found ANOTHER me? I thought we had something special, we’ve fought each other so many times, had so many amazing moments and you… you... you cheat on me!" Leah slams her fist down onto the table and leaps from her seat. "No more games captain, our rivalry is over, and only one of us is going to make it out of here alive. Ooh, but what if we both died at the same time, wouldn’t that make for such a cool and epic mo-" You close communications and begin to charge your weapons.</text>
+    <text>"No way. No way you did this. No way you found… ANOTHER LEAH? What about us? What about our rivalry, the most legendary rivalry to ever exist, and you found ANOTHER me? I thought we had something special, we've fought each other so many times, had so many amazing moments and you… you... you cheat on me!" Leah slams her fist down onto the table and leaps from her seat. "No more games captain, our rivalry is over, and only one of us is going to make it out of here alive. Ooh, but what if we both died at the same time, wouldn't that make for such a cool and epic mo-" You close communications and begin to charge your weapons.</text>
 	<ship hostile="true"/>
 	<choice hidden="true">
 		<text>Continue...</text>

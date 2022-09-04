@@ -1,12 +1,12 @@
 <FTL>
-<!-- 
+<!--
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-									
+
 									SCRAPPER
-									
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -14,7 +14,7 @@
 -->
 
 
-<!-- 
+<!--
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 									TRASH EATER
@@ -39,9 +39,9 @@
 </event>
 
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   GENERIC                                                                                         
+																							   GENERIC
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRASH_EATER_GENERIC_1" unique="true">
@@ -80,21 +80,21 @@ He seems quite distraught. "IS THE KING. I AM THE PRINCE. THE TITLE IS GIVEN WIT
 </event>
 
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   W/BEACON EATER                                                                                        
+																							   W/BEACON EATER
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRASH_EATER_EATER_1" unique="true">
-	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight. 
+	<text>You stumble upon the Beacon Eater and the Trash Eater arguing loudly and seemingly trying to partake in a fistfight.
 The King yells "You are trash, false prince! Complete trash!"
 The Prince retorts with "WHEN THE WORLD FEEDER METAMORPHOSIS IS COMPLETE, I WILL BE KING! STRONGER THAN CURRENT KING!"
 It only takes a moment for the two to notice your presence. "I will- ...Captain is here. Stop it. You're annoying." They exchange one last spiteful look and return to their usual duties.</text>
 </event>
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   W/TRACKER                                                                                       
+																							   W/TRACKER
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRASH_EATER_TRACKER_1" unique="true">
@@ -105,27 +105,27 @@ It only takes a moment for the two to notice your presence. "I will- ...Captain 
 "NO, NO, THE OPPOSITE. I AM ONE WITH EVERYONE. THE WHOLE UNIVERSE IS TOGETHER. THERE IS NO BATTLE, NO NOTHING."
 "How would you achieve that?" Tracker is shuffling in his seat, seemingly mildly distressed.
 "ONCE ARTIFACT IS ACTIVE, I METAMORPHOSIS TO FIRST STAGE, SHIP. EAT UNTIL INNER BLACK HOLE. USE INNER BLACK HOLE FOR ENERGY... USE ENERGY TO DEFEAT ANYONE."
-"And that would include me? Your... (sigh) friend?" 
+"And that would include me? Your... (sigh) friend?"
 "THERE IS GREAT FRIENDSHIP IN COMPLETE UNION."
 "I see." Tracker shoos the Eater away from this room and pulls you aside to talk. "This guy is completely insane. If he does the slightest thing wrong I will NOT hesitate to put him down, you understand?"
 Tracker shoos you away from his quarters as well, returning to his usual anxious shuffling.</text>
 </event>
 
-<!-- 
+<!--
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-									
+
 									PROTOGEN
-									
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 -->
 
-<!-- 
+<!--
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 									TRACKER
@@ -154,9 +154,9 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 	<text>Tracker looks completely zoned out, his expressionless visor showing little to no emotion... or is he asleep? Maybe he's simply charging.</text>
 </event>
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   GENERIC                                                                                         
+																							   GENERIC
 ********************************************************************************************************************************************************************************************************************************************
 -->
 
@@ -200,9 +200,9 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 	<text>TRACKER has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them. Although the box is marked with .50 action express... you could've sworn his rifle used something different.</text>
 </event>
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   W/RAPTOR                                                                                        
+																							   W/RAPTOR
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_RAPTOR_1" unique="true">
@@ -217,9 +217,9 @@ Raptor slides three boxes of Instant Noodles sitting on the table to his side. N
 	</text>
 </event>
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   W/LANCER                                                                                        
+																							   W/LANCER
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_LANCER_1" unique="true">
@@ -237,9 +237,9 @@ Perhaps he could figure out a way for Lancer to somehow self-repair, but you're 
 	</text>
 </event>
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   W/CHEESE                                                                                        
+																							   W/CHEESE
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_CHEESE_1" unique="true">
@@ -250,9 +250,9 @@ Tracker leaves before you can question him about Cheese's codename(s).
 	</text>
 </event>
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   W/KAZ                                                                                        
+																							   W/KAZ
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_KAZ_1" unique="true">
@@ -263,14 +263,14 @@ The Mantis looks confident. Probably feeling that he's asserted his dominance.
 	</text>
 </event>
 
-<!-- 
+<!--
 ********************************************************************************************************************************************************************************************************************************************
-																							   W/KORA                                                                                        
+																							   W/KORA
 ********************************************************************************************************************************************************************************************************************************************
 -->
 <event name="SOCIALIZE_TRACKER_KORA_1" unique="true">
 	<text>You walk into Tracker's quarters and are surprised to see Kora;
-"Oh. Hi. I wanted to talk to Tracker to see if he's figured out the multiversal uplift thing." Kora sighs.
+"Oh. Hi. I wanted to talk to Tracker to see if he's figured out the multiversal uplift thing." Kora sighs.</text>
 <choice hidden="true">
 	<text>Has Tracker had any success?</text>
 	<event>
@@ -283,7 +283,6 @@ The Mantis looks confident. Probably feeling that he's asserted his dominance.
 		<text>"Oh. Only theories. My universe was particularly off. with many rifts through the multiverse. I can travel with ease at short distances. It's useful in combat, I hope."</text>
 	</event>
 </choice>
-</text>
 </event>
 
 <!-- 
