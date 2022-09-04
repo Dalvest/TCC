@@ -20,9 +20,9 @@ DELETECREW     Kills everyone on the enemy ship        Usage: DELETECREW
 SPEED          Changes gamespeed
 -->
 <FTL>
-  <!--<mod:findLike type="scripts">
+  <mod:findLike type="scripts">
     <mod-append:script>data/tcc_scripts/dependancy.lua</mod-append:script>
-  </mod:findLike>-->
+  </mod:findLike>
 </FTL>
 <FTL><!--appending to Inferno-Core-->
 	<events>
