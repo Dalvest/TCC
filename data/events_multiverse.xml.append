@@ -478,7 +478,7 @@
 			<item_modify>
 					<item type="scrap" min="-70" max="-70"/>
 				</item_modify>
-			<weapon name="CRYSTAL_BURST_1"/>
+			<weapon name="CRYSTAL_SHOTGUN"/>
 		</event>
 	</choice>
 
@@ -489,7 +489,7 @@
 			<item_modify>
 					<item type="scrap" min="-90" max="-90"/>
 				</item_modify>
-			<weapon name="CRYSTAL_BURST_2"/>
+			<weapon name="CRYSTAL_SHOTGUN_RED"/>
 		</event>
 	</choice>
 
@@ -645,7 +645,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_4"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Breach Bomb Flak</text>
 		<event>
@@ -667,7 +667,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_CHAIN"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Bomb Flak Charger</text>
 		<event>
@@ -711,7 +711,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_INSTANT"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Fire Bomb Flak</text>
 		<event>
@@ -722,7 +722,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_FIRE"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Ion Bomb Flak</text>
 		<event>
@@ -733,7 +733,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_ION"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Rad Bomb Flak</text>
 		<event>
@@ -744,7 +744,7 @@
 			<weapon name="TC_BOMB_SHOTGUN_BIO"/>
 		</event>
 	</choice>
-	
+
 	<choice hidden="false" blue="false">
 		<text>Lockdown Bomb Flak</text>
 		<event>
@@ -834,7 +834,7 @@
 		ch33s3W4sH3r3////RSA FOREVER
 		...SELECT YOUR WEAPON FROM THE LIST OF PRESET .GCODE FILES...
 		</text>
-	
+
 		<choice hidden="false" blue="false">
 			<text>MILITIA TAGGER</text>
 			<event>
@@ -1010,7 +1010,7 @@
 				<weapon name="TC_TONFA"/>
 			</event>
 		</choice>
-	
+
 		<choice hidden="false" blue="true">
 			<text>////CANCEL TRANSACTION////</text>
 			<event load="STORAGE_CHECK"/>
@@ -1418,7 +1418,7 @@
 <mod:findLike type="choice" start="0" limit="1">
 <mod:findLike type="event">
 <mod-append:choice req="LIST_CREW_LEAH" blue="true">
-    <text>Have Leah stand next to you while you respond to her hail.</text> 
+    <text>Have Leah stand next to you while you respond to her hail.</text>
 	<event load="SYLVAN_ROYAL_LEAH_DIALOGUE"/>
 </mod-append:choice>
 </mod:findLike>
