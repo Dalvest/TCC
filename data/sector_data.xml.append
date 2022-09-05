@@ -31,7 +31,7 @@
 	<rarityList>
 		<blueprint name="avali" rarity="4"/>
 		<blueprint name="protogen" rarity="3"/>
-		<blueprint name="protogen_space_scavenger" rarity="3"/>
+		<blueprint name="protogen_space_scavenger" rarity="5"/>
 		<blueprint name="CATALYZER" rarity="4"/>
 	</rarityList>
 	<startEvent>ENTER_EXAMPLE</startEvent> I think this is the event that appears when you are entering the sector in hyperspeed. These are loxated in events_lightspeed.
@@ -90,7 +90,6 @@
 		<mod-append:blueprint name="TC_BURST_2" rarity="5" />
 		<mod-append:blueprint name="MILITIA_TAGGER" rarity="4" />
 		<mod-append:blueprint name="TC_OVERLORD" rarity="5" />
-		<mod-append:blueprint name="CRYS_50CAL" rarity="4" />
 		<!--<mod-append:blueprint name="TC_VULCAN_CANNON" rarity="5" />-->
 		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
 		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="5" />
@@ -98,6 +97,9 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="4" />
 		<mod-append:blueprint name="TC_ESKA" rarity="5" />
 		<mod-append:blueprint name="TC_TONFA" rarity="5" />
+		<mod-append:blueprint name="avali" rarity="5" />
+		<mod-append:blueprint name="protogen" rarity="5" />
+		<mod-append:blueprint name="robottos" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -120,6 +122,9 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="4" />
 		<mod-append:blueprint name="TC_ESKA" rarity="4" />
 		<mod-append:blueprint name="TC_TONFA" rarity="4" />
+		<mod-append:blueprint name="avali" rarity="5" />
+		<mod-append:blueprint name="protogen" rarity="5" />
+		<mod-append:blueprint name="robottos" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -142,6 +147,8 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="3" />
 		<mod-append:blueprint name="TC_ESKA" rarity="4" />
 		<mod-append:blueprint name="TC_TONFA" rarity="4" />
+		<mod-append:blueprint name="avali" rarity="5" />
+		<mod-append:blueprint name="robottos" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -152,6 +159,8 @@
 		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
 		<mod-append:blueprint name="human_phoenix" rarity="5" />
 		<mod-append:blueprint name="human_hazmat" rarity="4" />
+		<mod-append:blueprint name="avali" rarity="5" />
+		<mod-append:blueprint name="protogen" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -259,6 +268,7 @@
 		<mod-append:blueprint name="protogen" rarity="0" />
 		<mod-append:blueprint name="protogen_space_scavenger" rarity="0" />
 		<mod-append:blueprint name="avali" rarity="0" />
+		<mod-append:blueprint name="sergal" rarity="0" />
 	</mod:findLike>
 </mod:findName>
 
@@ -286,6 +296,7 @@
 		<mod-append:blueprint name="protogen" rarity="0" />
 		<mod-append:blueprint name="protogen_space_scavenger" rarity="0" />
 		<mod-append:blueprint name="avali" rarity="0" />
+		<mod-append:blueprint name="sergal" rarity="0" />
 	</mod:findLike>
 </mod:findName>
 
