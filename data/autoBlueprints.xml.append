@@ -1075,6 +1075,7 @@
     </crew>
 	<crewCount amount="1" max="1" class="scrapper" />
 	<boardingAI>sabotage</boardingAI>
+	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_COMPACTOR3" layout="tc__trash_compactor3" img="tc_trash_compactor3">
@@ -1113,6 +1114,7 @@
     </crew>
 	<crewCount amount="1" max="1" class="scrapper" />
 	<boardingAI>sabotage</boardingAI>
+	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_COMPACTOR4" layout="tc_trash_compactor4" img="tc_trash_compactor4">
@@ -1151,6 +1153,7 @@
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
 	<boardingAI>invasion</boardingAI>
+	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_COMPACTOR5" layout="tc_trash_compactor5" img="tc_trash_compactor5">
@@ -1195,6 +1198,7 @@
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
 	<boardingAI>invasion</boardingAI>
+	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_COMPACTOR6" layout="tc_trash_compactor6" img="tc_trash_compactor6">
@@ -1242,6 +1246,7 @@
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
 	<boardingAI>invasion</boardingAI>
+	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
 <!--///////////////////// THE KM /////////////////-->
@@ -1280,6 +1285,7 @@
 	</crew>
 	<boardingAI>sabotage</boardingAI>
 	<forceAutoShip>false</forceAutoShip>
+	<cloakImage>mt_boss_kestrel</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_MINER_QUEST" layout="tc_trash_miner" img="tc_trash_miner">
@@ -1316,6 +1322,7 @@
 	</crew>
 	<boardingAI>sabotage</boardingAI>
 	<forceAutoShip>false</forceAutoShip>
+	<cloakImage>mt_boss_kestrel</cloakImage>
 </shipBlueprint>
 
 <!--///////////////////// KIVIE STUFF /////////////////-->

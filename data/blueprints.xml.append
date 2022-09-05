@@ -4732,7 +4732,7 @@
 		<stackable>true</stackable>
 	</augBlueprint>
 
-	<augBlueprint name="CUSTOM_CRYSTAL">
+	<augBlueprint name="BEAM_ARMOR">
 		<title>Leah's Vengeance</title>
 		<desc>You're not sure how this works and Leah refuses to tell you. Fires a system damaging pinpoint whenever you take damage</desc>
 		<cost>30</cost>
@@ -4992,7 +4992,7 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
-	
+
 	<augBlueprint name="LAB_TCC_ROBOTTO_UPGRADE2">
 		<title>__upgrade2__</title>
 		<desc>Robottos ......</desc>
@@ -5018,7 +5018,7 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
-	
+
 	<augBlueprint name="LAB_TCC_SCRAPPER_UPGRADE2">
 		<title>__upgrade2__</title>
 		<desc>Scrappers ......</desc>
@@ -5617,6 +5617,8 @@
 		<health amount="30" />
 		<maxPower amount="7" />
 		<aug name="ADVANCED_SCRAP" />
+		<shieldImage>tcp_scrapper</shieldImage>
+		<cloakImage>tcp_scrapper</cloakImage>
 	</shipBlueprint>
 
 	<!--///////////////////// TRASH EATER'S SHIPPEH //////////////////////////-->
@@ -5779,6 +5781,8 @@
 		<aug name="EX_BACKUP_DNA" />
 		<aug name="SCRAP_COLLECTOR" />
 		<aug name="NOODLE_RATIONS" />
+		<shieldImage>tcp_trash_miner</shieldImage>
+		<cloakImage>mup_kestrel_a</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TRASH_MINER_2" layout="tcp_trash_miner_b" img="tcp_trash_miner_b">
@@ -5855,6 +5859,8 @@
 		<health amount="30" />
 		<maxPower amount="6" />
 		<aug name="COMBAT_IONSTORM" />
+		<shieldImage>tc_trash_miner</shieldImage>
+		<cloakImage>mup_kestrel_a</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TRASH_MINER_3" layout="tcp_trash_miner_c" img="tcp_trash_miner_c">
@@ -5928,6 +5934,8 @@
 		<droneList drones="2" count="3" />
 		<health amount="30" />
 		<maxPower amount="8" />
+		<shieldImage>tc_trash_miner</shieldImage>
+		<cloakImage>mup_kestrel_a</cloakImage>
 	</shipBlueprint>
 
 	<!--/////////////////////TRASH REACTOR//////////////////////////-->
@@ -6216,6 +6224,8 @@
 		<aug name="REBEL_ID" />
 		<crewCount amount="3" class="human_rebel" />
 		<crewCount amount="1" class="human_legion_pyro" />
+		<shieldImage>tcp_echo</shieldImage>
+		<cloakImage>tcp_echo</cloakImage>
 	</shipBlueprint>
 
 	<!--/////////////////////EXTRA ELITE SHIP PACK//////////////////////////-->
@@ -6293,6 +6303,8 @@
 		<crewCount amount="2" class="scrapper" />
 		<crewCount amount="1" class="scrapper_scavenger" />
 		<aug name="MERCURY_GEL" />
+		<shieldImage>tcp_slugton</shieldImage>
+		<cloakImage>tcp_slugton_2</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_2" layout="tcp_extraelite_2" img="tcp_extraelite_2">
@@ -6369,6 +6381,8 @@
 		<health amount="30" />
 		<maxPower amount="9" />
 		<aug name="ANTI_ANAEROBIC_GRID" />
+		<shieldImage>tcp_scrapper</shieldImage>
+		<cloakImage>tcp_scrapper</cloakImage>
 	</shipBlueprint>
 
 	<!--/////////////////////CORROSUS/////////////////////////-->
@@ -6594,10 +6608,12 @@
 		<crewCount amount="1" class="human_technician" />
 		<crewCount amount="1" class="human_engineer" />
 		<aug name="CRATE_DRONES" />
+		<shieldImage>tcp_construction</shieldImage>
+		<cloakImage>tcp_construction</cloakImage>
 	</shipBlueprint>
-	
+
 	<!--/////// THE TECHLANCE //////-->
-	
+
 	<shipBlueprint name="PLAYER_SHIP_TECHLANCE" layout="tcp_techlance" img="tcp_techlance">
 		<class>Techlance Cruiser</class>
 		<name>WANDERER</name>
@@ -6793,6 +6809,7 @@
 		</droneList>
 		<health amount="15" />
 		<maxPower amount="8" />
+		<shieldImage>tcp_autogunboat_b</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_AUTOGUNBOAT_3" layout="tcp_autogunboat_c" img="tcp_autogunboat_c">
@@ -6869,6 +6886,7 @@
 		<crewCount amount="1" class="robottos" />
 		<crewCount amount="1" class="protogen" />
 		<crewCount amount="1" class="human_phoenix" />
+		<shieldImage>tcp_autogunboat_a</shieldImage>
 	</shipBlueprint>
 
 	<!--/////////////// MILITIA GB ///////////////-->
@@ -7012,6 +7030,7 @@
 		<aug name="DRONE_RECOVERY" />
 		<aug name="MAGNET_ARM" />
 		<aug name="REPAIR_ARM" />
+		<shieldImage>tcp_militiagunboat</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_MILITIAGUNBOAT_3" layout="tcp_militiagunboat_c" img="tcp_militiagunboat_c">
@@ -7080,6 +7099,7 @@
 		<crewCount amount="1" class="engi" />
 		<aug name="EX_SHIELD_RECHARGE" />
 		<aug name="NOODLE_RATIONS" />
+		<shieldImage>tcp_militiagunboat</shieldImage>
 	</shipBlueprint>
 
 	<!--/////////////// EXTRA ELITE SHIP PACK SLOT 2 ///////////////-->
@@ -7147,6 +7167,7 @@
 		<maxPower amount="0" />
 		<aug name="EX_DEFENSE_SCRAMBLER" />
 		<aug name="EX_AUTO_COOLDOWN" />
+		<shieldImage>tcp_autogunboat_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_2" layout="ars_tanker" img="ars_tanker">
@@ -7358,6 +7379,7 @@
 		<crewCount amount="1" class="orchid_chieftain" />
 		<aug name="EX_SHIELD_RECHARGE" />
 		<aug name="EX_AUTO_COOLDOWN" />
+		<shieldImage>tcp_militiagunboat</shieldImage>
 	</shipBlueprint>
 
 	<!--////////////////// AVALI SHIPS //////////////-->
@@ -7512,6 +7534,8 @@
 		<aug name="COMBAT_SHIELDS_JAMMER" />
 		<crewCount amount="4" class="avali" />
 		<crewCount amount="1" class="robottos_machinist" />
+		<shieldImage>tcp_avali_A</shieldImage>
+		<cloakImage>tcp_avali_A</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_AVALI_3" layout="tcp_avali_C" img="tcp_avali_c">
@@ -7589,6 +7613,8 @@
 		<aug name="DRONE_RECOVERY" />
 		<health amount="30" />
 		<maxPower amount="8" />
+		<shieldImage>tcp_avali_A</shieldImage>
+		<cloakImage>tcp_avali_A</cloakImage>
 	</shipBlueprint>
 
 	<!--///////////////////// SMEW BATTLECRUISER /////////////////////////-->
@@ -7883,6 +7909,7 @@
 		<health amount="25" />
 		<maxPower amount="8" />
 		<aug name="ADV_SCANNERS" />
+		<shieldImage>tcp_armored_wasp</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP_3" layout="tcp_armored_wasp_3" img="tcp_armored_wasp_3">
@@ -7957,6 +7984,8 @@
 		<maxPower amount="10" />
 		<aug name="EX_AUTO_COOLDOWN" />
 		<aug name="EX_CLOAK_FIRE" />
+		<shieldImage>tcp_armored_wasp</shieldImage>
+		<cloakImage>tcp_armored_wasp</cloakImage>
 	</shipBlueprint>
 
 	<!--//////////////////////// HARRIER MERCANTILE CRUISER //////////////////////////-->
@@ -8033,6 +8062,8 @@
 		<maxPower amount="8" />
 		<crewCount amount="3" class="avali" />
 		<crewCount amount="1" class="robottos_machinist" />
+		<shieldImage>tcp_avali_A</shieldImage>
+		<cloakImage>tcp_avali_A</cloakImage>
 	</shipBlueprint>
 
 
@@ -8182,6 +8213,7 @@
 		<health amount="30" />
 		<maxPower amount="11" />
 		<aug name="HEKTAR_GEL" />
+		<shieldImage>tcp_slugton</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_SLUGTON_3" layout="tcp_slugton_3" img="tcp_slugton_3">
@@ -8255,6 +8287,8 @@
 		<crewCount amount="1" class="protogen_space_scavenger" />
 		<crewCount amount="1" class="human_hazmat" />
 		<aug name="HEKTAR_GEL" />
+		<shieldImage>tcp_slugton</shieldImage>
+		<cloakImage>tcp_slugton</cloakImage>
 	</shipBlueprint>
 
 	<!--/////// STOLEN REBEL DESIGN  //////-->
@@ -8333,6 +8367,8 @@
 		<crewCount amount="1" class="slug_saboteur" />
 		<crewCount amount="1" class="blobslug" />
 		<aug name="HEKTAR_GEL" />
+		<shieldImage>mup_rebel_a</shieldImage>
+		<cloakImage>mup_rebel_a</cloakImage>
 	</shipBlueprint>
 
 	<!--/////// LEAH'S SHIPS //////-->
@@ -8406,7 +8442,7 @@
 		</droneList>
 		<health amount="30" />
 		<maxPower amount="8" />
-		<aug name="CUSTOM_CRYSTAL" />
+		<aug name="BEAM_ARMOR" />
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_2" layout="newtonbeam_2" img="newtonbeam_2">
@@ -8478,7 +8514,9 @@
 		<droneList drones="3" count="4" />
 		<health amount="30" />
 		<maxPower amount="5" />
-		<aug name="CUSTOM_CRYSTAL" />
+		<aug name="BEAM_ARMOR" />
+		<shieldImage>newtonbeam</shieldImage>
+		<cloakImage>newtonbeam</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_3" layout="newtonbeam_3" img="newtonbeam_3">
@@ -8544,7 +8582,9 @@
 		<droneList drones="3" count="3" />
 		<health amount="30" />
 		<maxPower amount="9" />
-		<aug name="CUSTOM_CRYSTAL" />
+		<aug name="BEAM_ARMOR" />
+		<shieldImage>newtonbeam</shieldImage>
+		<cloakImage>newtonbeam</cloakImage>
 	</shipBlueprint>
 
 	<!--////////////// MILSPEC //////////////////-->
@@ -8692,6 +8732,8 @@
 		</droneList>
 		<health amount="30" />
 		<maxPower amount="6" />
+		<shieldImage>tcp_milspec</shieldImage>
+		<cloakImage>tcp_milspec</cloakImage>
 	</shipBlueprint>
 
 
@@ -8847,6 +8889,8 @@
 		<crewCount amount="1" class="robottos" />
 		<aug name="CRATE_DRONES" />
 		<aug name="DRONE_RECOVERY" />
+		<shieldImage>potential</shieldImage>
+		<!--<cloakImage>tcp_construction</cloakImage>-->
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_POTENTIAL_3" layout="potential_3" img="potential_3">
@@ -8919,6 +8963,8 @@
 		<crewCount amount="1" class="human" />
 		<health amount="30" />
 		<maxPower amount="3" />
+		<shieldImage>potential</shieldImage>
+		<!--<cloakImage>potential</cloakImage>-->
 	</shipBlueprint>
 
 	<!--/////////////////////SIZE DOESN'T MATTER//////////////////////////-->
@@ -9055,6 +9101,8 @@
 		<health amount="20" />
 		<maxPower amount="5" />
 		<aug name="MANTIS_RELOADER" />
+		<shieldImage>tcp_sdm</shieldImage>
+		<cloakImage>tcp_sdm</cloakImage>
 	</shipBlueprint>
 
 	<!--/////////////// SAVIOR ///////////////-->
@@ -9515,6 +9563,8 @@
 		<crewCount amount="1" class="human_engineer" />
 		<aug name="EX_CLOAK_FIRE" />
 		<aug name="ENERGY_SHIELD" />
+		<shieldImage>blackopsA</shieldImage>
+		<cloakImage>blackopsA</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_BLACKOPS_3" layout="Blackops3" img="Blackops3">
@@ -9594,6 +9644,8 @@
 		<crewCount amount="1" class="orchid_chieftain" />
 		<crewCount amount="1" class="engi_separatist" />
 		<aug name="EX_CLOAK_FIRE" />
+		<shieldImage>blackopsA</shieldImage>
+		<cloakImage>blackopsA</cloakImage>
 	</shipBlueprint>
 
 	<!--/////// FSF MINESWEEPER //////-->
@@ -9751,6 +9803,8 @@
 		<aug name="SUPER_ARMOR" />
 		<aug name="EX_PAYLOAD_CREATOR" />
 		<aug name="COMBAT_EXPLOSIVE" />
+		<shieldImage>MinesweeperA</shieldImage>
+		<cloakImage>MinesweeperA</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_MINESWEEPER_3" layout="MinesweeperC" img="MinesweeperC">
@@ -9828,6 +9882,8 @@
 		<crewCount amount="1" class="shell" />
 		<aug name="OBSIDIAN_ARMOR_1" />
 		<aug name="PALADIN_ARMOR" />
+		<shieldImage>MinesweeperA</shieldImage>
+		<cloakImage>MinesweeperA</cloakImage>
 	</shipBlueprint>
 
 	<!--/////// FSF CYBERWARFARE //////-->
@@ -9988,6 +10044,8 @@
 		<aug name="EX_DEFENSE_SCRAMBLER" />
 		<aug name="COMBAT_REACTOR_JAMMER" />
 		<aug name="ANTI_VIRUS" />
+		<shieldImage>Cyber</shieldImage>
+		<cloakImage>Cyber</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_CYBER_3" layout="CyberwarfareC" img="CyberwarfareC">
@@ -10058,6 +10116,8 @@
 		<maxPower amount="8" />
 		<aug name="ANTI_VIRUS" />
 		<aug name="EX_DEFENSE_SCRAMBLER" />
+		<shieldImage>Cyber</shieldImage>
+		<cloakImage>Cyber</cloakImage>
 	</shipBlueprint>
 
 	<!--/////// FSF NBC //////-->
@@ -10217,6 +10277,8 @@
 		<crewCount amount="1" class="engi" />
 		<aug name="EX_O2_MASKS" />
 		<aug name="LOCKED_TOXIC_GAS" />
+		<shieldImage>NBC1</shieldImage>
+		<cloakImage>NBC1</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_NBC_3" layout="NBC3" img="NBC3">
@@ -10297,6 +10359,8 @@
 		<aug name="EX_O2_MASKS" />
 		<aug name="LOCKED_TOXIC_GAS" />
 		<aug name="COMBAT_OXYGEN_UNSTABLE" />
+		<shieldImage>NBC1</shieldImage>
+		<cloakImage>NBC1</cloakImage>
 	</shipBlueprint>
 
 	<!--///////////////////// FEDERATION CARRIER //////////////////////////-->
@@ -10453,6 +10517,8 @@
 		<crewCount amount="1" class="sergal" />
 		<crewCount amount="1" class="avali" />
 		<aug name="ADV_SCANNERS" />
+		<shieldImage>federation_carrier</shieldImage>
+		<cloakImage>federation_carrier</cloakImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_3" layout="federation_carrier_3" img="federation_carrier_3">
@@ -10531,6 +10597,8 @@
 		<crewCount amount="1" class="rock_commando" />
 		<crewCount amount="1" class="rock" />
 		<aug name="ROCK_ARMOR" />
+		<shieldImage>federation_carrier</shieldImage>
+		<cloakImage>federation_carrier</cloakImage>
 	</shipBlueprint>
 
 </FTL>
