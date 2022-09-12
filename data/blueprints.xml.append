@@ -6097,6 +6097,11 @@
 		<systemList>
 			<battery power="1" room="12" start="true" img="room_battery_orchid_2" />
 			<cloaking power="1" room="5" start="true" img="room_cloaking_2_1x1" />
+			<clonebay power="1" room="8" start="false">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
 			<doors power="1" room="9" start="true" img="room_doors">
 				<slot>
 					<direction>up</direction>
@@ -6165,6 +6170,11 @@
 		<systemList>
 			<battery power="1" room="12" start="false" img="room_battery_orchid_2" />
 			<cloaking power="1" room="5" start="true" img="room_cloaking_2_1x1" />
+			<clonebay power="1" room="8" start="false">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
 			<doors power="1" room="9" start="false" img="room_doors">
 				<slot>
 					<direction>up</direction>
