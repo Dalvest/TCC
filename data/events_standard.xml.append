@@ -63,10 +63,12 @@
 		</choice>
 		<choice req="LIST_CREW_LANIUS">
 			<text>(Lanius Crew) Have your Lanius melt the broken missiles down into scrap.</text>
-			<item_modify>
-				<item type="scrap" min="21" max="24"/>
-			</item_modify>
-			<event load="STORE_LOAD_RSA"/>
+			<event>
+				<item_modify>
+					<item type="scrap" min="21" max="24"/>
+				</item_modify>
+				<loadEvent>STORE_LOAD_RSA</loadEvent>
+			</event>
 		</choice>
 	</event>
 	<event>
@@ -80,10 +82,12 @@
 		</choice>
 		<choice req="LIST_CREW_LANIUS">
 			<text>(Lanius Crew) Have your Lanius melt the broken missiles down into scrap.</text>
-			<item_modify>
-				<item type="scrap" min="12" max="18"/>
-			</item_modify>
-			<event load="STORE_LOAD_RSA"/>
+			<event>
+				<item_modify>
+					<item type="scrap" min="12" max="18"/>
+				</item_modify>
+				<loadEvent>STORE_LOAD_RSA</loadEvent>
+			</event>
 		</choice>
 	</event>
 	<event>
@@ -97,10 +101,12 @@
 		</choice>
 		<choice req="LIST_CREW_LANIUS">
 			<text>(Lanius Crew) Have your Lanius melt the broken missiles down into scrap.</text>
-			<item_modify>
-				<item type="scrap" min="3" max="9"/>
-			</item_modify>
-			<event load="STORE_LOAD_RSA"/>
+			<event>
+				<item_modify>
+					<item type="scrap" min="2" max="9"/>
+				</item_modify>
+				<loadEvent>STORE_LOAD_RSA</loadEvent>
+			</event>
 		</choice>
 	</event>
 	<event>
@@ -127,10 +133,12 @@
 		</choice>
 		<choice req="LIST_CREW_LANIUS">
 			<text>(Lanius Crew) Have your Lanius melt the broken droneparts down into scrap.</text>
-			<item_modify>
-				<item type="scrap" min="21" max="24"/>
-			</item_modify>
-			<event load="STORE_LOAD_RSA"/>
+			<event>
+				<item_modify>
+					<item type="scrap" min="21" max="24"/>
+				</item_modify>
+				<loadEvent>STORE_LOAD_RSA</loadEvent>
+			</event>
 		</choice>
 	</event>
 	<event>
@@ -144,10 +152,12 @@
 		</choice>
 		<choice req="LIST_CREW_LANIUS">
 			<text>(Lanius Crew) Have your Lanius melt the broken droneparts down into scrap.</text>
-			<item_modify>
-				<item type="scrap" min="12" max="18"/>
-			</item_modify>
-			<event load="STORE_LOAD_RSA"/>
+			<event>
+				<item_modify>
+					<item type="scrap" min="12" max="18"/>
+				</item_modify>
+				<loadEvent>STORE_LOAD_RSA</loadEvent>
+			</event>
 		</choice>
 	</event>
 	<event>
@@ -161,10 +171,12 @@
 		</choice>
 		<choice req="LIST_CREW_LANIUS">
 			<text>(Lanius Crew) Have your Lanius melt the broken droneparts down into scrap.</text>
-			<item_modify>
-				<item type="scrap" min="3" max="9"/>
-			</item_modify>
-			<event load="STORE_LOAD_RSA"/>
+			<event>
+				<item_modify>
+					<item type="scrap" min="3" max="9"/>
+				</item_modify>
+				<loadEvent>STORE_LOAD_RSA</loadEvent>
+			</event>
 		</choice>
 	</event>
 	<event>
