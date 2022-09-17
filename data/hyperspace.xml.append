@@ -5309,6 +5309,10 @@ SPEED          Changes gamespeed
   			<function name="FTL_BOOSTER" value="0.20" useForReqs="true" warning="false"/>
   	</aug>
 
+		<aug name="BEAM_ARMOR">
+			<crystalShard weapon="FOCUS_1_LEAH_VENGEANCE" value="1" stackable="false"/>
+		</aug>
+
 	</augments>
 	<mod:findLike type="events">
 		<mod:findName name="LIST_CHECK_AUGMENTS">
