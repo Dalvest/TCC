@@ -1818,3 +1818,39 @@
 	<boardingAI>sabotage</boardingAI>
 	<aug name="EX_DRONE_SPEED" />
 </shipBlueprint>
+
+<!--ECHELON-->
+<shipBlueprint name="ECHELON_MEETUP_MERCHANT" layout="echelon_merchant" img="echelon merchant">
+	<class>Echelon(tm) Merchant ship</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<artillery power="3" max="4" room="8" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_C" />
+		<cloaking power="3" max="3" room="12" start="true" />
+		<clonebay power="3" max="3" room="7" start="true" />
+		<doors power="2" max="2" room="11" start="true" />
+		<drones power="6" max="6" room="5" start="true" />
+		<engines power="5" max="5" room="1" start="true" />
+		<hacking power="3" max="3" room="10" start="true" />
+		<mind power="3" max="3" room="9" start="true" />
+		<oxygen power="2" max="2" room="2" start="true" />
+		<pilot power="2" max="3" room="0" start="true" />
+		<shields power="8" max="8" room="4" start="true" />
+		<teleporter power="3" max="3" room="6" start="true" />
+		<weapons power="8" max="8" room="13" start="true" />
+	</systemList>
+	<weaponSlots>0</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="0" />
+	<droneList drones="0" count="0" />
+	<health amount="15" />
+	<maxPower amount="30" />
+	<crewCount amount="1" max="1" class="engi_defender" />
+	<crewCount amount="2" max="2" class="human_soldier" />
+	<crewCount amount="1" max="1" class="orchid_chieftain" />
+	<crewCount amount="2" max="2" class="zoltan_peacekeeper" />
+	<boardingAI>invasion</boardingAI>
+	<aug name="BACKUP_DNA" />
+	<aug name="EX_AUTO_COOLDOWN" />
+	<aug name="EX_BREACH_SEALANT" />
+</shipBlueprint>

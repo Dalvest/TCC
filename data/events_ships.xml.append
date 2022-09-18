@@ -91,4 +91,16 @@
 	<destroyed load="KM_DESTROY"/>
 	<deadCrew load="KM_CREW"/>
 </ship>
+
+<!--Echelon-->
+<ship name="SHIP_ECHELON_MERCHANT" auto_blueprint="ECHELON_MEETUP_MERCHANT">
+	<destroyed>
+		<text>You destroy the ship, and encounter some clearly placeholder text. You should probably mention this to somebody.</text>
+		<autoReward level="MED">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>You kill the crew of the ship, and encounter some clearly placeholder text. You should probably mention this to somebody.</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</deadCrew>
+</ship>
 </FTL>
