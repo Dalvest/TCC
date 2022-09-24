@@ -56,7 +56,7 @@ SPEED          Changes gamespeed
       <name>ADVANCED_SCRAP_REQ</name>
       <name>LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE</name>
     </req>
-
+	<variable name="tc_found_echelon" op="set" val="0"/>
 
     <req name="ADVANCED_SCRAP_REQ" type="any">
       <name>ADVANCED_SCRAP</name>
@@ -415,7 +415,7 @@ SPEED          Changes gamespeed
 
     <!--///////SCRAPPER DREADNOUGHT//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_EATER</arrow>
     	<unlock variant="a" silent="false">
     	   <type>4</type>
@@ -456,7 +456,7 @@ SPEED          Changes gamespeed
 
     <!--/////// TRASH EATER'S CRUISER //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TRASH_EATER" b="false" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_TRASH_EATER" b="false" c="false">
 
 		<unlock variant="a" silent="false">
 			<type>5</type>
@@ -476,7 +476,7 @@ SPEED          Changes gamespeed
 
     <!--///////KESTREL MINER//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
       <unlock variant="a" silent="false">
         <type>4</type>
@@ -542,7 +542,7 @@ SPEED          Changes gamespeed
 
     <!--///////TRASH REACTOR//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="true" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="true" c="false" secret="true">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_ECHO</arrow>
       <unlock variant="a" silent="false">
         <type>5</type>
@@ -592,7 +592,7 @@ SPEED          Changes gamespeed
 
   	<!--///////EXTRA ELITE SHIP PACK//////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false" unused="true">
+  	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false">
   		<unlock variant="a" silent="false">
   			<type>3</type>
   			<otherUnlocks>
@@ -638,7 +638,7 @@ SPEED          Changes gamespeed
 
   	<!--/////////// CORROSUS //////////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_CORROSUS" b="false" c="false" unused="true">
+  	<mod-append:ship name="PLAYER_SHIP_CORROSUS" b="false" c="false">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TC_CONSTRUCTION</arrow>
     	<unlock variant="a" silent="false">
         <type>5</type>
@@ -672,7 +672,7 @@ SPEED          Changes gamespeed
 
   	<!--/////// CONSTRUCTION CREW KESTREL //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="true" c="false" unused="true">
+  	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="true" c="false">
 
   		<unlock variant="a" silent="false">
         <type>5</type>
@@ -701,7 +701,7 @@ SPEED          Changes gamespeed
 
 	<!--/////// TECHLANCE //////-->
 
-	<mod-append:ship name="PLAYER_SHIP_TECHLANCE" b="false" c="false" unused="true">
+	<mod-append:ship name="PLAYER_SHIP_TECHLANCE" b="false" c="false">
 
 		<unlock variant="a" silent="false">
 			<type>5</type>
@@ -728,7 +728,7 @@ SPEED          Changes gamespeed
 
     <!--///////SIZE DOESN'T MATTER//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false">
 
       <unlock variant="a" silent="false">
         <type>5</type>
@@ -780,7 +780,7 @@ SPEED          Changes gamespeed
 
     <!--///////ARMORED WASP//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true">
 
       <unlock variant="a" silent="false">
         <type>2</type>
@@ -841,7 +841,7 @@ SPEED          Changes gamespeed
 
     <!--///////RENT-A-FLAGSHIP//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_HEKTAR_REBEL</arrow>
     	<unlock variant="a" silent="false">
         <type>2</type>
@@ -894,7 +894,7 @@ SPEED          Changes gamespeed
 
     <!--/////// PORTED SHIPS //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="true" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="true">
       <unlock variant="a" silent="false">
         <type>3</type>
         <shipReq>CREW_SHIP_SLOT1_2</shipReq>
@@ -948,7 +948,7 @@ SPEED          Changes gamespeed
       </crew>
     </mod-append:customShip>
 
-    <mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" unused="true" >
+    <mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" >
       <unlock variant="a" silent="false">
         <type>3</type>
         <shipReq>PLAYER_SHIP_ORCHID_3</shipReq>
@@ -992,7 +992,7 @@ SPEED          Changes gamespeed
 
 	<!--/////////////////// FALCON FRIGATE //////////////// -->
 
-	<mod-append:ship name="PLAYER_SHIP_FALCON_FRIGATE" b="false" c="false" unused="true" >
+	<mod-append:ship name="PLAYER_SHIP_FALCON_FRIGATE" b="false" c="false" >
 		<unlock variant="a" silent="false">
 			<type>2</type>
 			<shipReq>PLAYER_SHIP_AVALI</shipReq>
@@ -1015,7 +1015,7 @@ SPEED          Changes gamespeed
 
     <!--/////////////////// SMEW BATTLECRUISER //////////////// -->
 
-	<mod-append:ship name="PLAYER_SHIP_SMEW_BATTLECRUISER" b="false" c="false" unused="true" >
+	<mod-append:ship name="PLAYER_SHIP_SMEW_BATTLECRUISER" b="false" c="false" >
 		<unlock variant="a" silent="false">
 			<type>2</type>
 			<shipReq>PLAYER_SHIP_FALCON_FRIGATE</shipReq>
@@ -1030,7 +1030,7 @@ SPEED          Changes gamespeed
 
     <!--/////////////////// AVALI SLOT 2 //////////////// -->
 
-    <mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" unused="true" >
+    <mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" >
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_AVALI_3</shipReq>
@@ -1048,7 +1048,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FSF BLACK OPS //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_BLACKOPS" b="true" c="true" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_BLACKOPS" b="true" c="true">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_MINESWEEPER</arrow>
     	<unlock variant="a" silent="false">
         <type>3</type>
@@ -1099,7 +1099,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FSF MINESWEEPER //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_MINESWEEPER" b="true" c="true" unused="true" >
+    <mod-append:ship name="PLAYER_SHIP_MINESWEEPER" b="true" c="true" >
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_CYBER</arrow>
       <unlock variant="a" silent="false">
         <type>2</type>
@@ -1187,7 +1187,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FSF CYBERWARFARE //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_CYBER" b="true" c="true" unused="true" >
+    <mod-append:ship name="PLAYER_SHIP_CYBER" b="true" c="true" >
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_NBC</arrow>
       <unlock variant="a" silent="false">
         <type>2</type>
@@ -1246,7 +1246,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FSF NBC //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_NBC" b="true" c="true" unused="true" >
+    <mod-append:ship name="PLAYER_SHIP_NBC" b="true" c="true" >
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_CYBER</shipReq>
@@ -1303,7 +1303,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FEDERATION CARRIER //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="true" c="true" unused="true" >
+    <mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="true" c="true" >
       <unlock variant="a" silent="false">
         <type>3</type>
         <otherUnlocks>
@@ -1352,7 +1352,7 @@ SPEED          Changes gamespeed
 
     <!--/////// MILSPEC //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false" unused="true">
+    <mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false">
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_AVALI</shipReq>
@@ -1394,7 +1394,7 @@ SPEED          Changes gamespeed
 
     <!--/////// LEAH GAMING //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_NEWTONBEAMA" b="true" c="true" unused="true" >
+    <mod-append:ship name="PLAYER_SHIP_NEWTONBEAMA" b="true" c="true" >
       <unlock variant="b" silent="false">
         <type>5</type>
         <victories>
@@ -1444,7 +1444,7 @@ SPEED          Changes gamespeed
 
   	<!--/////// HEKTAR REBEL SHIPPEHEHSHIPEHEHHHSHIP //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_HEKTAR_REBEL" b="false" c="false" unused="true" >
+  	<mod-append:ship name="PLAYER_SHIP_HEKTAR_REBEL" b="false" c="false" >
       <unlock variant="a" silent="false">
         <type>5</type>
         <victories>
@@ -1473,9 +1473,29 @@ SPEED          Changes gamespeed
 
   	<!--/////// AUTO GUN //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_AUTOGUNBOAT" b="true" c="true" unused="true" >
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_MILITIAGUNBOAT</arrow>
-
+  	<mod-append:ship name="PLAYER_SHIP_AUTOGUNBOAT" b="true" c="true" >
+      	<arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_MILITIAGUNBOAT</arrow>
+		<unlock variant="a" silent="false">
+    		<type>4</type>
+  		</unlock>
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_AUTOGUNBOAT</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_AUTOGUNBOAT_2</shipReq>
+			<value>5</value>
+			<silent>false</silent>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>5</type>
+			<victories>
+			<victory>PLAYER_SHIP_AUTOGUNBOAT</victory>
+			</victories>
+    	</unlock>
     </mod-append:ship>
 
   	<mod-append:customShip name="PLAYER_SHIP_AUTOGUNBOAT">
@@ -1501,7 +1521,7 @@ SPEED          Changes gamespeed
 
   	<!--/////// MILITIA GB //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT" b="true" c="true" unused="true" >
+  	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT" b="true" c="true" >
       <unlock variant="a" silent="false">
         <type>5</type>
         <victories>
@@ -1560,8 +1580,16 @@ SPEED          Changes gamespeed
 
   	<!--/////// MGB //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_ECHELON_ELITE" b="false" c="false" unused="true" />
-
+  	<mod-append:ship name="PLAYER_SHIP_ECHELON_ELITE" b="false" c="false" >
+		<unlock variant="a" silent="false">
+			<type>3</type>
+            <otherUnlocks>
+                <ship>PLAYER_SHIP_MILITAGUNBOAT</ship>
+                <ship>PLAYER_SHIP_MILITAGUNBOAT_2</ship>
+				<ship>PLAYER_SHIP_MILITAGUNBOAT_3</ship>
+            </otherUnlocks>
+        </unlock>
+	</mod-append:ship>
   	<mod-append:customShip name="PLAYER_SHIP_ECHELON_ELITE">
   		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
   		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
@@ -1572,7 +1600,7 @@ SPEED          Changes gamespeed
 
   	<!--/////// STALWART DEFENSE //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" unused="true" />
+  	<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" />
 
   	<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
   		<hiddenAug>SHIP_SPLICE</hiddenAug>
@@ -1582,7 +1610,16 @@ SPEED          Changes gamespeed
 
   	<!--/////// EXTRAELITE SLOT 2 //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE_SLOT2" b="true" c="true" unused="true" />
+  	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE_SLOT2" b="true" c="true" >
+		<unlock variant="a" silent="false">
+			<type>3</type>
+            <otherUnlocks>
+                <ship>PLAYER_SHIP_AUTOGUNBOAT</ship>
+                <ship>PLAYER_SHIP_AUTOGUNBOAT_2</ship>
+				<ship>PLAYER_SHIP_AUTOGUNBOAT_3</ship>
+            </otherUnlocks>
+        </unlock>
+	</mod-append:ship>
 
   	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2">
   		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -1606,11 +1643,13 @@ SPEED          Changes gamespeed
 
   	<!--/////// SAVIOR SHIPS //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_SAVIOR" b="true" c="true" unused="true">
+  	<mod-append:ship name="PLAYER_SHIP_SAVIOR" b="true" c="true" secret="true">
 
   		<unlock variant="a" silent="false">
-    		<type>2</type>
-    		<shipReq>PLAYER_SHIP_ANCIENT_2</shipReq>
+			<type>5</type>
+			<victories>
+				<victory>PLAYER_SHIP_ANCIENT_2</victory>
+			</victories>
   		</unlock>
   		<unlock variant="b" silent="false">
     		<type>2</type>
@@ -1649,7 +1688,7 @@ SPEED          Changes gamespeed
 
   	<!--/////// ECHO 1-LINER //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_ECHO" b="true" c="false" unused="true">
+  	<mod-append:ship name="PLAYER_SHIP_ECHO" b="true" c="false">
       <unlock variant="a" silent="false">
         <type>5</type>
         <victories>

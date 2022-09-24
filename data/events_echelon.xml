@@ -1,7 +1,8 @@
 <event name="ECHELON_MERCHANT_MEETUP">
 	<text>Upon arriving at the beacon, you see a strangely colored ship that's similar to a Militia ship. The ship also displays a strange logo with the words "Ad Astra" on it. What should be the next action?</text>
 	<ship load="SHIP_ECHELON_MERCHANT" hostile="false"/>
-  	<choice>
+  	<variable name="tc_found_echelon" op="set" val="1"/>
+	<choice>
 		<text>Approach. They seem friendly enough.</text>
 		<event>
 			<text>Before you can even turn your ship to face them, the ship's captain immediately speaks to you. "You! You must be the Renegade the federation sent, right?"</text>
@@ -47,10 +48,14 @@
 	</choice>
 
 
-  <choice hidden="true">
+  	<choice hidden="true">
 		<text>Maybe it's best the vessel is left alone.</text>
 		<event>
 			<text>You decided that the strange vessel isn't worth the time, you eventually part ways with it. You can't help but wonder what things they might have.</text>
 		</event>
 	</choice>
 </event>
+<ship name="SHIP_ECHELON_MERCHANT" auto_blueprint="ECHELON_MEETUP_MERCHANT">
+	<destroyed load="DEFEAT_MILITIA_ELITE"/>
+	<deadCrew load="DEFEAT_MILITIA_ELITE"/>
+</ship>

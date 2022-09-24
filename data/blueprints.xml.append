@@ -5941,7 +5941,7 @@
 	<!--/////////////////////TRASH REACTOR//////////////////////////-->
 
 	<shipBlueprint name="PLAYER_SHIP_TRASH_REACTOR" layout="tcp_trash_reactor" img="tcp_trash_reactor">
-		<class>//CORRUPTED//CLASS//</class>
+		<class>Reactive Compactor</class>
 		<name>Reactive Compactor</name>
 		<desc>This is a ship rebuilt out of three - the Garbage Compactor, Rent-a-Flagship and a Ministry Bomber. The paintjob was rushed but it looks the part. The original crew is still on-board, joined by two mercenaries.</desc>
 		<unlock id="ship_PLAYER_SHIP_TRASH_REACTOR_unlock"/>
@@ -6015,7 +6015,7 @@
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TRASH_REACTOR_2" layout="tcp_trash_reactor_2" img="tcp_trash_reactor_2">
-		<class>//CORRUPTED//CLASS//</class>
+		<class>Reactive Compactor</class>
 		<name>Prideful Partisan</name>
 		<desc>Same broken class chip, same teleporter. This ship's strength is its world-class crew. Mercs of any and all kinds are welcome.</desc>
 		<systemList>
@@ -6702,6 +6702,7 @@
 		<class>Automated Gunboat</class>
 		<name>Factory Standard</name>
 		<desc>An unassuming ship armed with an equally unassuming but reliable artillery that can be very powerful once fully upgraded - courtesy of Echelon Shipyards, partner of RSA. Ad Astra, brother.</desc>
+		<unlock id="ship_PLAYER_SHIP_AUTOGUNBOAT_unlock"/>
 		<systemList>
 			<artillery power="1" max="4" room="5" start="true" weapon="ARTILLERY_AUTO_A_MISSILE" img="room_artillery" />
 			<battery power="2" max="2" room="9" start="true" img="room_battery_17" />
@@ -6764,6 +6765,7 @@
 		<class>Automated Gunboat</class>
 		<name>Tactical Oddity</name>
 		<desc>The engineers behind this ship clearly prioritized brutality first and morality last, which has forced this ship to use peculiar tactics and.....whatever in the name of all that's holy the artillery is.</desc>
+		<unlock id="ship_PLAYER_SHIP_AUTOGUNBOAT_2_unlock"/>
 		<systemList>
 			<artillery power="1" max="4" room="3" start="true" weapon="ARTILLERY_AUTO_B_BIO" img="room_artillery_1x1" />
 			<battery power="1" max="2" room="7" start="false" img="room_battery_7" />
@@ -6826,6 +6828,7 @@
 		<class>Automated Gunboat</class>
 		<name>Crash Course</name>
 		<desc>A group of students has decided that feeding Callie's code with high level maths is going to be hilarious, now they ended up with a very intelligent version of Callie that is also deadly.</desc>
+		<unlock id="ship_PLAYER_SHIP_AUTOGUNBOAT_3_unlock"/>
 		<systemList>
 			<artillery power="3" max="4" room="1" start="true" weapon="ARTILLERY_ENERGY_MATH" img="room_artillery_1x1" />
 			<battery power="1" max="2" room="7" start="true" img="room_battery_13" />
@@ -6905,6 +6908,7 @@
 		<class>Militia Gunboat</class>
 		<name>The Intern-ship</name>
 		<desc>Back in it's original form, this ship is ready to conduct commerce through the galaxy, but in turn that has left the ship with little offense or defense and must rely on the crew to make it!</desc>
+		<unlock id="ship_PLAYER_SHIP_MILITIAGUNBOAT_unlock"/>
 		<systemList>
 			<artillery power="3" max="4" room="2" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_C" img="room_artillery_7" />
 			<cloaking power="2" room="5" start="false" img="room_cloaking_TCC" />
@@ -6928,6 +6932,11 @@
 			</engines>
 			<hacking power="1" room="8" start="false" img="room_hacking_orchid" />
 			<mind power="1" room="4" start="false" img="room_mind_9" />
+			<medbay power="1" room="13" start="false" img="room_medbay_9">
+				<slot>
+					<number>1</number>
+				</slot>
+			</medbay>
 			<oxygen power="1" room="6" start="true" img="room_oxygen_10" />
 			<pilot power="1" room="0" start="true" img="room_pilot">
 				<slot>
@@ -6955,7 +6964,7 @@
 				</slot>
 			</weapons>
 		</systemList>
-		<weaponSlots>2</weaponSlots>
+		<weaponSlots>2</weaponSlots> 
 		<droneSlots>3</droneSlots>
 		<weaponList missiles="0" count="2" />
 		<droneList drones="5" count="3">
@@ -6976,10 +6985,16 @@
 		<class>Militia Gunboat</class>
 		<name>Fortunate Scrap</name>
 		<desc>Although rusty and damaged, this ship is still very valuable in the eyes of RSA from it's quality. The mining beam also packs much more punch than you'd expect.</desc>
+		<unlock id="ship_PLAYER_SHIP_MILITIAGUNBOAT_2_unlock"/>
 		<systemList>
 			<artillery power="3" max="4" room="3" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_B" img="room_artillery_7" />
 			<battery power="1" room="10" start="false" img="room_battery_2" />
 			<cloaking power="2" room="13" start="false" img="room_cloaking_9" />
+			<clonebay power="1" room="7" start="true">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
 			<doors power="1" room="5" start="true" img="room_doors">
 				<slot>
 					<direction>up</direction>
@@ -7019,6 +7034,7 @@
 					<number>1</number>
 				</slot>
 			</shields>
+			<teleporter power="1" max="3" room="6" start="false" />
 			<weapons power="2" max="6" room="4" start="false" img="Little_weapons_room">
 				<slot>
 					<direction>right</direction>
@@ -7047,17 +7063,23 @@
 		<class>Militia Gunboat</class>
 		<name>Sechnaill</name>
 		<desc>This ship used to be a merchant ship before it was converted to a war vessel, now it has a massive minigun. How great.</desc>
+		<unlock id="ship_PLAYER_SHIP_MILITIAGUNBOAT_3_unlock"/>
 		<systemList>
 			<artillery power="3" max="4" room="13" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_A" img="room_artillery_blue_2x1right" />
 			<battery power="1" room="4" start="false" img="room_battery_2" />
 			<cloaking power="2" room="6" start="false" img="room_cloaking_9" />
+			<clonebay power="1" room="9" start="false">
+				<slot>
+					<number>1</number>
+				</slot>
+			</clonebay>
 			<doors power="1" max="8" room="7" start="true" img="room_doors">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</doors>
-			<drones power="3" room="10" start="false" img="room_drones_13" />
+			<drones power="3" room="10" start="false" img="room_drones_14" />
 			<engines power="2" room="1" start="true" img="room_engines_8">
 				<slot>
 					<direction>left</direction>
@@ -7090,6 +7112,7 @@
 					<number>1</number>
 				</slot>
 			</shields>
+			<teleporter power="1" room="14" start="false" />
 			<weapons power="2" max="8" room="11" start="true" img="Little_weapons_room">
 				<slot>
 					<direction>right</direction>
@@ -7118,6 +7141,7 @@
 		<class>Elite Automated Gunboat</class>
 		<name>Hardware Reset</name>
 		<desc>Having hijacked a gunboat for testing purposes, CICA has already installed many readily built systems and a very special artillery in the ship. One thing CICA seemed to forgot however, is the reactor itself!</desc>
+		<unlock id="ship_PLAYER_SHIP_AUTOGUNBOAT_ELITE_unlock"/>
 		<systemList>
 			<artillery power="2" max="5" room="1" start="true" weapon="ARTILLERY_RESONATE_WAVE" img="room_artillery_1x1" />
 			<battery power="3" max="3" room="4" start="true" img="room_battery_9" />
@@ -7334,6 +7358,7 @@
 		<class>CDEG Gunboat</class>
 		<name>Talos</name>
 		<desc>A very specific model of the gunboat has been made to solely fit this one mostrosity of a gun. It may be very powerful, but that has left it's other systems less powered that normal! ....And storing explosives makes it more fragile too.</desc>
+		<unlock id="ship_PLAYER_SHIP_MILITIAGUNBOAT_ELITE_unlock"/>
 		<systemList>
 			<artillery power="5" max="5" room="12" start="true" weapon="ARTILLERY_CIVILIAN_JUSTICE" img="room_artillery_blue_2x1right" />
 			<battery power="1" max="2" room="11" start="true" img="room_battery_14" />
@@ -8307,6 +8332,7 @@
 		<class>Original Design(tm)</class>
 		<name>Free Sample</name>
 		<desc>The Hektar Corporation is no stranger to borrowing designs - when the rebel cruiser proved its worth in battle, it's no surprise that Hektar... lent the design. This ship is good both for battles and for carrying cargo.</desc>
+		<unlock id="ship_PLAYER_SHIP_HEKTAR_REBEL_unlock"/>
 		<systemList>
 			<artillery power="1" room="26" start="true" weapon="ARTILLERY_TC_MODULAR_BEAM" img="room_artillery_dromaius" />
 			<battery power="1" room="13" start="false" img="room_battery_12" />
