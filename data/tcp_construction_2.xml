@@ -15,4 +15,7 @@
 </weaponMounts>
 <explosion>
 	<gib1><velocity min="0.12415532011867171" max="0.41385106706223906" /><direction min="205" max="221" /><angular min="-0.8698089636620617" max="0.8698089636620617" /><x>266</x><y>179</y></gib1><gib2><velocity min="0.18120704602523896" max="0.6040234867507965" /><direction min="266" max="282" /><angular min="-0.6822659323367426" max="0.6822659323367426" /><x>369</x><y>77</y></gib2><gib3><velocity min="0.23443777552170905" max="0.7814592517390302" /><direction min="63" max="79" /><angular min="-0.7499172546630241" max="0.7499172546630241" /><x>47</x><y>23</y></gib3><gib4><velocity min="0.1" max="0.3273060947497511" /><direction min="15" max="31" /><angular min="-0.6580497395743506" max="0.6580497395743506" /><x>155</x><y>20</y></gib4><gib5><velocity min="0.11998124383526984" max="0.39993747945089947" /><direction min="118" max="134" /><angular min="-0.5357123401148505" max="0.5357123401148505" /><x>52</x><y>181</y></gib5></explosion>
-
+<thrusters sync="true">
+    <thruster x="109" y="33">mup_fed_thruster</thruster>
+    <thruster x="109" y="314">mup_fed_thruster</thruster>
+</thrusters>

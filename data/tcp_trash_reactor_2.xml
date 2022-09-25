@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
-<img x="-167" y="-61" w="745" h="452" />
+<img x="-167" y="-58" w="745" h="452" />
 <offsets>
-	<floor x="161" y="55" />
+	<floor x="161" y="51" />
 	<cloak x="2" y="0" />
 </offsets>
 <weaponMounts>
@@ -50,4 +50,7 @@
 		<y>201</y>
 	</gib5>
 </explosion>
-
+<thrusters sync="true">
+    <thruster x="52" y="85">mup_fed_thruster</thruster>
+    <thruster x="52" y="249">mup_fed_thruster</thruster>
+</thrusters>

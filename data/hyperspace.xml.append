@@ -1048,7 +1048,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FSF BLACK OPS //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_BLACKOPS" b="true" c="true">
+    <mod-append:ship name="PLAYER_SHIP_BLACKOPS" a="false" b="false" c="false">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_MINESWEEPER</arrow>
     	<unlock variant="a" silent="false">
         <type>3</type>
@@ -1099,7 +1099,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FSF MINESWEEPER //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_MINESWEEPER" b="true" c="true" >
+    <mod-append:ship name="PLAYER_SHIP_MINESWEEPER" a="false" b="false" c="false">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_CYBER</arrow>
       <unlock variant="a" silent="false">
         <type>2</type>
@@ -1187,7 +1187,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FSF CYBERWARFARE //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_CYBER" b="true" c="true" >
+    <mod-append:ship name="PLAYER_SHIP_CYBER" a="false" b="false" c="false">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_NBC</arrow>
       <unlock variant="a" silent="false">
         <type>2</type>
@@ -1246,7 +1246,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FSF NBC //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_NBC" b="true" c="true" >
+    <mod-append:ship name="PLAYER_SHIP_NBC" a="false" b="false" c="false">
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_CYBER</shipReq>
@@ -1311,6 +1311,15 @@ SPEED          Changes gamespeed
           <ship>PLAYER_SHIP_MINESWEEPER</ship>
           <ship>PLAYER_SHIP_CYBER</ship>
           <ship>PLAYER_SHIP_NBC</ship>
+        </otherUnlocks>
+      </unlock>
+	  <unlock variant="a" silent="false">
+        <type>3</type>
+        <otherUnlocks>
+          <ship>PLAYER_SHIP_TC_MILSPEC</ship>
+          <ship>PLAYER_SHIP_POTENTIAL</ship>
+          <ship>PLAYER_SHIP_SDM</ship>
+          <ship>PLAYER_SHIP_SAVIOR</ship>
         </otherUnlocks>
       </unlock>
       <unlock variant="b" silent="false">
@@ -1584,9 +1593,9 @@ SPEED          Changes gamespeed
 		<unlock variant="a" silent="false">
 			<type>3</type>
             <otherUnlocks>
-                <ship>PLAYER_SHIP_MILITAGUNBOAT</ship>
-                <ship>PLAYER_SHIP_MILITAGUNBOAT_2</ship>
-				<ship>PLAYER_SHIP_MILITAGUNBOAT_3</ship>
+                <ship>PLAYER_SHIP_MILITIAGUNBOAT</ship>
+                <ship>PLAYER_SHIP_MILITIAGUNBOAT_2</ship>
+				<ship>PLAYER_SHIP_MILITIAGUNBOAT_3</ship>
             </otherUnlocks>
         </unlock>
 	</mod-append:ship>

@@ -16,3 +16,7 @@
 <explosion>
 	<gib1><velocity min="0.11997045473183693" max="0.39990151577278976" /><direction min="117" max="133" /><angular min="-0.5277322268326418" max="0.5277322268326418" /><x>47</x><y>181</y></gib1><gib2><velocity min="0.19350208105720704" max="0.6450069368573568" /><direction min="263" max="279" /><angular min="-0.7019729918681238" max="0.7019729918681238" /><x>382</x><y>82</y></gib2><gib3><velocity min="0.10268353863147038" max="0.34227846210490126" /><direction min="-5" max="11" /><angular min="-0.7309674700180083" max="0.7309674700180083" /><x>193</x><y>23</y></gib3><gib4><velocity min="0.2026891767226396" max="0.6756305890754654" /><direction min="61" max="77" /><angular min="-0.6873791165237443" max="0.6873791165237443" /><x>47</x><y>20</y></gib4><gib5><velocity min="0.1" max="0.2760257920548366" /><direction min="131" max="147" /><angular min="-0.4835750678056323" max="0.4835750678056323" /><x>52</x><y>189</y></gib5></explosion>
 
+<thrusters sync="true">
+    <thruster x="109" y="33">mup_fed_thruster</thruster>
+    <thruster x="109" y="314">mup_fed_thruster</thruster>
+</thrusters>

@@ -445,7 +445,7 @@
 		<desc>Artillery: Fires a flak of 3 strong heavy lasers which pierce 1 shield and do 3 system damage.
 		Base Cooldown: 40</desc>
 		<tooltip>Artillery: Fires a flak of 3 strong heavy lasers which pierce 1 shield and do 3 system damage.</tooltip>
-		<radius>70</radius>
+		<radius>0</radius>
 		<damage>2</damage>
 		<ion>0</ion>
 		<speed>50</speed>
@@ -486,7 +486,7 @@
 		<desc>Artillery: Fires a cluster of missiles, flak, and lasers to do massive damage to the enemy ship.
 		Base Cooldown: 60</desc>
 		<tooltip>Artillery: Fires a cluster of missiles, flak, and lasers to do massive damage to the enemy ship.</tooltip>
-		<radius>30</radius>
+		<radius>0</radius>
 		<damage>1</damage>
 		<ion>0</ion>
 		<speed>30</speed>
@@ -7363,6 +7363,11 @@
 			<artillery power="5" max="5" room="12" start="true" weapon="ARTILLERY_CIVILIAN_JUSTICE" img="room_artillery_blue_2x1right" />
 			<battery power="1" max="2" room="11" start="true" img="room_battery_14" />
 			<cloaking power="2" max="3" room="4" start="true" img="room_cloaking_9" />
+			<clonebay power="1" max="2" room="9" start="false">
+				<slot>
+					<number>0</number>
+				</slot>
+			</clonebay>
 			<doors power="1" room="10" start="true" img="room_doors">
 				<slot>
 					<direction>up</direction>
@@ -9209,7 +9214,7 @@
 		<crewCount amount="1" class="shell_radiant" />
 		<crewCount amount="1" class="saviors" />
 		<aug name="SAVIOR_SHIELD" />
-		<shieldImage>tcpc_anointed</shieldImage>
+		<shieldImage>mupc_anointed</shieldImage>
 	</shipBlueprint>
 
 
@@ -9247,7 +9252,7 @@
 				</slot>
 			</medbay>
 			<mind power="1" room="13" start="false" img="room_mind" />
-			<oxygen power="1" room="30" start="false" img="room_oxygen_2" />
+			<oxygen power="1" room="28" start="false" img="room_oxygen_2" />
 			<pilot power="1" room="6" start="true" img="room_pilot_3">
 				<slot>
 					<direction>right</direction>
@@ -9288,7 +9293,7 @@
 		<crewCount amount="1" class="obelisk_royal" />
 		<crewCount amount="1" class="saviors" />
 		<aug name="REGEN_SHIELD" />
-		<shieldImage>tcp_savior_b</shieldImage>
+		<shieldImage>mupc_anointed</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_SAVIOR_3" layout="tcp_savior_c" img="tcp_savior_c">
@@ -9365,7 +9370,7 @@
 		<crewCount amount="1" class="human_legion" />
 		<crewCount amount="1" class="avatarlegion" />
 		<aug name="FALSE_SHIELD" />
-		<shieldImage>tcp_savior_c</shieldImage>
+		<shieldImage>mupc_anointed</shieldImage>
 	</shipBlueprint>
 
 	<!--////////////////// STALWART DEFENSE //////////////-->
@@ -9785,7 +9790,7 @@
 				</slot>
 			</doors>
 			<drones max="8" power="1" room="15" start="false" img="room_drones" />
-			<engines max="8" power="1" room="3" start="true" img="room_engines_8">
+			<engines max="2" power="1" room="3" start="true" img="room_engines_8">
 				<slot>
 					<direction>left</direction>
 					<number>2</number>
