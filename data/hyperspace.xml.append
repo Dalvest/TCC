@@ -1569,9 +1569,9 @@ SPEED          Changes gamespeed
 
 			<!--Page 2--> <!-- Line 1 - RECLAIM and SALVAGE ASSOCIATION; Line 2 - Echelon Shipyards -->
 			<mod-append:ship>PLAYER_SHIP_CORROSUS</mod-append:ship> <!--CorroSUS-->
-  		    <mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
-  		    <mod-append:ship>PLAYER_SHIP_TECHLANCE</mod-append:ship> <!--Techlance-->
+			<mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
 			<mod-append:empty/>
+  		    <mod-append:ship>PLAYER_SHIP_TECHLANCE</mod-append:ship> <!--Techlance-->
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_MILITIAGUNBOAT</mod-append:ship> <!-- Militia GunBoat -->
@@ -1595,13 +1595,13 @@ SPEED          Changes gamespeed
 
 			<!--Page 4--> <!-- Federation Special Forces -->
 			<mod-append:ship>PLAYER_SHIP_TC_MILSPEC</mod-append:ship> <!-- "Milspec" aka Cargo Carrier Ships -->
+			<mod-append:empty/>
+			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship> <!--(lack of) Potential-->
 			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship> <!--Size Does NOT Matter-->
+			<mod-append:empty/>
+			<mod-append:empty/>	
 			<mod-append:ship>PLAYER_SHIP_SAVIOR</mod-append:ship> <!--Saviors-->
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:empty/>
 			
 			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!-- Stalwart Defense -->
 			<mod-append:ship>PLAYER_SHIP_FEDERATION_CARRIER</mod-append:ship> <!-- Federation Carrier -->
