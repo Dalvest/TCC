@@ -5547,6 +5547,7 @@
 		<maxPower amount="6" />
 		<aug name="COMPACTOR" />
 		<aug name="ADVANCED_SCRAP" />
+		<shieldImage>mupc_a55</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_SCRAPPER_2" layout="tcp_scrapper_b" img="tcp_scrapper_b">
@@ -5617,7 +5618,7 @@
 		<health amount="30" />
 		<maxPower amount="7" />
 		<aug name="ADVANCED_SCRAP" />
-		<shieldImage>tcp_scrapper</shieldImage>
+		<shieldImage>mupc_a55</shieldImage>
 		<cloakImage>tcp_scrapper</cloakImage>
 	</shipBlueprint>
 
@@ -6391,7 +6392,7 @@
 		<health amount="30" />
 		<maxPower amount="9" />
 		<aug name="ANTI_ANAEROBIC_GRID" />
-		<shieldImage>tcp_scrapper</shieldImage>
+		<shieldImage>mupc_a55</shieldImage>
 		<cloakImage>tcp_scrapper</cloakImage>
 	</shipBlueprint>
 
@@ -7349,7 +7350,7 @@
 		<crewCount amount="1" class="human_legion" />
 		<crewCount amount="1" class="human_legion" />
 		<aug name="LEGION_LOADER" />
-		<shieldImage>tcp_cultist_a</shieldImage>
+		<shieldImage>mupc_a55</shieldImage>
 	</shipBlueprint>
 
 	<!--///////////////////// Echelon Elites /////////////////////////-->
@@ -7497,6 +7498,7 @@
 		<maxPower amount="8" />
 		<crewCount amount="4" class="avali" />
 		<aug name="PRE_SCANNER" />
+		<shieldImage>mup_zoltan_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_AVALI_2" layout="tcp_avali_B" img="tcp_avali_B">
@@ -7574,7 +7576,7 @@
 		<aug name="COMBAT_SHIELDS_JAMMER" />
 		<crewCount amount="4" class="avali" />
 		<crewCount amount="1" class="robottos_machinist" />
-		<shieldImage>tcp_avali_A</shieldImage>
+		<shieldImage>mup_zoltan_a</shieldImage>
 		<cloakImage>tcp_avali_A</cloakImage>
 	</shipBlueprint>
 
@@ -7653,7 +7655,7 @@
 		<aug name="DRONE_RECOVERY" />
 		<health amount="30" />
 		<maxPower amount="8" />
-		<shieldImage>tcp_avali_A</shieldImage>
+		<shieldImage>mup_zoltan_a</shieldImage>
 		<cloakImage>tcp_avali_A</cloakImage>
 	</shipBlueprint>
 
@@ -8102,7 +8104,7 @@
 		<maxPower amount="8" />
 		<crewCount amount="3" class="avali" />
 		<crewCount amount="1" class="robottos_machinist" />
-		<shieldImage>tcp_avali_A</shieldImage>
+		<shieldImage>mup_zoltan_a</shieldImage>
 		<cloakImage>tcp_avali_A</cloakImage>
 	</shipBlueprint>
 
@@ -8408,7 +8410,7 @@
 		<crewCount amount="1" class="slug_saboteur" />
 		<crewCount amount="1" class="blobslug" />
 		<aug name="HEKTAR_GEL" />
-		<shieldImage>mup_rebel_a</shieldImage>
+		<shieldImage>mupc_alkali</shieldImage>
 		<cloakImage>mup_rebel_a</cloakImage>
 	</shipBlueprint>
 
@@ -9449,6 +9451,7 @@
 		<aug name="ANCIENT_SHIELD" />
 		<aug name="PALADIN_ARMOR" />
 		<aug name="SYSTEM_CASING_NEW" />
+		<shieldImage>mupc_ariadne</shieldImage>
 	</shipBlueprint>
 
 	
