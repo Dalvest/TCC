@@ -658,7 +658,7 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 
-	<weaponBlueprint name="TC_MINELAUNCHER_ANCALAGON">
+	<weaponBlueprint name="TC_MINELAUNCHER_ANCALAGON_FAKE">
 		<type>BURST</type>
 		<tip>tip_ancalagon</tip>
 		<flavorType>Aether Minelauncher</flavorType>
@@ -769,7 +769,7 @@
 		<flavorType>Aether Minelauncher</flavorType>
 		<title>Starlight Launcher</title>
 		<short>Starlight</short>
-		<desc>A weapon crafted from metals you can't identify and crystals that hum with aberrant power. This one fires 4 low hull damage, no system damage and low hazard mines. A label reads "Property of the Ancalagon Division."</desc>
+		<desc>A weapon crafted from metals you can't identify and crystals that hum with aberrant power. This one fires 2 low hull damage, no system damage and low hazard mines plus 3 harmless mines that deal no damage and create no hazards. A label reads "Property of the Ancalagon Division."</desc>
 		<tooltip>Fires 1 missile; does 1 damage; pierces all shields.</tooltip>
 		<damage>1</damage>
 		<sysDamage>-1</sysDamage>
@@ -789,7 +789,7 @@
 		<rarity>0</rarity>
 		<projectiles>
 			<projectile count="2" fake="false">fm_mine_ancalagon_remastered</projectile>
-			<projectile count="3" fake="false" blueprint="FM_MINELAUNCHER_ANCALAGON_REMASTERED2_FAKE">fm_mine_ancalagon_remastered</projectile>
+			<projectile count="3" fake="false" blueprint="TC_MINELAUNCHER_ANCALAGON_FAKE">fm_mine_ancalagon_remastered</projectile>
 		</projectiles>
 		<accuracyMod>20</accuracyMod>
 		<spawnCrew>
