@@ -1245,7 +1245,7 @@
 			</choice>
 		</event>
 	</choice>
-	<choice> <!--prevents the failsafe to force you to select the invalid option-->
+	<choice req="TC3_DEAD" lvl="1" hidden="true" blue="false" max_group="998"> <!--prevents the failsafe to force you to select the invalid option-->
 		<text>We have nothing to do here...</text>
 		<event />
 	</choice>
