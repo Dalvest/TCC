@@ -1176,7 +1176,7 @@
         <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
         <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
         <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
-    </beaconType>
+  </beaconType>
 	<choice req="TC3_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
 		<text>Get closer...</text>
 		<event>
@@ -1244,6 +1244,10 @@
 				<event/>
 			</choice>
 		</event>
+	</choice>
+	<choice> <!--prevents the failsafe to force you to select the invalid option-->
+		<text>We have nothing to do here...</text>
+		<event />
 	</choice>
 </event>
 
