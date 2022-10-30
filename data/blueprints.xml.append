@@ -10193,9 +10193,9 @@
 
 	<!--/////// CREWMATE AREA (DANGER: KINDA SUS) //////-->
 
-	<crewBlueprint name="crewmate">
+	<crewBlueprint name="crewmate"> <!-- UNIQUE (probably, idk, unused as of now, find use for it later and remove this line) -->
 		<desc>Kind of suspicious, with no known origin, destination, or even a known language. They are not to be trusted.</desc>
-		<cost>1</cost>
+		<cost>69</cost>
 		<title>Crewmate</title>
 		<short>Crewmate</short>
 		<rarity>0</rarity>
@@ -10611,6 +10611,22 @@
 			<power>Deals 0.7x combat damage</power>
 			<power>Takes 1.4x damage from fire - extinguishes them at half speed.</power>
 			<power>Suffocates 20% slower</power>
+		</powerList>
+	</crewBlueprint>
+
+	<crewBlueprint name="polyester"> <!-- UNIQUE -->
+		<desc>An outgoing and spirit uplifting little bird, for allies. For foes, it is a totally different story.</desc>
+		<cost>42</cost>
+		<title>Polyester</title>
+		<short>Polyester</short>
+		<rarity>0</rarity>
+		<powerList>
+			<power>Moves at 1.5x speed, repairs at 1.2x.</power>
+			<power>Takes 2x damage from fire - extinguishes them at half speed.</power>
+			<power>Has 50 HP, deals 0.8x damage.</power>
+			<power>Buffs all friendly Avali on the ship, giving them +5 HP, +10% repair speed and +5% combat damage.</power>
+			<power>Additionally, buffs all friendly Avali in the room, giving them +10 HP, +15% repair and +10% combat damage. Stacks with the ship wide buffs.</power>
+			<power>Receives the same buffs from all allied Protogen crew</power>
 		</powerList>
 	</crewBlueprint>
 

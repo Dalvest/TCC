@@ -6354,6 +6354,133 @@
 		<time>1</time>
 	</anim>
 
+	<animSheet fh="35" fw="35" h="455" w="350" name="polyester">people/polyester_base.png</animSheet>
+	<anim name="polyester_clone">
+		<sheet>polyester</sheet>
+		<desc y="2" x="0" length="7" />
+		<time>0.75</time>
+	</anim>
+	<anim name="polyester_death_right">
+		<sheet>polyester</sheet>
+		<desc y="0" x="3" length="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="polyester_death_left">
+		<sheet>polyester</sheet>
+		<desc y="2" x="0" length="5" />
+		<time>0.75</time>
+	</anim>
+	<anim name="polyester_walk_down">
+		<sheet>polyester</sheet>
+		<desc y="12" x="0" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_walk_right">
+		<sheet>polyester</sheet>
+		<desc y="12" x="4" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_walk_up">
+		<sheet>polyester</sheet>
+		<desc y="11" x="0" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_walk_left">
+		<sheet>polyester</sheet>
+		<desc y="11" x="4" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_shoot_down">
+		<sheet>polyester</sheet>
+		<desc y="10" x="0" length="3" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_shoot_right">
+		<sheet>polyester</sheet>
+		<desc y="10" x="3" length="3" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_shoot_up">
+		<sheet>polyester</sheet>
+		<desc y="10" x="6" length="3" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_shoot_left">
+		<sheet>polyester</sheet>
+		<desc y="1" x="0" length="3" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_fire_down">
+		<sheet>polyester</sheet>
+		<desc y="9" x="0" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_fire_right">
+		<sheet>polyester</sheet>
+		<desc y="9" x="4" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_fire_up">
+		<sheet>polyester</sheet>
+		<desc y="8" x="0" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_fire_left">
+		<sheet>polyester</sheet>
+		<desc y="8" x="4" length="4" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_repair">
+		<sheet>polyester</sheet>
+		<desc y="7" x="0" length="9" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_punch_up">
+		<sheet>polyester</sheet>
+		<desc y="1" x="3" length="7" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_punch_down">
+		<sheet>polyester</sheet>
+		<desc y="6" x="0" length="8" />
+		<time>1.0</time>
+	</anim>
+	<anim name="polyester_teleport">
+		<sheet>polyester</sheet>
+		<desc y="3" x="0" length="7" />
+		<time>0.5</time>
+	</anim>
+	<anim name="polyester_type_right">
+		<sheet>polyester</sheet>
+		<desc y="5" x="0" length="4" />
+		<time>0.75</time>
+	</anim>
+	<anim name="polyester_type_left">
+		<sheet>polyester</sheet>
+		<desc y="5" x="4" length="4" />
+		<time>0.75</time>
+	</anim>
+	<anim name="polyester_type_up">
+		<sheet>polyester</sheet>
+		<desc y="4" x="0" length="4" />
+		<time>0.75</time>
+	</anim>
+	<anim name="polyester_type_down">
+		<sheet>polyester</sheet>
+		<desc y="4" x="4" length="4" />
+		<time>0.75</time>
+	</anim>
+	<anim name="crewLaser">
+		<sheet>polyester</sheet>
+		<desc y="0" x="1" length="1" />
+		<time>0.5</time>
+	</anim>
+	<anim name="polyester_portrait">
+		<sheet>polyester</sheet>
+		<desc y="0" x="0" length="1" />
+		<time>1</time>
+	</anim>
+
 	<!--/////////////////////// RELIC REVIVAL ZONE //////////////////-->
 
 	<animSheet name="avatarlegion" w="560" h="280" fw="35" fh="35">people/avatarlegion_base.png</animSheet>
