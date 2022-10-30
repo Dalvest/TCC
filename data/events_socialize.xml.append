@@ -319,12 +319,6 @@ The Mantis looks confident. Probably feeling that he's asserted his dominance.
 		<event name="SOCIALIZE_SKYGIRR_GENERIC_3"/>
 		<event name="SOCIALIZE_SKYGIRR_GENERIC_4"/>
 		<event name="SOCIALIZE_SKYGIRR_GENERIC_5"/>
-		<event name="SOCIALIZE_SKYGIRR_RAPTOR_1" req="primagen_raptor"/>
-		<event name="SOCIALIZE_SKYGIRR_LANCER_1" req="clonefail_lancer"/>
-		<event name="SOCIALIZE_SKYGIRR_LANCER_2" req="clonefail_lancer"/>
-		<event name="SOCIALIZE_SKYGIRR_CHEESE_1" req="sergal_cheese"/>
-		<event name="SOCIALIZE_SKYGIRR_KAZ_1" req="unique_kaz"/>
-		<event name="SOCIALIZE_SKYGIRR_KORA_1" req="kora"/>
 	</loadEventList>
 </event>
 <event name="SOCIALIZE_SKYGIRR_NOTHING">
@@ -371,92 +365,6 @@ You don't get much insight into how she actually handles this type of equipment,
 </event>
 <event name="SOCIALIZE_SKYGIRR_GENERIC_5" unique="true">
 	<text>SKYGIRR has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them. Although the box is marked with .50 action express... you could've sworn his rifle used something different.</text>
-</event>
-
-<!-- 
-********************************************************************************************************************************************************************************************************************************************
-																							   W/RAPTOR                                                                                        
-********************************************************************************************************************************************************************************************************************************************
--->
-<event name="SOCIALIZE_SKYGIRR_RAPTOR_1" unique="true">
-	<text>You stumble upon Tracker and Raptor sharing stories while playing cards.
-"Raise. So, you've actually managed to escape a bunch of rebels firing a mounted machine gun directly at you?" Tracker nods approvingly, then looks at his hand.
-"Raise. Yeah, I'm almost completely bulletproof. I took a lot of hits but it'll take more than that to take me down." Raptor is keeping his calm, not showing the slightest hint of emotion.
-"I call. ...What, really?" Tracker looks... off.
-"Let's see your cards." Raptor puts his cards face up on the table.
-"Three of a kind." says Tracker, looking smug.
-"Full house. I win." Raptor states, looking as emotionless as ever.
-Raptor slides three boxes of Instant Noodles sitting on the table to his side. Not having a face is the best poker face, after all.
-	</text>
-</event>
-
-<!-- 
-********************************************************************************************************************************************************************************************************************************************
-																							   W/LANCER                                                                                        
-********************************************************************************************************************************************************************************************************************************************
--->
-<event name="SOCIALIZE_SKYGIRR_LANCER_1" unique="true">
-	<text>Tracker is trying to help Lancer mend his bleeding torso.
-"Analysis of the air indicates presence of friend" quips Lancer in his usual broken voicelines.
-"Yeah, yeah, just sit still." Tracker is trying to clip his malformed friend's left abdomen back together.
-"In the event of software malfunction, please press two!"
-You leave the two to tend to the injuries, who knows how Lancer got them this time.
-	</text>
-</event>
-
-<event name="SOCIALIZE_SKYGIRR_LANCER_2" unique="true">
-	<text>Tracker is furiously typing at his PC. It would seem he's trying to see what kind of software Lancer even uses. It'd seem has most of the machinery of a protogen but it's isn't exactly active...
-Perhaps he could figure out a way for Lancer to somehow self-repair, but you're pretty sure he won't have any success until after the Flagship has been defeated.
-	</text>
-</event>
-
-<!-- 
-********************************************************************************************************************************************************************************************************************************************
-																							   W/CHEESE                                                                                        
-********************************************************************************************************************************************************************************************************************************************
--->
-<event name="SOCIALIZE_SKYGIRR_CHEESE_1" unique="true">
-	<text>Tracker yells through Cheese's quarters door. "HEY CHEESE! DO YOU MIND IF I CALL YOU FIREBRAND?"
-"No, please, let my old codename rest in peace." answers the mechanic from inside.
-"Understood."
-Tracker leaves before you can question him about Cheese's codename(s).
-	</text>
-</event>
-
-<!-- 
-********************************************************************************************************************************************************************************************************************************************
-																							   W/KAZ                                                                                        
-********************************************************************************************************************************************************************************************************************************************
--->
-<event name="SOCIALIZE_SKYGIRR_KAZ_1" unique="true">
-	<text>Kazaaakplethkilik approaches Tracker and asks him a question. "Protogens, do you feel anything when you killings?"
-The protogen sighs dismissively and says "Yes. Usually guilt. Sometimes fear. I'm not proud of it, you know."
-"You are weakling. Must become like Kaz. Strong and proud, everyone kneel when they see Kaz. Especially attractive mantis females."
-The Mantis looks confident. Probably feeling that he's asserted his dominance.
-	</text>
-</event>
-
-<!-- 
-********************************************************************************************************************************************************************************************************************************************
-																							   W/KORA                                                                                        
-********************************************************************************************************************************************************************************************************************************************
--->
-<event name="SOCIALIZE_SKYGIRR_KORA_1" unique="true">
-	<text>You walk into Tracker's quarters and are surprised to see Kora;
-"Oh. Hi. I wanted to talk to Tracker to see if he's figured out the multiversal uplift thing." Kora sighs.
-<choice hidden="true">
-	<text>Has Tracker had any success?</text>
-	<event>
-		<text>"No. Not really. He's really trying to help me, though. He's also looking at me weird. I'd smash his visor in if I could sometimes." Kora sighs again.</text>
-	</event>
-</choice>
-<choice hidden="true">
-	<text>Don't you know anything about it?</text>
-	<event>
-		<text>"Oh. Only theories. My universe was particularly off. with many rifts through the multiverse. I can travel with ease at short distances. It's useful in combat, I hope."</text>
-	</event>
-</choice>
-</text>
 </event>
 
 </FTL>
