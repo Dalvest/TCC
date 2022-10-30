@@ -1015,7 +1015,7 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-<shipBlueprint name="TC_TRASH_COMPACTOR1" layout="tc__trash_compactor1" img="tc_trash_compactor1">
+<shipBlueprint name="TC_TRASH_COMPACTOR1" layout="tc_trash_compactor1" img="tc_trash_compactor1">
 	<class>Trash Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
@@ -1045,7 +1045,7 @@
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
-<shipBlueprint name="TC_TRASH_COMPACTOR2" layout="tc__trash_compactor2" img="tc_trash_compactor2">
+<shipBlueprint name="TC_TRASH_COMPACTOR2" layout="tc_trash_compactor1" img="tc_trash_compactor1">
 	<class>Trash Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
@@ -1078,7 +1078,7 @@
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
-<shipBlueprint name="TC_TRASH_COMPACTOR3" layout="tc__trash_compactor3" img="tc_trash_compactor3">
+<shipBlueprint name="TC_TRASH_COMPACTOR3" layout="tc_trash_compactor1" img="tc_trash_compactor1">
 	<class>Trash Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
@@ -1117,19 +1117,19 @@
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
-<shipBlueprint name="TC_TRASH_COMPACTOR4" layout="tc_trash_compactor4" img="tc_trash_compactor4">
+<shipBlueprint name="TC_TRASH_COMPACTOR4" layout="tc_trash_compactor1" img="tc_trash_compactor4">
 	<class>Trash Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
 	<systemList>
-		<cloaking power="1" max="2" room="12" start="true" />
+		<cloaking power="1" max="2" room="7" start="true" />
 		<clonebay power="1" max="2" room="4" start="true" />
-		<doors power="2" max="2" room="13" start="true" />
+		<doors power="2" max="2" room="6" start="true" />
 		<engines power="1" max="3" room="3" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
-		<teleporter power="1" max="1" room="7" start="true" />
-		<weapons power="5" max="5" room="8" start="true" />
+		<teleporter power="1" max="1" room="9" start="true" />
+		<weapons power="5" max="5" room="11" start="true" />
 	</systemList>
 	<weaponSlots>6</weaponSlots>
 	<droneSlots>0</droneSlots>
@@ -1156,20 +1156,20 @@
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
-<shipBlueprint name="TC_TRASH_COMPACTOR5" layout="tc_trash_compactor5" img="tc_trash_compactor5">
+<shipBlueprint name="TC_TRASH_COMPACTOR5" layout="tc_trash_compactor1" img="tc_trash_compactor5">
 	<class>(Shiny) Trash Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
 	<systemList>
-		<cloaking power="1" max="2" room="12" start="true" />
+		<cloaking power="1" max="2" room="7" start="true" />
 		<clonebay power="1" max="2" room="4" start="true" />
-		<doors power="3" max="3" room="13" start="true" />
+		<doors power="3" max="3" room="6" start="true" />
 		<drones power="2" max="2" room="10" start="true" />
 		<engines power="1" max="3" room="3" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="4" max="10" room="5" start="true" />
-		<teleporter power="2" max="3" room="7" start="true" />
-		<weapons power="6" max="6" room="8" start="true" />
+		<teleporter power="2" max="3" room="9" start="true" />
+		<weapons power="6" max="6" room="11" start="true" />
 	</systemList>
 	<weaponSlots>6</weaponSlots>
 	<droneSlots>1</droneSlots>
@@ -1201,20 +1201,20 @@
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
-<shipBlueprint name="TC_TRASH_COMPACTOR6" layout="tc_trash_compactor6" img="tc_trash_compactor6">
+<shipBlueprint name="TC_TRASH_COMPACTOR6" layout="tc_trash_compactor1" img="tc_trash_compactor6">
 	<class>Universe 0 Trash Compactor</class>
 	<minSector>1</minSector>
 	<maxSector>1</maxSector>
 	<systemList>
-		<cloaking power="1" max="3" room="12" start="true" />
+		<cloaking power="1" max="3" room="7" start="true" />
 		<clonebay power="1" max="3" room="4" start="true" />
-		<doors power="3" max="3" room="13" start="true" />
+		<doors power="3" max="3" room="6" start="true" />
 		<drones power="3" max="3" room="10" start="true" />
 		<engines power="1" max="4" room="3" start="true" />
 		<pilot power="3" max="3" room="0" start="true" />
 		<shields power="4" max="10" room="5" start="true" />
-		<teleporter power="3" max="3" room="7" start="true" />
-		<weapons power="6" max="6" room="8" start="true" />
+		<teleporter power="3" max="3" room="9" start="true" />
+		<weapons power="6" max="6" room="11" start="true" />
 	</systemList>
 	<weaponSlots>8</weaponSlots>
 	<droneSlots>2</droneSlots>
