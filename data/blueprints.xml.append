@@ -5704,6 +5704,7 @@
 			<scrapper room="14"/>
 		</crew>
 		<aug name="COMPACTOR" />
+		<shieldImage>federation_carrier</shieldImage>
 	</shipBlueprint>
 
 	<!--/////////////////////KESTREL MINER//////////////////////////-->
@@ -5782,7 +5783,7 @@
 		<aug name="EX_BACKUP_DNA" />
 		<aug name="SCRAP_COLLECTOR" />
 		<aug name="NOODLE_RATIONS" />
-		<shieldImage>tcp_trash_miner</shieldImage>
+		<shieldImage>mup_kestrel_a</shieldImage>
 		<cloakImage>mup_kestrel_a</cloakImage>
 	</shipBlueprint>
 
@@ -5860,7 +5861,7 @@
 		<health amount="30" />
 		<maxPower amount="6" />
 		<aug name="COMBAT_IONSTORM" />
-		<shieldImage>tc_trash_miner</shieldImage>
+		<shieldImage>mup_kestrel_a</shieldImage>
 		<cloakImage>mup_kestrel_a</cloakImage>
 	</shipBlueprint>
 
@@ -5935,7 +5936,7 @@
 		<droneList drones="2" count="3" />
 		<health amount="30" />
 		<maxPower amount="8" />
-		<shieldImage>tc_trash_miner</shieldImage>
+		<shieldImage>mup_kestrel_a</shieldImage>
 		<cloakImage>mup_kestrel_a</cloakImage>
 	</shipBlueprint>
 
@@ -6086,6 +6087,7 @@
 		</droneList>
 		<health amount="30" />
 		<maxPower amount="6" />
+		<shieldImage>tcp_trash_reactor</shieldImage>
 	</shipBlueprint>
 
 	<!--/////////////// ECHO 1-LINER ///////////////-->
@@ -6161,6 +6163,7 @@
 		<maxPower amount="5" />
 		<aug name="EX_AUTO_COOLDOWN" />
 		<aug name="EX_CLOAK_FIRE"/>
+		<shieldImage>mupc_anointed</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_ECHO_2" layout="tcp_echo_2" img="tcp_echo_2">
@@ -6235,7 +6238,7 @@
 		<aug name="REBEL_ID" />
 		<crewCount amount="3" class="human_rebel" />
 		<crewCount amount="1" class="human_legion_pyro" />
-		<shieldImage>tcp_echo</shieldImage>
+		<shieldImage>mupc_anointed</shieldImage>
 		<cloakImage>tcp_echo</cloakImage>
 	</shipBlueprint>
 
@@ -6314,7 +6317,7 @@
 		<crewCount amount="2" class="scrapper" />
 		<crewCount amount="1" class="scrapper_scavenger" />
 		<aug name="MERCURY_GEL" />
-		<shieldImage>tcp_slugton</shieldImage>
+		<shieldImage>mupc_anointed</shieldImage>
 		<cloakImage>tcp_slugton_2</cloakImage>
 	</shipBlueprint>
 
@@ -6470,6 +6473,7 @@
 		<maxPower amount="8" />
 		<aug name="SALVAGE_ARRAY" />
 		<aug name="AUTOMATED_QUARTERMASTER" />
+		<shieldImage>mup_kestrel_a</shieldImage>
 	</shipBlueprint>
 
 	<!--/////////////////////CONSTRUCTION FENEK/////////////////////////-->
@@ -6545,6 +6549,7 @@
 		<maxPower amount="8" />
 		<aug name="SCRAP_COMPACTOR" />
 		<aug name="SCRAP_COLLECTOR" />
+		<shieldImage>mup_kestrel_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TC_CONSTRUCTION_2" layout="tcp_construction_2" img="tcp_construction_2">
@@ -6619,7 +6624,7 @@
 		<crewCount amount="1" class="human_technician" />
 		<crewCount amount="1" class="human_engineer" />
 		<aug name="CRATE_DRONES" />
-		<shieldImage>tcp_construction</shieldImage>
+		<shieldImage>mup_kestrel_a</shieldImage>
 		<cloakImage>tcp_construction</cloakImage>
 	</shipBlueprint>
 
@@ -7281,6 +7286,7 @@
 		<aug name="CRATE_FUEL" />
 		<aug name="CRATE_FUEL" />
 		<aug name="CRATE_FUEL" />
+		<shieldImage>mup_dusk_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_EXTRAELITE_SLOT2_3" layout="tcp_battleship_a" img="tcp_battleship_a">
@@ -7727,6 +7733,7 @@
 		<maxPower amount="8" />
 		<crewCount amount="2" class="avali" />
 		<crewCount amount="1" class="protogen" />
+		<shieldImage>mup_federation_a</shieldImage>
 	</shipBlueprint>
 
 	<!--/////// FALCON FRIGATE //////-->
@@ -7880,6 +7887,7 @@
 		</droneList>
 		<health amount="25" />
 		<maxPower amount="10" />
+		<shieldImage>mup_multiverse_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP_2" layout="tcp_armored_wasp_2" img="tcp_armored_wasp_2">
@@ -7951,7 +7959,7 @@
 		<health amount="25" />
 		<maxPower amount="8" />
 		<aug name="ADV_SCANNERS" />
-		<shieldImage>tcp_armored_wasp</shieldImage>
+		<shieldImage>mup_multiverse_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TC_ARMORED_WASP_3" layout="tcp_armored_wasp_3" img="tcp_armored_wasp_3">
@@ -8026,7 +8034,7 @@
 		<maxPower amount="10" />
 		<aug name="EX_AUTO_COOLDOWN" />
 		<aug name="EX_CLOAK_FIRE" />
-		<shieldImage>tcp_armored_wasp</shieldImage>
+		<shieldImage>mup_multiverse_a</shieldImage>
 		<cloakImage>tcp_armored_wasp</cloakImage>
 	</shipBlueprint>
 
@@ -8182,6 +8190,7 @@
 		<maxPower amount="9" />
 		<aug name="HEKTAR_GEL" />
 		<aug name="MODULAR_STORE" />
+		<shieldImage>mupc_anointed</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_SLUGTON_2" layout="tcp_slugton_2" img="tcp_slugton_2">
@@ -8255,7 +8264,7 @@
 		<health amount="30" />
 		<maxPower amount="11" />
 		<aug name="HEKTAR_GEL" />
-		<shieldImage>tcp_slugton</shieldImage>
+		<shieldImage>mupc_anointed</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_SLUGTON_3" layout="tcp_slugton_3" img="tcp_slugton_3">
@@ -8329,7 +8338,7 @@
 		<crewCount amount="1" class="protogen_space_scavenger" />
 		<crewCount amount="1" class="human_hazmat" />
 		<aug name="HEKTAR_GEL" />
-		<shieldImage>tcp_slugton</shieldImage>
+		<shieldImage>mupc_anointed</shieldImage>
 		<cloakImage>tcp_slugton</cloakImage>
 	</shipBlueprint>
 
@@ -8486,6 +8495,7 @@
 		<health amount="30" />
 		<maxPower amount="8" />
 		<aug name="BEAM_ARMOR" />
+		<shieldImage>mup_tuco_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_NEWTONBEAMA_2" layout="newtonbeam_2" img="newtonbeam_2">
@@ -8558,7 +8568,7 @@
 		<health amount="30" />
 		<maxPower amount="5" />
 		<aug name="BEAM_ARMOR" />
-		<shieldImage>newtonbeam</shieldImage>
+		<shieldImage>mup_tuco_a</shieldImage>
 		<cloakImage>newtonbeam</cloakImage>
 	</shipBlueprint>
 
@@ -8626,7 +8636,7 @@
 		<health amount="30" />
 		<maxPower amount="9" />
 		<aug name="BEAM_ARMOR" />
-		<shieldImage>newtonbeam</shieldImage>
+		<shieldImage>mup_tuco_a</shieldImage>
 		<cloakImage>newtonbeam</cloakImage>
 	</shipBlueprint>
 
@@ -8660,7 +8670,7 @@
 				</slot>
 			</engines>
 			<hacking power="1" room="1" start="false" img="room_hacking_7" />
-			<medbay power="1" room="13" start="false" img="room_medbay">
+			<medbay power="1" room="13" start="false" img="room_medbay_dromaius">
 				<slot>
 					<number>1</number>
 				</slot>
@@ -8703,6 +8713,7 @@
 		<crewCount amount="1" class="human_phoenix" />
 		<crewCount amount="1" class="mantis_free" />
 		<aug name="AUTOMATED_QUARTERMASTER" />
+		<shieldImage>mup_dusk_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_TC_MILSPEC_2" layout="tcp_milspec_2" img="tcp_milspec_2">
@@ -8775,7 +8786,7 @@
 		</droneList>
 		<health amount="30" />
 		<maxPower amount="6" />
-		<shieldImage>tcp_milspec</shieldImage>
+		<shieldImage>mup_dusk_a</shieldImage>
 		<cloakImage>tcp_milspec</cloakImage>
 	</shipBlueprint>
 
@@ -8855,6 +8866,7 @@
 		<maxPower amount="60" />
 		<crewCount amount="1" class="human" />
 		<crewCount amount="1" class="engi" />
+		<shieldImage>mup_federation_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_POTENTIAL_2" layout="potential_2" img="potential_2">
@@ -8932,7 +8944,7 @@
 		<crewCount amount="1" class="robottos" />
 		<aug name="CRATE_DRONES" />
 		<aug name="DRONE_RECOVERY" />
-		<shieldImage>potential</shieldImage>
+		<shieldImage>mup_federation_a</shieldImage>
 		<!--<cloakImage>tcp_construction</cloakImage>-->
 	</shipBlueprint>
 
@@ -9006,7 +9018,7 @@
 		<crewCount amount="1" class="human" />
 		<health amount="30" />
 		<maxPower amount="3" />
-		<shieldImage>potential</shieldImage>
+		<shieldImage>mup_federation_a</shieldImage>
 		<!--<cloakImage>potential</cloakImage>-->
 	</shipBlueprint>
 
@@ -9077,6 +9089,7 @@
 		<maxPower amount="6" />
 		<aug name="REGEN_ARMOR" />
 		<aug name="CREW_FIREARMS" />
+		<shieldImage>mup_dusk_a</shieldImage>
 	</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_SDM_2" layout="tcp_sdm_2" img="tcp_sdm_2">
@@ -9144,7 +9157,7 @@
 		<health amount="20" />
 		<maxPower amount="5" />
 		<aug name="MANTIS_RELOADER" />
-		<shieldImage>tcp_sdm</shieldImage>
+		<shieldImage>mup_dusk_a</shieldImage>
 		<cloakImage>tcp_sdm</cloakImage>
 	</shipBlueprint>
 
