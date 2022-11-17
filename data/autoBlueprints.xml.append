@@ -479,24 +479,7 @@
 
 <!--
 <blueprintList name="LIST_NON_RARITY_0_THINGS"> (Just here for reference)
-	<name>TC_LIGHT_SHOW</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_TAGGER</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_RESOLVER</name>
-	<name>TC_SINEWAVE</name>
-	<name>RSA_BIOHAZARD</name>
-	<name>SINGULARITY_PROJECTOR_1</name>
-	<name>CATALYZER</name>
-	<name>NOODLE_RATIONS</name>
-	<name>scrapper</name>
-	<name>kiviekith</name>
-	<name>rsa_technician</name>
-	<name>robottos</name>
-	<name>mantis_rsa</name>
-	<name>protogen</name>
-	<name>protogen_space_scavenger</name>
-	<name>avali</name>
+	Nothing, sctually
 </blueprintList>
 -->
 
@@ -902,6 +885,7 @@
 	<mod-append:name>TC_RESOLVER</mod-append:name>
 	<mod-append:name>TC_SINEWAVE</mod-append:name>
 	<mod-append:name>ARTILLERY_TC_MODULAR_BEAM</mod-append:name>
+	<mod-append:name>ARTILLERY_MILITIAGUNBOAT_B</mod-append:name>
 	<mod-append:name>NOVA_MK1</mod-append:name>
 	<mod-append:name>NOVA_MK2</mod-append:name>
 	<mod-append:name>NOVA_MK3</mod-append:name>
@@ -917,6 +901,7 @@
 	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
 	<mod-append:name>TC_SINEWAVE</mod-append:name>
 	<mod-append:name>ARTILLERY_TC_MODULAR_BEAM</mod-append:name>
+	<mod-append:name>ARTILLERY_MILITIAGUNBOAT_B</mod-append:name>
 	<mod-append:name>NOVA_MK1</mod-append:name>
 	<mod-append:name>NOVA_MK2</mod-append:name>
 	<mod-append:name>NOVA_MK3</mod-append:name>
@@ -950,6 +935,9 @@
 	<mod-append:name>TC_BOMB_SHOTGUN_4</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_INSTANT</mod-append:name>
 	<mod-append:name>ARTILLERY_AUTO_A_MISSILE</mod-append:name>
+	<mod-append:name>ARTILLERY_MILITIAGUNBOAT_A</mod-append:name>
+	<mod-append:name>ARTILLERY_MILITIAGUNBOAT_B</mod-append:name>
+	<mod-append:name>ARTILLERY_MILITIAGUNBOAT_C</mod-append:name>
 	<mod-append:name>TC_LASER_MARKSMAN</mod-append:name>
 	<mod-append:name>TC_LASER_LEGION</mod-append:name>
 	<mod-append:name>TC_OVERLORD</mod-append:name>
@@ -1005,6 +993,11 @@
 
 <mod:findName type="blueprintList" name="BLUELIST_ARM">
 	<mod-append:name>SALVAGE_ARRAY</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_MINING">
+	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
+	<mod-append:name>ARTILLERY_MILITIAGUNBOAT_B</mod-append:name>
 </mod:findName>
 
 <!--
