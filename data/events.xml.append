@@ -5,3 +5,41 @@
 -->
 
 <!--This is the story of a man named Stanley-->
+
+<mod:findName type="event" name="ASTEROID_EXPLORE">
+	<mod-append:choice req="TC_DECONSTRUCTOR" hidden="true">
+		<text>(Deconstructor) Attempt to mine the asteroids.</text> 
+		<event>
+			<text>You carefully extract as much usable material as possible from the nearest asteroids while waiting for the FTL to charge.</text>
+			<autoReward level="HIGH">scrap_only</autoReward>
+		</event>
+	</mod-append:choice>
+	<mod-append:choice req="ARTILLERY_MILITIAGUNBOAT_B" hidden="true">
+		<text>(RSA Mining Beam) Attempt to mine the asteroids.</text> 
+		<event>
+			<text>Your RSA Mining Beam is extremely effective at extracting material from the asteroids. One swipe, and even the bigger asteroids crumble into pieces. There's only one problem; you can't collect it all fast enough! In order to collect it all, the Rebel fleet will probably have time to catch up.</text>
+			<autoReward level="HIGH">scrap_only</autoReward>
+			<choice hidden="false">
+				<text>Collect it, we need the scrap.</text>
+				<event>
+					<text>You collect as much more as you can. Hopefully, it's worth it.</text>
+					<autoReward level="HIGH">scrap_only</autoReward>
+					<modifyPursuit amount="1"/>
+				</event>
+			</choice>
+			<choice req="MAGNET_ARM" hidden="false">
+				<text>(Magnetic Arm) Use the arm to collect it quickly.</text>
+				<event>
+					<text>With your magnetic arm, you are able to collect most of the rest in a timely manner. Thanks electromagnetism!</text>
+					<autoReward level="MED">scrap_only</autoReward>
+				</event>
+			</choice>
+			<choice hidden="false">
+				<text>Leave, we can't risk it.</text>
+				<event>
+					<text>It pains you to leave perfectly usable scrap behind like this, but you can't let the Rebels catch up. You prepare to jump.</text>
+				</event>
+			</choice>
+		</event>
+	</mod-append:choice>
+</mod:findName>
