@@ -5500,7 +5500,7 @@
 					<number>1</number>
 				</slot>
 			</medbay>
-			<clonebay power="1" room="10" start="false" img="room_clonebay">
+			<clonebay power="1" room="10" start="false">
 				<slot>
 					<number>1</number>
 				</slot>
@@ -6415,9 +6415,9 @@
 					<number>1</number>
 				</slot>
 			</clonebay>
-			<doors power="2" room="12" start="true" img="room_doors_13">
+			<doors power="2" room="12" start="true" img="room_doors_8">
 				<slot>
-					<direction>up</direction>
+					<direction>left</direction>
 					<number>0</number>
 				</slot>
 			</doors>
@@ -6638,7 +6638,7 @@
 			<artillery power="1" room="16" start="false" weapon="ARTILLERY_FED" img="room_artillery_7" />
 			<battery power="1" room="9" start="true" img="room_battery_orchid" />
 			<cloaking power="1" room="5" start="true" img="room_cloaking_2" />
-			<doors power="1" room="12" start="false" img="room_doors_tl">
+			<doors power="1" room="12" start="false" img="room_doors_ogre">
 				<slot>
 					<direction>left</direction>
 					<number>1</number>
@@ -6658,16 +6658,16 @@
 				</slot>
 			</medbay>
 			<mind power="1" room="11" start="false" img="room_mind_7" />
-			<oxygen power="1" room="1" start="true" img="room_oxygen_tl" />
+			<oxygen power="1" room="1" start="true" img="room_oxygen_13" />
 			<pilot power="1" room="7" start="true" img="room_pilot_2">
 				<slot>
 					<direction>right</direction>
 					<number>1</number>
 				</slot>
 			</pilot>
-			<sensors power="1" room="4" start="false" img="room_sensors_tl">
+			<sensors power="1" room="4" start="false" img="room_sensors_orchid_2">
 				<slot>
-					<direction>left</direction>
+					<direction>up</direction>
 					<number>0</number>
 				</slot>
 			</sensors>
@@ -6746,9 +6746,9 @@
 					<number>1</number>
 				</slot>
 			</shields>
-			<weapons power="2" max="8" room="8" start="true" img="Little_weapons_room">
+			<weapons power="2" max="8" room="8" start="true" img="room_weapons_echo">
 				<slot>
-					<direction>right</direction>
+					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</weapons>
@@ -6810,9 +6810,9 @@
 				</slot>
 			</shields>
 			<teleporter power="1" room="4" start="true" />
-			<weapons power="2" max="8" room="5" start="true" img="Little_weapons_room">
+			<weapons power="2" max="8" room="5" start="true" img="room_weapons_8">
 				<slot>
-					<direction>right</direction>
+					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</weapons>
@@ -6883,9 +6883,9 @@
 					<number>1</number>
 				</slot>
 			</shields>
-			<weapons power="2" max="10" room="11" start="true" img="Little_weapons_room">
+			<weapons power="2" max="10" room="11" start="true" img="room_weapons_echo">
 				<slot>
-					<direction>right</direction>
+					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</weapons>
@@ -6963,9 +6963,9 @@
 				</slot>
 			</shields>
 			<teleporter power="1" room="3" start="true" />
-			<weapons power="2" max="6" room="9" start="false" img="Little_weapons_room">
+			<weapons power="2" max="6" room="9" start="false" img="room_weapons_echo">
 				<slot>
-					<direction>right</direction>
+					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</weapons>
@@ -7041,9 +7041,9 @@
 				</slot>
 			</shields>
 			<teleporter power="1" max="3" room="6" start="false" />
-			<weapons power="2" max="6" room="4" start="false" img="Little_weapons_room">
+			<weapons power="2" max="6" room="4" start="false" img="room_weapons_8">
 				<slot>
-					<direction>right</direction>
+					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</weapons>
@@ -7119,9 +7119,9 @@
 				</slot>
 			</shields>
 			<teleporter power="1" room="14" start="false" />
-			<weapons power="2" max="8" room="11" start="true" img="Little_weapons_room">
+			<weapons power="2" max="8" room="11" start="true" img="room_weapons_8">
 				<slot>
-					<direction>right</direction>
+					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</weapons>
@@ -7679,9 +7679,9 @@
 					<number>3</number>
 				</slot>
 			</clonebay>
-			<doors power="1" room="9" start="false" img="room_doors_13">
+			<doors power="1" room="9" start="false" img="room_doors_5">
 				<slot>
-					<direction>up</direction>
+					<direction>right</direction>
 					<number>0</number>
 				</slot>
 			</doors>
@@ -8284,17 +8284,17 @@
 					<number>1</number>
 				</slot>
 			</clonebay>
-			<doors power="2" room="7" start="true" img="room_doors_18">
+			<doors power="2" room="7" start="true" img="room_doors_2">
 				<slot>
-					<direction>left</direction>
+					<direction>down</direction>
 					<number>0</number>
 				</slot>
 			</doors>
 			<drones max="8" power="3" room="11" start="false" img="room_drones_2" />
-			<engines max="8" power="3" room="1" start="true" img="room_engines_chaoticgood">
+			<engines max="8" power="3" room="1" start="true" img="room_engines_4">
 				<slot>
-					<direction>up</direction>
-					<number>1</number>
+					<direction>down</direction>
+					<number>2</number>
 				</slot>
 			</engines>
 			<hacking power="2" room="20" start="false" img="room_hacking_orchid" />
@@ -9045,8 +9045,8 @@
 			<drones power="2" max="8" room="11" start="false" img="room_drones_bodyhorror" />
 			<engines power="1" max="8" room="5" start="true" img="room_engines_8">
 				<slot>
-					<direction>down</direction>
-					<number>2</number>
+					<direction>left</direction>
+					<number>1</number>
 				</slot>
 			</engines>
 			<hacking power="1" room="8" start="false" img="room_hacking_6" />
@@ -9104,16 +9104,16 @@
 					<number>1</number>
 				</slot>
 			</clonebay>
-			<doors power="1" room="0" start="false" img="room_doors_13">
+			<doors power="1" room="0" start="false" img="room_doors_5">
 				<slot>
-					<direction>up</direction>
+					<direction>right</direction>
 					<number>0</number>
 				</slot>
 			</doors>
 			<drones power="2" max="8" room="7" start="true" img="room_drones_14" />
-			<engines power="1" max="8" room="9" start="true" img="room_engines_TCC">
+			<engines power="1" max="8" room="9" start="true" img="room_engines_5">
 				<slot>
-					<direction>left</direction>
+					<direction>up</direction>
 					<number>0</number>
 				</slot>
 			</engines>
