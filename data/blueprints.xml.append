@@ -20,7 +20,7 @@
 
 	<!--//////////////////////////////////////////// ARTILLERY ZONE ////////////////////////////////////////////////////////-->
 
-	<weaponBlueprint name="ARTILLERY_TC_MODULAR_BEAM">
+	<!--<weaponBlueprint name="ARTILLERY_TC_MODULAR_BEAM">
 		<type>BEAM</type>
 		<tip>tip_beams</tip>
 		<title>Hektar(tm) Modular Artillery Beam</title>
@@ -41,19 +41,19 @@
 		<launchSounds>
 			<sound>beam2</sound>
 		</launchSounds>
-		<!--<color>
+		<color>
 			<r>0</r>
 			<g>255</g>
 			<b>6</b>
-		</color>-->
+		</color>
 		<weaponArt>Modular_Beam_Artillery</weaponArt>
 		<iconImage>beam</iconImage>
 		<iconScale>0.80</iconScale>
-	</weaponBlueprint>
+	</weaponBlueprint>-->
 
 	<weaponBlueprint name="ARTILLERY_CIVILIAN_JUSTICE">
 		<type>LASER</type>
-		<title>CDEG Super vulcan artillery</title>
+		<title>CDEG Super Vulcan</title>
 		<short>Artillery</short>
 		<desc>Artillery: Powers a massive vulcan that wreaks absolute havoc when chained enough.
 		Base Cooldown: 15</desc>
@@ -95,7 +95,7 @@
 
 	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_C">
 		<type>BOMB</type>
-		<title>Echelon(tm) quick delivery service</title>
+		<title>Echelon(tm) Quick Delivery Service</title>
 		<short>Artillery</short>
 		<locked>1</locked>
 		<desc>Echelon's convenient delivery service that teleports massive explosive crates onto enemy ship! How nice!
@@ -126,10 +126,10 @@
 
 	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_B">
 		<type>BEAM</type>
-		<title>RSA Standard mining beam MK6</title>
+		<title>RSA Standard Mining Lazer MK6</title>
 		<short>Artillery</short>
-		<desc>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</desc>
-		<tooltip>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships. Who says you can't mine enemy ships?</tooltip>
+		<desc>Artillery : Powers a MASSIVE JUICY mining lazer that deals gargantuan damage to enemy ships... Who says you can't mine enemy ships?</desc>
+		<tooltip>Artillery : Powers a massive mining beam that deals heavy damage to enemy ships.</tooltip>
 		<damage>3</damage>
 		<sysDamage>3</sysDamage>
 		<persDamage>-1</persDamage>
@@ -150,7 +150,7 @@
 
 	<weaponBlueprint name="ARTILLERY_MILITIAGUNBOAT_A">
 		<type>MISSILES</type>
-		<title>Avenger Minigun Artillery</title>
+		<title>AVENGER Minigun Artillery</title>
 		<short>Artillery</short>
 		<desc>Artillery: Powers a massive minigun that fires rapidly. Make them know true hell.
 		Base Cooldown: 25</desc>
@@ -187,8 +187,8 @@
 
 	<weaponBlueprint name="ARTILLERY_AUTO_A_MISSILE">
 		<type>MISSILES</type>
-		<title>Assault gun Artillery</title>
-		<short>Assault gun</short>
+		<title>"The Gun"</title>
+		<short>The Gun</short>
 		<desc>Artillery: Fires a missile that does decent damage and never misses.
 		Base Cooldown: 12</desc>
 		<tooltip>Artillery: Fires a missile that does decent damage and never misses.</tooltip>
@@ -357,7 +357,7 @@
 		<weaponArt>artillery_auto_elite</weaponArt>
 	</weaponBlueprint>
 
-	<weaponBlueprint name="SUS_LASERS">
+	<!--<weaponBlueprint name="SUS_LASERS">
 		<type>LASER</type>
 		<title>Suspicious Lasers</title>
 		<short>Sus Lasers</short>
@@ -395,7 +395,7 @@
 		</missSounds>
 		<weaponArt>sus_lasers</weaponArt>
 		<iconImage>sus_lasers</iconImage>
-	</weaponBlueprint>
+	</weaponBlueprint>-->
 
 	<weaponBlueprint name="ARTILLERY_SAVIOR_ION">
 		<type>LASER</type>
@@ -5553,7 +5553,7 @@
 	<shipBlueprint name="PLAYER_SHIP_SCRAPPER_2" layout="tcp_scrapper_b" img="tcp_scrapper_b">
 		<class>Scrapper Dreadnought</class>
 		<name>Razormind</name>
-		<desc>This ship can board like no other - but in the haste to construct the gigantic teleporter room, the Scrappers have forgotten to install all of the weapon slots. Not as if you'll be using them, anyway.</desc>
+		<desc>This ship can board like no other - but in the haste to construct the gigantic teleporter room, the Scrappers have forgotten to install any of the weapon slots. Not as if you'll be using them, anyway.</desc>
 		<unlock id="ship_PLAYER_SHIP_SCRAPPER_2_unlock"/>
 		<systemList>
 			<artillery power="1" room="3" start="false" weapon="ARTILLERY_FED" img="room_temporal_3" />
