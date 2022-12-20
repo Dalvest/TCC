@@ -89,6 +89,7 @@
 				</choice>
 			</event>
 		</choice>
+		<!--
 		<choice req="pilot" lvl="1" max_group="4" hidden="false" blue="true">
 			<text>There's a rotary phone hanging on the side of the machine...</text>
 			<event>
@@ -96,6 +97,7 @@
 				<quest event="KM_QUEST_1"/>
 			</event>
 		</choice>
+		-->
 		<choice>
 			<text>Nevermind.</text>
 			<event load="STORAGE_CHECK"/>
