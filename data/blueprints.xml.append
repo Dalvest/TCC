@@ -5556,7 +5556,7 @@
 		<desc>This ship can board like no other - but in the haste to construct the gigantic teleporter room, the Scrappers have forgotten to install any of the weapon slots. Not as if you'll be using them, anyway.</desc>
 		<unlock id="ship_PLAYER_SHIP_SCRAPPER_2_unlock"/>
 		<systemList>
-			<artillery power="1" room="3" start="false" weapon="ARTILLERY_FED" img="room_temporal_3" />
+			<artillery power="1" room="3" start="false" weapon="ARTILLERY_FED" img="invis" />
 			<battery power="1" max="2" room="14" start="false" img="room_battery_scrapper" />
 			<cloaking power="1" room="5" start="false" img="room_cloaking" />
 			<clonebay power="2" room="7" start="true">
@@ -5571,7 +5571,7 @@
 				</slot>
 			</doors>
 			<drones power="2" max="8" room="8" start="false" img="room_drones" />
-			<engines power="2" room="2" start="true" img="room_engines_10">
+			<engines power="2" room="2" start="true" img="room_engines_8">
 				<slot>
 					<direction>left</direction>
 					<number>0</number>
@@ -5585,13 +5585,13 @@
 			</medbay>
 			<mind power="1" room="4" start="false" img="room_mind_11" />
 			<oxygen power="1" room="9" start="false" img="room_oxygen" />
-			<pilot power="1" room="0" start="true" img="room_pilot_7">
+			<pilot power="1" room="0" start="true" img="room_pilot">
 				<slot>
 					<direction>right</direction>
 					<number>1</number>
 				</slot>
 			</pilot>
-			<sensors power="1" room="10" start="true" img="room_sensors_orchid_2">
+			<sensors power="1" room="10" start="true" img="room_sensors">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
@@ -6112,7 +6112,7 @@
 				</slot>
 			</doors>
 			<drones power="2" max="8" room="6" start="true" img="room_drones_15" />
-			<engines power="3" max="8" room="11" start="true" img="room_engines_manta_b">
+			<engines power="3" max="8" room="11" start="true" img="room_engines_TCC_2">
 				<slot>
 					<direction>left</direction>
 					<number>0</number>
@@ -6186,7 +6186,7 @@
 				</slot>
 			</doors>
 			<drones power="2" max="8" room="6" start="true" img="room_drones_15" />
-			<engines power="2" max="8" room="11" start="true" img="room_engines_manta_b">
+			<engines power="2" max="8" room="11" start="true" img="room_engines_TCC_2">
 				<slot>
 					<direction>left</direction>
 					<number>0</number>
@@ -9071,7 +9071,7 @@
 				</slot>
 			</shields>
 			<teleporter power="2" room="4" start="true" />
-			<weapons power="2" max="8" room="7" start="true" img="room_weapons_10_2x1">
+			<weapons power="2" max="8" room="7" start="true" img="room_weapons_10">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
@@ -9139,7 +9139,7 @@
 				</slot>
 			</shields>
 			<teleporter power="1" room="4" start="true" />
-			<weapons power="2" max="8" room="8" start="true" img="room_weapons_10_2x1">
+			<weapons power="2" max="8" room="8" start="true" img="room_weapons_10">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
