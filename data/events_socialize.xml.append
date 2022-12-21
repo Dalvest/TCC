@@ -48,7 +48,7 @@
 	</loadEventList>
 </event>
 <event name="SOCIALIZE_TRASH_EATER_NOTHING">
-	<text>The Trash Eater's resting up in his cabin; completely immobile. At first glance it'd appear as if he were asleep, until he speaks: "HEAD EMPTY. NO TRASH IN HEAD. ADD TRASH TO HEAD. PLEASE.". It might be best to leave them alone...</text>
+	<text>The Trash Eater's resting up in his cabin; completely immobile. At first glance it appears as if he were asleep, until he speaks: "HEAD EMPTY. NO TRASH IN HEAD. ADD TRASH TO HEAD. PLEASE.". It might be best to leave them alone...</text>
 </event>
 
 
@@ -204,13 +204,13 @@ Tracker shoos you away from his quarters as well, returning to his usual anxious
 	</choice>
 </event>
 <event name="SOCIALIZE_TRACKER_GENERIC_3" unique="true">
-	<text>You find TRACKER polishing his assault rifle, you honestly wish he never found it at all... it's ammo is simply too scarce. It appears to be a custom-built SCAR-LHE (Semi-Automatic Assault Rifle, Light High Explosive) with 100-round double drum magazine.</text>
+	<text>You find TRACKER polishing his assault rifle, you honestly wish he never found it at all... it's ammo is simply too scarce. It appears to be a custom-built SCAR with modified, explosive munitions with an impractically large double drum magazine.</text>
 </event>
 <event name="SOCIALIZE_TRACKER_GENERIC_4" unique="true">
-	<text>TRACKER is examining a dissected rotary phone, the analog kind. It's surprisingly complex. It seems he's made some modifications to it, too. "I like hiding top-of-the-line tech in older machinery... and I love retro items. They're very nostalgic for some reason, despite me not being alive back when they were used."</text>
+	<text>TRACKER is examining a dissected and quite ancient rotary phone of the analog kind. It seems he's made some modifications to it, too. "I like hiding top-of-the-line tech in older machinery... and I love retro items. They're very nostalgic for some reason, despite me not being alive back when they were used."</text>
 </event>
 <event name="SOCIALIZE_TRACKER_GENERIC_5" unique="true">
-	<text>TRACKER has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them. Although the box is marked with .50 action express... you could've sworn his rifle used something different.</text>
+	<text>TRACKER has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them. Although the box is marked with .50 AE... you could've sworn his rifle used something different.</text>
 </event>
 
 <!--
@@ -245,7 +245,7 @@ You leave the two to tend to the injuries, who knows how Lancer got them this ti
 </event>
 
 <event name="SOCIALIZE_TRACKER_LANCER_2" unique="true">
-	<text>Tracker is furiously typing at his PC. It would seem he's trying to see what kind of software Lancer even uses. It'd seem has most of the machinery of a protogen but it's isn't exactly active...
+	<text>Tracker is furiously typing at his PC. It would seem he's trying to see what kind of software Lancer even uses. He states he has most of the machinery of a protogen but barely any of it is truly active...
 Perhaps he could figure out a way for Lancer to somehow self-repair, but you're pretty sure he won't have any success until after the Flagship has been defeated.
 	</text>
 </event>
@@ -259,7 +259,7 @@ Perhaps he could figure out a way for Lancer to somehow self-repair, but you're 
 	<text>Tracker yells through Cheese's quarters door. "HEY CHEESE! DO YOU MIND IF I CALL YOU FIREBRAND?"
 "No, please, let my old codename rest in peace." answers the mechanic from inside.
 "Understood."
-Tracker leaves before you can question him about Cheese's codename(s).
+Tracker leaves before you can question him about Cheese's past codenames.
 	</text>
 </event>
 
@@ -335,7 +335,7 @@ The Mantis looks confident. Probably feeling that he's asserted his dominance.
 	</loadEventList>
 </event>
 <event name="SOCIALIZE_SKYGIRR_NOTHING">
-	<text>You find Skygirr tinkering with what looks to be some very illegal and dangerous equipment. Given how such things tend to get explosive, you opt to not distract the engineer.</text>
+	<text>You find Skygirr tinkering with what looks to be some very illegal and dangerous equipment. Given her tinkering's explosive tendencies you figure it might be best to not distract the engineer.</text>
 </event>
 
 <!-- 
@@ -348,7 +348,7 @@ The Mantis looks confident. Probably feeling that he's asserted his dominance.
 	<text>You catch Skygirr getting a little... intimate... with some weapons equipment. You're fairly certain she noticed you, but doesn't appear to react, or stop. You swiftly leave the room, you did not want to witness whatever that was.</text>
 </event>
 <event name="SOCIALIZE_SKYGIRR_GENERIC_2" unique="true">
-	<text>Skygirr walks up to you and hands you an active missile they've put together, they seem pleased, but you don't make any sudden movements to make sure it doesn't go off.</text>
+	<text>Skygirr walks up to you and hands you an active missile they've put together, they seem pleased, even while you ensure to not make any sudden movements with this newly created explosive.</text>
 </event>
 <event name="SOCIALIZE_SKYGIRR_GENERIC_3" unique="true">
 	<text>You ask Skygirr where she found such a knack for handling less than stable equipment, she seems smug as she responds: 
@@ -377,7 +377,7 @@ You don't get much insight into how she actually handles this type of equipment,
 	</choice>
 </event>
 <event name="SOCIALIZE_SKYGIRR_GENERIC_5" unique="true">
-	<text>SKYGIRR has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for him to finish collecting all of them. Although the box is marked with .50 action express... you could've sworn his rifle used something different.</text>
+	<text>SKYGIRR has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for her to finish cleaning the resulting mess, although you muse she's after the propellent still inside the casings.</text>
 </event>
 
 </FTL>
