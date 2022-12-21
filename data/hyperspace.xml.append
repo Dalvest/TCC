@@ -562,6 +562,11 @@ SPEED          Changes gamespeed
           <victory>PLAYER_SHIP_TRASH_MINER_3</victory>
         </victories>
       </unlock>
+	  <unlock variant="b" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
+        <value>5</value>
+      </unlock>
     </mod-append:ship>
 
     <mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR">
@@ -670,7 +675,7 @@ SPEED          Changes gamespeed
     	</crew>
   	</mod-append:customShip>
 
-  	<!--/////// CONSTRUCTION CREW KESTREL //////-->
+  	<!--/////// CONSTRUCTION FENEK //////-->
 
   	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="true" c="false">
 
@@ -904,6 +909,17 @@ SPEED          Changes gamespeed
         <type>1</type>
         <shipReq>PLAYER_SHIP_POTENTIAL</shipReq>
         <value>5</value>
+      </unlock>
+	  <unlock variant="c" silent="false">
+        <type>1</type>
+        <shipReq>PLAYER_SHIP_POTENTIAL_2</shipReq>
+        <value>5</value>
+      </unlock>
+	  <unlock variant="c" silent="false">
+        <type>5</type>
+        <victories>
+          <victory>PLAYER_SHIP_POTENTIAL</victory>
+        </victories>
       </unlock>
 
     </mod-append:ship>
@@ -1356,7 +1372,15 @@ SPEED          Changes gamespeed
 
   	<!--/////// STALWART DEFENSE //////-->
 
-  	<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false" />
+  	<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false">
+		<unlock variant="a" silent="false">
+			<type>3</type>
+            <otherUnlocks>
+                <ship>ELITE_SHIP_ZOLTAN</ship>
+                <ship>ELITE_SHIP_ROCK_2</ship>
+            </otherUnlocks>
+        </unlock>
+	</mod-append:ship>
 
   	<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
   		<hiddenAug>SHIP_SPLICE</hiddenAug>
@@ -1375,6 +1399,22 @@ SPEED          Changes gamespeed
 				<ship>PLAYER_SHIP_AUTOGUNBOAT_3</ship>
             </otherUnlocks>
         </unlock>
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_EXTRAELITE_SLOT2</shipReq>
+			<value>5</value>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>1</type>
+			<shipReq>PLAYER_SHIP_EXTRAELITE_SLOT2_2</shipReq>
+			<value>5</value>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>5</type>
+			<victories>
+				<victory>PLAYER_SHIP_EXTRAELITE_SLOT2</victory>
+			</victories>
+		</unlock>
 	</mod-append:ship>
 
   	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2">
@@ -2849,7 +2889,7 @@ SPEED          Changes gamespeed
   		<cloneLoseSkills>false</cloneLoseSkills>
   	</mod-append:race>
 
-  	<!--//////SPACE SCAVENGER PROTOGEN////////-->
+  	<!--//////P.E.T.E.////////-->
 
   	<mod-append:race name="protogen_pete">
   		<maxHealth>70</maxHealth>
