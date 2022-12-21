@@ -3,7 +3,7 @@ function()
   --Creating a global variable with our addon's information,
   --so that dependancies can be checked when the game loads
   _G["TCC_INFO"]={
-      version="1.15", --Keep this updated, For dependancy checks with other mods
+      version="1.20", --Keep this updated, For dependancy checks with other mods
       }
     --[[ EXAMPLE OF FAILED CHECK
   if not _G["INFERNO_CORE_INFO"] then
