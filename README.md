@@ -1,7 +1,7 @@
 # TCC
 
 Trash Compactor Collection Add-On for the popular game FTL: Multiverse.
-Current Version: 1.15
+Current Version: 1.2 BETA
 
 # DEVELOPERS
 
@@ -17,7 +17,7 @@ Special Thanks to Cyrus106 for inspiring me to do this and helping me begin my j
 
 # FEATURED MODS
 
-A "side quest" of ours is to try and compile similar high quality mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair, Avali, FEDERATION SPECIAL FORCES, Leah Gaming, Relic Revival and RSC! 
+A "side quest" of ours is to try and compile similar high quality mods together in order to improve the entire collection! So far we've acquired (in chronological order) Kivie Takeover, Bomb Flaks, Instant Flair, Avali, Leah Gaming, Relic Revival and RSC! 
 Credits to LandGreen, Choosechee, Alder, Robinthedragon2, Pedrosian96, NewtonsFourth, Protosteel and mr_eazy_money for the sprites they've provided.
 
 We also ported several ships to Hyperspace + MV, such as the Potential and Stalwart Defense!
@@ -31,21 +31,21 @@ We RECOMMEND that you get Inferno-Core and load it BEFORE the TCC. We also recom
 # DESCRIPTION
 
 NEW WEAPONS
-    Singularity Projectors, Mass Drivers, big gatling guns, Flaks of all kinds, sizes and shapes and so much more!
+    Singularity Projectors, big gatling guns, Flaks of all kinds, sizes and shapes and so much more!
 
 NEW SHIPS
-    Featuring the Scrapper Lanius ship line as well as Protogen Project, Avali, RECLAIM and SALVAGE + an entire page of Federation military ships!
+    Featuring the Scrapper Lanius ship line as well as Protogen Project, Avali, RECLAIM and SALVAGE, Echelon Shipyards and MORE!
     Also featuring the Extraelite packs - hunt down specific targets with specific, high-powered setups!
 
 NEW RACES
-    Lanius Scrappers, Protogens, Avali, Sergals, Sentient Robots, Kivies, Tabaxis and quite a few more!
+    Lanius Scrappers, Protogens, Avali, Sergals, Sentient Robots, Kivies and Tabaxis join the fight!
 
 NEW SECTORS AND EVENTS
-    The Ship Graveyard (Scrapper and RSA hostile sector) and Avali Collective (Avali and Protogen friendly sector)
+    Avali Collective Sector (Avali and Protogen friendly sector) coming really soon!
 
 # HOW TO INSTALL
 
-1.  Make sure you have the latest FTL Multiverse version, right now that is 5.2.3.
+1.  Make sure you have the latest FTL Multiverse version
 2.  Make sure you have the latest Hyperspace .dll and lua .dll taken from the FTL Multiverse discord (#hyperspace-betas channel)
 (OPTIONAL) If you have Forgemaster and/or Inferno-Core, please patch them before the TCC!
 3.  Compress the 4 folders (audio/,img/,data/ and mod-appendix/) into a zip file then rename the extension to .ftl (not necessary if you're using a pre-compiled version)
@@ -54,7 +54,16 @@ NEW SECTORS AND EVENTS
 
 # CHANGELOG
 
-### Update 1.15
+###  Update 1.2
+- Updated for the latest version of MV
+- absorbed RSC
+- New ships such as the Tech Lance, LPC-Class and 2 new Avali ships as well as the Echelon Shipyards line-up
+- Removed FSF, sadly
+- Rearranged pages to accomodate everything new
+- added LORE, beware for sprinkled bits of it around the mod
+- new weapons such as the RC-LD
+
+Update 1.15
 - Federation Special Forces + Leah Gaming ship have been added, obviously. Minor bug fixes have been done to all of them.
 - Corrosus B and C layouts now exist -  on a related note, Construction Crew Kestrel is now a completely separate ship, not SDM B.
 - new crew types such as Cheese the Sergal, the upgradable Sentient robot race and RSA Hive Mantises.
