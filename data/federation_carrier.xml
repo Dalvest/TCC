@@ -1,23 +1,52 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-
-
-
-<img x="-140" y="-131" w="726" h="542" />
+<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+<img x="-60" y="-34" w="628" h="349" />
 <offsets>
-	<floor x="134" y="125" />
-	<cloak x="22" y="22" />
+	<floor x="54" y="28" />
+	<cloak x="-27" y="-75" />
 </offsets>
 <weaponMounts>
-	<mount x="620" y="183" rotate="true" mirror="true" gib="2" slide="up" />
-	<mount x="620" y="359" rotate="true" mirror="false" gib="2" slide="down" />
-	<mount x="283" y="33" rotate="true" mirror="true" gib="4" slide="up" />
-	<mount x="284" y="509" rotate="true" mirror="false" gib="5" slide="down" />
+	<mount x="520" y="65" rotate="true" mirror="true" gib="2" slide="up" />
+	<mount x="505" y="281" rotate="true" mirror="false" gib="2" slide="down" />
+	<mount x="112" y="20" rotate="true" mirror="true" gib="4" slide="up" />
+	<mount x="106" y="326" rotate="true" mirror="false" gib="5" slide="down" />
 </weaponMounts>
 <explosion>
-	<gib1><velocity min="0.26682058981965134" max="0.8894019660655045" /><direction min="97" max="113" /><angular min="-1.3481689589349517" max="1.3481689589349517" /><x>121</x><y>211</y></gib1><gib2><velocity min="0.44999999999999996" max="1.5" /><direction min="262" max="278" /><angular min="-1.6314896641592134" max="1.6314896641592134" /><x>501</x><y>183</y></gib2><gib3><velocity min="0.1" max="0.15971146917854767" /><direction min="276" max="292" /><angular min="-1.259807903402854" max="1.259807903402854" /><x>262</x><y>175</y></gib3><gib4><velocity min="0.23068841888381925" max="0.7689613962793975" /><direction min="53" max="69" /><angular min="-0.7425177916756522" max="0.7425177916756522" /><x>32</x><y>32</y></gib4><gib5><velocity min="0.2901590630692773" max="0.967196876897591" /><direction min="115" max="131" /><angular min="-0.8907140085370585" max="0.8907140085370585" /><x>32</x><y>281</y></gib5></explosion>
+	<gib1>
+		<velocity min="0.27" max="0.89" />
+		<direction min="97" max="113" />
+		<angular min="-1.35" max="1.35" />
+		<x>72</x>
+		<y>114</y>
+	</gib1>
+	<gib2>
+		<velocity min="0.45" max="1.50" />
+		<direction min="262" max="278" />
+		<angular min="-1.63" max="1.63" />
+		<x>452</x>
+		<y>86</y>
+	</gib2>
+	<gib3>
+		<velocity min="0.10" max="0.16" />
+		<direction min="276" max="292" />
+		<angular min="-1.26" max="1.26" />
+		<x>213</x>
+		<y>78</y>
+	</gib3>
+	<gib4>
+		<velocity min="0.23" max="0.77" />
+		<direction min="53" max="69" />
+		<angular min="-0.74" max="0.74" />
+		<x>-17</x>
+		<y>-65</y>
+	</gib4>
+	<gib5>
+		<velocity min="0.29" max="0.97" />
+		<direction min="115" max="131" />
+		<angular min="-0.89" max="0.89" />
+		<x>-17</x>
+		<y>184</y>
+	</gib5>
+</explosion>
 
-<thrusters sync="true">
-    <thruster x="23" y="45">federation_carrier_thrusters_on</thruster>
-    <thruster x="23" y="447">federation_carrier_thrusters_on_mirrored</thruster>
-</thrusters>
