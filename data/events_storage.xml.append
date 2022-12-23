@@ -374,9 +374,14 @@
 		<event load="STORAGE_CHECK_LAB_ROBOTTO"/>
 	</mod-append:choice>
 
-	<mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" hidden="true">
+	<mod-append:choice req="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE" blue="false" hidden="true">
 		<text>Scrapper.</text>
 		<event load="STORAGE_CHECK_LAB_SCRAPPER"/>
+	</mod-append:choice>
+	
+	<mod-append:choice req="LIST_CREW_AVALI" blue="false" hidden="true">
+		<text>Avali.</text>
+		<event load="STORAGE_CHECK_LAB_AVALI"/>
 	</mod-append:choice>
   <!--more choices here-->
 
@@ -588,7 +593,7 @@
 		<event load="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG3"/>
 	</choice>-->
 
-  <choice req="scrapper" max_group="4" blue="false" hidden="true">
+  <choice req="LIST_CREW_SCRAPPER" max_group="4" blue="false" hidden="true">
 		<text>Upgrade your Scrapper.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE"/>
 	</choice>
