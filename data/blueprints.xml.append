@@ -1630,15 +1630,16 @@
 		<title>Bomb Flak Gun Mark I</title>
 		<short>Bomb Flak I</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>A small, low power flak cannon reconfigured to shoot bombs instead of flak, ideal for devestating systems. Requires a missile to launch, but does not pierce any shields.</desc>
+		<desc>A small, low power flak cannon reconfigured to shoot bombs instead of flak, ideal for devestating systems. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
 		<tooltip>Fires a blast of bombs across a random area doing up to 2 damage, and 4 system damage.</tooltip>
 		<radius>42</radius>
 		<damage>1</damage>
 		<sysDamage>1</sysDamage>
 		<persDamage>1</persDamage>
 		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<spin>720</spin>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
@@ -1683,7 +1684,7 @@
 		<persDamage>1</persDamage>
 		<missiles>1</missiles>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<spin>720</spin>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
@@ -1720,7 +1721,53 @@
 		<title>Bomb Flak Gun Mark II</title>
 		<short>Bomb Flak II</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devastating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devastating systems but hard to aim. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
+		<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
+		<radius>45</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<shots>1</shots>
+		<sp>1</sp>
+		<spin>720</spin>
+		<fireChance>1</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>12.5</cooldown>
+		<power>2</power>
+		<cost>75</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="3" fake="false">bomb_small</projectile>
+		</projectiles>
+		<explosion>explosion_random</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>smallExplosion</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_2</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_2_ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Bomb Flak Gun Mark II</title>
+		<short>Bomb Flak II</short>
+		<tip>tip_bomb_flak</tip>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 		<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
 		<radius>45</radius>
 		<damage>1</damage>
@@ -1728,11 +1775,11 @@
 		<persDamage>1</persDamage>
 		<missiles>1</missiles>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<spin>720</spin>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
-		<cooldown>12</cooldown>
+		<cooldown>12.5</cooldown>
 		<power>2</power>
 		<cost>75</cost>
 		<bp>10</bp>
@@ -1765,7 +1812,53 @@
 		<title>Bomb Flak Gun Mark III</title>
 		<short>Bomb Flak III</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 5 hull damage, and 10 system damage. Great at devestating systems but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 5 hull damage, and 10 system damage. Great at devestating systems but hard to aim. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
+		<tooltip>Fires a blast of bombs across a random area doing up to 5 damage, and 10 system damage.</tooltip>
+		<radius>50</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<spin>720</spin>
+		<shots>1</shots>
+		<sp>1</sp>
+		<fireChance>1</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>15</cooldown>
+		<power>3</power>
+		<cost>100</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="5" fake="false">bomb_small</projectile>
+		</projectiles>
+		<explosion>explosion_random</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>smallExplosion</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_3</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_3_ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Bomb Flak Gun Mark III</title>
+		<short>Bomb Flak III</short>
+		<tip>tip_bomb_flak</tip>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 		<tooltip>Fires a blast of bombs across a random area doing up to 5 damage, and 10 system damage.</tooltip>
 		<radius>50</radius>
 		<damage>1</damage>
@@ -1774,7 +1867,7 @@
 		<missiles>1</missiles>
 		<spin>720</spin>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
 		<cooldown>15</cooldown>
@@ -1810,7 +1903,53 @@
 		<title>Bomb Flak Gun Mark IV</title>
 		<short>Bomb Flak IV</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 8 hull damage, and 16 system damage. Great at annihilating systems but very hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>A flak cannon reconfigured to shoot bombs across a random area doing up to 8 hull damage, and 16 system damage. Great at annihilating systems but very hard to aim. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
+		<tooltip>Fires a blast of bombs across a random area doing up to 8 damage, and 16 system damage.</tooltip>
+		<radius>60</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<spin>720</spin>
+		<shots>1</shots>
+		<sp>1</sp>
+		<fireChance>1</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>18</cooldown>
+		<power>4</power>
+		<cost>120</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="8" fake="false">bomb_small</projectile>
+		</projectiles>
+		<explosion>explosion_random</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>smallExplosion</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_4</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_4_ENEMY"> <!--probably will be used for a boss in the future-->
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Bomb Flak Gun Mark IV</title>
+		<short>Bomb Flak IV</short>
+		<tip>tip_bomb_flak</tip>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 		<tooltip>Fires a blast of bombs across a random area doing up to 8 damage, and 16 system damage.</tooltip>
 		<radius>60</radius>
 		<damage>1</damage>
@@ -1819,7 +1958,7 @@
 		<missiles>1</missiles>
 		<spin>720</spin>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
 		<cooldown>18</cooldown>
@@ -1855,7 +1994,53 @@
 		<title>Breach Bomb Flak Gun</title>
 		<short>B. Bomb Flak</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>A flak cannon reconfigured to shoot breach bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devestating systems and keeping them down but hard to aim. Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>A flak cannon reconfigured to shoot breach bombs across a random area doing up to 3 hull damage, and 6 system damage. Good at devestating systems and keeping them down, but hard to aim. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
+		<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
+		<radius>47</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<shots>1</shots>
+		<sp>1</sp>
+		<spin>720</spin>
+		<fireChance>0</fireChance>
+		<breachChance>8</breachChance>
+		<cooldown>13</cooldown>
+		<power>2</power>
+		<cost>80</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="3" fake="false">bomb_breach</projectile>
+		</projectiles>
+		<explosion>explosion_random</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>smallExplosion</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_breach</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_BREACH_ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Breach Bomb Flak Gun</title>
+		<short>B. Bomb Flak</short>
+		<tip>tip_bomb_flak</tip>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 		<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
 		<radius>47</radius>
 		<damage>1</damage>
@@ -1863,7 +2048,7 @@
 		<persDamage>1</persDamage>
 		<missiles>1</missiles>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<spin>720</spin>
 		<fireChance>0</fireChance>
 		<breachChance>8</breachChance>
@@ -1900,7 +2085,58 @@
 		<title>Bomb Chain Flak Gun</title>
 		<tip>tip_bomb_flak</tip>
 		<short>B. Chain F.</short>
-		<desc>A bomb flak created using a refurbished Chain Bomb. Fires 3 bombs in a random area that excel at taking down systems. Each shot reduces the cooldown. Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>A bomb flak created using a refurbished Chain Bomb. Fires 3 bombs in a random area that excel at taking down systems. Each shot reduces the cooldown. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
+		<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
+		<radius>42</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<shots>1</shots>
+		<sp>1</sp>
+		<spin>720</spin>
+		<fireChance>1</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>18</cooldown>
+		<power>2</power>
+		<cost>90</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="3" fake="false">bomb_small</projectile>
+		</projectiles>
+		<explosion>explosion_random</explosion>
+		<boost>
+			<type>cooldown</type>
+			<amount>3.66</amount>
+			<count>3</count>
+		</boost>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>smallExplosion</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_chain</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_CHAIN_ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Bomb Chain Flak Gun</title>
+		<tip>tip_bomb_flak</tip>
+		<short>B. Chain F.</short>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 		<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
 		<radius>42</radius>
 		<damage>1</damage>
@@ -1908,7 +2144,7 @@
 		<persDamage>1</persDamage>
 		<missiles>1</missiles>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<spin>720</spin>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
@@ -1950,7 +2186,55 @@
 		<title>Bomb Flak Charger</title>
 		<short>B. Flak Ch.</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>A specialized bomb flak that can charge up to 3 shots! Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>A specialized bomb flak that can charge up to 3 shots! Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
+		<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
+		<radius>45</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<simultaneousFire>true</simultaneousFire>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<shots>1</shots>
+		<sp>1</sp>
+		<spin>720</spin>
+		<fireChance>1</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>4.16</cooldown>
+		<power>2</power>
+		<chargeLevels>3</chargeLevels>
+		<cost>75</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="1" fake="false">bomb_small</projectile>
+		</projectiles>
+		<explosion>explosion_random</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>smallExplosion</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_charge</weaponArt>
+		<iconImage>missile_charge</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_CHARGE_ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Bomb Flak Charger</title>
+		<short>B. Flak Ch.</short>
+		<tip>tip_bomb_flak</tip>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 		<tooltip>Fires a blast of bombs across a random area doing up to 3 damage, and 6 system damage.</tooltip>
 		<radius>45</radius>
 		<damage>1</damage>
@@ -1959,7 +2243,7 @@
 		<simultaneousFire>true</simultaneousFire>
 		<missiles>1</missiles>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<spin>720</spin>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
@@ -2004,7 +2288,7 @@
 		<sysDamage>1</sysDamage>
 		<persDamage>1</persDamage>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<spin>720</spin>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
@@ -2048,8 +2332,9 @@
 		<sysDamage>1</sysDamage>
 		<persDamage>1</persDamage>
 		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<spin>720</spin>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
@@ -2086,7 +2371,7 @@
 		<title>Pre-emptive Bomb Flak</title>
 		<short>Pre-B. Flak</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>This bomb flak uses no power, charges instantly, and fires a burst of 7 bombs at once. However, it can only be shot once per battle. Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>This bomb flak uses no power, charges instantly, and fires a burst of 7 bombs at once. However, it can only be shot once per battle. Requires a missile to launch. Does not have the replication chance of other bomb flaks. Only pierces one shield layer.</desc>
 		<tooltip>Fires a blast of bombs across a random area doing up to 7 damage, and 14 system damage.</tooltip>
 		<radius>60</radius>
 		<damage>1</damage>
@@ -2095,7 +2380,7 @@
 		<missiles>1</missiles>
 		<spin>720</spin>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<fireChance>1</fireChance>
 		<breachChance>0</breachChance>
 		<cooldown>1</cooldown>
@@ -2136,7 +2421,53 @@
 		<title>Fire Bomb Flak Gun</title>
 		<short>F-Bomb Flak</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>Fires 4 fire bombs that are guaranteed to start a fire and do double system damage. Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>Fires 4 fire bombs that are guaranteed to start a fire and do double system damage. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
+		<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
+		<radius>55</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<spin>720</spin>
+		<shots>1</shots>
+		<sp>1</sp>
+		<fireChance>10</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>17</cooldown>
+		<power>3</power>
+		<cost>90</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="4" fake="false">bomb_fire</projectile>
+		</projectiles>
+		<explosion>explosion_random</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>fireBomb</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>fireBomb</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_fire</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_FIRE-ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Fire Bomb Flak Gun</title>
+		<short>F-Bomb Flak</short>
+		<tip>tip_bomb_flak</tip>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 		<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
 		<radius>55</radius>
 		<damage>1</damage>
@@ -2145,7 +2476,7 @@
 		<missiles>1</missiles>
 		<spin>720</spin>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<fireChance>10</fireChance>
 		<breachChance>0</breachChance>
 		<cooldown>17</cooldown>
@@ -2181,7 +2512,97 @@
 		<title>Ion Bomb Flak Gun</title>
 		<short>I. Bomb Flak</short>
 		<tip>tip_bomb_flak</tip>
-		<descriptionOverride>This special bomb flak shoots 3 ion bombs that do 4 ion damage each! However, they can't ion shields unless they hit the system itself. Requires a missile to fire, but doesn't go through shields.
+		<descriptionOverride>This special bomb flak shoots 3 ion bombs that do 4 ion damage each! However, they can't ion shields unless they hit the system itself. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.
+
+		Stats:
+
+		Required Power: 3
+		Charge Time: 17 seconds
+		Missile Consumption: 1
+		Chance for Ammo Replication: 35%
+
+		Shot Radius: 55
+		Shots Per Charge: 3
+
+		Base Hull Damage: 1
+		Ion Damage: 4
+		Shield Piercing: 1
+
+		Buy/Sell Price: 90~/45~</descriptionOverride>
+		<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
+		<radius>55</radius>
+		<damage>1</damage>
+		<sysDamage>-1</sysDamage>
+		<persDamage>-1</persDamage>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<spawnCrew>
+			<race>tcc_generic_crewjank</race>
+			<number>1</number>
+			<enemy>true</enemy><!--So you don't ever see the crew-->
+			<lifetime>0</lifetime>
+			<noSlot>true</noSlot>
+			<statBoosts>
+
+				<statBoost name="deathEffect"><!--This modifies the stat of the crew, so that the same crew can be used for multiple weapons-->
+					<boostType>SET</boostType>
+
+
+					<deathEffect><!--When template crew dies (on weapon impact) these statBoosts are applied -->
+						<ion>4</ion>
+						<shipFriendlyFire>true</shipFriendlyFire>
+					</deathEffect>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>ALL</crewTarget>
+					<priority>9999999</priority>
+
+				</statBoost>
+
+			</statBoosts>
+		</spawnCrew>
+		<spin>720</spin>
+		<shots>1</shots>
+		<sp>1</sp>
+		<fireChance>0</fireChance>
+		<breachChance>0</breachChance>
+		<cooldown>17</cooldown>
+		<power>3</power>
+		<cost>90</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="3" fake="false">bomb_ion</projectile>
+		</projectiles>
+		<explosion>explosion_big1_ion</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>ionHit1</sound>
+			<sound>ionHit2</sound>
+			<sound>ionHit3</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>hitShield1</sound>
+			<sound>hitShield2</sound>
+			<sound>hitShield3</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_ion</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_ION_ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Ion Bomb Flak Gun</title>
+		<short>I. Bomb Flak</short>
+		<tip>tip_bomb_flak</tip>
+		<descriptionOverride>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!
 
 		Stats:
 
@@ -2194,6 +2615,7 @@
 
 		Base Hull Damage: 1
 		Ion Damage: 4
+		Shield Piercing: 1
 
 		Buy/Sell Price: 90~/45~</descriptionOverride>
 		<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
@@ -2228,7 +2650,7 @@
 		</spawnCrew>
 		<spin>720</spin>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
 		<fireChance>0</fireChance>
 		<breachChance>0</breachChance>
 		<cooldown>17</cooldown>
@@ -2275,6 +2697,7 @@
 		<sysDamage>1</sysDamage>
 		<persDamage>3</persDamage>
 		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
 		<statBoosts>
 			<statBoost name="moveSpeedMultiplier">
 				<boostType>MULT</boostType>
@@ -2307,7 +2730,82 @@
 		</statBoosts>
 		<spin>720</spin>
 		<shots>1</shots>
-		<sp>0</sp>
+		<sp>1</sp>
+		<fireChance>0</fireChance>
+		<breachChance>3</breachChance>
+		<cooldown>16</cooldown>
+		<power>3</power>
+		<cost>90</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="4" fake="false">bomb_bio</projectile>
+		</projectiles>
+		<explosion>explosion_bio</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>smallExplosion</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_bio</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_BIO_ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Irradiation Bomb Flak Gun</title>
+		<short>Rad B. Flak</short>
+		<tip>tip_bio</tip>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
+		<tooltip>Fires a blast of debris across a random area doing up to 7 damage.</tooltip>
+		<radius>55</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>3</persDamage>
+		<missiles>1</missiles>
+		<statBoosts>
+			<statBoost name="moveSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0.33</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<affectsSelf>true</affectsSelf>
+				<maxStacks>1</maxStacks>
+				<duration>10</duration>
+				<boostAnim>bio_poison</boostAnim>
+			</statBoost>
+			<statBoost name="stunMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.75</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<affectsSelf>true</affectsSelf>
+				<maxStacks>1</maxStacks>
+				<duration>10</duration>
+			</statBoost>
+			<statBoost name="repairSpeed">
+				<boostType>MULT</boostType>
+				<amount>0.33</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<affectsSelf>true</affectsSelf>
+				<maxStacks>1</maxStacks>
+				<duration>10</duration>
+			</statBoost>
+		</statBoosts>
+		<spin>720</spin>
+		<shots>1</shots>
+		<sp>1</sp>
 		<fireChance>0</fireChance>
 		<breachChance>3</breachChance>
 		<cooldown>16</cooldown>
@@ -2343,7 +2841,54 @@
 		<title>Lockdown Bomb Flak Gun</title>
 		<short>L. Bomb Flak</short>
 		<tip>tip_bomb_flak</tip>
-		<desc>Fires 4 bombs that lockdown rooms, do double system damage, and have a low chance of fire and breach. Requires a missile to fire, but doesn't go through shields.</desc>
+		<desc>Fires 4 bombs that lockdown rooms, do double system damage, and have a low chance of fire and breach. Requires a missile to launch, but has a 35% chance to ignore their ammunition cost. Only pierces one shield layer.</desc>
+		<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
+		<radius>55</radius>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<persDamage>1</persDamage>
+		<missiles>1</missiles>
+		<freeMissileChance>35</freeMissileChance>
+		<spin>720</spin>
+		<shots>1</shots>
+		<lockdown>1</lockdown>
+		<sp>1</sp>
+		<fireChance>1</fireChance>
+		<breachChance>3</breachChance>
+		<cooldown>14</cooldown>
+		<power>3</power>
+		<cost>85</cost>
+		<bp>10</bp>
+		<speed>26</speed>
+		<rarity>0</rarity>
+		<projectiles>
+			<projectile count="4" fake="false">bomb_lockdown</projectile>
+		</projectiles>
+		<explosion>explosion_lockdown</explosion>
+		<launchSounds>
+			<sound>flak</sound>
+		</launchSounds>
+		<hitShipSounds>
+			<sound>smallExplosion</sound>
+		</hitShipSounds>
+		<hitShieldSounds>
+			<sound>smallExplosion</sound>
+		</hitShieldSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>tc_bomb_shotgun_lockdown</weaponArt>
+		<iconImage>flak</iconImage>
+	</weaponBlueprint>
+	
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_LOCK_ENEMY">
+		<type>BURST</type>
+		<flavorType>Physical Projectile Blast</flavorType>
+		<drone_targetable>1</drone_targetable>
+		<title>Lockdown Bomb Flak Gun</title>
+		<short>L. Bomb Flak</short>
+		<tip>tip_bomb_flak</tip>
+		<desc>ENEMY VERSION, YOU SHOULD NEVER SEE THIS!</desc>
 		<tooltip>Fires a blast of debris across a random area doing up to 4 hull damage, and 8 system damage.</tooltip>
 		<radius>55</radius>
 		<damage>1</damage>
@@ -2353,7 +2898,7 @@
 		<spin>720</spin>
 		<shots>1</shots>
 		<lockdown>1</lockdown>
-		<sp>0</sp>
+		<sp>1</sp>
 		<fireChance>1</fireChance>
 		<breachChance>3</breachChance>
 		<cooldown>14</cooldown>
