@@ -9027,7 +9027,7 @@
 	<shipBlueprint name="PLAYER_SHIP_SDM" layout="tcp_sdm" img="tcp_sdm">
 		<class>Converted Transporter</class>
 		<name>Size Doesn't Matter</name>
-		<desc>We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues. At least the outer plating hasn't been removed.</desc>
+		<desc>We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues. At least the outer plating of the ship hasn't been removed.</desc>
 		<unlock id="ship_PLAYER_SHIP_SDM_unlock"/>
 		<systemList>
 			<cloaking power="1" room="12" start="false" img="room_cloaking_4" />
@@ -9090,75 +9090,6 @@
 		<aug name="REGEN_ARMOR" />
 		<aug name="CREW_FIREARMS" />
 		<shieldImage>mup_dusk_a</shieldImage>
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_SDM_2" layout="tcp_sdm_2" img="tcp_sdm_2">
-		<class>Converted Transporter</class>
-		<name>Size Difference</name>
-		<desc>A strange Free Mantis has remade this ship almost entirely in order for its layout to "make sense". Given the lack of a gigantic and terribly inconvenient teleporter, this ship might even look... normal...</desc>
-		<unlock id="ship_PLAYER_SHIP_SDM_2_unlock"/>
-		<systemList>
-			<cloaking power="1" room="11" start="true" img="room_cloaking_4" />
-			<clonebay power="1" room="3" start="true">
-				<slot>
-					<number>1</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="0" start="false" img="room_doors_5">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</doors>
-			<drones power="2" max="8" room="7" start="true" img="room_drones_14" />
-			<engines power="1" max="8" room="9" start="true" img="room_engines_5">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="5" start="false" img="room_hacking_7" />
-			<mind power="1" room="12" start="true" img="room_mind_TCC" />
-			<oxygen power="1" room="2" start="true" img="room_oxygen_TCC_2" />
-			<pilot power="1" room="6" start="true" img="room_pilot_fratricide">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="1" start="false" img="room_sensors">
-				<slot>
-					<direction>down</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields power="2" max="8" room="10" start="false" img="room_shields_TCC">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="4" start="true" />
-			<weapons power="2" max="8" room="8" start="true" img="room_weapons_10">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>2</weaponSlots>
-		<droneSlots>2</droneSlots>
-		<weaponList missiles="3" count="2">
-			<weapon name="TC_CLOAKER" />
-		</weaponList>
-		<droneList drones="5" count="2">
-			<drone name="ROBO_MANT_BOARDER" />
-		</droneList>
-		<health amount="20" />
-		<maxPower amount="5" />
-		<aug name="MANTIS_RELOADER" />
-		<shieldImage>mup_dusk_a</shieldImage>
-		<cloakImage>tcp_sdm</cloakImage>
 	</shipBlueprint>
 
 	<!--/////////////// SAVIOR ///////////////-->
@@ -9472,9 +9403,9 @@
 	<!--///////////////////// FEDERATION CARRIER //////////////////////////-->
 
 	<shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER" layout="federation_carrier" img="federation_carrier">
-		<class>Federation Carrier</class>
+		<class>Federation Fleet Support Carrier</class>
 		<name>Star Sovereign</name>
-		<desc>This is a highly drone-focused Federation Fleet Support carrier - it's got some pretty old spec equipment, but it'll do...</desc>
+		<desc>This is a drone-focused carrier - meant to deploy droves of drones at a minute's notice, overwhelming enemy combatants. Sadly, this particular ship has older versions of deployment equipment installed, but it'll have to do...</desc>
 		<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_unlock"/>
 		<systemList>
 			<battery power="1" room="9" start="true" img="room_battery_9" />
@@ -9540,171 +9471,12 @@
 		<droneList drones="14" count="4">
 			<drone name="ROBO_MANT_DEFEND" />
 		</droneList>
-		<health amount="45" />
+		<health amount="30" />
 		<maxPower amount="7" />
 		<crewCount amount="1" class="robottos" />
 		<crewCount amount="1" class="protogen" />
 		<crewCount amount="1" class="human_soldier" />
 		<crewCount amount="1" class="human_hazmat" />
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_2" layout="federation_carrier_2" img="federation_carrier_2">
-		<class>Federation Carrier</class>
-		<name>The Scylla</name>
-		<desc>This heavily armored and highly armed ship was modified by Sentient Scout serving the Militia - it features a chain ion artillery as well as a Vulcan Rotary Autocannon.</desc>
-		<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_2_unlock"/>
-		<systemList>
-			<artillery power="2" room="15" start="true" weapon="IONARTILLERY" img="room_artillery" />
-			<battery power="1" room="2" start="false" img="room_battery_7" />
-			<cloaking power="1" room="14" start="false" img="room_cloaking" />
-			<clonebay power="1" room="13" start="false">
-				<slot>
-					<number>1</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="8" start="true" img="room_doors">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</doors>
-			<drones max="6" power="2" room="3" start="false" img="room_drones_7" />
-			<engines max="8" power="2" room="7" start="true" img="room_engines_3">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="16" start="false" img="room_hacking" />
-			<medbay power="1" room="13" start="true" img="room_medbay_9">
-				<slot>
-					<number>-2</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="18" start="false" img="room_mind_5" />
-			<oxygen power="1" room="1" start="true" img="room_oxygen_9" />
-			<pilot power="1" room="0" start="true" img="room_pilot_2_thrusters">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="9" start="true" img="room_sensors">
-				<slot>
-					<direction>down</direction>
-					<number>1</number>
-				</slot>
-			</sensors>
-			<shields max="8" power="2" room="5" start="true" img="room_shields_9">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="11" start="true" />
-			<weapons max="12" power="3" room="10" start="true" img="room_weapons_7">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<systemLimit>9</systemLimit>
-		<weaponSlots>3</weaponSlots>
-		<droneSlots>3</droneSlots>
-		<weaponList missiles="17" count="3">
-			<weapon name="TC_VULCAN_CANNON" />
-		</weaponList>
-		<droneList drones="3" count="3" />
-		<health amount="45" />
-		<maxPower amount="10" />
-		<crewCount amount="1" class="robottos_police" />
-		<crewCount amount="1" class="mantis_free" />
-		<crewCount amount="1" class="sergal" />
-		<crewCount amount="1" class="avali" />
-		<aug name="ADV_SCANNERS" />
-		<shieldImage>federation_carrier</shieldImage>
-		<cloakImage>federation_carrier</cloakImage>
-	</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_FEDERATION_CARRIER_3" layout="federation_carrier_3" img="federation_carrier_3">
-		<class>Federation Carrier</class>
-		<name>The Interceptor</name>
-		<desc>This heavily worn cruiser was in service of the Rebellion in the early days of the war, but it was recently recaptured and refit by several strange crewmembers.</desc>
-		<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_3_unlock"/>
-		<systemList>
-			<battery power="1" room="14" start="false" img="room_battery_14" />
-			<cloaking power="1" room="18" start="false" img="room_cloaking" />
-			<clonebay power="1" room="1" start="true">
-				<slot>
-					<number>1</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="9" start="true" img="room_doors_2">
-				<slot>
-					<direction>down</direction>
-					<number>0</number>
-				</slot>
-			</doors>
-			<drones max="8" power="3" room="19" start="true" img="room_drones_8" />
-			<engines max="8" power="2" room="6" start="true" img="room_engines_5">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="16" start="false" img="room_hacking_6" />
-			<medbay power="1" room="1" start="false" img="room_medbay">
-				<slot>
-					<number>1</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="12" start="false" img="room_mind_12" />
-			<oxygen power="1" room="3" start="true" img="room_oxygen_2" />
-			<pilot power="1" room="7" start="true" img="room_pilot_4_thrusters">
-				<slot>
-					<direction>right</direction>
-					<number>0</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="0" start="true" img="room_sensors_2">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</sensors>
-			<shields max="8" power="2" room="17" start="true" img="room_shields_7">
-				<slot>
-					<direction>up</direction>
-					<number>1</number>
-				</slot>
-			</shields>
-			<teleporter power="1" room="13" start="false" />
-			<weapons max="10" power="4" room="10" start="true" img="room_weapons_10">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<systemLimit>9</systemLimit>
-		<weaponSlots>4</weaponSlots>
-		<droneSlots>2</droneSlots>
-		<weaponList missiles="18" count="2">
-			<weapon name="LOOT_ROCK_1" />
-			<weapon name="LOOT_ROCK_1" />
-		</weaponList>
-		<droneList drones="8" count="3">
-		</droneList>
-		<health amount="45" />
-		<maxPower amount="8" />
-		<crewCount amount="1" class="protogen_space_scavenger" />
-		<crewCount amount="1" class="rsa_technician" />
-		<crewCount amount="1" class="rock_commando" />
-		<crewCount amount="1" class="rock" />
-		<aug name="ROCK_ARMOR" />
-		<shieldImage>federation_carrier</shieldImage>
-		<cloakImage>federation_carrier</cloakImage>
 	</shipBlueprint>
 
 </FTL>
