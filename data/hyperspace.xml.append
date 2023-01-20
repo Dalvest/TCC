@@ -733,7 +733,7 @@ SPEED          Changes gamespeed
 
     <!--///////SIZE DOESN'T MATTER//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_SDM" b="true" c="false">
+    <mod-append:ship name="PLAYER_SHIP_SDM" b="false" c="false">
 
       <unlock variant="a" silent="false">
         <type>5</type>
@@ -759,7 +759,7 @@ SPEED          Changes gamespeed
     <mod-append:customShip name="PLAYER_SHIP_SDM">
       <crewLimit>9</crewLimit>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_FEDERATION</hiddenAug>
+      <hiddenAug>SHIP_CIVILIAN</hiddenAug>
       <crew>
         <human_phoenix room="6" name="Echo-Cap" />
         <human_soldier room="4" name="Echo-1" />
@@ -772,17 +772,6 @@ SPEED          Changes gamespeed
       </crew>
     </mod-append:customShip>
 
-  	<mod-append:customShip name="PLAYER_SHIP_SDM_2">
-  		<crewLimit>9</crewLimit>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_FREEMANTIS</hiddenAug>
-  		<crew>
-  			<mantis_freebusiness room="6" name="Businessmantis" />
-  			<mantis_rsa room="8" />
-  			<mantis_free room="9" />
-  		</crew>
-  	</mod-append:customShip>
-
     <!--///////ARMORED WASP//////-->
 
     <mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true">
@@ -790,10 +779,6 @@ SPEED          Changes gamespeed
       <unlock variant="a" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_SDM</shipReq>
-      </unlock>
-	    <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_SDM_2</shipReq>
       </unlock>
       <unlock variant="b" silent="false">
         <type>1</type>
@@ -1066,7 +1051,7 @@ SPEED          Changes gamespeed
 
     <!--/////// FEDERATION CARRIER //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="true" c="true" noappend="true">
+    <mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="false" c="false" noappend="true">
       <unlock variant="a" silent="false">
         <type>3</type>
         <otherUnlocks>
@@ -1092,12 +1077,6 @@ SPEED          Changes gamespeed
         <silent>false</silent>
       </unlock>
       <unlock variant="c" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_FEDERATION_CARRIER_2</shipReq>
-        <value>5</value>
-        <silent>false</silent>
-      </unlock>
-      <unlock variant="c" silent="false">
         <type>2</type>
         <shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
         <silent>false</silent>
@@ -1105,18 +1084,6 @@ SPEED          Changes gamespeed
     </mod-append:ship>
 
     <mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER">
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_FEDERATION</hiddenAug>
-      <crewLimit>8</crewLimit>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER_2">
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_FEDERATION</hiddenAug>
-      <crewLimit>8</crewLimit>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER_3">
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <hiddenAug>SHIP_FEDERATION</hiddenAug>
       <crewLimit>8</crewLimit>
