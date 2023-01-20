@@ -658,7 +658,7 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 
-	<weaponBlueprint name="TC_MINELAUNCHER_ANCALAGON">
+	<weaponBlueprint name="TC_MINELAUNCHER_ANCALAGON_FAKE">
 		<type>BURST</type>
 		<tip>tip_ancalagon</tip>
 		<flavorType>Aether Minelauncher</flavorType>
@@ -789,7 +789,7 @@
 		<rarity>0</rarity>
 		<projectiles>
 			<projectile count="2" fake="false">fm_mine_ancalagon_remastered</projectile>
-			<projectile count="3" fake="false" blueprint="FM_MINELAUNCHER_ANCALAGON_REMASTERED2_FAKE">fm_mine_ancalagon_remastered</projectile>
+			<projectile count="3" fake="false" blueprint="TC_MINELAUNCHER_ANCALAGON_FAKE">fm_mine_ancalagon_remastered</projectile>
 		</projectiles>
 		<accuracyMod>20</accuracyMod>
 		<spawnCrew>
@@ -2460,7 +2460,7 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 	
-	<weaponBlueprint name="TC_BOMB_SHOTGUN_FIRE-ENEMY">
+	<weaponBlueprint name="TC_BOMB_SHOTGUN_FIRE_ENEMY">
 		<type>BURST</type>
 		<flavorType>Physical Projectile Blast</flavorType>
 		<drone_targetable>1</drone_targetable>
