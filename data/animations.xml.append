@@ -677,6 +677,18 @@
 	<mountPoint x="2" y="81"/>
 </weaponAnim>
 
+<!--/////////////////// Avali Weaponry //////////////////-->
+
+<animSheet name="avali_illuminate" w="171" h="74" fw="19" fh="74">weapon_avali/avali_illuminate.png</animSheet>
+<weaponAnim name="avali_illuminate">
+	<sheet>avali_illuminate</sheet>
+	<desc length="9" x="0" y="0"/>
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>4</fireFrame>
+	<firePoint  x="11" y="5"/>
+	<mountPoint x="4" y="55"/>
+</weaponAnim>
+
 <!--/////////////////// Breach Ion //////////////////-->
 
 <animSheet name="breach_ion_mini" w="261" h="36" fw="29" fh="36">weapon_breach_ion/breach_ion_mini.png</animSheet>
@@ -1376,6 +1388,14 @@
 	<sheet>tc_debuffer_projection</sheet>
 	<desc length="4" x="0" y="0"/>
 	<time>0.3</time>
+</anim>
+
+<!--placeholder, needs a propper projectile-->
+<animSheet name="Avali_Illuminate" w="200" h="20" fw="50" fh="20">projectiles/tc_gay_light.png</animSheet>
+<anim name="Avali_Illuminate">
+	<sheet>Avali_Illuminate</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>1</time>
 </anim>
 
 <animSheet name="Breach_Ion_Mini" w="14" h="12" fw="14" fh="12">projectiles/breach_ion_mini.png</animSheet>

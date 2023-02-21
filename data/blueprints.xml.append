@@ -4072,6 +4072,50 @@
 		<iconImage>Ion_Charger_1</iconImage>
 	</weaponBlueprint>
 
+	<!--///////////////////////////////////////////AVALI WEAPONRY////////////////////////////////////////////////////////////////-->
+
+	<weaponBlueprint name="AVALI_ILLUMINATE">
+		<type>MISSILE</type>
+		<flavorType>Ion</flavorType>
+		<title>avali_illuminate</title>
+		<short>avali_illuminate</short>
+		<desc>a weapon still in testing, not yet truly having a purpose or even a propper way to apear, you cheater ;P.</desc>
+		<tooltip>It indeed sounds like an ion when it hits. I'll say it again, maybe a thrid time, but this is a wip.</tooltip>
+		<damage>2</damage>
+		<sysDamage>-1</sysDamage>
+		<persDamage>1</persDamage>
+		<tip>tip_ion</tip>
+		<shots>1</shots>
+		<sp>10</sp>
+		<fireChance>0</fireChance>
+		<breachChance>3</breachChance>
+		<cooldown>15</cooldown>
+		<ion>0</ion>
+		<power>3</power>
+		<speed>40</speed>
+		<cost>69</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<image>Avali_Illuminate</image>
+		<launchSounds>
+			<sound>ionShoot1</sound>
+			<sound>ionShoot2</sound>
+		</launchSounds>
+		<hitShieldSounds>
+			<sound>ionShields1</sound>
+			<sound>ionShields2</sound>
+		</hitShieldSounds>
+		<hitShipSounds>
+	        <sound>ionHit1</sound>
+			<sound>ionHit2</sound>
+	    </hitShipSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>avali_illuminate</weaponArt>
+		<iconImage>avali_illuminate</iconImage>
+	</weaponBlueprint>
+
 	<!--///////////////////////////////////////////BREACH ION////////////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="BREACH_ION_MINI">
@@ -4261,11 +4305,11 @@
 		<launchSounds>
 			<sound>beam2</sound>
 		</launchSounds>
-		<!--<color>
-			<r>0</r>
+		<color>
+			<r>255</r>
 			<g>255</g>
-			<b>6</b>
-		</color>-->
+			<b>0</b>
+		</color>
 		<weaponArt>breach_ion_beam</weaponArt>
 		<iconImage>breach_ion_beam</iconImage>
 		<hideEventTooltip>true</hideEventTooltip>
