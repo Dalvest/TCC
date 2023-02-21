@@ -4075,18 +4075,19 @@
 	<!--///////////////////////////////////////////AVALI WEAPONRY////////////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="AVALI_ILLUMINATE">
-		<type>MISSILE</type>
-		<flavorType>Ion</flavorType>
+		<type>LASER</type>
 		<title>avali_illuminate</title>
 		<short>avali_illuminate</short>
 		<desc>a weapon still in testing, not yet truly having a purpose or even a propper way to apear, you cheater ;P.</desc>
 		<tooltip>It indeed sounds like an ion when it hits. I'll say it again, maybe a thrid time, but this is a wip.</tooltip>
+		<missiles>1</missiles>
+		<freeMissileChance>65</freeMissileChance>
 		<damage>2</damage>
-		<sysDamage>-1</sysDamage>
+		<sysDamage>0</sysDamage>
 		<persDamage>1</persDamage>
-		<tip>tip_ion</tip>
+		<tip>tip_laser</tip>
 		<shots>1</shots>
-		<sp>10</sp>
+		<sp>2</sp>
 		<fireChance>0</fireChance>
 		<breachChance>3</breachChance>
 		<cooldown>15</cooldown>
