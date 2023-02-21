@@ -712,6 +712,16 @@
 	<chargeImage>weapon_breach_ion/breach_ion_bolt_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="breach_ion_beam_mini" w="702" h="62" fw="26" fh="62">weapon_breach_ion/breach_ion_beam_mini.png</animSheet>
+<weaponAnim name="breach_ion_beam_mini">f
+	<sheet>breach_ion_beam_mini</sheet>
+	<desc length="27" x="0" y="0"/>
+	<chargedFrame>21</chargedFrame>
+	<fireFrame>21</fireFrame>
+	<firePoint  x="16" y="1"/>
+	<mountPoint x="3" y="32"/>
+</weaponAnim>
+
 <animSheet name="breach_ion_beam" w="442" h="61" fw="34" fh="61">weapon_breach_ion/breach_ion_beam.png</animSheet>
 <weaponAnim name="breach_ion_beam">
 	<sheet>breach_ion_beam</sheet>

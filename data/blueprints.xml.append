@@ -4200,6 +4200,42 @@
 		<iconImage>breach_ion_bolt</iconImage>
 	</weaponBlueprint>
 
+	<weaponBlueprint name="BREACH_ION_BEAM_MINI">
+		<type>BEAM</type>
+		<tip>tip_beams</tip>
+		<title>Breach Ion Beam Mini</title>
+		<short>Br.B.Mini</short>
+		<desc>The pinacle of space scavenger engineering, now in an itty bitty living space.</desc>
+		<tooltip>Beam weapon, 1 hull damage, 2 ion damage, high chance to breach, 3 length</tooltip>
+		<damage>1</damage>
+		<sysDamage>0</sysDamage>
+		<persDamage>0</persDamage>
+		<ion>2</ion>
+		<ionBeamFix>true</ionBeamFix>
+		<hullbust>0</hullbust>
+		<sp>0</sp>
+		<breachChance>9</breachChance>
+		<cooldown>10</cooldown>
+		<image>beam_contact</image>
+		<power>1</power>
+		<cost>60</cost>
+		<bp>7</bp>
+		<rarity>0</rarity>
+		<length>3</length>
+		<launchSounds>
+			<sound>beam2</sound>
+		</launchSounds>
+		<color>
+			<r>255</r>
+			<g>255</g>
+			<b>0</b>
+		</color>
+		<weaponArt>breach_ion_beam_mini</weaponArt>
+		<iconImage>breach_ion_beam_mini</iconImage>
+		<hideEventTooltip>true</hideEventTooltip>
+		<iconScale>0.80</iconScale>
+	</weaponBlueprint>
+
 	<weaponBlueprint name="BREACH_ION_BEAM">
 		<type>BEAM</type>
 		<tip>tip_beams</tip>
