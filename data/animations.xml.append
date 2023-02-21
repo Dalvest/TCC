@@ -679,14 +679,14 @@
 
 <!--/////////////////// Avali Weaponry //////////////////-->
 
-<animSheet name="avali_illuminate" w="171" h="74" fw="19" fh="74">weapon_avali/avali_illuminate.png</animSheet>
-<weaponAnim name="avali_illuminate">
-	<sheet>avali_illuminate</sheet>
-	<desc length="9" x="0" y="0"/>
+<animSheet name="avali_cardinal" w="190" h="84" fw="19" fh="84">weapon_avali/avali_cardinal.png</animSheet>
+<weaponAnim name="avali_cardinal">
+	<sheet>avali_cardinal</sheet>
+	<desc length="10" x="0" y="0"/>
 	<chargedFrame>4</chargedFrame>
 	<fireFrame>4</fireFrame>
-	<firePoint  x="11" y="5"/>
-	<mountPoint x="4" y="55"/>
+	<firePoint  x="11" y="15"/>
+	<mountPoint x="4" y="65"/>
 </weaponAnim>
 
 <!--/////////////////// Breach Ion //////////////////-->
@@ -1391,9 +1391,9 @@
 </anim>
 
 <!--placeholder, needs a propper projectile-->
-<animSheet name="Avali_Illuminate" w="200" h="20" fw="50" fh="20">projectiles/tc_gay_light.png</animSheet>
-<anim name="Avali_Illuminate">
-	<sheet>Avali_Illuminate</sheet>
+<animSheet name="Avali_Cardinal" w="200" h="20" fw="50" fh="20">projectiles/avali_cardinal.png</animSheet>
+<anim name="Avali_Cardinal">
+	<sheet>Avali_Cardinal</sheet>
 	<desc length="4" x="0" y="0"/>
 	<time>1</time>
 </anim>
