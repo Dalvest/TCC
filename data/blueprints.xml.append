@@ -4072,6 +4072,51 @@
 		<iconImage>Ion_Charger_1</iconImage>
 	</weaponBlueprint>
 
+	<!--///////////////////////////////////////////AVALI WEAPONRY////////////////////////////////////////////////////////////////-->
+
+	<weaponBlueprint name="AVALI_CARDINAL">
+		<type>LASER</type>
+		<title>avali_cardinal</title>
+		<short>avali_cardinal</short>
+		<desc>a weapon still in testing, not yet truly having a purpose or even a propper way to apear, you cheater ;P.</desc>
+		<tooltip>It indeed sounds like an ion when it hits. I'll say it again, maybe a thrid time, but this is a wip.</tooltip>
+		<missiles>1</missiles>
+		<freeMissileChance>65</freeMissileChance>
+		<damage>2</damage>
+		<sysDamage>0</sysDamage>
+		<persDamage>1</persDamage>
+		<tip>tip_laser</tip>
+		<shots>1</shots>
+		<sp>2</sp>
+		<fireChance>0</fireChance>
+		<breachChance>3</breachChance>
+		<cooldown>15</cooldown>
+		<ion>0</ion>
+		<power>3</power>
+		<speed>40</speed>
+		<cost>69</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<image>Avali_Illuminate</image>
+		<launchSounds>
+			<sound>ionShoot1</sound>
+			<sound>ionShoot2</sound>
+		</launchSounds>
+		<hitShieldSounds>
+			<sound>ionShields1</sound>
+			<sound>ionShields2</sound>
+		</hitShieldSounds>
+		<hitShipSounds>
+	        <sound>ionHit1</sound>
+			<sound>ionHit2</sound>
+	    </hitShipSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>avali_cardinal</weaponArt>
+		<iconImage>avali_cardinal</iconImage>
+	</weaponBlueprint>
+
 	<!--///////////////////////////////////////////BREACH ION////////////////////////////////////////////////////////////////-->
 
 	<weaponBlueprint name="BREACH_ION_MINI">
@@ -4200,6 +4245,42 @@
 		<iconImage>breach_ion_bolt</iconImage>
 	</weaponBlueprint>
 
+	<weaponBlueprint name="BREACH_ION_BEAM_MINI">
+		<type>BEAM</type>
+		<tip>tip_beams</tip>
+		<title>Breach Ion Beam Mini</title>
+		<short>Br.B.Mini</short>
+		<desc>The pinacle of space scavenger engineering, now in an itty bitty living space.</desc>
+		<tooltip>Beam weapon, 1 hull damage, 2 ion damage, high chance to breach, 3 length</tooltip>
+		<damage>1</damage>
+		<sysDamage>0</sysDamage>
+		<persDamage>0</persDamage>
+		<ion>2</ion>
+		<ionBeamFix>true</ionBeamFix>
+		<hullbust>0</hullbust>
+		<sp>0</sp>
+		<breachChance>9</breachChance>
+		<cooldown>10</cooldown>
+		<image>beam_contact</image>
+		<power>1</power>
+		<cost>60</cost>
+		<bp>7</bp>
+		<rarity>0</rarity>
+		<length>3</length>
+		<launchSounds>
+			<sound>beam2</sound>
+		</launchSounds>
+		<color>
+			<r>255</r>
+			<g>255</g>
+			<b>0</b>
+		</color>
+		<weaponArt>breach_ion_beam_mini</weaponArt>
+		<iconImage>breach_ion_beam_mini</iconImage>
+		<hideEventTooltip>true</hideEventTooltip>
+		<iconScale>0.80</iconScale>
+	</weaponBlueprint>
+
 	<weaponBlueprint name="BREACH_ION_BEAM">
 		<type>BEAM</type>
 		<tip>tip_beams</tip>
@@ -4225,11 +4306,11 @@
 		<launchSounds>
 			<sound>beam2</sound>
 		</launchSounds>
-		<!--<color>
-			<r>0</r>
+		<color>
+			<r>255</r>
 			<g>255</g>
-			<b>6</b>
-		</color>-->
+			<b>0</b>
+		</color>
 		<weaponArt>breach_ion_beam</weaponArt>
 		<iconImage>breach_ion_beam</iconImage>
 		<hideEventTooltip>true</hideEventTooltip>

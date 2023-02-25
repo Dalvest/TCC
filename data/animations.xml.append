@@ -677,6 +677,18 @@
 	<mountPoint x="2" y="81"/>
 </weaponAnim>
 
+<!--/////////////////// Avali Weaponry //////////////////-->
+
+<animSheet name="avali_cardinal" w="190" h="84" fw="19" fh="84">weapon_avali/avali_cardinal.png</animSheet>
+<weaponAnim name="avali_cardinal">
+	<sheet>avali_cardinal</sheet>
+	<desc length="10" x="0" y="0"/>
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>4</fireFrame>
+	<firePoint  x="11" y="15"/>
+	<mountPoint x="4" y="65"/>
+</weaponAnim>
+
 <!--/////////////////// Breach Ion //////////////////-->
 
 <animSheet name="breach_ion_mini" w="261" h="36" fw="29" fh="36">weapon_breach_ion/breach_ion_mini.png</animSheet>
@@ -710,6 +722,16 @@
 	<firePoint  x="14" y="7"/>
 	<mountPoint x="4" y="21"/>
 	<chargeImage>weapon_breach_ion/breach_ion_bolt_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="breach_ion_beam_mini" w="702" h="62" fw="26" fh="62">weapon_breach_ion/breach_ion_beam_mini.png</animSheet>
+<weaponAnim name="breach_ion_beam_mini">f
+	<sheet>breach_ion_beam_mini</sheet>
+	<desc length="27" x="0" y="0"/>
+	<chargedFrame>21</chargedFrame>
+	<fireFrame>21</fireFrame>
+	<firePoint  x="16" y="1"/>
+	<mountPoint x="3" y="32"/>
 </weaponAnim>
 
 <animSheet name="breach_ion_beam" w="442" h="61" fw="34" fh="61">weapon_breach_ion/breach_ion_beam.png</animSheet>
@@ -1366,6 +1388,13 @@
 	<sheet>tc_debuffer_projection</sheet>
 	<desc length="4" x="0" y="0"/>
 	<time>0.3</time>
+</anim>
+
+<animSheet name="Avali_Cardinal" w="164" h="10" fw="41" fh="10">projectiles/avali_cardinal.png</animSheet>
+<anim name="Avali_Cardinal">
+	<sheet>Avali_Cardinal</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>1</time>
 </anim>
 
 <animSheet name="Breach_Ion_Mini" w="14" h="12" fw="14" fh="12">projectiles/breach_ion_mini.png</animSheet>
