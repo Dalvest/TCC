@@ -10034,35 +10034,35 @@
 		<desc>This is a drone-focused carrier - meant to deploy droves of drones at a minute's notice, overwhelming enemy combatants. Sadly, this particular ship has older versions of deployment equipment installed, but it'll have to do...</desc>
 		<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_unlock"/>
 		<systemList>
-			<battery power="1" room="9" start="true" img="room_battery_9" />
-			<cloaking power="1" room="18" start="false" img="room_cloaking" />
-			<clonebay power="1" room="13" start="false">
+			<battery power="1" room="7" start="true" img="room_battery_9" />
+			<cloaking power="1" room="16" start="false" img="room_cloaking" />
+			<clonebay power="1" room="11" start="false">
 				<slot>
 					<number>1</number>
 				</slot>
 			</clonebay>
-			<doors power="1" room="14" start="true" img="room_doors_3">
+			<doors power="1" room="12" start="true" img="room_doors_3">
 				<slot>
 					<direction>right</direction>
 					<number>1</number>
 				</slot>
 			</doors>
 			<drones max="12" power="3" room="1" start="true" img="room_drones" />
-			<engines max="8" power="2" room="10" start="true" img="room_engines_9">
+			<engines max="8" power="2" room="8" start="true" img="room_engines_9">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</engines>
-			<hacking power="1" room="12" start="false" img="room_hacking_5" />
-			<medbay power="1" room="13" start="true" img="room_medbay">
+			<hacking power="1" room="10" start="false" img="room_hacking_5" />
+			<medbay power="1" room="11" start="true" img="room_medbay">
 				<slot>
 					<number>1</number>
 				</slot>
 			</medbay>
-			<mind power="1" room="16" start="false" img="room_mind_12" />
+			<mind power="1" room="14" start="false" img="room_mind_12" />
 			<oxygen power="1" room="0" start="true" img="room_oxygen_2" />
-			<pilot power="1" room="7" start="true" img="room_pilot_4_thrusters">
+			<pilot power="1" room="5" start="true" img="room_pilot_4_thrusters">
 				<slot>
 					<direction>right</direction>
 					<number>0</number>
@@ -10074,14 +10074,14 @@
 					<number>0</number>
 				</slot>
 			</sensors>
-			<shields max="12" power="2" room="17" start="true" img="room_shields_9">
+			<shields max="12" power="2" room="15" start="true" img="room_shields_9">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</shields>
-			<teleporter power="1" room="11" start="true" />
-			<weapons max="5" power="2" room="19" start="true" img="room_weapons_2">
+			<teleporter power="1" room="9" start="true" />
+			<weapons max="5" power="2" room="17" start="true" img="room_weapons_2">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
