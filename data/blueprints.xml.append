@@ -6647,6 +6647,7 @@
 		<class>Reactive Compactor</class>
 		<name>Prideful Partisan</name>
 		<desc>Same broken class chip, same teleporter. This ship's strength is its world-class crew. Mercs of any and all kinds are welcome.</desc>
+		<unlock id="ship_PLAYER_SHIP_TRASH_REACTOR_2_unlock"/>
 		<systemList>
 			<artillery power="1" room="0" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_6" />
 			<battery power="1" room="17" start="true" img="room_battery_10" />
@@ -7261,6 +7262,7 @@
 		<class>Techlance Cruiser</class>
 		<name>WANDERER</name>
 		<desc>Whatever the origin of the Sentients may be - constructed by a warmorgering group of humans or fresh out of an RSA RnD laboratory, it's clear that these robotic would've built their own ship eventually.</desc>
+		<unlock id="ship_PLAYER_SHIP_TECHLANCE_unlock"/>
 		<systemList>
 			<artillery power="1" room="16" start="false" weapon="ARTILLERY_FED" img="room_artillery_7" />
 			<battery power="1" room="9" start="true" img="room_battery_orchid" />
@@ -7841,6 +7843,7 @@
 		<class>Dram-Class Tanker</class>
 		<name>ISS Skylark</name>
 		<desc>Support to a fleet includes refueling - that's what this ship provides. Perfect for long range missions with little hope of refueling across the way - as long as you keep the fragile hull intact.</desc>
+		<unlock id="ship_PLAYER_SHIP_EXTRAELITE_SLOT2_2_unlock"/>
 		<systemList>
 			<battery power="1" room="6" start="false" img="room_battery" />
 			<cloaking power="1" room="3" start="false" img="room_cloaking" />
@@ -7920,6 +7923,7 @@
 		<class>Strategic Frigate</class>
 	    <name>Sevastopol</name>
 	    <desc>The pride and joy of the legion. While it is not yet fully functional, that doesn't mean it isn't a force to be reckoned with.</desc>
+		<unlock id="ship_PLAYER_SHIP_EXTRAELITE_SLOT2_3_unlock"/>
 		<systemList>
 			<artillery max="5" power="1" room="12" start="true" weapon="ARTILLERY_BATTLESHIP_LASER" img="room_artillery" />
 			<cloaking max="5" power="1" room="5" start="false" img="room_cloaking" />
@@ -8298,6 +8302,7 @@
 		<class>Smew Battlecruiser</class>
 		<name>Intrepid</name>
 		<desc>The Smew is the mule of the Avali military fleet - wherever you look, you'll see at least one. It's practical, fast and efficient... exactly what the Avali need.</desc>
+		<unlock id="ship_PLAYER_SHIP_SMEW_BATTLECRUISER_unlock"/>
 		<systemList>
 			<battery power="1" room="5" start="false" img="room_battery_14" />
 			<cloaking power="1" room="6" start="true" img="room_cloaking_3" />
@@ -9579,6 +9584,7 @@
 		<class>Unstable Federation Cruiser</class>
 		<name>Positron</name>
 		<desc>Having been stolen by a cult worshipping some Finnish guy and his dimensions, this ship was refitted to run on infinity power and time shards, which you don't have access to because it was recaptured.</desc>
+		<unlock id="ship_PLAYER_SHIP_POTENTIAL_3_unlock"/>
 		<systemList>
 			<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
 			<battery power="1" room="9" start="false" img="room_battery_orchid" />
@@ -9952,6 +9958,7 @@
 		<class>Salvaged Federation Cruiser</class>
 		<name>Stalwart Defense</name>
 		<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The spliced nature of the craft makes it hard to manuever.</desc>
+		<unlock id="ship_PLAYER_SHIP_DEFENSE_unlock"/>
 		<systemList>
 			<artillery power="2" room="5" start="true" weapon="ARTILLERY_BEAM" img="room_artillery" />
 			<battery power="1" room="12" start="true" img="room_battery_6" />
