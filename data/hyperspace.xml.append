@@ -741,6 +741,12 @@ SPEED          Changes gamespeed
           <victory>PLAYER_SHIP_TRASH_REACTOR</victory>
         </victories>
       </unlock>
+      <unlock variant="a" silent="false">
+        <type>5</type>
+        <victories>
+          <victory>PLAYER_SHIP_TRASH_REACTOR_2</victory>
+        </victories>
+      </unlock>
 
       <unlock variant="b" silent="false">
         <type>5</type>
@@ -1456,6 +1462,12 @@ SPEED          Changes gamespeed
         <type>5</type>
         <victories>
           <victory>PLAYER_SHIP_TRASH_REACTOR</victory>
+        </victories>
+      </unlock>
+      <unlock variant="a" silent="false">
+        <type>5</type>
+        <victories>
+          <victory>PLAYER_SHIP_TRASH_REACTOR_2</victory>
         </victories>
       </unlock>
       <unlock variant="b" silent="false">
