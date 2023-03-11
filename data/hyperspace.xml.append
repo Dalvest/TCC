@@ -1865,7 +1865,7 @@ SPEED          Changes gamespeed
 		</mod-append:race>
 
 		<mod-append:race name="robottos_police">
-			<maxHealth>80</maxHealth>
+			<maxHealth>100</maxHealth>
 			<repairSpeed>0.7</repairSpeed>
 			<canFight>true</canFight>
 			<canRepair>true</canRepair>
@@ -3551,10 +3551,7 @@ SPEED          Changes gamespeed
   		<canBurn>false</canBurn>
   		<canSuffocate>false</canSuffocate>
   		<deathSounds>
-  			<deathSound>explosion1</deathSound>
-  			<deathSound>explosion2</deathSound>
-  			<deathSound>explosion3</deathSound>
-  			<deathSound>explosion4</deathSound>
+			<deathSound>technicianDroneDeath</deathSound>
   		</deathSounds>
   		<powerEffect>
   			<cooldown>0</cooldown>
