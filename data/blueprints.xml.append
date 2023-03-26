@@ -5297,7 +5297,12 @@
 				<affectsSelf>true</affectsSelf>
 				<duration>15</duration>
 				<boostAnim>pheromones</boostAnim>
-				<whiteList load="LIST_SCRAPPER_TIER_2"/>
+				<whiteList>
+					<scrapper_soldier/>
+					<scrapper_engineer/>
+					<scrapper_speed/>
+					<scrapper_defender/>
+				</whiteList>
 			</mod-append:statBoost>
 		</mod:findLike>
 	</mod:findName>
@@ -9664,9 +9669,9 @@
 		<unlock id="ship_PLAYER_SHIP_SDM_unlock"/>
 		<systemList>
 			<cloaking power="1" room="12" start="false" img="room_cloaking_4" />
-			<clonebay power="1" room="0" start="true">
+			<clonebay power="1" room="9" start="true">
 				<slot>
-					<number>1</number>
+					<number>0</number>
 				</slot>
 			</clonebay>
 			<doors power="1" room="1" start="true" img="room_doors">
@@ -9676,19 +9681,19 @@
 				</slot>
 			</doors>
 			<drones power="2" max="8" room="11" start="false" img="room_drones_bodyhorror" />
-			<engines power="1" max="8" room="5" start="true" img="room_engines_8">
+			<engines power="1" max="8" room="5" start="true" img="room_engines_10">
 				<slot>
 					<direction>left</direction>
-					<number>1</number>
+					<number>0</number>
 				</slot>
 			</engines>
 			<hacking power="1" room="8" start="false" img="room_hacking_6" />
-			<mind power="1" room="9" start="false" img="room_mind_TCC" />
+			<mind power="1" room="4" start="false" img="room_mind_TCC" />
 			<oxygen power="1" room="10" start="true" img="room_oxygen_TCC_2" />
-			<pilot power="1" room="6" start="true" img="room_pilot_fratricide">
+			<pilot power="1" room="6" start="true" img="room_pilot_doubledeal">
 				<slot>
 					<direction>right</direction>
-					<number>1</number>
+					<number>0</number>
 				</slot>
 			</pilot>
 			<sensors power="1" room="2" start="true" img="room_sensors">
@@ -9703,11 +9708,11 @@
 					<number>0</number>
 				</slot>
 			</shields>
-			<teleporter power="2" room="4" start="true" />
-			<weapons power="2" max="8" room="7" start="true" img="room_weapons_10">
+			<teleporter power="2" room="0" start="true" />
+			<weapons power="2" max="8" room="7" start="true" img="room_weapons_8">
 				<slot>
 					<direction>up</direction>
-					<number>0</number>
+					<number>1</number>
 				</slot>
 			</weapons>
 		</systemList>
