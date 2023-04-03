@@ -39,7 +39,7 @@
 </event>
 
 <event name="TRUE_VICTORY_CREW_TRACKER">
-	<text>"We did it. The Protogen Project has kicked the Rebellion's ass big-time - and it was about time we did. Let's go get a good look at the wreckage. I want to take as many trophies as we can fit in the hold."</text>
+	<text>"We did it." says Tracker, seemingly extremely content. "The Protogen Project has kicked the Rebellion's royally blasted behind big-time - and it was about time we did. Let's go get a good look at the wreckage. I want to take as many trophies as we can fit in the hold."</text>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="TRUE_VICTORY_LOAD"/>
@@ -47,7 +47,7 @@
 </event>
 
 <event name="TRUE_VICTORY_CREW_TRASH">
-	<text>"Bong bing boo bing bong bing bing bong bingly bongly boo"</text>
+	<text>"THIS IS NOT THE END... THIS IS NOT THE END... SOMETHING GREATER LURKS IN THE SHADOWS..." the Trash Eater seems shaken. But what could possibly be worse than this?</text>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="TRUE_VICTORY_LOAD"/>
