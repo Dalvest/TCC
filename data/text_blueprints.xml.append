@@ -69,11 +69,12 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_TRASH_REACTOR_class">Customized Kestrel Miner</text>
 <text name="text_PLAYER_SHIP_TRASH_REACTOR_name">Reactive Compactor</text>
 <text name="text_PLAYER_SHIP_TRASH_REACTOR_desc">Rebuilt from the Garbage Compactor, and the remains of a Zoltan and Hektar ship - the Hektar ship was carrying very odd exoskeleton pieces - we could use them to our benefit. The paintjob was rushed but it looks the part.</text>
-<text name="ship_PLAYER_SHIP_TRASH_REACTOR_unlock">Win the Game with any layout of the Kestrel Miner.</text>
+<text name="ship_PLAYER_SHIP_TRASH_REACTOR_unlock">Win the Game with any layout of the Kestrel-Class Trash Collection Cruiser.</text>
+<text name="ship_PLAYER_SHIP_TRASH_REACTOR_2_unlock">Reach sector 5 with Type A.</text>
 
 <!-- ECHO-->
 
-<text name="ship_PLAYER_SHIP_ECHO_unlock">Beat the game with the Customized Kestrel Miner.</text>
+<text name="ship_PLAYER_SHIP_ECHO_unlock">Beat the game with any layout of the Reactive Compactor.</text>
 <text name="ship_PLAYER_SHIP_ECHO_2_unlock">Reach sector 5 with Type A.</text>
 
 <!--///////////////////// SDM //////////////////////////-->
@@ -81,7 +82,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_SDM_class">Converted Civilian Cruiser</text>
 <text name="text_PLAYER_SHIP_SDM_name">Size Doesn't Matter</text>
 <text name="text_PLAYER_SHIP_SDM_desc">We all know that it's not size that matters - it's allegiance. Although the teleporter on this ship clearly has some kind of... overcompensation issues.</text>
-<text name="ship_PLAYER_SHIP_SDM_unlock">Win the Game with the Reactive Compactor</text>
+<text name="ship_PLAYER_SHIP_SDM_unlock">Win the Game with any layout of the Reactive Compactor.</text>
 
 <text name="ship_PLAYER_SHIP_SDM_2_unlock">Reach sector 5 with Type A</text>
 
@@ -99,7 +100,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_TC_ARMORED_WASP_class">"Gladiator" Corvette</text>
 <text name="text_PLAYER_SHIP_TC_ARMORED_WASP_name">Armored Wasp</text>
 <text name="text_PLAYER_SHIP_TC_ARMORED_WASP_desc">This ship was rebuilt out of junk - it's now a fast and extremely combat capable ship, although it's a bit cramped and fragile.</text>
-<text name="ship_PLAYER_SHIP_TC_ARMORED_WASP_unlock">Win the Game with any layout of the the Transport Dropship.</text>
+<text name="ship_PLAYER_SHIP_TC_ARMORED_WASP_unlock">Win the Game with any layout of the Transport Dropship.</text>
 
 <text name="text_PLAYER_SHIP_TC_ARMORED_WASP_2_class">"Gladiator" Corvette</text>
 <text name="text_PLAYER_SHIP_TC_ARMORED_WASP_2_name">Starsector</text>
@@ -133,7 +134,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_SLUGTON_class">Rent-a-Flagship</text>
 <text name="text_PLAYER_SHIP_SLUGTON_name">RENT-A-FLAGSHIP</text>
 <text name="text_PLAYER_SHIP_SLUGTON_desc">WELCOME TO [TRIAL VERSION] OF [moderate difficulty ship]!!! PLAY NOW PLAY NOW - BECOME [bigshot]! ACQUIRE [UWU]!</text>
-<text name="ship_PLAYER_SHIP_SLUGTON_unlock">Win the Game with any layout of the Corrosus.</text>
+<text name="ship_PLAYER_SHIP_SLUGTON_unlock">Win the Game with the RSA Dropship.</text>
 
 <text name="text_PLAYER_SHIP_SLUGTON_2_class">Rent-a-Flagship</text>
 <text name="text_PLAYER_SHIP_SLUGTON_2_name">Bandit Exordium</text>
@@ -157,13 +158,16 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_EXTRAELITE_2_desc">The ultimate ship for assassination hits - destroy your multiversal enemies with the varied arsenal on this ship. A true bounty hunter, loyal to whoemever pays the best.</text>
 <text name="ship_PLAYER_SHIP_EXTRAELITE_2_unlock">Win the game with Type A.</text>
 
+<text name="ship_PLAYER_SHIP_EXTRAELITE_SLOT2_2_unlock">Reach sector 5 with Type A.</text>
+<text name="ship_PLAYER_SHIP_EXTRAELITE_SLOT2_3_unlock">Reach sector 5 with Type B or win with Type A.</text>
+
 <!--//////////////////////// AVALI STUFF //////////////////////////////-->
 
 <text name="ship_PLAYER_SHIP_AVALI_unlock">Unlock Orchid Cruiser Type C to unlock this ship.</text>
-<text name="ship_PLAYER_SHIP_AVALI_2_unlock">Get to Sector 5 with the Avali Cruiser Type A to unlock this ship.</text>
-<text name="ship_PLAYER_SHIP_AVALI_3_unlock">Get to Sector 5 with the Avali Cruiser Type B or beat the game with the Avali Cruiser Type A to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_AVALI_2_unlock">Get to Sector 5 with the Harrier Cruiser Type A to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_AVALI_3_unlock">Get to Sector 5 with the Harrier Cruiser Type B or beat the game with the Harrier Cruiser Type A to unlock this ship.</text>
 
-<text name="ship_PLAYER_SHIP_FALCON_FRIGATE_unlock">Win the Game with any layout of the Avali Cruiser.</text>
+<text name="ship_PLAYER_SHIP_FALCON_FRIGATE_unlock">Win the Game with any layout of the Harrier Cruiser.</text>
 
 
 <!--//// AVALI SLOT 2 ////-->
@@ -171,7 +175,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_AVALI_SLOT2_desc">This merchant cruiser was halfway through loading with junk to sell before it was pushed into military service. Luckily it's cargo teleporter can serve as an offense.</text>
 <text name="text_PLAYER_SHIP_AVALI_SLOT2_name">Accipitridae</text>
 <text name="text_PLAYER_SHIP_AVALI_SLOT2_class">Avali Merchant Cruiser</text>
-<text name="ship_PLAYER_SHIP_AVALI_SLOT2_unlock">Win the Game with Avali Type C to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_AVALI_SLOT2_unlock">Win the Game with the Harrier Cruiser Type C to unlock this ship.</text>
 
 <text name="ship_PLAYER_SHIP_SMEW_BATTLECRUISER_unlock">Win the Game with any layout of the Falcon Frigate.</text>
 
@@ -200,7 +204,7 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 <text name="text_PLAYER_SHIP_TC_MILSPEC_class">Experimental Cargo Liner</text>
 <text name="text_PLAYER_SHIP_TC_MILSPEC_name">Military Surplus</text>
 <text name="text_PLAYER_SHIP_TC_MILSPEC_desc">This ship is a highly experimental Cargo Liner made by the Fedeartion - it's been specially outfitted with an Automated Quartermaster unit to help the crew create weaponry if needed.</text>
-<text name="text_PLAYER_SHIP_TC_MILSPEC_unlock">Win the Game with any layout of the Avali Ship.</text>
+<text name="text_PLAYER_SHIP_TC_MILSPEC_unlock">Win the Game with any layout of the Harrier Cruiser.</text>
 
 <text name="text_PLAYER_SHIP_TC_MILSPEC_class">Experimental Cargo Liner</text>
 <text name="text_PLAYER_SHIP_TC_MILSPEC_2_name">'Outpost 31'</text>
@@ -244,12 +248,13 @@ The Compactor onboard can be used to recycle and 3D print scrap into various typ
 
 <text name="ship_PLAYER_SHIP_DEFENSE_unlock">Unlock the cruiser of a certain terrorist.</text>
 <text name="ship_PLAYER_SHIP_POTENTIAL_unlock">Unlock the cruiser of a certain Federation figure.</text>
-<text name="ship_PLAYER_SHIP_POTENTIAL_2_unlock">Win the game with Type A.</text>
+<text name="ship_PLAYER_SHIP_POTENTIAL_2_unlock">Reach sector 5 with Type A.</text>
+<text name="ship_PLAYER_SHIP_POTENTIAL_3_unlock">Reach sector 5 with Type B or win with Type A.</text>
 
 <!--//////////////////////// RELIC REVIVAL SHIPS //////////////////////////////-->
 
 <text name="ship_PLAYER_SHIP_SAVIOR_unlock">Win using the blueprints for a Cruiser made by a race of long forgotten Demi-God Royalty.</text>
-<text name="ship_PLAYER_SHIP_SAVIOR_2_unlock">Win using the experimental Ancient Prototype, long forgotten by a dying race of royals.</text>
+<text name="ship_PLAYER_SHIP_SAVIOR_2_unlock">Win with Type A.</text>
 <text name="ship_PLAYER_SHIP_SAVIOR_3_unlock">Ask a certain flagship about what to do with a certain device.</text>
 <text name="ship_PLAYER_SHIP_BATTLESHIP_unlock">Beat the Flagship with the type A layout of an Elite Rebel Cruiser.</text>
 

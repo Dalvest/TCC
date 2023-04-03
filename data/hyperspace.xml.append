@@ -741,6 +741,12 @@ SPEED          Changes gamespeed
           <victory>PLAYER_SHIP_TRASH_REACTOR</victory>
         </victories>
       </unlock>
+      <unlock variant="a" silent="false">
+        <type>5</type>
+        <victories>
+          <victory>PLAYER_SHIP_TRASH_REACTOR_2</victory>
+        </victories>
+      </unlock>
 
       <unlock variant="b" silent="false">
         <type>5</type>
@@ -1458,6 +1464,12 @@ SPEED          Changes gamespeed
           <victory>PLAYER_SHIP_TRASH_REACTOR</victory>
         </victories>
       </unlock>
+      <unlock variant="a" silent="false">
+        <type>5</type>
+        <victories>
+          <victory>PLAYER_SHIP_TRASH_REACTOR_2</victory>
+        </victories>
+      </unlock>
       <unlock variant="b" silent="false">
          <type>1</type>
          <shipReq>PLAYER_SHIP_ECHO</shipReq>
@@ -1865,7 +1877,7 @@ SPEED          Changes gamespeed
 		</mod-append:race>
 
 		<mod-append:race name="robottos_police">
-			<maxHealth>80</maxHealth>
+			<maxHealth>100</maxHealth>
 			<repairSpeed>0.7</repairSpeed>
 			<canFight>true</canFight>
 			<canRepair>true</canRepair>
@@ -3551,10 +3563,7 @@ SPEED          Changes gamespeed
   		<canBurn>false</canBurn>
   		<canSuffocate>false</canSuffocate>
   		<deathSounds>
-  			<deathSound>explosion1</deathSound>
-  			<deathSound>explosion2</deathSound>
-  			<deathSound>explosion3</deathSound>
-  			<deathSound>explosion4</deathSound>
+			<deathSound>technicianDroneDeath</deathSound>
   		</deathSounds>
   		<powerEffect>
   			<cooldown>0</cooldown>
