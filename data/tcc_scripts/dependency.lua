@@ -1,16 +1,13 @@
-script.on_load(
-function()
+mods.trash = {}
   --Creating a global variable with our addon's information,
   --so that dependancies can be checked when the game loads
-  _G["TCC_INFO"]={
-      version="1.20", --Keep this updated, For dependancy checks with other mods
-      }
-    --[[ EXAMPLE OF FAILED CHECK
-  if not _G["INFERNO_CORE_INFO"] then
-    Hyperspace.ErrorMessage("Info: It appears that Inferno-Core was not patched before TCC. You may continue, but it is recommended to patch Inferno-Core before the Trash Compactor Collection.")
-  end
-  --]]
-
-
+TCC_INFO = {
+  VERSION = {
+    MAJOR = 1,
+    MINOR = 2,
+    FEATURE = 0,
+  },
+}
+if not INFERNO_CORE_INFO then 
+  error("Warning! Inferno-Core was not patched before Trash Compactor Collaboration! Please re-patch your mods, or the game will not work!") 
 end
-)

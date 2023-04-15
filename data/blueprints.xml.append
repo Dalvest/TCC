@@ -20,7 +20,7 @@
 
 	<!--//////////////////////////////////////////// ARTILLERY ZONE ////////////////////////////////////////////////////////-->
 
-	<!--<weaponBlueprint name="ARTILLERY_TC_MODULAR_BEAM">
+	<weaponBlueprint name="ARTILLERY_TC_MODULAR_BEAM">
 		<type>BEAM</type>
 		<tip>tip_beams</tip>
 		<title>Hektar(tm) Modular Artillery Beam</title>
@@ -49,7 +49,7 @@
 		<weaponArt>Modular_Beam_Artillery</weaponArt>
 		<iconImage>beam</iconImage>
 		<iconScale>0.80</iconScale>
-	</weaponBlueprint>-->
+	</weaponBlueprint>
 
 	<weaponBlueprint name="ARTILLERY_CIVILIAN_JUSTICE">
 		<type>LASER</type>
@@ -5126,6 +5126,7 @@
 		<tooltip>Beam weapon, medium system damage and medium chance to breach, does ion damage.</tooltip>
 		<damage>0</damage>
 		<sysDamage>1</sysDamage>
+		<ion>1</ion>
 		<ionBeamFix>true</ionBeamFix>
 		<sp>10</sp>
 		<breachChance>3</breachChance>
@@ -5296,7 +5297,12 @@
 				<affectsSelf>true</affectsSelf>
 				<duration>15</duration>
 				<boostAnim>pheromones</boostAnim>
-				<whiteList load="LIST_SCRAPPER_TIER_2"/>
+				<whiteList>
+					<scrapper_soldier/>
+					<scrapper_engineer/>
+					<scrapper_speed/>
+					<scrapper_defender/>
+				</whiteList>
 			</mod-append:statBoost>
 		</mod:findLike>
 	</mod:findName>
@@ -6646,6 +6652,7 @@
 		<class>Reactive Compactor</class>
 		<name>Prideful Partisan</name>
 		<desc>Same broken class chip, same teleporter. This ship's strength is its world-class crew. Mercs of any and all kinds are welcome.</desc>
+		<unlock id="ship_PLAYER_SHIP_TRASH_REACTOR_2_unlock"/>
 		<systemList>
 			<artillery power="1" room="0" start="true" weapon="TC_MFK_BATTERY" img="room_artillery_6" />
 			<battery power="1" room="17" start="true" img="room_battery_10" />
@@ -7260,6 +7267,7 @@
 		<class>Techlance Cruiser</class>
 		<name>WANDERER</name>
 		<desc>Whatever the origin of the Sentients may be - constructed by a warmorgering group of humans or fresh out of an RSA RnD laboratory, it's clear that these robotic would've built their own ship eventually.</desc>
+		<unlock id="ship_PLAYER_SHIP_TECHLANCE_unlock"/>
 		<systemList>
 			<artillery power="1" room="16" start="false" weapon="ARTILLERY_FED" img="room_artillery_7" />
 			<battery power="1" room="9" start="true" img="room_battery_orchid" />
@@ -7840,6 +7848,7 @@
 		<class>Dram-Class Tanker</class>
 		<name>ISS Skylark</name>
 		<desc>Support to a fleet includes refueling - that's what this ship provides. Perfect for long range missions with little hope of refueling across the way - as long as you keep the fragile hull intact.</desc>
+		<unlock id="ship_PLAYER_SHIP_EXTRAELITE_SLOT2_2_unlock"/>
 		<systemList>
 			<battery power="1" room="6" start="false" img="room_battery" />
 			<cloaking power="1" room="3" start="false" img="room_cloaking" />
@@ -7919,6 +7928,7 @@
 		<class>Strategic Frigate</class>
 	    <name>Sevastopol</name>
 	    <desc>The pride and joy of the legion. While it is not yet fully functional, that doesn't mean it isn't a force to be reckoned with.</desc>
+		<unlock id="ship_PLAYER_SHIP_EXTRAELITE_SLOT2_3_unlock"/>
 		<systemList>
 			<artillery max="5" power="1" room="12" start="true" weapon="ARTILLERY_BATTLESHIP_LASER" img="room_artillery" />
 			<cloaking max="5" power="1" room="5" start="false" img="room_cloaking" />
@@ -8297,6 +8307,7 @@
 		<class>Smew Battlecruiser</class>
 		<name>Intrepid</name>
 		<desc>The Smew is the mule of the Avali military fleet - wherever you look, you'll see at least one. It's practical, fast and efficient... exactly what the Avali need.</desc>
+		<unlock id="ship_PLAYER_SHIP_SMEW_BATTLECRUISER_unlock"/>
 		<systemList>
 			<battery power="1" room="5" start="false" img="room_battery_14" />
 			<cloaking power="1" room="6" start="true" img="room_cloaking_3" />
@@ -9578,6 +9589,7 @@
 		<class>Unstable Federation Cruiser</class>
 		<name>Positron</name>
 		<desc>Having been stolen by a cult worshipping some Finnish guy and his dimensions, this ship was refitted to run on infinity power and time shards, which you don't have access to because it was recaptured.</desc>
+		<unlock id="ship_PLAYER_SHIP_POTENTIAL_3_unlock"/>
 		<systemList>
 			<artillery power="2" room="5" start="false" weapon="ARTILLERY_FLAK" img="room_artillery_2" />
 			<battery power="1" room="9" start="false" img="room_battery_orchid" />
@@ -9657,9 +9669,9 @@
 		<unlock id="ship_PLAYER_SHIP_SDM_unlock"/>
 		<systemList>
 			<cloaking power="1" room="12" start="false" img="room_cloaking_4" />
-			<clonebay power="1" room="0" start="true">
+			<clonebay power="1" room="9" start="true">
 				<slot>
-					<number>1</number>
+					<number>0</number>
 				</slot>
 			</clonebay>
 			<doors power="1" room="1" start="true" img="room_doors">
@@ -9669,19 +9681,19 @@
 				</slot>
 			</doors>
 			<drones power="2" max="8" room="11" start="false" img="room_drones_bodyhorror" />
-			<engines power="1" max="8" room="5" start="true" img="room_engines_8">
+			<engines power="1" max="8" room="5" start="true" img="room_engines_10">
 				<slot>
 					<direction>left</direction>
-					<number>1</number>
+					<number>0</number>
 				</slot>
 			</engines>
 			<hacking power="1" room="8" start="false" img="room_hacking_6" />
-			<mind power="1" room="9" start="false" img="room_mind_TCC" />
+			<mind power="1" room="4" start="false" img="room_mind_TCC" />
 			<oxygen power="1" room="10" start="true" img="room_oxygen_TCC_2" />
-			<pilot power="1" room="6" start="true" img="room_pilot_fratricide">
+			<pilot power="1" room="6" start="true" img="room_pilot_doubledeal">
 				<slot>
 					<direction>right</direction>
-					<number>1</number>
+					<number>0</number>
 				</slot>
 			</pilot>
 			<sensors power="1" room="2" start="true" img="room_sensors">
@@ -9696,11 +9708,11 @@
 					<number>0</number>
 				</slot>
 			</shields>
-			<teleporter power="2" room="4" start="true" />
-			<weapons power="2" max="8" room="7" start="true" img="room_weapons_10">
+			<teleporter power="2" room="0" start="true" />
+			<weapons power="2" max="8" room="7" start="true" img="room_weapons_8">
 				<slot>
 					<direction>up</direction>
-					<number>0</number>
+					<number>1</number>
 				</slot>
 			</weapons>
 		</systemList>
@@ -9951,6 +9963,7 @@
 		<class>Salvaged Federation Cruiser</class>
 		<name>Stalwart Defense</name>
 		<desc>Product of a joint effort from Zoltan and Rock engineers, this hulking fortress can withstand massive amounts of damage by leveraging both race's technologies. The spliced nature of the craft makes it hard to manuever.</desc>
+		<unlock id="ship_PLAYER_SHIP_DEFENSE_unlock"/>
 		<systemList>
 			<artillery power="2" room="5" start="true" weapon="ARTILLERY_BEAM" img="room_artillery" />
 			<battery power="1" room="12" start="true" img="room_battery_6" />
@@ -10034,35 +10047,35 @@
 		<desc>This is a drone-focused carrier - meant to deploy droves of drones at a minute's notice, overwhelming enemy combatants. Sadly, this particular ship has older versions of deployment equipment installed, but it'll have to do...</desc>
 		<unlock id="ship_PLAYER_SHIP_FEDERATION_CARRIER_unlock"/>
 		<systemList>
-			<battery power="1" room="9" start="true" img="room_battery_9" />
-			<cloaking power="1" room="18" start="false" img="room_cloaking" />
-			<clonebay power="1" room="13" start="false">
+			<battery power="1" room="7" start="true" img="room_battery_9" />
+			<cloaking power="1" room="16" start="false" img="room_cloaking" />
+			<clonebay power="1" room="11" start="false">
 				<slot>
 					<number>1</number>
 				</slot>
 			</clonebay>
-			<doors power="1" room="14" start="true" img="room_doors_3">
+			<doors power="1" room="12" start="true" img="room_doors_3">
 				<slot>
 					<direction>right</direction>
 					<number>1</number>
 				</slot>
 			</doors>
 			<drones max="12" power="3" room="1" start="true" img="room_drones" />
-			<engines max="8" power="2" room="10" start="true" img="room_engines_9">
+			<engines max="8" power="2" room="8" start="true" img="room_engines_9">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</engines>
-			<hacking power="1" room="12" start="false" img="room_hacking_5" />
-			<medbay power="1" room="13" start="true" img="room_medbay">
+			<hacking power="1" room="10" start="false" img="room_hacking_5" />
+			<medbay power="1" room="11" start="true" img="room_medbay">
 				<slot>
 					<number>1</number>
 				</slot>
 			</medbay>
-			<mind power="1" room="16" start="false" img="room_mind_12" />
+			<mind power="1" room="14" start="false" img="room_mind_12" />
 			<oxygen power="1" room="0" start="true" img="room_oxygen_2" />
-			<pilot power="1" room="7" start="true" img="room_pilot_4_thrusters">
+			<pilot power="1" room="5" start="true" img="room_pilot_4_thrusters">
 				<slot>
 					<direction>right</direction>
 					<number>0</number>
@@ -10074,14 +10087,14 @@
 					<number>0</number>
 				</slot>
 			</sensors>
-			<shields max="12" power="2" room="17" start="true" img="room_shields_9">
+			<shields max="12" power="2" room="15" start="true" img="room_shields_9">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</shields>
-			<teleporter power="1" room="11" start="true" />
-			<weapons max="5" power="2" room="19" start="true" img="room_weapons_2">
+			<teleporter power="1" room="9" start="true" />
+			<weapons max="5" power="2" room="17" start="true" img="room_weapons_2">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
