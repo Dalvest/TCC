@@ -20,7 +20,7 @@
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
 	<mod-append:name>protogen</mod-append:name>
@@ -42,6 +42,19 @@
 	<mod-append:name>mantis_freebusiness</mod-append:name>
 	<mod-append:name>cheetah</mod-append:name>
 	<mod-append:name>unique_black_rose</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
 </mod:findName>
 
 <!--/////// SCRAPPERS //////-->
@@ -51,9 +64,21 @@
 	<name>scrapper_soldier</name>
 	<name>scrapper_heavy</name>
 	<name>scrapper_engineer</name>
-	<name>scrapper_speed</name>
+	<name>scrapper_medic</name>
 	<name>scrapper_scavenger</name>
 	<name>scrapper_defender</name>
+	<name>scrapper_defender_mk2</name>
+	<name>scrapper_heavy_mk2</name>
+	<name>scrapper_scavenger_mk2</name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
 </blueprintList>
 
 <!--/////// SCRAPPERS T2 //////-->
@@ -61,8 +86,18 @@
 <blueprintList name="LIST_SCRAPPER_TIER_2">
 	<name>scrapper_soldier</name>
 	<name>scrapper_engineer</name>
-	<name>scrapper_speed</name>
+	<name>scrapper_medic</name>
+</blueprintList>
+
+<!--/////// SCRAPPERS T3 //////-->
+
+<blueprintList name="LIST_SCRAPPER_TIER_3">
+	<name>scrapper_scavenger</name>
 	<name>scrapper_defender</name>
+	<name>scrapper_heavy</name>
+	<name>scrapper_defender_mk2</name>
+	<name>scrapper_heavy_mk2</name>
+	<name>scrapper_scavenger_mk2</name>
 </blueprintList>
 
 <!--/////// SCRAPPER ELITE COMPAT //////-->
@@ -71,7 +106,16 @@
 	<name>scrapper</name>
 	<name>scrapper_soldier</name>
 	<name>scrapper_engineer</name>
-	<name>scrapper_speed</name>
+	<name>scrapper_medic</name>
+</blueprintList>
+
+<!--/////// SCRAPPER STORE LIST //////-->
+
+<blueprintList name="LIST_SCRAPPER_STORE">
+	<name>scrapper</name>
+	<name>scrapper_soldier</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_medic</name>
 </blueprintList>
 
 <!--/////// LITERALLY ALL OF THE BIRDS //////-->
@@ -101,10 +145,22 @@
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>scrapper_defender_mk2</mod-append:name>
 	<mod-append:name>unique_black_rose</mod-append:name>
+	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
 </mod:findName>
 
 <!--/////// FEDERATION ///////-->
@@ -155,15 +211,57 @@
 
 <!--/////// LANIUS //////-->
 
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_TIER_1">
+	<name>rosegold_scrapper</name>
+	<name>adamantine_scrapper</name>
+	<name>golden_scrapper</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_TIER_2">
+	<name>rosegold_scrapper_2</name>
+	<name>adamantine_scrapper_2</name>
+	<name>golden_scrapper_2</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_TIER_3">
+	<name>rosegold_scrapper_3</name>
+	<name>adamantine_scrapper_3</name>
+	<name>golden_scrapper_3</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_ALL">
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
+</blueprintList>
+
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
 	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>scrapper</mod-append:name>
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
 </mod:findName>
 
 <!--/////// PROTOGENS //////-->
@@ -237,9 +335,13 @@
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
 </mod:findName>
 
 <!--//////// HUMANS /////////-->
@@ -276,9 +378,13 @@
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_MORPH_COGNITIVE">
@@ -348,11 +454,12 @@
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_speed</mod-append:name>
+	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
 	<mod-append:name>trash_eater</mod-append:name>
-
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>scrapper_defender_mk2</mod-append:name>
 	<mod-append:name>robottos</mod-append:name>
 	<mod-append:name>robottos_gunner</mod-append:name>
 	<mod-append:name>robottos_machinist</mod-append:name>
@@ -1106,7 +1213,7 @@
 	<maxPower amount="31" />
 	<crew>
 		<scrapper_engineer room="3"/>
-		<scrapper_speed room="5"/>
+		<scrapper_medic room="5"/>
 		<scrapper_heavy room="11"/>
 		<trash_eater room="0" name="Trash Eater"/>
     </crew>
@@ -1143,8 +1250,8 @@
 	<crew>
 		<scrapper_engineer room="3"/>
 		<scrapper_engineer room="5"/>
-		<scrapper_speed room="11"/>
-		<scrapper_speed room="9"/>
+		<scrapper_medic room="11"/>
+		<scrapper_medic room="9"/>
 		<scrapper_heavy room="9"/>
         <scrapper_scavenger room="0"/>
         <trash_eater room="9" name="Trash Eater"/>
@@ -1180,7 +1287,7 @@
 	<crewLimit>12</crewLimit>
 	<crew>
 		<scrapper_heavy room="12"/>
-		<scrapper_speed room="13"/>
+		<scrapper_medic room="13"/>
 		<scrapper_heavy room="5"/>
 		<scrapper_engineer room="3"/>
 		<scrapper_scavenger room="7"/>
@@ -1222,8 +1329,8 @@
 	<crewLimit>14</crewLimit>
 	<crew>
 		<scrapper_heavy room="12"/>
-		<scrapper_speed room="13"/>
-		<scrapper_speed room="10"/>
+		<scrapper_medic room="13"/>
+		<scrapper_medic room="10"/>
 		<scrapper_engineer room="10"/>
 
 		<scrapper_heavy room="8"/>
@@ -1267,17 +1374,17 @@
 	<maxPower amount="60" />
 	<crewLimit>16</crewLimit>
 	<crew>
-		<scrapper_scavenger room="12"/>
-		<scrapper_scavenger room="10"/>
-		<scrapper_scavenger room="10"/>
+		<scrapper_engineer room="12"/>
+		<scrapper_soldier room="10"/>
+		<scrapper_medic room="10"/>
 
 		<scrapper_scavenger room="8"/>
-		<scrapper_scavenger room="3"/>
-		<scrapper_scavenger room="5"/>
+		<scrapper_soldier room="3"/>
+		<scrapper_defender room="5"/>
 
-		<scrapper_scavenger room="5"/>
-		<scrapper_scavenger room="6"/>
-		<scrapper_scavenger room="1"/>
+		<scrapper_defender_mk2 room="5"/>
+		<scrapper_heavy_mk2 room="6"/>
+		<scrapper_heavy_mk2 room="1"/>
 
         <trash_eater room="7" name="Trash Eater"/>
     </crew>
@@ -1360,6 +1467,119 @@
 	<boardingAI>sabotage</boardingAI>
 	<forceAutoShip>false</forceAutoShip>
 	<cloakImage>mt_boss_kestrel</cloakImage>
+</shipBlueprint>
+<!--///////////////////// SCRAPPER STUFF /////////////////-->
+
+<shipBlueprint name="SCRAPPER_SCOUT" layout="SCRAPPER_SCOUT" img="SCRAPPER_SCOUT">
+	<class>Scrapper Scout</class>
+	<minSector>1</minSector>
+	<maxSector>7</maxSector>
+	<systemList>
+		<clonebay power="1" max="2" room="5" start="true" />
+		<engines power="2" max="4" room="2" start="true" />
+		<hacking power="1" max="2" room="7" start="false" />
+		<mind power="1" max="2" room="9" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="6" room="3" start="true" />
+		<weapons power="2" max="6" room="8" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="5" count="2" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="0" count="0" />
+	<health amount="7" />
+	<maxPower amount="15" />
+	<crewCount amount="2" max="4" class="scrapper" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="SCRAPPER_SHOP" layout="SCRAPPER_SHOP" img="SCRAPPER_SHOP">
+	<class>Scrapper Shopkeeper</class>
+	<minSector>1</minSector>
+	<maxSector>7</maxSector>
+	<systemList>
+		<clonebay power="3" max="3" room="5" start="true" />
+		<engines power="8" max="8" room="2" start="true" />
+		<hacking power="3" max="3" room="7" start="true" />
+		<mind power="3" max="3" room="9" start="true" />
+		<oxygen power="1" max="1" room="6" start="false" />
+		<pilot power="3" max="3" room="0" start="true" />
+		<shields power="8" max="8" room="3" start="true" />
+		<weapons power="8" max="8" room="8" start="true" />
+		<doors power="3" max="3" room="1" start="true" />
+		<cloaking power="3" max="3" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="50" count="4" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="50" count="4" load="LIST_DRONES_ALL" />
+	<health amount="35" />
+	<maxPower amount="40" />
+	<crew>
+		<scrapper_engineer room="0"/>
+		<scrapper_soldier room="9"/>
+		<scrapper_medic room="9"/>
+		<scrapper_scavenger room="0"/>
+		<scrapper_soldier room="3"/>
+		<scrapper_defender room="5"/>
+		<scrapper_defender_mk2 room="5"/>
+		<scrapper_heavy_mk2 room="6"/>
+		<scrapper_heavy_mk2 room="1"/>
+	</crew>
+	<boardingAI>invasion</boardingAI>
+	<cloakImage>scrapper_shop_cloak</cloakImage>
+</shipBlueprint>
+
+
+<shipBlueprint name="SCRAPPER_BOMBER" layout="SCRAPPER_BOMBER" img="SCRAPPER_BOMBER">
+	<class>Scrapper Bomber</class>
+	<minSector>1</minSector>
+	<maxSector>7</maxSector>
+	<systemList>
+		<clonebay power="1" max="2" room="5" start="true" />
+		<engines power="2" max="4" room="2" start="true" />
+		<hacking power="1" max="2" room="7" start="false" />
+		<mind power="1" max="2" room="9" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="6" room="3" start="true" />
+		<weapons power="2" max="6" room="8" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="0" count="0" />
+	<health amount="13" />
+	<maxPower amount="15" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="SCRAPPER_CRUISER" layout="SCRAPPER_CRUISER" img="SCRAPPER_CRUISER">
+	<class>Scrapper Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>7</maxSector>
+	<systemList>
+		<clonebay power="1" max="2" room="5" start="true" />
+		<engines power="2" max="4" room="2" start="true" />
+		<hacking power="1" max="2" room="7" start="false" />
+		<mind power="1" max="2" room="9" start="false" />
+		<oxygen power="1" max="1" room="6" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="8" room="3" start="true" />
+		<weapons power="2" max="8" room="8" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
+	<droneList drones="0" count="0" />
+	<health amount="15" />
+	<maxPower amount="15" />
+	<crewCount amount="2" max="3" class="scrapper" />
+	<crewcount amount="1" max="1" class="adamantine_scrapper"/>
+	<crewcount amount="2" max="2" class="scrapper_heavy"/>
+	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
 <!--///////////////////// KIVIE STUFF /////////////////-->

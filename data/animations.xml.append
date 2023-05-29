@@ -684,7 +684,7 @@
 	<sheet>avali_cardinal</sheet>
 	<desc length="10" x="0" y="0"/>
 	<chargedFrame>4</chargedFrame>
-	<fireFrame>5</fireFrame>
+	<fireFrame>4</fireFrame>
 	<firePoint  x="11" y="15"/>
 	<mountPoint x="4" y="65"/>
 </weaponAnim>
@@ -729,7 +729,7 @@
 	<sheet>breach_ion_beam_mini</sheet>
 	<desc length="27" x="0" y="0"/>
 	<chargedFrame>21</chargedFrame>
-	<fireFrame>22</fireFrame>
+	<fireFrame>21</fireFrame>
 	<firePoint  x="16" y="1"/>
 	<mountPoint x="3" y="32"/>
 </weaponAnim>
@@ -1912,6 +1912,1108 @@
 	<time>1</time>
 </anim>
 
+<!--///////////////ROSEGOLD SCRAPPER BASE///////////////-->
+
+<animSheet name="rosegold_scrapper" w="280" h="490" fw="35" fh="35">people/rosegold_scrapper_base.png</animSheet>
+<anim name="rosegold_scrapper_clone">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_death_right">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_death_left">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_walk_down">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_walk_right">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_walk_up">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_walk_left">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_shoot_down">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_shoot_right">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_shoot_up">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_shoot_left">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_fire_down">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_fire_right">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_fire_up">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_fire_left">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_repair">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_punch_up">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_punch_down">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_teleport">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="rosegold_scrapper_type_right">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_type_left">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_type_up">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_type_down">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_portrait">
+	<sheet>rosegold_scrapper</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="rosegold_scrapper_2" w="280" h="490" fw="35" fh="35">people/rosegold_scrapper_2_base.png</animSheet>
+<anim name="rosegold_scrapper_2_clone">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_2_death_right">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_2_death_left">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_2_walk_down">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_walk_right">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_walk_up">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_walk_left">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_shoot_down">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_shoot_right">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_shoot_up">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_shoot_left">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_fire_down">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_fire_right">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_fire_up">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_fire_left">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_repair">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_punch_up">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_punch_down">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_2_teleport">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="rosegold_scrapper_2_type_right">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_2_type_left">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_2_type_up">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_2_type_down">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_2_portrait">
+	<sheet>rosegold_scrapper_2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="rosegold_scrapper_3" w="280" h="490" fw="35" fh="35">people/rosegold_scrapper_3_base.png</animSheet>
+<anim name="rosegold_scrapper_3_clone">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_3_death_right">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_3_death_left">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_3_walk_down">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_walk_right">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_walk_up">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_walk_left">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_shoot_down">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_shoot_right">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_shoot_up">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_shoot_left">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_fire_down">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_fire_right">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_fire_up">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_fire_left">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_repair">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_punch_up">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_punch_down">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="rosegold_scrapper_3_teleport">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="rosegold_scrapper_3_type_right">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_3_type_left">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_3_type_up">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_3_type_down">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="rosegold_scrapper_3_portrait">
+	<sheet>rosegold_scrapper_3</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+
+<animSheet name="golden_scrapper" w="280" h="490" fw="35" fh="35">people/golden_scrapper_base.png</animSheet>
+<anim name="golden_scrapper_clone">
+	<sheet>golden_scrapper</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_death_right">
+	<sheet>golden_scrapper</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_death_left">
+	<sheet>golden_scrapper</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_walk_down">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_walk_right">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_walk_up">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_walk_left">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_shoot_down">
+	<sheet>golden_scrapper</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_shoot_right">
+	<sheet>golden_scrapper</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_shoot_up">
+	<sheet>golden_scrapper</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_shoot_left">
+	<sheet>golden_scrapper</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_fire_down">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_fire_right">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_fire_up">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_fire_left">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_repair">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_punch_up">
+	<sheet>golden_scrapper</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_punch_down">
+	<sheet>golden_scrapper</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_teleport">
+	<sheet>golden_scrapper</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="golden_scrapper_type_right">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_type_left">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_type_up">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_type_down">
+	<sheet>golden_scrapper</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_portrait">
+	<sheet>golden_scrapper</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="golden_scrapper_2" w="280" h="490" fw="35" fh="35">people/golden_scrapper_2_base.png</animSheet>
+<anim name="golden_scrapper_2_clone">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_2_death_right">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_2_death_left">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_2_walk_down">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_walk_right">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_walk_up">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_walk_left">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_shoot_down">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_shoot_right">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_shoot_up">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_shoot_left">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_fire_down">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_fire_right">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_fire_up">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_fire_left">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_repair">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_punch_up">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_punch_down">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_2_teleport">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="golden_scrapper_2_type_right">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_2_type_left">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_2_type_up">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_2_type_down">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_2_portrait">
+	<sheet>golden_scrapper_2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="golden_scrapper_3" w="280" h="490" fw="35" fh="35">people/golden_scrapper_3_base.png</animSheet>
+<anim name="golden_scrapper_3_clone">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_3_death_right">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_3_death_left">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_3_walk_down">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_walk_right">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_walk_up">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_walk_left">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_shoot_down">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_shoot_right">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_shoot_up">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_shoot_left">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_fire_down">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_fire_right">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_fire_up">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_fire_left">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_repair">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_punch_up">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_punch_down">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="golden_scrapper_3_teleport">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="golden_scrapper_3_type_right">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_3_type_left">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_3_type_up">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_3_type_down">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="golden_scrapper_3_portrait">
+	<sheet>golden_scrapper_3</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="adamantine_scrapper" w="280" h="490" fw="35" fh="35">people/adamantine_scrapper_base.png</animSheet>
+<anim name="adamantine_scrapper_clone">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_death_right">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_death_left">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_walk_down">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_walk_right">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_walk_up">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_walk_left">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_shoot_down">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_shoot_right">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_shoot_up">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_shoot_left">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_fire_down">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_fire_right">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_fire_up">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_fire_left">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_repair">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_punch_up">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_punch_down">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_teleport">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="adamantine_scrapper_type_right">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_type_left">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_type_up">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_type_down">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_portrait">
+	<sheet>adamantine_scrapper</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="adamantine_scrapper_2" w="280" h="490" fw="35" fh="35">people/adamantine_scrapper_2_base.png</animSheet>
+<anim name="adamantine_scrapper_2_clone">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_2_death_right">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_2_death_left">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_2_walk_down">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_walk_right">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_walk_up">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_walk_left">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_shoot_down">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_shoot_right">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_shoot_up">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_shoot_left">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_fire_down">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_fire_right">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_fire_up">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_fire_left">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_repair">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_punch_up">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_punch_down">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_2_teleport">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="adamantine_scrapper_2_type_right">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_2_type_left">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_2_type_up">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_2_type_down">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_2_portrait">
+	<sheet>adamantine_scrapper_2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="adamantine_scrapper_3" w="280" h="490" fw="35" fh="35">people/adamantine_scrapper_3_base.png</animSheet>
+<anim name="adamantine_scrapper_3_clone">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_3_death_right">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_3_death_left">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_3_walk_down">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_walk_right">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_walk_up">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_walk_left">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_shoot_down">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_shoot_right">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_shoot_up">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_shoot_left">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_fire_down">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_fire_right">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_fire_up">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_fire_left">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_repair">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_punch_up">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_punch_down">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="adamantine_scrapper_3_teleport">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="adamantine_scrapper_3_type_right">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_3_type_left">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_3_type_up">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_3_type_down">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="adamantine_scrapper_3_portrait">
+	<sheet>adamantine_scrapper_3</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+
 <!--///////////////SCRAPPER BASE///////////////-->
 
 <animSheet name="scrapper" w="280" h="490" fw="35" fh="35">people/scrapper_base.png</animSheet>
@@ -2284,6 +3386,130 @@
 	<time>1</time>
 </anim>
 
+<!--///////////////SCRAPPER DEFENDER MK2///////////////-->
+
+<animSheet name="scrapper_defender_mk2" w="280" h="490" fw="35" fh="35">people/scrapper_defender_mk2_base.png</animSheet>
+<anim name="scrapper_defender_mk2_clone">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_defender_mk2_death_right">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_defender_mk2_death_left">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_defender_mk2_walk_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_walk_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_walk_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_walk_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_shoot_down">
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_shoot_right">
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_shoot_up">
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_shoot_left">
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_fire_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_fire_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_fire_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_fire_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_repair">
+	<sheet>lanius</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_punch_up">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_punch_down">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_defender_mk2_teleport">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="scrapper_defender_mk2_type_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_defender_mk2_type_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_defender_mk2_type_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_defender_mk2_type_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_defender_mk2_portrait">
+	<sheet>lanius</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 <!--///////////////SCRAPPER ENGINEER///////////////-->
 
 <animSheet name="scrapper_engineer" w="280" h="490" fw="35" fh="35">people/scrapper_engineer_base.png</animSheet>
@@ -2408,125 +3634,125 @@
 	<time>1</time>
 </anim>
 
-<!--///////////////SCRAPPER SPEEDSTER///////////////-->
+<!--///////////////SCRAPPER MEDIC///////////////-->
 
-<animSheet name="scrapper_speed" w="280" h="490" fw="35" fh="35">people/scrapper_speed_base.png</animSheet>
-<anim name="scrapper_speed_clone">
+<animSheet name="scrapper_medic" w="280" h="490" fw="35" fh="35">people/scrapper_medic_base.png</animSheet>
+<anim name="scrapper_medic_clone">
 	<sheet>lanius</sheet>
 	<desc length="6" x="0" y="1"/>
 	<time>0.75</time>
 </anim>
-<anim name="scrapper_speed_death_right">
+<anim name="scrapper_medic_death_right">
 	<sheet>lanius</sheet>
 	<desc length="8" x="0" y="2"/>
 	<time>0.75</time>
 </anim>
-<anim name="scrapper_speed_death_left">
+<anim name="scrapper_medic_death_left">
 	<sheet>lanius</sheet>
 	<desc length="8" x="0" y="2"/>
 	<time>0.75</time>
 </anim>
-<anim name="scrapper_speed_walk_down">
+<anim name="scrapper_medic_walk_down">
 	<sheet>lanius</sheet>
 	<desc length="4" x="0" y="13"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_walk_right">
+<anim name="scrapper_medic_walk_right">
 	<sheet>lanius</sheet>
 	<desc length="4" x="4" y="13"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_walk_up">
+<anim name="scrapper_medic_walk_up">
 	<sheet>lanius</sheet>
 	<desc length="4" x="0" y="12"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_walk_left">
+<anim name="scrapper_medic_walk_left">
 	<sheet>lanius</sheet>
 	<desc length="4" x="4" y="12"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_shoot_down">
+<anim name="scrapper_medic_shoot_down">
 	<sheet>lanius</sheet>
 	<desc length="3" x="0" y="11"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_shoot_right">
+<anim name="scrapper_medic_shoot_right">
 	<sheet>lanius</sheet>
 	<desc length="3" x="3" y="11"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_shoot_up">
+<anim name="scrapper_medic_shoot_up">
 	<sheet>lanius</sheet>
 	<desc length="3" x="0" y="10"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_shoot_left">
+<anim name="scrapper_medic_shoot_left">
 	<sheet>lanius</sheet>
 	<desc length="3" x="3" y="10"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_fire_down">
+<anim name="scrapper_medic_fire_down">
 	<sheet>lanius</sheet>
 	<desc length="4" x="0" y="9"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_fire_right">
+<anim name="scrapper_medic_fire_right">
 	<sheet>lanius</sheet>
 	<desc length="4" x="4" y="9"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_fire_up">
+<anim name="scrapper_medic_fire_up">
 	<sheet>lanius</sheet>
 	<desc length="4" x="0" y="8"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_fire_left">
+<anim name="scrapper_medic_fire_left">
 	<sheet>lanius</sheet>
 	<desc length="4" x="4" y="8"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_repair">
+<anim name="scrapper_medic_repair">
 	<sheet>lanius</sheet>
 	<desc length="4" x="3" y="0"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_punch_up">
+<anim name="scrapper_medic_punch_up">
 	<sheet>lanius</sheet>
 	<desc length="6" x="0" y="7"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_punch_down">
+<anim name="scrapper_medic_punch_down">
 	<sheet>lanius</sheet>
 	<desc length="6" x="0" y="6"/>
 	<time>1.0</time>
 </anim>
-<anim name="scrapper_speed_teleport">
+<anim name="scrapper_medic_teleport">
 	<sheet>lanius</sheet>
 	<desc length="8" x="0" y="3"/>
 	<time>0.5</time>
 </anim>
-<anim name="scrapper_speed_type_right">
+<anim name="scrapper_medic_type_right">
 	<sheet>lanius</sheet>
 	<desc length="4" x="0" y="5"/>
 	<time>0.75</time>
 </anim>
-<anim name="scrapper_speed_type_left">
+<anim name="scrapper_medic_type_left">
 	<sheet>lanius</sheet>
 	<desc length="4" x="4" y="5"/>
 	<time>0.75</time>
 </anim>
-<anim name="scrapper_speed_type_up">
+<anim name="scrapper_medic_type_up">
 	<sheet>lanius</sheet>
 	<desc length="4" x="0" y="4"/>
 	<time>0.75</time>
 </anim>
-<anim name="scrapper_speed_type_down">
+<anim name="scrapper_medic_type_down">
 	<sheet>lanius</sheet>
 	<desc length="4" x="4" y="4"/>
 	<time>0.75</time>
 </anim>
-<anim name="scrapper_speed_portrait">
+<anim name="scrapper_medic_portrait">
 	<sheet>lanius</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
@@ -2779,6 +4005,255 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
+
+<!--///////////////HEAVY SCRAPPER MK2///////////////-->
+
+<animSheet name="scrapper_heavy_mk2" w="280" h="490" fw="35" fh="35">people/scrapper_heavy_mk2_base.png</animSheet>
+<anim name="scrapper_heavy_mk2_clone">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_heavy_mk2_death_right">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_heavy_mk2_death_left">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_heavy_mk2_walk_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_walk_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_walk_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_walk_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_shoot_down">
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_shoot_right">
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_shoot_up">
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_shoot_left">
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_fire_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_fire_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_fire_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_fire_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_repair">
+	<sheet>lanius</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_punch_up">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_punch_down">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_heavy_mk2_teleport">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="scrapper_heavy_mk2_type_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_heavy_mk2_type_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_heavy_mk2_type_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_heavy_mk2_type_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_heavy_mk2_portrait">
+	<sheet>lanius</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<!--///////////////SCRAPPER SCAVENGER MK2///////////////-->
+
+<animSheet name="scrapper_scavenger_mk2" w="280" h="490" fw="35" fh="35">people/scrapper_scavenger_mk2_base.png</animSheet>
+<anim name="scrapper_scavenger_mk2_clone">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="1"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_death_right">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_death_left">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_walk_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_walk_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="13"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_walk_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_walk_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_shoot_down">
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_shoot_right">
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_shoot_up">
+	<sheet>lanius</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_shoot_left">
+	<sheet>lanius</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_fire_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_fire_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_fire_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_fire_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_repair">
+	<sheet>lanius</sheet>
+	<desc length="4" x="3" y="0"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_punch_up">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_punch_down">
+	<sheet>lanius</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_teleport">
+	<sheet>lanius</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_type_right">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_type_left">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_type_up">
+	<sheet>lanius</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_type_down">
+	<sheet>lanius</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="scrapper_scavenger_mk2_portrait">
+	<sheet>lanius</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 
 <!--///////////////////////////// SPECIAL FORCES /////////////////////////////-->
 

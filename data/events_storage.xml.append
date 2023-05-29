@@ -374,7 +374,7 @@
 		<event load="STORAGE_CHECK_LAB_ROBOTTO"/>
 	</mod-append:choice>
 
-	<mod-append:choice req="LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE" blue="false" hidden="true">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" hidden="true">
 		<text>Scrapper.</text>
 		<event load="STORAGE_CHECK_LAB_SCRAPPER"/>
 	</mod-append:choice>
@@ -382,6 +382,11 @@
 	<mod-append:choice req="LIST_CREW_AVALI" blue="false" hidden="true">
 		<text>Avali.</text>
 		<event load="STORAGE_CHECK_LAB_AVALI"/>
+	</mod-append:choice>
+	
+	<mod-append:choice req="CREW_UPGRADER" blue="true" hidden="true">
+		<text>[CREW UPGRADER]</text>
+		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER"/>
 	</mod-append:choice>
   <!--more choices here-->
 
@@ -398,6 +403,240 @@
   fill the augment name & description in `blueprints.xml.append` in the section "LAB AUGMENTS"
   fill in the `aug` tags om `Hyperspace.xml.append` in the section "LAB AUGMENTS & VARIABLES"
 -->
+
+<!-- ================= CREW UPGRADER ================ -->
+<event name="STORAGE_CHECK_LAB_CREW_UPGRADER">
+	<text>You are viewing the lab menu for the crew upgrader.
+	Each upgrade can be taken 5 times.</text>
+	<choice req="LAB_CREW_UPGRADER_HEALTH" lvl="1" max_lvl="1" blue="false" hidden="true">
+		<text>Currently Installed: Health Upgrade 1</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_DAMAGE" lvl="1" max_lvl="1" blue="false" hidden="true">
+		<text>Currently Installed: Damage Upgrade 1</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_MOVESPEED" lvl="1" max_lvl="1" blue="false" hidden="true">
+		<text>Currently Installed: Movespeed Upgrade 1</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED" lvl="1" max_lvl="1" blue="false" hidden="true">
+		<text>Currently Installed: Repair and Sabotage Speed Upgrade 1</text>
+		<event load="OPTION_INVALID"/>
+	</choice>	
+		<choice req="LAB_CREW_UPGRADER_HEALTH" lvl="2" max_lvl="2" blue="false" hidden="true">
+		<text>Currently Installed: Health Upgrade 2</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_DAMAGE" lvl="2" max_lvl="2" blue="false" hidden="true">
+		<text>Currently Installed: Damage Upgrade 2</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_MOVESPEED" lvl="2" max_lvl="2" blue="false" hidden="true">
+		<text>Currently Installed: Movespeed Upgrade 2</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED" lvl="2" max_lvl="2" blue="false" hidden="true">
+		<text>Currently Installed: Repair and Sabotage Speed Upgrade 2</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_HEALTH" lvl="3" max_lvl="3" blue="false" hidden="true">
+		<text>Currently Installed: Health Upgrade 3</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_DAMAGE" lvl="3" max_lvl="3" blue="false" hidden="true">
+		<text>Currently Installed: Damage Upgrade 3</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_MOVESPEED" lvl="3" max_lvl="3" blue="false" hidden="true">
+		<text>Currently Installed: Movespeed Upgrade 3</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED" lvl="3" max_lvl="3" blue="false" hidden="true">
+		<text>Currently Installed: Repair and Sabotage Speed Upgrade 3</text>
+		<event load="OPTION_INVALID"/>
+	</choice>	
+	<choice req="LAB_CREW_UPGRADER_HEALTH" lvl="4" max_lvl="4" blue="false" hidden="true">
+		<text>Currently Installed: Health Upgrade 4</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_DAMAGE" lvl="4" max_lvl="4" blue="false" hidden="true">
+		<text>Currently Installed: Damage Upgrade 4</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_MOVESPEED" lvl="4" max_lvl="4" blue="false" hidden="true">
+		<text>Currently Installed: Movespeed Upgrade 4</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED" lvl="4" max_lvl="4" blue="false" hidden="true">
+		<text>Currently Installed: Repair and Sabotage Speed Upgrade 4</text>
+		<event load="OPTION_INVALID"/>
+	</choice>	
+	<choice req="LAB_CREW_UPGRADER_HEALTH" lvl="5" max_lvl="5" blue="false" hidden="true">
+		<text>Currently Installed: Health Upgrade 5</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_DAMAGE" lvl="5" max_lvl="5" blue="false" hidden="true">
+		<text>Currently Installed: Damage Upgrade 5</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_MOVESPEED" lvl="5" max_lvl="5" blue="false" hidden="true">
+		<text>Currently Installed: Movespeed Upgrade 5</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED" lvl="5" max_lvl="5" blue="false" hidden="true">
+		<text>Currently Installed: Repair and Sabotage Speed Upgrade 5</text>
+		<event load="OPTION_INVALID"/>
+	</choice>		
+	<choice req="LAB_CREW_UPGRADER_HEALTH" lvl="0" max_lvl="4" blue="false" hidden="true">
+		<text>Install Crew Health Upgrade.</text>
+		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER_HEALTH"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_DAMAGE" lvl="0" max_lvl="4" blue="false" hidden="true">
+		<text>Install Crew Damage Upgrade.</text>
+		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER_DAMAGE"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED" lvl="0" max_lvl="4" blue="false" hidden="true">
+		<text>Install Crew Repair and Sabotage Speed Upgrade.</text>
+		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED"/>
+	</choice>
+	<choice req="LAB_CREW_UPGRADER_MOVESPEED" lvl="0" max_lvl="4" blue="false" hidden="true">
+		<text>Install Crew Movespeed Upgrade.</text>
+		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER_MOVESPEED"/>
+	</choice>	
+	</choice req="LAB_UPGRADE" blue="true">
+		<text>[UPGRADED ONBOARD LAB] Advanced Crew Upgrades.</text>
+		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER_ADVANCED"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_LAB_CREW_UPGRADER_HEALTH">
+	<text>You are about to install a health upgrade.
+	[Effects: Crew max health increased by 5%]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 25~, 1{]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1" />
+				<item type="scrap" min="-25" max="-25" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_LAB_CREW_UPGRADER_HEALTH" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="INSTALL_LAB_CREW_UPGRADER_HEALTH">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_CREW_UPGRADER_HEALTH</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_CREW_UPGRADER</loadEvent>
+</event>
+
+<event name="STORAGE_CHECK_LAB_CREW_UPGRADER_DAMAGE">
+	<text>You are about to install a damage upgrade.
+	[Effects: Crew damage increased by 5%]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 50~, 1{]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1" />
+				<item type="scrap" min="-50" max="-50" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_LAB_CREW_UPGRADER_DAMAGE" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="INSTALL_LAB_CREW_UPGRADER_DAMAGE">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_CREW_UPGRADER_DAMAGE</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_CREW_UPGRADER</loadEvent>
+</event>
+
+<event name="STORAGE_CHECK_LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED">
+	<text>You are about to install a repair and sabotage speed upgrade.
+	[Effects: Crew repair and sabotage speed increased by 10%]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 35~, 1{]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1" />
+				<item type="scrap" min="-35" max="-35" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="INSTALL_LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_CREW_UPGRADER</loadEvent>
+</event>
+
+<event name="STORAGE_CHECK_LAB_CREW_UPGRADER_MOVESPEED">
+	<text>You are about to install a movespeed upgrade.
+	[Effects: Crew movespeed increased by 5%]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 35~, 1{]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1" />
+				<item type="scrap" min="-35" max="-35" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_LAB_CREW_UPGRADER_MOVESPEED" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="INSTALL_LAB_CREW_UPGRADER_MOVESPEED">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_CREW_UPGRADER_MOVESPEED</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_CREW_UPGRADER</loadEvent>
+</event>
+
+<event name="STORAGE_CHECK_LAB_CREW_UPGRADER_ADVANCED">
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back. [I need to create these upgrades still :(]</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
 <!-- ================= ROBOTTO ================ -->
 <event name="STORAGE_CHECK_LAB_ROBOTTO">
 	<text>You are viewing the lab menu for: [SENTIENT]</text>
@@ -457,7 +696,8 @@
 	</choice>
 </event>
 
-<!--<event name="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG1">
+<!--
+<event name="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG1">
 	<text>You are about to install the __robotto_upgrade1__ modification. 
 [Effects: some buff] 
 
@@ -542,156 +782,187 @@
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-</event>-->
+</event>
+-->
 
 
 <!-- ================= SCRAPPER ================ -->
 <event name="STORAGE_CHECK_LAB_SCRAPPER">
-	<text>You are viewing the lab menu for: [SCRAPPER]</text>
-
-	<!--<choice req="LAB_TCC_SCRAPPER_UPGRADE1" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: __scrapper_upgrade1__. [some buff]</text>
+	<text>You are viewing the lab menu for: [SCRAPPER] </text>
+	<choice req="LAB_SCRAPPER_PRIMARY_INSTALLED" lvl="1" blue="false" hidden="true">
+		<text>Pri: Boarding Gear [An upgrade is already installed]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
-	<choice req="LAB_TCC_SCRAPPER_UPGRADE2" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: __scrapper_upgrade2__. [some buff and nerf]</text>
+	<choice req="LAB_SCRAPPER_PRIMARY_INSTALLED" lvl="2" blue="false" hidden="true">
+		<text>Pri: Advanced Boarding Gear [An upgrade is already installed]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
-	<choice req="LAB_TCC_SCRAPPER_UPGRADE3" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: __scrapper_upgrade3__. [some quirk]</text>
+	<choice req="LAB_SCRAPPER_PRIMARY_INSTALLED" lvl="1" blue="false" hidden="true">
+		<text>Pri: Defense Field Generator [An upgrade is already installed]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
-	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: None</text>
+	<choice req="LAB_SCRAPPER_BOARDING_GEAR" lvl="1" max_lvl="1" blue="false" hidden="true">
+		<text>Pri: Advanced Boarding Gear [Cost: 70~,4|]</text>
+		<event load="STORAGE_CHECK_LAB_SCRAPPER_ADVANCED_BOARDING_GEAR"/>
+	</choice>
+	<choice req="LAB_SCRAPPER_PRIMARY_INSTALLED" lvl="0" max_lvl="0" blue="false" hidden="true">
+		<text>Pri: Boarding Gear [Cost: 35~,2|]</text>
+		<event load="STORAGE_CHECK_LAB_SCRAPPER_BOARDING_GEAR"/>
+	</choice>	
+	<choice req="LAB_SCRAPPER_PRIMARY_INSTALLED" lvl="0" max_lvl="0" blue="false" hidden="true">
+		<text>Pri: Defense Field Generator [Cost: 50~,5|]</text>
+		<event load="STORAGE_CHECK_LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR"/>
+	</choice>
+	<choice req="LAB_SCRAPPER_TELEPATHIC_RESISTORS" lvl="0" max_lvl="0" blue="false" hidden="true">
+		<text>Sec: Telepathic Resistors [Cost: 75~,6|]</text>
+		<event load="STORAGE_CHECK_LAB_SCRAPPER_TELEPATHIC_RESISTORS"/>
+	</choice>
+	<choice req="LAB_SCRAPPER_TELEPATHIC_RESISTORS" lvl="1" max_lvl="1" blue="false" hidden="true">
+		<text>Already Installed: Telepathic Resistors</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
-
-	<choice req="tcc_labs_scrapper_installed" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Pri: __scrapper_upgrade1__. [An upgrade is already installed]</text>
+	<choice req="LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR" level="1" blue="false" hidden="true">
+		<text>Already Installed: Defense Field Generator</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
-	<choice req="tcc_labs_scrapper_installed" lvl="0" max_group="1" blue="false" hidden="true">
-		<text>Pri: __scrapper_upgrade1__. [Cost: 69420~]</text>
-		<event load="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG1"/>
-	</choice>
-
-	<choice req="tcc_labs_scrapper_installed" lvl="1" max_group="2" blue="false" hidden="true">
-		<text>Pri: __scrapper_upgrade2__. [An upgrade is already installed]</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="tcc_labs_scrapper_installed" lvl="0" max_group="2" blue="false" hidden="true">
-		<text>Pri: __scrapper_upgrade2__. [Cost: 69420~]</text>
-		<event load="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG2"/>
-	</choice>
-
-	<choice req="tcc_labs_scrapper_installed" lvl="1" max_group="3" blue="false" hidden="true">
-		<text>Pri: __scrapper_upgrade3__. [An upgrade is already installed]</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="tcc_labs_scrapper_installed" lvl="0" max_group="3" blue="false" hidden="true">
-		<text>Pri: __scrapper_upgrade3__. [Cost: 69420{]</text>
-		<event load="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG3"/>
-	</choice>-->
-
-  <choice req="LIST_CREW_SCRAPPER" max_group="4" blue="false" hidden="true">
-		<text>Upgrade your Scrapper.</text>
+	<choice req="ADVANCED_SCRAP" blue="true" hidden="true">
+		<text>[ADVANCED SCRAP PROCESSOR] Augment and upgrade your scrappers.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE"/>
 	</choice>
-
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
 
-<!--<event name="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG1">
-	<text>You are about to install the __scrapper_upgrade1__ modification. 
-[Effects: some buff] 
-
-[Warning: After installing this, you will not be able to install any more primary upgrades for Human crew. You will not be able to deactivate this mod either.]</text>
+<event name="STORAGE_CHECK_LAB_SCRAPPER_BOARDING_GEAR">
+	<text>You are about to install boarding gear on to your scrappers.
+	[Effects: Combat damage is increased by 7.5%, max health is increased by 7.5%, sabotage speed increased by 15% though Move Speed is reduced by 10%]
+	
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Scrapper crew. You will not be able to deactivate this mod either.]
+	
+	[This upgrade can be enhanced with additional options after unlocking.]</text>
 	<choice hidden="true">
-		<text>Install the modification. [Cost: 69420~]</text>
+		<text>Install the modification. [Cost: 35~, 2|]</text>
 		<event>
 			<text>You install the modification.</text>
 			<item_modify>
-				<item type="scrap" min="-30" max="-30"/>
+				<item type="drones" min="-2" max="-2" />
+				<item type="scrap" min="-35" max="-35" />
 			</item_modify>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event>
-          <hiddenAug>LAB_TCC_SCRAPPER_UPGRADE1</hiddenAug>
-          <variable name="tcc_labs_scrapper_installed" op="add" val="1"/>
-        	<variable name="loc_lab_upgrades" op="add" val="1"/>
-          <loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
-        </event>
+				<event load="INSTALL_LAB_SCRAPPER_BOARDING_GEAR" />
 			</choice>
 		</event>
 	</choice>
-	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Nevermind.</text>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG2">
-	<text>You are about to install the __scrapper_upgrade2__ modification. 
-[Effects: some buff] 
-
-[Warning: After installing this, you will not be able to install any more primary upgrades for Human crew. You will not be able to deactivate this mod either.]</text>
+<event name="STORAGE_CHECK_LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR">
+	<text>You are about to install the Defense Field Generator.
+	[Effects: Scrapper crew take 25% less damage on-board your own ship.]
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Scrapper crew. You will not be able to deactivate this mod either.]
+	[This upgrade can be enhanced with additional options after unlocking.]</text>
 	<choice hidden="true">
-		<text>Install the modification. [Cost: 69420~]</text>
+		<text>Install the modification. [Cost: 50~, 5|]</text>
 		<event>
 			<text>You install the modification.</text>
 			<item_modify>
-				<item type="scrap" min="-30" max="-30"/>
+				<item type="drones" min="-5" max="-5" />
+				<item type="scrap" min="-50" max="-50" />
 			</item_modify>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event>
-          <hiddenAug>LAB_TCC_SCRAPPER_UPGRADE2</hiddenAug>
-          <variable name="tcc_labs_scrapper_installed" op="add" val="1"/>
-        	<variable name="loc_lab_upgrades" op="add" val="1"/>
-          <loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
-        </event>
+				<event load="INSTALL_LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR" />
 			</choice>
 		</event>
 	</choice>
-	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Nevermind.</text>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_LAB_SCRAPPER_PRI_UPG3">
-	<text>You are about to install the __scrapper_upgrade3__ modification. 
-[Effects: some buff] 
-
-[Warning: After installing this, you will not be able to install any more primary upgrades for Human crew. You will not be able to deactivate this mod either.]</text>
+<event name="STORAGE_CHECK_LAB_SCRAPPER_TELEPATHIC_RESISTORS">
+	<text>You are about to install the Telepathic Resistors.
+	[Effects: Scrapper crew are immune to mind-control.]
+	[This upgrade can be enhanced with additional options after unlocking.]</text>
 	<choice hidden="true">
-		<text>Install the modification. [Cost: 69420~]</text>
+		<text>Install the modification. [Cost: 75~, 6|]</text>
 		<event>
 			<text>You install the modification.</text>
 			<item_modify>
-				<item type="scrap" min="-30" max="-30"/>
+				<item type="drones" min="-6" max="-6" />
+				<item type="scrap" min="-75" max="-75" />
 			</item_modify>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event>
-          <hiddenAug>LAB_TCC_SCRAPPER_UPGRADE3</hiddenAug>
-          <variable name="tcc_labs_scrapper_installed" op="add" val="1"/>
-        	<variable name="loc_lab_upgrades" op="add" val="1"/>
-          <loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
-        </event>
+				<event load="INSTALL_LAB_SCRAPPER_TELEPATHIC_RESISTORS" />
 			</choice>
 		</event>
 	</choice>
-	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Nevermind.</text>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-</event>-->
+</event>
 
+<event name="STORAGE_CHECK_LAB_SCRAPPER_ADVANCED_BOARDING_GEAR">
+	<text>You are about to upgrade your scrapper boarding gear..
+	[Effects: Combat damage is increased by 7.5%, max health is increased by 7.5%, sabotage speed increased by 15% though Move Speed is reduced by 10%]
+	[This upgrade can be enhanced with additional options after unlocking.]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 70~, 4|]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="drones" min="-4" max="-4" />
+				<item type="scrap" min="-70" max="-70" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_LAB_SCRAPPER_ADVANCED_BOARDING_GEAR" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
 
+<event name="INSTALL_LAB_SCRAPPER_BOARDING_GEAR">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_SCRAPPER_BOARDING_GEAR</hiddenAug>
+	<hiddenAug>LAB_SCRAPPER_PRIMARY_INSTALLED</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
+</event>
+
+<event name="INSTALL_LAB_SCRAPPER_ADVANCED_BOARDING_GEAR">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_SCRAPPER_BOARDING_GEAR</hiddenAug>
+	<hiddenAug>LAB_SCRAPPER_PRIMARY_INSTALLED</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
+</event>
+
+<event name="INSTALL_LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR</hiddenAug>
+	<hiddenAug>LAB_SCRAPPER_PRIMARY_INSTALLED</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
+</event>
+
+<event name="INSTALL_LAB_SCRAPPER_TELEPATHIC_RESISTORS">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_SCRAPPER_TELEPATHIC_RESISTORS</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
+</event>
+
+<!-- ================= AVALI LAB ================ -->
   <event name="STORAGE_CHECK_LAB_AVALI">
   	<text>You are viewing the lab menu for: [AVALI]</text>
   	<choice req="LAB_AVALI_NOCLONEXP" lvl="1" max_group="0" blue="false" hidden="true">
@@ -831,44 +1102,85 @@
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-          SCRAPPER UPGRADE MENU
+          [ADVANCED SCRAP PROCESSOR]SCRAPPER UPGRADE MENU
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE">
-    <text>You've got a Scrapper you can upgrade - with some basic tools and machinery, you may upgrade a Scrapper into one of the following:</text>
+    <text>[Advanced Scrap Processor] Utilizing the advanced augment you may upgrade your Scrappers in various ways.</text>
     <choice req="pilot" lvl="1" max_group="1" blue="true">
       <text>[Scrapper Guide]</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE"/>
     </choice>
     <choice req="scrapper" lvl="1" max_group="2" blue="false">
-      <text>Upgrade your Scrapper</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE"/>
+		<text>Upgrade your Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE"/>
     </choice>
     <choice req="scrapper_soldier" lvl="1" max_group="3" blue="false">
-      <text>Upgrade your Scrapper Soldier</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
+		<text>Upgrade your Scrapper Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
     </choice>
     <choice req="scrapper_engineer" lvl="1" max_group="4" blue="false">
-      <text>Upgrade your Scrapper Engineer</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
+		<text>Upgrade your Scrapper Engineer.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
     </choice>
-    <choice req="scrapper_defender" lvl="1" max_group="5" blue="false">
-      <text>Upgrade your Scrapper Defender</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER"/>
+	<choice req="scrapper_medic" lvl="1" max_group="5" blue="false">
+		<text>Upgrade your Scrapper Medic.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC"/>
     </choice>
-    <choice req="scrapper_speed" lvl="1" max_group="6" blue="false">
-      <text>Upgrade your Scrapper Speedster</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED"/>
+	<choice req="scrapper_defender" lvl="1" max_group="7" blue="false">
+		<text>Upgrade your Scrapper Defender.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER"/>
+    </choice>	
+	<choice req="scrapper_heavy" lvl="1" max_group="6" blue="false">
+		<text>Upgrade your Scrapper Heavy Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY"/>
+	</choice>
+	<choice req="scrapper_scavenger" lvl="1" max_group="8" blue="false">
+		<text>Upgrade your Scrapper Scavenger.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER"/>
     </choice>
+	<choice req="lanius" lvl="1" max_group="9" blue="false">
+		<text>Cover your Lanius in Scrap.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_LANIUS"/>
+    </choice>
+	<choice req="scrapper" lvl="1" max_group="10" blue="false">
+		<text>Enhance your scrappers with multiversal energy.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL"/>
+	</choice>
+	<choice req="LIST_ELEMENTAL_SCRAPPER_TIER_1" max_group="11" blue="false">
+		<text>Upgrade your Elemental Scrappers.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2"/>
+	</choice>
+	<choice req="LIST_ELEMENTAL_SCRAPPER_TIER_2" max_group="12" blue="false">
+		<text>Upgrade your Elemental Scrappers.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3"/>
+	</choice>
     <choice>
       <text>Nevermind, do something else.</text>
       <event load="STORAGE_CHECK"/>
     </choice>
   </event>
+  
+     <!--////////////////////////////////////////////////////////// BASE LANIUS UPGRADE TEXT/////////////////////////////////////////////////////////-->
+
+	<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_LANIUS">
+		<text>Your Lanius can be covered in scrap, turning it into a scrapper.
+		</text>
+		<choice req="lanius" level="1" max_group="1" blue="false">
+			<text>Create a Scrapper. </text>
+			<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_LANIUS"/>
+		</choice>
+		<choice>
+		  <text>Nevermind, do something else.</text>
+		  <event load="STORAGE_CHECK"/>
+		</choice>
+	</event>
+
+     <!--////////////////////////////////////////////////////////// BASE SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE">
-    <text>Who do you want to create?</text>
+    <text>Your base scrapper can be upgraded into one of the three tier two varients.</text>
     <choice req="scrapper" lvl="1" max_group="1" blue="false">
       <text>Create a Scrapper Soldier.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SOLDIER"/>
@@ -878,51 +1190,35 @@
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ENGINEER"/>
     </choice>
     <choice req="scrapper" lvl="1" max_group="3" blue="false">
-      <text>Create a Scrapper Speedster.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SPEED"/>
-    </choice>
-    <choice req="scrapper" lvl="1" max_group="4" blue="false">
-      <text>Create a Scrapper Defender.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_DEFENDER"/>
-    </choice>
-    <choice req="scrapper" lvl="1" max_group="5" blue="false">
-      <text>Create a Heavy Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_HEAVY"/>
-    </choice>
-    <choice req="SCAVENGER_REQ" lvl="1" max_group="6" blue="false">
-      <text>Create a Scavenger.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SCAV"/>
+      <text>Create a Scrapper Medic.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_MEDIC"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
       <event load="STORAGE_CHECK"/>
     </choice>
   </event>
+  
+     <!--//////////////////////////////////////////////////////////SOLDIER UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
-    <text>Who do you want to create?</text>
-    <choice req="scrapper_soldier" lvl="1" max_group="1" blue="false">
-      <text>Create a Heavy Scrapper.</text>
+    <text>You can upgrade your soldier into an elite heavy varient.</text>
+    <choice req="scrapper_soldier" lvl="1" blue="false">
+      <text>Upgrade Scrapper Soldier to Scrapper Heavy Soldier.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY"/>
-    </choice>
-    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
-      <text>Create a Scavenger.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_SCAV"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
       <event load="STORAGE_CHECK"/>
     </choice>
   </event>
+  
+     <!--//////////////////////////////////////////////////////////ENGINEER UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
-    <text>Who do you want to create?</text>
-    <choice req="scrapper_engineer" lvl="1" max_group="1" blue="false">
-      <text>Create a Heavy Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_HEAVY"/>
-    </choice>
-    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
-      <text>Create a Scavenger.</text>
+    <text>You can upgrade your engineer into an elite scavenger varient.</text>
+    <choice req="scrapper_engineer" lvl="1" blue="false">
+      <text>Upgrade Scrapper Engineer to Scrapper Scavenger.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV"/>
     </choice>
     <choice>
@@ -930,28 +1226,55 @@
       <event load="STORAGE_CHECK"/>
     </choice>
   </event>
+  
+     <!--//////////////////////////////////////////////////////////MEDIC UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED">
-    <text>Who do you want to create?</text>
-    <choice req="scrapper_speed" lvl="1" max_group="1" blue="false">
-      <text>Create a Heavy Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_HEAVY"/>
-    </choice>
-    <choice req="SCAVENGER_REQ" lvl="1" max_group="2" blue="false">
-      <text>Create a Scavenger.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_SCAV"/>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC">
+    <text>Who do you want to upgrade?</text>
+    <choice req="scrapper_medic" lvl="1" blue="false">
+      <text>Upgrade Scrapper Medic to Scrapper Defender.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC_DEFENDER"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
       <event load="STORAGE_CHECK"/>
     </choice>
   </event>
+
+     <!--//////////////////////////////////////////////////////////DEFENDER UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER">
-    <text>Who do you want to create?</text>
-    <choice req="scrapper_defender" lvl="1" max_group="1" blue="false">
-      <text>Create a Heavy Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_HEAVY"/>
+    <text>Who do you want to upgrade?</text>
+    <choice req="scrapper_defender" lvl="1" blue="false">
+      <text>Upgrade your Scrapper Defender.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_TIER2"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+       <!--//////////////////////////////////////////////////////////HEAVY UPGRADE TEXT/////////////////////////////////////////////////////////-->
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY">
+    <text>Who do you want to upgrade?</text>
+    <choice req="scrapper_heavy" lvl="1" blue="false">
+      <text>Upgrade your Scrapper Heavy Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_TIER2"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  
+       <!--//////////////////////////////////////////////////////////SCAVENGER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER">
+    <text>Who do you want to upgrade?</text>
+    <choice req="scrapper_scavenger" lvl="1" blue="false">
+      <text>Upprade your Scrapper Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_TIER2"/>
     </choice>
     <choice>
       <text>Nevermind, do something else.</text>
@@ -959,31 +1282,73 @@
     </choice>
   </event>
 
-<!--//////////////////////////////////////////////////////////SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////////// SCRAPPER UPGRADE GUIDE TEXT/////////////////////////////////////////////////////////-->
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE">
-  <text>Scrappers are unique in the fact that they can upgrade into many other specialised designs. There are 3 tiers of scrappers; Base, Upgraded and Elite.
-    Base: Scrapper
-    Upgraded: Soldier, Engineer, Speedster
-    Elite: Heavy, Scavenger
-    You can upgrade Scrappers to higher tiers for scrap. Some elites also require special things to upgrade.
-    Base -> Upgraded or Elite
-    Upgraded -> Elite
-  </text>
-  <choice><text>Continue...</text><event load="STORAGE_CHECK"/></choice>
+	<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE">
+	  <text>Scrappers are unique in the fact that they can upgrade into many other specialised designs. There are 3 tiers of scrappers.
+		Tier 1: Scrapper
+		Tier 2: Soldier, Engineer, Medic
+		Tier 3: Heavy, Scavenger, and Defenders
+		You can upgrade Scrappers to higher tiers for scrap and other resources.
+		Tier 1 to Tier 2
+		Tier 2 to Tier 3
+		Tier 3 to Upgraded/Enhanced. 
+	  </text>
+	  <choice><text>Continue...</text><event load="STORAGE_CHECK"/></choice>
+	</event>
 
-</event>
+<!--////////////////////////////////////////////////////////// BASE LANIUS UPGRADE TEXT/////////////////////////////////////////////////////////-->
+
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_LANIUS">
+    <text>Add a large amount of scrap to your lanius, converting it into a scrapper.
+		[Tier 1] Scrapper
+		115 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.75x Damage
+		1.5x Sabotage Damage
+		1.5x Repair speed
+		0.75x Move Speed
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your lanius undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-35" max="-35"/>
+        </item_modify>
+        <transformRace class="lanius">scrapper</transformRace>
+      </event>
+    </choice>
+    <choice>
+	<text>Nevermind, do something else.</text>
+	<event load="STORAGE_CHECK"/>
+	</choice>
+  </event>
+
+
+
+<!--////////////////////////////////////////////////////////// BASE SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SOLDIER">
-    <text>You can upgrade your Scrapper's combat ability by adding extra scrap to their arms, although this would reduce their repair speed.
-      [x1.5 repair -> x1.0 repair speed
-      x1.0 damage -> x2.0 damage]</text>
+    <text>[Tier 1 to Tier 2] You can upgrade your Scrapper's combat ability by adding extra scrap to their arms.
+		Cannot Man or Repair Systems
+		135 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		[Specialization] 1.35x Damage
+		[Specialization] 2.0x Sabotage Damage
+		0.75x Move Speed
+	</text>
     <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-25" max="-25"/>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="scrapper">scrapper_soldier</transformRace>
       </event>
@@ -992,16 +1357,23 @@
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ENGINEER">
-    <text>This upgrade will generally improve your Scrapper's ability to repair ship systems.
-      [x1.5 repair -> x3.0 repair speed
-      x1.0 damage -> x0.75 damage
-      x1.0 sabotage speed -> x1.5 sabotage speed]</text>
+    <text>[Tier 1 to Tier 2] This upgrade will generally improve your Scrapper's ability to repair ship systems.
+     	115 Health
+		0.25x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.5x Damage
+		Cannot Sabotage
+		[Specialization] 1.25x Move Speed
+		[Specialization] 2.0x Repair Speed
+	 </text>
     <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-25" max="-25"/>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="scrapper">scrapper_engineer</transformRace>
       </event>
@@ -1009,216 +1381,517 @@
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SPEED">
-    <text>By molding the legs into a more efficient shape, your Scrapper can now run more efficiently.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
-    <choice>
-      <text>Do it.</text>
-      <event>
-        <text>Your Scrapper undergoes the transformation...</text>
-        <item_modify>
-          <item type="scrap" min="-25" max="-25"/>
-        </item_modify>
-        <transformRace class="scrapper">scrapper_speed</transformRace>
-      </event>
-    </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-  </event>
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_DEFENDER">
-    <text>By adding a plating of scrap to your Scrapper, you can make them resistant to damage.
-      [125 health -> 150 health
-      x0.9 movement speed -> x0.75 movement speed
-      x1 damage taken -> x0.8 damage taken]</text>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_MEDIC">
+    <text>[Tier 1 to Tier 2] A Lanius Scrapper, given strong legs and a lighter body, and the ability to heal its allies at the cost of it's own health. Heals itself very slowly.
+		115 Health
+		0.50x Fire Damage Taken
+		0.50x Oxygen Drain
+		0.50x Damage
+		0.50x Sabotage Damage
+		1.5x Move Speed
+		Cannot Repair
+		[Specialization] Heals itself after 15 second delay for 2hp/s
+		[Specialization] Can heal allies for 50 health at the cost of 50 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. 
+	</text>
     <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
           <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
-        <transformRace class="scrapper">scrapper_defender</transformRace>
+        <transformRace class="scrapper">scrapper_medic</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+    <choice>
+		<text>Nevermind, do something else.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_HEAVY">
-    <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [125 health -> 250 health
-      3/4 oxygen drain -> 1/2 oxygen drain
-      x1.5 repair speed -> x0.5 repair speed
-      x0.9 movement speed -> x0.25 movement speed
-      x0.75 fire damage -> x0.5 fire damage
-      x1 damage -> x2.5 damage]</text>
-    <choice>
-      <text>Do it.</text>
-      <event>
-        <text>Your Scrapper undergoes the transformation...</text>
-        <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-        </item_modify>
-        <transformRace class="scrapper">scrapper_heavy</transformRace>
-      </event>
-    </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-  </event>
+   <!--//////////////////////////////////////////////////////////SOLDIER TO HEAVY UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY">
-    <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [125 health -> 250 health
-      3/4 oxygen drain -> 1/2 oxygen drain
-      x1 repair speed -> x0.5 repair speed
-      x0.9 movement speed -> x0.25 movement speed
-      x0.75 fire damage -> x0.5 fire damage
-      x2 damage -> x2.5 damage]</text>
+    <text>[Tier 2 to Tier 3] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
+		Cannot Man or Repair Systems
+		175 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.5x Move Speed
+		[Specialization]1.75x Damage
+		[Specialization]2.0x Sabotage Damage
+		[DISPERSE]Can create explosions onboard enemy ships, damaging the ship and systems
+	</text>
     <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
         <transformRace class="scrapper_soldier">scrapper_heavy</transformRace>
       </event>
     </choice>
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
+  
+   <!--//////////////////////////////////////////////////////////MEDIC TO DEFENDER UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_HEAVY">
-    <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [125 health -> 250 health
-      3/4 oxygen drain -> 1/2 oxygen drain
-      x3 repair speed -> x0.5 repair speed
-      x0.9 movement speed -> x0.25 movement speed
-      x0.75 fire damage -> x0.5 fire damage
-      x0.75 damage -> x2.5 damage
-      x1.5 sabotage speed -> x2.5 sabotage speed]</text>
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC_DEFENDER">
+    <text>[Tier 2 to Tier 3] Adding additional scrap to the medic makes it more resilient to damage and provides a damage negation buff for nearby allies.
+		[Specialization] 200 Health	
+		[Specialization] Reduces all damage taken by all friendly crew in the room by 10
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain	
+		0.75x Damage
+		1x Move Speed
+		0.75x Sabotage
+		Cannot Repair
+	</text>
     <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
-        <transformRace class="scrapper_engineer">scrapper_heavy</transformRace>
+        <transformRace class="scrapper_medic">scrapper_defender</transformRace>
       </event>
     </choice>
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_HEAVY">
-    <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [125 health -> 250 health
-      3/4 oxygen drain -> 1/2 oxygen drain
-      x1.5 repair speed -> x0.5 repair speed
-      x2 movement speed -> x0.25 movement speed
-      x0.75 fire damage -> x0.5 fire damage
-      x1 damage -> x2.5 damage]</text>
-    <choice>
-      <text>Do it.</text>
-      <event>
-        <text>Your Scrapper undergoes the transformation...</text>
-        <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-        </item_modify>
-        <transformRace class="scrapper_speed">scrapper_heavy</transformRace>
-      </event>
-    </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-  </event>
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_HEAVY">
-    <text>[ELITE UPGRADE] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
-      [150 health -> 250 health
-      3/4 oxygen drain -> 1/2 oxygen drain
-      x1.5 repair speed -> x0.5 repair speed
-      x0.75 movement speed -> x0.25 movement speed
-      x0.75 fire damage -> x0.5 fire damage
-      x1 damage -> x2.5 damage
-      x0.8 damage taken -> x1 damage taken]</text>
-    <choice>
-      <text>Do it.</text>
-      <event>
-        <text>Your Scrapper undergoes the transformation...</text>
-        <item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-        </item_modify>
-        <transformRace class="scrapper_defender">scrapper_heavy</transformRace>
-      </event>
-    </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-  </event>
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SCAV">
-    <text>[ELITE UPGRADE] Using a highly complex alloy whose exact manufacturing method is known only by a select few, you can make this Scrapper even more powerful and adaptive.
-      [125 health -> 150 health
-      x1.5 repair speed -> x2 repair speed
-      x0.9 movement speed -> x1.5 movement speed
-      x0.75 fire damage -> x0.5 fire damage
-      x1 damage -> x2 damage
-      x1 sabotage speed -> x2.5 sabotage speed]</text>
-    <choice>
-      <text>Do it.</text>
-      <event>
-        <text>Your Scrapper undergoes the transformation...</text>
-        <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
-        </item_modify>
-        <transformRace class="scrapper">scrapper_scavenger</transformRace>
-      </event>
-    </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-  </event>
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_SCAV">
-    <text>Will cover the body in a layer of elite scrap.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
-    <choice>
-      <text>Do it.</text>
-      <event>
-        <text>Your Scrapper undergoes the transformation...</text>
-        <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
-        </item_modify>
-        <transformRace class="scrapper_soldier">scrapper_scavenger</transformRace>
-      </event>
-    </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-  </event>
-
+  
+       <!--//////////////////////////////////////////////////////////ENGINEER TO SCAVENGER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+	 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV">
-    <text>Will cover the body in a layer of elite scrap.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
+    <text>[Tier 2 to Tier 3] Advanced methods can augment your engineers into their scavenger varient. 
+		135 Health
+		0.25x Fire Damage Taken
+		0.5x Oxygen Drain
+		No Combat Damage
+		[Specialization] 2.5x Sabotage Damage
+		[Specialization] 1.75x Move Speed
+		[Specialization] 2.0x Repair Speed
+	</text>
     <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
         <transformRace class="scrapper_engineer">scrapper_scavenger</transformRace>
       </event>
     </choice>
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
+  
+     <!--//////////////////////////////////////////////////////////DEFENDER to DEFENDER MK2 UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SPEED_SCAV">
-    <text>Will cover the body in a layer of elite scrap.
-      [x0.9 movement speed -> x2.0 movement speed]</text>
+
+ <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_TIER2">
+    <text>[Tier 3 Elite Upgrade] Advanced methods can augment your defenders even further.
+		[Specialization] 200 Health -> 220 Health	
+		[Specialization] Reduces all damage taken by all friendly crew in the room by 10% -> Damage Reduction 20%
+		Adds the ability to Heal friendly crew at the cost of its own health.
+		0.75x Damage -> 1.0x Damage
+		1x Move Speed -> 1.2x Move Speed
+		0.75x Sabotage -> 1.0x Sabotage
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain	
+		Cannot Repair		
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the augmentation.</text>
+        <item_modify>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
+        </item_modify>
+        <transformRace class="scrapper_defender">scrapper_defender_mk2</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+ 
+    <!--//////////////////////////////////////////////////////////SCAVENGER to MK2 UPGRADE TEXT/////////////////////////////////////////////////////////-->
+	
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_TIER2">
+    <text>[Tier 3 Elite Upgrade] Advanvced methods can augment your scavengers even further.
+		135 Health -> 165 Health
+		0.25x Fire Damage Taken
+		0.5x Oxygen Drain
+		No Combat Damage
+		[Specialization] 2.5x Sabotage Damage -> 3.0x Sabotage Damage
+		[Specialization] 1.75x Move Speed -> 2.0x Move Speed
+		[Specialization] 2.0x Repair Speed -> 3.0x Repair speed
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the augmentation.</text>
+        <item_modify>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
+        </item_modify>
+        <transformRace class="scrapper_scavenger">scrapper_scavenger_mk2</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+  
+	<!--//////////////////////////////////////////////////////////HEAVY SOLDIER to MK2 UPGRADE TEXT/////////////////////////////////////////////////////////-->
+	
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_TIER2">
+    <text>[Tier 3 Elite Upgrade] Advanvced methods can augment your heavies even further.
+		Cannot Man or Repair Systems
+		175 Health -> 200 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.5x Move Speed
+		[Specialization] 1.75x Damage -> 2.0x Damage
+		[Specialization] 2.0x Sabotage Damage -> 2.25x Sabotage Damage
+		Can create explosions onboard enemy ships, damaging the ship and systems -> Damage and stun duration doubled.
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the augmentation.</text>
+        <item_modify>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
+        </item_modify>
+        <transformRace class="scrapper_heavy">scrapper_heavy_mk2</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+  
+	<!--//////////////////////////////////////////////////////////ELEMENTAL SCRAPPER/////////////////////////////////////////////////////////-->
+	
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL">
+    <text>Your base scrapper can be transformed into one of the elemental scrappers.</text>
+    <choice req="scrapper" lvl="1" max_group="1" blue="false">
+      <text>Create a Rosegold Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="2" blue="false">
+      <text>Create a Golden Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN"/>
+    </choice>
+    <choice req="scrapper" lvl="1" max_group="3" blue="false">
+      <text>Create an Adamantine Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2">
+    <text>Your elemental scrappers can be upgraded further.</text>
+    <choice req="rosegold_scrapper" lvl="1" max_group="1" blue="false">
+      <text>Upgrade a Rosegold Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_TIER2"/>
+    </choice>
+    <choice req="golden_scrapper" lvl="1" max_group="2" blue="false">
+      <text>Upgrade a Golden Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER2"/>
+    </choice>
+    <choice req="adamantine_scrapper" lvl="1" max_group="3" blue="false">
+      <text>Upgrade an Adamantine Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER2"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  
+ <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3">
+    <text>Your elemental scrappers can be upgraded further.</text>
+    <choice req="rosegold_scrapper_2" lvl="1" max_group="1" blue="false">
+      <text>Upgrade a Rosegold Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_TIER3"/>
+    </choice>
+    <choice req="golden_scrapper_2" lvl="1" max_group="2" blue="false">
+      <text>Upgrade a Golden Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER3"/>
+    </choice>
+    <choice req="adamantine_scrapper_2" lvl="1" max_group="3" blue="false">
+      <text>Upgrade an Adamantine Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER3"/>
+    </choice>
+    <choice>
+      <text>Nevermind, do something else.</text>
+      <event load="STORAGE_CHECK"/>
+    </choice>
+  </event>
+  
+   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD">
+    <text>[Tier 1 to Tier 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		125 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		2x Repair Speed
+		0.5x Sabotage Damage
+		0.75x Move Speed
+		Provides 1 power
+		Resists mindcontrol
+		Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%
+	</text>
     <choice>
       <text>Do it.</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
         </item_modify>
-        <transformRace class="scrapper_speed">scrapper_scavenger</transformRace>
+        <transformRace class="scrapper">rosegold_scrapper</transformRace>
       </event>
     </choice>
     <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
   </event>
 
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN">
+    <text>[Tier 1 to Tier 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Gold. 
+		100 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		1.25x Damage
+		1.5x Repair Speed
+		1.5x Sabotage Damage
+		0.75x Move Speed
+		Provides 1 Power. Drains 1 Power from Enemy Systems
+		Damage from all sources is reduced by 10%
+	 </text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="scrapper">golden_scrapper</transformRace>
+      </event>
+    </choice>
+    <choice>
+		<text>Nevermind, do something else.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE">
+    <text>[Tier 1 to Tier 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Adamantine. 
+		125 Health
+		4x Fire Damage
+		0.5x Oxygen Drain
+		0.75x Damage
+		0.75x Repair Speed
+		1.5x Sabotage Damage
+		0.75x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 20%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="scrapper">adamantine_scrapper</transformRace>
+      </event>
+    </choice>
+    <choice>
+		<text>Nevermind, do something else.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+  </event>
+  
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_TIER2">
+    <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		150 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		2.5x Repair Speed
+		0.5x Sabotage Damage
+		1x Move Speed
+		Provides 2 power
+		Resists mindcontrol
+		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 15%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="rosegold_scrapper">rosegold_scrapper_2</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER2">
+    <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to upgrade your Golden scrapper. 
+		125 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		1.5x Damage
+		2x Repair Speed
+		2x Sabotage Damage
+		1x Move Speed
+		Provides 2 Power. Drains 2 Power from Enemy Systems
+		Damage from all sources is reduced by 20%
+	 </text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="golden_scrapper">golden_scrapper_2</transformRace>
+      </event>
+    </choice>
+    <choice>
+		<text>Nevermind, do something else.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+  </event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER2">
+    <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Adamantine. 
+		150 Health
+		2.5x Fire Damage
+		2x Oxygen Drain
+		1x Damage
+		1x Repair Speed
+		2x Sabotage Damage
+		1x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 40%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="adamantine_scrapper">adamantine_scrapper_2</transformRace>
+      </event>
+    </choice>
+    <choice>
+		<text>Nevermind, do something else.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+  </event>
+
+    <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_TIER3">
+    <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		150 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		2.5x Repair Speed
+		0.5x Sabotage Damage
+		1x Move Speed
+		Provides 2 power
+		Resists mindcontrol
+		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 15%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="rosegold_scrapper_2">rosegold_scrapper_3</transformRace>
+      </event>
+    </choice>
+    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER3">
+    <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to upgrade your Golden scrapper. 
+		150 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		2x Damage
+		2.5x Repair Speed
+		2.5x Sabotage Damage
+		1.25x Move Speed
+		Provides 3 Power. Drains 3 Power from Enemy Systems
+		Damage from all sources is reduced by 20%
+	 </text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="golden_scrapper_2">golden_scrapper_3</transformRace>
+      </event>
+    </choice>
+    <choice>
+		<text>Nevermind, do something else.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER3">
+    <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Adamantine. 
+		200 Health
+		1x Fire Damage
+		4x Oxygen Drain
+		1.25x Damage
+		1x Repair Speed
+		3x Sabotage Damage
+		1.25x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 60%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="adamantine_scrapper_2">adamantine_scrapper_3</transformRace>
+      </event>
+    </choice>
+    <choice>
+		<text>Nevermind, do something else.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+  </event>
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           ROBOTTO UPGRADE MENU

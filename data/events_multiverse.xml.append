@@ -1,5 +1,18 @@
 <FTL>
-
+<!--<autoReward level=<LOW/MED/HIGH/RANDOM>> tag </autoreward>
+where tag is
+standard  - which is scrap + 2 resources (possible a weapon)
+stuff     - less scrap, mostly resources (intended for surrenders)
+fuel 
+missiles 
+droneparts  - scrap + that resource
+fuel_only 
+missiles_only 
+droneparts_only - self explanatory
+weapon 
+augment 
+drone 
+item - scrap + that thing  -->
 	<!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           TRASH COMPACTOR SUMMON EVENT
@@ -24,9 +37,9 @@
 			<event>
 				<text>You use some fuel and a long range transmission missile as well as your scrap. Shortly after, your map recieves coordinates of a ship's location - most likely the Scrappers from earlier. What do they want from you? </text>
 				<item_modify>
-					<item type="scrap" min="-25" max="-25"/>
-					<item type="fuel" min="-1" max="-1"/>
-					<item type="missiles" min="-1" max="-1"/>
+					<item type="scrap" min="-20" max="-20"/>
+					<item type="fuel" min="-2" max="-2"/>
+					<item type="drones" min="-1" max="-1"/>
 				</item_modify>
 				<quest event="ENCOUNTER_TC2"/>
 			</event>
@@ -37,8 +50,8 @@
 			<text>You send out a heavy cargo drone with the scrap. There must be more of these Scrappers, because you received another signal! Prey for you to hunt... </text>
 				<item_modify>
 					<item type="scrap" min="-30" max="-30"/>
-					<item type="drones" min="-2" max="-2"/>
-					<item type="fuel" min="-1" max="-1"/>
+					<item type="fuel" min="-2" max="-2"/>
+					<item type="drones" min="-1" max="-1"/>
 				</item_modify>
 				<quest event="ENCOUNTER_TC3"/>
 			</event>
@@ -48,8 +61,9 @@
 			<event>
 			<text>You teleport as much as scrap as you can using the transmitter. The same song and dance as before - signal, Scrappers, murder. Fun. </text>
 				<item_modify>
-					<item type="scrap" min="-45" max="-45"/>
+					<item type="scrap" min="-40" max="-40"/>
 					<item type="fuel" min="-3" max="-3"/>
+					<item type="drones" min="-2" max="-2"/>
 				</item_modify>
 				<quest event="ENCOUNTER_TC4"/>
 			</event>
@@ -59,10 +73,9 @@
 			<event>
 			<text>You manage to create and fully fuel a scrap transport pod, attracting the attention of a heavily armed, highly dangerous Scrapper ship. </text>
 				<item_modify>
-					<item type="scrap" min="-65" max="-65"/>
-					<item type="fuel" min="-3" max="-3"/>
-					<item type="missiles" min="-2" max="-2"/>
-					<item type="drones" min="-2" max="-2"/>
+					<item type="scrap" min="-60" max="-60"/>
+					<item type="fuel" min="-4" max="-4"/>
+					<item type="drones" min="-3" max="-3"/>
 				</item_modify>
 				<quest event="ENCOUNTER_TC5"/>
 			</event>
@@ -72,8 +85,9 @@
 			<event>
 			<text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location - most likely the Scrapper ship from earlier. </text>
 				<item_modify>
-					<item type="scrap" min="-95" max="-95"/>
-					<item type="fuel" min="-7" max="-7"/>
+					<item type="scrap" min="-80" max="-80"/>
+					<item type="fuel" min="-5" max="-5"/>
+					<item type="drones" min="-4" max="-4"/>
 				</item_modify>
 				<quest event="ENCOUNTER_TC6"/>
 			</event>
@@ -108,80 +122,392 @@
 
 	<FTL> <!--DESTROYED-->
 	<event name="TC1_DESTROY">
-		<text> Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else... </text>
+		<text>Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else...
+			While searching through the remains of the ship, you find a dying member of its crew, clutching an intact weapon it seemingly stripped from right from the hull. It seems like they're nibbling on it.
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_SHOTGUN_BOMB"/>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_BOMB"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="1" max="6"/>
+						<item type="scrap" min="1" max="15"/>
+						<item type="drones" min="1" max="6"/>
+						<item type="missiles" min="1" max="6"/>
+					</item_modify>
+				</event>
+		</choice>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC1_DEAD</hiddenAug>
 	</event>
 
 	<event name="TC1_CREW">
-		<text>Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else... </text>
+		<text>Who even were these guys? The crew is all dead, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else...
+			While searching through the remains of the ship, you find a dying member of its crew, clutching an intact weapon it seemingly stripped from right from the hull. It seems like they're nibbling on it.
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_SHOTGUN_BOMB"/>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_BOMB"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="1" max="6"/>
+						<item type="scrap" min="1" max="15"/>
+						<item type="drones" min="1" max="6"/>
+						<item type="missiles" min="1" max="6"/>
+					</item_modify>
+				</event>
+		</choice>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC1_DEAD</hiddenAug>
 	</event>
 
 	<event name="TC2_DESTROY">
-		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. While scrapping what remains of their ship's hull, amidst the noisy alarms and leaking hydraulic fluids you find a customized flak weapon... could be useful. </text>
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes.
+			While searching through the remains of the ship, you find another dying member of its crew, this one with a red cross on their head, leaned over a dead scrapper, seemingly chewing on something.
+			You thought it was eating the crew member, but you notice it clutching an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_SHOTGUN_UNSTABLE"/>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_UNSTABLE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_medic"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="1" max="25"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC2_DEAD</hiddenAug>
 	</event>
 
 	<event name="TC2_CREW">
-		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes. Everything standing between you and a customized flak weapon are their dead bodies... Surely you've done far worse, for far less. </text>
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes.
+			While searching through the remains of the ship, you find another dying member of its crew, this one with a red cross on their head, leaned over a dead scrapper, seemingly chewing on something.
+			You thought it was eating the crew member, but you notice it clutching an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_SHOTGUN_UNSTABLE"/>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_UNSTABLE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_medic"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="10" max="25"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC2_DEAD</hiddenAug>
 	</event>
 
 	<event name="TC3_DESTROY">
-		<text>The Trash Compactor has been defeated yet again, leaving the small fleet to scatter helplessly. </text>
+		<text>The Trash Compactor has been defeated yet again, leaving the small fleet to scatter helplessly. In the wreckage, you find a seemingly advanced piece of equipment that easily integrates itself in your systems. You notice additional options in your onboard lab.
+			While searching through the remains of the ship, you find yet another dying member of its crew, this one looks much larger than the last two you found. You're not shocked to find them nervously eating an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_SHOTGUN_LEAD"/>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_LEAD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_heavy"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="25" max="45"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC3_DEAD</hiddenAug>
+		<hiddenAug>ADVANCED_SCRAP</hiddenAug>
 	</event>
 
 	<event name="TC3_LESSER_DESTROY">
-		<text>The Fleet ship lays broken before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials. </text>
-		<autoReward level="MED">stuff</autoReward>
+		<text>The Fleet ship lays broken before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials. 
+			In the wreckage, you find a seemingly advanced piece of equipment that easily integrates itself in your systems. You notice additional options in your onboard lab.
+			While searching through the remains of the ship, you find yet another dying member of its crew, this one looks much larger than the last two you found. You're not shocked to find them nervously eating an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.		
+		</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_LEAD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_heavy"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="25" max="45"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC3_DEAD</hiddenAug>
+		<hiddenAug>ADVANCED_SCRAP</hiddenAug>
 	</event>
 
 	<event name="TC3_CREW">
-		<text>This time, they had alerted their own swarm. We could call upon more of these guys, but... should we? Maybe it's safer to just leave them alone. </text>
+		<text>The Fleet ship lays broken before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials.
+			In the wreckage, you find a seemingly advanced piece of equipment that easily integrates itself in your systems. You notice additional options in your onboard lab.
+			While searching through the remains of the ship, you find yet another dying member of its crew, this one looks much larger than the last two you found. You're not shocked to find them nervously eating an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.		
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_SHOTGUN_LEAD"/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_LEAD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_heavy"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="25" max="45"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC3_DEAD</hiddenAug>
+		<hiddenAug>ADVANCED_SCRAP</hiddenAug>
 	</event>
 
 	<event name="TC3_LESSER_CREW">
-		<text>The Fleet ship lays motionless before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials. </text>
-		<autoReward level="MED">stuff</autoReward>
+		<text>The Fleet ship lays broken before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials.
+			In the wreckage, you find a seemingly advanced piece of equipment that easily integrates itself in your systems. You notice additional options in your onboard lab.
+			While searching through the remains of the ship, you find yet another dying member of its crew, this one looks much larger than the last two you found. You're not shocked to find them nervously eating an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.		
+		</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_LEAD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_heavy"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="25" max="45"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC3_DEAD</hiddenAug>
+		<hiddenAug>ADVANCED_SCRAP</hiddenAug>
 	</event>
 
 	<event name="TC4_DESTROY">
-		<text>The Lanius ship is now torn to shreds and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!". You also manage to scoop up some scrap from the enemy ship.</text>
+		<text>The Scrapper's ship is now torn to shreds and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!".
+			While searching through the wreckage of the ship, you find a wounded Trash Eater clutching an advanced Flak Cannon. You're familiar with how wounded scrappers will eat weapons to survive, but the Trash Eater just holds it, staring at you.
+			You can offer him a position on your ship though it may cost you.
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_SCRAPFLAK"/>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SCRAPFLAK"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Offer the Trash Eater a position on your crew.</text>
+			<event>
+				<text>You promise the Trash Eater additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they consume the Flak Cannon, chuckling to themselves.</text>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded Trash Eater watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="6" max="12"/>
+						<item type="scrap" min="50" max="75"/>
+						<item type="drones" min="6" max="12"/>
+						<item type="missiles" min="6" max="12"/>
+					</item_modify>
+				</event>
+		</choice>
 		<unlockCustomShip>PLAYER_SHIP_TRASH_MINER</unlockCustomShip>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC4_DEAD</hiddenAug>
 	</event>
 
 	<event name="TC4_CREW">
-		<text>The Lanius ship is now silent and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!". You also manage to scoop up some scrap from the enemy ship.</text>
+		<text>The Scrapper's ship is now silent and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!".
+			While searching through the empty halls of the ship, you find a wounded Trash Eater clutching an advanced Flak Cannon. You're familiar with how wounded scrappers will eat weapons to survive, but the Trash Eater just holds it, staring at you.
+			You can offer him a position on your ship though it may cost you.
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
-		<weapon name="TC_SCRAPFLAK"/>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SCRAPFLAK"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Offer the Trash Eater a position on your crew.</text>
+			<event>
+				<text>You promise the Trash Eater additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they consume the Flak Cannon, chuckling to themselves.</text>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded Trash Eater watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="6" max="12"/>
+						<item type="scrap" min="50" max="75"/>
+						<item type="drones" min="6" max="12"/>
+						<item type="missiles" min="6" max="12"/>
+					</item_modify>
+				</event>
+		</choice>
 		<unlockCustomShip>PLAYER_SHIP_TRASH_MINER</unlockCustomShip>
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC4_DEAD</hiddenAug>
@@ -193,30 +519,24 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC4_DEAD</hiddenAug>
 		<choice>
-		<text>Request a weapon</text>
-		<event>
-			<text>You got a weapon - and it's made out of gold!</text>
-			<weapon name="TC_SHOTGUN_GOLD"/>
-			<event/>
-		</event>
+			<text>Request a golden weapon.</text>
+			<event>
+				<text>You got a weapon - and it's made out of gold!
+					The Trash Eater from this universe is impressed with your performance, and joins your crew.
+				</text>
+				<weapon name="TC_SHOTGUN_GOLD"/>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+			</event>
 		</choice>
-		<choice>
-		<text>Request a drone</text>
-		<event>
-			<text>You got a drone - and it's made out of gold!</text>
-			<drone name="TC_COMBAT_GOLD"/>
-			<event/>
-		</event>
-		</choice>
-		<choice>
-		<text>Request a crewmember</text>
-		<event>
-			<text>The Trash Eater themselves beam onto your ship (although they also manage to consume some of your savings)!</text>
-			<item_modify>
-				<item type="scrap" min="-20" max="-20"/>
-			</item_modify>
-			<crewMember amount="1" class="trash_eater" all_skills="2">Trash Eater</crewMember>
-		</event>
+			<choice>
+				<text>Request a golden drone.</text>
+				<event>
+					<text>You got a drone - and it's made out of gold!
+						The Trash Eater from this universe is impressed with your performance, and joins your crew.
+					</text>
+					<drone name="TC_COMBAT_GOLD"/>
+					<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+				</event>
 		</choice>
 	</event>
 
@@ -226,35 +546,30 @@
 		<hiddenAug>TC_DEAD</hiddenAug>
 		<hiddenAug>TC4_DEAD</hiddenAug>
 		<choice>
-		<text>Request a weapon</text>
-		<event>
-			<text>You got a weapon - and it's made out of gold!</text>
-			<weapon name="TC_SHOTGUN_GOLD"/>
-			<event/>
-		</event>
+			<text>Request a golden weapon.</text>
+			<event>
+				<text>You got a weapon - and it's made out of gold!
+					The Trash Eater from this universe is impressed with your performance, and joins your crew.
+				</text>
+				<weapon name="TC_SHOTGUN_GOLD"/>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+			</event>
 		</choice>
 		<choice>
-		<text>You got a drone - and it's made out of gold!</text>
-		<event>
-			<text>You got a drone!</text>
-			<drone name="TC_COMBAT_GOLD"/>
-			<event/>
-		</event>
-		</choice>
-		<choice>
-		<text>Request a crewmember!</text>
-		<event>
-			<text>The Trash Eater themselves beam onto your ship (although they also manage to consume some of your savings)!</text>
-			<item_modify>
-				<item type="scrap" min="-50" max="-50"/>
-			</item_modify>
-			<crewMember amount="1" class="trash_eater" all_skills="2">Trash Eater</crewMember>
-		</event>
+			<text>Request a golden drone.</text>
+			<event>
+				<text>You got a drone - and it's made out of gold!
+					The Trash Eater from this universe is impressed with your performance, and joins your crew.
+				</text>
+				<drone name="TC_COMBAT_GOLD"/>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+			</event>
 		</choice>
 	</event>
 
 	<event name="TC5_DESTROY">
-		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. </text>
+		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. 
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_BATTERY"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -262,7 +577,8 @@
 	</event>
 
 	<event  name="TC5_CREW">
-		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. </text>
+		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. 
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<weapon name="TC_SHOTGUN_BATTERY"/>
 		<hiddenAug>TC_DEAD</hiddenAug>
@@ -270,7 +586,18 @@
 	</event>
 
 	<event name="TC6_DESTROY">
-		<text>The Trash Compactor has been laid to rest amongst the stars; the wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! </text>
+		<text>The Trash Compactor has been laid to rest amongst the stars; the wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! 
+		</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<augment name="COMPACTOR"/>
+		<unlockCustomShip>PLAYER_SHIP_SCRAPPER</unlockCustomShip>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC6_DEAD</hiddenAug>
+	</event>
+	
+	<event name="TC6_CREW">
+		<text>The Trash Compactor is now empty, forever. The wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! 
+		</text>
 		<autoReward level="HIGH">stuff</autoReward>
 		<augment name="COMPACTOR"/>
 		<unlockCustomShip>PLAYER_SHIP_SCRAPPER</unlockCustomShip>
@@ -290,14 +617,7 @@
 		<augment name="AUTOMATED_QUARTERMASTER"/>
 	</event>
 
-	<event name="TC6_CREW">
-		<text>The Trash Compactor is now empty, forever. The wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! </text>
-		<autoReward level="HIGH">stuff</autoReward>
-		<augment name="COMPACTOR"/>
-		<unlockCustomShip>PLAYER_SHIP_SCRAPPER</unlockCustomShip>
-		<hiddenAug>TC_DEAD</hiddenAug>
-		<hiddenAug>TC6_DEAD</hiddenAug>
-	</event>
+
 
 	<event name="KM_DESTROY">
 		<text>You've destroyed the bigger ship... and you got their stuff. Let's hope this was worth it. </text>
@@ -1132,7 +1452,8 @@
 </choice>
 </event>
 
-<!--<event name="ENCOUNTER_TC3">
+<!--
+<event name="ENCOUNTER_TC3">
 	<text>Hold on, we just killed these guys. How and why are they back? They... they seem to have learned from the previous engagements, as this time they've got you cornered.</text>
 	<beaconType id="map_icon_trash" global="true">
         <color r="110" g="32" b="9" a="1.0"/>
@@ -1169,7 +1490,8 @@
 			</choice>
 		</event>
 	</choice>
-</event>-->
+</event>
+-->
 
 <event name="ENCOUNTER_TC3">
 	<text>Arriving at the beacon, you are met by four entire ships, all of them readying weapons against you. You won't be able to manuever away without fighting at least one ship.</text>
@@ -1418,6 +1740,297 @@
 		</event>
 	</choice>
 </event>
+
+<ship name="SCRAPPER_SCOUT" auto_blueprint="SCRAPPER_SCOUT">
+	<destroyed load="SCRAPPER_SCOUT_DESTROYED" />
+	<deadCrew load="SCRAPPER_SCOUT_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_BOMBER" auto_blueprint="SCRAPPER_BOMBER">
+	<destroyed load="SCRAPPER_BOMBER_DESTROYED" />
+	<deadCrew load="SCRAPPER_BOMBER_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_SHOP" auto_blueprint="SCRAPPER_SHOP">
+	<destroyed load="SCRAPPER_SHOP_DESTROYED" />
+	<deadCrew load="SCRAPPER_SHOP_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_CRUISER" auto_blueprint="SCRAPPER_CRUISER">
+	<destroyed load="SCRAPPER_CRUISER_DESTROYED" />
+	<deadCrew load="SCRAPPER_CRUISER_DEADCREW" />
+</ship>
+
+<ship name="TC_SCRAPPER_CORVETTE" auto_blueprint="TC_SCRAPPER_CORVETTE">
+	<destroyed load="TC_SCRAPPER_CORVETTE_DESTROYED" />
+	<deadCrew load="TC_SCRAPPER_CORVETTE_DEADCREW" />
+</ship>
+
+<ship name="TC_SCRAPPER_HUNTER" auto_blueprint="TC_SCRAPPER_HUNTER">
+	<destroyed load="TC_SCRAPPER_HUNTER_DESTROYED" />
+	<deadCrew load="TC_SCRAPPER_HUNTER_DEADCREW" />
+</ship>
+
+<ship name="TC_SCRAPPER_CORVETTE" auto_blueprint="TC_SCRAPPER_CORVETTE">
+	<destroyed load="TC_SCRAPPER_SUPPORT_DESTROYED" />
+	<deadCrew load="TC_SCRAPPER_SUPPORT_DEADCREW" />
+</ship>
+
+
+<event name="SCRAPPER_ENCOUNTER_SHOP">
+	<text>A scrapper vessel is in this sector. It's broadcasting a signal simply asking for scrap. Perhaps they mean to trade?</text>
+	<ship load="SCRAPPER_SHOP" hostile="false" />
+	<choice hidden="true">
+		<text>Attack them!</text>
+		<event>
+			<text>"3XCUSE M3!?!"</text>
+			<text>It seems a boarding party has entered your ship. Maybe they had a super shield bypass?</text>
+			<ship hostile="true"/>
+			<boarders min="2" max="2" class="scrapper_soldier" />
+			<boarders min="1" max="1" class="scrapper_medic" />
+			<boarders min="1" max="1" class="scrapper_heavy" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
+		</event>
+	<choice hidden="true">
+		<text>Hail them and see if they want scrap.</text>
+		<event>
+			<text>"W3 NEED SCRAP!" </text>
+			<store>SCRAPPER_NORMAL_STORE</store>
+		</event>
+	</choice>
+	<choice req="LIST_CREW_SCRAPPER" blue="true" hidden="true">
+		<text>Your scrapper waves his hands and sends a signal to the scrapper ship; "C0UPON COD3!!!" He types in a short code and you notice the store prices drop!</text>
+		<store>SCRAPPER_NORMAL_STORE_DISCOUNT</store>
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_BOMBER">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="SCRAPPER_BOMBER" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_CRUISER">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="SCRAPPER_CRUISER" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_SUPPORT">
+	<text>A scrapper support ship is in this sector. It seems to not notice you, or it does and it does not care.</text>
+	<ship load="TC_SCRAPPER_SUPPORT" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack the ship before it gets any bright ideas.</text>
+			<ship hostile="true"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
+	</choice>
+	<choice req="LIST_CREW_SCRAPPER" blue="true" hidden="true">
+		<text>Consult your scrapper.</text>
+		<event>
+			<text>Your scrapper advises you that the support ship seems to be lost. It is supposed to be with others, as part of a fleet, but this one is alone. They may need help but may find themselves unable to ask. 
+			Your scrapper tells you that it would be good to hail them, as scrappers typically only care about 1 thing and are generally not overly hostile to aliens or humans.</text>
+			<choice hidden="true" blue="true">
+				<text>Hail the scrapper support ship and offer assistance.</text>
+				<event>
+					<text>The Scrapper captain responds to you with a bit of a flustered tone, "HAPPY T0 S33 FL3SHY C@PTA!N WE ARE IN NEED 0F R3PA!RS!! C@N Y0U SPARE SCR@P!!???"</text>
+					<text>It seems that the scrapper does indeed only have 1 thing on its mind.</text>
+					<choice req="LIST_CREW_SCRAPPER" blue="true">
+						<text>Ask your Scrapper what they think.</text>
+						<event>
+							<text>Your Scrapper tells you that the Scrapper captain sounds genuine, but you can never be too sure since, of course, he's asking for Scrap.
+							But if you are able to help someone, don't you think you should?</text>
+							<choice hidden="true">
+								<text>Transfer the Scrapper some scrap to help facilitate their repairs.</text>
+									<event>
+										<text>You send over the scrap...</text>
+										<item_modify> 
+											<item type="scrap" min="-35" max="-35"/>
+										</item_modify>
+										<choice hidden="true">
+											<text>Continue...</text>
+										</choice>
+											<event>
+												<text>"TH@NK Y0U CAPT@IN! W3 C@N OP3RATE 0UR ENGINES AGAIN!! TAKE FANCY M@CHINE WE F!ND"</text>
+												<augment name="CREW_UPGRADER" />
+											</event>
+									</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Order your crew to prepare for battle!</text>
+					<event>
+						<ship hostile="true"/>
+						<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK" />
+					</event>
+			</choice>
+			<choice hidden="true">
+				<text>Leave them alone.</text>
+				<event/>
+			</choice>
+		</event>
+	<choice hidden="true">
+		<text>Leave them alone.</text>
+		<event/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_HUNTER">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="TC_SCRAPPER_HUNTER" hostile="true"/>
+		<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_CORVETTE">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="TC_SCRAPPER_CORVETTE" hostile="true"/>
+		<choice hidden="true">
+		<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_SCOUT">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="SCRAPPER_SCOUT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_SCOUT_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SCOUT_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="SCRAPPER_BOMBER_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="SCRAPPER_BOMBER_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SHOP_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SHOP_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="TC_SCRAPPER_CORVETTE_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="TC_SCRAPPER_CORVETTE_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="TC_SCRAPPER_HUNTER_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="TC_SCRAPPER_HUNTER_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="TC_SCRAPPER_SUPPORT_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="TC_SCRAPPER_SUPPORT_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="SCRAPPER_CRUISER_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+<event name="SCRAPPER_CRUISER_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+	</choice>
+</event>
+
+
 
 
 		<mod:findName type="event" name="SYLVAN_ROYAL_NORMAL">

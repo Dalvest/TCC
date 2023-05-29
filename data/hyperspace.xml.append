@@ -87,13 +87,7 @@ SPEED          Changes gamespeed
     <eventFile>echelon</eventFile>
   </events>
 
-
-  <!--
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  STORE LISTS
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+     <!--//////////////////////////////////////////////////////////STORES/////////////////////////////////////////////////////////-->
 
   <mod:findLike type="store">
     <mod-append:customStore id="STORE_NOODLE">
@@ -396,6 +390,122 @@ SPEED          Changes gamespeed
   </mod:findLike>
 
 
+<!--////////////////////////////////////////////////SCRAPPER STORE///////////////////////////////////////////////////////-->
+
+
+<store>
+	<customStore id="SCRAPPER_NORMAL_STORE">
+		<itemPurchaseLimit>4</itemPurchaseLimit>
+		<hullRepair>
+			<price min="2" max="3" />
+			<sectorScaled />
+		</hullRepair>
+		<category type="WEAPONS">
+			<customTitle>WEAPONS</customTitle>
+			<item>
+				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<modifier min="1" max="1" flat="false" />
+				<price>-1</price>
+			</item>
+			<item>
+				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<modifier min="1" max="1" flat="false" />
+				<price>-1</price>
+			</item>
+			<item>
+				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<modifier min="1" max="1" flat="false" />
+				<price>-1</price>
+			</item>
+		</category>
+		<category type="CREW">
+			<customTitle>SCRAPPERS</customTitle>
+			<allowDuplicates />
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<chance>100</chance>
+		</category>
+		<category type="CREW">
+			<customTitle>SCRAPPERS</customTitle>
+			<allowDuplicates />
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<chance>100</chance>
+		</category>
+	</customStore>
+</store>
+
+<store>
+	<customStore id="SCRAPPER_NORMAL_STORE_DISCOUNT">
+		<itemPurchaseLimit>4</itemPurchaseLimit>
+		<hullRepair>
+			<price min="1" max="1" />
+			<sectorScaled />
+		</hullRepair>
+		<category type="WEAPONS">
+			<customTitle>WEAPONS(COD3 '5CR@P' ACC3PTED!)</customTitle>
+			<item>
+				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<modifier min="0.7" max="0.7" flat="false" />
+				<price>-1</price>
+			</item>
+			<item>
+				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<modifier min="0.7" max="0.7" flat="false" />
+				<price>-1</price>
+			</item>
+			<item>
+				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<modifier min="0.7" max="0.7" flat="false" />
+				<price>-1</price>
+			</item>
+		</category>
+		<category type="CREW">
+			<customTitle>SCRAPPERS</customTitle>
+			<allowDuplicates />
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<chance>100</chance>
+		</category>
+		<category type="CREW">
+			<customTitle>SCRAPPERS</customTitle>
+			<allowDuplicates />
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_SCRAPPER_STORE</blueprint>
+			</item>
+			<chance>100</chance>
+		</category>
+	</customStore>
+</store>
+
+
   <!--
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -432,25 +542,26 @@ SPEED          Changes gamespeed
       <crewLimit>8</crewLimit>
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+	  <hiddenAug>ADVANCED_SCRAP</hiddenAug>
       <crew>
-        <scrapper_scavenger room="0" name="Zuggo" />
-        <scrapper_heavy room="5" />
-        <scrapper_engineer room="2" name="Ash" />
+        <scrapper_engineer room="0" name="Zuggo" />
+        <scrapper room="5" />
+        <scrapper room="2" name="Ash" />
         <scrapper room="15"/>
       </crew>
     </mod-append:customShip>
 
     <mod-append:customShip name="PLAYER_SHIP_SCRAPPER_2">
-      <crewLimit>10</crewLimit>
+      <crewLimit>12</crewLimit>
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+	  <hiddenAug>ADVANCED_SCRAP</hiddenAug>
       <crew>
         <scrapper_engineer room="0"/>
-        <scrapper_heavy room="1"/>
-        <scrapper_soldier room="1"/>
-        <scrapper_soldier room="1"/>
+        <lanius room="1"/>
         <scrapper room="1"/>
-        <scrapper room="2"/>
+        <scrapper room="1"/>
+        <scrapper room="1"/>
       </crew>
     </mod-append:customShip>
 
@@ -1723,122 +1834,809 @@ SPEED          Changes gamespeed
 		</mod-append:race>
 
 		<!--///////GENERIC//////-->
+		
+<mod-append:race name="rosegold_scrapper">
+	<maxHealth>125</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>2</repairSpeed>
+	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.0</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
+	<damageMultiplier>0.5</damageMultiplier>
+	<bonusPower>1</bonusPower>
+	<resistsMindControl>true</resistsMindControl>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<statBoost name="moveSpeedMultiplier">
+		<boostType>MULT</boostType>
+		<amount>1.075</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="repairSpeed">
+		<boostType>MULT</boostType>
+		<amount>1.075</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="maxHealth">
+		<boostType>MULT</boostType>
+		<amount>1.075</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="damageTakenMultiplier">
+		<boostType>MULT</boostType>
+		<amount>0.9</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+</mod-append:race>
 
-		<mod-append:race name="scrapper">
-			<maxHealth>125</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
-			<canSuffocate>false</canSuffocate>
-			<repairSpeed>1.5</repairSpeed>
-			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
-			<fireDamageMultiplier>0.75</fireDamageMultiplier>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-		</mod-append:race>
+<mod-append:race name="rosegold_scrapper_2">
+	<maxHealth>150</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>2.5</repairSpeed>
+	<moveSpeedMultiplier>1</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.0</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
+	<damageMultiplier>0.5</damageMultiplier>
+	<bonusPower>2</bonusPower>
+	<resistsMindControl>true</resistsMindControl>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<statBoost name="moveSpeedMultiplier">
+		<boostType>MULT</boostType>
+		<amount>1.1</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="repairSpeed">
+		<boostType>MULT</boostType>
+		<amount>1.1</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="maxHealth">
+		<boostType>MULT</boostType>
+		<amount>1.1</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="damageTakenMultiplier">
+		<boostType>MULT</boostType>
+		<amount>0.85</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+</mod-append:race>
 
-		<mod-append:race name="scrapper_soldier">
-			<maxHealth>125</maxHealth>
-			<canRepair>false</canRepair>
-			<canMan>false</canMan>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
-			<canSuffocate>false</canSuffocate>
-			<repairSpeed>1</repairSpeed>
-			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
-			<fireDamageMultiplier>0.75</fireDamageMultiplier>
-			<damageMultiplier>2</damageMultiplier>
-			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-		</mod-append:race>
+<mod-append:race name="rosegold_scrapper_3">
+	<maxHealth>200</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>2.75</repairSpeed>
+	<moveSpeedMultiplier>1.25</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.0</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
+	<damageMultiplier>1</damageMultiplier>
+	<bonusPower>3</bonusPower>
+	<resistsMindControl>true</resistsMindControl>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<statBoost name="moveSpeedMultiplier">
+		<boostType>MULT</boostType>
+		<amount>1.15</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="repairSpeed">
+		<boostType>MULT</boostType>
+		<amount>1.15</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="maxHealth">
+		<boostType>MULT</boostType>
+		<amount>1.15</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+	<statBoost name="damageTakenMultiplier">
+		<boostType>MULT</boostType>
+		<amount>0.8</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<affectsSelf>true</affectsSelf>
+	</statBoost>
+</mod-append:race>
 
-		<mod-append:race name="scrapper_heavy">
-			<maxHealth>250</maxHealth>
-			<oxygenChangeSpeed>-0.2625</oxygenChangeSpeed>
-			<canSuffocate>false</canSuffocate>
-			<repairSpeed>0.5</repairSpeed>
-			<moveSpeedMultiplier>0.25</moveSpeedMultiplier>
-			<fireDamageMultiplier>0.5</fireDamageMultiplier>
-			<damageMultiplier>2.5</damageMultiplier>
-			<sabotageSpeedMultiplier>2.5</sabotageSpeedMultiplier>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-		</mod-append:race>
+<mod-append:race name="golden_scrapper">
+	<maxHealth>100</maxHealth>
+	<repairSpeed>1.5</repairSpeed>
+	<fireRepairMultiplier>1.5</fireRepairMultiplier>
+	<canSuffocate>false</canSuffocate>
+	<fireDamageMultiplier>0.5</fireDamageMultiplier>
+	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
+	<damageMultiplier>1.25</damageMultiplier>
+	<damageTakenMultiplier>0.9</damageTakenMultiplier>
+	<suffocationModifier>0</suffocationModifier>
+	<oxygenChangeSpeed>-0.5</oxygenChangeSpeed>
+	<isAnaerobic>true</isAnaerobic>
+	<animBase>anaerobic</animBase>
+	<bonusPower>1</bonusPower>
+	<powerDrain>1</powerdrain>
+	<deathSounds>
+		<deathSound>ancientDeath</deathSound>
+	</deathSounds>
+	<repairSounds>
+	  <repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+</mod-append:race>
+	
+<mod-append:race name="golden_scrapper_2">
+	<maxHealth>125</maxHealth>
+	<repairSpeed>2</repairSpeed>
+	<fireRepairMultiplier>2</fireRepairMultiplier>
+	<canSuffocate>false</canSuffocate>
+	<fireDamageMultiplier>.5</fireDamageMultiplier>
+	<moveSpeedMultiplier>1</moveSpeedMultiplier>
+	<damageMultiplier>1.5</damageMultiplier>
+	<damageTakenMultiplier>0.85</damageTakenMultiplier>
+	<suffocationModifier>0</suffocationModifier>
+	<oxygenChangeSpeed>-0.5</oxygenChangeSpeed>
+	<isAnaerobic>true</isAnaerobic>
+	<animBase>anaerobic</animBase>
+	<bonusPower>2</bonusPower>
+	<powerDrain>2</powerdrain>
+	<deathSounds>
+		<deathSound>ancientDeath</deathSound>
+	</deathSounds>
+	<repairSounds>
+	  <repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+</mod-append:race>
+	
+<mod-append:race name="golden_scrapper_3">
+	<maxHealth>150</maxHealth>
+	<repairSpeed>2.5</repairSpeed>
+	<fireRepairMultiplier>2.5</fireRepairMultiplier>
+	<canSuffocate>false</canSuffocate>
+	<canBurn>false</canBurn>
+	<fireDamageMultiplier>0</fireDamageMultiplier>
+	<moveSpeedMultiplier>1.25</moveSpeedMultiplier>
+	<damageMultiplier>2</damageMultiplier>
+	<damageTakenMultiplier>0.8</damageTakenMultiplier>
+	<suffocationModifier>0</suffocationModifier>
+	<oxygenChangeSpeed>-0.5</oxygenChangeSpeed>
+	<isAnaerobic>true</isAnaerobic>
+	<animBase>anaerobic</animBase>
+	<bonusPower>3</bonusPower>
+	<powerDrain>3</powerdrain>
+	<deathSounds>
+		<deathSound>ancientDeath</deathSound>
+	</deathSounds>
+	<repairSounds>
+	  <repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+</mod-append:race>
 
-		<mod-append:race name="scrapper_engineer">
-			<maxHealth>125</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
-			<canSuffocate>false</canSuffocate>
-			<repairSpeed>3</repairSpeed>
-			<moveSpeedMultiplier>0.9</moveSpeedMultiplier>
-			<fireDamageMultiplier>0.75</fireDamageMultiplier>
-			<damageMultiplier>0.75</damageMultiplier>
-			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-		</mod-append:race>
+<mod-append:race name="adamantine_scrapper">
+	<maxHealth>125</maxHealth>
+	<fireRepairMultiplier>0.5</fireRepairMultiplier>
+	<canSuffocate>false</canSuffocate>
+	<canBurn>true</canBurn>
+	<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+	<fireDamageMultiplier>4</fireDamageMultiplier>
+	<suffocationModifier>0</suffocationModifier>
+	<oxygenChangeSpeed>-0.5</oxygenChangeSpeed>
+	<damageMultiplier>0.75</damageMultiplier>
+	<isAnaerobic>true</isAnaerobic>
+	<animBase>anaerobic</animBase>
+	<repairspeed>0.75</repairspeed>
+	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
+	<passiveStatBoosts>
+	<statBoost name="isAnaerobic">
+		<boostType>SET</boostType>
+		<value>false</value>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+	</statBoost>
+	<statBoost name="canSuffocate">
+		<boostType>SET</boostType>
+		<value>true</value>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+	</statBoost>
+	<statBoost name="suffocationModifier">
+		<boostType>SET</boostType>
+		<amount>1.2</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+		<maxStacks>1</maxStacks>
+		<blackList load="LIST_CREW_SHELL"/>
+	</statBoost>
+	<statBoost name="moveSpeedMultiplier">
+		<boostType>MULT</boostType>
+		<amount>0.8</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+	</statBoost>
+	<statBoost name="repairSpeed">
+		<boostType>MULT</boostType>
+		<amount>0.8</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+	</statBoost>
+	<statBoost name="suffocationModifier">
+		<boostType>MULT</boostType>
+		<amount>1.1</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+		<whiteList load="LIST_CREW_SHELL"/>
+	</statBoost>
+  </passiveStatBoosts>
+	<deathSounds>
+		<deathSound>ancientDeath</deathSound>
+	</deathSounds>
+	<repairSounds>
+	  <repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+</mod-append:race>
 
-		<mod-append:race name="scrapper_speed">
-			<maxHealth>125</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
-			<canSuffocate>false</canSuffocate>
-			<repairSpeed>1.5</repairSpeed>
-			<moveSpeedMultiplier>2</moveSpeedMultiplier>
-			<fireDamageMultiplier>0.75</fireDamageMultiplier>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-		</mod-append:race>
+<mod-append:race name="adamantine_scrapper_2">
+	<maxHealth>150</maxHealth>
+	<fireRepairMultiplier>0.5</fireRepairMultiplier>
+	<canSuffocate>false</canSuffocate>
+	<canBurn>true</canBurn>
+	<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+	<fireDamageMultiplier>2.5</fireDamageMultiplier>
+	<suffocationModifier>0</suffocationModifier>
+	<oxygenChangeSpeed>-1</oxygenChangeSpeed>
+	<damageMultiplier>1</damageMultiplier>
+	<isAnaerobic>true</isAnaerobic>
+	<animBase>anaerobic</animBase>
+	<repairspeed>1</repairspeed>
+	<moveSpeedMultiplier>1</moveSpeedMultiplier>
+	<passiveStatBoosts>
+	<statBoost name="isAnaerobic">
+		<boostType>SET</boostType>
+		<value>false</value>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+	</statBoost>
+	<statBoost name="canSuffocate">
+		<boostType>SET</boostType>
+		<value>true</value>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+	</statBoost>
+	<statBoost name="suffocationModifier">
+		<boostType>SET</boostType>
+		<amount>1.4</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+		<maxStacks>1</maxStacks>
+		<blackList load="LIST_CREW_SHELL"/>
+	</statBoost>
+	<statBoost name="moveSpeedMultiplier">
+		<boostType>MULT</boostType>
+		<amount>0.6</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+	</statBoost>
+	<statBoost name="repairSpeed">
+		<boostType>MULT</boostType>
+		<amount>0.6</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+	</statBoost>
+	<statBoost name="suffocationModifier">
+		<boostType>MULT</boostType>
+		<amount>1.2</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+		<whiteList load="LIST_CREW_SHELL"/>
+	</statBoost>
+  </passiveStatBoosts>
+	<deathSounds>
+		<deathSound>ancientDeath</deathSound>
+	</deathSounds>
+	<repairSounds>
+	  <repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+</mod-append:race>
 
-		<mod-append:race name="scrapper_defender">
-			<maxHealth>150</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
-			<canSuffocate>false</canSuffocate>
-			<repairSpeed>1.5</repairSpeed>
-			<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
-			<fireDamageMultiplier>0.75</fireDamageMultiplier>
-			<damageTakenMultiplier>0.8</damageTakenMultiplier>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-		</mod-append:race>
+<mod-append:race name="adamantine_scrapper_3">
+	<maxHealth>200</maxHealth>
+	<fireRepairMultiplier>0.5</fireRepairMultiplier>
+	<canSuffocate>false</canSuffocate>
+	<canBurn>true</canBurn>
+	<sabotageSpeedMultiplier>3</sabotageSpeedMultiplier>
+	<fireDamageMultiplier>1</fireDamageMultiplier>
+	<suffocationModifier>0</suffocationModifier>
+	<oxygenChangeSpeed>-2</oxygenChangeSpeed>
+	<damageMultiplier>1.25</damageMultiplier>
+	<isAnaerobic>true</isAnaerobic>
+	<animBase>anaerobic</animBase>
+	<repairspeed>1.5</repairspeed>
+	<moveSpeedMultiplier>1.25</moveSpeedMultiplier>
+	<passiveStatBoosts>
+	<statBoost name="isAnaerobic">
+		<boostType>SET</boostType>
+		<value>false</value>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+	</statBoost>
+	<statBoost name="canSuffocate">
+		<boostType>SET</boostType>
+		<value>true</value>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+	</statBoost>
+	<statBoost name="suffocationModifier">
+		<boostType>SET</boostType>
+		<amount>1.6</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<priority>0</priority>
+		<maxStacks>1</maxStacks>
+		<blackList load="LIST_CREW_SHELL"/>
+	</statBoost>
+	<statBoost name="moveSpeedMultiplier">
+		<boostType>MULT</boostType>
+		<amount>0.4</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+	</statBoost>
+	<statBoost name="repairSpeed">
+		<boostType>MULT</boostType>
+		<amount>0.4</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+	</statBoost>
+	<statBoost name="suffocationModifier">
+		<boostType>MULT</boostType>
+		<amount>1.4</amount>
+		<shipTarget>CURRENT_ROOM</shipTarget>
+		<crewTarget>ENEMIES</crewTarget>
+		<affectsSelf>false</affectsSelf>
+		<maxStacks>1</maxStacks>
+		<whiteList load="LIST_CREW_SHELL"/>
+	</statBoost>
+  </passiveStatBoosts>
+	<deathSounds>
+		<deathSound>ancientDeath</deathSound>
+	</deathSounds>
+	<repairSounds>
+	  <repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+</mod-append:race>
 
-		<mod-append:race name="scrapper_scavenger">
-			<maxHealth>150</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
-			<canSuffocate>false</canSuffocate>
-			<repairSpeed>2</repairSpeed>
-			<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
-			<fireDamageMultiplier>0.5</fireDamageMultiplier>
-			<damageMultiplier>2</damageMultiplier>
-			<sabotageSpeedMultiplier>2.5</sabotageSpeedMultiplier>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-		</mod-append:race>
+<mod-append:race name="scrapper">
+	<maxHealth>115</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>1.5</repairSpeed>
+	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+	<damageMultiplier>0.75</damageMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="24"/>
+	<combat req="12"/>
+</skills>
+</mod-append:race>
+
+<mod-append:race name="scrapper_soldier">
+	<maxHealth>135</maxHealth>
+	<canRepair>false</canRepair>
+	<canMan>false</canMan>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<damageMultiplier>1.35</damageMultiplier>
+	<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="24"/>
+	<combat req="10"/>
+</skills>
+</mod-append:race>
+
+<mod-append:race name="scrapper_heavy">
+	<maxHealth>175</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+	<canSuffocate>false</canSuffocate>
+	<canRepair>false</canRepair>
+	<canMan>false</canMan>
+	<moveSpeedMultiplier>0.5</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.5</fireDamageMultiplier>
+	<damageMultiplier>1.75</damageMultiplier>
+	<sabotageSpeedMultiplier>2.0</sabotageSpeedMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+<powerEffect>
+	<cooldown>25</cooldown>
+	<jumpCooldown>full</jumpCooldown>
+	<powerSounds>
+		<powerSound>lockdown1</powerSound>
+	</powerSounds>
+	<req type="enemy">
+	</req>
+	<powerCharges>1</powerCharges>
+	<initialCharges>1</initialCharges>
+	<damage>1</damage>
+	<sysDamage>1</sysDamage>
+	<stun>3</stun>
+	<friendlyFire>false</friendlyFire>
+	<shipFriendlyFire>false</shipFriendlyFire>
+	<buttonText>DISPERSE</buttonText>
+	<tooltip>Ready: Deal 1 hull damage, 1 system damage, and stun nearby enemies for 3 seconds.</tooltip>
+	<cooldownColor r="255" g="18" b="0"/>
+	<effectAnim>explosion_random</effectAnim>
+	<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+</powerEffect>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="24"/>
+	<combat req="10"/>
+</skills>
+</mod-append:race>
+
+<mod-append:race name="scrapper_engineer">
+	<maxHealth>115</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>2</repairSpeed>
+	<moveSpeedMultiplier>1.25</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.25</fireDamageMultiplier>
+	<damageMultiplier>0.5</damageMultiplier>
+	<canSabotage>false</canSabotage>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="18"/>
+	<combat req="12"/>
+</skills>
+</mod-append:race>
+
+<mod-append:race name="scrapper_heavy_mk2">
+	<maxHealth>200</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+	<canSuffocate>false</canSuffocate>
+	<canRepair>false</canRepair>
+	<canMan>false</canMan>
+	<moveSpeedMultiplier>0.5</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.5</fireDamageMultiplier>
+	<damageMultiplier>2</damageMultiplier>
+	<sabotageSpeedMultiplier>2.25</sabotageSpeedMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+<powerEffect>
+	<cooldown>25</cooldown>
+	<jumpCooldown>full</jumpCooldown>
+	<powerSounds>
+		<powerSound>lockdown1</powerSound>
+	</powerSounds>
+	<req type="enemy"></req>
+	<powerCharges>1</powerCharges>
+	<initialCharges>1</initialCharges>
+	<damage>2</damage>
+	<sysDamage>2</sysDamage>
+	<stun>6</stun>
+	<friendlyFire>false</friendlyFire>
+	<shipFriendlyFire>false</shipFriendlyFire>
+	<buttonText>DISPERSE</buttonText>
+	<tooltip>Ready: Deal 2 hull damage, 2 system damage, and stun nearby enemies for 6 seconds.</tooltip>
+	<cooldownColor r="255" g="18" b="0"/>
+	<effectAnim>explosion_random</effectAnim>
+	<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+</powerEffect>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="24"/>
+	<combat req="10"/>
+</skills>
+</mod-append:race>
+
+<mod-append:race name="scrapper_medic">
+	<maxHealth>115</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<canRepair>false</canRepair>
+	<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.5</fireDamageMultiplier>
+	<damageMultiplier>0.5</damageMultiplier>
+	<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
+	<animBase>lanius</animbase>
+	<passiveHealAmount>2</passiveHealAmount>
+	<passiveHealDelay>15</passiveHealDelay>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<powerEffect>
+		<tooltip>Ready: Heal the room!.</tooltip>
+		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+		<cooldown>45</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>healBomb</powerSound>
+		</powerSounds>
+		<powerCharges>2</powerCharges>
+		<initialCharges>1</initialCharges>
+		<chargesPerJump>1</chargesPerJump>
+		<req type="player">
+			<friendlyInRoom/>
+			<minHealth>51</maxHealth>
+		</req>
+		<friendlyFire>true</friendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
+		<buttonText>HEAL</buttonText>
+		<tooltip>[COOLDOWN:45s]
+			Heal all other friendly crew in the room for 50 hitpoints at the cost of it's own health.</tooltip>
+		<cooldownColor r="255" g="78" b="69"/>
+		<effectAnim>explosion_big1_heal</effectAnim>
+		<crewHealth>50</crewHealth>
+		<selfHealth>-50</selfHealth>
+</powerEffect>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="24"/>
+	<combat req="12"/>
+</skills>
+</mod-append:race>
+	
+<mod-append:race name="scrapper_defender">
+	<maxHealth>200</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<canRepair>false</canrepair>
+	<moveSpeedMultiplier>1</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<damageMultiplier>0.75</damageMultiplier>
+	<sabotageSpeedMultiplier>0.75</sabotageSpeedMultiplier>
+	<passiveStatBoosts>
+		<statBoost name="damageTakenMultiplier">
+			<boostType>FLAT</boostType>
+			<amount>0.9</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<priority>0</priority>
+		</statBoost>
+	</passiveStatBoosts>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="24"/>
+	<combat req="12"/>
+</skills>
+</mod-append:race>
+
+<mod-append:race name="scrapper_defender_mk2">
+	<maxHealth>240</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<canRepair>false</canrepair>
+	<moveSpeedMultiplier>1.2</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<damageMultiplier>1</damageMultiplier>
+	<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
+	<passiveStatBoosts>
+		<statBoost name="damageTakenMultiplier">
+			<boostType>FLAT</boostType>
+			<amount>0.8</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<priority>0</priority>
+		</statBoost>
+	</passiveStatBoosts>
+	<powerEffect>
+		<tooltip>Ready: Heal the room!.</tooltip>
+		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+		<cooldown>45</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>healBomb</powerSound>
+		</powerSounds>
+		<powerCharges>2</powerCharges>
+		<initialCharges>1</initialCharges>
+		<chargesPerJump>1</chargesPerJump>
+		<req type="player">
+			<friendlyInRoom/>
+			<minHealth>51</maxHealth>
+		</req>
+		<friendlyFire>true</friendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
+		<buttonText>HEAL</buttonText>
+		<tooltip>[COOLDOWN:45s]
+			Heal all other friendly crew in the room for 50 hitpoints at the cost of it's own health.</tooltip>
+		<cooldownColor r="255" g="78" b="69"/>
+		<effectAnim>explosion_big1_heal</effectAnim>
+		<crewHealth>50</crewHealth>
+		<selfHealth>-50</selfHealth>
+</powerEffect>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
+</mod-append:race>
+
+<mod-append:race name="scrapper_scavenger">
+	<maxHealth>135</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>2</repairSpeed>
+	<moveSpeedMultiplier>1.75</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.25</fireDamageMultiplier>
+	<canFight>false</canFight>
+	<sabotageSpeedMultiplier>2.5</sabotageSpeedMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="18"/>
+		<engines req="18"/>
+		<shields req="55"/>
+		<weapons req="65"/>
+		<repair req="18"/>
+		<combat req="9"/>
+	</skills>
+</mod-append:race>
+
+<mod-append:race name="scrapper_scavenger_mk2">
+	<maxHealth>165</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>3</repairSpeed>
+	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.25</fireDamageMultiplier>
+	<canFight>false</canFight>
+	<sabotageSpeedMultiplier>3</sabotageSpeedMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="18"/>
+		<engines req="18"/>
+		<shields req="55"/>
+		<weapons req="65"/>
+		<repair req="18"/>
+		<combat req="9"/>
+	</skills>
+</mod-append:race>
 
 		<!--/////// ROBOTTOS ////////-->
 
@@ -4758,7 +5556,7 @@ SPEED          Changes gamespeed
   				<shipTarget>ORIGINAL_SHIP</shipTarget>
   				<crewTarget>ALLIES</crewTarget>
   				<droneTarget>CREW</droneTarget>
-  				<amount>1.03</amount>
+  				<amount>1.01</amount>
   				<priority>-100</priority>
   			</statBoost>
   			<statBoost name="damageMultiplier">
@@ -4766,7 +5564,7 @@ SPEED          Changes gamespeed
   				<shipTarget>ORIGINAL_SHIP</shipTarget>
   				<crewTarget>ALLIES</crewTarget>
   				<droneTarget>CREW</droneTarget>
-  				<amount>1.03</amount>
+  				<amount>1.01</amount>
   				<priority>-100</priority>
   			</statBoost>
   			<statBoost name="maxHealth">
@@ -4774,11 +5572,155 @@ SPEED          Changes gamespeed
   				<shipTarget>ORIGINAL_SHIP</shipTarget>
   				<crewTarget>ALLIES</crewTarget>
   				<droneTarget>CREW</droneTarget>
-  				<amount>1.02</amount>
+  				<amount>1.01</amount>
   				<priority>-100</priority>
   			</statBoost>
   		</statBoosts>
   	</aug>
+	
+	<!--//////////////////CREW UPGRADER LAB UPGRADES//////////////-->
+	
+<aug name="LAB_CREW_UPGRADER_HEALTH">
+	<statboosts>
+		<statBoost name="maxHealth">
+			<boostType>MULT</boostType>
+			<amount>1.05</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost> 
+	</statboosts>
+</aug>
+
+<aug name="LAB_CREW_UPGRADER_DAMAGE">
+	<statboosts>
+		<statBoost name="damageMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.05</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost> 
+	</statboosts>
+</aug>
+
+<aug name="LAB_CREW_UPGRADER_MOVESPEED">
+	<statboosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.05</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost> 
+	</statboosts>
+</aug>
+
+<aug name="LAB_CREW_UPGRADER_REPAIR_SABOTAGE_SPEED">
+	<statboosts>
+		<statBoost name="repairspeed">
+			<boostType>MULT</boostType>
+			<amount>1.1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost> 
+		<statBoost name="sabotageSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost>
+	</statboosts>
+</aug>
+
+	<!--//////////////////SCRAPPER LAB UPGRADES//////////////-->
+	
+<aug name="LAB_SCRAPPER_BOARDING_GEAR">
+	<statBoosts>
+		<statBoost name="maxHealth">
+			<boostType>MULT</boostType>
+			<amount>1.075</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_SCRAPPER" />
+		</statBoost>
+		<statBoost name="damageMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.075</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_SCRAPPER" />
+		</statBoost>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.9</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_SCRAPPER" />
+		</statBoost>
+		<statBoost name="sabotageSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.15</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_SCRAPPER" />
+		</statBoost>
+	</statBoosts>
+</aug>
+
+<aug name="LAB_SCRAPPER_PRIMARY_INSTALLED"/>
+
+<aug name="LAB_SCRAPPER_TELEPATHIC_RESISTORS">
+		<statBoost name="resistsMindControl">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_SCRAPPER" />
+		</statBoost>
+</aug>
+	
+<aug name="LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR">
+	<statBoost name="damageTakenMultiplier">
+		<boostType>MULT</boostType>
+		<amount>0.75</amount>
+		<value>true</value>
+		<shipTarget>ORIGINAL_SHIP</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<priority>999</priority>
+		<whiteList load="LIST_CREW_SCRAPPER" />
+	</statBoost>
+</aug>
+	
+	<aug name="LAB_SCRAPPER_STRAP_TELEPORTERS_TO_THEM">
+	</aug>
+	
+	<aug name="LAB_SCRAPPER_METALLIC_SIPHON">
+		<statBoost name="powerEffect">
+			<boostType>FLAT</boostType>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_SCRAPPER" />
+			<powerEffect>
+				<cooldown>5</cooldown>
+				<jumpCooldown>continue</jumpcooldown>
+				<healAmount>15</healAmount>
+				<persDamage>1</persDamage>
+				<req type="enemy">
+					<enemyInRoom/>
+					<whitelist load="LIST_CREW_ENGI" />
+				</req>
+		</statBoost>
+	</aug>
+	
 
     <!--//////////////////PROTOGEN LAB UPGRADES//////////////-->
 
@@ -4927,7 +5869,7 @@ SPEED          Changes gamespeed
   		<statBoosts>
   			<statBoost name="statBoost">
 
-  								<statBoost name="repairSpeed">
+  					<statBoost name="repairSpeed">
                       <boostType>MULT</boostType>
                       <amount>1.15</amount>
                       <shipTarget>CURRENT_ROOM</shipTarget>
