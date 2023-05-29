@@ -250,17 +250,32 @@
 	<req>
 		<name>"LIST_CREW_SCRAPPER"</name>
 	</req>
-	<req lvl="0" max_lvl="3">
-		<name>tc_scrapper_job</name>
+	<req max_lvl="2">
+		<name>"tc_scrapper_job"</name>
 	</req>
 </req>
 		
-  
+<mod:findName type="event" name="ATLAS_MENU">
+	<mod-append:variable name="tc_scrapper_job" op="set" val="0">
+	</mod-append:variable>
+</mod:findName>
 
 <mod:findName type="event" name="STORAGE_CHECK_JOB_SALVAGE">
 	<mod-append:choice req="SCRAPPER_JOB_REQ" blue="false" hidden="true">
 		<text>Send out your Scrappers to look for scrap!</text>
 		<event load="STORAGE_CHECK_JOB_SCRAPPER"/>
+	</mod-append:choice>
+		<mod-append:choice req="tc_scrapper_job" lvl="1" max_lvl="1" blue="false" hidden="true">
+		<text>Your scrappers have scrapped this sector once.</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+		<mod-append:choice req="tc_scrapper_job" lvl="2" max_lvl="2" blue="false" hidden="true">
+		<text>Your scrappers have scrapped this sector twice.</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+		<mod-append:choice req="tc_scrapper_job" lvl="3" max_lvl="3" blue="false" hidden="true">
+		<text>Your scrappers have scrapped this sector three times.</text>
+		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
 	<mod-append:choice req="trash_eater" blue="false" hidden="true">
 		<text>Send out the Trash Eater to compact some floating debris.</text>
@@ -270,41 +285,40 @@
 		<mod:selector>Nevermind, do something else.</mod:selector>
 		<mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
 	</mod:findWithChildLike>
-
 </mod:findName>
 
 <eventList name="STORAGE_CHECK_JOB_SCRAPPER">
   <event>
     <text>Your scrappers return with bags of garbage. In those bags of garbage contain amounts of usable resources and a massive amount of shiny trash that the scrappers seem fascinated by.</text>
     <autoReward level="RANDOM">stuff</autoReward>
-	<variable name="tc_scrapper_job" op="set" val="1"/>
+	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
     <text>Your scrappers return with a box full of drone parts! Neat!</text>
-    <autoReward level="RANDOM">droneparts_only</autoReward>
-	<variable name="tc_scrapper_job" op="set" val="1"/>
+    <autoReward level="MED">droneparts_only</autoReward>
+	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
     <text>It seems that your scrappers have returned. You ask them where exactly they got the fuel they handed you, but they look to each other nervously. You notice the beacon outside is no longer transmitting. Well, what's done is done.</text>
-    <autoReward level="RANDOM">fuel</autoReward>
-	<variable name="tc_scrapper_job" op="set" val="1"/>
+    <autoReward level="MED">fuel</autoReward>
+	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
     <text>Your scrappers return with an entire piece of a destroyed ship and quickly break it down into useable scraps. One of them seems to have found a Protogen bobble-head, it is very happy.</text>
     <autoReward level="HIGH">scrap_only</autoReward>
-	<variable name="tc_scrapper_job" op="set" val="1"/>
+	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
     <text>Your scrappers return far later than you expected them to, a small amount of scrap in their hands, it seems they got lost, or perhaps that's just what they're telling you.</text>
     <modifyPursuit amount="1"/>
     <autoReward level="LOW">scrap_only</autoReward>
-	<variable name="tc_scrapper_job" op="set" val="1"/>
+	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
     <text>Your scrappers return extremely late with a small amount of scrap ready to give you. You can feel the fleet getting closer to you.</text>
     <modifyPursuit amount="1"/>
     <autoReward level="LOW">scrap_only</autoReward>
-	<variable name="tc_scrapper_job" op="set" val="1"/>
+	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
 </eventList>
 
@@ -1194,16 +1208,20 @@
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_LANIUS"/>
     </choice>
 	<choice req="scrapper" lvl="1" max_group="10" blue="false">
-		<text>Enhance your scrappers with multiversal energy.</text>
+		<text>Enhance your Scrappers with Multiversal energy.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL"/>
 	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_TIER_1" max_group="11" blue="false">
-		<text>Upgrade your Elemental Scrappers.</text>
+	<choice req="LIST_SCRAPPER_TIER_2" max_group="11" blue="false">
+		<text>Enhance your Tier 2 Scrappers with Multiversal energy.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2"/>
 	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_TIER_2" max_group="12" blue="false">
+	<choice req="LIST_ELEMENTAL_SCRAPPER_TIER_1" max_group="12" blue="false">
 		<text>Upgrade your Elemental Scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3"/>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL2"/>
+	</choice>
+	<choice req="LIST_ELEMENTAL_SCRAPPER_TIER_2" max_group="13" blue="false">
+		<text>Upgrade your Elemental Scrappers.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL3"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
@@ -1677,19 +1695,19 @@
 	</choice>
   </event>
   
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2">
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL2">
     <text>Your elemental scrappers can be upgraded further.</text>
     <choice req="rosegold_scrapper" lvl="1" max_group="1" blue="false">
       <text>Upgrade a Rosegold Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_TIER2"/>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL2"/>
     </choice>
     <choice req="golden_scrapper" lvl="1" max_group="2" blue="false">
       <text>Upgrade a Golden Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER2"/>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL2"/>
     </choice>
     <choice req="adamantine_scrapper" lvl="1" max_group="3" blue="false">
       <text>Upgrade an Adamantine Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER2"/>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_LEVEL2"/>
     </choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
@@ -1697,19 +1715,19 @@
 	</choice>
   </event>
   
- <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3">
+ <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL3">
     <text>Your elemental scrappers can be upgraded further.</text>
     <choice req="rosegold_scrapper_2" lvl="1" max_group="1" blue="false">
       <text>Upgrade a Rosegold Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_TIER3"/>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL3"/>
     </choice>
     <choice req="golden_scrapper_2" lvl="1" max_group="2" blue="false">
       <text>Upgrade a Golden Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER3"/>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL3"/>
     </choice>
     <choice req="adamantine_scrapper_2" lvl="1" max_group="3" blue="false">
       <text>Upgrade an Adamantine Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER3"/>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_LEVEL3"/>
     </choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
@@ -1804,7 +1822,7 @@
 	</choice>
   </event>
   
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_TIER2">
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL2">
     <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
 		150 Health
 		Immune to Fire Damage
@@ -1834,7 +1852,7 @@
 	</choice>
   </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER2">
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL2">
     <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to upgrade your Golden scrapper. 
 		125 Health
 		0.5x Fire Damage
@@ -1863,7 +1881,7 @@
 	</choice>
   </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER2">
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_LEVEL2">
     <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Adamantine. 
 		150 Health
 		2.5x Fire Damage
@@ -1891,7 +1909,7 @@
 	</choice>
   </event>
 
-    <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_TIER3">
+    <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL3">
     <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
 		150 Health
 		Immune to Fire Damage
@@ -1921,7 +1939,7 @@
 	</choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER3">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL3">
     <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to upgrade your Golden scrapper. 
 		150 Health
 		0.5x Fire Damage
@@ -1950,7 +1968,7 @@
 	</choice>
   </event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER3">
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_LEVEL3">
     <text>[Tier 1 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Adamantine. 
 		200 Health
 		1x Fire Damage
@@ -1977,6 +1995,115 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
+  
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2">
+	<text>Your tier 2 scrapper can be transformed into one of the tier 2 elemental scrappers.</text>
+	<choice req="scrapper_medic" lvl="1" max_group="1" blue="false">
+	  <text>Create a Rosegold Scrapper Engineer.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER"/>
+	</choice>
+    <choice req="scrapper_engineer" lvl="1" max_group="2" blue="false">
+      <text>Create a Golden Scrapper Medic.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC"/>
+    </choice>
+    <choice req="scrapper_soldier" lvl="1" max_group="3" blue="false">
+      <text>Create an Adamantine Scrapper Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_SOLDIER"/>
+    </choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER">
+    <text>[Tier 2 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		115 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		Cannot Sabotage
+		[Specialization]1.5x Move Speed
+		[Specialization]3x Repair Speed
+		Provides 1 power
+		Resists Mind Control
+		Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="scrapper_engineer">rosegold_engineer</transformRace>
+      </event>
+    </choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC">
+    <text>[Tier 2 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper medic with Gold. 
+		100 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		1x Damage
+		1x Repair Speed
+		1x Sabotage Damage
+		1x Move Speed
+		Provides 1 Power. Drains 1 Power from Enemy Systems
+		Damage from all sources is reduced by 10%
+		[Specialization]Heals itself after 15 second delay for 4hp/s
+		[Specialization]Can heal allies for 50 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
+	 </text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="scrapper_medic">golden_scrapper_medic</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_SOLDIER">
+    <text>[Tier 2 to Tier 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper soldier with Adamantine. 
+		135 Health
+		4x Fire Damage
+		1x Oxygen Drain
+		[Specialization]1.35x Damage
+		[Specialization]2.0x Sabotage Damage
+		0.75x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 50%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="scrapper_soldier">adamantine_scrapper_soldier</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+  
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           ROBOTTO UPGRADE MENU

@@ -10484,9 +10484,9 @@
 
 <crewBlueprint name="rosegold_scrapper">
 	<title>Rosegold Scrapper</title>
-	<short>R. Scrapper</short>
+	<short>RG. Scrapper</short>
 	<desc>[Tier 1 Elemental Scrapper] A Lanius that is a part of the illusionary Rosegold Scrapper faction.
-	Provides power to the room its in and provides a benefical aura to allies, that improves health, damage and repair speed. 
+	[Inherited Rosegold Traits: Provides power to the room its in and provides a benefical aura to allies, that improves health, damage and repair speed.]
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10502,16 +10502,16 @@
 		<power>0.5x Sabotage Damage</power>
 		<power>0.75x Move Speed</power>
 		<power>Provides 1 power</power>
-		<power>Resists mindcontrol</power>
+		<power>Resists Mind Control</power>
 		<power>Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%</power>
 	</powerList>
 </crewBlueprint>
 	
 <crewBlueprint name="rosegold_scrapper_2">
 	<title>Enhanced Rosegold Scrapper</title>
-	<short>E. R. Scrapper</short>
+	<short>E. RG. Scrapper</short>
 	<desc>[Tier 2 Elemental Scrapper] A Lanius that is a part of the illusionary Rosegold Scrapper faction. This one has been Upgraded.
-	Provides power to the room its in and provides a benefical aura to allies, that improves health, damage and repair speed. 
+	[Inherited Rosegold Traits: Provides power to the room its in and provides a benefical aura to allies, that improves health, damage and repair speed.]
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10527,16 +10527,16 @@
 		<power>0.5x Sabotage Damage</power>
 		<power>1x Move Speed</power>
 		<power>Provides 2 power</power>
-		<power>Resists mindcontrol</power>
+		<power>Resists Mind Control</power>
 		<power>Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 15%</power>
 	</powerList>
 </crewBlueprint>
 	
 <crewBlueprint name="rosegold_scrapper_3">
 	<title>Ascended Rosegold Scrapper</title>
-	<short>A. R. Scrapper</short>
+	<short>A. RG. Scrapper</short>
 	<desc>[Tier 3 Elemental Scrapper] A Lanius that is a part of the illusionary Rosegold Scrapper faction. This one has been considerably upgraded.
-	Provides power to the room its in and provides a benefical aura to allies, that improves health, damage and repair speed. 
+	[Inherited Rosegold Traits: Provides power to the room its in and provides a benefical aura to allies, that improves health, damage and repair speed.]
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10552,8 +10552,34 @@
 		<power>1.0x Sabotage Damage</power>
 		<power>1.25x Move Speed</power>
 		<power>Provides 3 power</power>
-		<power>Resists mindcontrol</power>
+		<power>Resists Mind Control</power>
 		<power>Increases nearby crews health, damage and repair speed by 15%. Reduces damage taken of nearby allies by 20%</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="rosegold_scrapper_engineer">
+	<title>Rosegold Scrapper Engineer</title>
+	<short>RG. Engineer</short>
+	<desc>
+	[Tier 2 Elemental Scrapper] A Scrapper Engineer, infused with Multiversal Rosegold Energy.
+	[Inherited Rosegold Traits: Provides power to the room its in and provides a benefical aura to allies, that improves health, damage and repair speed.]
+	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
+	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
+	</desc>
+	<cost>100</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>115 Health</power>
+		<power>Immune to Fire Damage</power>
+		<power>0.5x Oxygen Drain</power>		
+		<power>0.5x Damage</power>
+		<power>Cannot Sabotage</power>
+		<power>[Specialization]1.5x Move Speed</power>
+		<power>[Specialization]3x Repair Speed</power>
+		<power>Provides 1 power</power>
+		<power>Resists Mind Control</power>
+		<power>Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%</power>
 	</powerList>
 </crewBlueprint>
 
@@ -10561,9 +10587,9 @@
 
 <crewBlueprint name="adamantine_scrapper">
 	<title>Adamantine Scrapper</title>
-	<short>R. Scrapper</short>
+	<short>A. Scrapper</short>
 	<desc>[Tier 1 Elemental Scrapper] A Lanius that is a part of a clan of Scrappers that have covered themselves with Adamantine.
-	Has an aura of affliction that reduces enemy movement speed and increases damage taken by suffocation while making all enemies take damage from suffocation. Takes increased fire damage.
+	[Inherited Adamantine Traits: Has an aura of affliction that reduces enemy movement speed and increases damage taken by suffocation while making all enemies take damage from suffocation. Takes increased fire damage.]
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10584,9 +10610,9 @@
 
 <crewBlueprint name="adamantine_scrapper_2">
 	<title>Enhanced Adamantine Scrapper</title>
-	<short>E. R. Scrapper</short>
+	<short>E. A. Scrapper</short>
 	<desc>[Tier 2 Elemental Scrapper] A Lanius that is a part of a clan of Scrappers that have covered themselves with Adamantine. This one has been upgraded.
-	Has an aura of affliction that reduces enemy movement speed and increases damage taken by suffocation while making all enemies take damage from suffocation. Takes increased fire damage.
+	[Inherited Adamantine Traits: Has an aura of affliction that reduces enemy movement speed and increases damage taken by suffocation while making all enemies take damage from suffocation. Takes increased fire damage.]
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10607,9 +10633,9 @@
 
 <crewBlueprint name="adamantine_scrapper_3">
 	<title>Ascended Adamantine Scrapper</title>
-	<short>A. R. Scrapper</short>
+	<short>A. A. Scrapper</short>
 	<desc>[Tier 3 Elemental Scrapper] A Lanius that is a part of a clan of Scrappers that have covered themselves with Adamantine. This one has been considerably upgraded.
-	Has an aura of affliction that reduces enemy movement speed and increases damage taken by suffocation while making all enemies take damage from suffocation. Takes increased fire damage.
+	[Inherited Adamantine Traits: Has an aura of affliction that reduces enemy movement speed and increases damage taken by suffocation while making all enemies take damage from suffocation. Takes increased fire damage.]
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10625,6 +10651,30 @@
 		<power>3x Sabotage Damage</power>
 		<power>1.25x Move Speed</power>
 		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 90%</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="adamantine_scrapper_soldier">
+	<title>Adamantine Scrapper Soldier</title>
+	<short>A. Soldier</short>
+	<desc>
+	[Tier 2 Elemental Scrapper] A Scrapper Soldier infused with Adamantine Multiversal energy. Cannot man or repair systems. Learns combat slightly faster.
+	[Inherited Adamantine Traits: Has an aura of affliction that reduces enemy movement speed and increases damage taken by suffocation while making all enemies take damage from suffocation. Takes increased fire damage.]
+	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
+	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
+	</desc>
+	<cost>100</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Cannot Man or Repair Systems</power>
+		<power>135 Health</power>
+		<power>4x Fire Damage Taken</power>
+		<power>1x Oxygen Drain</power>		
+		<power>[Specialization]1.35x Damage</power>
+		<power>[Specialization]2.0x Sabotage Damage</power>
+		<power>0.75x Move Speed</power>
+		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 50%</power>
 	</powerList>
 </crewBlueprint>
 
@@ -10699,6 +10749,32 @@
 		<power>1.25x Move Speed</power>
 		<power>Provides 3 Power. Drains 3 Power from Enemy Systems.</power>
 		<power>Damage from all sources is reduced by 20%</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="golden_scrapper_medic">
+	<title>Golden Scrapper Medic</title>
+	<short>G. S. Medic</short>
+	<desc>[Tier 2 Elemental Scrapper] A Scrapper Medic that's been infused with Golden Multiversal energy.
+	[Inherited Golden Traits: Provides and Drains Power to room. Reduced incoming damage.]
+	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
+	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
+	</desc>
+	<cost>100</cost>
+	<bp>2</bp>
+	<rarity>3</rarity>
+	<powerList>
+		<power>100 Health</power>
+		<power>0.50x Fire Damage Taken</power>
+		<power>0.50x Oxygen Drain</power>		
+		<power>1x Damage</power>
+		<power>1x Sabotage Damage</power>
+		<power>1x Move Speed</power>
+		<power>1x Repair</power>
+		<power>Provides/Drains 1 power from room.</power>
+		<power>Damage from all sources is reduced by 10%</power>
+		<power>[Specialization]Heals itself after 15 second delay for 4hp/s</power>
+		<power>[Specialization]Can heal allies for 50 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.</power>
 	</powerList>
 </crewBlueprint>
 
