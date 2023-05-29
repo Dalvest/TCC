@@ -147,7 +147,7 @@
 		</choice>
 
     <choice req="NOODLE_RATIONS_UPGRADE" lvl="0" max_lvl="19" blue="false">
-      <text>Upgrade your Noodle Rations using fuel to give an additional 1.03x multiplier to movement speed, combat damage, and max health. Don't ask how fuel works to upgrade rations - that's classified.</text>
+      <text>Upgrade your Noodle Rations using fuel to give an additional 1.01x multiplier to movement speed, combat damage, and max health. Don't ask how fuel works to upgrade rations - that's classified.</text>
       <event>
         <text>The noodles undergo the process. You are unsure how.</text>
         <hiddenAug>NOODLE_RATIONS_UPGRADE</hiddenAug>
@@ -243,21 +243,70 @@
   </event>
 
     <!--//////////////////////////////////////////////////////////
-  ////////////// TRASH EATER STORAGE CHECK ABILITY ///////////////
+  ////////////// TRASH EATER AND SCRAPPER STORAGE CHECK ABILITY ///////////////
   ///////////////////////////////////////////////////////////-->
+  
+<req name="SCRAPPER_JOB_REQ">
+	<req>
+		<name>"LIST_CREW_SCRAPPER"</name>
+	</req>
+	<req lvl="0" max_lvl="3">
+		<name>tc_scrapper_job</name>
+	</req>
+</req>
+		
+  
 
-<mod:findName type="event" name="STORAGE_CHECK_JOB">
+<mod:findName type="event" name="STORAGE_CHECK_JOB_SALVAGE">
+	<mod-append:choice req="SCRAPPER_JOB_REQ" blue="false" hidden="true">
+		<text>Send out your Scrappers to look for scrap!</text>
+		<event load="STORAGE_CHECK_JOB_SCRAPPER"/>
+	</mod-append:choice>
+	<mod-append:choice req="trash_eater" blue="false" hidden="true">
+		<text>Send out the Trash Eater to compact some floating debris.</text>
+		<event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
+	</mod-append:choice>
+	<mod:findWithChildLike type="choice" child-type="text">
+		<mod:selector>Nevermind, do something else.</mod:selector>
+		<mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
+	</mod:findWithChildLike>
 
-  <mod-append:choice req="trash_eater" blue="false" hidden="true">
-    <text>Send out the Trash Eater to compact some floating debris.</text>
-    <event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
-  </mod-append:choice>
-
-  <mod:findWithChildLike type="choice" child-type="text">
-    <mod:selector>Nevermind, do something else.</mod:selector>
-    <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-  </mod:findWithChildLike>
 </mod:findName>
+
+<eventList name="STORAGE_CHECK_JOB_SCRAPPER">
+  <event>
+    <text>Your scrappers return with bags of garbage. In those bags of garbage contain amounts of usable resources and a massive amount of shiny trash that the scrappers seem fascinated by.</text>
+    <autoReward level="RANDOM">stuff</autoReward>
+	<variable name="tc_scrapper_job" op="set" val="1"/>
+  </event>
+  <event>
+    <text>Your scrappers return with a box full of drone parts! Neat!</text>
+    <autoReward level="RANDOM">droneparts_only</autoReward>
+	<variable name="tc_scrapper_job" op="set" val="1"/>
+  </event>
+  <event>
+    <text>It seems that your scrappers have returned. You ask them where exactly they got the fuel they handed you, but they look to each other nervously. You notice the beacon outside is no longer transmitting. Well, what's done is done.</text>
+    <autoReward level="RANDOM">fuel</autoReward>
+	<variable name="tc_scrapper_job" op="set" val="1"/>
+  </event>
+  <event>
+    <text>Your scrappers return with an entire piece of a destroyed ship and quickly break it down into useable scraps. One of them seems to have found a Protogen bobble-head, it is very happy.</text>
+    <autoReward level="HIGH">scrap_only</autoReward>
+	<variable name="tc_scrapper_job" op="set" val="1"/>
+  </event>
+  <event>
+    <text>Your scrappers return far later than you expected them to, a small amount of scrap in their hands, it seems they got lost, or perhaps that's just what they're telling you.</text>
+    <modifyPursuit amount="1"/>
+    <autoReward level="LOW">scrap_only</autoReward>
+	<variable name="tc_scrapper_job" op="set" val="1"/>
+  </event>
+  <event>
+    <text>Your scrappers return extremely late with a small amount of scrap ready to give you. You can feel the fleet getting closer to you.</text>
+    <modifyPursuit amount="1"/>
+    <autoReward level="LOW">scrap_only</autoReward>
+	<variable name="tc_scrapper_job" op="set" val="1"/>
+  </event>
+</eventList>
 
 <eventList name="STORAGE_CHECK_JOB_TRASH_COMPACT">
   <event>
@@ -1736,7 +1785,7 @@
 		0.75x Repair Speed
 		1.5x Sabotage Damage
 		0.75x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 20%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 40%
 	</text>
     <choice>
       <text>Do it.</text>
@@ -1823,7 +1872,7 @@
 		1x Repair Speed
 		2x Sabotage Damage
 		1x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 40%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 75%
 	</text>
     <choice>
       <text>Do it.</text>
@@ -1910,7 +1959,7 @@
 		1x Repair Speed
 		3x Sabotage Damage
 		1.25x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 60%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 90%
 	</text>
     <choice>
       <text>Do it.</text>
