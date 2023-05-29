@@ -504,7 +504,7 @@
 		<text>Install Crew Movespeed Upgrade.</text>
 		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER_MOVESPEED"/>
 	</choice>	
-	</choice req="LAB_UPGRADE" blue="true">
+	<choice req="LAB_UPGRADE" blue="true">
 		<text>[UPGRADED ONBOARD LAB] Advanced Crew Upgrades.</text>
 		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER_ADVANCED"/>
 	</choice>
