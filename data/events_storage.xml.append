@@ -1156,10 +1156,10 @@
 		<text>Upgrade your Elemental Scrappers.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3"/>
 	</choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
      <!--////////////////////////////////////////////////////////// BASE LANIUS UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1171,10 +1171,10 @@
 			<text>Create a Scrapper. </text>
 			<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_LANIUS"/>
 		</choice>
-		<choice>
-		  <text>Nevermind, do something else.</text>
-		  <event load="STORAGE_CHECK"/>
-		</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
 	</event>
 
      <!--////////////////////////////////////////////////////////// BASE SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1193,10 +1193,10 @@
       <text>Create a Scrapper Medic.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_MEDIC"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
      <!--//////////////////////////////////////////////////////////SOLDIER UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1207,10 +1207,10 @@
       <text>Upgrade Scrapper Soldier to Scrapper Heavy Soldier.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
      <!--//////////////////////////////////////////////////////////ENGINEER UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1221,10 +1221,10 @@
       <text>Upgrade Scrapper Engineer to Scrapper Scavenger.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
      <!--//////////////////////////////////////////////////////////MEDIC UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1235,10 +1235,10 @@
       <text>Upgrade Scrapper Medic to Scrapper Defender.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC_DEFENDER"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
 
      <!--//////////////////////////////////////////////////////////DEFENDER UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1249,10 +1249,10 @@
       <text>Upgrade your Scrapper Defender.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_TIER2"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
        <!--//////////////////////////////////////////////////////////HEAVY UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
@@ -1262,10 +1262,10 @@
       <text>Upgrade your Scrapper Heavy Soldier.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_TIER2"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
        <!--//////////////////////////////////////////////////////////SCAVENGER UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1276,10 +1276,10 @@
       <text>Upprade your Scrapper Scavenger.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_TIER2"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
 
 <!--////////////////////////////////////////////////////////// SCRAPPER UPGRADE GUIDE TEXT/////////////////////////////////////////////////////////-->
@@ -1294,7 +1294,10 @@
 		Tier 2 to Tier 3
 		Tier 3 to Upgraded/Enhanced. 
 	  </text>
-	  <choice><text>Continue...</text><event load="STORAGE_CHECK"/></choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
 	</event>
 
 <!--////////////////////////////////////////////////////////// BASE LANIUS UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1321,9 +1324,9 @@
         <transformRace class="lanius">scrapper</transformRace>
       </event>
     </choice>
-    <choice>
-	<text>Nevermind, do something else.</text>
-	<event load="STORAGE_CHECK"/>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
 
@@ -1353,7 +1356,10 @@
         <transformRace class="scrapper">scrapper_soldier</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+ 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ENGINEER">
@@ -1378,7 +1384,10 @@
         <transformRace class="scrapper">scrapper_engineer</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_MEDIC">
@@ -1405,9 +1414,9 @@
         <transformRace class="scrapper">scrapper_medic</transformRace>
       </event>
     </choice>
-    <choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
 
@@ -1436,7 +1445,10 @@
         <transformRace class="scrapper_soldier">scrapper_heavy</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
    <!--//////////////////////////////////////////////////////////MEDIC TO DEFENDER UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1464,7 +1476,10 @@
         <transformRace class="scrapper_medic">scrapper_defender</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+  	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
        <!--//////////////////////////////////////////////////////////ENGINEER TO SCAVENGER UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1491,7 +1506,10 @@
         <transformRace class="scrapper_engineer">scrapper_scavenger</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
      <!--//////////////////////////////////////////////////////////DEFENDER to DEFENDER MK2 UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1521,7 +1539,10 @@
         <transformRace class="scrapper_defender">scrapper_defender_mk2</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
  
     <!--//////////////////////////////////////////////////////////SCAVENGER to MK2 UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1548,7 +1569,10 @@
         <transformRace class="scrapper_scavenger">scrapper_scavenger_mk2</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
 	<!--//////////////////////////////////////////////////////////HEAVY SOLDIER to MK2 UPGRADE TEXT/////////////////////////////////////////////////////////-->
@@ -1576,7 +1600,10 @@
         <transformRace class="scrapper_heavy">scrapper_heavy_mk2</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
 	<!--//////////////////////////////////////////////////////////ELEMENTAL SCRAPPER/////////////////////////////////////////////////////////-->
@@ -1595,10 +1622,10 @@
       <text>Create an Adamantine Scrapper.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
 <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2">
@@ -1615,10 +1642,10 @@
       <text>Upgrade an Adamantine Scrapper.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER2"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3">
@@ -1635,10 +1662,10 @@
       <text>Upgrade an Adamantine Scrapper.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_TIER3"/>
     </choice>
-    <choice>
-      <text>Nevermind, do something else.</text>
-      <event load="STORAGE_CHECK"/>
-    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
   
    <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD">
@@ -1665,7 +1692,10 @@
         <transformRace class="scrapper">rosegold_scrapper</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN">
@@ -1691,9 +1721,9 @@
         <transformRace class="scrapper">golden_scrapper</transformRace>
       </event>
     </choice>
-    <choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
 
@@ -1719,9 +1749,9 @@
         <transformRace class="scrapper">adamantine_scrapper</transformRace>
       </event>
     </choice>
-    <choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
   
@@ -1749,7 +1779,10 @@
         <transformRace class="rosegold_scrapper">rosegold_scrapper_2</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
 
 <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER2">
@@ -1775,9 +1808,9 @@
         <transformRace class="golden_scrapper">golden_scrapper_2</transformRace>
       </event>
     </choice>
-    <choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
 
@@ -1803,9 +1836,9 @@
         <transformRace class="adamantine_scrapper">adamantine_scrapper_2</transformRace>
       </event>
     </choice>
-    <choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
 
@@ -1833,7 +1866,10 @@
         <transformRace class="rosegold_scrapper_2">rosegold_scrapper_3</transformRace>
       </event>
     </choice>
-    <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
   </event>
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_TIER3">
@@ -1859,9 +1895,9 @@
         <transformRace class="golden_scrapper_2">golden_scrapper_3</transformRace>
       </event>
     </choice>
-    <choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
 
@@ -1887,9 +1923,9 @@
         <transformRace class="adamantine_scrapper_2">adamantine_scrapper_3</transformRace>
       </event>
     </choice>
-    <choice>
-		<text>Nevermind, do something else.</text>
-		<event load="STORAGE_CHECK"/>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
 <!--
