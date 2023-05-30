@@ -79,6 +79,9 @@
 	<name>adamantine_scrapper</name>
 	<name>adamantine_scrapper_2</name>
 	<name>adamantine_scrapper_3</name>
+	<name>adamantine_scrapper_soldier</name>
+	<name>golden_scrapper_medic</name>
+	<name>rosegold_scrapper_engineer</name>
 </blueprintList>
 
 <!--/////// SCRAPPERS T2 //////-->
@@ -161,6 +164,9 @@
 	<mod-append:name>adamantine_scrapper</mod-append:name>
 	<mod-append:name>adamantine_scrapper_2</mod-append:name>
 	<mod-append:name>adamantine_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
 </mod:findName>
 
 <!--/////// FEDERATION ///////-->
@@ -211,19 +217,19 @@
 
 <!--/////// LANIUS //////-->
 
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_TIER_1">
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL1">
 	<name>rosegold_scrapper</name>
 	<name>adamantine_scrapper</name>
 	<name>golden_scrapper</name>
 </blueprintList>
 
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_TIER_2">
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL2">
 	<name>rosegold_scrapper_2</name>
 	<name>adamantine_scrapper_2</name>
 	<name>golden_scrapper_2</name>
 </blueprintList>
 
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_TIER_3">
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL3">
 	<name>rosegold_scrapper_3</name>
 	<name>adamantine_scrapper_3</name>
 	<name>golden_scrapper_3</name>
@@ -262,6 +268,9 @@
 	<mod-append:name>adamantine_scrapper</mod-append:name>
 	<mod-append:name>adamantine_scrapper_2</mod-append:name>
 	<mod-append:name>adamantine_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
 </mod:findName>
 
 <!--/////// PROTOGENS //////-->

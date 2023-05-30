@@ -1215,11 +1215,11 @@
 		<text>Enhance your Tier 2 Scrappers with Multiversal energy.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2"/>
 	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_TIER_1" max_group="12" blue="false">
+	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_1" max_group="12" blue="false">
 		<text>Upgrade your Elemental Scrappers.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL2"/>
 	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_TIER_2" max_group="13" blue="false">
+	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_2" max_group="13" blue="false">
 		<text>Upgrade your Elemental Scrappers.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL3"/>
 	</choice>
