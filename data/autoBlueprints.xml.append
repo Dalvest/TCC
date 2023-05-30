@@ -55,6 +55,9 @@
 	<mod-append:name>adamantine_scrapper</mod-append:name>
 	<mod-append:name>adamantine_scrapper_2</mod-append:name>
 	<mod-append:name>adamantine_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
 </mod:findName>
 
 <!--/////// SCRAPPERS //////-->
@@ -82,6 +85,73 @@
 	<name>adamantine_scrapper_soldier</name>
 	<name>golden_scrapper_medic</name>
 	<name>rosegold_scrapper_engineer</name>
+	<name>adamantine_scrapper_heavy_soldier</name>
+	<name>golden_scrapper_defender</name>
+	<name>rosegold_scrapper_scavenger</name>
+</blueprintList>
+
+
+
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL1">
+	<name>rosegold_scrapper</name>
+	<name>adamantine_scrapper</name>
+	<name>golden_scrapper</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL2">
+	<name>rosegold_scrapper_2</name>
+	<name>adamantine_scrapper_2</name>
+	<name>golden_scrapper_2</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL3">
+	<name>rosegold_scrapper_3</name>
+	<name>adamantine_scrapper_3</name>
+	<name>golden_scrapper_3</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_ALL">
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
+</blueprintList>
+
+<!--/////// SCRAPPERS Elemental T1 //////-->
+
+<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_1">
+	<name>adamantine_scrapper</name>
+	<name>golden_scrapper</name>
+	<name>rosegold_scrapper</name>
+</blueprintList>
+
+<!--/////// SCRAPPERS Elemental T2 //////-->
+
+<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_2">
+	<name>adamantine_scrapper_soldier</name>
+	<name>golden_scrapper_medic</name>
+	<name>rosegold_scrapper_engineer</name>
+</blueprintList>
+
+<!--/////// SCRAPPERS Elemental T3 //////-->
+
+<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_3">
+	<name>adamantine_scrapper_heavy_soldier</name>
+	<name>golden_scrapper_defender</name>
+	<name>rosegold_scrapper_scavenger</name>
+</blueprintList>
+
+<!--/////// SCRAPPERS Elemental T3 UPGRADED //////-->
+
+<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_3_UPGRADED">
+	<name>adamantine_scrapper_heavy_soldier_mk2</name>
+	<name>golden_scrapper_defender_mk2</name>
+	<name>rosegold_scrapper_scavenger_mk2</name>
 </blueprintList>
 
 <!--/////// SCRAPPERS T2 //////-->
@@ -98,6 +168,11 @@
 	<name>scrapper_scavenger</name>
 	<name>scrapper_defender</name>
 	<name>scrapper_heavy</name>
+</blueprintList>
+
+<!--/////// SCRAPPERS T3 UPGRADED //////-->
+
+<blueprintList name="LIST_SCRAPPER_TIER_3_UPGRADED">
 	<name>scrapper_defender_mk2</name>
 	<name>scrapper_heavy_mk2</name>
 	<name>scrapper_scavenger_mk2</name>
@@ -167,6 +242,9 @@
 	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
 	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
 </mod:findName>
 
 <!--/////// FEDERATION ///////-->
@@ -216,36 +294,6 @@
 </blueprintList>
 
 <!--/////// LANIUS //////-->
-
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL1">
-	<name>rosegold_scrapper</name>
-	<name>adamantine_scrapper</name>
-	<name>golden_scrapper</name>
-</blueprintList>
-
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL2">
-	<name>rosegold_scrapper_2</name>
-	<name>adamantine_scrapper_2</name>
-	<name>golden_scrapper_2</name>
-</blueprintList>
-
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL3">
-	<name>rosegold_scrapper_3</name>
-	<name>adamantine_scrapper_3</name>
-	<name>golden_scrapper_3</name>
-</blueprintList>
-
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_ALL">
-	<mod-append:name>rosegold_scrapper</mod-append:name>
-	<mod-append:name>rosegold_scrapper_2</mod-append:name>
-	<mod-append:name>rosegold_scrapper_3</mod-append:name>
-	<mod-append:name>golden_scrapper</mod-append:name>
-	<mod-append:name>golden_scrapper_2</mod-append:name>
-	<mod-append:name>golden_scrapper_3</mod-append:name>
-	<mod-append:name>adamantine_scrapper</mod-append:name>
-	<mod-append:name>adamantine_scrapper_2</mod-append:name>
-	<mod-append:name>adamantine_scrapper_3</mod-append:name>
-</blueprintList>
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
 	<mod-append:name>trash_eater</mod-append:name>

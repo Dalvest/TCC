@@ -261,22 +261,39 @@
 </mod:findName>
 
 <mod:findName type="event" name="STORAGE_CHECK_JOB_SALVAGE">
-	<mod-append:choice req="SCRAPPER_JOB_REQ" blue="false" hidden="true">
+	<mod-append:choice req="tc_scrapper_job" lvl="0" max_lvl="2" blue="false" hidden="true">
 		<text>Send out your Scrappers to look for scrap!</text>
 		<event load="STORAGE_CHECK_JOB_SCRAPPER"/>
 	</mod-append:choice>
-		<mod-append:choice req="tc_scrapper_job" lvl="1" max_lvl="1" blue="false" hidden="true">
+	
+	<mod-append:choice req="tc_scrapper_job" lvl="0" max_lvl="0" blue="false" hidden="true">
+		<text>Your scrappers have not scrapped this sector. You should see another option, if you don't, modding is hard?.</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+	
+	<mod-append:choice req="tc_scrapper_job" lvl="1" max_lvl="1" blue="false" hidden="true">
 		<text>Your scrappers have scrapped this sector once.</text>
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
-		<mod-append:choice req="tc_scrapper_job" lvl="2" max_lvl="2" blue="false" hidden="true">
+	<mod-append:choice req="tc_scrapper_job" lvl="2" max_lvl="2" blue="false" hidden="true">
 		<text>Your scrappers have scrapped this sector twice.</text>
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
-		<mod-append:choice req="tc_scrapper_job" lvl="3" max_lvl="3" blue="false" hidden="true">
+	<mod-append:choice req="tc_scrapper_job" lvl="3" max_lvl="3" blue="false" hidden="true">
 		<text>Your scrappers have scrapped this sector three times.</text>
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
+	
+	<mod-append:choice req="tc_scrapper_job" lvl="4" max_lvl="4" blue="false" hidden="true">
+		<text>The Variable tc_scrapper_job is set to 4 right now. It shouldn't be, but it is.</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+	
+	<mod-append:choice req="tc_scrapper_job" lvl="4" max_lvl="4" blue="false" hidden="true">
+		<text>The Variable tc_scrapper_job is set to 4 right now. It shouldn't be, but it is.</text>
+		<event load="EVENT_TC_SCRAPPER_JOB_99"/>
+	</mod-append:choice>
+	
 	<mod-append:choice req="trash_eater" blue="false" hidden="true">
 		<text>Send out the Trash Eater to compact some floating debris.</text>
 		<event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
@@ -286,6 +303,12 @@
 		<mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
 	</mod:findWithChildLike>
 </mod:findName>
+
+<event name="EVENT_TC_SCRAPPER_JOB_99">
+	<text>Click to set the variable to 0.</text>
+	<variable name="tc_scrapper_job" op="set" val="0"/>
+</event>
+
 
 <eventList name="STORAGE_CHECK_JOB_SCRAPPER">
   <event>
@@ -1025,143 +1048,6 @@
 	<loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
 </event>
 
-<!-- ================= AVALI LAB ================ -->
-  <event name="STORAGE_CHECK_LAB_AVALI">
-  	<text>You are viewing the lab menu for: [AVALI]</text>
-  	<choice req="LAB_AVALI_NOCLONEXP" lvl="1" max_group="0" blue="false" hidden="true">
-  		<text>Currently Installed: Avian Interdependancy.
-  		[Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_FLAMECLOAKS" lvl="1" max_group="0" blue="false" hidden="true">
-  		<text>Currently Installed: Flame Retardent Cloaks.
-  		[Avali crew take 35% less damage from fire, and extinguish them 80% faster.]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_DENSEFLUFF" lvl="1" max_group="0" blue="false" hidden="true">
-  		<text>Currently Installed: Dense Fluff.
-  		[Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
-  		<text>Currently Installed: None</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="1" blue="false" hidden="true">
-  		<text>Pri: Avian Interdependancy. [An upgrade is already installed]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="1" blue="false" hidden="true">
-  		<text>Pri: Avian Interdependancy.</text>
-  		<event load="STORAGE_CHECK_LAB_AVALI_CYBERNETIC" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="2" blue="false" hidden="true">
-  		<text>Pri: Flame Retardant Cloaks. [An upgrade is already installed]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="2" blue="false" hidden="true">
-  		<text>Pri: Flame Retardant Cloaks.</text>
-  		<event load="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="3" blue="false" hidden="true">
-  		<text>Pri: Dense Fluff. [An upgrade is already installed]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="3" blue="false" hidden="true">
-  		<text>Pri: Dense Fluff.</text>
-  		<event load="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF" />
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="4" blue="false" hidden="true">
-  		<text>Go back.</text>
-  		<event load="STORAGE_CHECK_LAB_LOAD" />
-  	</choice>
-  </event>
-
-  <event name="STORAGE_CHECK_LAB_AVALI_CYBERNETIC">
-  	<text>You are about to install the Avian Interdependancy modification.
-  	[Effects: Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]
-  	(small note from dev; yes, future varients will boost different stats)
-
-  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
-  	<choice hidden="true">
-  		<text>Install the modification. [Cost: 30~ 3|]</text>
-  		<event>
-  			<text>You install the modification.</text>
-  			<item_modify>
-  				<item type="drones" min="-3" max="-3" />
-  				<item type="scrap" min="-20" max="-20" />
-  			</item_modify>
-  			<choice hidden="true">
-  				<text>Continue...</text>
-  				<event load="INSTALL_LAB_AVALI_CYBERNETIC" />
-  			</choice>
-  		</event>
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-  		<text>Nevermind.</text>
-  		<event load="STORAGE_CHECK_LAB_LOAD" />
-  	</choice>
-  </event>
-
-  <event name="INSTALL_LAB_AVALI_CYBERNETIC">
-  	<event />
-  </event>
-
-  <event name="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS">
-  	<text>You are about to install the Flame Retardent Cloaks modification.
-  	[Effects: Avali crew take 35% less damage from fire, and extinguish them 80% faster.]
-
-  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
-  	<choice hidden="true">
-  		<text>Install the modification. [Cost: 6{]</text>
-  		<event>
-  			<text>You install the modification.</text>
-  			<item_modify>
-  				<item type="fuel" min="-6" max="-6" />
-  			</item_modify>
-  			<choice hidden="true">
-  				<text>Continue...</text>
-  				<event load="INSTALL_LAB_AVALI_FLAMECLOAKS" />
-  			</choice>
-  		</event>
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-  		<text>Nevermind.</text>
-  		<event load="STORAGE_CHECK_LAB_LOAD" />
-  	</choice>
-  </event>
-
-  <event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
-  	<event />
-  </event>
-
-  <event name="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF">
-  	<text>You are about to perform the Dense Fluff modification.
-  	[Effects: Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]
-
-  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
-  	<choice hidden="true">
-  		<text>Install the modification. [Cost: 3{]</text>
-  		<event>
-  			<text>You install the modification.</text>
-  			<item_modify>
-  				<item type="fuel" min="-3" max="-3" />
-  			</item_modify>
-  			<choice hidden="true">
-  				<text>Continue...</text>
-  				<event load="INSTALL_LAB_AVALI_DENSEFLUFF" />
-  			</choice>
-  		</event>
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-  		<text>Nevermind.</text>
-  		<event load="STORAGE_CHECK_LAB_LOAD" />
-  	</choice>
-  </event>
-
-  <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
-  	<event />
-  </event>
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -1215,11 +1101,23 @@
 		<text>Enhance your Tier 2 Scrappers with Multiversal energy.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2"/>
 	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_1" max_group="12" blue="false">
+	<choice req="LIST_SCRAPPER_TIER_3" max_group="12" blue="false">
+		<text>Enhance your Tier 3 Scrappers with Multiversal energy.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3"/>
+	</choice>
+	<choice req="LIST_SCRAPPER_ELEMENTAL_TIER_2" max_group="13" blue="false">
+		<text>Upgrade your Tier 2 Elemental Scrappers to Tier 3 Elemental Scrappers.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3_TIER2"/>
+	</choice>
+	<choice req="LIST_SCRAPPER_ELEMENTAL_TIER_3" max_group="14" blue="false">
+		<text>Upgrade your Tier 3 Elemental Scrappers.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3_MK2"/>
+	</choice>
+	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_1" max_group="15" blue="false">
 		<text>Upgrade your Elemental Scrappers.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL2"/>
 	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_2" max_group="13" blue="false">
+	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_2" max_group="16" blue="false">
 		<text>Upgrade your Elemental Scrappers.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL3"/>
 	</choice>
@@ -2104,6 +2002,475 @@
 	</choice>
   </event>
   
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3">
+	<text>Your tier 3 scrapper can be transformed into one of the tier 3 elemental scrappers.</text>
+	<choice req="scrapper_scavenger" lvl="1" max_group="1" blue="false">
+	  <text>Create a Rosegold Scrapper Scavenger.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER"/>
+	</choice>
+    <choice req="scrapper_defender" lvl="1" max_group="2" blue="false">
+      <text>Create a Golden Scrapper defender.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER"/>
+    </choice>
+    <choice req="scrapper_heavy_soldier" lvl="1" max_group="3" blue="false">
+      <text>Create an Adamantine Scrapper Heavy Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER"/>
+    </choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER">
+    <text>[Tier 3 to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		135 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		[Specialization]3x Sabotage Speed
+		[Specialization]1.5x Move Speed
+		[Specialization]3x Repair Speed
+		Provides 2 power
+		Resists Mind Control
+		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 12.5%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="scrapper_scavenger">rosegold_scrapper_scavenger</transformRace>
+      </event>
+    </choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER">
+    <text>[Tier 3 to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper medic with Gold. 
+		150 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		1x Damage
+		1x Repair Speed
+		1x Sabotage Damage
+		1x Move Speed
+		Provides 1 Power. Drains 1 Power from Enemy Systems
+		Damage from all sources is reduced by 10%
+		[Specialization]Reduces all damage taken by all friendly crew in the room by 20%
+		[Specialization]Heals itself after 15 second delay for 4hp/s
+		[Specialization]Can heal allies for 50 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
+	 </text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="scrapper_defender">golden_scrapper_defender</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER">
+    <text>[Tier 3 to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper soldier with Adamantine. 
+		175 Health
+		4x Fire Damage
+		1x Oxygen Drain
+		[Specialization]1.75x Damage
+		[Specialization]2.0x Sabotage Damage
+		0.5x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%
+		Can create explosions onboard enemy ships, damaging the ship and systems.
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="scrapper_heavy_soldier">adamantine_scrapper_heavy_soldier</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+  
+ <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3_TIER2">
+	 <text>Your tier 3 elemental scrapper can be upgraded.</text>
+	<choice req="rosegold_scrapper_engineer" lvl="1" max_group="1" blue="false">
+	  <text>Create a Rosegold Scrapper Scavenger.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER_SCAVENGER"/>
+	</choice>
+	<choice req="golden_scrapper_medic" lvl="1" max_group="2" blue="false">
+	  <text>Create a Golden Scrapper defender.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC_DEFENDER"/>
+	</choice>
+	<choice req="adamantine_scrapper_soldier" lvl="1" max_group="3" blue="false">
+	  <text>Create an Adamantine Scrapper Heavy Soldier.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_SOLDIER_HEAVY_SOLDIER"/>
+	</choice>
+		<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER_SCAVENGER">
+    <text>[Tier 2 Elemental to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		135 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		[Specialization]3x Sabotage Speed
+		[Specialization]1.5x Move Speed
+		[Specialization]3x Repair Speed
+		Provides 2 power
+		Resists Mind Control
+		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 12.5%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="rosegold_scrapper_engineer">rosegold_scrapper_scavenger</transformRace>
+      </event>
+    </choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC_DEFENDER">
+    <text>[Tier 2 Elemental to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper medic with Gold. 
+		150 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		1x Damage
+		1x Repair Speed
+		1x Sabotage Damage
+		1x Move Speed
+		Provides 1 Power. Drains 1 Power from Enemy Systems
+		Damage from all sources is reduced by 10%
+		[Specialization]Reduces all damage taken by all friendly crew in the room by 20%
+		[Specialization]Heals itself after 15 second delay for 4hp/s
+		[Specialization]Can heal allies for 50 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
+	 </text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="golden_scrapper_medic">golden_scrapper_defender</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_SOLDIER_HEAVY_SOLDIER">
+    <text>[Tier 2 Elemental to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper soldier with Adamantine. 
+		175 Health
+		4x Fire Damage
+		1x Oxygen Drain
+		[Specialization]1.75x Damage
+		[Specialization]2.0x Sabotage Damage
+		0.5x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%
+		Can create explosions onboard enemy ships, damaging the ship and systems.
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="adamantine_scrapper_soldier">adamantine_scrapper_heavy_soldier</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+ 
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3_MK2">
+	<text>Your tier 3 elemental scrapper can be upgraded.</text>
+	<choice req="rosegold_scrapper_scavenger" lvl="1" max_group="1" blue="false">
+	  <text>Upgrade a Rosegold Scrapper Scavenger.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER_MK2"/>
+	</choice>
+    <choice req="golden_scrapper_defender" lvl="1" max_group="2" blue="false">
+      <text>Upgrade a Golden Scrapper defender.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER_MK2"/>
+    </choice>
+    <choice req="adamantine_scrapper_heavy_soldier" lvl="1" max_group="3" blue="false">
+      <text>Upgrade an Adamantine Scrapper Heavy Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER_MK2"/>
+    </choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER_MK2">
+    <text>[Tier 3 to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		165 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		[Specialization]4x Sabotage Speed
+		[Specialization]1.5x Move Speed
+		[Specialization]4x Repair Speed
+		Provides 3 power. Drains 1 power.
+		Resists Mind Control
+		Increases nearby crews health, damage and repair speed by 20%. Reduces damage taken of nearby allies by 20%
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="rosegold_scrapper_scavenger">rosegold_scrapper_scavenger_mk2</transformRace>
+      </event>
+    </choice>
+    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER_MK2">
+    <text>[Tier 3 to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper medic with Gold. 
+		200 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		1.25x Damage
+		1x Repair Speed
+		1x Sabotage Damage
+		1x Move Speed
+		Provides 2 Power. Drains 2 Power from Enemy Systems
+		Damage from all sources is reduced by 20%
+		[Specialization]Reduces all damage taken by all friendly crew in the room by 30%
+		[Specialization]Heals itself after 10 second delay for 6hp/s
+		[Specialization]Can heal allies for 75 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
+	 </text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="golden_scrapper_defender">golden_scrapper_defender_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER_MK2">
+    <text>[Tier 3 to Tier 3 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper soldier with Adamantine. 
+		225 Health
+		2x Fire Damage
+		4x Oxygen Drain
+		[Specialization]2.25x Damage
+		[Specialization]2.5x Sabotage Damage
+		0.5x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 95%
+		Can create explosions onboard enemy ships, damaging the ship and systems.
+	</text>
+    <choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <item_modify>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+        </item_modify>
+        <transformRace class="adamantine_scrapper_heavy_soldier">adamantine_scrapper_heavy_soldier_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+  </event>
+  
+
+  
+  <!-- ================= AVALI LAB ================ -->
+  <event name="STORAGE_CHECK_LAB_AVALI">
+  	<text>You are viewing the lab menu for: [AVALI]</text>
+  	<choice req="LAB_AVALI_NOCLONEXP" lvl="1" max_group="0" blue="false" hidden="true">
+  		<text>Currently Installed: Avian Interdependancy.
+  		[Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_FLAMECLOAKS" lvl="1" max_group="0" blue="false" hidden="true">
+  		<text>Currently Installed: Flame Retardent Cloaks.
+  		[Avali crew take 35% less damage from fire, and extinguish them 80% faster.]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_DENSEFLUFF" lvl="1" max_group="0" blue="false" hidden="true">
+  		<text>Currently Installed: Dense Fluff.
+  		[Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
+  		<text>Currently Installed: None</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="1" blue="false" hidden="true">
+  		<text>Pri: Avian Interdependancy. [An upgrade is already installed]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="1" blue="false" hidden="true">
+  		<text>Pri: Avian Interdependancy.</text>
+  		<event load="STORAGE_CHECK_LAB_AVALI_CYBERNETIC" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="2" blue="false" hidden="true">
+  		<text>Pri: Flame Retardant Cloaks. [An upgrade is already installed]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="2" blue="false" hidden="true">
+  		<text>Pri: Flame Retardant Cloaks.</text>
+  		<event load="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="3" blue="false" hidden="true">
+  		<text>Pri: Dense Fluff. [An upgrade is already installed]</text>
+  		<event load="OPTION_INVALID" />
+  	</choice>
+  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="3" blue="false" hidden="true">
+  		<text>Pri: Dense Fluff.</text>
+  		<event load="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF" />
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="4" blue="false" hidden="true">
+  		<text>Go back.</text>
+  		<event load="STORAGE_CHECK_LAB_LOAD" />
+  	</choice>
+  </event>
+
+  <event name="STORAGE_CHECK_LAB_AVALI_CYBERNETIC">
+  	<text>You are about to install the Avian Interdependancy modification.
+  	[Effects: Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]
+  	(small note from dev; yes, future varients will boost different stats)
+
+  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
+  	<choice hidden="true">
+  		<text>Install the modification. [Cost: 30~ 3|]</text>
+  		<event>
+  			<text>You install the modification.</text>
+  			<item_modify>
+  				<item type="drones" min="-3" max="-3" />
+  				<item type="scrap" min="-20" max="-20" />
+  			</item_modify>
+  			<choice hidden="true">
+  				<text>Continue...</text>
+  				<event load="INSTALL_LAB_AVALI_CYBERNETIC" />
+  			</choice>
+  		</event>
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+  		<text>Nevermind.</text>
+  		<event load="STORAGE_CHECK_LAB_LOAD" />
+  	</choice>
+  </event>
+
+  <event name="INSTALL_LAB_AVALI_CYBERNETIC">
+  	<event />
+  </event>
+
+  <event name="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS">
+  	<text>You are about to install the Flame Retardent Cloaks modification.
+  	[Effects: Avali crew take 35% less damage from fire, and extinguish them 80% faster.]
+
+  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
+  	<choice hidden="true">
+  		<text>Install the modification. [Cost: 6{]</text>
+  		<event>
+  			<text>You install the modification.</text>
+  			<item_modify>
+  				<item type="fuel" min="-6" max="-6" />
+  			</item_modify>
+  			<choice hidden="true">
+  				<text>Continue...</text>
+  				<event load="INSTALL_LAB_AVALI_FLAMECLOAKS" />
+  			</choice>
+  		</event>
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+  		<text>Nevermind.</text>
+  		<event load="STORAGE_CHECK_LAB_LOAD" />
+  	</choice>
+  </event>
+
+  <event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
+  	<event />
+  </event>
+
+  <event name="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF">
+  	<text>You are about to perform the Dense Fluff modification.
+  	[Effects: Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]
+
+  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
+  	<choice hidden="true">
+  		<text>Install the modification. [Cost: 3{]</text>
+  		<event>
+  			<text>You install the modification.</text>
+  			<item_modify>
+  				<item type="fuel" min="-3" max="-3" />
+  			</item_modify>
+  			<choice hidden="true">
+  				<text>Continue...</text>
+  				<event load="INSTALL_LAB_AVALI_DENSEFLUFF" />
+  			</choice>
+  		</event>
+  	</choice>
+  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+  		<text>Nevermind.</text>
+  		<event load="STORAGE_CHECK_LAB_LOAD" />
+  	</choice>
+  </event>
+
+  <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
+  	<event />
+  </event>
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
           ROBOTTO UPGRADE MENU
