@@ -490,15 +490,7 @@
   ////////////// TRASH EATER AND SCRAPPER STORAGE CHECK ABILITY ///////////////
   ///////////////////////////////////////////////////////////-->
   
-<req name="SCRAPPER_JOB_REQ">
-	<req>
-		<name>"LIST_CREW_SCRAPPER"</name>
-	</req>
-	<req max_lvl="2">
-		<name>"tc_scrapper_job"</name>
-	</req>
-</req>
-		
+
 <mod:findName type="event" name="ATLAS_MENU">
 	<mod-append:variable name="tc_scrapper_job" op="set" val="0"/>
 </mod:findName>
@@ -508,12 +500,6 @@
 		<text>Send out your Scrappers to look for scrap!</text>
 		<event load="STORAGE_CHECK_JOB_SCRAPPER"/>
 	</mod-append:choice>
-	
-	<mod-append:choice req="tc_scrapper_job" lvl="0" max_lvl="0" blue="false" hidden="true">
-		<text>Your scrappers have not scrapped this sector. You should see another option, if you don't, modding is hard?.</text>
-		<event load="OPTION_INVALID"/>
-	</mod-append:choice>
-	
 	<mod-append:choice req="tc_scrapper_job" lvl="1" max_lvl="1" blue="false" hidden="true">
 		<text>Your scrappers have scrapped this sector once.</text>
 		<event load="OPTION_INVALID"/>
@@ -526,17 +512,6 @@
 		<text>Your scrappers have scrapped this sector three times.</text>
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
-	
-	<mod-append:choice req="tc_scrapper_job" lvl="4" max_lvl="4" blue="false" hidden="true">
-		<text>The Variable tc_scrapper_job is set to 4 right now. It shouldn't be, but it is.</text>
-		<event load="OPTION_INVALID"/>
-	</mod-append:choice>
-	
-	<mod-append:choice req="tc_scrapper_job" lvl="4" max_lvl="4" blue="false" hidden="true">
-		<text>The Variable tc_scrapper_job is set to 4 right now. It shouldn't be, but it is.</text>
-		<event load="EVENT_TC_SCRAPPER_JOB_99"/>
-	</mod-append:choice>
-	
 	<mod-append:choice req="trash_eater" blue="false" hidden="true">
 		<text>Send out the Trash Eater to compact some floating debris.</text>
 		<event load="STORAGE_CHECK_JOB_TRASH_COMPACT"/>
@@ -546,12 +521,6 @@
 		<mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
 	</mod:findWithChildLike>
 </mod:findName>
-
-<event name="EVENT_TC_SCRAPPER_JOB_99">
-	<text>Click to set the variable to 0.</text>
-	<variable name="tc_scrapper_job" op="set" val="0"/>
-</event>
-
 
 <eventList name="STORAGE_CHECK_JOB_SCRAPPER">
   <event>

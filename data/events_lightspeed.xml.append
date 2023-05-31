@@ -15,6 +15,7 @@
 	</mod:findName>
   <mod:findName type="event" name="LOAD_ATLAS_MARKER">
   	<mod-append:variable name="tcc_called_compactor" op="set" val="0"/>
+	<mod-append:variable name="tc_scrapper_job" op="set" val="0"/>
   </mod:findName>
   <mod:findName type="event" name="FMCORE_SPAWNER">
 		<mod-append:queueEvent>TC_SPAWNER</mod-append:queueEvent>
