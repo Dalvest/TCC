@@ -557,8 +557,8 @@ SPEED          Changes gamespeed
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
 	  <hiddenAug>ADVANCED_SCRAP</hiddenAug>
       <crew>
-        <scrapper_engineer room="0"/>
-        <lanius room="1"/>
+        <scrapper_engineer room="0" name="Emmy"/>
+        <scrapper_soldier room="1"/>
         <scrapper room="1"/>
         <scrapper room="1"/>
         <scrapper room="1"/>
@@ -6193,6 +6193,19 @@ SPEED          Changes gamespeed
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
+<!--/////////////////////////////////////////////CUSTOM INTERNAL UPGRADES//////////////////////////////////////////////////////////-->
+
+<aug name="TC_CLONEBAY_NOLOSS">
+	<statboost>
+		<statBoost name="cloneLoseSkills">
+		<boostType>SET</boostType>
+		<value>false</value>
+		<shipTarget>ALL</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<priority>999</priority>
+	</statBoost>
+</aug>
+
 	<augments>
 		<aug name="LOCKED_SCRAP_ARMOR">
 			<function name="ROCK_ARMOR" value="0.25" useForReqs="false"/>
@@ -6458,27 +6471,27 @@ SPEED          Changes gamespeed
 	</statBoost>
 </aug>
 	
-	<aug name="LAB_SCRAPPER_STRAP_TELEPORTERS_TO_THEM">
-	</aug>
+<aug name="LAB_SCRAPPER_STRAP_TELEPORTERS_TO_THEM">
+</aug>
 	
-	<aug name="LAB_SCRAPPER_METALLIC_SIPHON">
-		<statBoost name="powerEffect">
-			<boostType>FLAT</boostType>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<priority>999</priority>
-			<whiteList load="LIST_CREW_SCRAPPER" />
-			<powerEffect>
-				<cooldown>5</cooldown>
-				<jumpCooldown>continue</jumpcooldown>
-				<healAmount>15</healAmount>
-				<persDamage>1</persDamage>
-				<req type="enemy">
-					<enemyInRoom/>
-					<whitelist load="LIST_CREW_ENGI" />
-				</req>
-		</statBoost>
-	</aug>
+<aug name="LAB_SCRAPPER_METALLIC_SIPHON">
+	<statBoost name="powerEffect">
+		<boostType>FLAT</boostType>
+		<shipTarget>ALL</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<priority>999</priority>
+		<whiteList load="LIST_CREW_SCRAPPER" />
+		<powerEffect>
+			<cooldown>5</cooldown>
+			<jumpCooldown>continue</jumpcooldown>
+			<healAmount>15</healAmount>
+			<persDamage>1</persDamage>
+			<req type="enemy">
+				<enemyInRoom/>
+				<whitelist load="LIST_CREW_ENGI" />
+			</req>
+	</statBoost>
+</aug>
 	
 
     <!--//////////////////PROTOGEN LAB UPGRADES//////////////-->

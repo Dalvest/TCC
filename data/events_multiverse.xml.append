@@ -1776,6 +1776,15 @@ item - scrap + that thing  -->
 	<deadCrew load="TC_SCRAPPER_SUPPORT_DEADCREW" />
 </ship>
 
+<eventlist name="SCRAPPER_ENCOUNTER_LIST">
+	<event load="SCRAPPER_ENCOUNTER_SHOP"/>
+	<event load="SCRAPPER_ENCOUNTER_BOMBER"/>
+	<event load="SCRAPPER_ENCOUNTER_SUPPORT"/>
+	<event load="SCRAPPER_ENCOUNTER_HUNTER"/>
+	<event load="SCRAPPER_ENCOUNTER_CORVETTE"/>
+	<event load="SCRAPPER_ENCOUNTER_SCOUT"/>
+</eventlist>
+
 
 <event name="SCRAPPER_ENCOUNTER_SHOP">
 	<text>A scrapper vessel is in this sector. It's broadcasting a signal simply asking for scrap. Perhaps they mean to trade?</text>

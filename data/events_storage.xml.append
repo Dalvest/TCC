@@ -42,6 +42,250 @@
     </mod:findWithChildLike>
 
   </mod:findName>
+  
+    <!--/////////////////CUSTOM INTERNAL UPGRADES//////////////////-->
+	
+	
+<mod:findName type="event" name="STORAGE_CHECK_INVENTORY_UPGRADES">
+	<mod-append:choice req="TC_CLONEBAY_NOLOSS" lvl="1" blue="false">
+		<text>Backup Memory Archive[Already Installed]</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+</mod:findName>
+  
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLONEBAY">
+	<mod-append:choice req="TC_CLONEBAY_NOLOSS" lvl="1" blue="false">
+		<text>Backup Memory Archive[Already Installed]</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+	
+	<mod-append:choice req="TC_CLONEBAY_NOLOSS" lvl="0" blue="false">
+		<text>Backup Memory Archive [Cost: 45~]</text>
+		<event load="TC_CLONEBAY_NOLOSS_INSTALL"/>
+	</mod-append:choice>
+</mod:findName>  
+
+<event name="TC_CLONEBAY_NOLOSS_INSTALL">
+	<text>You are about to install Backup Memory Archive.
+	[Effects: Crew will not suffer skill loss when cloned.]</text>
+	<choice req="clonebay" lvl="1" max_lvl="4" max_group="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 45~]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_CLONEBAY_NOLOSS" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="2" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<event name="INSTALL_CLONEBAY_NOLOSS">
+	<hiddenaug>TC_CLONEBAY_NOLOSS</hiddenaug>
+	<event load="STORAGE_CHECK_SYSTEM_LOAD"/>
+</event>
+
+
+    <!--/////////////////SCRAPPER BLUE TEXT UPGRADES//////////////////-->
+	
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_SEALANT">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]</text>
+		<event load="SCRAPPER_INSTALL_TECH_SEALANT"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_TECH_SEALANT">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]</text>
+	<choice req="reactor" lvl="10" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 25~, 1{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1" />
+				<item type="scrap" min="-25" max="-25" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_TECH_SEALANT" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="reactor" lvl="1" max_lvl="9" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need reactor level 10.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_EXTINGUISHERS">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost.[Cost: 35~, 4{, 1}]</text>
+		<event load="SCRAPPER_INSTALL_TECH_EXTINGUISHERS"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_TECH_EXTINGUISHERS">
+	<text>Your scrappers can install this upgrade for a reduced cost.[Cost: 35~, 4{, 1}]</text>
+	<choice req="reactor" lvl="10" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 35~, 4{, 1}]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="fuel" min="-4" max="-4" />
+				<item type="missiles" min="-1" max="-1" />
+				<item type="scrap" min="-35" max="-35" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_TECH_EXTINGUISHERS" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="reactor" lvl="1" max_lvl="9" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need reactor level 10.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_BYPASS">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 1{]</text>
+		<event load="SCRAPPER_INSTALL_TECH_BYPASS"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_TECH_BYPASS">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 1{]</text>
+	<choice req="reactor" lvl="8" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 40~, 1{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1" />
+				<item type="scrap" min="-40" max="-40" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_TECH_BYPASS" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="reactor" lvl="1" max_lvl="7" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need reactor level 8.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_SCRAMBLER">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 100~, 9|]</text>
+		<event load="SCRAPPER_INSTALL_TECH_SCRAMBLER"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_TECH_SCRAMBLER">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 100~, 9|]</text>
+	<choice req="reactor" lvl="8" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 100~, 9|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="drones" min="-9" max="-9" />
+				<item type="scrap" min="-100" max="-100" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_TECH_SCRAMBLER" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="reactor" lvl="1" max_lvl="7" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need reactor level 8.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_LIFEFORM">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 10~, 1|]</text>
+		<event load="SCRAPPER_INSTALL_TECH_LIFEFORM"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_TECH_LIFEFORM">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 10~, 1|]</text>
+	<choice req="reactor" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 10~, 1|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="drones" min="-1" max="-1" />
+				<item type="scrap" min="-10" max="-10" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_TECH_LIFEFORM" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_RESPIRATOR">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 50~]</text>
+		<event load="SCRAPPER_INSTALL_TECH_RESPIRATOR"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_TECH_RESPIRATOR">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 50~]</text>
+	<choice req="reactor" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 50~]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_TECH_RESPIRATOR" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+
 
    <!--/////////////////STORAGE CHECK NOODLES//////////////////-->
 
@@ -256,8 +500,7 @@
 </req>
 		
 <mod:findName type="event" name="ATLAS_MENU">
-	<mod-append:variable name="tc_scrapper_job" op="set" val="0">
-	</mod-append:variable>
+	<mod-append:variable name="tc_scrapper_job" op="set" val="0"/>
 </mod:findName>
 
 <mod:findName type="event" name="STORAGE_CHECK_JOB_SALVAGE">
