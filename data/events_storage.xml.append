@@ -3304,7 +3304,7 @@
           <item type="scrap" min="-100" max="-100"/>
 		  <item type="fuel" min="-5" max="-5"/>
         </item_modify>
-        <transformRace class="scrapper_engineer">rosegold_engineer</transformRace>
+        <transformRace class="scrapper_engineer">rosegold_scrapper_engineer</transformRace>
       </event>
     </choice>
     	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
