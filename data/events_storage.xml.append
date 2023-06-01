@@ -1654,7 +1654,7 @@
 
 <mod:findName type="event" name="STORAGE_CHECK_JOB_SALVAGE">
 	<mod-append:choice req="tc_scrapper_job" lvl="0" max_lvl="2" blue="false" hidden="true">
-		<text>Send out your Scrappers to look for scrap!</text>
+		<text>Send out your Scrappers to look for scrap! [This can be done three times per sector]</text>
 		<event load="STORAGE_CHECK_JOB_SCRAPPER"/>
 	</mod-append:choice>
 	<mod-append:choice req="tc_scrapper_job" lvl="1" max_lvl="1" blue="false" hidden="true">
@@ -1681,33 +1681,33 @@
 
 <eventList name="STORAGE_CHECK_JOB_SCRAPPER">
   <event>
-    <text>Your scrappers return with bags of garbage. In those bags of garbage contain amounts of usable resources and a massive amount of shiny trash that the scrappers seem fascinated by.</text>
+    <text>Weary but excited, your scrappers make their way back to the ship, carrying bags filled with a curious assortment of garbage. To your surprise, among the heaps of trash, they have managed to salvage usable resources, a testament to their resourcefulness. However, what truly captures their attention is the massive amount of shiny trash, which seems to mesmerize them. Despite its lack of practical value, their fascination serves as a reminder that even in the bleakest of circumstances, finding joy and beauty in the simplest things can be a source of resilience and inspiration.</text>
     <autoReward level="RANDOM">stuff</autoReward>
 	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
-    <text>Your scrappers return with a box full of drone parts! Neat!</text>
+    <text>Your scrappers triumphantly return to the ship, carrying a box brimming with valuable drone parts. Their discovery promises exciting possibilities for enhancing your ship's capabilities in the face of imminent dangers lurking in space.</text>
     <autoReward level="MED">droneparts_only</autoReward>
 	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
-    <text>It seems that your scrappers have returned. You ask them where exactly they got the fuel they handed you, but they look to each other nervously. You notice the beacon outside is no longer transmitting. Well, what's done is done.</text>
+    <text>As you inquire about the source of the fuel they handed you, your scrappers exchange nervous glances, evading your question. A sinking feeling settles in as you realize the beacon outside has ceased transmitting—a sign that their actions may have had unintended consequences. However, dwelling on the past won't change anything, and you resign yourself to accepting the situation.</text>
     <autoReward level="MED">fuel</autoReward>
 	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
-    <text>Your scrappers return with an entire piece of a destroyed ship and quickly break it down into useable scraps. One of them seems to have found a Protogen bobble-head, it is very happy.</text>
+    <text>With efficiency and expertise, your scrappers dismantle an entire piece of a wrecked ship, transforming it into valuable scraps that can be repurposed for repairs and upgrades. Among the salvaged materials, one of your scrappers discovers a prized Protogen bobble-head, their joy evident on their face. The discovery serves as a reminder that even amidst the grueling work of survival, small moments of happiness can be found.</text>
     <autoReward level="HIGH">scrap_only</autoReward>
 	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
-    <text>Your scrappers return far later than you expected them to, a small amount of scrap in their hands, it seems they got lost, or perhaps that's just what they're telling you.</text>
+    <text>To your surprise, your scrappers return much later than anticipated, their hands clutching a meager amount of scrap. Whether due to getting lost or a cover-up for a less fruitful expedition, you can't help but wonder what really transpired during their journey. Nonetheless, you accept their return and the small contribution they managed to salvage, understanding that the vastness of space often leads to unexpected challenges and detours.</text>
     <modifyPursuit amount="1"/>
     <autoReward level="LOW">scrap_only</autoReward>
 	<variable name="tc_scrapper_job" op="add" val="1"/>
   </event>
   <event>
-    <text>Your scrappers return extremely late with a small amount of scrap ready to give you. You can feel the fleet getting closer to you.</text>
+    <text>With a sense of urgency, your scrappers finally return, their tardiness heightening your awareness of the encroaching fleet. Though their hands hold a meager amount of scrap, you understand that time is of the essence. Every resource counts as you desperately attempt to stay one step ahead of the pursuing forces, making the most of what you have and pushing the limits of your ship's capabilities. The fleet draws nearer, and you steel yourself for the challenges that lie ahead, knowing that every decision and every scrap of resource could be the difference between survival and defeat.</text>
     <modifyPursuit amount="1"/>
     <autoReward level="LOW">scrap_only</autoReward>
 	<variable name="tc_scrapper_job" op="add" val="1"/>
