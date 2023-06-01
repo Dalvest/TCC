@@ -1425,7 +1425,7 @@
 	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
 	This talent does not seem to be consistent, however.</text>
 	<choice req="medbay" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Perform the upgrade. [Cost: 35~, 2{]</text>
+		<text>Perform the upgrade. [Cost: 10~]</text>
 		<event>
 			<text>You install the upgrade.</text>
 			<item_modify>
@@ -3265,11 +3265,11 @@
   
 <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2">
 	<text>Your tier 2 scrapper can be transformed into one of the tier 2 elemental scrappers.</text>
-	<choice req="scrapper_medic" lvl="1" max_group="1" blue="false">
+	<choice req="scrapper_engineer" lvl="1" max_group="1" blue="false">
 	  <text>Create a Rosegold Scrapper Engineer.</text>
 	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER"/>
 	</choice>
-    <choice req="scrapper_engineer" lvl="1" max_group="2" blue="false">
+    <choice req="scrapper_medic" lvl="1" max_group="2" blue="false">
       <text>Create a Golden Scrapper Medic.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC"/>
     </choice>
