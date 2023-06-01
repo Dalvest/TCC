@@ -52,7 +52,13 @@
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
 </mod:findName>
-  
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TELEPORTER">
+	<mod-append:choice req="LIST_ELEMENTAL_SCRAPPER_ALL" lvl="1" max_group="9" blue="true">
+		<text>Multiversal Teleporter Upgrades</text>
+		<event load="STORAGE_CHECK_SYSTEM_TELEPORTER_MULTIVERSAL"/>
+	</mod-append:choice>
+</mod:findName>  
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLONEBAY">
 	<mod-append:choice req="TC_CLONEBAY_NOLOSS" lvl="1" blue="false">
 		<text>Backup Memory Archive[Already Installed]</text>
@@ -85,6 +91,31 @@
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
 	</choice>
+	<choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3"  blue="false" hidden="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 35~]</text>
+		<event load="SCRAPPER_INSTALL_CLONEBAY_NOLOSS"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_INSTALL_CLONEBAY_NOLOSS">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 35~]</text>
+	<choice req="clonebay" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 35~]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_CLONEBAY_NOLOSS" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
 </event>
 
 <event name="INSTALL_CLONEBAY_NOLOSS">
@@ -92,18 +123,102 @@
 	<event load="STORAGE_CHECK_SYSTEM_LOAD"/>
 </event>
 
+<event name="STORAGE_CHECK_SYSTEM_TELEPORTER_MULTIVERSAL">
+	<text>Your elemental scrappers can upgrade your teleporter with multiversal technology.</text>
+	<choice req="teleporter" lvl="4" max_lvl="4" blue="true" hidden="true">
+		<text>Adamantine Backup Capacitors [Cost: 75~, 5|]</text>
+		<event load="MULTIVERSAL_INSTALL_CAPACITOR"/>
+	</choice>
+	<choice req="teleporter" lvl="5" blue="true" hidden="true">
+		<text>Adamantine Backup Capacitors [Installed]</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER" lvl="1" blue="true" hidden="true">
+		<text>Multispectral Focal Amplifier [Installed]</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER" lvl="0" max_lvl="0" blue="true" hidden="true">
+		<text>Multispectral Focal Amplifier [Cost: 90~, 5|, 4}, 4{]</text>
+		<event load="MULTIVERSAL_INSTALL_AMPLIFIER"/>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>	
+</event>
+
+<event name="MULTIVERSAL_INSTALL_AMPLIFIER">
+	<text>Your elemental scrapper can interface with your teleporter and install a modified focal amplifier that coats your boarders in multiversal energy.
+	[Effects: When the teleporter is fully powered your boarders gain 25% combat damage and a 35% increase to sabotage speed.]</text>
+	<choice req="teleporter" lvl="5" max_group="0" blue="false">
+		<text>Perform the upgrade. [Cost: 90~, 5|, 4}, 4{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="drones" min="-5" max="-5" />
+				<item type="scrap" min="-90" max="-90" />
+				<item type="missiles" min="-4" max="-4" />
+				<item type="fuel" min="-4" max="-4" />
+			</item_modify>
+			<choice>
+				<text>Continue...</text>
+				<event load="INSTALL_MULTIVERSAL_AMPLIFIER" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="teleporter" lvl="1" max_lvl="4" max_group="1" blue="false" hidden="true">
+		<text>This upgrade requires Teleporter Level 5</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="2" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<event name="INSTALL_MULTIVERSAL_AMPLIFIER">
+	<hiddenAug>UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER</hiddenAug>
+	<loadEvent>STORAGE_CHECK_SYSTEM</loadEvent>
+</event>
+
+
+<event name="MULTIVERSAL_INSTALL_CAPACITOR">
+	<text>Your elemental scrapper can interface with your teleporter and augment the flux-capacitors with Adamantine Multiversal energy.
+	[Effects: Instant Cooldown, is compatible with Reconstructive Teleporter and all other Teleporter upgrades]</text>
+	<choice req="teleporter" lvl="4" max_group="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 75~, 5|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<upgrade amount="1" system="teleporter" />
+			<item_modify>
+				<item type="drones" min="-5" max="-5" />
+				<item type="scrap" min="-75" max="-75" />
+			</item_modify>
+			<choice>
+				<text>Continue...</text>
+				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
 
     <!--/////////////////SCRAPPER BLUE TEXT UPGRADES//////////////////-->
 	
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_SEALANT">
-	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
 		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]</text>
 		<event load="SCRAPPER_INSTALL_TECH_SEALANT"/>
 	</mod-append:choice>
 </mod:findName>	
 
 <event name="SCRAPPER_INSTALL_TECH_SEALANT">
-	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]</text>
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]
+	Scrappers have refined the technique of installing onboard ship upgrades by utilizing parts of themselves in the process.</text>
 	<choice req="reactor" lvl="10" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 25~, 1{]</text>
 		<event>
@@ -129,14 +244,15 @@
 </event>
 
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_EXTINGUISHERS">
-	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
 		<text>Your scrappers can install this upgrade for a reduced cost.[Cost: 35~, 4{, 1}]</text>
 		<event load="SCRAPPER_INSTALL_TECH_EXTINGUISHERS"/>
 	</mod-append:choice>
 </mod:findName>	
 
 <event name="SCRAPPER_INSTALL_TECH_EXTINGUISHERS">
-	<text>Your scrappers can install this upgrade for a reduced cost.[Cost: 35~, 4{, 1}]</text>
+	<text>Your scrappers can install this upgrade for a reduced cost.[Cost: 35~, 4{, 1}]
+	Scrappers have refined the technique of installing onboard ship upgrades by utilizing parts of themselves in the process.</text>
 	<choice req="reactor" lvl="10" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 35~, 4{, 1}]</text>
 		<event>
@@ -163,14 +279,15 @@
 </event>
 
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_BYPASS">
-	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
 		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 1{]</text>
 		<event load="SCRAPPER_INSTALL_TECH_BYPASS"/>
 	</mod-append:choice>
 </mod:findName>	
 
 <event name="SCRAPPER_INSTALL_TECH_BYPASS">
-	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 1{]</text>
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 1{]
+	Scrappers have refined the technique of installing onboard ship upgrades by utilizing parts of themselves in the process.</text>
 	<choice req="reactor" lvl="8" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 40~, 1{]</text>
 		<event>
@@ -196,14 +313,15 @@
 </event>
 
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_SCRAMBLER">
-	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
 		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 100~, 9|]</text>
 		<event load="SCRAPPER_INSTALL_TECH_SCRAMBLER"/>
 	</mod-append:choice>
 </mod:findName>	
 
 <event name="SCRAPPER_INSTALL_TECH_SCRAMBLER">
-	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 100~, 9|]</text>
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 100~, 9|]
+	Scrappers have refined the technique of installing onboard ship upgrades by utilizing parts of themselves in the process.</text>
 	<choice req="reactor" lvl="8" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 100~, 9|]</text>
 		<event>
@@ -229,14 +347,15 @@
 </event>
 
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_LIFEFORM">
-	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
 		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 10~, 1|]</text>
 		<event load="SCRAPPER_INSTALL_TECH_LIFEFORM"/>
 	</mod-append:choice>
 </mod:findName>	
 
 <event name="SCRAPPER_INSTALL_TECH_LIFEFORM">
-	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 10~, 1|]</text>
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 10~, 1|]
+	Scrappers have refined the technique of installing onboard ship upgrades by utilizing parts of themselves in the process.</text>
 	<choice req="reactor" lvl="1" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 10~, 1|]</text>
 		<event>
@@ -258,14 +377,15 @@
 </event>
 
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_RESPIRATOR">
-	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
 		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 50~]</text>
 		<event load="SCRAPPER_INSTALL_TECH_RESPIRATOR"/>
 	</mod-append:choice>
 </mod:findName>	
 
 <event name="SCRAPPER_INSTALL_TECH_RESPIRATOR">
-	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 50~]</text>
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 50~]
+	Scrappers have refined the technique of installing onboard ship upgrades by utilizing parts of themselves in the process.</text>
 	<choice req="reactor" lvl="1" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 50~]</text>
 		<event>
@@ -285,7 +405,1044 @@
 	</choice>
 </event>
 
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_ARM_INSTALL_SCRAP">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~]</text>
+		<event load="SCRAPPER_INSTALL_ARM_SCRAP"/>
+	</mod-append:choice>
+</mod:findName>	
 
+<event name="SCRAPPER_INSTALL_ARM_SCRAP">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="reactor" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 40~]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_ARM_SCRAP" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_ARM_INSTALL_MAGNET">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 2{]</text>
+		<event load="SCRAPPER_INSTALL_ARM_MAGNET"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_ARM_MAGNET">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 2{]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="reactor" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 55~, 2{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+                <item type="fuel" min="-2" max="-2" />
+                <item type="scrap" min="-55" max="-55" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_ARM_MAGNET" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_ARM_INSTALL_DRONE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 2|]</text>
+		<event load="SCRAPPER_INSTALL_ARM_DRONE"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_ARM_DRONE">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 2|]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="reactor" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 40~, 2|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="drones" min="-2" max="-2" />
+				<item type="scrap" min="-40" max="-40" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_ARM_DRONES" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_ARM_INSTALL_REPAIR">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~]</text>
+		<event load="SCRAPPER_INSTALL_ARM_REPAIR"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_ARM_REPAIR">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="reactor" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 25~]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-25" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_ARM_REPAIR" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_ENGINE_JUMPER">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 15~, 2{, 1|]</text>
+		<event load="SCRAPPER_INSTALL_ENGINE_JUMPER"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_ENGINE_JUMPER">
+	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="engines" lvl="4" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 15~, 2{, 1|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="fuel" min="-2" max="-2" />
+				<item type="drones" min="-1" max="-1" />
+				<item type="scrap" min="-15" max="-15" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_ENGINE_JUMPER" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="engines" lvl="0" max_lvl="3" blue="false">
+		<text>This upgrade is unavailable. You need engines level 4.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_ENGINE_PERFORMANCE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 15~, 2{]</text>
+		<event load="SCRAPPER_INSTALL_ENGINE_PERFORMANCE"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_ENGINE_PERFORMANCE">
+	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="engines" lvl="4" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 15~, 1{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1" />
+				<item type="scrap" min="-15" max="-15" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_ENGINE_PERFORMANCE" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="engines" lvl="0" max_lvl="3" blue="false">
+		<text>This upgrade is unavailable. You need engines level 4.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_SHIELD_ION">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~]</text>
+		<event load="SCRAPPER_INSTALL_SHIELD_ION"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SHIELD_ION">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="shields" lvl="4" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 40~]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_SHIELD_ION" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="shields" lvl="1" max_lvl="3" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need shields level 4.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_SHIELD_STUN">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 10~, 1{]</text>
+		<event load="SCRAPPER_INSTALL_SHIELD_STUN"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SHIELD_STUN">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 10~, 1{]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="shields" lvl="4" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 10~, 1{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-10" max="-10" />
+				<item type="fuel" min="-1" max="-1" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_SHIELD_STUN" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="shields" lvl="1" max_lvl="3" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need shields level 4.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_SHIELD_PERFORMANCE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 30~, 2{]</text>
+		<event load="SCRAPPER_INSTALL_SHIELD_PERFORMANCE"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SHIELD_PERFORMANCE">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 30~, 2{]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="shields" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 30~, 2{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-30" max="-30" />
+				<item type="fuel" min="-2" max="-2" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_SHIELD_PERFORMANCE" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_WEAPON_REPLICATOR">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 9}]</text>
+		<event load="SCRAPPER_INSTALL_WEAPON_REPLICATOR"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_WEAPON_REPLICATOR">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 9}]
+	Scrappers have a general aversion to weapons systems, but have familiarized themselves *enough* with them to offer some assistance in installing them.</text>
+	<choice req="weapons" lvl="5" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 40~, 9}]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40" />
+				<item type="missiles" min="-9" max="-9" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_WEAPON_REPLICATOR" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="weapons" lvl="0" max_lvl="4" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need weapons level 5.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_WEAPON_PERFORMANCE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 7}]</text>
+		<event load="SCRAPPER_INSTALL_WEAPON_PERFORMANCE"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_WEAPON_PERFORMANCE">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 7}]
+	Scrappers have a general aversion to weapons systems, but have familiarized themselves *enough* with them to offer some assistance in installing them.</text>
+	<choice req="weapons" lvl="5" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 40~, 7}]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40" />
+				<item type="missiles" min="-7" max="-7" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_WEAPON_PERFORMANCE" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="weapons" lvl="0" max_lvl="4" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need weapons level 5.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_WEAPONS_BEAM_PIERCE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 70~, 9}]</text>
+		<event load="SCRAPPER_INSTALL_WEAPON_BEAM"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_WEAPON_BEAM">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 70~, 9}]
+	Scrappers have a general aversion to weapons systems, but have familiarized themselves *enough* with them to offer some assistance in installing them.</text>
+	<choice req="can_get_beam_pierce" lvl="20" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 70~, 9}]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-70" max="-70" />
+				<item type="missiles" min="-9" max="-9" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_WEAPONS_BEAM_PIERCE" />
+			</choice>
+		</event>
+	</choice>
+    <choice req="weapons" lvl="3" max_lvl="6" max_group="0" blue="false" hidden="true">
+      <text>This upgrade is unavailable. You need weapons level 7.</text>
+      <event load="OPTION_INVALID" />
+    </choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_MIND_BUFF">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 20~, 1|]</text>
+		<event load="SCRAPPER_INSTALL_MIND_BUFF"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_MIND_BUFF">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 20~, 1|]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="mind" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 20~, 1|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-20" max="-20" />
+				<item type="drones" min="-1" max="-1" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_MIND_BUFF" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_MIND_IMMUNITY">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 2{]</text>
+		<event load="SCRAPPER_INSTALL_MIND_IMMUNITY"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_MIND_IMMUNITY">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 2{]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="mind" lvl="3" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 55~, 2{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-55" max="-55" />
+				<item type="missiles" min="-2" max="-2" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_MIND_IMMUNITY" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="mind" lvl="0" max_lvl="2" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need Mind Control level 3.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_HACK_STUN">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 50~, 1|]</text>
+		<event load="SCRAPPER_INSTALL_HACK_STUN"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_HACK_STUN">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 50~, 1|]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="hack" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 50~, 1|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50" />
+				<item type="drones" min="-1" max="-1" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_HACK_STUN" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_HACK_JAMMER">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 20~]</text>
+		<event load="SCRAPPER_INSTALL_HACK_JAMMER"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_HACK_JAMMER">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 20~]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="hack" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 20~]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-20" max="-20" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_HACK_JAMMER" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_BATTERY_PERFORMANCE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]</text>
+		<event load="SCRAPPER_INSTALL_BATTERY_PERFORMANCE"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_BATTERY_PERFORMANCE">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="battery" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 25~, 1{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-25" />
+				<item type="fuel" min="-1" max="-1" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_BATTERY_PERFORMANCE" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_BATTERY_GENERATOR">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 45~, 6{]</text>
+		<event load="SCRAPPER_INSTALL_BATTERY_GENERATOR"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_BATTERY_GENERATOR">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 45~, 6{]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="battery" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 45~, 6{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-45" max="-45" />
+				<item type="fuel" min="-6" max="-6" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_BATTERY_GENERATOR" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TECH_NOPHASE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]</text>
+		<event load="SCRAPPER_INSTALL_TECH_NOPHASE"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_TECH_NOPHASE">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 25~, 1{]
+	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="doors" lvl="1" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 25~, 1{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-25" />
+				<item type="fuel" min="-1" max="-1" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_TECH_NOPHASE" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_DRONE_SPEED">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 20~, 4|]</text>
+		<event load="SCRAPPER_INSTALL_DRONE_SPEED"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_DRONE_SPEED">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 20~, 4|]</text>
+	<choice req="drones" lvl="3" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 20~, 4|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-20" max="-20" />
+				<item type="drones" min="-4" max="-4" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_DRONE_SPEED" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="drones" lvl="1" max_lvl="2" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need Drone Control level 3.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TELEPORTER_LEVEL4">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 60~, 3|]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_TELEPORTER_LEVEL4"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_TELEPORTER_LEVEL4">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 60~, 3|]
+	Scrappers are very adept at manipulating teleporter systems. They enjoy integrating their teleporters with technology they find through the multiverse.</text>
+	<choice req="teleporter" lvl="3" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 60~, 3|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-60" max="-60" />
+				<item type="drones" min="-3" max="-3" />
+			</item_modify>
+			<upgrade amount="1" system="teleporter" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_DRONE_SPEED" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="teleporter" lvl="1" max_lvl="2" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need Teleporter level 3.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_TELEPORTER_HEAL">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 1|]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_TELEPORTER_HEAL"/>
+	</mod-append:choice>
+</mod:findName>	
+
+
+<event name="SCRAPPER_INSTALL_SYSTEM_TELEPORTER_HEAL">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 1|]
+	Scrappers are very adept at manipulating teleporter systems. They enjoy integrating their teleporters with technology they find through the multiverse.</text>
+	<choice req="teleporter" lvl="2" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 40~, 1{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40" />
+				<item type="fuel" min="-1" max="-1" />
+			</item_modify>
+			<upgrade amount="1" system="teleporter" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_TELEPORTER_HEAL" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="teleporter" lvl="1" max_lvl="1" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. You need Teleporter level 2.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="teleporter" lvl="4" max_lvl="4" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. It is not compatible with Teleporter level 4.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLOAK_LEVEL3">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 3{, 1|]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_CLOAK_LEVEL3"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_CLOAK_LEVEL3">
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 3{, 1|]
+	 Scrappers like to think they know how to handle Cloaking technology, and they are pretty good at it, all things considered. Let's hope you don't regret letting them tamper with things?</text>
+	<choice req="UPG_CLOAK_FIRE" lvl="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 55~, 3{, 1|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-55" max="-55" />
+				<item type="fuel" min="-1" max="-1" />
+				<item type="drones" min="-1" max="-1" />
+			</item_modify>
+			<variable name="tc_scrapper_cloaking_system_tampered" op="add" val="1"/> 
+			<upgrade amount="1" system="cloak" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="UPG_CLOAK_FIRE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. Is not compatible with Shadow Weaponry.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="cloak" lvl="1" max_lvl="1" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. It requires cloak level 2.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLOAK_LEVEL4">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 70~, 5{, 1|]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_CLOAK_LEVEL4"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_CLOAK_LEVEL4">
+	<text>Scrappers like to think they know how to handle Cloaking technology, and they are pretty good at it, all things considered. Let's hope you don't regret letting them tamper with things?</text>
+	<choice req="UPG_CLOAK_FIRE" lvl="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 70~, 5{, 1|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-70" max="-70" />
+				<item type="fuel" min="-5" max="-5" />
+				<item type="drones" min="-1" max="-1" />
+			</item_modify>
+			<variable name="tc_scrapper_cloaking_system_tampered" op="add" val="1"/> 
+			<upgrade amount="1" system="cloak" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="UPG_CLOAK_FIRE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. Is not compatible with Shadow Weaponry.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="cloak" lvl="1" max_lvl="2" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. It requires cloak level 3.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLOAK_LEVEL5">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 105~, 5{, 1|]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_CLOAK_LEVEL5"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_CLOAK_LEVEL5">
+	<text>Scrappers like to think they know how to handle Cloaking technology, and they are pretty good at it, all things considered. Let's hope you don't regret letting them tamper with things?</text>
+	<choice req="UPG_CLOAK_FIRE" lvl="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 105~, 5{, 1|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-105" max="-105" />
+				<item type="fuel" min="-5" max="-5" />
+				<item type="drones" min="-1" max="-1" />
+			</item_modify>
+			<variable name="tc_scrapper_cloaking_system_tampered" op="add" val="1"/> 
+			<upgrade amount="1" system="cloak" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="UPG_CLOAK_FIRE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. Is not compatible with Shadow Weaponry.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="cloak" lvl="1" max_lvl="3" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. It requires cloak level 4.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLOAK_FIRE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 105~, 5{, 1|]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_CLOAK_FIRE"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_CLOAK_FIRE">
+	<text>Scrappers like to think they know how to handle Cloaking technology, and they are pretty good at it, all things considered. Let's hope you don't regret letting them tamper with things?</text>
+	<choice req="cloaking" lvl="1" max_lvl="2" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 55~, 4}, 2{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="missiles" min="-4" max="-4" />
+				<item type="fuel" min="-2" max="-2" />
+				<item type="scrap" min="-45" max="-45" />
+			</item_modify>
+			<variable name="tc_scrapper_cloaking_system_tampered" op="add" val="1"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_CLOAK_FIRE" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="UPG_CLOAK_FIRE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is Already installed.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="cloaking" lvl="3" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. Is not compatible with cloaking Level 3 and above.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_MEDBAY_LEVEL4">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 80~, 1|]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_MEDBAY_LEVEL4"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_MEDBAY_LEVEL4">
+	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="UPG_MEDBAY_NANO" lvl="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 80~, 1|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-80" max="-80" />
+				<item type="drones" min="-1" max="-1" />
+			</item_modify>
+			<upgrade amount="1" system="medbay" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="UPG_MEDBAY_NANO" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. Is not compatible with medbots.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_MEDBAY_NANO">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 2|]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_MEDBAY_NANO"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_MEDBAY_NANO">
+	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="medbay" lvl="1" max_lvl="3" max_group="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 40~, 2|]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="drones" min="-2" max="-2" />
+				<item type="scrap" min="-40" max="-40" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_MEDBAY_NANO" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="medbay" lvl="4" max_group="0" blue="false" hidden="true">
+		<text>This upgrade is unavailable. Is not compatible with Medbay lvl 4.</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_MEDBAY_SPEED">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 15~, 1{]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_MEDBAY_SPEED"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_MEDBAY_SPEED">
+	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="medbay" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 15~, 1{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1" />
+				<item type="scrap" min="-15" max="-15" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_MEDBAY_SPEED" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_MEDBAY_RESISTANCE">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 10~]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_MEDBAY_RESISTANCE"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_MEDBAY_RESISTANCE">
+	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="medbay" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 10~]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="scrap" min="-10" max="-10" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_MEDBAY_RESISTANCE" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLONEBAY_DNA">
+	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 35~, 2{]</text>
+		<event load="SCRAPPER_INSTALL_SYSTEM_CLONEBAY_DNA"/>
+	</mod-append:choice>
+</mod:findName>	
+
+<event name="SCRAPPER_INSTALL_SYSTEM_CLONEBAY_DNA">
+	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
+	This talent does not seem to be consistent, however.</text>
+	<choice req="medbay" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Perform the upgrade. [Cost: 35~, 2{]</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<item_modify>
+				<item type="fuel" min="-2" max="-2" />
+				<item type="scrap" min="-35" max="-35" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_CLONEBAY_DNA" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
 
    <!--/////////////////STORAGE CHECK NOODLES//////////////////-->
 

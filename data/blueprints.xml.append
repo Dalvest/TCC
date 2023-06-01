@@ -10126,6 +10126,17 @@
 	        <mod-append:level>500</mod-append:level><!--20-->
 	    </mod:findLike>
 	</mod:findName>
+	
+	<!-- V's Expandcore :3 -->
+	
+	<mod:findName type="systemBlueprint" name="teleporter">
+	    <mod:findLike type="maxPower">
+	        <mod:setValue>5</mod:setValue>
+	    </mod:findLike>
+	    <mod:findLike type="upgradeCost">
+	        <mod-append:level>9999</mod-append:level>
+	    </mod:findLike>
+	</mod:findName>
 </FTL>
 
 <FTL><!--crew-->

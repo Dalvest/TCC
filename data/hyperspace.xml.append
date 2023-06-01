@@ -6206,6 +6206,42 @@ SPEED          Changes gamespeed
 	</statBoost>
 </aug>
 
+<aug name="UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER">
+	<statBoost name="damageMultiplier">
+		<boostType>MULT</boostType>
+		<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<droneTarget>CREW</droneTarget>
+		<amount>1.25</amount>
+		<priority>0</priority>
+		<systemPowerDependency>
+			<teleporter />
+		</systemPowerDependency>
+		<systemPowerScaling>
+			<noSys>0</noSys>
+			<noPwr>0</noPwr>
+			<onePwr>1</onePwr>
+		</systemPowerScaling>
+	</statBoost>
+	
+	<statBoost name="sabotageSpeedMultiplier">
+		<boostType>MULT</boostType>
+		<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<droneTarget>CREW</droneTarget>
+		<amount>1.35</amount>
+		<priority>0</priority>
+		<systemPowerDependency>
+			<teleporter />
+		</systemPowerDependency>
+		<systemPowerScaling>
+			<noSys>0</noSys>
+			<noPwr>0</noPwr>
+			<onePwr>1</onePwr>
+		</systemPowerScaling>
+	</statBoost>
+</aug>
+
 	<augments>
 		<aug name="LOCKED_SCRAP_ARMOR">
 			<function name="ROCK_ARMOR" value="0.25" useForReqs="false"/>
