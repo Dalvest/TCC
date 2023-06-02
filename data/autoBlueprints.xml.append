@@ -92,19 +92,19 @@
 
 
 
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL1">
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL_1">
 	<name>rosegold_scrapper</name>
 	<name>adamantine_scrapper</name>
 	<name>golden_scrapper</name>
 </blueprintList>
 
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL2">
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL_2">
 	<name>rosegold_scrapper_2</name>
 	<name>adamantine_scrapper_2</name>
 	<name>golden_scrapper_2</name>
 </blueprintList>
 
-<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL3">
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL_3">
 	<name>rosegold_scrapper_3</name>
 	<name>adamantine_scrapper_3</name>
 	<name>golden_scrapper_3</name>
@@ -131,17 +131,49 @@
 	<name>rosegold_scrapper_scavenger_mk2</name>
 </blueprintList>
 
-<!--/////// SCRAPPERS Elemental T1 //////-->
-
-<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_1">
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_BASE_ALL">
+	<name>rosegold_scrapper</name>
 	<name>adamantine_scrapper</name>
 	<name>golden_scrapper</name>
-	<name>rosegold_scrapper</name>
+	<name>rosegold_scrapper_2</name>
+	<name>adamantine_scrapper_2</name>
+	<name>golden_scrapper_2</name>
+	<name>rosegold_scrapper_3</name>
+	<name>adamantine_scrapper_3</name>
+	<name>golden_scrapper_3</name>
 </blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_BASE_UPGRADEABLE">
+	<name>rosegold_scrapper</name>
+	<name>adamantine_scrapper</name>
+	<name>golden_scrapper</name>
+	<name>rosegold_scrapper_2</name>
+	<name>adamantine_scrapper_2</name>
+	<name>golden_scrapper_2</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_ROSEGOLD">
+	<name>rosegold_scrapper</name>
+	<name>rosegold_scrapper_2</name>
+	<name>rosegold_scrapper_3</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_GOLDEN">
+	<name>golden_scrapper</name>
+	<name>golden_scrapper_2</name>
+	<name>golden_scrapper_3</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_ADAMANTINE">
+	<name>adamantine_scrapper</name>
+	<name>adamantine_scrapper_2</name>
+	<name>adamantine_scrapper_3</name>
+</blueprintList>
+
 
 <!--/////// SCRAPPERS Elemental T2 //////-->
 
-<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_2">
+<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_1">
 	<name>adamantine_scrapper_soldier</name>
 	<name>golden_scrapper_medic</name>
 	<name>rosegold_scrapper_engineer</name>
@@ -149,7 +181,16 @@
 
 <!--/////// SCRAPPERS Elemental T3 //////-->
 
-<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_3">
+<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_2">
+	<name>adamantine_scrapper_heavy_soldier</name>
+	<name>golden_scrapper_defender</name>
+	<name>rosegold_scrapper_scavenger</name>
+</blueprintList>
+
+<blueprintList name="LIST_SCRAPPER_ELEMENTAL_TIER_UPGRADEABLE">
+	<name>adamantine_scrapper_soldier</name>
+	<name>golden_scrapper_medic</name>
+	<name>rosegold_scrapper_engineer</name>
 	<name>adamantine_scrapper_heavy_soldier</name>
 	<name>golden_scrapper_defender</name>
 	<name>rosegold_scrapper_scavenger</name>
@@ -170,6 +211,16 @@
 	<name>scrapper_engineer</name>
 	<name>scrapper_medic</name>
 </blueprintList>
+
+<blueprintList name="LIST_SCRAPPER_TIER_UPGRADEABLE">
+	<name>scrapper_soldier</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_medic</name>
+	<name>scrapper_scavenger</name>
+	<name>scrapper_defender</name>
+	<name>scrapper_heavy</name>
+</blueprintList>
+
 
 <!--/////// SCRAPPERS T3 //////-->
 

@@ -10269,7 +10269,7 @@
 <crewBlueprint name="scrapper">
 	<title>Scrapper</title>
 	<short>Scrapper</short>
-	<desc>[Tier 1 Scrapper] A Lanius that is a part of the Scrapper faction, extremely adept at both repairing and breaking systems.
+	<desc>[Tier 1 Scrapper] A Lanius that is a part of the Scrapper faction, extremely adept at both repairing and breaking systems thanks to it's proclivity towards metal.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10290,7 +10290,7 @@
 <crewBlueprint name="scrapper_soldier">
 	<title>Scrapper Soldier</title>
 	<short>S. Soldier</short>
-	<desc>[Tier 2 Scrapper] A Lanius Scrapper with scythe-like fists to shred through anything in its path. Cannot man or repair systems. Learns combat slightly faster.
+	<desc>[Tier 1 Scrapper Specialist] A Lanius Scrapper with scythe-like fists to shred through anything in its path. Cannot man or repair systems. Learns combat slightly faster.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10298,12 +10298,12 @@
 	<bp>2</bp>
 	<rarity>5</rarity>
 	<powerList>
+		<power>[Specialization] 1.35x Damage</power>
+		<power>[Specialization] 2.0x Sabotage Damage</power>
 		<power>Cannot Man or Repair Systems</power>
-		<power>135 Health</power>
+		<power>115 Health</power>
 		<power>0.5x Fire Damage Taken</power>
 		<power>0.5x Oxygen Drain</power>		
-		<power>[Specialization]1.35x Damage</power>
-		<power>[Specialization]2.0x Sabotage Damage</power>
 		<power>0.75x Move Speed</power>
 	</powerList>
 </crewBlueprint>
@@ -10311,7 +10311,7 @@
 <crewBlueprint name="scrapper_engineer">
 	<title>Scrapper Engineer</title>
 	<short>S. Engineer</short>
-	<desc>[Tier 2 Scrapper] A Lanius Scrapper, given sharp hands that can quickly shape themselves into various tools and a fire-resistant, highly agile body. Learns repair skills slightly faster.
+	<desc>[Tier 1 Scrapper Specialist] A Scrapper, given sharp hands that can quickly shape themselves into various tools and a fire-resistant, highly agile body. Learns repair skills slightly faster.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10319,20 +10319,21 @@
 	<bp>2</bp>
 	<rarity>5</rarity>
 	<powerList>
+		<power>[Specialization] 1.0x Move Speed</power>
+		<power>[Specialization] 2.0x Repair Speed</power>
+		<power>[Specialization] Learns all skills faster. Cannot lose skills upon cloning.</power>
 		<power>115 Health</power>
 		<power>0.25x Fire Damage Taken</power>
 		<power>0.5x Oxygen Drain</power>		
 		<power>0.5x Damage</power>
 		<power>Cannot Sabotage</power>
-		<power>[Specialization]1.25x Move Speed</power>
-		<power>[Specialization]2.0x Repair Speed</power>
 	</powerList>
 </crewBlueprint>
 
 <crewBlueprint name="scrapper_medic">
 	<title>Scrapper Medic</title>
 	<short>S. Medic</short>
-	<desc>[Tier 2 Scrapper] A Lanius Scrapper, given strong legs and a lighter body, and the ability to heal its allies at the cost of it's own health. Very slowly heals itself.
+	<desc>[Tier 1 Scrapper Specialist] A Scrapper, given strong legs and a lighter body, and the ability to heal its allies at the cost of it's own health. Very slowly heals itself.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10340,22 +10341,22 @@
 	<bp>2</bp>
 	<rarity>5</rarity>
 	<powerList>
+		<power>[Specialization] Heals itself after 15 second delay for 2hp/s</power>
+		<power>[Specialization] Explosively heals allies for 50 at the cost of 50 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. </power>
 		<power>115 Health</power>
 		<power>0.50x Fire Damage Taken</power>
 		<power>0.50x Oxygen Drain</power>		
 		<power>0.50x Damage</power>
 		<power>0.50x Sabotage Damage</power>
-		<power>1.5x Move Speed</power>
+		<power>1.2x Move Speed</power>
 		<power>Cannot Repair</power>
-		<power>[Specialization]Heals itself after 15 second delay for 2hp/s</power>
-		<power>[Specialization]Can heal allies for 50 health at the cost of 50 health. 45 second cooldown. Recovers 1 charge per jump.</power>
 	</powerList>
 </crewBlueprint>
 	
 <crewBlueprint name="scrapper_heavy">
 	<title>Scrapper Heavy Soldier</title>
 	<short>S. Heavy</short>
-	<desc>[Tier 3 Scrapper] A Lanius Scrapper covered in a thick crust of scrap for protection. Cannot man or repair systems. Can cause breaches and system damage on-board enemy ships.
+	<desc>[Tier 2 Scrapper Specialist] A Scrapper Soldier covered in a thick crust of scrap for protection. Cannot man or repair systems. Can cause breaches and system damage on-board enemy ships.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10363,21 +10364,21 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
+		<power>[Specialization] 1.75x Damage</power>
+		<power>[Specialization] 2.0x Sabotage Damage</power>
+		<power>[Specialization] Can create explosions onboard enemy ships, damaging the ship and systems.</power>	
 		<power>Cannot Man or Repair Systems</power>
-		<power>175 Health</power>
+		<power>150 Health</power>
 		<power>0.5x Fire Damage Taken</power>
 		<power>0.5x Oxygen Drain</power>	
-		<power>0.5x Move Speed</power>			
-		<power>[Specialization]1.75x Damage</power>
-		<power>[Specialization]2.0x Sabotage Damage</power>
-		<power>Can create explosions onboard enemy ships, damaging the ship and systems.</power>
+		<power>0.5x Move Speed</power>
 	</powerList>
 </crewBlueprint>
 	
 <crewBlueprint name="scrapper_heavy_mk2">
 	<title>Scrapper Heavy Soldier Mark 2</title>
 	<short>S. Heavy Mk2</short>
-	<desc>[Tier 3 Upgraded Scrapper]A Heavy Scrapper that's been considerably upgraded..
+	<desc>[Tier 3 Scrapper Specialist] A Scrapper Heavy Soldier that's been considerably upgraded..
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10385,21 +10386,21 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
+		<power>[Specialization] 2x Damage</power>
+		<power>[Specialization] 2.25x Sabotage Damage</power>
+		<power>[Specialization] Can create explosions onboard enemy ships, damaging the ship and systems.</power>	
 		<power>Cannot Man or Repair Systems</power>
-		<power>200 Health</power>
+		<power>150 Health</power>
 		<power>0.5x Fire Damage Taken</power>
 		<power>0.5x Oxygen Drain</power>	
 		<power>0.5x Move Speed</power>			
-		<power>[Specialization]2x Damage</power>
-		<power>[Specialization]2.25x Sabotage Damage</power>
-		<power>Can create explosions onboard enemy ships, damaging the ship and systems.</power>
 	</powerList>
 </crewBlueprint>
 
 <crewBlueprint name="scrapper_scavenger">
 	<title>Scrapper Scavenger</title>
 	<short>S. Scavenger</short>
-	<desc>[Tier 3 Scrapper] A Lanius Scrapper with a unique scrap plating created by the Trash Eater himself. Learns all skills slightly faster. Cannot fight, but can cripple systems.
+	<desc>[Tier 2 Scrapper Specialist] A Scrapper with a unique scrap plating created by the Trash Eater himself. Cannot fight, but can cripple systems.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10407,20 +10408,20 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>135 Health</power>
-		<power>0.25x Fire Damage Taken</power>
+		<power>[Specialization] 2.5x Sabotage Damage</power>
+		<power>[Specialization] 1.25x Move Speed</power>
+		<power>[Specialization] 2.0x Repair Speed</power>		
+		<power>115 Health</power>
+		<power>0.5x Fire Damage Taken</power>
 		<power>0.5x Oxygen Drain</power>		
-		<power>Cannot fight but can destroy systems.</power>
-		<power>[Specialization]2.5x Sabotage Damage</power>
-		<power>[Specialization]1.75x Move Speed</power>
-		<power>[Specialization]2.0x Repair Speed</power>
+		<power>No Combat Damage</power>
 	</powerList>
 </crewBlueprint>
 
 <crewBlueprint name="scrapper_scavenger_mk2">
 	<title>Scrapper Scavenger Mark 2</title>
 	<short>S. Scavenger Mk2</short>
-	<desc>[Tier 3 Upgraded Scrapper] A Lanius Scavenger that's been considerably upgraded.
+	<desc>[Tier 3 Scrapper Specialist] A Scrapper Scavenger that's been considerably upgraded.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10428,20 +10429,20 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>165 Health</power>
-		<power>0.25x Fire Damage Taken</power>
+		<power>[Specialization] 3.0x Sabotage Damage</power>
+		<power>[Specialization] 1.25x Move Speed</power>
+		<power>[Specialization] 3.0x Repair Speed</power>
+		<power>115 Health</power>
+		<power>0.5x Fire Damage Taken</power>
 		<power>0.5x Oxygen Drain</power>		
-		<power>Cannot fight but can destroy systems.</power>
-		<power>[Specialization]2x Move Speed</power>
-		<power>[Specialization]3x Sabotage Damage</power>
-		<power>[Specialization]3x Repair Speed</power>
+		<power>No Combat Damage</power>
 	</powerList>
 </crewBlueprint>
 
 <crewBlueprint name="scrapper_defender">
 	<title>Scrapper Defender</title>
 	<short>S. Defender</short>
-	<desc>[Tier 3 Scrapper] A Lanius Scrapper, given a strong chest for absorbing damage and layered with additional scrap, creating an effective tank. Reduces all damage taken by allies in the same room.
+	<desc>[Tier 2 Scrapper Specialist] A Scrapper Medic, given a stronger chest for absorbing damage and layered with additional scrap, creating an effective tank. Reduces all damage taken by allies in the same room.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10449,12 +10450,14 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>[Specialization]200 Health</power>	
-		<power>[Specialization]Reduces all damage taken by all friendly crew in the room by 20%</power>
+		<power>[Specialization] 200 Health</power>	
+		<power>[Specialization] Reduces all damage taken by all friendly crew in the room by 20%</power>
+		<power>[Specialization] Heals itself after 15 second delay for 4hp/s.</power>
+		<power>[Specialization] Explosively heals allies for 75 at the cost of 75 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. </power>
 		<power>0.5x Fire Damage Taken</power>
 		<power>0.5x Oxygen Drain</power>		
 		<power>0.75x Damage</power>
-		<power>1x Move Speed</power>
+		<power>0.75x Move Speed</power>
 		<power>0.75x Sabotage</power>
 		<power>Cannot Repair</power>
 	</powerList>
@@ -10463,7 +10466,7 @@
 <crewBlueprint name="scrapper_defender_mk2">
 	<title>Scrapper Defender Mark 2</title>
 	<short>S. Defender Mk2</short>
-	<desc>[Tier 3 Upgraded Scrapper] A Lanius Defender that's been upgraded through considerable effort. 
+	<desc>[Tier 3 Scrapper Specialist] A Scrapper Defender that's been considerably upgraded.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -10471,13 +10474,15 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>[Specialization]240 Health</power>	
-		<power>[Specialization]Reduces all damage taken by all friendly crew in the room by 30%</power>
+		<power>[Specialization] 200 Health</power>	
+		<power>[Specialization] Reduces all damage taken by all friendly crew in the room by 30%</power>
+		<power>[Specialization] Heals itself after 15 second delay for 4hp/s.</power>
+		<power>[Specialization] Explosively heals allies for 75 at the cost of 75 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. </power>
+		<power>0.5x Damage</power>
+		<power>0.75x Move Speed</power>		
+		<power>0.5x Sabotage</power>
 		<power>0.5x Fire Damage Taken</power>
-		<power>0.5x Oxygen Drain</power>		
-		<power>1x Damage</power>
-		<power>1.2x Move Speed</power>
-		<power>1x Sabotage</power>
+		<power>0.5x Oxygen Drain</power>
 		<power>Cannot Repair</power>
 	</powerList>
 </crewBlueprint>

@@ -2412,11 +2412,11 @@ SPEED          Changes gamespeed
 		<shipFriendlyFire>true</shipFriendlyFire>
 		<buttonText>HEAL</buttonText>
 		<tooltip>[COOLDOWN:45s]
-			Heal all other friendly crew in the room for 50 hitpoints at the cost of it's own health.</tooltip>
+			Heal all other friendly crew in the room for 75 hitpoints at the cost of it's own health.</tooltip>
 		<cooldownColor r="255" g="78" b="69"/>
 		<effectAnim>explosion_big1_heal</effectAnim>
-		<crewHealth>50</crewHealth>
-		<selfHealth>-50</selfHealth>
+		<crewHealth>75</crewHealth>
+		<selfHealth>-75</selfHealth>
 	</powerEffect>
 	<skills>
 		<piloting req="22"/>
@@ -2472,7 +2472,7 @@ SPEED          Changes gamespeed
 		<cooldownColor r="255" g="78" b="69"/>
 		<effectAnim>explosion_big1_heal</effectAnim>
 		<crewHealth>75</crewHealth>
-		<selfHealth>-50</selfHealth>
+		<selfHealth>-75</selfHealth>
 	</powerEffect>
 	<skills>
 		<piloting req="22"/>
@@ -3056,7 +3056,7 @@ SPEED          Changes gamespeed
 </mod-append:race>
 
 <mod-append:race name="scrapper_soldier">
-	<maxHealth>135</maxHealth>
+	<maxHealth>115</maxHealth>
 	<canRepair>false</canRepair>
 	<canMan>false</canMan>
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
@@ -3082,7 +3082,7 @@ SPEED          Changes gamespeed
 </mod-append:race>
 
 <mod-append:race name="scrapper_heavy">
-	<maxHealth>175</maxHealth>
+	<maxHealth>150</maxHealth>
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
 	<canSuffocate>false</canSuffocate>
 	<canRepair>false</canRepair>
@@ -3133,7 +3133,7 @@ SPEED          Changes gamespeed
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 	<canSuffocate>false</canSuffocate>
 	<repairSpeed>2</repairSpeed>
-	<moveSpeedMultiplier>1.25</moveSpeedMultiplier>
+	<moveSpeedMultiplier>1.0</moveSpeedMultiplier>
 	<fireDamageMultiplier>0.25</fireDamageMultiplier>
 	<damageMultiplier>0.5</damageMultiplier>
 	<canSabotage>false</canSabotage>
@@ -3144,17 +3144,17 @@ SPEED          Changes gamespeed
 		<deathSound>shrikeDeath</deathSound>
 	</deathSounds>
 <skills>
-	<piloting req="22"/>
-	<engines req="22"/>
+	<piloting req="18"/>
+	<engines req="18"/>
 	<shields req="62"/>
 	<weapons req="72"/>
-	<repair req="18"/>
+	<repair req="16"/>
 	<combat req="12"/>
 </skills>
 </mod-append:race>
 
 <mod-append:race name="scrapper_heavy_mk2">
-	<maxHealth>200</maxHealth>
+	<maxHealth>150</maxHealth>
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
 	<canSuffocate>false</canSuffocate>
 	<canRepair>false</canRepair>
@@ -3257,10 +3257,12 @@ SPEED          Changes gamespeed
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 	<canSuffocate>false</canSuffocate>
 	<canRepair>false</canrepair>
-	<moveSpeedMultiplier>1</moveSpeedMultiplier>
+	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
 	<fireDamageMultiplier>0.50</fireDamageMultiplier>
 	<damageMultiplier>0.75</damageMultiplier>
 	<sabotageSpeedMultiplier>0.75</sabotageSpeedMultiplier>
+	<passiveHealAmount>4</passiveHealAmount>
+	<passiveHealDelay>15</passiveHealDelay>
 	<passiveStatBoosts>
 		<statBoost name="damageTakenMultiplier">
 			<boostType>FLAT</boostType>
@@ -3277,25 +3279,52 @@ SPEED          Changes gamespeed
 	<deathSounds>
 		<deathSound>shrikeDeath</deathSound>
 	</deathSounds>
-<skills>
-	<piloting req="22"/>
-	<engines req="22"/>
-	<shields req="62"/>
-	<weapons req="72"/>
-	<repair req="24"/>
-	<combat req="12"/>
-</skills>
+	<powerEffect>
+		<tooltip>Ready: Heal the room!.</tooltip>
+		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+		<cooldown>45</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>healBomb</powerSound>
+		</powerSounds>
+		<powerCharges>2</powerCharges>
+		<initialCharges>1</initialCharges>
+		<chargesPerJump>1</chargesPerJump>
+		<req type="player">
+			<friendlyInRoom/>
+			<minHealth>51</maxHealth>
+		</req>
+		<friendlyFire>true</friendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
+		<buttonText>HEAL</buttonText>
+		<tooltip>[COOLDOWN:45s]
+			Heal all other friendly crew in the room for 75 hitpoints at the cost of it's own health.</tooltip>
+		<cooldownColor r="255" g="78" b="69"/>
+		<effectAnim>explosion_big1_heal</effectAnim>
+		<crewHealth>75</crewHealth>
+		<selfHealth>-75</selfHealth>
+	</powerEffect>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
 </mod-append:race>
 
 <mod-append:race name="scrapper_defender_mk2">
-	<maxHealth>240</maxHealth>
+	<maxHealth>200</maxHealth>
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 	<canSuffocate>false</canSuffocate>
 	<canRepair>false</canrepair>
-	<moveSpeedMultiplier>1.2</moveSpeedMultiplier>
+	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
 	<fireDamageMultiplier>0.50</fireDamageMultiplier>
-	<damageMultiplier>1</damageMultiplier>
-	<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
+	<damageMultiplier>0.5</damageMultiplier>
+	<passiveHealAmount>4</passiveHealAmount>
+	<passiveHealDelay>15</passiveHealDelay>
+	<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
 	<passiveStatBoosts>
 		<statBoost name="damageTakenMultiplier">
 			<boostType>FLAT</boostType>
@@ -3325,11 +3354,11 @@ SPEED          Changes gamespeed
 		<shipFriendlyFire>true</shipFriendlyFire>
 		<buttonText>HEAL</buttonText>
 		<tooltip>[COOLDOWN:45s]
-			Heal all other friendly crew in the room for 50 hitpoints at the cost of it's own health.</tooltip>
+			Heal all other friendly crew in the room for 75 hitpoints at the cost of it's own health.</tooltip>
 		<cooldownColor r="255" g="78" b="69"/>
 		<effectAnim>explosion_big1_heal</effectAnim>
-		<crewHealth>50</crewHealth>
-		<selfHealth>-50</selfHealth>
+		<crewHealth>75</crewHealth>
+		<selfHealth>-75</selfHealth>
 </powerEffect>
 	<repairSounds>
 		<repairSound>shrikeRepair</repairSound>
@@ -3352,7 +3381,7 @@ SPEED          Changes gamespeed
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 	<canSuffocate>false</canSuffocate>
 	<repairSpeed>2</repairSpeed>
-	<moveSpeedMultiplier>1.75</moveSpeedMultiplier>
+	<moveSpeedMultiplier>1.25</moveSpeedMultiplier>
 	<fireDamageMultiplier>0.25</fireDamageMultiplier>
 	<canFight>false</canFight>
 	<sabotageSpeedMultiplier>2.5</sabotageSpeedMultiplier>
@@ -3377,7 +3406,7 @@ SPEED          Changes gamespeed
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 	<canSuffocate>false</canSuffocate>
 	<repairSpeed>3</repairSpeed>
-	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+	<moveSpeedMultiplier>1.25</moveSpeedMultiplier>
 	<fireDamageMultiplier>0.25</fireDamageMultiplier>
 	<canFight>false</canFight>
 	<sabotageSpeedMultiplier>3</sabotageSpeedMultiplier>
