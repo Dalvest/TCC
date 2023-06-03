@@ -16,12 +16,7 @@
       <event load="FLAK_FORGE"/>
     </mod-append:choice>
 
-    <mod-append:choice req="AUTOMATED_QUARTERMASTER">
-      <text>(Automated Quartermaster) Print a custom weapon.</text>
-      <event load="AUTOMATED_QUARTERMASTER_CHOICE"/>
-    </mod-append:choice>
-
-    <mod-append:choice req="SCRAP_COMPACTOR">
+    <mod-append:choice req="SCRAP_COMPACTOR"> <!--Protogen-->
       <text>(Scrap Compactor) Print a custom flak weapon.</text>
       <event>
         <text>You start the process...</text>
@@ -1444,181 +1439,6 @@
 	</choice>
 </event>
 
-   <!--/////////////////STORAGE CHECK NOODLES//////////////////-->
-
-
-   <mod:findName type = "event" name = "STORAGE_CHECK_AUG">
-    <mod-append:choice req="NOODLE_RATIONS" blue="false" hidden="true">
-      <text>Make some instant noodles.</text>
-      <event load="STORAGE_CHECK_NOODLES"/>
-    </mod-append:choice>
-
-    <!-- Move other menus example options to the bottom -->
-    <mod:findWithChildLike type="choice" child-type="text">
-      <mod:selector>Nevermind, do something else.</mod:selector>
-      <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-    </mod:findWithChildLike>
-  </mod:findName>
-
-  <event name="STORAGE_CHECK_NOODLES">
-    <text>What would you like to do?</text>
-    <choice req="NOODLE_RATIONS_UPGRADE" lvl="0" max_lvl="0" blue="false" hidden="true">
-			<text>Noodle Rations (Base)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-    <choice req="NOODLE_RATIONS_UPGRADE" lvl="1" max_lvl="1" blue="false" hidden="true">
-			<text>Noodle Rations (Level 1)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="2" max_lvl="2" blue="false" hidden="true">
-			<text>Noodle Rations (Level 2)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="3" max_lvl="3" blue="false" hidden="true">
-			<text>Noodle Rations (Level 3)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="4" max_lvl="4" blue="false" hidden="true">
-			<text>Noodle Rations (Level 4)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="5" max_lvl="5" blue="false" hidden="true">
-			<text>Noodle Rations (Level 5)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="6" max_lvl="6" blue="false" hidden="true">
-			<text>Noodle Rations (Level 6)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="7" max_lvl="7" blue="false" hidden="true">
-			<text>Noodle Rations (Level 7)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="8" max_lvl="8" blue="false" hidden="true">
-			<text>Noodle Rations (Level 8)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="9" max_lvl="9" blue="false" hidden="true">
-			<text>Noodle Rations (Level 9)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="10" max_lvl="10" blue="false" hidden="true">
-			<text>Noodle Rations (Level 10)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="11" max_lvl="11" blue="false" hidden="true">
-			<text>Noodle Rations (Level 11)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="12" max_lvl="12" blue="false" hidden="true">
-			<text>Noodle Rations (Level 12)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="13" max_lvl="13" blue="false" hidden="true">
-			<text>Noodle Rations (Level 13)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="14" max_lvl="14" blue="false" hidden="true">
-			<text>Noodle Rations (Level 14)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="15" max_lvl="15" blue="false" hidden="true">
-			<text>Noodle Rations (Level 15)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="16" max_lvl="16" blue="false" hidden="true">
-			<text>Noodle Rations (Level 16)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="17" max_lvl="17" blue="false" hidden="true">
-			<text>Noodle Rations (Level 17)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="18" max_lvl="18" blue="false" hidden="true">
-			<text>Noodle Rations (Level 18)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="19" max_lvl="19" blue="false" hidden="true">
-			<text>Noodle Rations (Level 19)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-		<choice req="NOODLE_RATIONS_UPGRADE" lvl="20" max_lvl="20" blue="false" hidden="true">
-			<text>Noodle Rations (Level 20, Maxed)</text>
-			<event load="OPTION_INVALID"/>
-		</choice>
-
-    <choice req="NOODLE_RATIONS_UPGRADE" lvl="0" max_lvl="19" blue="false">
-      <text>Upgrade your Noodle Rations using fuel to give an additional 1.01x multiplier to movement speed, combat damage, and max health. Don't ask how fuel works to upgrade rations - that's classified.</text>
-      <event>
-        <text>The noodles undergo the process. You are unsure how.</text>
-        <hiddenAug>NOODLE_RATIONS_UPGRADE</hiddenAug>
-        <item_modify>
-				  <item type="fuel" min="-3" max="-3"/>
-			  </item_modify>
-        <choice hidden="true">
-    		  <text>Continue...</text>
-    		  <event load="STORAGE_CHECK"/>
-    	  </choice>
-      </event>
-    </choice>
-
-    <choice hidden="true">
-		  <text>Do nothing.</text>
-		  <event load="STORAGE_CHECK"/>
-	  </choice>
-
-  </event>
-
-    <!--///////////////////////////////
-  ////////////// COMBAT CHECK OPTIONS ///////////////
-  ////////////////////////////////-->
-
-  <mod:findName type="event" name="COMBAT_CHECK_REAL">
-
-    <mod-append:choice req="LOCKED_SCRAP_ARMOR" lvl="1" max_group="602"  blue="true">
-      <text>(Scrap Armor) Your piloting console allows you to ram the enemy ship, although it could cause some minor damage to the hull. [Costs: 10~]</text>
-          <event load="COMBAT_CHECK_RAMMING_SCRAP"/>
-    </mod-append:choice>
-  
-      <!--<mod-append:choice req="FLAK_ARMOR" lvl="1" max_group="603"  blue="true">
-        <text>Mek armour</text>
-        <event>
-          <triggeredEvent event="FLAK_ARMOR_CREATE" seeded="false" loops="0" thisFight="true" time="0"/>
-        </event>
-      </mod-append:choice>-->
-  
-      <!-- Move other menus example options to the bottom -->
-      <mod:findWithChildLike type="choice" child-type="text">
-        <mod:selector>Nevermind..</mod:selector>
-        <mod:setAttributes req="pilot" lvl="1" max_group="998" blue="false"/>
-      </mod:findWithChildLike>
-
-  </mod:findName>
-
-  <event name="COMBAT_CHECK_RAMMING_SCRAP">
-    <text>Are you sure?</text>
-    <choice>
-      <text>Yes.</text>
-      <event>
-        <text>You divert full power to your engines, ramming into the enemy vessel as hard as you can.</text>
-        <item_modify>
-          <item type="scrap" min="-10" max="-10"/>
-        </item_modify>
-        <enemyDamage amount="5" system="engines" effect="fire"/>
-        <choice>
-          <text>Continue the fight!</text>
-          <event/>
-        </choice>
-      </event>
-    </choice>
-    <choice>
-      <text>Nevermind.</text>
-      <event>
-        <loadEvent>COMBAT_CHECK_REAL</loadEvent>
-      </event>
-    </choice>
-  </event>
-
     <!--///////////////////////////////
   ////////////// COMPACTOR OPTIONS ///////////////
   ////////////////////////////////-->
@@ -1785,36 +1605,7 @@
   </choice>
 </event>
 
-<!--
-◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-                   CREW TALK
-◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
--->
 
-
-<mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
-
-	<mod-append:choice req="trash_eater" blue="false" hidden="true">
-		<text>Look for the Trash Eater.</text>
-		<event load="SOCIALIZE_TRASH_EATER_LIST"/>
-	</mod-append:choice>
-
-  <mod-append:choice req="protogen_tracker" blue="false" hidden="true">
-		<text>Look for TRACKER.</text>
-		<event load="SOCIALIZE_TRACKER_LIST"/>
-	</mod-append:choice>
-
-  <mod-append:choice req="unique_skygirr" blue="false" hidden="true">
-		<text>Look for Skygirr.</text>
-		<event load="SOCIALIZE_SKYGIRR_LIST"/>
-	</mod-append:choice>
-
-  <mod:findWithChildLike type="choice" child-type="text"> <!--To make sure that the nevermind choice remains at the bottom-->
-    <mod:selector>Nevermind, do something else.</mod:selector>
-    <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
-  </mod:findWithChildLike>
-
-</mod:findName>
 
 <!--
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -1824,25 +1615,22 @@
 
 <!-- appending to the main lab menu-->
 <mod:findName name="STORAGE_CHECK_LAB">
-	<mod-append:choice req="LIST_CREW_ROBOTTOS" blue="false" hidden="true">
-		<text>Sentient.</text>
-		<event load="STORAGE_CHECK_LAB_ROBOTTO"/>
-	</mod-append:choice>
 
 	<mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" hidden="true">
 		<text>Scrapper.</text>
 		<event load="STORAGE_CHECK_LAB_SCRAPPER"/>
 	</mod-append:choice>
 	
-	<mod-append:choice req="LIST_CREW_AVALI" blue="false" hidden="true">
-		<text>Avali.</text>
-		<event load="STORAGE_CHECK_LAB_AVALI"/>
-	</mod-append:choice>
-	
 	<mod-append:choice req="CREW_UPGRADER" blue="true" hidden="true">
 		<text>[CREW UPGRADER]</text>
 		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER"/>
 	</mod-append:choice>
+	
+	<mod-append:choice req="pilot" lvl="1" blue="true" hidden="true">
+		<text>New Scrapper Menu.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_LIST"/>
+	</mod-append:choice>
+	
   <!--more choices here-->
 
 
@@ -1851,13 +1639,6 @@
 		<mod:setAttributes max_group="9" req="pilot" lvl="1" blue="false"/>
 	</mod:findWithChildLike>
 </mod:findName>
-
-<!--TODO: 
-  replace the `__race_upgrade(number)__` with the actual name
-  replace the `[some buff]` with the actual effects
-  fill the augment name & description in `blueprints.xml.append` in the section "LAB AUGMENTS"
-  fill in the `aug` tags om `Hyperspace.xml.append` in the section "LAB AUGMENTS & VARIABLES"
--->
 
 <!-- ================= CREW UPGRADER ================ -->
 <event name="STORAGE_CHECK_LAB_CREW_UPGRADER">
@@ -2092,154 +1873,6 @@
 	</choice>
 </event>
 
-<!-- ================= ROBOTTO ================ -->
-<event name="STORAGE_CHECK_LAB_ROBOTTO">
-	<text>You are viewing the lab menu for: [SENTIENT]</text>
-
-	<!--<choice req="LAB_TCC_ROBOTTO_UPGRADE1" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: __robotto_upgrade1__. [some buff]</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="LAB_TCC_ROBOTTO_UPGRADE2" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: __robotto_upgrade2__. [some buff and nerf]</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="LAB_TCC_ROBOTTO_UPGRADE3" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: __robotto_upgrade3__. [some quirk]</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: None</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-
-	<choice req="tcc_labs_robotto_installed" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Pri: __robotto_upgrade1__. [An upgrade is already installed]</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="tcc_labs_robotto_installed" lvl="0" max_group="1" blue="false" hidden="true">
-		<text>Pri: __robotto_upgrade1__. [Cost: 69420~]</text>
-		<event load="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG1"/>
-	</choice>
-
-	<choice req="tcc_labs_robotto_installed" lvl="1" max_group="2" blue="false" hidden="true">
-		<text>Pri: __robotto_upgrade2__. [An upgrade is already installed]</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="tcc_labs_robotto_installed" lvl="0" max_group="2" blue="false" hidden="true">
-		<text>Pri: __robotto_upgrade2__. [Cost: 69420~]</text>
-		<event load="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG2"/>
-	</choice>
-
-	<choice req="tcc_labs_robotto_installed" lvl="1" max_group="3" blue="false" hidden="true">
-		<text>Pri: __robotto_upgrade3__. [An upgrade is already installed]</text>
-		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="tcc_labs_robotto_installed" lvl="0" max_group="3" blue="false" hidden="true">
-		<text>Pri: __robotto_upgrade3__. [Cost: 69420{]</text>
-		<event load="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG3"/>
-	</choice>-->
-
-  <choice req="robottos" max_group="4" blue="false" hidden="true">
-		<text>Upgrade your Sentient.</text>
-		<event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE"/>
-	</choice>
-
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
-<!--
-<event name="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG1">
-	<text>You are about to install the __robotto_upgrade1__ modification. 
-[Effects: some buff] 
-
-[Warning: After installing this, you will not be able to install any more primary upgrades for Human crew. You will not be able to deactivate this mod either.]</text>
-	<choice hidden="true">
-		<text>Install the modification. [Cost: 69420~]</text>
-		<event>
-			<text>You install the modification.</text>
-			<item_modify>
-				<item type="scrap" min="-30" max="-30"/>
-			</item_modify>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event>
-          <hiddenAug>LAB_TCC_ROBOTTO_UPGRADE1</hiddenAug>
-          <variable name="tcc_labs_robotto_installed" op="add" val="1"/>
-        	<variable name="loc_lab_upgrades" op="add" val="1"/>
-          <loadEvent>STORAGE_CHECK_LAB_ROBOTTO</loadEvent>
-        </event>
-			</choice>
-		</event>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Nevermind.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
-<event name="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG2">
-	<text>You are about to install the __robotto_upgrade2__ modification. 
-[Effects: some buff]
-
-[Warning: After installing this, you will not be able to install any more primary upgrades for Human crew. You will not be able to deactivate this mod either.]</text>
-	<choice hidden="true">
-		<text>Install the modification. [Cost: 69420~]</text>
-		<event>
-			<text>You install the modification.</text>
-			<item_modify>
-				<item type="scrap" min="-30" max="-30"/>
-			</item_modify>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event>
-          <hiddenAug>LAB_TCC_ROBOTTO_UPGRADE2</hiddenAug>
-          <variable name="tcc_labs_robotto_installed" op="add" val="1"/>
-        	<variable name="loc_lab_upgrades" op="add" val="1"/>
-          <loadEvent>STORAGE_CHECK_LAB_ROBOTTO</loadEvent>
-        </event>
-			</choice>
-		</event>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Nevermind.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
-<event name="STORAGE_CHECK_LAB_ROBOTTO_PRI_UPG3">
-	<text>You are about to install the __robotto_upgrade3__ modification. 
-[Effects: some buff] 
-
-[Warning: After installing this, you will not be able to install any more primary upgrades for Human crew. You will not be able to deactivate this mod either.]</text>
-	<choice hidden="true">
-		<text>Install the modification. [Cost: 69420~]</text>
-		<event>
-			<text>You install the modification.</text>
-			<item_modify>
-				<item type="scrap" min="-30" max="-30"/>
-			</item_modify>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event>
-          <hiddenAug>LAB_TCC_ROBOTTO_UPGRADE3</hiddenAug>
-          <variable name="tcc_labs_robotto_installed" op="add" val="1"/>
-        	<variable name="loc_lab_upgrades" op="add" val="1"/>
-          <loadEvent>STORAGE_CHECK_LAB_ROBOTTO</loadEvent>
-        </event>
-			</choice>
-		</event>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Nevermind.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
--->
-
 
 <!-- ================= SCRAPPER ================ -->
 <event name="STORAGE_CHECK_LAB_SCRAPPER">
@@ -2279,10 +1912,6 @@
 	<choice req="LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR" level="1" blue="false" hidden="true">
 		<text>Already Installed: Defense Field Generator</text>
 		<event load="OPTION_INVALID"/>
-	</choice>
-	<choice req="ADVANCED_SCRAP" blue="true" hidden="true">
-		<text>[ADVANCED SCRAP PROCESSOR] Augment and upgrade your scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
@@ -2417,203 +2046,731 @@
 	<loadEvent>STORAGE_CHECK_LAB_SCRAPPER</loadEvent>
 </event>
 
+     <!--////////////////////////////////////////////////////////// SOCIAL ZONE /////////////////////////////////////////////////////////-->
 
-<!--
-◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-          [ADVANCED SCRAP PROCESSOR]SCRAPPER UPGRADE MENU
-◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
--->
+<mod:findName type="event" name="STORAGE_CHECK_CREW_REAL">
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE">
+	<mod-append:choice req="trash_eater" blue="false" hidden="true">
+		<text>Look for the Trash Eater.</text>
+		<event load="SOCIALIZE_TRASH_EATER_LIST"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="protogen_tracker" blue="false" hidden="true">
+		<text>Look for TRACKER.</text>
+		<event load="SOCIALIZE_TRACKER_LIST"/>
+	</mod-append:choice>
+
+  <mod-append:choice req="unique_skygirr" blue="false" hidden="true">
+		<text>Look for Skygirr.</text>
+		<event load="SOCIALIZE_SKYGIRR_LIST"/>
+	</mod-append:choice>
+
+  <mod:findWithChildLike type="choice" child-type="text"> <!--To make sure that the nevermind choice remains at the bottom-->
+    <mod:selector>Nevermind, do something else.</mod:selector>
+    <mod:setAttributes max_group="998" req="pilot" lvl="1" blue="false"/>
+  </mod:findWithChildLike>
+
+</mod:findName>
+
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_LIST">
     <text>[Advanced Scrap Processor] Utilizing the advanced augment you may upgrade your Scrappers in various ways.</text>
-    <choice req="pilot" lvl="1" blue="true">
-      <text>[Scrapper Guide]</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE"/>
+	<choice req="scrapper" lvl="1" blue="false">
+		<text>Transform Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_BASE"/>
     </choice>
-    <choice req="scrapper" lvl="1" blue="false">
-		<text>Upgrade your Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE"/>
-    </choice>
-    <choice req="scrapper_soldier" lvl="1" blue="false">
-		<text>Upgrade your Scrapper Soldier.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER"/>
+	<choice req="scrapper_soldier" lvl="1" blue="false">
+		<text>Transform Scrapper Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_SOLDIER"/>
     </choice>
     <choice req="scrapper_engineer" lvl="1" blue="false">
-		<text>Upgrade your Scrapper Engineer.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER"/>
+		<text>Transform Scrapper Engineer.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ENGINEER"/>
     </choice>
 	<choice req="scrapper_medic" lvl="1" blue="false">
-		<text>Upgrade your Scrapper Medic.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC"/>
+		<text>Transform Scrapper Medic.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_MEDIC"/>
     </choice>
 	<choice req="scrapper_defender" lvl="1" blue="false">
-		<text>Upgrade your Scrapper Defender.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER"/>
+		<text>Transform Scrapper Defender.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_DEFENDER"/>
     </choice>	
 	<choice req="scrapper_heavy" lvl="1" blue="false">
-		<text>Upgrade your Scrapper Heavy Soldier.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY"/>
+		<text>Transform Scrapper Heavy Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_HEAVY"/>
 	</choice>
 	<choice req="scrapper_scavenger" lvl="1" blue="false">
-		<text>Upgrade your Scrapper Scavenger.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER"/>
+		<text>Transform Scrapper Scavenger.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_SCAVENGER"/>
     </choice>
+	<choice req="scrapper_defender_mk2" lvl="1" blue="false">
+		<text>Transform Scrapper Defender Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_DEFENDER_MK2"/>
+    </choice>	
+	<choice req="scrapper_heavy_mk2" lvl="1" blue="false">
+		<text>Transform Scrapper Heavy Soldier Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_HEAVY_MK2"/>
+	</choice>
+	<choice req="scrapper_scavenger_mk2" lvl="1" blue="false">
+		<text>Transform Scrapper Scavenger Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_SCAVENGER_MK2"/>
+    </choice>	
+	<choice req="rosegold_scrapper_engineer" lvl="1" blue="false">
+		<text>Transform Rosegold Scrapper Engineer.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_ENGINEER"/>
+    </choice>
+	<choice req="golden_scrapper_medic" lvl="1" blue="false">
+		<text>Transform Golden Scrapper Medic.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_MEDIC"/>
+    </choice>
+	<choice req="adamantine_scrapper_soldier" lvl="1" blue="false">
+		<text>Transform Adamantine Scrapper Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SOLDIER"/>
+    </choice>
+	<choice req="golden_scrapper_defender" lvl="1" blue="false">
+		<text>Transform Golden Scrapper Defender.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_DEFENDER"/>
+    </choice>	
+	<choice req="adamantine_scrapper_heavy" lvl="1" blue="false">
+		<text>Transform Adamantine Scrapper Heavy Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_HEAVY"/>
+	</choice>
+	<choice req="rosegold_scrapper_scavenger" lvl="1" blue="false">
+		<text>Transform Rosegold Scrapper Scavenger.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCAVENGER"/>
+    </choice>
+	<choice req="golden_scrapper_defender_mk2" lvl="1" blue="false">
+		<text>Transform Golden Scrapper Defender Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_DEFENDER_MK2"/>
+    </choice>	
+	<choice req="adamantine_scrapper_heavy_mk2" lvl="1" blue="false">
+		<text>Transform Adamantine Scrapper Heavy Soldier Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_HEAVY_MK2"/>
+	</choice>
+	<choice req="rosegold_scrapper_scavenger_mk2" lvl="1" blue="false">
+		<text>Transform Rosegold Scrapper Scavenger Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCAVENGER_MK2"/>
+    </choice>	
+   <choice req="adamantine_scrapper" lvl="1" blue="false">
+		<text>Transform Adamantine Scrapper</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SCRAPPER"/>
+    </choice>
+    <choice req="rosegold_scrapper" lvl="1" blue="false">
+		<text>Transform Rosegold Scrapper</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCRAPPER"/>
+    </choice>	
+    <choice req="golden_scrapper" lvl="1" blue="false">
+		<text>Transform Golden Scrapper</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_SCRAPPER"/>
+    </choice>
+    <choice req="adamantine_scrapper_2" lvl="1" blue="false">
+		<text>Transform Adamantine Scrapper Level 2</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SCRAPPER_2"/>
+    </choice>
+    <choice req="rosegold_scrapper_2" lvl="1" blue="false">
+		<text>Transform Rosegold Scrapper Level 2</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCRAPPER_2"/>
+    </choice>	
+    <choice req="golden_scrapper_2" lvl="1" blue="false">
+		<text>Transform Golden Scrapper Level 2</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_SCRAPPER_2"/>
+    </choice>		
+    <choice req="adamantine_scrapper_3" lvl="1" blue="false">
+		<text>Transform Adamantine Scrapper Level 3</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SCRAPPER_3"/>
+    </choice>
+    <choice req="rosegold_scrapper_3" lvl="1" blue="false">
+		<text>Transform Rosegold Scrapper Level 3</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCRAPPER_3"/>
+    </choice>	
+    <choice req="golden_scrapper_3" lvl="1" blue="false">
+		<text>Transform Golden Scrapper Level 3</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_SCRAPPER_3"/>
+    </choice>		
 	<choice req="lanius" lvl="1" blue="false">
-		<text>Cover your Lanius in Scrap.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_LANIUS"/>
-    </choice>
-	<choice req="pilot" lvl="1" blue="true">
-		<text>Enhance your Scrappers with Multiversal energy. [TO DO: Create a Teleporter Upgrade that unlocks this menu.]</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_MENU"/>
+		<text>Transform Lanius</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_LANIUS"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-  </event>
-  
-     <!--////////////////////////////////////////////////////////// BASE LANIUS UPGRADE TEXT/////////////////////////////////////////////////////////-->
+</event>
 
-	<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_LANIUS">
-		<text>Your Lanius can be covered in scrap, turning it into a scrapper.
-		</text>
-		<choice req="lanius" level="1" max_group="1" blue="false">
-			<text>Create a Scrapper. </text>
-			<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_LANIUS"/>
-		</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-	</event>
-
-     <!--////////////////////////////////////////////////////////// BASE SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE">
-    <text>Your base scrapper can be upgraded into one of the three tier two varients.</text>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_BASE">
+    <text>Base Scrappers can be transformed into a Specialist or an Elemental.</text>
     <choice req="scrapper" lvl="1" max_group="1" blue="false">
-      <text>Create a Scrapper Soldier.</text>
+      <text>Transform into a Scrapper Soldier.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SOLDIER"/>
     </choice>
     <choice req="scrapper" lvl="1" max_group="2" blue="false">
-      <text>Create a Scrapper Engineer.</text>
+      <text>Transform into a Scrapper Engineer.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ENGINEER"/>
     </choice>
     <choice req="scrapper" lvl="1" max_group="3" blue="false">
-      <text>Create a Scrapper Medic.</text>
+      <text>Transform into a Scrapper Medic.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_MEDIC"/>
     </choice>
+	<choice req="scrapper" lvl="1" blue="false">
+		<text>Transform into a Rosegold Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD"/>
+	</choice>
+	<choice req="scrapper" lvl="1" blue="false">
+		<text>Transform into a Golden Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN"/>
+	</choice>
+	<choice req="scrapper" lvl="1" blue="false">
+		<text>Transform into an Adamantine Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE"/>
+	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-  </event>
-  
-     <!--//////////////////////////////////////////////////////////SOLDIER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+</event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER">
-    <text>You can upgrade your soldier into an elite heavy varient.</text>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_SOLDIER">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
     <choice req="scrapper_soldier" lvl="1" blue="false">
       <text>Upgrade Scrapper Soldier to Scrapper Heavy Soldier.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY"/>
     </choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-  </event>
-  
-     <!--//////////////////////////////////////////////////////////ENGINEER UPGRADE TEXT/////////////////////////////////////////////////////////-->
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER">
-    <text>You can upgrade your engineer into an elite scavenger varient.</text>
-    <choice req="scrapper_engineer" lvl="1" blue="false">
-      <text>Upgrade Scrapper Engineer to Scrapper Scavenger.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV"/>
+	<choice req="scrapper_soldier" lvl="1" blue="false">
+      <text>Transform into Adamantine Scrapper Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_SOLDIER"/>
     </choice>
+	 <choice req="scrapper_soldier" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Medic.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SOLDIER_MEDIC"/>
+	</choice>
+	<choice req="scrapper_soldier" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Engineer.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SOLDIER_ENGINEER"/>
+	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-  </event>
-  
-     <!--//////////////////////////////////////////////////////////MEDIC UPGRADE TEXT/////////////////////////////////////////////////////////-->
+</event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC">
-    <text>Who do you want to upgrade?</text>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_MEDIC">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
     <choice req="scrapper_medic" lvl="1" blue="false">
       <text>Upgrade Scrapper Medic to Scrapper Defender.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC_DEFENDER"/>
     </choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-  </event>
-
-     <!--//////////////////////////////////////////////////////////DEFENDER UPGRADE TEXT/////////////////////////////////////////////////////////-->
-
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER">
-    <text>Who do you want to upgrade?</text>
-    <choice req="scrapper_defender" lvl="1" blue="false">
-      <text>Upgrade your Scrapper Defender.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_TIER2"/>
+	<choice req="scrapper_medic" lvl="1" blue="false">
+      <text>Transform into Golden Scrapper Medic.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC"/>
     </choice>
+	 <choice req="scrapper_medic" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_MEDIC_SOLDIER"/>
+	</choice>
+	<choice req="scrapper_medic" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Engineer.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_MEDIC_ENGINEER"/>
+	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-  </event>
-       <!--//////////////////////////////////////////////////////////HEAVY UPGRADE TEXT/////////////////////////////////////////////////////////-->
+</event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY">
-    <text>Who do you want to upgrade?</text>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ENGINEER">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
+    <choice req="scrapper_engineer" lvl="1" blue="false">
+      <text>Upgrade Scrapper Engineer to Scrapper Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV"/>
+    </choice>
+	<choice req="scrapper_engineer" lvl="1" blue="false">
+      <text>Transform into Rosegold Scrapper Engineer.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER"/>
+    </choice>
+	 <choice req="scrapper_engineer" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ENGINEER_SOLDIER"/>
+	</choice>
+	<choice req="scrapper_engineer" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Medic.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ENGINEER_MEDIC"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_HEAVY">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
     <choice req="scrapper_heavy" lvl="1" blue="false">
-      <text>Upgrade your Scrapper Heavy Soldier.</text>
+      <text>Upgrade Scrapper Heavy Soldier to Scrapper Heavy Soldier Mark 2.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_TIER2"/>
     </choice>
+	<choice req="scrapper_heavy" lvl="1" blue="false">
+      <text>Transform into Adamantine Scrapper Heavy Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER"/>
+    </choice>
+	 <choice req="scrapper_heavy" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Scavenger.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_HEAVY_SCAVENGER"/>
+	</choice>
+	<choice req="scrapper_heavy" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Defender.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_HEAVY_DEFENDER"/>
+	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-  </event>
-  
-       <!--//////////////////////////////////////////////////////////SCAVENGER UPGRADE TEXT/////////////////////////////////////////////////////////-->
+</event>
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER">
-    <text>Who do you want to upgrade?</text>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_DEFENDER">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
+    <choice req="scrapper_defender" lvl="1" blue="false">
+      <text>Upgrade Scrapper Defender to Scrapper Defender Mark 2.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_TIER2"/>
+    </choice>
+	<choice req="scrapper_defender" lvl="1" blue="false">
+      <text>Transform into Golden Scrapper Defender.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER"/>
+    </choice>
+	 <choice req="scrapper_defender" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Scavenger.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_DEFENDER_SCAVENGER"/>
+	</choice>
+	<choice req="scrapper_defender" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Heavy Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_DEFENDER_HEAVY"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_SCAVENGER">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
     <choice req="scrapper_scavenger" lvl="1" blue="false">
-      <text>Upprade your Scrapper Scavenger.</text>
+      <text>Upgrade Scrapper Scavenger to Scrapper Scavenger Mark 2.</text>
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_TIER2"/>
+    </choice>
+	<choice req="scrapper_scavenger" lvl="1" blue="false">
+      <text>Transform into Rosegold Scrapper Scavenger.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER"/>
+    </choice>
+	 <choice req="scrapper_scavenger" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Defender.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SCAVENGER_DEFENDER"/>
+	</choice>
+	<choice req="scrapper_scavenger" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Heavy Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SCAVENGER_HEAVY"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_HEAVY_MK2">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
+	<choice req="scrapper_heavy_mk2" lvl="1" blue="false">
+      <text>Transform into Adamantine Scrapper Heavy Soldier Mark 2.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MK2_ADAMANTINE"/>
+    </choice>
+	 <choice req="scrapper_heavy_mk2" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Defender Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_HEAVY_MK2_DEFENDER_MK2"/>
+	</choice>
+	<choice req="scrapper_heavy_mk2" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Scavenger Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_HEAVY_MK2_SCAVENGER_MK2"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_DEFENDER_MK2">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
+	<choice req="scrapper_defender_mk2" lvl="1" blue="false">
+      <text>Transform into Golden Scrapper Defender Mark 2.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_MK2_GOLDEN"/>
+    </choice>
+	 <choice req="scrapper_defender_mk2" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Heavy Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_DEFENDER_MK2_HEAVY_MK2"/>
+	</choice>
+	<choice req="scrapper_defender_mk2" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Scavenger Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_DEFENDER_MK2_SCAVENGER_MK2"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_SCAVENGER_MK2">
+	<text>Specialists can be transformed into an Upgraded Specialist or an Elemental Specialist. Specialists may also be transmuted into other Specialists.</text>
+	<choice req="scrapper_scavenger_mk2" lvl="1" blue="false">
+      <text>Transform into Rosegold Scrapper Scavenger Mark 2.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MK2_ROSEGOLD"/>
+    </choice>
+	 <choice req="scrapper_scavenger_mk2" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Heavy Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SCAVENGER_MK2_HEAVY_MK2"/>
+	</choice>
+	<choice req="scrapper_scavenger_mk2" lvl="1" blue="false">
+		<text>Transmute into a Scrapper Defender Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SCAVENGER_MK2_DEFENDER_MK2"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SOLDIER">
+	<text>Elemental Specialists can be transformed into an Upgraded Elemental Specialist or reverted back to their base form.</text>
+	<choice req="adamantine_scrapper_soldier"  lvl="1" blue="false">
+		<text>Revert Adamantine Scrapper Soldier to Adamantine Scrapper Level 1.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ADAMANTINE_BASE_TIER_LEVEL_1"/>
+	</choice>
+	<choice req="adamantine_scrapper_soldier" lvl="1" max_group="3" blue="false">
+	  <text>Upgrade into an Adamantine Scrapper Heavy Soldier.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_SOLDIER_HEAVY_SOLDIER"/>
+	</choice>	
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_ENGINEER">
+	<text>Elemental Specialists can be transformed into an Upgraded Elemental Specialist or reverted back to their base form.</text>
+	<choice req="rosegold_scrapper_engineer" lvl="1" blue="false">
+	  <text>Upgrade into a Rosegold Scrapper Scavenger.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER_SCAVENGER"/>
+	</choice>
+		<choice req="rosegold_scrapper_engineer"  lvl="1" blue="false">
+		<text>Revert Rosegold Scrapper Engineer to Rosegold Scrapper Level 1.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_1"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_MEDIC">
+	<text>Elemental Specialists can be transformed into an Upgraded Elemental Specialist or reverted back to their base form.</text>
+	<choice req="golden_scrapper_medic" lvl="1" blue="false">
+		<text>Revert Golden Scrapper Medic to Golden Scrapper Level 1.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_GOLDEN_BASE_TIER_LEVEL_1"/>
+	</choice>	
+	<choice req="golden_scrapper_medic" lvl="1" max_group="2" blue="false">
+	  <text>Upgrade into a Golden Scrapper defender.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC_DEFENDER"/>
+	</choice>	
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCAVENGER">
+	<text>Elemental Specialists can be transformed into an Upgraded Elemental Specialist or reverted back to their base form.</text>
+	<choice req="rosegold_scrapper_scavenger"  lvl="1" blue="false">
+		<text>Revert Rosegold Scrapper Scavenger to Rosegold Scrapper Level 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_2"/>
+	</choice>
+	<choice req="rosegold_scrapper_scavenger" lvl="1" max_group="1" blue="false">
+	  <text>Upgrade a Rosegold Scrapper Scavenger.</text>
+	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER_MK2"/>
+	</choice>	
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>	
+</event>
+
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_HEAVY">
+	<text>Elemental Specialists can be transformed into an Upgraded Elemental Specialist or reverted back to their base form.</text>
+	<choice req="adamantine_scrapper_heavy_soldier"  lvl="1" blue="false">
+		<text>Revert Adamantine Scrapper Heavy Soldier to Adamantine Scrapper Level 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ADAMANTINE_BASE_TIER_LEVEL_2"/>
+	</choice>
+    <choice req="adamantine_scrapper_heavy_soldier" lvl="1" max_group="3" blue="false">
+      <text>Upgrade an Adamantine Scrapper Heavy Soldier.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER_MK2"/>
     </choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-  </event>
+</event>
 
-<!--////////////////////////////////////////////////////////// SCRAPPER UPGRADE GUIDE TEXT/////////////////////////////////////////////////////////-->
 
-	<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GUIDE">
-	  <text>Scrappers are unique in the fact that they can upgrade into many other specialised designs. There are 3 tiers of scrappers.
-		Tier 1: Scrapper
-		Tier 2: Soldier, Engineer, Medic
-		Tier 3: Heavy, Scavenger, and Defenders
-		You can upgrade Scrappers to higher tiers for scrap and other resources.
-		Tier 1 to Tier 2
-		Tier 2 to Tier 3
-		Tier 3 to Upgraded/Enhanced. 
-	  </text>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_DEFENDER">
+	<text>Tier 3 Elemental Specialists can be reverted back to their base form.</text>
+	<choice req="golden_scrapper_defender" lvl="1" blue="false">
+		<text>Revert Golden Scrapper Defender to Golden Scrapper Level 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_GOLDEN_BASE_TIER_LEVEL_2"/>
+	</choice>	
+    <choice req="golden_scrapper_defender" lvl="1" max_group="2" blue="false">
+      <text>Upgrade a Golden Scrapper defender.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER_MK2"/>
+    </choice>	
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-	</event>
+</event>
 
-<!--////////////////////////////////////////////////////////// BASE LANIUS UPGRADE TEXT/////////////////////////////////////////////////////////-->
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_DEFENDER_MK2">
+	<text>Tier 3 Elemental Specialists can be reverted back to their base form.</text>
+	<choice req="golden_scrapper_defender_mk2" lvl="1" blue="false">
+		<text>Revert Golden Scrapper Defender Mark 2 to Golden Scrapper Level 3.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_GOLDEN_BASE_TIER_LEVEL_3"/>
+	</choice>	
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_HEAVY_MK2">
+	<text>Tier 3 Elemental Specialists can be reverted back to their base form.</text>
+	<choice req="adamantine_scrapper_heavy_soldier_mk2"  lvl="1" blue="false">
+		<text>Revert Adamantine Scrapper Heavy Soldier Mark 2 to Adamantine Scrapper Level 3.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ADAMANTINE_BASE_TIER_LEVEL_3"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCAVENGER_MK2">
+	<text>Elemental Specialists can be transformed into an Upgraded Elemental Specialist or reverted back to their base form.</text>
+	<choice req="rosegold_scrapper_scavenger_mk2"  lvl="1" blue="false">
+		<text>Revert Rosegold Scrapper Scavenger Mark 2 to Rosegold Scrapper Level 3.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_3"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SCRAPPER">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+    <choice req="adamantine_scrapper" lvl="1" blue="false">
+      <text>Upgrade an Adamantine Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_LEVEL2"/>
+    </choice>
+	<choice req="adamantine_scrapper" lvl="1" blue="false">
+		<text>Upgrade Adamantine Scrapper to Adamantine Scrapper Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_ADAMANTINE_BASE_TIER_LEVEL_1"/>
+	</choice>	
+	<choice req="adamantine_scrapper" lvl="1" blue="false">
+		<text>Transmute into a Rosegold Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_ROSEGOLD"/>
+	</choice>
+	 <choice req="adamantine_scrapper" lvl="1" blue="false">
+		<text>Transmute into a Golden Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_GOLDEN"/>
+	</choice>		
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_SCRAPPER">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+    <choice req="golden_scrapper" lvl="1" blue="false">
+      <text>Upgrade a Golden Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL2"/>
+    </choice>	
+	<choice req="golden_scrapper" lvl="1" blue="false">
+		<text>Transmute into a Rosegold Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD"/>
+	</choice>
+	 <choice req="golden_scrapper" lvl="1" blue="false">
+		<text>Transmute into a Adamantine Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ADAMANTINE"/>
+	</choice>		
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCRAPPER">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+	<choice req="rosegold_scrapper" lvl="1" blue="false">
+      <text>Upgrade a Rosegold Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL2"/>
+    </choice>	
+	<choice req="rosegold_scrapper" lvl="1" blue="false">
+		<text>Upgrade Rosegold Scrapper to Rosegold Scrapper Engineer.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_1"/>
+	</choice>	
+	 <choice req="rosegold_scrapper" lvl="1" blue="false">
+		<text>Transmute into a Golden Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN"/>
+	</choice>
+	 <choice req="rosegold_scrapper" lvl="1" blue="false">
+		<text>Transmute into a Adamantine Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE"/>
+	</choice>		
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SCRAPPER_2">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+	<choice req="adamantium_scrapper_2" lvl="1" blue="false">
+		<text>Upgrade Adamantine Scrapper to Adamantine Scrapper Heavy Soldier.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_ADAMANTINE_BASE_TIER_LEVEL_2"/>
+	</choice>	
+	<choice req="adamantine_scrapper_2" lvl="1" blue="false">
+      <text>Upgrade an Adamantine Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_LEVEL3"/>
+    </choice>
+	 <choice req="adamantine_scrapper_2" lvl="1" blue="false">
+		<text>Transmute into a Rosegold Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_ROSEGOLD_2"/>
+	</choice>
+	 <choice req="adamantine_scrapper_2" lvl="1" blue="false">
+		<text>Transmute into a Golden Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_GOLDEN_2"/>
+	</choice>	
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_SCRAPPER_2">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+	<choice req="golden_scrapper_2" lvl="1" blue="false">
+      <text>Upgrade a Golden Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL3"/>
+    </choice>
+	<choice req="golden_scrapper_2" lvl="1" blue="false">
+		<text>Upgrade Golden Scrapper to Rosegold Scrapper Defender.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_GOLDEN_BASE_TIER_LEVEL_2"/>
+	</choice>
+	 <choice req="golden_scrapper_2" lvl="1" blue="false">
+		<text>Transmute into a Rosegold Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD_2"/>
+	</choice>
+	 <choice req="golden_scrapper_2" lvl="1" blue="false">
+		<text>Transmute into a Adamantine Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ADAMANTINE_2"/>
+	</choice>		
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCRAPPER_2">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+	<choice req="rosegold_scrapper_2" lvl="1" blue="false">
+      <text>Upgrade a Rosegold Scrapper.</text>
+      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL3"/>
+    </choice>
+	 <choice req="rosegold_scrapper_2" lvl="1" blue="false">
+		<text>Transmute into a Golden Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN_2"/>
+	</choice>
+	 <choice req="rosegold_scrapper_2" lvl="1" blue="false">
+		<text>Transmute into a Adamantine Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE_2"/>
+	</choice>	
+	<choice req="rosegold_scrapper_2" lvl="1" blue="false">
+		<text>Upgrade Rosegold Scrapper to Rosegold Scrapper Scavenger.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_2"/>
+	</choice>	
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
 
 
-  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_LANIUS">
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SCRAPPER_3">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+	<choice req="adamantium_scrapper_3" lvl="1" blue="false">
+		<text>Upgrade Adamantine Scrapper to Adamantine Scrapper Heavy Soldier Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_ADAMANTINE_BASE_TIER_LEVEL_3"/>
+	</choice>	
+	 <choice req="adamantine_scrapper_3" lvl="1" blue="false">
+		<text>Transmute into a Rosegold Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_ROSEGOLD_3"/>
+	</choice>
+	 <choice req="adamantine_scrapper_3" lvl="1" blue="false">
+		<text>Transmute into a Golden Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_GOLDEN_3"/>
+	</choice>	
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_SCRAPPER_3">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+	<choice req="golden_scrapper_3" lvl="1" blue="false">
+		<text>Upgrade Golden Scrapper to Rosegold Scrapper Defender Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_GOLDEN_BASE_TIER_LEVEL_3"/>
+	</choice>	
+	<choice req="golden_scrapper_3" lvl="1" blue="false">
+		<text>Transmute into a Rosegold Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD_3"/>
+	</choice>
+	 <choice req="golden_scrapper_3" lvl="1" blue="false">
+		<text>Transmute into a Adamantine Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ADAMANTINE_3"/>
+	</choice>		
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCRAPPER_3">
+	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
+	<choice req="rosegold_scrapper_3" lvl="1" blue="false">
+		<text>Upgrade Rosegold Scrapper to Rosegold Scrapper Scavenger Mark 2.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_3"/>
+	</choice>	
+	 <choice req="rosegold_scrapper_3" lvl="1" blue="false">
+		<text>Transmute into a Golden Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN_3"/>
+	</choice>
+	 <choice req="rosegold_scrapper_3" lvl="1" blue="false">
+		<text>Transmute into a Adamantine Scrapper.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE_3"/>
+	</choice>	
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<!--//////////////////////////////////////////////////////////UPGRADE TEXT/////////////////////////////////////////////////////////-->
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_LANIUS">
     <text>Puts your Lanius through the "Process" of becoming a Scrapper.
 		[Tier 1] Scrapper
 		115 Health
@@ -2639,10 +2796,6 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
-
-
-
-<!--////////////////////////////////////////////////////////// BASE SCRAPPER UPGRADE TEXT/////////////////////////////////////////////////////////-->
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_SOLDIER">
     <text>[Base to Tier 1 Specialist] Reforms the scrappers body into a weapon of war.
@@ -2731,8 +2884,6 @@
 	</choice>
   </event>
 
-   <!--//////////////////////////////////////////////////////////SOLDIER TO HEAVY UPGRADE TEXT/////////////////////////////////////////////////////////-->
-
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SOLDIER_HEAVY">
     <text>[Tier 1 Specialist to Tier 2 Specialist] By adding scrap to every single body part of your Scrapper, you can make them extremely resistant to damage.
 		[Specialization] 1.75x Damage
@@ -2762,8 +2913,6 @@
 	</choice>
   </event>
   
-   <!--//////////////////////////////////////////////////////////MEDIC TO DEFENDER UPGRADE TEXT/////////////////////////////////////////////////////////-->
-
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_MEDIC_DEFENDER">
     <text>[Tier 1 Specialist to Tier 2 Specialist] Adding additional scrap to the medic makes it more resilient to damage and provides a damage negation buff for nearby allies.
 		[Specialization] 200 Health	
@@ -2795,8 +2944,6 @@
 	</choice>
   </event>
   
-       <!--//////////////////////////////////////////////////////////ENGINEER TO SCAVENGER UPGRADE TEXT/////////////////////////////////////////////////////////-->
-	 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ENGINEER_SCAV">
     <text>[Tier 1 Specialist to Tier 2 Specialist] Advanced methods can augment your engineers into their scavenger varient. 
 		[Specialization] 2.5x Sabotage Damage
@@ -2825,9 +2972,6 @@
 	</choice>
   </event>
   
-     <!--//////////////////////////////////////////////////////////DEFENDER to DEFENDER MK2 UPGRADE TEXT/////////////////////////////////////////////////////////-->
-
-
  <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_TIER2">
     <text>[Tier 2 Specialist to Tier 3 Specialist] Advanced methods can augment your defenders even further.
 		[Specialization] 200 Health	
@@ -2916,157 +3060,86 @@
 	</choice>
   </event>
   
-	<!--//////////////////////////////////////////////////////////ELEMENTAL SCRAPPER/////////////////////////////////////////////////////////-->
-	
-	
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_MENU">
-	<text>Multiversal technology allows vast improvements to your crew.</text>
-	<choice req="scrapper" lvl="1" blue="false">
-		<text>Base scrappers can be transformed into one of the base elemental scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_BASE_MENU"/>
-	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_BASE_ALL" lvl="1" blue="false">
-		<text>Base elemental scrappers can be transmuted freely between their variants.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TRANSMUTE_MENU"/>
-	</choice>
-	<choice req="LIST_SCRAPPER_TIER_UPGRADEABLE" lvl="1" blue="false">
-		<text>Specialist Scrappers can be upgraded into Elemental Specialists.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER_MENU"/>
-	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_BASE_UPGRADEABLE" lvl="1" blue="false">
-		<text>Base elemental scrappers can be upgraded.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_BASE_UPGRADE_MENU"/>
-	</choice>
-	<choice req="LIST_SCRAPPER_ELEMENTAL_TIER_UPGRADABLE" lvl="1" blue="false">
-		<text>Specialist elemental scrappers can be upgraded.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER_UPGRADE_MENU"/>
-	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_BASE_ALL" lvl="1" blue="false">
-		<text>Base elemental scrappers can be upgraded into Elemental Specialists. They can then be reverted to their modular state.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_BASE_UPGRADE_TIER_MENU"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_BASE_MENU">
-	<text>Base scrappers can be transformed into one of the elemental scrappers.</text>
-	<choice req="scrapper" lvl="1" blue="false">
-		<text>Create a Rosegold Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD"/>
-	</choice>
-	<choice req="scrapper" lvl="1" blue="false">
-		<text>Create a Golden Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN"/>
-	</choice>
-	<choice req="scrapper" lvl="1" blue="false">
-		<text>Create an Adamantine Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
 <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD">
-<text>[Tier 1 to Level 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
-	125 Health
-	Immune to Fire Damage
-	0.5x Oxygen Drain
-	0.5x Damage
-	2x Repair Speed
-	0.5x Sabotage Damage
-	0.75x Move Speed
-	Provides 1 power
-	Resists mindcontrol
-	Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%
-</text>
-<choice>
-  <text>Do it.</text>
-  <event>
-	<text>Your Scrapper undergoes the transformation...</text>
-	<item_modify>
-	  <item type="scrap" min="-100" max="-100"/>
-	  <item type="fuel" min="-5" max="-5"/>
-	</item_modify>
-	<transformRace class="scrapper">rosegold_scrapper</transformRace>
-  </event>
-</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-	<text>Go back.</text>
-	<event load="STORAGE_CHECK_LAB_LOAD"/>
-</choice>
+	<text>[Tier 1 to Level 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		125 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		2x Repair Speed
+		0.5x Sabotage Damage
+		0.75x Move Speed
+		Provides 1 power
+		Resists mindcontrol
+		Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%
+	</text>
+	<choice>
+	  <text>Do it.</text>
+	  <event>
+		<text>Your Scrapper undergoes the transformation...</text>
+		<item_modify>
+		  <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+		</item_modify>
+		<transformRace class="scrapper">rosegold_scrapper</transformRace>
+	  </event>
+	</choice>
+		<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
 </event>
 
 <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN">
-<text>[Tier 1 to Level 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Gold. 
-	100 Health
-	0.5x Fire Damage
-	0.5x Oxygen Drain
-	1.25x Damage
-	1.5x Repair Speed
-	1.5x Sabotage Damage
-	0.75x Move Speed
-	Provides 1 Power. Drains 1 Power from Enemy Systems
-	Damage from all sources is reduced by 10%
- </text>
-<choice>
-  <text>Do it.</text>
-  <event>
-	<text>Your Scrapper undergoes the transformation...</text>
-	<item_modify>
-	  <item type="scrap" min="-100" max="-100"/>
-	  <item type="fuel" min="-5" max="-5"/>
-	</item_modify>
-	<transformRace class="scrapper">golden_scrapper</transformRace>
-  </event>
-</choice>
-<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-	<text>Go back.</text>
-	<event load="STORAGE_CHECK_LAB_LOAD"/>
-</choice>
+	<text>[Tier 1 to Level 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Gold. 
+		100 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		1.25x Damage
+		1.5x Repair Speed
+		1.5x Sabotage Damage
+		0.75x Move Speed
+		Provides 1 Power. Drains 1 Power from Enemy Systems
+		Damage from all sources is reduced by 10%
+	 </text>
+	<choice>
+	  <text>Do it.</text>
+	  <event>
+		<text>Your Scrapper undergoes the transformation...</text>
+		<item_modify>
+		  <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+		</item_modify>
+		<transformRace class="scrapper">golden_scrapper</transformRace>
+	  </event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
 </event>
 
 <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE">
-<text>[Tier 1 to Level 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Adamantine. 
-	125 Health
-	4x Fire Damage
-	0.5x Oxygen Drain
-	0.75x Damage
-	0.75x Repair Speed
-	1.5x Sabotage Damage
-	0.75x Move Speed
-	Nearby enemies all take damage from suffocation and have their movespeed reduced by 40%
-</text>
-<choice>
-  <text>Do it.</text>
-  <event>
-	<text>Your Scrapper undergoes the transformation...</text>
-	<item_modify>
-	  <item type="scrap" min="-100" max="-100"/>
-	  <item type="fuel" min="-5" max="-5"/>
-	</item_modify>
-	<transformRace class="scrapper">adamantine_scrapper</transformRace>
-  </event>
-</choice>
-<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-	<text>Go back.</text>
-	<event load="STORAGE_CHECK_LAB_LOAD"/>
-</choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_BASE_UPGRADE_MENU">
-	<text>Base elemental scrappers can be upgraded.</text>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_1" blue="false">
-		<text>Upgrade Level 1 Base Elemental Scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL2"/>
-	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_2" blue="false">
-		<text>Upgrade Level 2 Base Elemental Scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL3"/>
+	<text>[Tier 1 to Level 1 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Adamantine. 
+		125 Health
+		4x Fire Damage
+		0.5x Oxygen Drain
+		0.75x Damage
+		0.75x Repair Speed
+		1.5x Sabotage Damage
+		0.75x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 40%
+	</text>
+	<choice>
+	  <text>Do it.</text>
+	  <event>
+		<text>Your Scrapper undergoes the transformation...</text>
+		<item_modify>
+		  <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-5" max="-5"/>
+		</item_modify>
+		<transformRace class="scrapper">adamantine_scrapper</transformRace>
+	  </event>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
@@ -3074,57 +3147,7 @@
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_BASE_UPGRADE_TIER_MENU">
-	<text>Base elemental scrappers can be upgraded into their specialized forms and reverted back.</text>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_1" blue="false">
-		<text>Upgrade Level 1 Base Elemental Scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL_1_TIER"/>
-	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_2" blue="false">
-		<text>Upgrade Level 2 Base Elemental Scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL_2_TIER"/>
-	</choice>
-	<choice req="LIST_ELEMENTAL_SCRAPPER_LEVEL_3" blue="false">
-		<text>Upgrade Level 3 Base Elemental Scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL_3_TIER"/>
-	</choice>
-	<choice req="LIST_SCRAPPER_ELEMENTAL_TIER_1" blue="false">
-		<text>Revert Level 1 Elemental Specialists to their Base form.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ELEMENTAL_TIER_LEVEL_1"/>
-	</choice>
-	<choice req="LIST_SCRAPPER_ELEMENTAL_TIER_2" blue="false">
-		<text>Revert Level 2 Elemental Specialists to their Base form.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ELEMENTAL_TIER_LEVEL_2"/>
-	</choice>
-	<choice req="LIST_SCRAPPER_ELEMENTAL_TIER_3" blue="false">
-		<text>Revert Level 3 Elemental Specialists to their Base form.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ELEMENTAL_TIER_LEVEL_3"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL_1_TIER">
-	<text>Upgrade Level 1 Base Elemental Scrappers.</text>
-	<choice req="rosegold_scrapper" lvl="1" blue="false">
-		<text>Upgrade Rosegold Scrapper to Rosegold Scrapper Engineer.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_1"/>
-	</choice>
-	<choice req="adamantine_scrapper" lvl="1" blue="false">
-		<text>Upgrade Adamantine Scrapper to Adamantine Scrapper Soldier.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_ADAMANTINE_BASE_TIER_LEVEL_1"/>
-	</choice>	
-	<choice req="golden_scrapper" lvl="1" blue="false">
-		<text>Upgrade Golden Scrapper to Rosegold Scrapper Medic.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_GOLDEN_BASE_TIER_LEVEL_1"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
 
 <event name="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_1">
 	<text>[Level 1 Elemental to Tier 1 Elemental Specialist] Interface with the multiversal scrap processor to transform your Rosegold Scrapper into a Rosegold Scrapper Engineer. 
@@ -3212,26 +3235,6 @@
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL_2_TIER">
-	<text>Upgrade Level 2 Base Elemental Scrappers.</text>
-	<choice req="rosegold_scrapper_2" lvl="1" blue="false">
-		<text>Upgrade Rosegold Scrapper to Rosegold Scrapper Scavenger.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_2"/>
-	</choice>
-	<choice req="adamantium_scrapper_2" lvl="1" blue="false">
-		<text>Upgrade Adamantine Scrapper to Adamantine Scrapper Heavy Soldier.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_ADAMANTINE_BASE_TIER_LEVEL_2"/>
-	</choice>	
-	<choice req="golden_scrapper_2" lvl="1" blue="false">
-		<text>Upgrade Golden Scrapper to Rosegold Scrapper Defender.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_GOLDEN_BASE_TIER_LEVEL_2"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
 <event name="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_2">
 	<text>[Level 2 Elemental to Tier 2 Elemental Specialist] Interface with the multiversal scrap processor to transform your Rosegold Scrapper into a Rosegold Scrapper Scavenger. 
 		[Specialization] 3x Sabotage Speed
@@ -3313,26 +3316,6 @@
         <transformRace class="adamantine_scrapper_2">adamantine_scrapper_heavy_soldier</transformRace>
       </event>
     </choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL_3_TIER">
-	<text>Upgrade Level 3 Base Elemental Scrappers.</text>
-	<choice req="rosegold_scrapper_3" lvl="1" blue="false">
-		<text>Upgrade Rosegold Scrapper to Rosegold Scrapper Scavenger Mark 2.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_2"/>
-	</choice>
-	<choice req="adamantium_scrapper_3" lvl="1" blue="false">
-		<text>Upgrade Adamantine Scrapper to Adamantine Scrapper Heavy Soldier Mark 2.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_ADAMANTINE_BASE_TIER_LEVEL_2"/>
-	</choice>	
-	<choice req="golden_scrapper_3" lvl="1" blue="false">
-		<text>Upgrade Golden Scrapper to Rosegold Scrapper Defender Mark 2.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_GOLDEN_BASE_TIER_LEVEL_2"/>
-	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
@@ -3427,26 +3410,6 @@
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ELEMENTAL_TIER_LEVEL_1">
-	<text>Revert Tier 1 Elemental Specialist to Base Elemental Scrapper.</text>
-	<choice req="rosegold_scrapper_engineer"  lvl="1" blue="false">
-		<text>Revert Rosegold Scrapper Engineer to Rosegold Scrapper Level 1.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_1"/>
-	</choice>
-	<choice req="rosegold_scrapper_engineer"  lvl="1" blue="false">
-		<text>Revert Golden Scrapper Medic to Golden Scrapper Level 1.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_GOLDEN_BASE_TIER_LEVEL_1"/>
-	</choice>	
-	<choice req="adamantine_scrapper_engineer"  lvl="1" blue="false">
-		<text>Revert Adamantine Scrapper Soldier to Adamantine Scrapper Level 1.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ADAMANTINE_BASE_TIER_LEVEL_1"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
 <event name="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_1">
 	<text>[Tier 1 Elemental Specialist to Level 1 Elemental] Interface with the multiversal scrap processor to transform your Rosegold Scrapper Engineer into a Rosegold Scrapper. 
 		125 Health
@@ -3525,26 +3488,6 @@
         <transformRace class="adamantine_scrapper_soldier">adamantine_scrapper</transformRace>
       </event>
     </choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ELEMENTAL_TIER_LEVEL_2">
-	<text>Revert Tier 2 Elemental Specialist to Base Elemental Scrapper Level 2.</text>
-	<choice req="rosegold_scrapper_scavenger"  lvl="1" blue="false">
-		<text>Revert Rosegold Scrapper Scavenger to Rosegold Scrapper Level 2.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_2"/>
-	</choice>
-	<choice req="golden_scrapper_defender"  lvl="1" blue="false">
-		<text>Revert Golden Scrapper Defender to Golden Scrapper Level 2.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_GOLDEN_BASE_TIER_LEVEL_2"/>
-	</choice>	
-	<choice req="adamantine_scrapper_engineer"  lvl="1" blue="false">
-		<text>Revert Adamantine Scrapper Heavy Soldier to Adamantine Scrapper Level 2.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ADAMANTINE_BASE_TIER_LEVEL_2"/>
-	</choice>
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
@@ -3635,26 +3578,6 @@
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ELEMENTAL_TIER_LEVEL_3">
-	<text>Revert Tier 3 Elemental Specialist to Base Elemental Scrapper Level 3.</text>
-	<choice req="rosegold_scrapper_scavenger_mk2"  lvl="1" blue="false">
-		<text>Revert Rosegold Scrapper Scavenger Mark 2 to Rosegold Scrapper Level 3.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_3"/>
-	</choice>
-	<choice req="golden_scrapper_defender_mk2"  lvl="1" blue="false">
-		<text>Revert Golden Scrapper Defender Mark 2 to Golden Scrapper Level 3.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_GOLDEN_BASE_TIER_LEVEL_3"/>
-	</choice>	
-	<choice req="adamantine_scrapper_engineer_mk2"  lvl="1" blue="false">
-		<text>Revert Adamantine Scrapper Heavy Soldier Mark 2 to Adamantine Scrapper Level 3.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ADAMANTINE_BASE_TIER_LEVEL_3"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
 <event name="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_3">
 	<text>[Tier 3 Elemental Specialist to Level 3 Elemental] Interface with the multiversal scrap processor to transform your Rosegold Scrapper Scavenger Mark 2 into a Rosegold Scrapper Level 3. 
 		150 Health
@@ -3733,58 +3656,6 @@
         <transformRace class="adamantine_scrapper_heavy_soldier_mk2">adamantine_scrapper_3</transformRace>
       </event>
     </choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TRANSMUTE_MENU">
-	<text>Base elemental scrappers can be transmuted freely between their variants.</text>
-	<choice req="LIST_ELEMENTAL_ROSEGOLD" lvl="1" blue="false">
-	  <text>Transmute a Rosegold Scrapper.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD"/>
-	</choice>
-	<choice req="LIST_ELEMENTAL_GOLDEN" lvl="1" blue="false">
-	  <text>Transmute a Golden Scrapper.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN"/>
-	</choice>
-	<choice req="LIST_ELEMENTAL_ADAMANTINE" lvl="1" blue="false">
-	  <text>Transmute an Adamantine Scrapper.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-  
-<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD">
-	<text>Rosegold Scrappers can be transmuted into Golden or Adamantine Scrappers of the same level.</text>
-	 <choice req="rosegold_scrapper" lvl="1" blue="false">
-		<text>Transmute into a Golden Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN"/>
-	</choice>
-	 <choice req="rosegold_scrapper" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE"/>
-	</choice>	
-	 <choice req="rosegold_scrapper_2" lvl="1" blue="false">
-		<text>Transmute into a Golden Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN_2"/>
-	</choice>
-	 <choice req="rosegold_scrapper_2" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE_2"/>
-	</choice>	
-	 <choice req="rosegold_scrapper_3" lvl="1" blue="false">
-		<text>Transmute into a Golden Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN_3"/>
-	</choice>
-	 <choice req="rosegold_scrapper_3" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE_3"/>
-	</choice>		
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
@@ -3926,38 +3797,6 @@
         <transformRace class="rosegold_scrapper_3">adamantine_scrapper_3</transformRace>
       </event>
     </choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN">
-	<text>Golden Scrappers can be transmuted into Rosegold or Adamantine Scrappers of the same level.</text>
-	 <choice req="golden_scrapper" lvl="1" blue="false">
-		<text>Transmute into a Rosegold Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD"/>
-	</choice>
-	 <choice req="golden_scrapper" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ADAMANTINE"/>
-	</choice>	
-	 <choice req="golden_scrapper_2" lvl="1" blue="false">
-		<text>Transmute into a Rosegold Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD_2"/>
-	</choice>
-	 <choice req="golden_scrapper_2" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ADAMANTINE_2"/>
-	</choice>	
-	 <choice req="golden_scrapper_3" lvl="1" blue="false">
-		<text>Transmute into a Rosegold Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD_3"/>
-	</choice>
-	 <choice req="golden_scrapper_3" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ADAMANTINE_3"/>
-	</choice>	
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
 		<text>Go back.</text>
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
@@ -4108,37 +3947,6 @@
 	</choice>
 </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE">
-	<text>Adamantine Scrappers can be transmuted into Golden or Rosegold Scrappers of the same level.</text>
-	 <choice req="adamantine_scrapper" lvl="1" blue="false">
-		<text>Transmute into a Rosegold Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_ROSEGOLD"/>
-	</choice>
-	 <choice req="adamantine_scrapper" lvl="1" blue="false">
-		<text>Transmute into a Golden Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_GOLDEN"/>
-	</choice>	
-	 <choice req="adamantine_scrapper_2" lvl="1" blue="false">
-		<text>Transmute into a Rosegold Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_ROSEGOLD_2"/>
-	</choice>
-	 <choice req="adamantine_scrapper_2" lvl="1" blue="false">
-		<text>Transmute into a Golden Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_GOLDEN_2"/>
-	</choice>
-	 <choice req="adamantine_scrapper_3" lvl="1" blue="false">
-		<text>Transmute into a Rosegold Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_ROSEGOLD_3"/>
-	</choice>
-	 <choice req="adamantine_scrapper_3" lvl="1" blue="false">
-		<text>Transmute into a Golden Scrapper.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_GOLDEN_3"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
 
 <event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ADAMANTINE_ROSEGOLD">
 	<text>[Level 1 Elemental to Level 1 Elemental] Interface with the multiversal scrap processor to transmute your scrapper with Rosegold. 
@@ -4287,49 +4095,6 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
-
-  
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL2">
-    <text>Your elemental scrappers can be upgraded further.</text>
-    <choice req="rosegold_scrapper" lvl="1" max_group="1" blue="false">
-      <text>Upgrade a Rosegold Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL2"/>
-    </choice>
-    <choice req="golden_scrapper" lvl="1" max_group="2" blue="false">
-      <text>Upgrade a Golden Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL2"/>
-    </choice>
-    <choice req="adamantine_scrapper" lvl="1" max_group="3" blue="false">
-      <text>Upgrade an Adamantine Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_LEVEL2"/>
-    </choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-  </event>
-  
- <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_LEVEL3">
-    <text>Your elemental scrappers can be upgraded further.</text>
-    <choice req="rosegold_scrapper_2" lvl="1" max_group="1" blue="false">
-      <text>Upgrade a Rosegold Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL3"/>
-    </choice>
-    <choice req="golden_scrapper_2" lvl="1" max_group="2" blue="false">
-      <text>Upgrade a Golden Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL3"/>
-    </choice>
-    <choice req="adamantine_scrapper_2" lvl="1" max_group="3" blue="false">
-      <text>Upgrade an Adamantine Scrapper.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ADAMANTINE_LEVEL3"/>
-    </choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-  </event>
-  
-
   
 <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_ROSEGOLD_LEVEL2">
     <text>[Level 1 Elemental to Level 2 Elemental] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
@@ -4505,42 +4270,6 @@
 	</choice>
   </event>
 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER_MENU">
-	<text>Specialized Scrappers can be upgraded into Elemental Specialized Forms.</text>
-	<choice req="LIST_SCRAPPER_TIER_2" blue="false">
-		<text>Enhance Tier 2 Scrappers with Multiversal energy.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2"/>
-	</choice>
-	<choice req="LIST_SCRAPPER_TIER_3" blue="false">
-		<text>Enhance Tier 3 Scrappers with Multiversal energy.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-  
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER2">
-	<text>Your tier 2 scrapper can be transformed into one of the tier 2 elemental scrappers.</text>
-	<choice req="scrapper_engineer" lvl="1" max_group="1" blue="false">
-	  <text>Create a Rosegold Scrapper Engineer.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER"/>
-	</choice>
-    <choice req="scrapper_medic" lvl="1" max_group="2" blue="false">
-      <text>Create a Golden Scrapper Medic.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC"/>
-    </choice>
-    <choice req="scrapper_soldier" lvl="1" max_group="3" blue="false">
-      <text>Create an Adamantine Scrapper Soldier.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_SOLDIER"/>
-    </choice>
-    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
    <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER">
     <text>[Tier 1 Specialist to Tier 1 Elemental Specialist] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
 		115 Health
@@ -4628,27 +4357,7 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
-  
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3">
-	<text>Your tier 3 scrapper can be transformed into one of the tier 3 elemental scrappers.</text>
-	<choice req="scrapper_scavenger" lvl="1" max_group="1" blue="false">
-	  <text>Create a Rosegold Scrapper Scavenger.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER"/>
-	</choice>
-    <choice req="scrapper_defender" lvl="1" max_group="2" blue="false">
-      <text>Create a Golden Scrapper defender.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER"/>
-    </choice>
-    <choice req="scrapper_heavy" lvl="1" max_group="3" blue="false">
-      <text>Create an Adamantine Scrapper Heavy Soldier.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER"/>
-    </choice>
-    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-
+ 
    <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER">
     <text>[Tier 2 Specialist to Tier 2 Elemental Specialist] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
 		135 Health
@@ -4738,42 +4447,6 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
-  
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER_UPGRADE_MENU">
-	<text>Specialized elemental scrappers can be upgraded.</text>
-	<choice req="LIST_SCRAPPER_ELEMENTAL_TIER_3" blue="false">
-		<text>Upgrade Tier 2 Specialized Elemental Scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3_TIER2"/>
-	</choice>
-	<choice req="LIST_SCRAPPER_ELEMENTAL_TIER_3" blue="false">
-		<text>Upgrade Tier 3 Specialized Elemental Scrappers.</text>
-		<event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3_MK2"/>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-  
- <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3_TIER2">
-	 <text>Your tier 3 elemental scrapper can be upgraded.</text>
-	<choice req="rosegold_scrapper_engineer" lvl="1" max_group="1" blue="false">
-	  <text>Create a Rosegold Scrapper Scavenger.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER_SCAVENGER"/>
-	</choice>
-	<choice req="golden_scrapper_medic" lvl="1" max_group="2" blue="false">
-	  <text>Create a Golden Scrapper defender.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_MEDIC_DEFENDER"/>
-	</choice>
-	<choice req="adamantine_scrapper_soldier" lvl="1" max_group="3" blue="false">
-	  <text>Create an Adamantine Scrapper Heavy Soldier.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_SOLDIER_HEAVY_SOLDIER"/>
-	</choice>
-		<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
 
    <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_ENGINEER_SCAVENGER">
     <text>[Tier 1 Elemental Specialist to Tier 2 Elemental Specialist  Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
@@ -4863,36 +4536,16 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
   </event>
- 
-<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ELEMENTAL_TIER3_MK2">
-	<text>Your tier 3 elemental scrapper can be upgraded.</text>
-	<choice req="rosegold_scrapper_scavenger" lvl="1" max_group="1" blue="false">
-	  <text>Upgrade a Rosegold Scrapper Scavenger.</text>
-	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER_MK2"/>
-	</choice>
-    <choice req="golden_scrapper_defender" lvl="1" max_group="2" blue="false">
-      <text>Upgrade a Golden Scrapper defender.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER_MK2"/>
-    </choice>
-    <choice req="adamantine_scrapper_heavy_soldier" lvl="1" max_group="3" blue="false">
-      <text>Upgrade an Adamantine Scrapper Heavy Soldier.</text>
-      <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER_MK2"/>
-    </choice>
-    	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
-		<text>Go back.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
 
    <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER_MK2">
     <text>[Tier 2 Elemental Specialist to Tier 3 Elemental Specialist] Interface with the multiversal scrap processor to transfuse your scrapper with Rosegold. 
+		[Specialization] 4x Sabotage Speed
+		[Specialization] 1.5x Move Speed
+		[Specialization] 4x Repair Speed
 		165 Health
 		Immune to Fire Damage
 		0.5x Oxygen Drain
 		0.5x Damage
-		[Specialization]4x Sabotage Speed
-		[Specialization]1.5x Move Speed
-		[Specialization]4x Repair Speed
 		Provides 3 power. Drains 1 power.
 		Resists Mind Control
 		Increases nearby crews health, damage and repair speed by 20%. Reduces damage taken of nearby allies by 20%
@@ -4916,6 +4569,9 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_GOLDEN_DEFENDER_MK2">
     <text>[Tier 2 Elemental Specialist to Tier 3 Elemental Specialist] Interface with the multiversal scrap processor to transfuse your scrapper medic with Gold. 
+		[Specialization] Reduces all damage taken by all friendly crew in the room by 30%
+		[Specialization] Heals itself after 10 second delay for 6hp/s
+		[Specialization] Can heal allies for 75 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
 		200 Health
 		0.5x Fire Damage
 		0.5x Oxygen Drain
@@ -4925,9 +4581,6 @@
 		1x Move Speed
 		Provides 2 Power. Drains 2 Power from Enemy Systems
 		Damage from all sources is reduced by 20%
-		[Specialization]Reduces all damage taken by all friendly crew in the room by 30%
-		[Specialization]Heals itself after 10 second delay for 6hp/s
-		[Specialization]Can heal allies for 75 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
 	 </text>
     <choice>
       <text>Do it.</text>
@@ -4948,11 +4601,11 @@
 
   <event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ADAMANTINE_HEAVY_SOLDIER_MK2">
     <text>[Tier 2 Elemental Specialist to Tier 3 Elemental Specialist] Interface with the multiversal scrap processor to transfuse your scrapper soldier with Adamantine. 
+		[Specialization] 2.25x Damage
+		[Specialization] 2.5x Sabotage Damage
 		225 Health
 		2x Fire Damage
 		4x Oxygen Drain
-		[Specialization]2.25x Damage
-		[Specialization]2.5x Sabotage Damage
 		0.5x Move Speed
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 95%
 		Can create explosions onboard enemy ships, damaging the ship and systems.
@@ -4974,358 +4627,497 @@
 	</choice>
   </event>
 
-
-  
-  <!-- ================= AVALI LAB ================ -->
-  <event name="STORAGE_CHECK_LAB_AVALI">
-  	<text>You are viewing the lab menu for: [AVALI]</text>
-  	<choice req="LAB_AVALI_NOCLONEXP" lvl="1" max_group="0" blue="false" hidden="true">
-  		<text>Currently Installed: Avian Interdependancy.
-  		[Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_FLAMECLOAKS" lvl="1" max_group="0" blue="false" hidden="true">
-  		<text>Currently Installed: Flame Retardent Cloaks.
-  		[Avali crew take 35% less damage from fire, and extinguish them 80% faster.]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_DENSEFLUFF" lvl="1" max_group="0" blue="false" hidden="true">
-  		<text>Currently Installed: Dense Fluff.
-  		[Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
-  		<text>Currently Installed: None</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="1" blue="false" hidden="true">
-  		<text>Pri: Avian Interdependancy. [An upgrade is already installed]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="1" blue="false" hidden="true">
-  		<text>Pri: Avian Interdependancy.</text>
-  		<event load="STORAGE_CHECK_LAB_AVALI_CYBERNETIC" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="2" blue="false" hidden="true">
-  		<text>Pri: Flame Retardant Cloaks. [An upgrade is already installed]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="2" blue="false" hidden="true">
-  		<text>Pri: Flame Retardant Cloaks.</text>
-  		<event load="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="1" max_group="3" blue="false" hidden="true">
-  		<text>Pri: Dense Fluff. [An upgrade is already installed]</text>
-  		<event load="OPTION_INVALID" />
-  	</choice>
-  	<choice req="LAB_AVALI_INSTALLED" lvl="0" max_group="3" blue="false" hidden="true">
-  		<text>Pri: Dense Fluff.</text>
-  		<event load="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF" />
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="4" blue="false" hidden="true">
-  		<text>Go back.</text>
-  		<event load="STORAGE_CHECK_LAB_LOAD" />
-  	</choice>
-  </event>
-
-  <event name="STORAGE_CHECK_LAB_AVALI_CYBERNETIC">
-  	<text>You are about to install the Avian Interdependancy modification.
-  	[Effects: Effects of Avali teamwork are doubled, however the base stats affected by it are halved. Exact details varies based on Avali subtype.]
-  	(small note from dev; yes, future varients will boost different stats)
-
-  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
-  	<choice hidden="true">
-  		<text>Install the modification. [Cost: 30~ 3|]</text>
-  		<event>
-  			<text>You install the modification.</text>
-  			<item_modify>
-  				<item type="drones" min="-3" max="-3" />
-  				<item type="scrap" min="-20" max="-20" />
-  			</item_modify>
-  			<choice hidden="true">
-  				<text>Continue...</text>
-  				<event load="INSTALL_LAB_AVALI_CYBERNETIC" />
-  			</choice>
-  		</event>
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-  		<text>Nevermind.</text>
-  		<event load="STORAGE_CHECK_LAB_LOAD" />
-  	</choice>
-  </event>
-
-  <event name="INSTALL_LAB_AVALI_CYBERNETIC">
-  	<event />
-  </event>
-
-  <event name="STORAGE_CHECK_LAB_AVALI_FLAMECLOAKS">
-  	<text>You are about to install the Flame Retardent Cloaks modification.
-  	[Effects: Avali crew take 35% less damage from fire, and extinguish them 80% faster.]
-
-  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
-  	<choice hidden="true">
-  		<text>Install the modification. [Cost: 6{]</text>
-  		<event>
-  			<text>You install the modification.</text>
-  			<item_modify>
-  				<item type="fuel" min="-6" max="-6" />
-  			</item_modify>
-  			<choice hidden="true">
-  				<text>Continue...</text>
-  				<event load="INSTALL_LAB_AVALI_FLAMECLOAKS" />
-  			</choice>
-  		</event>
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-  		<text>Nevermind.</text>
-  		<event load="STORAGE_CHECK_LAB_LOAD" />
-  	</choice>
-  </event>
-
-  <event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
-  	<event />
-  </event>
-
-  <event name="STORAGE_CHECK_LAB_AVALI_DENSEFLUFF">
-  	<text>You are about to perform the Dense Fluff modification.
-  	[Effects: Avali crew move 30% slower, take 20% less damage from combat and take 50% more fire damage.]
-
-  	[Warning: After installing this, you will not be able to install any more primary upgrades for Avali crew. You will not be able to deactivate this mod either.]</text>
-  	<choice hidden="true">
-  		<text>Install the modification. [Cost: 3{]</text>
-  		<event>
-  			<text>You install the modification.</text>
-  			<item_modify>
-  				<item type="fuel" min="-3" max="-3" />
-  			</item_modify>
-  			<choice hidden="true">
-  				<text>Continue...</text>
-  				<event load="INSTALL_LAB_AVALI_DENSEFLUFF" />
-  			</choice>
-  		</event>
-  	</choice>
-  	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-  		<text>Nevermind.</text>
-  		<event load="STORAGE_CHECK_LAB_LOAD" />
-  	</choice>
-  </event>
-
-  <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
-  	<event />
-  </event>
-<!--
-◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-          ROBOTTO UPGRADE MENU
-◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
--->
-
-<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE">
-  <text>You can upgrade one of your robottos into one of their elite specialized variants.</text>
-  <choice req="robottos" lvl="1" max_group="1" blue="false">
-    <text>Create a Machinist</text>
-    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_MACHINIST"/>
-  </choice>
-  <choice req="robottos" lvl="1" max_group="2" blue="false">
-    <text>Create a Researcher</text>
-    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_RESEARCHER"/>
-  </choice>
-  <choice req="robottos" lvl="1" max_group="3" blue="false">
-    <text>Create a Gunner</text>
-    <event load="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_GUNNER"/>
-  </choice>
-  <choice>
-    <text>Nevermind, do something else.</text>
-    <event load="STORAGE_CHECK"/>
-  </choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_MACHINIST">
-  <text>Upgrading your Robotto to have better available tools on their arms would greatly increase their repair capability - adding fireproofing would be possible as well.</text>
-  <choice>
-    <text>Do it.</text>
-    <event>
-      <text>Your Robotto undergoes the upgrade...</text>
-      <item_modify>
-        <item type="scrap" min="-30" max="-30"/>
-        <item type="drones" min="-3" max="-3"/>
-      </item_modify>
-      <transformRace class="robottos">robottos_machinist</transformRace>
-    </event>
-  </choice>
-  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_RESEARCHER">
-  <text>Upgrading your Robotto to have an Internal Database similar to a protogen's would make them amazing system managers.</text>
-  <choice>
-    <text>Do it.</text>
-    <event>
-      <text>Your Robotto undergoes the upgrade...</text>
-      <item_modify>
-        <item type="scrap" min="-30" max="-30"/>
-        <item type="drones" min="-3" max="-3"/>
-      </item_modify>
-      <transformRace class="robottos">robottos_researcher</transformRace>
-    </event>
-  </choice>
-  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
-
-<event name="STORAGE_CHECK_CREW_ROBOTTO_UPGRADE_GUNNER">
-  <text>Upgrading your Robotto's arsenal and targeting system would greatly increase their combat capacity.</text>
-  <choice>
-    <text>Do it.</text>
-    <event>
-      <text>Your Robotto undergoes the upgrade...</text>
-      <item_modify>
-        <item type="scrap" min="-30" max="-30"/>
-        <item type="drones" min="-3" max="-3"/>
-      </item_modify>
-      <transformRace class="robottos">robottos_gunner</transformRace>
-    </event>
-  </choice>
-  <choice><text>Nevermind, do something else.</text><event load="STORAGE_CHECK"/></choice>
-</event>
-
-    <!--///////////////////////////////
-////////////// DRONE TOGGLE MENU ///////////////
-////////////////////////////////-->
-
-<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
-
-	<!--
-	\\\\\\\\\\\\\\\\\\\\\\\\\
-	  BOARDING DRONE TOGGLE
-	\\\\\\\\\\\\\\\\\\\\\\\\\
-	-->
-  
-	<mod-append:choice req="ROBO_MANT_BOARDER" blue="false">
-		<text>(Boarding Drone) Set the state of the drone. [Current mode: Boarding]</text>
-		<event load="COMBAT_CHECK_ROBO_MANT_BOARDER"/>
-	</mod-append:choice>
-
-  <mod-append:choice req="SILICA_BOARDER" blue="false">
-		<text>(Boarding Drone) Set the state of the drone. [Current mode: Boarding]</text>
-		<event load="COMBAT_CHECK_SILICA_BOARDER"/>
-	</mod-append:choice>
-
-  <mod-append:choice req="ROBO_MANT_DEFEND" blue="false">
-		<text>(Boarding Drone) Set the state of the drone. [Current mode: Anti-Person]</text>
-		<event load="COMBAT_CHECK_ROBO_MANT_DEFEND"/>
-	</mod-append:choice>
-
-  <mod-append:choice req="SILICA_BATTLE" blue="false">
-		<text>(Boarding Drone) Set the state of the drone. [Current mode: Anti-Person]</text>
-		<event load="COMBAT_CHECK_SILICA_BATTLE"/>
-	</mod-append:choice>
-
-</mod:findName>
-
-    <!--///////////////////////////////
-////////////// DRONE TOGGLE EVENTS ///////////////
-////////////////////////////////-->
-
-<event name="COMBAT_CHECK_ROBO_MANT_DEFEND">
-	<text>Are you sure you want to change the drone's settings?</text>
-	<choice hidden="true">
-		<text>Set the drone to Boarding Mode.</text>
-		<event>
-			<text>You start calibrating the drone...</text>
-			<remove name="ROBO_MANT_DEFEND"/>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event>
-					<text>You finish calibrating the drone successfully.</text>
-					<drone name="ROBO_MANT_BOARDER"/>
-					<choice hidden="true">
-						<text>Continue...</text>
-						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
-	<choice hidden="true">
-		<text>Return to the toggle menu.</text>
-		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SOLDIER_MEDIC">
+	<text>[Tier 1 Specialist to Tier 1 Specialist] Interface with the multiversal scrap processor to transmute Scrapper Soldier into a Scrapper Medic. 
+		[Specialization] Heals itself after 15 second delay for 2hp/s
+		[Specialization] Explosively heals allies for 50 at the cost of 50 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. 
+		115 Health
+		0.50x Fire Damage Taken
+		0.50x Oxygen Drain
+		0.50x Damage
+		0.50x Sabotage Damage
+		1.2x Move Speed
+		Cannot Repair</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_soldier">scrapper_medic</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
 
-<event name="COMBAT_CHECK_ROBO_MANT_BOARDER">
-	<text>Are you sure you want to change the drone's settings?</text>
-	<choice hidden="true">
-		<text>Set the drone to Defensive Mode.</text>
-		<event>
-			<text>You start calibrating the drone...</text>
-			<remove name="ROBO_MANT_BOARDER"/>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event>
-					<text>You finish calibrating the drone successfully.</text>
-					<drone name="ROBO_MANT_DEFEND"/>
-					<choice hidden="true">
-						<text>Continue...</text>
-						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
-	<choice hidden="true">
-		<text>Return to the toggle menu.</text>
-		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SOLDIER_ENGINEER">
+	<text>[Tier 1 Specialist to Tier 1 Specialist] Interface with the multiversal scrap processor to transmute Scrapper Soldier into a Scrapper Engineer. 
+     	[Specialization] 1.0x Move Speed
+		[Specialization] 2.0x Repair Speed
+		[Specialization] Learns all skills faster. Cannot lose skills upon cloning.
+		115 Health
+		0.25x Fire Damage Taken
+		0.5x Oxygen Drain
+		Cannot Fight
+		Cannot Sabotage</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_soldier">scrapper_engineer</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
 
-<event name="COMBAT_CHECK_SILICA_BATTLE">
-	<text>Are you sure you want to change the drone's settings?</text>
-	<choice hidden="true">
-		<text>Set the drone to Boarding Mode.</text>
-		<event>
-			<text>You start calibrating the drone...</text>
-			<remove name="SILICA_BATTLE"/>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event>
-					<text>You finish calibrating the drone successfully.</text>
-					<drone name="SILICA_BOARDER"/>
-					<choice hidden="true">
-						<text>Continue...</text>
-						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
-	<choice hidden="true">
-		<text>Return to the toggle menu.</text>
-		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_MEDIC_SOLDIER">
+	<text>[Tier 1 Specialist to Tier 1 Specialist] Interface with the multiversal scrap processor to transmute Scrapper Medic into a Scrapper Soldier. 
+		[Specialization] 1.35x Damage
+		[Specialization] 2.0x Sabotage Damage
+		Cannot Man or Repair Systems
+		115 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.75x Move Speed</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_medic">scrapper_soldier</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
 
-<event name="COMBAT_CHECK_SILICA_BOARDER">
-	<text>Are you sure you want to change the drone's settings?</text>
-	<choice hidden="true">
-		<text>Set the drone to Defensive Mode.</text>
-		<event>
-			<text>You start calibrating the drone...</text>
-			<remove name="SILICA_BOARDER"/>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event>
-					<text>You finish calibrating the drone successfully.</text>
-					<drone name="SILICA_BATTLE"/>
-					<choice hidden="true">
-						<text>Continue...</text>
-						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
-					</choice>
-				</event>
-			</choice>
-		</event>
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_MEDIC_ENGINEER">
+	<text>[Tier 1 Specialist to Tier 1 Specialist] Interface with the multiversal scrap processor to transmute Scrapper Medic into a Scrapper Engineer. 
+     	[Specialization] 1.0x Move Speed
+		[Specialization] 2.0x Repair Speed
+		[Specialization] Learns all skills faster. Cannot lose skills upon cloning.
+		115 Health
+		0.25x Fire Damage Taken
+		0.5x Oxygen Drain
+		Cannot Fight
+		Cannot Sabotage</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_medic">scrapper_engineer</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
-	<choice hidden="true">
-		<text>Return to the toggle menu.</text>
-		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ENGINEER_SOLDIER">
+	<text>[Tier 1 Specialist to Tier 1 Specialist] Interface with the multiversal scrap processor to transmute Scrapper Engineer into a Scrapper Soldier.
+		[Specialization] 1.35x Damage
+		[Specialization] 2.0x Sabotage Damage
+		Cannot Man or Repair Systems
+		115 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.75x Move Speed</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_engineer">scrapper_soldier</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ENGINEER_MEDIC">
+	<text>[Tier 1 Specialist to Tier 1 Specialist] Interface with the multiversal scrap processor to transmute Scrapper Engineer into a Scrapper Medic.
+		[Specialization] Heals itself after 15 second delay for 2hp/s
+		[Specialization] Explosively heals allies for 50 at the cost of 50 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. 
+		115 Health
+		0.50x Fire Damage Taken
+		0.50x Oxygen Drain
+		0.50x Damage
+		0.50x Sabotage Damage
+		1.2x Move Speed
+		Cannot Repair</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_engineer">scrapper_medic</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_HEAVY_SCAVENGER">
+	<text>[Tier 2 Specialist to Tier 2 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Heavy Soldier into a Scrapper Scavenger. 
+		[Specialization] 2.5x Sabotage Damage
+		[Specialization] 1.25x Move Speed
+		[Specialization] 2.0x Repair Speed
+		115 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		Cannot Fight</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_heavy">scrapper_scavenger</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_HEAVY_DEFENDER">
+	<text>[Tier 2 Specialist to Tier 2 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Heavy Soldier into a Scrapper Defender. 
+		[Specialization] 200 Health	
+		[Specialization] Reduces all damage taken by all friendly crew in the room by 10
+		[Specialization] Heals itself after 15 second delay for 4hp/s
+		[Specialization] Explosively heals allies for 75 and damages nearby enemies for 25 at the cost of 75 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. 
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain	
+		0.50x Damage
+		0.75x Move Speed
+		0.50x Sabotage
+		Cannot Repair</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_heavy">scrapper_defender</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_DEFENDER_HEAVY">
+	<text>[Tier 2 Specialist to Tier 2 Specialist] Interface with the multiversal scrap processor to transmute Scrapper Defender into a Scrapper Heavy Soldier. 
+		[Specialization] 1.75x Damage
+		[Specialization] 2.0x Sabotage Damage
+		[Specialization] Can create explosions onboard enemy ships, damaging the ship and systems, as well as stunning crew. 	
+		Cannot Man or Repair Systems
+		150 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.5x Move Speed</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_defender">scrapper_heavy</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_DEFENDER_SCAVENGER">
+	<text>[Tier 2 Specialist to Tier 2 Specialist] Interface with the multiversal scrap processor to transmute Scrapper Defender into a Scrapper Scavenger. 
+		[Specialization] 2.5x Sabotage Damage
+		[Specialization] 1.25x Move Speed
+		[Specialization] 2.0x Repair Speed
+		115 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		Cannot Fight</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_defender">scrapper_scavenger</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SCAVENGER_DEFENDER">
+	<text>[Tier 2 Specialist to Tier 2 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Scavenger into a Scrapper Heavy Soldier.
+		[Specialization] 200 Health	
+		[Specialization] Reduces all damage taken by all friendly crew in the room by 10
+		[Specialization] Heals itself after 15 second delay for 4hp/s
+		[Specialization] Explosively heals allies for 75 and damages nearby enemies for 25 at the cost of 75 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. 
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain	
+		0.50x Damage
+		0.75x Move Speed
+		0.50x Sabotage
+		Cannot Repair</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_scavenger">scrapper_defender</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SCAVENGER_HEAVY">
+	<text>[Tier 2 Specialist to Tier 2 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Scavenger into a Scrapper Heavy Soldier.
+		[Specialization] 1.75x Damage
+		[Specialization] 2.0x Sabotage Damage
+		[Specialization] Can create explosions onboard enemy ships, damaging the ship and systems, as well as stunning crew. 	
+		Cannot Man or Repair Systems
+		150 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.5x Move Speed</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_scavenger">scrapper_heavy</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_HEAVY_MK2_SCAVENGER_MK2">
+	<text>[Tier 3 Specialist to Tier 3 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Heavy Soldier Mark 2 into a Scrapper Scavenger Mark 2.
+		[Specialization] 3.0x Sabotage Damage
+		[Specialization] 1.25x Move Speed
+		[Specialization] 3.0x Repair speed
+		115 Health
+		0.25x Fire Damage Taken
+		0.5x Oxygen Drain
+		No Combat Damage</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_heavy_mk2">scrapper_scavenger_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_HEAVY_MK2_DEFENDER_MK2">
+	<text>[Tier 3 Specialist to Tier 3 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Heavy Soldier Mark 2 into a Scrapper Defender Mark 2.
+		[Specialization] 200 Health	
+		[Specialization] Reduces all damage taken by all friendly crew in the room by 20%.
+		[Specialization] Heals itself after 15 second delay for 4hp/s.
+		[Specialization] Explosively heals allies for 75 and damages nearby enemies for 25 at the cost of 75 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. 
+		0.5x Damage
+		0.75x Move Speed
+		0.5x Sabotage
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain	
+		Cannot Repair</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_heavy_mk2">scrapper_defender_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_DEFENDER_MK2_HEAVY_MK2">
+	<text>[Tier 3 Specialist to Tier 3 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Defender Mark 2 into a Scrapper Heavy Soldier Mark 2.
+		[Specialization] 2.0x Damage
+		[Specialization] 2.25x Sabotage Damage
+		[Specialization] Can create explosions onboard enemy ships, damaging the ship and systems.		
+		Cannot Man or Repair Systems
+		150 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.5x Move Speed</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_defender_mk2">scrapper_heavy_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_DEFENDER_MK2_SCAVENGER_MK2">
+	<text>[Tier 3 Specialist to Tier 3 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Defender Mark 2 into a Scrapper Scavenger Mark 2.
+		[Specialization] 3.0x Sabotage Damage
+		[Specialization] 1.25x Move Speed
+		[Specialization] 3.0x Repair speed
+		115 Health
+		0.25x Fire Damage Taken
+		0.5x Oxygen Drain
+		No Combat Damage</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_heavy_mk2">scrapper_scavenger_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SCAVENGER_MK2_HEAVY_MK2">
+	<text>[Tier 3 Specialist to Tier 3 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Scavenger Mark 2 into a Scrapper Heavy Soldier Mark 2.
+		[Specialization] 2.0x Damage
+		[Specialization] 2.25x Sabotage Damage
+		[Specialization] Can create explosions onboard enemy ships, damaging the ship and systems.		
+		Cannot Man or Repair Systems
+		150 Health
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain
+		0.5x Move Speed</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_scavenger_mk2">scrapper_heavy_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_SCAVENGER_MK2_DEFENDER_MK2">
+	<text>[Tier 3 Specialist to Tier 3 Specialist] Interface with the multiversal scrap processor to transmute a Scrapper Scavenger Mark 2 into a Scrapper Defender Mark 2.
+		[Specialization] 200 Health	
+		[Specialization] Reduces all damage taken by all friendly crew in the room by 20%.
+		[Specialization] Heals itself after 15 second delay for 4hp/s.
+		[Specialization] Explosively heals allies for 75 and damages nearby enemies for 25 at the cost of 75 health. 45 second cooldown. 1 Charge per jump for a maximum of 2 charges. 
+		0.5x Damage
+		0.75x Move Speed
+		0.5x Sabotage
+		0.5x Fire Damage Taken
+		0.5x Oxygen Drain	
+		Cannot Repair</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_scavenger_mk2">scrapper_defender_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_SCAVENGER_MK2_ROSEGOLD">
+	<text>[Level 3 Elemental to Tier 3 Elemental Specialist] Interface with the multiversal scrap processor to transform your Rosegold Scrapper into a Rosegold Scrapper Scavenger Mark 2. 
+		[Specialization] 4x Sabotage Speed
+		[Specialization] 1.5x Move Speed
+		[Specialization] 4x Repair Speed
+		165 Health
+		Immune to Fire Damage
+		0.5x Oxygen Drain
+		0.5x Damage
+		Provides 3 power. Drains 1 power.
+		Resists Mind Control
+		Increases nearby crews health, damage and repair speed by 20%. Reduces damage taken of nearby allies by 20%</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_scavenger_mk2">rosegold_scrapper_scavenger_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_HEAVY_MK2_ADAMANTINE">
+	<text>[Level 3 Elemental to Tier 3 Elemental Specialist] Interface with the multiversal scrap processor to transform your Scrapper Heavy Soldier Mark 2 into an Adamantine Scrapper Heavy Soldier Mark 2. 
+		[Specialization] 2.25x Damage
+		[Specialization] 2.5x Sabotage Damage
+		225 Health
+		2x Fire Damage
+		4x Oxygen Drain
+		0.5x Move Speed
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 95%
+		Can create explosions onboard enemy ships, damaging the ship and systems.</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_heavy_mk2">adamantine_scrapper_heavy_soldier_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+
+<event name="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_DEFENDER_MK2_GOLDEN">
+	<text>[Level 3 Elemental to Tier 3 Elemental Specialist] Interface with the multiversal scrap processor to transform your Scrapper Defender Mark 2 into a Golden Scrapper Defender Mark 2. 
+		[Specialization] Reduces all damage taken by all friendly crew in the room by 30%
+		[Specialization] Heals itself after 10 second delay for 6hp/s
+		[Specialization] Can heal allies for 75 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
+		200 Health
+		0.5x Fire Damage
+		0.5x Oxygen Drain
+		1.25x Damage
+		1x Repair Speed
+		1x Sabotage Damage
+		1x Move Speed
+		Provides 2 Power. Drains 2 Power from Enemy Systems
+		Damage from all sources is reduced by 20%
+	</text>
+	<choice>
+      <text>Do it.</text>
+      <event>
+        <text>Your Scrapper undergoes the transformation...</text>
+        <transformRace class="scrapper_defender_mk2">golden_scrapper_defender_mk2</transformRace>
+      </event>
+    </choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
 

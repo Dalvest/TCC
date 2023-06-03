@@ -295,7 +295,6 @@
             <event>
                 <text>Your Protogen manages to fix the malfunctioning Autoship and makes it dispense Noodle Rations everywhere. It also allows you to access its store interface.</text>
                 <store>STORE_NOODLE</store>
-                <augment name="NOODLE_RATIONS"/>
             </event>
         </choice>
         <choice hidden="true" req="LIST_CREW_RSA">
@@ -303,7 +302,6 @@
             <event>
                 <text>Your RSA member uses their years of experience to fix the malfunctioning Autoship and makes it dispense Noodle Rations everywhere. It also allows you to access its store interface.</text>
                 <store>STORE_NOODLE</store>
-                <augment name="NOODLE_RATIONS"/>
             </event>
         </choice>
         <choice hidden="true" req="LIST_CREW_ENGI">
@@ -311,7 +309,6 @@
             <event>
                 <text>Your Engi fixes the malfunctioning Autoship with ease and makes it dispense Noodle Rations. It also allows you to access its store interface.</text>
                 <store>STORE_NOODLE</store>
-                <augment name="NOODLE_RATIONS"/>
             </event>
         </choice>
         <choice hidden="true" req="LIST_CREW_AVALI">
@@ -325,7 +322,6 @@
             <text>Try to fix the auto-ship.</text>
             <event>
                 <text>The auto-ship dispenses several piles of noodle rations before self-destructing. You're still not sure what happened, but at least you can loot the broken Autoship...</text>
-                <augment name="NOODLE_RATIONS"/>
                 <autoReward level="LOW">standard</autoReward>
             </event>
         </choice>

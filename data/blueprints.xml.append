@@ -5422,22 +5422,6 @@
 		<stackable>false</stackable>
 	</augBlueprint>
 
-	<augBlueprint name="NOODLE_RATIONS">
-		<title>Insta-Noodle Rations</title>
-		<desc> 100 Percent Protein Insta-Noodles: Provides Stackable Movement Speed, Max Health and Damage Bonuses! Warning - may contain traces of Rebel Scum. Grants a 5% multiplicative boost at base level, with a 1.02x multiplier per upgrade level.</desc>
-		<cost>50</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-
-	<augBlueprint name="NOODLE_RATIONS_UPGRADE">
-		<title>Instant-Noodle Rations Upgrade</title>
-		<desc>YOU SHOULD NEVER SEE THIS</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<stackable>true</stackable>
-	</augBlueprint>
-
 	<augBlueprint name="AUTOMATED_QUARTERMASTER">
 		<title>Auto-Quartermaster</title>
 		<desc>You're pretty sure the RSA made this strange 3D printer - whoever made the software signed themselves as Ch33s3. It doesn't have the same blueprints as the legendary Compactor, but it works, and that's what matters.</desc>
@@ -5709,137 +5693,6 @@
 	    <rarity>0</rarity>
 	    <stackable>true</stackable>
 	</augBlueprint>
-
-	<!--—————————————————————
-	ARMOR
-	——————————————————————-->
-
-	<augBlueprint name="LOCKED_SCRAP_ARMOR">
-		<title>Scrap Plating</title>
-		<desc>The hull of this ship is modified with a magnetic alloy - it absorbs 25% of the scrap it comes in contact with, but also gives a 25% chance to resist damage. It can also ram enemies using its hull while taking minor damage.</desc>
-		<cost>10</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-
-	<augBlueprint name="FLAK_ARMOR">
-		<title>Flak Plating</title>
-		<desc>This highly unstable plating is actively falling apart. Interesting, eh?</desc>
-		<cost>10</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-</FTL>
-
-<FTL><!--crew drones-->
-	<!--
-	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-	              PERSONNEL DRONES
-	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
-	-->
-
-	<crewBlueprint name="robo_mant">
-		<title>Mantis Battle Drone</title>
-		<short>Mantis Battle Drone</short>
-		<desc>YOU SHOULD NEVER SEE THIS.</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<powerList>
-			<power>DRONE</power>
-		</powerList>
-	</crewBlueprint>
-
-	<blueprintList name="LIST_TOGGLE_ROBO_MANT">
-		<name>ROBO_MANT_BOARDER</name>
-		<name>ROBO_MANT_DEFEND</name>
-	</blueprintList>
-
-	<droneBlueprint name="ROBO_MANT_DEFEND">
-		<type>BATTLE</type>
-		<locked>1</locked>
-		<tip>tip_toggle_crew</tip>
-		<title>Mantis Battle Drone [Anti-Pers]</title>
-		<short>Robo Mant [A]</short>
-		<desc>[CURRENT MODE: Anti-Personnel] Modeled after a famous mantis warrior, this drone can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
-
-	-150 HP, 1.4x combat damage
-	-0.8x movement speed</desc>
-		<power>2</power>
-		<cost>80</cost>
-		<bp>3</bp>
-		<rarity>0</rarity>
-		<iconImage>battle</iconImage>
-	</droneBlueprint>
-
-	<droneBlueprint name="ROBO_MANT_BOARDER">
-		<type>BOARDER</type>
-		<tip>tip_toggle_crew</tip>
-		<locked>1</locked>
-		<title>Mantis Battle Drone [Boarding]</title>
-		<short>Robo Mant [B]</short>
-		<desc>[CURRENT MODE: Boarding] Modeled after a famous mantis warrior, this drone can be toggled to act as either a Defensive Anti-Person or Boarding drone before battle.
-
-	-150 HP, 1.4x combat damage
-	-0.8x movement speed</desc>
-		<power>2</power>
-		<speed>18</speed>
-		<cost>80</cost>
-		<rarity>0</rarity>
-		<iconImage>boarder</iconImage>
-	</droneBlueprint>
-
-	<crewBlueprint name="silica">
-		<desc>You shouldn't see this!</desc>
-		<title>Silica</title>
-		<short>Silica</short>
-		<cost>150</cost>
-		<bp>2</bp>
-		<rarity>0</rarity>
-		<powerList>
-			<power>Drone</power>
-		</powerList>
-	</crewBlueprint>
-
-	<blueprintList name="LIST_TOGGLE_SILICA">
-		<name>SILICA_BOARDER</name>
-		<name>SILICA_BATTLE</name>
-	</blueprintList>
-
-	<droneBlueprint name="SILICA_BATTLE">
-	    <type>BATTLE</type>
-	    <locked>1</locked>
-	    <tip>tip_toggle_crew</tip>
-	    <title>Silica</title>
-	    <short>Silica</short>
-	    <desc>[CURRENT MODE: Shipboard] A terraformer and tactician drone created by the R.S.T. and Pinnacle Robotics - in a distant Universe, he discovered a problematic infestation. He likes gardening and gardening accessories.
-
-	-2.2x combat damage, 1.75x movement speed
-	-Immune to fire and stun
-	-Can man systems at lv2 skill level</desc>
-	    <power>2</power>
-	    <cost>80</cost>
-	    <bp>3</bp>
-	    <rarity>0</rarity>
-	    <iconImage>battle</iconImage>
-	</droneBlueprint>
-
-	<droneBlueprint name="SILICA_BOARDER">
-	    <type>BOARDER</type>
-	    <tip>tip_toggle_crew</tip>
-	    <locked>1</locked>
-	    <title>Silica</title>
-	    <short>Silica</short>
-	    <desc>[CURRENT MODE: Boarding] A terraformer and tactician drone created by the R.S.T. and Pinnacle Robotics - in a distant Universe, he discovered a problematic infestation. He likes gardening and gardening accessories.
-
-	-2.2x combat damage, 1.75x movement speed
-	-Immune to fire and stun
-	-Can man systems at lv2 skill level</desc>
-	    <power>2</power>
-	    <speed>50</speed>
-	    <cost>80</cost>
-	    <rarity>0</rarity>
-	    <iconImage>boarder</iconImage>
-	</droneBlueprint>
 </FTL>
 
 <FTL><!--combat drones-->
@@ -6402,7 +6255,7 @@
 		<maxPower amount="7" />
 		<aug name="EX_BACKUP_DNA" />
 		<aug name="SCRAP_COLLECTOR" />
-		<aug name="NOODLE_RATIONS" />
+
 		<shieldImage>mup_kestrel_a</shieldImage>
 		<cloakImage>mup_kestrel_a</cloakImage>
 	</shipBlueprint>
@@ -6632,7 +6485,6 @@
 		<droneList drones="6" count="3" />
 		<health amount="30" />
 		<maxPower amount="6" />
-		<aug name="LOCKED_SCRAP_ARMOR" />
 		<aug name="ANCIENT_DNA" />
 	</shipBlueprint>
 
@@ -7238,7 +7090,6 @@
 		<droneSlots>4</droneSlots>
 		<weaponList missiles="3" count="4" />
 		<droneList drones="13" count="4">
-			<drone name="SILICA_BATTLE" />
 		</droneList>
 		<health amount="20" />
 		<maxPower amount="9" />
@@ -7312,7 +7163,6 @@
 		<weaponList missiles="6" count="3" />
 		<droneList drones="18" count="3">
 			<drone name="DEFENSE_1" />
-			<drone name="SILICA_BOARDER" />
 			<drone name="MANNING" />
 		</droneList>
 		<health amount="30" />
@@ -7605,7 +7455,7 @@
 		<crewCount amount="1" class="human_medic" />
 		<crewCount amount="1" class="human_soldier" />
 		<crewCount amount="1" class="zoltan_peacekeeper" />
-		<aug name="NOODLE_RATIONS" />
+
 		<aug name="STORE_BEACON" />
 	</shipBlueprint>
 
@@ -7759,7 +7609,7 @@
 		<crewCount amount="1" class="human_soldier" />
 		<crewCount amount="1" class="engi" />
 		<aug name="EX_SHIELD_RECHARGE" />
-		<aug name="NOODLE_RATIONS" />
+
 		<shieldImage>tcp_militiagunboat</shieldImage>
 	</shipBlueprint>
 
@@ -10096,7 +9946,6 @@
 			<weapon name="MINELAUNCHER_1" />
 		</weaponList>
 		<droneList drones="14" count="4">
-			<drone name="ROBO_MANT_DEFEND" />
 		</droneList>
 		<health amount="30" />
 		<maxPower amount="7" />

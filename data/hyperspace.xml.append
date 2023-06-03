@@ -46,40 +46,14 @@ SPEED          Changes gamespeed
 	</mod:findLike>
 </FTL>
 <FTL>
+
   <mod:findLike type="events">
     <mod:findName type="event" name="START_BEACON">
       <mod-append:hiddenAug>ADDON_INSTALLED_TCC</mod-append:hiddenAug>
     </mod:findName>
   </mod:findLike>
-  <events><!--i am 99% sure that those reqs couldn't work bc missing <events>-->
-    <req name="SCAVENGER_REQ" type="all">
-      <name>ADVANCED_SCRAP_REQ</name>
-      <name>LIST_CHECKCREW_SCRAPPER_ELITE_COMPATIBLE</name>
-    </req>
-	<variable name="tc_found_echelon" op="set" val="0"/>
-
-    <req name="ADVANCED_SCRAP_REQ" type="any">
-      <name>ADVANCED_SCRAP</name>
-      <name>trash_eater</name>
-    </req>
-
-    <!--///////////////AVALI EVENT STUFF/////////-->
-    <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
-      <hiddenAug>LAB_AVALI_DENSEFLUFF</hiddenAug>
-      <hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-      <loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-    </event>
-    <event name="INSTALL_LAB_AVALI_FLAMECLOAKS">
-      <hiddenAug>LAB_AVALI_FLAMECLOAKS</hiddenAug>
-      <hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-      <loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-    </event>
-    <event name="INSTALL_LAB_AVALI_CYBERNETIC">
-      <!--pardon the naming scheme, enhanced cybernetics used to be a lab, and no clone XP was an exclusive aug to avali C, but now its external enhanced cybernetics-->
-      <hiddenAug>LAB_AVALI_NOCLONEXP</hiddenAug>
-      <hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
-      <loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-    </event>
+  
+  <events> <!--Scared to touch this yet-->
     <bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
     <!--sector stuff-->
     <eventFile>avali</eventFile>
@@ -6272,12 +6246,6 @@ SPEED          Changes gamespeed
 </aug>
 
 	<augments>
-		<aug name="LOCKED_SCRAP_ARMOR">
-			<function name="ROCK_ARMOR" value="0.25" useForReqs="false"/>
-			<function name="SCRAP_COLLECTOR" value="-0.25"/>
-			<locked/>
-		</aug>
-
 		<aug name="ANTI_ANAEROBIC_GRID">
   		<statBoosts>
   			<statBoost name="trueHealAmount">
@@ -6357,63 +6325,6 @@ SPEED          Changes gamespeed
   		</statBoosts>
   	</aug>
 
-  	<aug name="NOODLE_RATIONS">
-  		<statBoosts>
-  			<statBoost name="moveSpeedMultiplier">
-  				<boostType>MULT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<droneTarget>CREW</droneTarget>
-  				<amount>1.05</amount>
-  				<priority>-100</priority>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>MULT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<droneTarget>CREW</droneTarget>
-  				<amount>1.05</amount>
-  				<priority>-100</priority>
-  			</statBoost>
-  			<statBoost name="maxHealth">
-  				<boostType>MULT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<droneTarget>CREW</droneTarget>
-  				<amount>1.05</amount>
-  				<priority>-100</priority>
-  			</statBoost>
-  		</statBoosts>
-   	</aug>
-
-  	<aug name="NOODLE_RATIONS_UPGRADE">
-  		<statBoosts>
-  			<statBoost name="moveSpeedMultiplier">
-  				<boostType>MULT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<droneTarget>CREW</droneTarget>
-  				<amount>1.01</amount>
-  				<priority>-100</priority>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>MULT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<droneTarget>CREW</droneTarget>
-  				<amount>1.01</amount>
-  				<priority>-100</priority>
-  			</statBoost>
-  			<statBoost name="maxHealth">
-  				<boostType>MULT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<droneTarget>CREW</droneTarget>
-  				<amount>1.01</amount>
-  				<priority>-100</priority>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
 	
 	<!--//////////////////CREW UPGRADER LAB UPGRADES//////////////-->
 	
@@ -7151,7 +7062,6 @@ SPEED          Changes gamespeed
 			<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
 			<mod-append:name>COMPACTOR</mod-append:name>
 			<mod-append:name>SCRAP_COMPACTOR</mod-append:name>
-			<mod-append:name>NOODLE_RATIONS</mod-append:name>
 			<mod-append:name>AUTOMATED_QUARTERMASTER</mod-append:name>
 		</mod:findName>
 	</mod:findLike>
@@ -7173,74 +7083,6 @@ SPEED          Changes gamespeed
   	<bossShip>TC_TRASH_MINER</bossShip>
   	<bossShip>RSA_DROPSHIP</bossShip>
 	</events>
-
-	<!--
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	A DRONE THING
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-	<mod:findLike type="drones">
-		<mod-append:drone name="ROBO_MANT_DEFEND">
-			<crewBlueprint>robo_mant</crewBlueprint>
-			<tooltipName>Mantis Battle Drone</tooltipName>
-		</mod-append:drone>
-		<mod-append:drone name="ROBO_MANT_BOARDER">
-			<crewBlueprint>robo_mant</crewBlueprint>
-			<tooltipName>Mantis Battle Drone</tooltipName>
-		</mod-append:drone>
-	</mod:findLike>
-
-	<mod:findLike type="crew">
-		<mod-append:race name="robo_mant">
-			<canFight>true</canFight>
-			<canSabotage>true</canSabotage>
-			<canRepair>false</canRepair>
-			<canSuffocate>false</canSuffocate>
-			<canMan>false</canMan>
-			<maxHealth>150</maxHealth>
-			<stunMultiplier>0.25</stunMultiplier>
-			<resistsMindControl>true</resistsMindControl>	<!-- salvage event -->
-			<droneAI>
-				<fightAI/>
-				<returnToDroneRoom/>
-			</droneAI>
-			<damageMultiplier>1.4</damageMultiplier>
-			<fireDamageMultiplier>0.25</fireDamageMultiplier>
-			<moveSpeedMultiplier>0.8</moveSpeedMultiplier>
-			<controllable>true</controllable>
-		</mod-append:race>
-	</mod:findLike>
-
-	<mod:findLike type="drones">
-		<mod-append:drone name="SILICA_BATTLE">
-			<crewBlueprint>silica</crewBlueprint>
-			<tooltipName>Silica</tooltipName>
-		</mod-append:drone>
-		<mod-append:drone name="SILICA_BOARDER">
-			<crewBlueprint>silica</crewBlueprint>
-			<tooltipName>Silica</tooltipName>
-		</mod-append:drone>
-	</mod:findLike>
-
-	<mod:findLike type="crew">
-		<mod-append:race name="silica">
-			<controllable>true</controllable>
-			<canFight>true</canFight>
-			<canSabotage>true</canSabotage>
-			<canRepair>true</canRepair>
-			<canMan>true</canMan>
-			<canSuffocate>false</canSuffocate>
-			<canBurn>false</canBurn>
-			<defaultSkillLevel>2</defaultSkillLevel>
-			<maxHealth>100</maxHealth>
-			<damageMultiplier>2.2</damageMultiplier>
-			<healSpeed>2.0</healSpeed>
-			<moveSpeedMultiplier>1.75</moveSpeedMultiplier>
-			<stunMultiplier>0</stunMultiplier>
-		</mod-append:race>
-	</mod:findLike>
 
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
