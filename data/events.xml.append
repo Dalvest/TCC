@@ -14,31 +14,34 @@
 			<autoReward level="HIGH">scrap_only</autoReward>
 		</event>
 	</mod-append:choice>
-	<mod-append:choice req="ARTILLERY_MILITIAGUNBOAT_B" hidden="true">
-		<text>(RSA Mining Beam) Attempt to mine the asteroids.</text> 
+</mod:findName>
+
+<mod:findName name="START_BEACON_PREP_OPTIONS">
+	<mod-append:choice req="LIST_CHECKCREW_LANIUS" max_group="6" blue="true" hidden="true">
+		<text>[Lanius Crew] Find another crew member.</text>
 		<event>
-			<text>Your RSA Mining Beam is extremely effective at extracting material from the asteroids. One swipe, and even the bigger asteroids crumble into pieces. There's only one problem; you can't collect it all fast enough! In order to collect it all, the Rebel fleet will probably have time to catch up.</text>
-			<autoReward level="HIGH">scrap_only</autoReward>
-			<choice hidden="false">
-				<text>Collect it, we need the scrap.</text>
-				<event>
-					<text>You collect as much more as you can. Hopefully, it's worth it.</text>
-					<autoReward level="HIGH">scrap_only</autoReward>
-					<modifyPursuit amount="1"/>
-				</event>
+			<text>Confident with your new crew, you prepare to continue on your mission.</text>
+			<crewMember amount="1" class="lanius" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="START_BEACON_EXPLAIN_LOAD" />
 			</choice>
-			<choice req="MAGNET_ARM" hidden="false">
-				<text>(Magnetic Arm) Use the arm to collect it quickly.</text>
-				<event>
-					<text>With your magnetic arm, you are able to collect most of the rest in a timely manner. Thanks electromagnetism!</text>
-					<autoReward level="MED">scrap_only</autoReward>
-				</event>
-			</choice>
-			<choice hidden="false">
-				<text>Leave, we can't risk it.</text>
-				<event>
-					<text>It pains you to leave perfectly usable scrap behind like this, but you can't let the Rebels catch up. You prepare to jump.</text>
-				</event>
+		</event>
+	</mod-append:choice>
+	
+	<mod-append:choice req="pilot" max_group="7" hidden="true">
+		<text>I am a playtester and I need resouces please. Will be removed before release.</text>
+		<event>
+			<text>With some extra resources in your storage, you prepare to continue on your mission.</text>
+			<item_modify>
+				<item type="fuel" min="50" max="50" />
+				<item type="scrap" min="5000" max="5000" />
+				<item type="missiles" min="50" max="50" />
+				<item type="drones" min="50" max="50" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="START_BEACON_EXPLAIN_LOAD" />
 			</choice>
 		</event>
 	</mod-append:choice>

@@ -261,6 +261,12 @@
 	<name>scrapper_medic</name>
 </blueprintList>
 
+<blueprintList name="LIST_SCRAPPER_MILITARY">
+	<name>scrapper_heavy_mk2</name>
+	<name>scrapper_heavy</name>
+	<name>scrapper_soldier</name>
+</blueprintList>
+
 <!--/////// ELITES ///////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE">
@@ -626,140 +632,6 @@
 	<name>TC_BOMB_SHOTGUN_LOCK</name>
 </blueprintList>
 
-<!--/////// LOSTSUN TEACH????? //////-->
-
-<blueprintList name="LIST_WEAPONS_LOSTSUN_TEACH"> <!--just a list of the weapons ariadne can get you-->
-	<name>LIST_WEAPONS_LOSTSUN</name>
-</blueprintList>
-
-<!--/////// MADOK LIST //////-->
-
-<blueprintList name="LIST_DRONES_MADOK">
-	<name>REPAIR</name>
-	<!--placeholders until loot versions added-->
-	<name>ION_1_AMP2</name>
-	<name>HELLRAISER_HULL</name>
-	<name>MANNING</name>
-	<name>BATTLETOG2_DEFEND</name>
-</blueprintList>
-
-<!--/////// THIS DOES NOT WORK. //////-->
-
-<blueprintList name="SHIP_AVALI_FIGHT">
-	<name>AVALI_SKIRMISHER</name>
-</blueprintList>
-
-<!--/////// DRONE LIST - AVALI //////-->
-
-<blueprintList name="LIST_DRONES_AVALI">
-	<name>REPAIR</name>
-	<name>GUARDIAN_1_DRONE</name>
-	<name>GUARDIAN_1_MISSILE</name>
-	<name>DEFENSE_1_ENEMY</name>
-	<name>AMPHI_COMBAT</name>
-	<name>COMBAT_1_LASER</name>
-	<name>COMBAT_1_BEAM</name>
-	<name>COMBAT_2_LASER</name>
-	<name>COMBAT_2_BEAM</name>
-	<name>PEST_RAD_ENEMY</name>
-	<name>ION_1_AMP3_ENEMY</name>
-	<name>ION_1_AMP2_ENEMY</name>
-	<name>ENERGY_1_AMP2_ENEMY</name>
-	<name>BATTLETOG2_BOARDER</name>
-</blueprintList>
-
-<!--/////// WEAPON LIST - AVALI //////-->
-
-<blueprintList name="LIST_WEAPONS_AVALI">
-	<name>LASER_BURST_1</name>
-	<name>LASER_BURST_2_ENEMY</name>
-	<name>LASER_HEAVY_CHAINGUN</name>
-	<name>LASER_CHAINGUN_ENEMY</name>
-	<name>LASER_CHAINGUN_2</name>
-	<name>ION_FIRE</name>
-	<name>ION_STUN</name>
-	<name>ION_CHAINGUN</name>
-	<name>MISSILES_2_ENEMY</name>
-	<name>MISSILES_1</name>
-	<name>TC_SINEWAVE</name>
-	<name>TC_ESKA</name>
-	<name>TC_OVERLORD</name>
-	<name>LASER_LIGHT</name>
-</blueprintList>
-
-<!--/////// WEAPON LIST - RSA //////-->
-
-<blueprintList name="LIST_WEAPONS_RSA">
-	<name>LASER_BURST_1</name>
-	<name>LASER_BURST_2_ENEMY</name>
-	<name>LASER_HEAVY_CHAINGUN</name>
-	<name>LASER_CHAINGUN_ENEMY</name>
-	<name>LASER_CHAINGUN_2</name>
-	<name>ION_FIRE</name>
-	<name>ION_STUN</name>
-	<name>ION_CHAINGUN</name>
-	<name>MISSILES_2_ENEMY</name>
-	<name>MISSILES_1</name>
-	<name>RSA_BIOHAZARD</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_TAGGER</name>
-	<name>TC_ESKA</name>
-	<name>TC_OVERLORD</name>
-	<name>TC_MINIGUN_MK1</name>
-	<name>TC_MINIGUN_MK2</name>
-	<name>TC_MINIGUN_MK3</name>
-	<name>TC_SCRAPFLAK</name>
-	<name>TC_RESCRAPFLAK</name>
-	<name>TC_BOMB_SHOTGUN_1_ENEMY</name>
-	<name>TC_BOMB_SHOTGUN_2_ENEMY</name>
-	<name>TC_BOMB_SHOTGUN_3_ENEMY</name>
-</blueprintList>
-
-<!--/////// STORE LISTS //////-->
-
-<blueprintList name="SHOP_ITEM_WEAPONS_INSTANOODLE"> <!--/// INSTANT_ISSUES ///-->
-	<name>ION_INSTANT</name>
-	<name>SHOTGUN_INSTANT</name>
-	<name>BEAM_FIRE_INSTANT</name>
-	<name>TC_BOMB_SHOTGUN_INSTANT</name>
-	<name>ION_INSTANT</name>
-	<name>SHOTGUN_INSTANT</name>
-	<name>BEAM_FIRE_INSTANT</name>
-	<name>TC_BOMB_SHOTGUN_INSTANT</name>
-	<name>LOOT_MATH_5</name>
-	<name>BIG_ION</name>
-</blueprintList>
-
-<blueprintList name="SHOP_RSA_ITEM_WEAPONS"> <!--/// RSA STORE ///-->
-	<name>RSA_MINICANNON</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_MINICANNON</name>
-	<name>RSA_TAGGER</name>
-	<name>RSA_TAGGER</name>
-	<name>RSA_TAGGER</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_DECONSTRUCTOR</name>
-	<name>TC_RESOLVER</name>
-	<name>TC_RESOLVER</name>
-	<name>TC_RESOLVER</name>
-	<name>CATALYZER</name>
-	<name>CATALYZER</name>
-	<name>CATALYZER</name>
-	<name>TC_BOMB_SHOTGUN_1</name>
-	<name>TC_BOMB_SHOTGUN_2</name>
-	<name>TC_BOMB_SHOTGUN_3</name>
-	<name>TC_BOMB_SHOTGUN_BREACH</name>
-	<name>TC_BOMB_SHOTGUN_CHAIN</name>
-	<name>TC_BOMB_SHOTGUN_CHARGE</name>
-	<name>TC_BOMB_SHOTGUN_FREE</name>
-	<name>TC_BOMB_SHOTGUN_CONSERVATIVE</name>
-	<name>TC_BOMB_SHOTGUN_INSTANT</name>
-	<name>TC_BOMB_SHOTGUN_FIRE</name>
-	<name>TC_BOMB_SHOTGUN_ION</name>
-	<name>TC_BOMB_SHOTGUN_BIO</name>
-	<name>TC_BOMB_SHOTGUN_LOCK</name>
-</blueprintList>
 
 <!--/////// GIFTLISTS ///////-->
 
@@ -1080,6 +952,1039 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
+<blueprintList name="LIST_SHIPS_SCRAPPER_ALL">
+	<name>SCRAPPER_SCOUT</name>
+	<name>SCRAPPER_OUTRIDER</name>
+	<name>SCRAPPER_FIGHTER</name>
+	<name>SCRAPPER_SKIRMISHER</name>
+	<name>SCRAPPER_RAVAGER</name>
+	<name>SCRAPPER_BOMBER</name>
+	<name>SCRAPPER_PREDATOR</name>
+	<name>SCRAPPER_DROPSHIP</name>
+	<name>SCRAPPER_ASSAULT</name>
+	<name>SCRAPPER_INSTIGATOR</name>
+	<name>SCRAPPER_MARAUDER</name>
+	<name>SCRAPPER_SHUTTLE</name>
+	<name>SCRAPPER_DESTROYER</name>
+	<name>SCRAPPER_BATTLESHIP</name>
+	<name>SCRAPPER_HARVESTER</name>
+	<name>SCRAPPER_TRAPPER</name>
+	<name>SCRAPPER_TRANSPORT</name>
+	<name>SCRAPPER_GUARD</name>
+</blueprintList>
+
+<blueprintList name="LIST_SHIPS_SCRAPPER_GENERIC">
+	<name>SCRAPPER_SCOUT</name>
+	<name>SCRAPPER_OUTRIDER</name>
+	<name>SCRAPPER_FIGHTER</name>
+	<name>SCRAPPER_SKIRMISHER</name>
+	<name>SCRAPPER_RAVAGER</name>
+	<name>SCRAPPER_BOMBER</name>
+	<name>SCRAPPER_ASSAULT</name>
+	<name>SCRAPPER_PREDATOR</name>
+	<name>SCRAPPER_HARVESTER</name>
+	<name>SCRAPPER_INSTIGATOR</name>
+	<name>SCRAPPER_MARAUDER</name>
+	<name>SCRAPPER_TRANSPORT</name>
+	<name>SCRAPPER_SHUTTLE</name>
+</blueprintList>
+
+<blueprintList name="LIST_SHIPS_SCRAPPER_FIGHT">
+	<name>SCRAPPER_SCOUT</name>
+	<name>SCRAPPER_FIGHTER</name>
+	<name>SCRAPPER_SKIRMISHER</name>
+	<name>SCRAPPER_RAVAGER</name>
+	<name>SCRAPPER_BOMBER</name>
+	<name>SCRAPPER_PREDATOR</name>
+	<name>SCRAPPER_DESTROYER</name>
+	<name>SCRAPPER_ASSAULT</name>
+	<name>SCRAPPER_DROPSHIP</name>
+	<name>SCRAPPER_BATTLESHIP</name>
+	<name>SCRAPPER_INSTIGATOR</name>
+	<name>SCRAPPER_MARAUDER</name>
+	<name>SCRAPPER_HARVESTER</name> 
+</blueprintList>
+
+<blueprintList name="LIST_SHIPS_SCRAPPER_BIG">
+	<name>SCRAPPER_BOMBER</name>
+	<name>SCRAPPER_DROPSHIP</name>
+	<name>SCRAPPER_ASSAULT</name>
+	<name>SCRAPPER_INSTIGATOR</name>
+	<name>SCRAPPER_DESTROYER</name>
+	<name>SCRAPPER_BATTLESHIP</name>
+</blueprintList>
+
+<!--SCOUT-->
+<shipBlueprint name="SCRAPPER_SCOUT" layout="scrapper_scout_a" img="scrapper_scout_a">
+	<class>Scrapper Surveyor</class>
+	<maxSector>4</maxSector>
+	<systemList>
+		<clonebay power="1" max="3" room="3" start="false" />
+		<doors power="1" max="3" room="0" start="false" />
+		<engines power="1" max="2" room="6" start="true" />
+		<hacking power="1" max="3" room="2" start="false" />
+		<pilot power="1" max="3" room="1" start="true" />
+		<shields power="2" max="8" room="5" start="true" />
+		<weapons power="2" max="8" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="2" />
+	<health amount="10" />
+	<maxPower amount="10" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--OUTRIDER-->
+<shipBlueprint name="SCRAPPER_OUTRIDER" layout="scrapper_outrider_a" img="scrapper_outrider_a">
+	<class>Scrapper Seeker</class>
+	<maxSector>4</maxSector>
+	<systemList>
+		<engines power="1" max="2" room="5" start="true" />
+		<hacking power="1" max="3" room="6" start="false" />
+		<mind power="1" max="2" room="7" start="false" />
+		<pilot power="2" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="3" start="true" />
+		<weapons power="2" max="8" room="1" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="8" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="11" />
+	<maxPower amount="11" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--FIGHTER-->
+<shipBlueprint name="SCRAPPER_FIGHTER" layout="scrapper_fighter" img="scrapper_fighter">
+	<class>Scrapper Fighter</class>
+	<systemList>
+		<clonebay power="1" max="3" room="7" start="false" />
+		<doors power="1" max="3" room="3" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<mind power="1" max="2" room="4" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="5" start="true" />
+		<teleporter power="1" max="2" room="6" start="false" />
+		<weapons power="2" max="8" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="12" />
+	<maxPower amount="12" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--SKIRMISHER-->
+<shipBlueprint name="SCRAPPER_SKIRMISHER" layout="scrapper_skirmisher_a" img="scrapper_skirmisher_a">
+	<class>Scrapper Skirmisher</class>
+	<maxSector>4</maxSector>
+	<systemList>
+		<cloaking power="1" max="2" room="5" start="false" />
+		<clonebay power="1" max="3" room="4" start="false" />
+		<engines power="1" max="2" room="0" start="true" />
+		<pilot power="1" max="3" room="1" start="true" />
+		<shields power="2" max="8" room="2" start="true" />
+		<weapons power="2" max="7" room="7" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="9" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="10" />
+	<maxPower amount="12" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_skirmisher_a</cloakImage>
+</shipBlueprint>
+
+<!--RAVAGER-->
+<shipBlueprint name="SCRAPPER_RAVAGER" layout="scrapper_ravager_a" img="scrapper_ravager_a">
+	<class>Scrapper Ravager</class>
+	<minSector>1</minSector>
+	<systemList>
+		<cloaking power="1" max="2" room="7" start="false" />
+		<clonebay power="1" max="3" room="4" start="false" />
+		<doors power="1" max="3" room="9" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="5" start="true" />
+		<teleporter power="1" max="2" room="6" start="false" />
+		<weapons power="2" max="8" room="8" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="16" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="12" />
+	<maxPower amount="12" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_ravager_a</cloakImage>
+</shipBlueprint>
+
+<!--BOMBER-->
+<shipBlueprint name="SCRAPPER_BOMBER" layout="scrapper_bomber_a" img="scrapper_bomber_a">
+	<class>Scrapper Bomber</class>
+	<minSector>2</minSector>
+	<systemList>
+		<cloaking power="1" max="3" room="2" start="false" />
+		<clonebay power="1" max="3" room="7" start="false" />
+		<doors power="1" max="3" room="10" start="false" />
+		<engines power="1" max="2" room="11" start="true" />
+		<hacking power="1" max="3" room="9" start="false" />
+		<mind power="1" max="2" room="4" start="false" />
+		<pilot power="1" max="3" room="3" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<teleporter power="1" max="3" room="8" start="false" />
+		<weapons power="2" max="9" room="6" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="5" count="2" />
+	<health amount="14" />
+	<maxPower amount="12" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_bomber_a</cloakImage>
+</shipBlueprint>
+
+<!--PREDATOR-->
+<shipBlueprint name="SCRAPPER_PREDATOR" layout="scrapper_predator_a" img="scrapper_predator_a">
+	<class>Scrapper Predator</class>
+	<systemList>
+		<engines power="1" max="2" room="2" start="true" />
+		<mind power="1" max="2" room="7" start="false" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="8" room="3" start="true" />
+		<teleporter power="1" max="3" room="6" start="false" />
+		<weapons power="2" max="8" room="1" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="12" />
+	<maxPower amount="10" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--INSTIGATOR-->
+<shipBlueprint name="SCRAPPER_INSTIGATOR" layout="scrapper_instigator_a" img="scrapper_instigator_a">
+	<class>Scrapper Instigator</class>
+	<minSector>1</minSector>
+	<systemList>
+		<cloaking power="1" max="2" room="8" start="false" />
+		<clonebay power="1" max="2" room="3" start="false" />
+		<engines power="1" max="2" room="7" start="true" />
+		<hacking power="1" max="3" room="4" start="false" />
+		<mind power="1" max="3" room="5" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="2" start="true" />
+		<teleporter power="1" max="2" room="6" start="false" />
+		<weapons power="2" max="8" room="1" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="15" />
+	<maxPower amount="12" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_instigator_a</cloakImage>
+</shipBlueprint>
+
+<!--ASSAULT-->
+<shipBlueprint name="SCRAPPER_ASSAULT" layout="scrapper_assault_a" img="scrapper_assault_a">
+	<class>Scrapper Assault</class>
+	<minSector>2</minSector>
+	<systemList>
+		<clonebay power="1" max="3" room="3" start="false" />
+		<doors power="1" max="3" room="2" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<hacking power="1" max="3" room="9" start="false" />
+		<mind power="1" max="2" room="6" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<teleporter power="1" max="2" room="7" start="false" />
+		<weapons power="2" max="8" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="15" />
+	<maxPower amount="13" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_assault_a</cloakImage>
+</shipBlueprint>
+
+<!--MARAUDER-->
+<shipBlueprint name="SCRAPPER_MARAUDER" layout="scrapper_marauder_a" img="scrapper_marauder_a">
+	<class>Scrapper Marauder</class>
+	<minSector>1</minSector>
+	<systemList>
+		<clonebay power="1" max="2" room="4" start="false" />
+		<doors power="1" max="3" room="7" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<mind power="1" max="2" room="8" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="3" start="true" />
+		<teleporter power="1" max="3" room="5" start="false" />
+		<weapons power="2" max="8" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="14" />
+	<maxPower amount="11" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--DESTROYER-->
+<shipBlueprint name="SCRAPPER_DESTROYER" layout="scrapper_destroyer_a" img="scrapper_destroyer_a">
+	<class>Scrapper Destroyer</class>
+	<minSector>2</minSector>
+	<systemList>
+		<cloaking power="1" max="2" room="3" start="false" />
+		<clonebay power="1" max="3" room="8" start="false" />
+		<doors power="1" max="3" room="2" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<hacking power="1" max="3" room="6" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="10" room="5" start="true" />
+		<teleporter power="1" max="3" room="9" start="false" />
+		<weapons power="2" max="10" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="5" count="0" />
+	<health amount="15" />
+	<maxPower amount="14" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_destroyer_a</cloakImage>
+</shipBlueprint>
+
+<!--DROPSHIP-->
+<shipBlueprint name="SCRAPPER_DROPSHIP" layout="scrapper_dropship_a" img="scrapper_dropship_a">
+	<class>Scrapper Dropship</class>
+	<minSector>2</minSector>
+	<systemList>
+		<cloaking power="1" max="3" room="1" start="false" />
+		<clonebay power="1" max="3" room="13" start="false" />
+		<doors power="1" max="3" room="9" start="false" />
+		<engines power="1" max="2" room="7" start="true" />
+		<mind power="1" max="3" room="14" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="8" start="true" />
+		<teleporter power="2" max="3" room="5" start="true" />
+		<weapons power="1" max="5" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="16" />
+	<maxPower amount="13" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="2" class="scrapper_defender" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_dropship_a</cloakImage>
+</shipBlueprint>
+
+<!--BATTLESHIP-->
+<shipBlueprint name="SCRAPPER_BATTLESHIP" layout="scrapper_battleship_a" img="scrapper_battleship_a">
+	<class>Scrapper Battleship</class>
+	<minSector>3</minSector>
+	<systemList>
+		<clonebay power="1" max="3" room="7" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<hacking power="1" max="3" room="11" start="false" />
+		<mind power="1" max="3" room="6" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="10" room="2" start="true" />
+		<teleporter power="1" max="2" room="10" start="false" />
+		<weapons power="2" max="10" room="3" start="true" />
+	</systemList>
+	<weaponSlots>6</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="6" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="6" count="0" />
+	<health amount="16" />
+	<maxPower amount="13" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--HARVESTER-->
+<shipBlueprint name="SCRAPPER_HARVESTER" layout="scrapper_harvester_a" img="scrapper_harvester_a">
+	<class>Scrapper Harvester</class>
+	<systemList>
+		<clonebay power="1" max="3" room="3" start="false" />
+		<engines power="1" max="2" room="5" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="1" start="true" />
+		<teleporter power="1" max="3" room="4" start="false" />
+		<weapons power="2" max="6" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="25" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="11" />
+	<maxPower amount="11" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--TRAPPER-->
+<shipBlueprint name="SCRAPPER_TRAPPER" layout="scrapper_trapper_a" img="scrapper_trapper_a">
+	<class>Scrapper Trapper</class>
+	<systemList>
+		<clonebay power="1" max="1" room="5" start="true" />
+		<doors power="1" max="3" room="2" start="false" />
+		<engines power="1" max="1" room="8" start="true" />
+		<mind power="1" max="1" room="1" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="4" start="true" />
+		<teleporter power="1" max="1" room="6" start="true" />
+		<weapons power="3" max="7" room="3" start="true" />
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="10" count="3" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="14" />
+	<maxPower amount="11" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--TRANSPORT-->
+<shipBlueprint name="SCRAPPER_TRANSPORT" layout="scrapper_transport_a" img="scrapper_transport_a">
+	<class>Scrapper Transport</class>
+	<systemList>
+		<battery power="1" max="2" room="3" start="false" />
+		<cloaking power="1" max="1" room="11" start="false" />
+		<clonebay power="1" max="3" room="9" start="true" />
+		<doors power="1" max="3" room="10" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<hacking power="1" max="1" room="8" start="false" />
+		<mind power="1" max="1" room="2" start="false" />
+		<pilot power="1" max="1" room="0" start="true" />
+		<shields power="2" max="8" room="6" start="true" />
+		<teleporter power="1" max="3" room="12" start="true" />
+		<weapons power="2" max="8" room="7" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="7" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="5" count="0" />
+	<health amount="13" />
+	<maxPower amount="12" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="2" class="scrapper_heavy" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_transport_a</cloakImage>
+</shipBlueprint>
+
+<!--SHUTTLE-->
+<shipBlueprint name="SCRAPPER_SHUTTLE" layout="scrapper_shuttle_a" img="scrapper_shuttle_a">
+	<class>Scrapper Shuttle</class>
+	<systemList>
+		<engines power="1" max="2" room="3" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="2" start="true" />
+		<teleporter power="1" max="3" room="1" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="2" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="8" />
+	<maxPower amount="8" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--GUARD-->
+<shipBlueprint name="SCRAPPER_GUARD" layout="scrapper_guard_a" img="scrapper_guard_a">
+	<class>Scrapper Guard</class>
+	<systemList>
+		<cloaking power="1" max="3" room="5" start="false" />
+		<clonebay power="1" max="3" room="8" start="true" />
+		<doors power="1" max="3" room="6" start="false" />
+		<engines power="1" max="2" room="11" start="true" />
+		<hacking power="1" max="3" room="1" start="false" />
+		<mind power="1" max="3" room="2" start="false" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="8" room="3" start="true" />
+		<teleporter power="1" max="2" room="7" start="true" />
+		<weapons power="2" max="8" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="8" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="5" count="0" />
+	<health amount="14" />
+	<maxPower amount="14" />
+	<crewCount amount="2" max="4" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_guard_a</cloakImage>
+</shipBlueprint>
+
+<!--STATION-->
+<shipBlueprint name="SCRAPPER_STATION" layout="scrapper_station_a" img="scrapper_station_a">
+	<class>Scrapper Station</class>
+	<systemList>
+		<cloaking power="1" max="3" room="5" start="true" />
+		<clonebay power="1" max="3" room="2" start="true" />
+		<doors power="1" max="3" room="4" start="true" />
+		<hacking power="1" max="3" room="8" start="true" />
+		<mind power="1" max="3" room="9" start="true" />
+		<shields power="2" max="10" room="3" start="true" />
+		<teleporter power="1" max="3" room="1" start="true" />
+		<weapons power="2" max="10" room="10" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="19" />
+	<maxPower amount="26" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_station_a</cloakImage>
+</shipBlueprint>
+
+<!--
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+			ELITE LANIUS SHIPS
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+-->
+<blueprintList name="LIST_SHIPS_LANIUS_ELITE_ALL">
+	<name>SCRAPPER_SCOUT_ELITE</name>
+	<name>SCRAPPER_FIGHTER_ELITE</name>
+	<name>SCRAPPER_SKIRMISHER_ELITE</name>
+	<name>SCRAPPER_PREDATOR_ELITE</name>
+	<name>SCRAPPER_RAVAGER_ELITE</name>
+	<name>SCRAPPER_HARVESTER_ELITE</name>
+	<name>SCRAPPER_BOMBER_ELITE</name>
+	<name>SCRAPPER_ASSAULT_ELITE</name>
+	<name>SCRAPPER_INSTIGATOR_ELITE</name>
+	<name>SCRAPPER_DROPSHIP_ELITE</name>
+	<name>SCRAPPER_DESTROYER_ELITE</name>
+	<name>SCRAPPER_BATTLESHIP_ELITE</name>
+	<name>SCRAPPER_SHUTTLE_ELITE</name>
+	<name>SCRAPPER_GUARD_ELITE</name>
+</blueprintList>
+<blueprintList name="LIST_SHIPS_LANIUS_ELITE_GENERIC">
+	<name>SCRAPPER_SCOUT_ELITE</name>
+	<name>SCRAPPER_FIGHTER_ELITE</name>
+	<name>SCRAPPER_SKIRMISHER_ELITE</name>
+	<name>SCRAPPER_PREDATOR_ELITE</name>
+	<name>SCRAPPER_HARVESTER_ELITE</name>
+	<name>SCRAPPER_INSTIGATOR_ELITE</name>
+	<name>SCRAPPER_DROPSHIP_ELITE</name>
+	<name>SCRAPPER_SHUTTLE_ELITE</name>
+</blueprintList>
+<blueprintList name="LIST_SHIPS_LANIUS_ELITE_FIGHT">
+	<name>SCRAPPER_SCOUT_ELITE</name>
+	<name>SCRAPPER_FIGHTER_ELITE</name>
+	<name>SCRAPPER_SKIRMISHER_ELITE</name>
+	<name>SCRAPPER_PREDATOR_ELITE</name>
+	<name>SCRAPPER_RAVAGER_ELITE</name>
+	<name>SCRAPPER_HARVESTER_ELITE</name>
+	<name>SCRAPPER_BOMBER_ELITE</name>
+	<name>SCRAPPER_ASSAULT_ELITE</name>
+	<name>SCRAPPER_INSTIGATOR_ELITE</name>
+	<name>SCRAPPER_DROPSHIP_ELITE</name>
+	<name>SCRAPPER_DESTROYER_ELITE</name>
+	<name>SCRAPPER_BATTLESHIP_ELITE</name>
+</blueprintList>
+
+<!--SCOUT-->
+<shipBlueprint name="SCRAPPER_SCOUT_ELITE" layout="scrapper_scout_b" img="scrapper_scout_b">
+	<class>Terror Surveyor</class>
+	<maxSector>4</maxSector>
+	<systemList>
+		<clonebay power="1" max="3" room="3" start="true" />
+		<doors power="1" max="3" room="0" start="true" />
+		<engines power="1" max="2" room="6" start="true" />
+		<hacking power="1" max="3" room="2" start="false" />
+		<pilot power="1" max="3" room="1" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<weapons power="3" max="8" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="2" />
+	<health amount="14" />
+	<maxPower amount="16" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--FIGHTER-->
+<shipBlueprint name="SCRAPPER_FIGHTER_ELITE" layout="scrapper_fighter_b" img="scrapper_fighter_b">
+	<class>Terror Fighter</class>
+	<systemList>
+		<clonebay power="1" max="3" room="7" start="true" />
+		<doors power="1" max="3" room="3" start="false" />
+		<engines power="1" max="2" room="1" start="true" />
+		<mind power="1" max="2" room="4" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="1" max="2" room="6" start="true" />
+		<weapons power="4" max="8" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="14" />
+	<maxPower amount="18" />
+	<crewCount amount="1" max="2" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--SKIRMISHER-->
+<shipBlueprint name="SCRAPPER_SKIRMISHER_ELITE" layout="scrapper_skirmisher_b" img="scrapper_skirmisher_b">
+	<class>Terror Skirmisher</class>
+	<maxSector>4</maxSector>
+	<systemList>
+		<cloaking power="1" max="2" room="5" start="true" />
+		<clonebay power="1" max="3" room="4" start="true" />
+		<engines power="1" max="2" room="0" start="true" />
+		<pilot power="1" max="3" room="1" start="true" />
+		<shields power="4" max="10" room="2" start="true" />
+		<weapons power="3" max="7" room="7" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="9" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="11" />
+	<maxPower amount="16" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_skirmisher_b</cloakImage>
+</shipBlueprint>
+
+<!--PREDATOR-->
+<shipBlueprint name="SCRAPPER_PREDATOR_ELITE" layout="scrapper_predator_b" img="scrapper_predator_b">
+	<class>Terror Predator</class>
+	<systemList>
+		<engines power="1" max="2" room="2" start="true" />
+		<mind power="1" max="2" room="7" start="false" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="4" max="10" room="3" start="true" />
+		<teleporter power="1" max="3" room="6" start="true" />
+		<weapons power="3" max="8" room="1" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="14" />
+	<maxPower amount="16" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--RAVAGER-->
+<shipBlueprint name="SCRAPPER_RAVAGER_ELITE" layout="scrapper_ravager_b" img="scrapper_ravager_b">
+	<class>Terror Ravager</class>
+	<systemList>
+		<cloaking power="1" max="2" room="7" start="true" />
+		<clonebay power="1" max="3" room="4" start="true" />
+		<doors power="1" max="3" room="9" start="true" />
+		<engines power="1" max="2" room="1" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="1" max="2" room="6" start="true" />
+		<weapons power="3" max="8" room="8" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="16" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="14" />
+	<maxPower amount="17" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_ravager_b</cloakImage>
+</shipBlueprint>
+
+<!--HARVESTER-->
+<shipBlueprint name="SCRAPPER_HARVESTER_ELITE" layout="scrapper_harvester_b" img="scrapper_harvester_b">
+	<class>Terror Harvester</class>
+	<systemList>
+		<clonebay power="1" max="3" room="3" start="true" />
+		<engines power="1" max="2" room="5" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="1" start="true" />
+		<teleporter power="1" max="3" room="4" start="true" />
+		<weapons power="3" max="6" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="25" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="13" />
+	<maxPower amount="16" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--BOMBER-->
+<shipBlueprint name="SCRAPPER_BOMBER_ELITE" layout="scrapper_bomber_b" img="scrapper_bomber_b">
+	<class>Terror Bomber</class>
+	<minSector>2</minSector>
+	<systemList>
+		<cloaking power="1" max="3" room="2" start="false" />
+		<clonebay power="1" max="3" room="7" start="true" />
+		<doors power="1" max="3" room="10" start="false" />
+		<engines power="1" max="2" room="11" start="true" />
+		<hacking power="1" max="3" room="9" start="true" />
+		<mind power="1" max="2" room="4" start="false" />
+		<pilot power="1" max="3" room="3" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="1" max="3" room="8" start="true" />
+		<weapons power="4" max="9" room="6" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="5" count="2" />
+	<health amount="18" />
+	<maxPower amount="20" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_bomber_b</cloakImage>
+</shipBlueprint>
+
+<!--ASSAULT-->
+<shipBlueprint name="SCRAPPER_ASSAULT_ELITE" layout="scrapper_assault_b" img="scrapper_assault_b">
+	<class>Terror Assault</class>
+	<minSector>2</minSector>
+	<systemList>
+		<cloaking power="1" max="2" room="8" start="false" />
+		<clonebay power="1" max="3" room="3" start="true" />
+		<doors power="1" max="3" room="2" start="true" />
+		<engines power="1" max="2" room="1" start="true" />
+		<hacking power="1" max="3" room="9" start="false" />
+		<mind power="1" max="2" room="6" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="1" max="3" room="7" start="true" />
+		<weapons power="4" max="8" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="17" />
+	<maxPower amount="20" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
+	<crewCount amount="1" max="2" class="scrapper_defender" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_assault_b</cloakImage>
+</shipBlueprint>
+
+<!--INSTIGATOR-->
+<shipBlueprint name="SCRAPPER_INSTIGATOR_ELITE" layout="scrapper_instigator_b" img="scrapper_instigator_b">
+	<class>Terror Instigator</class>
+	<systemList>
+		<cloaking power="1" max="2" room="8" start="false" />
+		<clonebay power="1" max="2" room="3" start="true" />
+		<engines power="1" max="2" room="7" start="true" />
+		<hacking power="1" max="3" room="4" start="false" />
+		<mind power="1" max="3" room="5" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="2" start="true" />
+		<teleporter power="1" max="2" room="6" start="true" />
+		<weapons power="3" max="8" room="1" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="17" />
+	<maxPower amount="18" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
+	<crewCount amount="1" max="2" class="scrapper_defender" />
+	<crewCount amount="1" max="2" class="scrapper_heavy" />
+	<crewCount amount="1" max="2" class="scrapper_scavenger" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_instigator_b</cloakImage>
+</shipBlueprint>
+
+<!--DROPSHIP-->
+<shipBlueprint name="SCRAPPER_DROPSHIP_ELITE" layout="scrapper_dropship_b" img="scrapper_dropship_b">
+	<class>Terror Dropship</class>
+	<minSector>2</minSector>
+	<systemList>
+		<cloaking power="1" max="3" room="1" start="true" />
+		<clonebay power="1" max="3" room="13" start="true" />
+		<doors power="1" max="3" room="9" start="false" />
+		<engines power="1" max="2" room="7" start="true" />
+		<mind power="1" max="3" room="14" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="8" start="true" />
+		<teleporter power="2" max="3" room="5" start="true" />
+		<weapons power="3" max="5" room="2" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="18" />
+	<maxPower amount="18" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
+	<crewCount amount="1" max="2" class="scrapper_defender" />
+	<crewCount amount="1" max="2" class="scrapper_heavy" />
+	<crewCount amount="1" max="2" class="scrapper_scavenger" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_dropship_b</cloakImage>
+</shipBlueprint>
+
+<!--DESTROYER-->
+<shipBlueprint name="SCRAPPER_DESTROYER_ELITE" layout="scrapper_destroyer_b" img="scrapper_destroyer_b">
+	<class>Terror Destroyer</class>
+	<minSector>2</minSector>
+	<systemList>
+		<cloaking power="1" max="2" room="3" start="true" />
+		<clonebay power="1" max="3" room="8" start="true" />
+		<doors power="1" max="3" room="2" start="true" />
+		<engines power="1" max="2" room="1" start="true" />
+		<hacking power="1" max="3" room="6" start="true" />
+		<mind power="1" max="3" room="7" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="1" max="3" room="9" start="true" />
+		<weapons power="4" max="10" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="5" count="0" />
+	<health amount="18" />
+	<maxPower amount="23" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
+	<crewCount amount="1" max="2" class="scrapper_defender" />
+	<crewCount amount="1" max="2" class="scrapper_heavy" />
+	<crewCount amount="1" max="2" class="scrapper_scavenger" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_destroyer_b</cloakImage>
+</shipBlueprint>
+
+<!--BATTLESHIP-->
+<shipBlueprint name="SCRAPPER_BATTLESHIP_ELITE" layout="scrapper_battleship_b" img="scrapper_battleship_b">
+	<class>Terror Battleship</class>
+	<minSector>3</minSector>
+	<systemList>
+		<clonebay power="1" max="3" room="7" start="true" />
+		<engines power="1" max="2" room="1" start="true" />
+		<hacking power="1" max="3" room="11" start="true" />
+		<mind power="1" max="3" room="6" start="false" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="2" start="true" />
+		<teleporter power="1" max="2" room="10" start="true" />
+		<weapons power="4" max="10" room="3" start="true" />
+	</systemList>
+	<weaponSlots>6</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="6" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="6" count="0" />
+	<health amount="18" />
+	<maxPower amount="23" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
+	<crewCount amount="1" max="2" class="scrapper_defender" />
+	<crewCount amount="1" max="2" class="scrapper_heavy" />
+	<crewCount amount="1" max="2" class="scrapper_scavenger" />
+	<crewCount amount="1" max="1" class="scrapper_heavy_mk2" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<!--GUARD-->
+<shipBlueprint name="SCRAPPER_GUARD_ELITE" layout="scrapper_guard_b" img="scrapper_guard_b">
+	<class>Terror Guard</class>
+	<systemList>
+		<cloaking power="1" max="3" room="5" start="true" />
+		<clonebay power="1" max="3" room="8" start="true" />
+		<doors power="1" max="3" room="6" start="false" />
+		<engines power="1" max="2" room="11" start="true" />
+		<hacking power="1" max="3" room="1" start="true" />
+		<mind power="1" max="3" room="2" start="false" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="4" max="10" room="3" start="true" />
+		<teleporter power="1" max="2" room="7" start="true" />
+		<weapons power="4" max="8" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="8" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="5" count="0" />
+	<health amount="16" />
+	<maxPower amount="16" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="2" class="scrapper_engineer" />
+	<crewCount amount="1" max="2" class="scrapper_defender" />
+	<crewCount amount="1" max="2" class="scrapper_heavy" />
+	<crewCount amount="1" max="2" class="scrapper_scavenger" />
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>scrapper_guard_b</cloakImage>
+</shipBlueprint>
+
+<!--SHUTTLE-->
+<shipBlueprint name="SCRAPPER_SHUTTLE_ELITE" layout="scrapper_shuttle_b" img="scrapper_shuttle_b">
+	<class>Terror Shuttle</class>
+	<systemList>
+		<engines power="1" max="2" room="3" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="2" start="true" />
+		<teleporter power="3" max="3" room="1" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="2" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="10" />
+	<maxPower amount="13" />
+	<crewCount amount="1" max="3" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
 <shipBlueprint name="TC_TRASH_COMPACTOR1" layout="tc_trash_compactor1" img="tc_trash_compactor1">
 	<class>Trash Compactor</class>
 	<minSector>1</minSector>
@@ -1100,12 +2005,10 @@
 	<droneList drones="0" count="0" />
 	<health amount="5" />
 	<maxPower amount="30" />
-	<crew>
-		<scrapper room="3"/>
-		<scrapper room="11"/>
-        <scrapper room="5"/>
-		<scrapper room="6"/>
-    </crew>
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1133,12 +2036,12 @@
 	<health amount="7" />
 	<maxPower amount="31" />
 	<crew>
-		<scrapper_engineer room="3"/>
-		<scrapper_medic room="5"/>
-		<scrapper_heavy room="11"/>
 		<trash_eater room="0" name="Trash Eater"/>
     </crew>
-	<crewCount amount="1" max="1" class="scrapper" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
@@ -1177,7 +2080,7 @@
         <scrapper_scavenger room="0"/>
         <trash_eater room="9" name="Trash Eater"/>
     </crew>
-	<crewCount amount="1" max="1" class="scrapper" />
+	<crewCount amount="3" max="3" class="scrapper" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
@@ -1216,7 +2119,10 @@
 
         <trash_eater room="7" name="Trash Eater"/>
     </crew>
-	<crewCount amount="1" max="1" class="scrapper_scavenger" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>invasion</boardingAI>
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
@@ -1253,15 +2159,16 @@
 		<scrapper_medic room="13"/>
 		<scrapper_medic room="10"/>
 		<scrapper_engineer room="10"/>
-
 		<scrapper_heavy room="8"/>
 		<scrapper_engineer room="3"/>
 		<scrapper_engineer room="5"/>
-
         <trash_eater room="7" name="Trash Eater"/>
 		<scrapper_scavenger room="7"/>
     </crew>
-	<crewCount amount="1" max="1" class="scrapper_scavenger" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>invasion</boardingAI>
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
@@ -1309,7 +2216,10 @@
 
         <trash_eater room="7" name="Trash Eater"/>
     </crew>
-	<crewCount amount="1" max="1" class="scrapper_scavenger" />
+	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper_medic" />
+	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>invasion</boardingAI>
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
@@ -1391,30 +2301,6 @@
 </shipBlueprint>
 <!--///////////////////// SCRAPPER STUFF /////////////////-->
 
-<shipBlueprint name="SCRAPPER_SCOUT" layout="SCRAPPER_SCOUT" img="SCRAPPER_SCOUT">
-	<class>Scrapper Scout</class>
-	<minSector>1</minSector>
-	<maxSector>7</maxSector>
-	<systemList>
-		<clonebay power="1" max="2" room="5" start="true" />
-		<engines power="2" max="4" room="2" start="true" />
-		<hacking power="1" max="2" room="7" start="false" />
-		<mind power="1" max="2" room="9" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="6" room="3" start="true" />
-		<weapons power="2" max="6" room="8" start="true" />
-	</systemList>
-	<weaponSlots>2</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="5" count="2" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="0" count="0" />
-	<health amount="7" />
-	<maxPower amount="15" />
-	<crewCount amount="2" max="4" class="scrapper" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
 <shipBlueprint name="SCRAPPER_SHOP" layout="SCRAPPER_SHOP" img="SCRAPPER_SHOP">
 	<class>Scrapper Shopkeeper</class>
 	<minSector>1</minSector>
@@ -1450,57 +2336,6 @@
 	</crew>
 	<boardingAI>invasion</boardingAI>
 	<cloakImage>scrapper_shop_cloak</cloakImage>
-</shipBlueprint>
-
-
-<shipBlueprint name="SCRAPPER_BOMBER" layout="SCRAPPER_BOMBER" img="SCRAPPER_BOMBER">
-	<class>Scrapper Bomber</class>
-	<minSector>1</minSector>
-	<maxSector>7</maxSector>
-	<systemList>
-		<clonebay power="1" max="2" room="5" start="true" />
-		<engines power="2" max="4" room="2" start="true" />
-		<hacking power="1" max="2" room="7" start="false" />
-		<mind power="1" max="2" room="9" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="6" room="3" start="true" />
-		<weapons power="2" max="6" room="8" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="0" count="0" />
-	<health amount="13" />
-	<maxPower amount="15" />
-	<crewCount amount="3" max="5" class="scrapper" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="SCRAPPER_CRUISER" layout="SCRAPPER_CRUISER" img="SCRAPPER_CRUISER">
-	<class>Scrapper Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>7</maxSector>
-	<systemList>
-		<clonebay power="1" max="2" room="5" start="true" />
-		<engines power="2" max="4" room="2" start="true" />
-		<hacking power="1" max="2" room="7" start="false" />
-		<mind power="1" max="2" room="9" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="8" room="3" start="true" />
-		<weapons power="2" max="8" room="8" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="0" count="0" />
-	<health amount="15" />
-	<maxPower amount="15" />
-	<crewCount amount="2" max="3" class="scrapper" />
-	<crewcount amount="1" max="1" class="adamantine_scrapper"/>
-	<crewcount amount="2" max="2" class="scrapper_heavy"/>
-	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
 <shipBlueprint name="TC_SCRAPPER_CORVETTE" layout="ars_corvette" img="ars_corvette">

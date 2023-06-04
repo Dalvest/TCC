@@ -1,27 +1,29 @@
 
 <FTL><!--appending to Inferno-Core (uncomment later)-->
-	<mod:findName type="event" name="FMCORE_ATLAS_EQUIPMENT">
-		<mod-append:choice req="TCC_CAN_CALL_COMPACTOR" blue="false">
-			<text>Contact the Trash Compactor.</text>
-			<event>
-				<loadEvent>SUMMON_TC</loadEvent>
-				<variable name="tcc_called_compactor" op="set" val="1"/>
-			</event>
-		</mod-append:choice>
-		<mod-append:choice hidden="true" req="tcc_called_compactor" blue="false">
-			<text>You have already contacted the Trash Compactor.</text>
-			<event load="OPTION_INVALID"/>
-		</mod-append:choice>
-	</mod:findName>
-  <mod:findName type="event" name="LOAD_ATLAS_MARKER">
+
+<mod:findName type="event" name="FMCORE_ATLAS_EQUIPMENT">
+	<mod-append:choice req="TCC_CAN_CALL_COMPACTOR" blue="false">
+		<text>Contact the Trash Compactor.</text>
+		<event>
+			<loadEvent>SUMMON_TC</loadEvent>
+			<variable name="tcc_called_compactor" op="set" val="1"/>
+		</event>
+	</mod-append:choice>
+	<mod-append:choice hidden="true" req="tcc_called_compactor" blue="false">
+		<text>You have already contacted the Trash Compactor.</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="LOAD_ATLAS_MARKER">
   	<mod-append:variable name="tcc_called_compactor" op="set" val="0"/>
 	<mod-append:variable name="tc_scrapper_job" op="set" val="0"/>
-  </mod:findName>
-  <mod:findName type="event" name="FMCORE_SPAWNER">
+</mod:findName>
+
+<mod:findName type="event" name="FMCORE_SPAWNER">
 		<mod-append:queueEvent>TC_SPAWNER</mod-append:queueEvent>
-	</mod:findName>
-</FTL>
-<FTL><!--Calling the Trash Compactor-->
+</mod:findName>
+
   <event name="SUMMON_TC">
     <text>Contact the Trash Compactor? (WARNING - HIGH RISK, HIGH REWARD)</text>
     <choice req="TC_DEAD" lvl="0" max_group="3" hidden="false" blue="false">
@@ -190,4 +192,110 @@
 	<event name="TC_SPAWNER_END">
 		<variable name="tc_call_marker" op="set" val="0"/>
 	</event>
+
+
+<!--SCRAPPER EVENTS-->
+	
+<event name="ENTER_SCRAPPER">
+	<text load="TEXT_LIGHTSPEED" />
+	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="LOAD_ATLAS_MARKER" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_WARP">
+	<text>Name: Scrapper Gathering Point
+	Type: Neutral
+	Unique: False
+	Dominant Faction: Scrapper
+	Rebel Threat Level: Medium
+
+	The Scrappers are an interesting race of what appear to be primarily heavily modified and armored Lanius, though, there is something peculiar about them.</text>
+	<!-- 	<playSound>lightspeed</playSound> -->
+	<choice hidden="true">
+		<text>Exit hyperspeed.</text>
+		<event load="START_SCRAPPER_LIST" />
+	</choice>
+	<choice hidden="true" req="COORDS" blue="false">
+		<text>Reroute.</text>
+		<event load="REROUTE_MENU" />
+	</choice>
+</event>
+
+<event name="ENTER_SCRAPPER_UNIQUE">
+	<text load="TEXT_LIGHTSPEED" />
+	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="LOAD_ATLAS_MARKER" />
+	</choice>
+</event>
+
+<!--
+<!--To do... Create Unique Scrapper sector-->
+<event name="SCRAPPER_UNIQUE_WARP">
+	<text id="atlas_ghost" />
+	<choice hidden="true">
+		<text>Exit hyperspeed.</text>
+		<event load="START_GHOSTWASTE" />
+	</choice>
+	<choice hidden="true" req="COORDS" blue="false">
+		<text>Reroute.</text>
+		<event load="REROUTE_MENU" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_UNIQUE_WARP">
+	<text id="atlas_dynasty" />
+	<choice hidden="true">
+		<text>Exit hyperspeed.</text>
+		<event load="START_DYNCAP" />
+	</choice>
+	<choice hidden="true" req="COORDS" blue="false">
+		<text>Reroute.</text>
+		<event load="REROUTE_MENU" />
+	</choice>
+</event>
+
+<event name="ENTER_SCRAPYARD">
+	<text load="TEXT_LIGHTSPEED" />
+	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="LOAD_ATLAS_MARKER" />
+	</choice>
+</event>
+
+
+<event name="SCRAPYARD_WARP">
+	<text>Name: Spectral Nebulae
+	Type: Hostile (Nebula)
+	Unique: False
+	Dominant Faction: Spectral Dynasty
+	Rebel Threat Level: High (Auto Fleet)
+
+	Don't expect to see many manned Rebel ships here - the Rebellion's fight against the Ghosts and their Dynasty is almost entirely automated. Unfortunately, the Dynasty seems to hold this invasion against not just the Rebellion, but the Federation as well.</text>
+	<!-- 	<playSound>lightspeed</playSound> -->
+	<choice hidden="true">
+		<text>Exit hyperspeed.</text>
+		<event load="START_DYNASTY" />
+	</choice>
+	<choice hidden="true" req="COORDS" blue="false">
+		<text>Reroute.</text>
+		<event load="REROUTE_MENU" />
+	</choice>
+</event>
+
+<event name="ENTER_SCRAPPER_UNIQUE">
+	<text load="TEXT_LIGHTSPEED" />
+	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="LOAD_ATLAS_MARKER" />
+	</choice>
+</event>
+-->
+	
 </FTL>

@@ -1216,8 +1216,7 @@
 				<item type="fuel" min="-1" max="-1" />
 				<item type="drones" min="-1" max="-1" />
 			</item_modify>
-			<variable name="tc_scrapper_cloaking_system_tampered" op="add" val="1"/> 
-			<upgrade amount="1" system="cloak" />
+			<upgrade amount="1" system="cloaking" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
@@ -1228,7 +1227,7 @@
 		<text>This upgrade is unavailable. Is not compatible with Shadow Weaponry.</text>
 		<event load="OPTION_INVALID" />
 	</choice>
-	<choice req="cloak" lvl="1" max_lvl="1" max_group="0" blue="false" hidden="true">
+	<choice req="cloaking" lvl="1" max_lvl="1" max_group="0" blue="false" hidden="true">
 		<text>This upgrade is unavailable. It requires cloak level 2.</text>
 		<event load="OPTION_INVALID" />
 	</choice>
@@ -1256,8 +1255,7 @@
 				<item type="fuel" min="-5" max="-5" />
 				<item type="drones" min="-1" max="-1" />
 			</item_modify>
-			<variable name="tc_scrapper_cloaking_system_tampered" op="add" val="1"/> 
-			<upgrade amount="1" system="cloak" />
+			<upgrade amount="1" system="cloaking" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
@@ -1268,7 +1266,7 @@
 		<text>This upgrade is unavailable. Is not compatible with Shadow Weaponry.</text>
 		<event load="OPTION_INVALID" />
 	</choice>
-	<choice req="cloak" lvl="1" max_lvl="2" max_group="0" blue="false" hidden="true">
+	<choice req="cloaking" lvl="1" max_lvl="2" max_group="0" blue="false" hidden="true">
 		<text>This upgrade is unavailable. It requires cloak level 3.</text>
 		<event load="OPTION_INVALID" />
 	</choice>
@@ -1296,8 +1294,7 @@
 				<item type="fuel" min="-5" max="-5" />
 				<item type="drones" min="-1" max="-1" />
 			</item_modify>
-			<variable name="tc_scrapper_cloaking_system_tampered" op="add" val="1"/> 
-			<upgrade amount="1" system="cloak" />
+			<upgrade amount="1" system="cloaking" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
@@ -1308,7 +1305,7 @@
 		<text>This upgrade is unavailable. Is not compatible with Shadow Weaponry.</text>
 		<event load="OPTION_INVALID" />
 	</choice>
-	<choice req="cloak" lvl="1" max_lvl="3" max_group="0" blue="false" hidden="true">
+	<choice req="cloaking" lvl="1" max_lvl="3" max_group="0" blue="false" hidden="true">
 		<text>This upgrade is unavailable. It requires cloak level 4.</text>
 		<event load="OPTION_INVALID" />
 	</choice>
@@ -1336,7 +1333,7 @@
 				<item type="fuel" min="-2" max="-2" />
 				<item type="scrap" min="-45" max="-45" />
 			</item_modify>
-			<variable name="tc_scrapper_cloaking_system_tampered" op="add" val="1"/> 
+
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="INSTALL_CLOAK_FIRE" />
@@ -1691,25 +1688,18 @@
 
 <!-- appending to the main lab menu-->
 <mod:findName name="STORAGE_CHECK_LAB">
-
 	<mod-append:choice req="LIST_CREW_SCRAPPER" blue="false" hidden="true">
 		<text>Scrapper.</text>
 		<event load="STORAGE_CHECK_LAB_SCRAPPER"/>
 	</mod-append:choice>
-	
 	<mod-append:choice req="CREW_UPGRADER" blue="true" hidden="true">
 		<text>[CREW UPGRADER]</text>
 		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER"/>
 	</mod-append:choice>
-	
 	<mod-append:choice req="ADVANCED_SCRAP" lvl="1" blue="true" hidden="true">
 		<text>[Advanced Scrap Processor]</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_LIST"/>
 	</mod-append:choice>
-	
-  <!--more choices here-->
-
-
   <mod:findWithChildLike type="choice" child-type="text">
 		<mod:selector>Nevermind.</mod:selector>
 		<mod:setAttributes max_group="9" req="pilot" lvl="1" blue="false"/>
@@ -2564,7 +2554,7 @@
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_REVERT_ROSEGOLD_BASE_TIER_LEVEL_2"/>
 	</choice>
 	<choice req="rosegold_scrapper_scavenger" lvl="1" max_group="1" blue="false">
-	  <text>Upgrade a Rosegold Scrapper Scavenger.</text>
+	  <text>Upgrade into Rosegold Scrapper Scavenger Mark 2.</text>
 	  <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_ROSEGOLD_SCAVENGER_MK2"/>
 	</choice>	
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
@@ -2674,6 +2664,10 @@
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL2"/>
     </choice>	
 	<choice req="golden_scrapper" lvl="1" blue="false">
+		<text>Upgrade Golden Scrapper to Golden Scrapper Medic.</text>
+		<event load="STORAGE_CHECK_CREW_SCRAPPER_GOLDEN_BASE_TIER_LEVEL_1"/>
+	</choice>
+	<choice req="golden_scrapper" lvl="1" blue="false">
 		<text>Transmute into a Rosegold Scrapper.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD"/>
 	</choice>
@@ -2702,7 +2696,7 @@
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN"/>
 	</choice>
 	 <choice req="rosegold_scrapper" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
+		<text>Transmute into an Adamantine Scrapper.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE"/>
 	</choice>		
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
@@ -2742,7 +2736,7 @@
       <event load="STORAGE_CHECK_CREW_SCRAPPER_UPGRADE_BASE_GOLDEN_LEVEL3"/>
     </choice>
 	<choice req="golden_scrapper_2" lvl="1" blue="false">
-		<text>Upgrade Golden Scrapper to Rosegold Scrapper Defender.</text>
+		<text>Upgrade into Golden Scrapper Defender.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_GOLDEN_BASE_TIER_LEVEL_2"/>
 	</choice>
 	 <choice req="golden_scrapper_2" lvl="1" blue="false">
@@ -2750,7 +2744,7 @@
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD_2"/>
 	</choice>
 	 <choice req="golden_scrapper_2" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
+		<text>Transmute into an Adamantine Scrapper.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ADAMANTINE_2"/>
 	</choice>		
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
@@ -2770,7 +2764,7 @@
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN_2"/>
 	</choice>
 	 <choice req="rosegold_scrapper_2" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
+		<text>Transmute into an Adamantine Scrapper.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE_2"/>
 	</choice>	
 	<choice req="rosegold_scrapper_2" lvl="1" blue="false">
@@ -2787,7 +2781,7 @@
 <event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_SCRAPPER_3">
 	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
 	<choice req="adamantium_scrapper_3" lvl="1" blue="false">
-		<text>Upgrade Adamantine Scrapper to Adamantine Scrapper Heavy Soldier Mark 2.</text>
+		<text>Upgrade into Adamantine Scrapper Heavy Soldier Mark 2.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_ADAMANTINE_BASE_TIER_LEVEL_3"/>
 	</choice>	
 	 <choice req="adamantine_scrapper_3" lvl="1" blue="false">
@@ -2807,7 +2801,7 @@
 <event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_SCRAPPER_3">
 	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
 	<choice req="golden_scrapper_3" lvl="1" blue="false">
-		<text>Upgrade Golden Scrapper to Rosegold Scrapper Defender Mark 2.</text>
+		<text>Upgrade into Golden Scrapper Defender Mark 2.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_GOLDEN_BASE_TIER_LEVEL_3"/>
 	</choice>	
 	<choice req="golden_scrapper_3" lvl="1" blue="false">
@@ -2815,7 +2809,7 @@
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ROSEGOLD_3"/>
 	</choice>
 	 <choice req="golden_scrapper_3" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
+		<text>Transmute into an Adamantine Scrapper.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_GOLDEN_ADAMANTINE_3"/>
 	</choice>		
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
@@ -2827,7 +2821,7 @@
 <event name="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ROSEGOLD_SCRAPPER_3">
 	<text>Elemental Scrappers can be upgraded and transformed into Specialists. They can also be transmuted into other elementals</text>
 	<choice req="rosegold_scrapper_3" lvl="1" blue="false">
-		<text>Upgrade Rosegold Scrapper to Rosegold Scrapper Scavenger Mark 2.</text>
+		<text>Upgrade into Rosegold Scrapper Scavenger Mark 2.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_ROSEGOLD_BASE_TIER_LEVEL_3"/>
 	</choice>	
 	 <choice req="rosegold_scrapper_3" lvl="1" blue="false">
@@ -2835,7 +2829,7 @@
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_GOLDEN_3"/>
 	</choice>
 	 <choice req="rosegold_scrapper_3" lvl="1" blue="false">
-		<text>Transmute into a Adamantine Scrapper.</text>
+		<text>Transmute into an Adamantine Scrapper.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSMUTE_ROSEGOLD_ADAMANTINE_3"/>
 	</choice>	
 	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
