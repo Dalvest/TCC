@@ -1,56 +1,5 @@
 <FTL>
 
-<!--//////////////// AVALI SECTOR /////////////////-->
-
-<!--<mod:findName type="sectorType" name="OVERRIDE_SECTOR_LIST_GENERIC_FRIENDLY">
-	<mod-append:sector>AVALI</mod-append:sector>
-</mod:findName>
-
-<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC_FRIENDLY">
-	<mod-append:sector>AVALI</mod-append:sector>
-</mod:findName>
-
-<mod:findName type="sectorType" name="CIVILIAN">
-	<mod-append:sector>AVALI</mod-append:sector>
-</mod:findName>
-
-<sectorDescription name="AVALI" unique="false">   
-	<nameList>
-		<name>Avali Collective</name>
-		<name>Avali Outer Reaches</name>
-		<name>Avali Homeworlds</name>
-		<name>Avali-Protogen Refuge</name>
-	</nameList>
-	<trackList>
-		<track>avali</track>
-		<track>lostship</track>
-		<track>hacking</track>
-		<track>deepspace</track>
-	</trackList>
-	Here, you can set crew, weapons, and augments to have a different rarity in this sector. You should probably add specific rarities to all normal MV crew, unlike shown here.
-	<rarityList>
-		<blueprint name="avali" rarity="4"/>
-		<blueprint name="protogen" rarity="3"/>
-		<blueprint name="protogen_space_scavenger" rarity="5"/>
-		<blueprint name="CATALYZER" rarity="4"/>
-	</rarityList>
-	<startEvent>ENTER_EXAMPLE</startEvent> I think this is the event that appears when you are entering the sector in hyperspeed. These are loxated in events_lightspeed.
-	<exitBeacon event="FINISH_BEACON" nebulaEvent="FINISH_BEACON_NEBULA" rebelEvent="FINISH_BEACON_FLEET_ELITE"/> The event that appears at the end of the sector.
-	<rebelBeacon event="FLEET_THREAT_MEDIUM" nebulaEvent="FLEET_THREAT_MEDIUM_NEBULA"/> The Rebel fleet events.
-	<removeFirstBeaconNebula/> Prevents the first beacon from being in a nebula. 
-	The event lists that can appear in the sector. Event lists for sectors are located in their respective events files, but store lists are located in events_standard.
-	<event name="STORELIST_EXAMPLE" min="2" max="3"/>
-	<event name="MV_TRAVELER" min="1" max="1"/>
-	<event name="NEMESIS_ENCOUNTER" min="0" max="1"/>
-	<event name="PIRACY_LIST" min="2" max="4"/>
-	<event name="DISTRESS_EXAMPLE" min="2" max="3"/>
-	<event name="HOSTILE_EXAMPLE" min="6" max="7"/>
-	<event name="ITEMS_EXAMPLE" min="2" max="4"/>
-	<event name="QUEST_EXAMPLE" min="1" max="1"/>
-	<event name="NEUTRAL_EZAMPLE" min="6" max="7"/>
-	<event name="EMPTY_EXAMPLE" min="1" max="2"/>
-</sectorDescription>-->
-
 <!--//////////////// APPEND TCC EVENTS TO EXISTENT SECTORS /////////////////-->
 
 <mod:findName type="sectorDescription" name="STANDARD_SPACE">
@@ -59,7 +8,6 @@
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_FREEMANTIS">
-	<mod-append:priorityEvent name="FREEMANTIS_BOMB_FLAKS" min="0" max="1" priority="7"/>
 	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
 </mod:findName>
 
@@ -253,9 +201,7 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="4" />
 		<mod-append:blueprint name="TC_ESKA" rarity="5" />
 		<mod-append:blueprint name="TC_TONFA" rarity="5" />
-		<mod-append:blueprint name="avali" rarity="5" />
 		<mod-append:blueprint name="protogen" rarity="5" />
-		<mod-append:blueprint name="robottos" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -278,9 +224,7 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="4" />
 		<mod-append:blueprint name="TC_ESKA" rarity="4" />
 		<mod-append:blueprint name="TC_TONFA" rarity="4" />
-		<mod-append:blueprint name="avali" rarity="5" />
 		<mod-append:blueprint name="protogen" rarity="5" />
-		<mod-append:blueprint name="robottos" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -303,8 +247,6 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="3" />
 		<mod-append:blueprint name="TC_ESKA" rarity="4" />
 		<mod-append:blueprint name="TC_TONFA" rarity="4" />
-		<mod-append:blueprint name="avali" rarity="5" />
-		<mod-append:blueprint name="robottos" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -313,17 +255,10 @@
 		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
 		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="4" />
 		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
-		<mod-append:blueprint name="human_phoenix" rarity="5" />
-		<mod-append:blueprint name="human_hazmat" rarity="4" />
-		<mod-append:blueprint name="avali" rarity="5" />
 		<mod-append:blueprint name="protogen" rarity="5" />
 	</mod:findLike>
-	<mod-append:priorityEvent name="ECHELON_MERCHANT_MEETUP" min="1" max="1" priority="1" req="tc_found_echelon" lvl="0" max_lvl="0"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ENGI_UNIQUE">
-	<mod-append:priorityEvent name="ECHELON_MERCHANT_MEETUP" min="1" max="1" priority="1" req="tc_found_echelon" lvl="0" max_lvl="0"/>
-</mod:findName>
 
 <mod:findName type="sectorDescription" name="FINAL">
 	<mod:findLike type="rarityList">
@@ -399,7 +334,7 @@
 		<mod-append:blueprint name="scrapper" rarity="4" />
 		<mod-append:blueprint name="scrapper_soldier" rarity="4" />
 		<mod-append:blueprint name="scrapper_engineer" rarity="4" />
-		<mod-append:blueprint name="scrapper_speed" rarity="4" />
+		<mod-append:blueprint name="scrapper_medic" rarity="4" />
 		<mod-append:blueprint name="scrapper_defender" rarity="4" />
 		<mod-append:blueprint name="scrapper_heavy" rarity="5" />
 	</mod:findLike>
@@ -421,13 +356,8 @@
 		<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="0" />
 		<mod-append:blueprint name="CATALYZER" rarity="0" />
 		<mod-append:blueprint name="scrapper" rarity="0" />
-		<mod-append:blueprint name="kiviekith" rarity="0" />
-		<mod-append:blueprint name="rsa_technician" rarity="0" />
-		<mod-append:blueprint name="robottos" rarity="0" />
-		<mod-append:blueprint name="mantis_rsa" rarity="0" />
 		<mod-append:blueprint name="protogen" rarity="0" />
 		<mod-append:blueprint name="protogen_space_scavenger" rarity="0" />
-		<mod-append:blueprint name="avali" rarity="0" />
 		<mod-append:blueprint name="sergal" rarity="0" />
 	</mod:findLike>
 </mod:findName>
@@ -448,76 +378,10 @@
 		<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="0" />
 		<mod-append:blueprint name="CATALYZER" rarity="0" />
 		<mod-append:blueprint name="scrapper" rarity="0" />
-		<mod-append:blueprint name="kiviekith" rarity="0" />
-		<mod-append:blueprint name="rsa_technician" rarity="0" />
-		<mod-append:blueprint name="robottos" rarity="0" />
-		<mod-append:blueprint name="mantis_rsa" rarity="0" />
 		<mod-append:blueprint name="protogen" rarity="0" />
 		<mod-append:blueprint name="protogen_space_scavenger" rarity="0" />
-		<mod-append:blueprint name="avali" rarity="0" />
 		<mod-append:blueprint name="sergal" rarity="0" />
 	</mod:findLike>
 </mod:findName>
-
-<!--/////////////// EXAMPLE ON HOW TO MAKE A SECTOR ///////////////
-
-Append the sector ID to OVERRIDE_SECTOR_LIST_GENERIC_FRIENDLY/HOSTILE/NEBULA depending on what kind of sector you want it to be.
-
-<mod:findName type="sectorType" name="OVERRIDE_SECTOR_LIST_GENERIC_FRIENDLY/HOSTILE/NEBULA">
-	<mod-append:sector>SECTOR_EXAMPLE</mod-append:sector>
-</mod:findName>
-
-Additionally, append the sector ID to SECTOR_LIST_GENERIC_FRIENDLY/HOSTILE/NEBULA depending on what kind of sector you want it to be.
-
-<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC_FRIENDLY/HOSTILE/NEBULA">
-	<mod-append:sector>SECTOR_EXAMPLE</mod-append:sector>
-</mod:findName>
-
-Finally, append the sector ID to CIVILIAN/HOSTILE/NEBULA to set its colof on the sector map.
-
-<mod:findName type="sectorType" name="CIVILIAN/HOSTILE/NEBULA">
-	<mod-append:sector>SECTOR_EXAMPLE</mod-append:sector>
-</mod:findName>
-
-NOW FOR THE SECTOR ITSELF!
-
-<sectorDescription name="SECTOR_EXAMPLE" unique="false">   
-	<nameList> The list of names the sector can appear as.
-		<name>Example Sector</name>
-		<name>Example Frontier</name>
-		<name>Example Territory</name>
-		<name>Example Region</name>
-		<name>Example Space</name>
-		<name>Example Colonies</name>
-	</nameList>
-	<trackList> The music that can play in the sector.
-		<track>shrike</track>
-		<track>lostship</track>
-		<track>hacking</track>
-		<track>deepspace</track>
-	</trackList>
-	Here, you can set crew, weapons, and augments to have a different rarity in this sector. You should probably add specific rarities to all normal MV crew, unlike shown here.
-	<rarityList>
-		<blueprint name="mantis_rsa" rarity="3"/>
-		<blueprint name="CATALYZER" rarity="4"/>
-	</rarityList>
-	<startEvent>ENTER_EXAMPLE</startEvent> I think this is the event that appears when you are entering the sector in hyperspeed. These are loxated in events_lightspeed.
-	<exitBeacon event="FINISH_BEACON" nebulaEvent="FINISH_BEACON_NEBULA" rebelEvent="FINISH_BEACON_FLEET_ELITE"/> The event that appears at the end of the sector.
-	<rebelBeacon event="FLEET_THREAT_MEDIUM" nebulaEvent="FLEET_THREAT_MEDIUM_NEBULA"/> The Rebel fleet events.
-	<removeFirstBeaconNebula/> Prevents the first beacon from being in a nebula. 
-	The event lists that can appear in the sector. Event lists for sectors are located in their respective events files, but store lists are located in events_standard.
-	<event name="STORELIST_EXAMPLE" min="2" max="3"/>
-	<event name="MV_TRAVELER" min="1" max="1"/>
-	<event name="NEMESIS_ENCOUNTER" min="0" max="1"/>
-	<event name="PIRACY_LIST" min="2" max="4"/>
-	<event name="DISTRESS_EXAMPLE" min="2" max="3"/>
-	<event name="HOSTILE_EXAMPLE" min="6" max="7"/>
-	<event name="ITEMS_EXAMPLE" min="2" max="4"/>
-	<event name="QUEST_EXAMPLE" min="1" max="1"/>
-	<event name="NEUTRAL_EZAMPLE" min="6" max="7"/>
-	<event name="EMPTY_EXAMPLE" min="1" max="2"/>
-</sectorDescription>
-
--->
 
 </FTL>

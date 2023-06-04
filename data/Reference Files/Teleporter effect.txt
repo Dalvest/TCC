@@ -1,0 +1,44 @@
+<powerEffect>
+				<cooldown>20</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<powerCharges>2</powerCharges>
+				<initialCharges>2</initialCharges>
+				<powerSounds>
+					<powerSound>cloak</powerSound>
+				</powerSounds>
+				<buttonText>UPLIFT</buttonText>
+				<tooltip>Ready: Makes all friendly crew able to teleport for 3 seconds.</tooltip>
+				<cooldownColor r="60" g="80" b="200"/>
+				<temporaryEffect>
+					<duration>3</duration>
+					<cooldownColor r="120" g="20" b="255"/>
+					<animSheet baseVisible="true">kora_glow</animSheet>
+					<finishSounds enemy="true">
+							<finishSound>decloak</finishSound>
+					</finishSounds>
+					<statBoosts>
+						<statBoost name="teleportMove"><!-- Crew can move within the ship by teleporting. -->
+							<boostType>SET</boostType>
+							<value>true</value>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>false</affectsSelf><!--So the boostanim doesn't play over Kora-->
+							<boostAnim>tele_effect</boostAnim>
+						</statBoost>
+						<statBoost name="teleportMoveOtherShip"><!-- Crew can teleport to the other ship on their own (without the system). Right click with selected crew to teleport. -->
+							<boostType>SET</boostType>
+							<value>true</value>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>true</affectsSelf>
+						</statBoost>
+
+						<statBoost name="teleportMove"><!-- So Kora still gets the boost -->
+							<boostType>SET</boostType>
+							<value>true</value>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>SELF</crewTarget>
+						</statBoost>
+					</statBoosts>
+				</temporaryEffect>
+			</powerEffect>

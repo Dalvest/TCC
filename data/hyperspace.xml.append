@@ -2,366 +2,45 @@
   <mod:setValue>^1.2.0</mod:setValue>
 </mod:findLike>-->
 
-<!-- Enables command console in game \\ press L to use
 
-EVENT          Run an event.                           Usage: EVENT <event_id>        Example: EVENT FREE_AUG
-SECTOR         Go to sector type.                      Usage: SECTOR <sector_type>    Example: SECTOR PIRATE_SECTOR
-SCRAP          Add scrap.                              Usage: SCRAP <num_to_add>      Example: SCRAP 500
-WEAPON         Add a weapon blueprint.                 Usage: WEAPON <weapon_id>      Example: WEAPON LASER_BURST_1
-DRONES         Add drone parts.                        Usage: DRONES <num_to_add>     Example: DRONES 50
-RICH           Add 80 of each resource and 1999 scrap. Usage: RICH
-GOD            Fully upgrade every system and reactor. Usage: GOD
-DELETE         Destroys enemy ship.                    Usage: DELETE
-SYS            Add a system.                           Usage: SYS <system_name>       Example: SYS cloaking
-AUG            Add an augmentation.                    Usage: AUG <augment_name>      Example: AUG O2_MASKS
-CREW           Add a crew member.                      Usage: CREW [race_name]        Example: CREW slug
-KILL           Kills a person on your ship             Usage: KILL <crew_name>        Example: KILL John Wick
-DELETECREW     Kills everyone on the enemy ship        Usage: DELETECREW
-SPEED          Changes gamespeed
--->
 <FTL>
+
   <mod:findLike type="scripts">
     <mod-append:script>data/tcc_scripts/dependency.lua</mod-append:script>
   </mod:findLike>
+
 </FTL>
+
 <FTL><!--appending to Inferno-Core-->
 	<events>
 		<variable name="tcc_called_compactor" op="set" val="0"/>
 		<variable name="tc_call_marker" op="set" val="0"/>
-		<req name="TCC_CAN_CALL_COMPACTOR" type="all">
+		<req name="TCC_CAN_CALL_COMPACTOR" type="all"> <!--LOOK INTO-->
 			<req>
 				<name>SCRAP_TRANSMITTER</name>
 			</req>
 			<req lvl="0" max_lvl="0">
 				<name>tcc_called_compactor</name>
-        <name>tc_call_marker</name>
+		<name>tc_call_marker</name>
 			</req>
 		</req>
 	</events>
-
-	<mod:findLike type="events">
-		<mod:findName type="req" name="FMCORE_LIST_JUMPSPACE_EQUIPMENT">
-			<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
-		</mod:findName>
-	</mod:findLike>
 </FTL>
+
 <FTL>
 
-  <mod:findLike type="events">
+<mod:findLike type="events">
+	<mod:findName type="req" name="FMCORE_LIST_JUMPSPACE_EQUIPMENT">
+		<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
+	</mod:findName>
+</mod:findLike>
+	
+<mod:findLike type="events">
     <mod:findName type="event" name="START_BEACON">
       <mod-append:hiddenAug>ADDON_INSTALLED_TCC</mod-append:hiddenAug>
     </mod:findName>
-  </mod:findLike>
-  
-  <events> <!--Scared to touch this yet-->
-    <bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
-    <!--sector stuff-->
-    <eventFile>avali</eventFile>
-	  <eventFile>rsa</eventFile>
-    <eventFile>echelon</eventFile>
-  </events>
+</mod:findLike>
 
-     <!--//////////////////////////////////////////////////////////STORES/////////////////////////////////////////////////////////-->
-
-  <mod:findLike type="store">
-    <mod-append:customStore id="STORE_NOODLE">
-      <hullRepair>
-        <price min="2" max="4"/>
-        <sectorScaled/>
-      </hullRepair>
-      <resource>
-        <type>fuel</type>
-        <count min="5" max="10"/>
-      </resource>
-      <resource>
-        <type>missiles</type>
-        <count min="3" max="7"/>
-      </resource>
-      <resource>
-        <type>drones</type>
-        <count min="6" max="11"/>
-      </resource>
-      <category type="WEAPONS">
-        <item>
-          <modifier min="1" max="1.5" flat="false"/><!--Multiplier to price-->
-          <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
-          <price>-1</price><!--You can set the price of the item here, -1 defaults to the price in the weapon blueprint-->
-          <mysteryItem>false</mysteryItem><!--"Item of the day"-->
-        </item>
-        <item>
-          <modifier min="1" max="1.5" flat="false"/>
-          <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
-          <price>-1</price>
-          <mysteryItem>false</mysteryItem>
-        </item>
-        <item>
-          <modifier min="1" max="1.5" flat="false"/>
-          <blueprint>SHOP_ITEM_WEAPONS_INSTANOODLE</blueprint>
-          <price>-1</price>
-          <mysteryItem>false</mysteryItem>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="SYSTEMS">
-        <customTitle>ESSENTIAL SYSTEMS</customTitle>
-        <guaranteedSystems>
-          <weapons/>
-          <shields/>
-          <oxygen/>
-        </guaranteedSystems>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="SYSTEMS">
-        <customTitle>AUXILIARY SYSTEMS</customTitle>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <chance>65</chance>
-      </category>
-    </mod-append:customStore>
-
-    <mod-append:customStore id="STORE_RSA">
-      <hullRepair>
-        <price min="2" max="4"/>
-        <sectorScaled/>
-      </hullRepair>
-      <resource>
-        <type>fuel</type>
-        <count min="5" max="10"/>
-      </resource>
-      <resource>
-        <type>missiles</type>
-        <count min="3" max="7"/>
-      </resource>
-      <resource>
-        <type>drones</type>
-        <count min="6" max="11"/>
-      </resource>
-      <category type="WEAPONS" group="1">
-        <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
-        <item>
-          <blueprint>GIFTLIST_RUSTY</blueprint>
-          <modifier flat="false">0.6</modifier>
-          <price>-1</price>
-          <mysteryItem>true</mysteryItem>
-        </item>
-        <item>
-          <blueprint>GIFTLIST_RUSTY</blueprint>
-          <modifier flat="false">0.6</modifier>
-          <price>-1</price>
-          <mysteryItem>true</mysteryItem>
-        </item>
-        <item>
-          <blueprint>GIFTLIST_RUSTY</blueprint>
-          <modifier flat="false">0.6</modifier>
-          <price>-1</price>
-          <mysteryItem>true</mysteryItem>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="WEAPONS">
-        <item/>
-        <item/>
-        <item>
-          <blueprint>SHOP_RSA_ITEM_WEAPONS</blueprint>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="DRONES" group="0">
-        <item/>
-        <item/>
-        <item/>
-        <chance>65</chance>
-        <groupChance>50</groupChance>
-      </category>
-      <category type="AUGMENTS" group="0">
-        <item/>
-        <item/>
-        <item/>
-        <chance>65</chance>
-        <groupChance>50</groupChance>
-      </category>
-      <category type="CREW">
-        <customTitle>DECKHANDS</customTitle>
-        <allowDuplicates/>
-        <item/>
-        <item/>
-        <item>
-          <blueprint>SHOP_RSA_ITEM_CREW</blueprint>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="SYSTEMS">
-        <customTitle>ESSENTIAL SYSTEMS</customTitle>
-        <guaranteedSystems>
-          <weapons/>
-          <shields/>
-          <oxygen/>
-        </guaranteedSystems>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="SYSTEMS">
-        <customTitle>AUXILIARY SYSTEMS</customTitle>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <chance>65</chance>
-      </category>
-    </mod-append:customStore>
-
-    <mod-append:customStore id="STORE_RSA_BOMB_FLAKS">
-      <hullRepair>
-        <price min="2" max="4"/>
-        <sectorScaled/>
-      </hullRepair>
-      <resource>
-        <type>fuel</type>
-        <count min="5" max="10"/>
-      </resource>
-      <resource>
-        <type>missiles</type>
-        <count min="3" max="7"/>
-      </resource>
-      <resource>
-        <type>drones</type>
-        <count min="6" max="11"/>
-      </resource>
-      <category type="WEAPONS" group="1">
-        <customTitle>JUNK OF THE DAY [40% OFF]</customTitle>
-        <item>
-          <blueprint>GIFTLIST_RUSTY</blueprint>
-          <modifier flat="false">0.6</modifier>
-          <price>-1</price>
-          <mysteryItem>true</mysteryItem>
-        </item>
-        <item>
-          <blueprint>GIFTLIST_RUSTY</blueprint>
-          <modifier flat="false">0.6</modifier>
-          <price>-1</price>
-          <mysteryItem>true</mysteryItem>
-        </item>
-        <item>
-          <blueprint>GIFTLIST_RUSTY</blueprint>
-          <modifier flat="false">0.6</modifier>
-          <price>-1</price>
-          <mysteryItem>true</mysteryItem>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="WEAPONS">
-        <item/>
-        <item/>
-        <item>
-          <blueprint>SHOP_RSA_ITEM_WEAPONS</blueprint>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="WEAPONS">
-        <customTitle>BOMB FLAKS [20% OFF]</customTitle>
-        <item>
-          <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-          <modifier flat="false">0.80</modifier>
-          <price>-1</price>
-        </item>
-        <item>
-          <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-          <modifier flat="false">0.80</modifier>
-          <price>-1</price>
-        </item>
-        <item>
-          <blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
-          <modifier flat="false">0.80</modifier>
-          <price>-1</price>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="DRONES" group="0">
-        <item/>
-        <item/>
-        <item/>
-        <chance>65</chance>
-        <groupChance>50</groupChance>
-      </category>
-      <category type="AUGMENTS" group="0">
-        <item/>
-        <item/>
-        <item/>
-        <chance>65</chance>
-        <groupChance>50</groupChance>
-      </category>
-      <category type="CREW">
-        <customTitle>DECKHANDS</customTitle>
-        <allowDuplicates/>
-        <item/>
-        <item/>
-        <item>
-          <blueprint>SHOP_RSA_ITEM_CREW</blueprint>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="SYSTEMS">
-        <customTitle>ESSENTIAL SYSTEMS</customTitle>
-        <guaranteedSystems>
-          <weapons/>
-          <shields/>
-          <oxygen/>
-        </guaranteedSystems>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
-        </item>
-        <chance>100</chance>
-      </category>
-      <category type="SYSTEMS">
-        <customTitle>AUXILIARY SYSTEMS</customTitle>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <item>
-          <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
-        </item>
-        <chance>65</chance>
-      </category>
-    </mod-append:customStore>
-  </mod:findLike>
 
 
 <!--////////////////////////////////////////////////SCRAPPER STORE///////////////////////////////////////////////////////-->
@@ -493,11 +172,9 @@ SPEED          Changes gamespeed
 
 
 
-  <mod:findLike type="ships">
+<mod:findLike type="ships">
 
-  	<!--////////////////////////// PAGE 1 // SCRAPPER LINE // PROTOGEN PROJECT LINE // EXTRAELITES PACK 1 ////////////////////////////-->
-
-    <!--///////SCRAPPER DREADNOUGHT//////-->
+    <!--///////SCRAPPER DREADNOUGHT//////--> <!--KEEP AND REVAMP-->
 
     <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_EATER</arrow>
@@ -509,10 +186,9 @@ SPEED          Changes gamespeed
     	   <shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
     	   <value>5</value>
     	</unlock>
-
     </mod-append:ship>
 
-    <mod-append:customShip name="PLAYER_SHIP_SCRAPPER">
+    <mod-append:customShip name="PLAYER_SHIP_SCRAPPER"> 
       <crewLimit>8</crewLimit>
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
@@ -539,7 +215,7 @@ SPEED          Changes gamespeed
       </crew>
     </mod-append:customShip>
 
-    <!--/////// TRASH EATER'S CRUISER //////-->
+    <!--/////// TRASH EATER'S CRUISER //////--> <!--KEEP AND REVAMP-->
 
     <mod-append:ship name="PLAYER_SHIP_TRASH_EATER" b="false" c="false">
 
@@ -559,10 +235,9 @@ SPEED          Changes gamespeed
       <customReactor maxLevel="50"/>
     </mod-append:customShip>
 
-    <!--///////KESTREL MINER//////-->
+    <!--///////KESTREL MINER//////--> <!--KEEP AND REVAMP-->
 
     <mod-append:ship name="PLAYER_SHIP_TRASH_MINER" b="true" c="true">
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_REACTOR</arrow>
       <unlock variant="a" silent="false">
         <type>4</type>
       </unlock>
@@ -618,1030 +293,10 @@ SPEED          Changes gamespeed
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
       <hiddenAug>SHIP_TRASH</hiddenAug>
       <crew>
-        <avali room="11" name="Stolas" />
-        <kiviekith room="13" name="Alastor" />
-        <kiviekith room="0" name="Blitzo" />
       </crew>
     </mod-append:customShip>
 
-
-    <!--///////TRASH REACTOR//////-->
-
-    <mod-append:ship name="PLAYER_SHIP_TRASH_REACTOR" b="true" c="false" secret="true">
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_ECHO</arrow>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_TRASH_MINER</victory>
-        </victories>
-      </unlock>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_TRASH_MINER_2</victory>
-        </victories>
-      </unlock>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_TRASH_MINER_3</victory>
-        </victories>
-      </unlock>
-	  <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_TRASH_REACTOR</shipReq>
-        <value>5</value>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR">
-      <crewLimit>12</crewLimit>
-      <customReactor maxLevel="50"/>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_TRASH</hiddenAug>
-      <crew>
-        <unique_kora room="12" name="Kora" />
-        <protogen room="14" />
-        <protogen room="1" />
-      </crew>
-    </mod-append:customShip>
-
-	<mod-append:customShip name="PLAYER_SHIP_TRASH_REACTOR_2">
-		<crewLimit>12</crewLimit>
-		<customReactor maxLevel="50"/>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<hiddenAug>SHIP_TRASH</hiddenAug>
-		<crew>
-		  <unique_kora room="2" name="Kora" />
-		  <unique_skygirr room="14" name="Skygirr" />
-		  <protogen_tracker room="1" name="Tracker" />
-		  <cheetah room="12" name="Raul" />
-		  <scrapper_zog room="21" name="Zog" />
-		</crew>
-	  </mod-append:customShip>
-
-  	<!--///////EXTRA ELITE SHIP PACK//////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE" b="true" c="false">
-  		<unlock variant="a" silent="false">
-  			<type>3</type>
-  			<otherUnlocks>
-    			<ship>PLAYER_SHIP_SCRAPPER</ship>
-          <ship>PLAYER_SHIP_SCRAPPER_2</ship>
-          <ship>PLAYER_SHIP_TRASH_EATER</ship>
-    			<ship>PLAYER_SHIP_TRASH_MINER</ship>
-          <ship>PLAYER_SHIP_TRASH_MINER_2</ship>
-          <ship>PLAYER_SHIP_TRASH_MINER_3</ship>
-    			<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
-    			<ship>PLAYER_SHIP_ECHO</ship>
-          <ship>PLAYER_SHIP_ECHO_2</ship>
-  			</otherUnlocks>
-  		</unlock>
-  		<unlock variant="b" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_EXTRAELITE</victory>
-        </victories>
-  		</unlock>
-  		</mod-append:ship>
-
-  		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
-  		<crewLimit>20</crewLimit>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_SLUG</hiddenAug>
-  		</mod-append:customShip>
-
-  		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_2">
-  		<crewLimit>10</crewLimit>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_SCRAPPER</hiddenAug>
-  		<crew>
-  			<protogen room="2" />
-  			<kiviekith room="7" name="Orvech Vonor" />
-  			<kiviekith room="14" name="Altan" />
-  			<unique_kora room="0" name="Kora" />
-  			<scrapper room="15" />
-  		</crew>
-  	</mod-append:customShip>
-
-  	<!--////////////////////////// PAGE 2 // RSA LINE // ECHELON SHIPYARDS LINE // EXTRAELITES PACK 2 ////////////////////////////-->
-
-  	<!--/////////// CORROSUS //////////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_CORROSUS" b="false" c="false">
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TC_CONSTRUCTION</arrow>
-    	<unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_ECHO</victory>
-        </victories>
-    	</unlock>
-    	<unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_ECHO_2</victory>
-        </victories>
-    	</unlock>
-    	<unlock variant="a" silent="false">
-    		<type>4</type>
-    	</unlock>
-
-  	</mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_CORROSUS">
-    	<crewLimit>12</crewLimit>
-    	<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-    	<hiddenAug>SHIP_RSA</hiddenAug>
-    	<crew>
-    		<rsa_technician room="10" />
-    		<unique_black_rose room="0" name="Black Rose" />
-    		<robottos room="6" />
-    		<kiviekith room="12" />
-    	</crew>
-  	</mod-append:customShip>
-
-  	<!--/////// CONSTRUCTION FENEK //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_TC_CONSTRUCTION" b="true" c="false">
-
-  		<unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_CORROSUS</victory>
-        </victories>
-  		</unlock>
-
-  		<unlock variant="b" silent="false">
-  			<type>1</type>
-  			<shipReq>PLAYER_SHIP_TC_CONSTRUCTION</shipReq>
-        <value>5</value>
-  		</unlock>
-
-  	</mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION">
-  		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>11</crewLimit>
-  		<crew>
-  			<rsa_technician room="1" />
-  			<mantis_rsa room="0" />
-  		</crew>
-  	</mod-append:customShip>
-
-	<!--/////// TECHLANCE //////-->
-
-	<mod-append:ship name="PLAYER_SHIP_TECHLANCE" b="false" c="false">
-
-		<unlock variant="a" silent="false">
-			<type>5</type>
-			<victories>
-			  <victory>PLAYER_SHIP_TC_CONSTRUCTION</victory>
-			</victories>
-		  </unlock>
-
-		  <unlock variant="a" silent="false">
-			<type>5</type>
-			<victories>
-			  <victory>PLAYER_SHIP_TC_CONSTRUCTION_2</victory>
-			</victories>
-		  </unlock>
-
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_TECHLANCE">
-		<hiddenAug>SHIP_RSA</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crewLimit>8</crewLimit>
-	</mod-append:customShip>
-
-
-    <!--///////SIZE DOESN'T MATTER//////-->
-
-    <mod-append:ship name="PLAYER_SHIP_SDM" b="false" c="false">
-
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_TRASH_REACTOR</victory>
-        </victories>
-      </unlock>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_TRASH_REACTOR_2</victory>
-        </victories>
-      </unlock>
-
-      <unlock variant="b" silent="false">
-        <type>5</type>
-        <shipReq>PLAYER_SHIP_SDM</shipReq>
-		    <value>5</value>
-      </unlock>
-
-  	  <unlock variant="b" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_SDM</shipReq>
-	      <value>5</value>
-      </unlock>
-
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_SDM">
-      <crewLimit>9</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_CIVILIAN</hiddenAug>
-      <crew>
-        <human_phoenix room="6" name="Echo-Cap" />
-        <human_soldier room="4" name="Echo-1" />
-        <human_soldier room="4" name="Echo-2" />
-        <human_soldier room="4" name="Echo-3" />
-        <human_soldier room="4" name="Echo-4" />
-        <human_soldier room="4" name="Echo-5" />
-        <human_hazmat room="7" name="Echo-Sci" />
-        <human_medic room="3" name="Echo-Med" />
-      </crew>
-    </mod-append:customShip>
-
-    <!--///////ARMORED WASP//////-->
-
-    <mod-append:ship name="PLAYER_SHIP_TC_ARMORED_WASP" b="true" c="true">
-
-      <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_SDM</shipReq>
-      </unlock>
-      <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
-        <value>5</value>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP_2</shipReq>
-        <value>5</value>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_TC_ARMORED_WASP</shipReq>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP">
-      <crewLimit>9</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_ARMOREDWASP</hiddenAug>
-      <crew>
-        <protogen room="11" />
-        <avali_illuminant room="0" />
-        <avali room="1" />
-        <avali room="5" />
-      </crew>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_2">
-      <hiddenAug>SHIP_FEDERATION</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>9</crewLimit>
-      <crew>
-        <human_soldier room="0" />
-        <avali room="11" />
-        <robottos room="1" />
-      </crew>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_TC_ARMORED_WASP_3">
-      <hiddenAug>SHIP_STEALTH</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>9</crewLimit>
-      <crew>
-        <unique_kora room="1" name="Kora" />
-        <clonefail_lancer room="0" name="Lancer" />
-      </crew>
-    </mod-append:customShip>
-
-    <!--///////RENT-A-FLAGSHIP//////-->
-
-    <mod-append:ship name="PLAYER_SHIP_SLUGTON" b="true" c="true">
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_HEKTAR_REBEL</arrow>
-    	<unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_CORROSUS</shipReq>
-      </unlock>
-      <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_SLUGTON</shipReq>
-        <value>5</value>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_SLUGTON_2</shipReq>
-        <value>5</value>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_SLUGTON</shipReq>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_SLUGTON">
-      <crewLimit>20</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_SLUG</hiddenAug>
-      <crew>
-        <slug_hektar room="0" name="SLUGTON" />
-        <mantis_freebusiness room="1" name="Businessmantis" />
-        <slug_hektar room="7" />
-        <slug_hektar room="6" name="ConMan" />
-      </crew>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_SLUGTON_2">
-      <crewLimit>20</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_PIRATE</hiddenAug>
-      <crew>
-        <kiviekith room="0" name="Krieg" />
-        <avali room="6" name="Jessica" />
-        <mantis_rsa room="1" name="Diego" />
-      </crew>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_SLUGTON_3">
-      <crewLimit>20</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_TRASH</hiddenAug>
-    </mod-append:customShip>
-
-    <!--/////// PORTED SHIPS //////-->
-
-    <mod-append:ship name="PLAYER_SHIP_POTENTIAL" b="true" c="true">
-      <unlock variant="a" silent="false">
-        <type>3</type>
-        <shipReq>CREW_SHIP_SLOT1_2</shipReq>
-      </unlock>
-
-      <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_POTENTIAL</shipReq>
-        <value>5</value>
-      </unlock>
-	  <unlock variant="c" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_POTENTIAL_2</shipReq>
-        <value>5</value>
-      </unlock>
-	  <unlock variant="c" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_POTENTIAL</victory>
-        </victories>
-      </unlock>
-
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_POTENTIAL">
-      <hiddenAug>SHIP_FEDERATION</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>8</crewLimit>
-      <customReactor maxLevel="60"/>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_POTENTIAL_2">
-      <hiddenAug>SHIP_FEDERATION</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>8</crewLimit>
-      <customReactor maxLevel="60"/>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_POTENTIAL_3">
-      <hiddenAug>SHIP_FEDERATION</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>16</crewLimit>
-      <customReactor maxLevel="308"/><!--2147483646,1073741822,536870911-->
-		</mod-append:customShip>
-
-
-    <!--/////////////////// AVALI ZONE //////////////// -->
-
-    <mod-append:customShip name="MU_BOSS_ENGINEER_C">
-      <shipIcons>
-        <shipIcon>icon_droneboost</shipIcon>
-      </shipIcons>
-      <crew>
-        <engineer room="0" name="Doctor M." />
-        <!--piloting-->
-        <weaver room="14" />
-        <!--engines-->
-        <technomanning room="10" name="1812" />
-        <!--weapons-->
-        <technomanning room="13" />
-        <!--shields-->
-      </crew>
-    </mod-append:customShip>
-
-    <mod-append:ship name="PLAYER_SHIP_AVALI" b="true" c="true" >
-      <unlock variant="a" silent="false">
-        <type>3</type>
-        <shipReq>PLAYER_SHIP_ORCHID_3</shipReq>
-      </unlock>
-      <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_AVALI</shipReq>
-        <value>5</value>
-        <silent>false</silent>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_AVALI_2</shipReq>
-        <value>5</value>
-        <silent>false</silent>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_AVALI</shipReq>
-        <silent>false</silent>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_AVALI">
-      <hiddenAug>SHIP_AVALI</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>12</crewLimit>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_AVALI_2">
-      <hiddenAug>SHIP_AVALI</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>12</crewLimit>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_AVALI_3">
-      <hiddenAug>SHIP_AVALI</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>12</crewLimit>
-    </mod-append:customShip>
-
-	<!--/////////////////// FALCON FRIGATE //////////////// -->
-
-	<mod-append:ship name="PLAYER_SHIP_FALCON_FRIGATE" b="false" c="false" >
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_AVALI</shipReq>
-		</unlock>
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_AVALI_2</shipReq>
-		</unlock>
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_AVALI_3</shipReq>
-		</unlock>
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_FALCON_FRIGATE">
-		<hiddenAug>SHIP_AVALI</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crewLimit>12</crewLimit>
-	</mod-append:customShip>
-
-    <!--/////////////////// SMEW BATTLECRUISER //////////////// -->
-
-	<mod-append:ship name="PLAYER_SHIP_SMEW_BATTLECRUISER" b="false" c="false" >
-		<unlock variant="a" silent="false">
-			<type>2</type>
-			<shipReq>PLAYER_SHIP_FALCON_FRIGATE</shipReq>
-		</unlock>
-	</mod-append:ship>
-
-	<mod-append:customShip name="PLAYER_SHIP_SMEW_BATTLECRUISER">
-		<hiddenAug>SHIP_AVALI</hiddenAug>
-		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-		<crewLimit>8</crewLimit>
-	</mod-append:customShip>
-
-    <!--/////////////////// AVALI SLOT 2 //////////////// -->
-
-    <mod-append:ship name="PLAYER_SHIP_AVALI_SLOT2" b="false" c="false" >
-      <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_AVALI_3</shipReq>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_AVALI_SLOT2">
-      <hiddenAug>SHIP_AVALI</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crewLimit>12</crewLimit>
-	    <crew>
-        <robottos_gunner room="0" />
-      </crew>
-    </mod-append:customShip>
-
-    
-
-    <!--/////// FEDERATION CARRIER //////-->
-
-    <mod-append:ship name="PLAYER_SHIP_FEDERATION_CARRIER" b="false" c="false" noappend="true">
-      <unlock variant="a" silent="false">
-        <type>3</type>
-        <otherUnlocks>
-          <ship>PLAYER_SHIP_BLACKOPS</ship>
-          <ship>PLAYER_SHIP_MINESWEEPER</ship>
-          <ship>PLAYER_SHIP_CYBER</ship>
-          <ship>PLAYER_SHIP_NBC</ship>
-        </otherUnlocks>
-      </unlock>
-	  <unlock variant="a" silent="false">
-        <type>3</type>
-        <otherUnlocks>
-          <ship>PLAYER_SHIP_TC_MILSPEC</ship>
-          <ship>PLAYER_SHIP_POTENTIAL</ship>
-          <ship>PLAYER_SHIP_SDM</ship>
-          <ship>PLAYER_SHIP_SAVIOR</ship>
-        </otherUnlocks>
-      </unlock>
-      <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
-        <value>5</value>
-        <silent>false</silent>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_FEDERATION_CARRIER</shipReq>
-        <silent>false</silent>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_FEDERATION_CARRIER">
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_FEDERATION</hiddenAug>
-      <crewLimit>8</crewLimit>
-    </mod-append:customShip>
-
-    <!--/////// MILSPEC //////-->
-
-    <mod-append:ship name="PLAYER_SHIP_TC_MILSPEC" b="true" c="false">
-      <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_AVALI</shipReq>
-      </unlock>
-	    <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_AVALI_2</shipReq>
-      </unlock>
-	    <unlock variant="a" silent="false">
-        <type>2</type>
-        <shipReq>PLAYER_SHIP_AVALI_3</shipReq>
-      </unlock>
-      <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_TC_MILSPEC</shipReq>
-        <value>5</value>
-        <silent>false</silent>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC">
-      <crewLimit>12</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_TC_MILSPEC_2">
-      <crewLimit>12</crewLimit>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-      <crew>
-        <human room="4" name="Childs" />
-        <human room="10" name="Windows" />
-        <human room="6" name="Garry" />
-        <human_legion_pyro room="0" name="R.J. MacReady" />
-        <blobhuman room="9" name="Palmer" />
-      </crew>
-    </mod-append:customShip>
-
-    <!--/////// LEAH GAMING //////-->
-
-    <mod-append:ship name="PLAYER_SHIP_NEWTONBEAMA" b="true" c="true" >
-      <unlock variant="b" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_NEWTONBEAMA</victory>
-        </victories>
-    	</unlock>
-      <unlock variant="c" silent="false">
-        <type>4</type>
-      </unlock>
-    </mod-append:ship>
-
-    <mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA">
-      <crewLimit>8</crewLimit>
-      <hiddenAug>SHIP_REBEL</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crew>
-        <unique_leah_mfk room="4" name="Leah" />
-        <tinybug room="0" />
-        <tinybug room="5" />
-        <tinybug room="7" />
-      </crew>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_2">
-      <crewLimit>6</crewLimit>
-      <hiddenAug>SHIP_REBEL</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crew>
-        <unique_leah_mfk room="0" name="Leo Liam Leviticus" />
-        <robottos room="1" />
-        <zoltan_devotee room="0" />
-        <leech room="0" />
-      </crew>
-    </mod-append:customShip>
-
-    <mod-append:customShip name="PLAYER_SHIP_NEWTONBEAMA_3">
-      <crewLimit>9</crewLimit>
-      <hiddenAug>SHIP_REBEL</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <crew>
-        <unique_leah_mfk room="0" name="Leo Liam Leviticus" />
-        <human_rebel_medic room="1" />
-        <human_rebel room="0" />
-        <human_soldier room="0" />
-      </crew>
-    </mod-append:customShip>
-
-  	<!--/////// HEKTAR REBEL SHIPPEHEHSHIPEHEHHHSHIP //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_HEKTAR_REBEL" b="false" c="false" >
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_SLUGTON</victory>
-        </victories>
-    	</unlock>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_SLUGTON_2</victory>
-        </victories>
-    	</unlock>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_SLUGTON_3</victory>
-        </victories>
-    	</unlock>
-    </mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_HEKTAR_REBEL">
-  		<crewLimit>12</crewLimit>
-  		<hiddenAug>SHIP_SLUG</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  	</mod-append:customShip>
-
-  	<!--/////// AUTO GUN //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_AUTOGUNBOAT" b="true" c="true" >
-      	<arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_MILITIAGUNBOAT</arrow>
-		<unlock variant="a" silent="false">
-    		<type>4</type>
-  		</unlock>
-		<unlock variant="b" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_AUTOGUNBOAT</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_AUTOGUNBOAT_2</shipReq>
-			<value>5</value>
-			<silent>false</silent>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>5</type>
-			<victories>
-			<victory>PLAYER_SHIP_AUTOGUNBOAT</victory>
-			</victories>
-    	</unlock>
-    </mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_AUTOGUNBOAT">
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-  		<hiddenAug>NO_GHOST</hiddenAug>
-  		<crewLimit>4</crewLimit>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_AUTOGUNBOAT_2">
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-  		<hiddenAug>NO_GHOST</hiddenAug>
-  		<crewLimit>4</crewLimit>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_AUTOGUNBOAT_3">
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-  		<hiddenAug>NO_GHOST</hiddenAug>
-  		<crewLimit>6</crewLimit>
-  	</mod-append:customShip>
-
-  	<!--/////// MILITIA GB //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_MILITIAGUNBOAT" b="true" c="true" >
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_AUTOGUNBOAT</victory>
-        </victories>
-    	</unlock>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_AUTOGUNBOAT_2</victory>
-        </victories>
-    	</unlock>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_AUTOGUNBOAT_3</victory>
-        </victories>
-    	</unlock>
-      <unlock variant="b" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_MILITIAGUNBOAT</shipReq>
-        <value>5</value>
-        <silent>false</silent>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>1</type>
-        <shipReq>PLAYER_SHIP_MILITIAGUNBOAT_2</shipReq>
-        <value>5</value>
-        <silent>false</silent>
-      </unlock>
-      <unlock variant="c" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_MILITIAGUNBOAT</victory>
-        </victories>
-    	</unlock>
-    </mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT">
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_RSA</hiddenAug>
-  		<crewLimit>8</crewLimit>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT_2">
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_RSA</hiddenAug>
-  		<crewLimit>8</crewLimit>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_MILITIAGUNBOAT_3">
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-  		<crewLimit>10</crewLimit>
-  	</mod-append:customShip>
-
-  	<!--/////// MGB //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_ECHELON_ELITE" b="false" c="false" >
-		<unlock variant="a" silent="false">
-			<type>3</type>
-            <otherUnlocks>
-                <ship>PLAYER_SHIP_MILITIAGUNBOAT</ship>
-                <ship>PLAYER_SHIP_MILITIAGUNBOAT_2</ship>
-				<ship>PLAYER_SHIP_MILITIAGUNBOAT_3</ship>
-            </otherUnlocks>
-        </unlock>
-	</mod-append:ship>
-  	<mod-append:customShip name="PLAYER_SHIP_ECHELON_ELITE">
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>SHIP_MILITARY_FEDERATION</hiddenAug>
-  		<crewLimit>6</crewLimit>
-  		<customReactor maxLevel="20">
-  		</customReactor>
-  	</mod-append:customShip>
-
-  	<!--/////// STALWART DEFENSE //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_DEFENSE" b="false" c="false">
-		<unlock variant="a" silent="false">
-			<type>3</type>
-            <otherUnlocks>
-                <ship>ELITE_SHIP_ZOLTAN</ship>
-                <ship>ELITE_SHIP_ROCK_2</ship>
-            </otherUnlocks>
-        </unlock>
-	</mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_DEFENSE">
-  		<hiddenAug>SHIP_SPLICE</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>8</crewLimit>
-  	</mod-append:customShip>
-
-  	<!--/////// EXTRAELITE SLOT 2 //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_EXTRAELITE_SLOT2" b="true" c="true" >
-		<unlock variant="a" silent="false">
-			<type>3</type>
-            <otherUnlocks>
-                <ship>PLAYER_SHIP_AUTOGUNBOAT</ship>
-                <ship>PLAYER_SHIP_AUTOGUNBOAT_2</ship>
-				<ship>PLAYER_SHIP_AUTOGUNBOAT_3</ship>
-            </otherUnlocks>
-        </unlock>
-		<unlock variant="b" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_EXTRAELITE_SLOT2</shipReq>
-			<value>5</value>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>1</type>
-			<shipReq>PLAYER_SHIP_EXTRAELITE_SLOT2_2</shipReq>
-			<value>5</value>
-		</unlock>
-		<unlock variant="c" silent="false">
-			<type>5</type>
-			<victories>
-				<victory>PLAYER_SHIP_EXTRAELITE_SLOT2</victory>
-			</victories>
-		</unlock>
-	</mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2">
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<hiddenAug>NO_GHOST</hiddenAug>
-  		<hiddenAug>NO_GHOST</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>1</crewLimit>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2_2">
-  		<crewLimit>10</crewLimit>
-  		<hiddenAug>SHIP_ROBOTTOS</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE_SLOT2_3">
-  		<hiddenAug>SHIP_REBEL</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>7</crewLimit>
-  	</mod-append:customShip>
-
-  	<!--/////// SAVIOR SHIPS //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_SAVIOR" b="true" c="true" secret="true">
-
-  		<unlock variant="a" silent="false">
-			<type>5</type>
-			<victories>
-				<victory>PLAYER_SHIP_ANCIENT_2</victory>
-			</victories>
-  		</unlock>
-  		<unlock variant="b" silent="false">
-    		<type>2</type>
-    		<shipReq>PLAYER_SHIP_SAVIOR</shipReq>
-  		</unlock>
-  		<unlock variant="c" silent="false">
-    		<type>4</type>
-  		</unlock>
-
-  	</mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_SAVIOR">
-  		<hiddenAug>SHIP_ANCIENT</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>10</crewLimit>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_SAVIOR_2">
-  		<hiddenAug>SHIP_ANCIENT</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>10</crewLimit>
-  		<rooms>
-    		<room id="15">
-    			<roomAnim renderLayer="0">resist_2x2</roomAnim>
-    			<roomAnim renderLayer="3">resist_icon</roomAnim>
-    			<sysDamageResistChance>100</sysDamageResistChance>
-    		</room>
-    	</rooms>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_SAVIOR_3">
-  		<hiddenAug>SHIP_ANCIENT</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>12</crewLimit>
-  	</mod-append:customShip>
-
-  	<!--/////// ECHO 1-LINER //////-->
-
-  	<mod-append:ship name="PLAYER_SHIP_ECHO" b="true" c="false">
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_TRASH_REACTOR</victory>
-        </victories>
-      </unlock>
-      <unlock variant="a" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_TRASH_REACTOR_2</victory>
-        </victories>
-      </unlock>
-      <unlock variant="b" silent="false">
-         <type>1</type>
-         <shipReq>PLAYER_SHIP_ECHO</shipReq>
-         <value>5</value>
-      </unlock>
-    </mod-append:ship>
-
-  	<mod-append:customShip name="PLAYER_SHIP_ECHO">
-  		<hiddenAug>SHIP_PROTOGEN_PROJECT</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>8</crewLimit>
-  		<crew>
-  			<primagen_raptor room="2" name="RAPTOR" />
-  			<protogen_tracker room="0" name="TRACKER" />
-  			<sergal_cheese room="11" name="Cheese" />
-  		</crew>
-  	</mod-append:customShip>
-
-  	<mod-append:customShip name="PLAYER_SHIP_ECHO_2">
-  		<hiddenAug>SHIP_REBEL</hiddenAug>
-  		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
-  		<crewLimit>8</crewLimit>
-  	</mod-append:customShip>
-
-    <!--/////// ENEMY SHIPS //////-->
-
-    <mod-append:customShip name="TC_TRASH_COMPACTOR1">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR2">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR3">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR4">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR5">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-    <mod-append:customShip name="TC_TRASH_COMPACTOR6">
-      <shipIcons>
-        <shipIcon>icon_threat</shipIcon>
-        <shipIcon>icon_no2</shipIcon>
-      </shipIcons>
-      <noFuelStalemate/>
-      <autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-
-  	<mod-append:customShip name="RSA_DROPSHIP">
-  		<shipIcons>
-  			<shipIcon>icon_threat</shipIcon>
-  		</shipIcons>
-  		<crew>
-              <unique_black_rose room="14" name="Black Rose"/>
-          </crew>
-  		<noFuelStalemate/>
-  		<autoShipForce>false</autoShipForce>
-    </mod-append:customShip>
-
-  </mod:findLike>
+</mod:findLike>
 
 
   <!--
@@ -1655,63 +310,16 @@ SPEED          Changes gamespeed
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
+
 	<mod:findLike type="ships">
 		<mod:findLike type="shipOrder">
-
 			<!--Page 1--> <!-- Line 1 - Scrappers; Line 2 - The Trash Ships -->
 			<mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship> <!--Scrapper Dreadnought-->
 			<mod-append:ship>PLAYER_SHIP_TRASH_EATER</mod-append:ship> <!--TE Cruiser-->
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:ship>PLAYER_SHIP_ECHO</mod-append:ship> <!-- Echo 1-Liner -->
-			<mod-append:ship>PLAYER_SHIP_TRASH_REACTOR</mod-append:ship> <!--Reactive Compactor-->
 			<mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship> <!--Kestrel Miner-->
-
-			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
-			<mod-append:empty/>
-
-			<!--Page 2--> <!-- Line 1 - RECLAIM and SALVAGE ASSOCIATION; Line 2 - Echelon Shipyards -->
-			<mod-append:ship>PLAYER_SHIP_CORROSUS</mod-append:ship> <!--CorroSUS-->
-			<mod-append:ship>PLAYER_SHIP_TC_CONSTRUCTION</mod-append:ship> <!--Construction Crew Kestrel-->
-			<mod-append:empty/>
-  		    <mod-append:ship>PLAYER_SHIP_TECHLANCE</mod-append:ship> <!--Techlance-->
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:ship>PLAYER_SHIP_MILITIAGUNBOAT</mod-append:ship> <!-- Militia GunBoat -->
-			<mod-append:ship>PLAYER_SHIP_AUTOGUNBOAT</mod-append:ship> <!-- Auto GunBoat -->
-
-			<mod-append:ship>PLAYER_SHIP_EXTRAELITE_SLOT2</mod-append:ship> <!-- More Elites -->
-			<mod-append:ship>PLAYER_SHIP_ECHELON_ELITE</mod-append:ship> <!-- Echelon themed Elites -->
-
-			<!--Page 3--> <!-- Line 1 - Avali/Protogen Project Ships; Line 2 - Hektar Ships -->
-			<mod-append:ship>PLAYER_SHIP_AVALI</mod-append:ship> <!-- Harrier Cruiser -->
-			<mod-append:ship>PLAYER_SHIP_FALCON_FRIGATE</mod-append:ship> <!--Falcon Frigate-->
-			<mod-append:ship>PLAYER_SHIP_SMEW_BATTLECRUISER</mod-append:ship> <!--Smew Battlecruiser-->
-			<mod-append:ship>PLAYER_SHIP_TC_ARMORED_WASP</mod-append:ship> <!--Armored Wasp-->
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:ship>PLAYER_SHIP_HEKTAR_REBEL</mod-append:ship> <!-- Completely Original Design -->
-			<mod-append:ship>PLAYER_SHIP_SLUGTON</mod-append:ship> <!--RENT-A-FLAGSHIP-->
-
-			<mod-append:ship>PLAYER_SHIP_AVALI_SLOT2</mod-append:ship> <!-- Harrier Mercantile -->
-			<mod-append:ship>PLAYER_SHIP_NEWTONBEAMA</mod-append:ship> <!-- Leah Gaming -->
-
-			<!--Page 4--> <!-- Federation Special Forces -->
-			<mod-append:ship>PLAYER_SHIP_TC_MILSPEC</mod-append:ship> <!-- "Milspec" aka Cargo Carrier Ships -->
-			<mod-append:empty/>
-			<mod-append:empty/>
-			<mod-append:ship>PLAYER_SHIP_POTENTIAL</mod-append:ship> <!--(lack of) Potential-->
-			<mod-append:ship>PLAYER_SHIP_SDM</mod-append:ship> <!--Size Does NOT Matter-->
-			<mod-append:empty/>
-			<mod-append:empty/>	
-			<mod-append:ship>PLAYER_SHIP_SAVIOR</mod-append:ship> <!--Saviors-->
-			
-			<mod-append:ship>PLAYER_SHIP_DEFENSE</mod-append:ship> <!-- Stalwart Defense -->
-			<mod-append:ship>PLAYER_SHIP_FEDERATION_CARRIER</mod-append:ship> <!-- Federation Carrier -->
-
 		</mod:findLike>
 	</mod:findLike>
+
 
 
   <!--
@@ -1727,7 +335,7 @@ SPEED          Changes gamespeed
 
   <!--///////UNIQUE//////-->
 
-  <mod:findLike type="crew">
+<mod:findLike type="crew">
 
     <mod-append:race name="trash_eater">
 			<maxHealth>200</maxHealth>
@@ -1788,90 +396,90 @@ SPEED          Changes gamespeed
 					<animSheet baseVisible="true">trash_eater_glow</animSheet>
 				</temporaryEffect>
 			</powerEffect>
-		</mod-append:race>
+	</mod-append:race>
 
-		<mod-append:race name="scrapper_zog">
-			<maxHealth>175</maxHealth>
-			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
-			<canSuffocate>false</canSuffocate>
-			<repairSpeed>1.75</repairSpeed>
-			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<fireDamageMultiplier>0.75</fireDamageMultiplier>
-			<damageMultiplier>2</damageMultiplier>
-			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-		</mod-append:race>
+	<mod-append:race name="scrapper_zog">
+		<maxHealth>175</maxHealth>
+		<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+		<canSuffocate>false</canSuffocate>
+		<repairSpeed>1.75</repairSpeed>
+		<moveSpeedMultiplier>1</moveSpeedMultiplier>
+		<fireDamageMultiplier>0.75</fireDamageMultiplier>
+		<damageMultiplier>2</damageMultiplier>
+		<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+		<repairSounds>
+			<repairSound>shrikeRepair</repairSound>
+		</repairSounds>
+		<deathSounds>
+			<deathSound>shrikeDeath</deathSound>
+		</deathSounds>
+	</mod-append:race>
 
-		<!--///////GENERIC//////-->
+		<!--///////SCRAPPERS//////-->
 		
-<mod-append:race name="rosegold_scrapper">
-	<maxHealth>125</maxHealth>
-	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
-	<canSuffocate>false</canSuffocate>
-	<repairSpeed>2</repairSpeed>
-	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
-	<fireDamageMultiplier>0.0</fireDamageMultiplier>
-	<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
-	<damageMultiplier>0.5</damageMultiplier>
-	<bonusPower>1</bonusPower>
-	<resistsMindControl>true</resistsMindControl>
-	<repairSounds>
-		<repairSound>shrikeRepair</repairSound>
-	</repairSounds>
-	<deathSounds>
-		<deathSound>shrikeDeath</deathSound>
-	</deathSounds>
-	<statboosts>
-		<statBoost name="moveSpeedMultiplier">
-			<boostType>MULT</boostType>
-			<amount>1.075</amount>
-			<shipTarget>CURRENT_ROOM</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<affectsSelf>true</affectsSelf>
-		</statBoost>
-		<statBoost name="repairSpeed">
-			<boostType>MULT</boostType>
-			<amount>1.075</amount>
-			<shipTarget>CURRENT_ROOM</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<affectsSelf>true</affectsSelf>
-		</statBoost>
-		<statBoost name="maxHealth">
-			<boostType>MULT</boostType>
-			<amount>1.075</amount>
-			<shipTarget>CURRENT_ROOM</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<affectsSelf>true</affectsSelf>
-		</statBoost>
-		<statBoost name="damageMultiplier">
-			<boostType>MULT</boostType>
-			<amount>1.075</amount>
-			<shipTarget>CURRENT_ROOM</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<affectsSelf>true</affectsSelf>
-		</statBoost>
-		<statBoost name="damageTakenMultiplier">
-			<boostType>MULT</boostType>
-			<amount>0.9</amount>
-			<shipTarget>CURRENT_ROOM</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<affectsSelf>true</affectsSelf>
-		</statBoost>
-	</statboosts>
-	<skills>
-		<piloting req="22"/>
-		<engines req="22"/>
-		<shields req="62"/>
-		<weapons req="72"/>
-		<repair req="24"/>
-		<combat req="12"/>
-	</skills>
-</mod-append:race>
+	<mod-append:race name="rosegold_scrapper">
+		<maxHealth>125</maxHealth>
+		<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+		<canSuffocate>false</canSuffocate>
+		<repairSpeed>2</repairSpeed>
+		<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
+		<fireDamageMultiplier>0.0</fireDamageMultiplier>
+		<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
+		<damageMultiplier>0.5</damageMultiplier>
+		<bonusPower>1</bonusPower>
+		<resistsMindControl>true</resistsMindControl>
+		<repairSounds>
+			<repairSound>shrikeRepair</repairSound>
+		</repairSounds>
+		<deathSounds>
+			<deathSound>shrikeDeath</deathSound>
+		</deathSounds>
+		<statboosts>
+			<statBoost name="moveSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.075</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<affectsSelf>true</affectsSelf>
+			</statBoost>
+			<statBoost name="repairSpeed">
+				<boostType>MULT</boostType>
+				<amount>1.075</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<affectsSelf>true</affectsSelf>
+			</statBoost>
+			<statBoost name="maxHealth">
+				<boostType>MULT</boostType>
+				<amount>1.075</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<affectsSelf>true</affectsSelf>
+			</statBoost>
+			<statBoost name="damageMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.075</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<affectsSelf>true</affectsSelf>
+			</statBoost>
+			<statBoost name="damageTakenMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0.9</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<affectsSelf>true</affectsSelf>
+			</statBoost>
+		</statboosts>
+		<skills>
+			<piloting req="22"/>
+			<engines req="22"/>
+			<shields req="62"/>
+			<weapons req="72"/>
+			<repair req="24"/>
+			<combat req="12"/>
+		</skills>
+	</mod-append:race>
 
 <mod-append:race name="rosegold_scrapper_2">
 	<maxHealth>150</maxHealth>
@@ -3400,486 +2008,9 @@ SPEED          Changes gamespeed
 	</skills>
 </mod-append:race>
 
-		<!--/////// ROBOTTOS ////////-->
-
-		<mod-append:race name="robottos">
-			<maxHealth>80</maxHealth>
-			<repairSpeed>0.7</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>false</canSuffocate>
-			<suffocationModifier>0.1</suffocationModifier>
-			<fireDamageMultiplier>1.25</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>0.7</sabotageSpeedMultiplier>
-			<damageMultiplier>0.7</damageMultiplier>
-			<damageTakenMultiplier>1</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.0</healSpeed>
-			<defaultSkillLevel>0</defaultSkillLevel>
-			<cloneLoseSkills>true</cloneLoseSkills>
-		</mod-append:race>
-
-		<mod-append:race name="robottos_police">
-			<maxHealth>100</maxHealth>
-			<repairSpeed>0.7</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>false</canSuffocate>
-			<suffocationModifier>0.1</suffocationModifier>
-			<fireDamageMultiplier>1.25</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1.6</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1.4</sabotageSpeedMultiplier>
-			<damageMultiplier>1.4</damageMultiplier>
-			<damageTakenMultiplier>1</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>2.0</healSpeed>
-			<defaultSkillLevel>0</defaultSkillLevel>
-			<cloneLoseSkills>true</cloneLoseSkills>
-		</mod-append:race>
-
-		<mod-append:race name="robottos_machinist">
-			<maxHealth>80</maxHealth>
-			<repairSpeed>2</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>false</canSuffocate>
-			<suffocationModifier>0.1</suffocationModifier>
-			<fireDamageMultiplier>0</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>0.7</sabotageSpeedMultiplier>
-			<damageMultiplier>0.7</damageMultiplier>
-			<damageTakenMultiplier>1</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.0</healSpeed>
-			<defaultSkillLevel>0</defaultSkillLevel>
-			<cloneLoseSkills>true</cloneLoseSkills>
-		</mod-append:race>
-
-		<mod-append:race name="robottos_researcher">
-			<maxHealth>80</maxHealth>
-			<repairSpeed>0.7</repairSpeed>
-     		<bonusPower>1</bonusPower>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>false</canSuffocate>
-			<suffocationModifier>0.1</suffocationModifier>
-			<fireDamageMultiplier>1.25</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>2</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1.3</sabotageSpeedMultiplier>
-			<damageMultiplier>0.7</damageMultiplier>
-			<damageTakenMultiplier>1</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.0</healSpeed>
-			<defaultSkillLevel>2</defaultSkillLevel>
-			<cloneLoseSkills>false</cloneLoseSkills>
-		</mod-append:race>
-
-		<mod-append:race name="robottos_gunner">
-			<maxHealth>80</maxHealth>
-			<repairSpeed>0.7</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>false</canSuffocate>
-			<suffocationModifier>0.1</suffocationModifier>
-			<fireDamageMultiplier>1.25</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1.6</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1.7</sabotageSpeedMultiplier>
-			<damageMultiplier>1.2</damageMultiplier>
-			<rangedDamageMultiplier>1.7</rangedDamageMultiplier>
-			<damageTakenMultiplier>0.5</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.0</healSpeed>
-			<defaultSkillLevel>0</defaultSkillLevel>
-			<cloneLoseSkills>true</cloneLoseSkills>
-		</mod-append:race>
-
-		<!--////////////////////// BLACK ROSE ///////////////////////-->
-
-		<mod-append:race name="unique_black_rose">
-			<maxHealth>110</maxHealth>
-			<repairSpeed>0.7</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>false</canSuffocate>
-			<suffocationModifier>0.1</suffocationModifier>
-			<fireDamageMultiplier>1</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
-			<damageMultiplier>2</damageMultiplier>
-			<rangedDamageMultiplier>0.7</rangedDamageMultiplier>
-			<damageTakenMultiplier>1</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>engiDeath</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.0</healSpeed>
-			<defaultSkillLevel>0</defaultSkillLevel>
-			<cloneLoseSkills>true</cloneLoseSkills>
-		</mod-append:race>
-
-		<!--////////////////////// CHEETAH ///////////////////////-->
-
-		<mod-append:race name="cheetah">
-			<maxHealth>100</maxHealth>
-			<repairSpeed>1</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>true</canSuffocate>
-			<suffocationModifier>1.5</suffocationModifier>
-			<fireDamageMultiplier>1.5</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1.1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1.3</sabotageSpeedMultiplier>
-			<damageMultiplier>1.3</damageMultiplier>
-			<rangedDamageMultiplier>1.3</rangedDamageMultiplier>
-			<damageTakenMultiplier>0.9</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.0</healSpeed>
-			<defaultSkillLevel>0</defaultSkillLevel>
-			<cloneLoseSkills>true</cloneLoseSkills>
-		</mod-append:race>
-
-		<!--////////////////////// SPECIAL FORCES ///////////////////////-->
-
-		<mod-append:race name="human_phoenix">
-			<repairSpeed>0.6</repairSpeed>
-			<damageMultiplier>1.5</damageMultiplier>
-			<rangedDamageMultiplier>2</rangedDamageMultiplier>
-			<damageTakenMultiplier>0.6</damageTakenMultiplier>
-			<suffocationModifier>0.5</suffocationModifier>
-			<fireDamageMultiplier>0.5</fireDamageMultiplier>
-			<stunMultiplier>0.1</stunMultiplier>
-			<animBase>human</animBase>
-			<defaultSkillLevel>2</defaultSkillLevel>
-			<cloneLoseSkills>false</cloneLoseSkills>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-				<deathSound>humanDeathSpecial</deathSound>
-			</deathSounds>
-		</mod-append:race>
-
-		<mod-append:race name="human_hazmat">
-			<maxHealth>80</maxHealth>
-			<repairSpeed>1.3</repairSpeed>
-			<bonusPower>1</bonusPower>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>true</canSuffocate>
-			<suffocationModifier>0.5</suffocationModifier>
-			<fireDamageMultiplier>0.5</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>0.8</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>0.8</sabotageSpeedMultiplier>
-			<damageMultiplier>0.8</damageMultiplier>
-			<damageTakenMultiplier>1.3</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.0</healSpeed>
-			<defaultSkillLevel>1</defaultSkillLevel>
-			<cloneLoseSkills>true</cloneLoseSkills>
-		</mod-append:race>
-
-		<!--/////// KIVIES ////////-->
-
-		<mod-append:race name="kiviekith">
-			<maxHealth>100</maxHealth>
-			<repairSpeed>1</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>true</canSuffocate>
-			<suffocationModifier>0.5</suffocationModifier>
-			<fireDamageMultiplier>0.5</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1.2</sabotageSpeedMultiplier>
-			<damageMultiplier>1.2</damageMultiplier>
-			<damageTakenMultiplier>0.8</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.0</healSpeed>
-			<skills>
-				<piloting req="20"/>
-				<engines req="20"/>
-				<shields req="74"/>
-				<weapons req="74"/>
-				<repair req="26"/>
-				<combat req="14"/>
-			</skills>
-			<defaultSkillLevel>0</defaultSkillLevel>
-			<cloneLoseSkills>true</cloneLoseSkills>
-		</mod-append:race>
-
-		<!--/////// KORA ////////-->
-
-		<mod-append:race name="unique_kora">
-			<maxHealth>120</maxHealth>
-			<repairSpeed>1</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>true</canSuffocate>
-			<suffocationModifier>1.2</suffocationModifier>
-			<fireDamageMultiplier>1.2</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1.2</sabotageSpeedMultiplier>
-			<damageMultiplier>1.2</damageMultiplier>
-			<damageTakenMultiplier>0.8</damageTakenMultiplier>
-			<animBase>human</animBase>
-			<deathSounds>
-				<deathSound>death1</deathSound>
-				<deathSound>death2</deathSound>
-			</deathSounds>
-			<shootingSounds>
-				<shootingSound>crewLaser1</shootingSound>
-			</shootingSounds>
-
-			<!--Teleporter thingy-->
-			<powerEffect>
-				<cooldown>20</cooldown>
-				<jumpCooldown>full</jumpCooldown>
-				<powerCharges>2</powerCharges>
-				<initialCharges>2</initialCharges>
-				<powerSounds>
-					<powerSound>cloak</powerSound>
-				</powerSounds>
-				<buttonText>UPLIFT</buttonText>
-				<tooltip>Ready: Makes all friendly crew able to teleport for 3 seconds.</tooltip>
-				<cooldownColor r="60" g="80" b="200"/>
-				<temporaryEffect>
-					<duration>3</duration>
-					<cooldownColor r="120" g="20" b="255"/>
-					<animSheet baseVisible="true">kora_glow</animSheet>
-					<finishSounds enemy="true">
-							<finishSound>decloak</finishSound>
-					</finishSounds>
-					<statBoosts>
-						<statBoost name="teleportMove"><!-- Crew can move within the ship by teleporting. -->
-							<boostType>SET</boostType>
-							<value>true</value>
-							<shipTarget>ALL</shipTarget>
-							<crewTarget>ALLIES</crewTarget>
-							<affectsSelf>false</affectsSelf><!--So the boostanim doesn't play over Kora-->
-							<boostAnim>tele_effect</boostAnim>
-						</statBoost>
-						<statBoost name="teleportMoveOtherShip"><!-- Crew can teleport to the other ship on their own (without the system). Right click with selected crew to teleport. -->
-							<boostType>SET</boostType>
-							<value>true</value>
-							<shipTarget>ALL</shipTarget>
-							<crewTarget>ALLIES</crewTarget>
-							<affectsSelf>true</affectsSelf>
-						</statBoost>
-
-						<statBoost name="teleportMove"><!-- So Kora still gets the boost -->
-							<boostType>SET</boostType>
-							<value>true</value>
-							<shipTarget>ALL</shipTarget>
-							<crewTarget>SELF</crewTarget>
-						</statBoost>
-					</statBoosts>
-				</temporaryEffect>
-			</powerEffect>
 
 
-			<repairSounds animSoundFrame="-1">
-				<repairSound>repair</repairSound>
-			</repairSounds>
-			<healSpeed>1.2</healSpeed>
-			<defaultSkillLevel>0</defaultSkillLevel>
-			<cloneLoseSkills>false</cloneLoseSkills>
-		</mod-append:race>
-
-		<!--/////// SERGALS ////////-->
-
+<!--/////// PROTOGEN [Needs Reworked] ////////-->
 		<mod-append:race name="sergal">
 			<maxHealth>80</maxHealth>
 			<repairSpeed>1.2</repairSpeed>
@@ -3898,100 +2029,6 @@ SPEED          Changes gamespeed
 			<sabotageSpeedMultiplier>1.4</sabotageSpeedMultiplier>
 			<damageMultiplier>1</damageMultiplier>
 			<damageTakenMultiplier>1</damageTakenMultiplier>
-
-			<passiveStatBoosts><!--Buffs Avali-->
-				<statBoost name="maxHealth">
-					<boostType>FLAT</boostType>
-					<amount>10</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="maxHealth">
-					<boostType>FLAT</boostType>
-					<amount>5</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="damageMultiplier">
-					<boostType>FLAT</boostType>
-					<amount>0.10</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="damageMultiplier">
-					<boostType>FLAT</boostType>
-					<amount>0.05</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="repairSpeed">
-					<boostType>FLAT</boostType>
-					<amount>0.15</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="repairSpeed">
-					<boostType>FLAT</boostType>
-					<amount>0.1</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-			</passiveStatBoosts>
-
 			<animBase>human</animBase>
 			<deathSounds>
 				<deathSound>death1</deathSound>
@@ -4026,100 +2063,6 @@ SPEED          Changes gamespeed
 			<sabotageSpeedMultiplier>1.2</sabotageSpeedMultiplier>
 			<damageMultiplier>1.2</damageMultiplier>
 			<damageTakenMultiplier>1.1</damageTakenMultiplier>
-
-			<passiveStatBoosts><!--Buffs Avali-->
-				<statBoost name="maxHealth">
-					<boostType>FLAT</boostType>
-					<amount>10</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="maxHealth">
-					<boostType>FLAT</boostType>
-					<amount>5</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="damageMultiplier">
-					<boostType>FLAT</boostType>
-					<amount>0.10</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="damageMultiplier">
-					<boostType>FLAT</boostType>
-					<amount>0.05</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="repairSpeed">
-					<boostType>FLAT</boostType>
-					<amount>0.15</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="repairSpeed">
-					<boostType>FLAT</boostType>
-					<amount>0.1</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-			</passiveStatBoosts>
-
 			<animBase>human</animBase>
 			<deathSounds>
 				<deathSound>death1</deathSound>
@@ -4136,32 +2079,7 @@ SPEED          Changes gamespeed
 			<cloneLoseSkills>false</cloneLoseSkills>
 		</mod-append:race>
 
-		<!--////////////////////////CREWMATE ZONE (DANGER: KINDA SUS)//////////////////////-->
-
-		<mod-append:race name="crewmate">
-			<maxHealth>100</maxHealth>
-			<repairSpeed>1</repairSpeed>
-			<canFight>true</canFight>
-			<canRepair>true</canRepair>
-			<canSabotage>true</canSabotage>
-			<canSuffocate>true</canSuffocate>
-			<suffocationModifier>1</suffocationModifier>
-			<fireDamageMultiplier>1</fireDamageMultiplier>
-			<canMan>true</canMan>
-			<noClone>false</noClone>
-			<noSlot>false</noSlot>
-			<controllable>true</controllable>
-			<canPhaseThroughDoors>false</canPhaseThroughDoors>
-			<moveSpeedMultiplier>1</moveSpeedMultiplier>
-			<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
-			<damageMultiplier>1</damageMultiplier>
-			<damageTakenMultiplier>1</damageTakenMultiplier>
-		</mod-append:race>
-
-		<!--////////////////////////PROTOGEN ZONE (DANGER: FURRIES AHEAD)//////////////////////-->
-		<!--///////PROTOGEN////////-->
-
-		<mod-append:race name="protogen">
+	<mod-append:race name="protogen">
 			<maxHealth>90</maxHealth>
 			<repairSpeed>1.1</repairSpeed>
 			<canFight>true</canFight>
@@ -4179,100 +2097,6 @@ SPEED          Changes gamespeed
 			<sabotageSpeedMultiplier>1.1</sabotageSpeedMultiplier>
 			<damageMultiplier>1.1</damageMultiplier>
 			<damageTakenMultiplier>1</damageTakenMultiplier>
-
-			<passiveStatBoosts><!--Buffs Avali-->
-				<statBoost name="maxHealth">
-					<boostType>FLAT</boostType>
-					<amount>10</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="maxHealth">
-					<boostType>FLAT</boostType>
-					<amount>5</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="damageMultiplier">
-					<boostType>FLAT</boostType>
-					<amount>0.10</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="damageMultiplier">
-					<boostType>FLAT</boostType>
-					<amount>0.05</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="repairSpeed">
-					<boostType>FLAT</boostType>
-					<amount>0.15</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-				<statBoost name="repairSpeed">
-					<boostType>FLAT</boostType>
-					<amount>0.1</amount>
-					<shipTarget>CURRENT_ALL</shipTarget>
-					<crewTarget>ALLIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<whiteList>
-						<avali />
-						<avali_illuminant />
-						<tori />
-						<technician />
-						<polyester />
-					</whiteList>
-				</statBoost>
-			</passiveStatBoosts>
-
 			<animBase>human</animBase>
 			<deathSounds>
 				<deathSound>death1</deathSound>
@@ -4319,100 +2143,6 @@ SPEED          Changes gamespeed
   			<repair req="26"/>
   			<combat req="14"/>
   		</skills>
-
-  		<passiveStatBoosts><!--Buffs Avali-->
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>5</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.05</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.15</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.1</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</passiveStatBoosts>
-
   		<deathSounds>
   			<deathSound>death1</deathSound>
   			<deathSound>death2</deathSound>
@@ -4458,100 +2188,6 @@ SPEED          Changes gamespeed
   			<repair req="26"/>
   			<combat req="14"/>
   		</skills>
-
-  		<passiveStatBoosts><!--Buffs Avali-->
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>5</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.05</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.15</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.1</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</passiveStatBoosts>
-
   		<deathSounds>
   			<deathSound>death1</deathSound>
   			<deathSound>death2</deathSound>
@@ -4589,100 +2225,6 @@ SPEED          Changes gamespeed
   		<damageTakenMultiplier>0.9</damageTakenMultiplier>
   		<animBase>human</animBase>
   		<defaultSkillLevel>1</defaultSkillLevel>
-
-  		<passiveStatBoosts><!--Buffs Avali-->
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>5</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.05</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.15</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.1</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</passiveStatBoosts>
-
   		<deathSounds>
   			<deathSound>death1</deathSound>
   			<deathSound>death2</deathSound>
@@ -4721,100 +2263,6 @@ SPEED          Changes gamespeed
   		<animBase>human</animBase>
   		<defaultSkillLevel>1</defaultSkillLevel>
   		<bonusPower>2</bonusPower>
-
-  		<passiveStatBoosts><!--Buffs Avali-->
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>5</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.05</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.15</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.1</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</passiveStatBoosts>
-
   		<deathSounds>
   			<deathSound>death1</deathSound>
   			<deathSound>death2</deathSound>
@@ -4887,100 +2335,6 @@ SPEED          Changes gamespeed
   				<damageMultiplier>2.3</damageMultiplier>
   			</temporaryEffect>
   		</powerEffect>
-
-  		<passiveStatBoosts><!--Buffs Avali-->
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>5</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.10</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>0.05</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.15</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.1</amount>
-  				<shipTarget>CURRENT_ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</passiveStatBoosts>
-
   		<repairSounds animSoundFrame="-1">
   			<repairSound>repair</repairSound>
   		</repairSounds>
@@ -4988,1346 +2342,323 @@ SPEED          Changes gamespeed
   		<defaultSkillLevel>0</defaultSkillLevel>
   		<cloneLoseSkills>false</cloneLoseSkills>
   	</mod-append:race>
+	
+	<mod-append:race name="tcc_generic_crewjank"> <!--USED FOR A WEAPON-->
+		<maxHealth>0</maxHealth>
+		<repairSpeed>0</repairSpeed>
+		<canFight>false</canFight>
+		<canRepair>false</canRepair>
+		<canSabotage>false</canSabotage>
+		<canSuffocate>false</canSuffocate>
+		<fireDamageMultiplier>0</fireDamageMultiplier>
+		<resistsMindControl>true</resistsMindControl>
+		<canMan>false</canMan>
+		<noClone>true</noClone>
+		<canTeleport>false</canTeleport>
+		<noSlot>true</noSlot>
+		<noAI>true</noAI>
+		<controllable>false</controllable>
+		<selectable>false</selectable>
+		<canPhaseThroughDoors>true</canPhaseThroughDoors>
+		<moveSpeedMultiplier>0.00</moveSpeedMultiplier>
+		<sabotageSpeedMultiplier>0.0</sabotageSpeedMultiplier>
+		<damageMultiplier>0</damageMultiplier>
+		<damageTakenMultiplier>0.0</damageTakenMultiplier>
+		<animBase>mantis</animBase>
+		<deathSounds>
+			<deathSound>silence</deathSound>
+		</deathSounds>
+		<shootingSounds>
+			<shootingSound>mantisSpit1</shootingSound>
+			<shootingSound>mantisSpit2</shootingSound>
+			<shootingSound>mantisSpit3</shootingSound>
+		</shootingSounds>
+	</mod-append:race>
 
+	<mod-append:race name="void_drain"> <!--USED FOR A WEAPON-->
+		<maxHealth>100</maxHealth>
+		<repairSpeed>0</repairSpeed>
+		<canFight>false</canFight>
+		<canRepair>false</canRepair>
+		<canSabotage>false</canSabotage>
+		<canSuffocate>false</canSuffocate>
+		<fireDamageMultiplier>0</fireDamageMultiplier>
+		<canMan>false</canMan>
+		<noClone>true</noClone>
+		<noSlot>true</noSlot>
+		<noAi>true</noAi>
+		<controllable>false</controllable>
+		<canTeleport>false</canTeleport>
+		<resistsMindControl>true</resistsMindControl>
+		<selectable>false</selectable>
+		<canPhaseThroughDoors>true</canPhaseThroughDoors>
+		<moveSpeedMultiplier>0.00</moveSpeedMultiplier>
+		<sabotageSpeedMultiplier>0.0</sabotageSpeedMultiplier>
+		<damageMultiplier>0</damageMultiplier>
+		<damageTakenMultiplier>0.0</damageTakenMultiplier>
+		<animBase>mantis</animBase>
+		<deathSounds>
+			<deathSound>energyDeath</deathSound>
+		</deathSounds>
+		<shootingSounds>
+			<shootingSound>mantisSpit1</shootingSound>
+			<shootingSound>mantisSpit2</shootingSound>
+			<shootingSound>mantisSpit3</shootingSound>
+		</shootingSounds>
+		<passiveStatBoosts>
+			<statBoost name="powerDrain">
+				<boostType>FLAT</boostType>
+				<amount>1</amount>
+				<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<affectsSelf>true</affectsSelf>
+				<whiteList>
+					<void_drain/>
+				</whiteList>
+			</statBoost>
+			<statBoost name="trueHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>-20</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<droneTarget>DRONES</droneTarget>
+				<affectsSelf>false</affectsSelf>
+				<maxStacks>1</maxStacks>
+			</statBoost>
+		</passiveStatBoosts>
+	</mod-append:race>
 
-  	<!--///////RSA TECCHIE//////-->
-
-  	<mod-append:race name="rsa_technician">
-  		<repairSpeed>1.15</repairSpeed>
-  		<canFight>true</canFight>
-  		<canSabotage>true</canSabotage>
-  		<suffocationModifier>0.83</suffocationModifier>
-  		<fireDamageMultiplier>0.83</fireDamageMultiplier>
-  		<passiveStatBoosts>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>0.50</amount>
-  				<shipTarget>CURRENT_ROOM</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>true</affectsSelf>
-  				<maxStacks>1</maxStacks>
-  				<whiteList>
-  					<human_technician/>
-  				</whiteList>
-  				<systemRoomTarget>ALL</systemRoomTarget>
-  				<systemList>
-  					<engines/>
-  					<pilot/>
-  					<shields/>
-  					<weapons/>
-  					<drones/>
-  				</systemList>
-  			</statBoost>
-  		</passiveStatBoosts>
-  		<animBase>human</animBase>
-  		<deathSounds>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>death1</deathSound>
-  			<deathSound>death2</deathSound>
-  			<deathSound>humanDeathSpecial</deathSound>
-  		</deathSounds>
-  		<skills>
-  			<piloting req="13"/>
-  			<engines req="13"/>
-  			<shields req="50"/>
-  			<weapons req="58"/>
-  			<repair req="12"/>
-  			<combat req="7"/>
-  		</skills>
-  		<powerEffect>
-  			<cooldown>5</cooldown>
-  			<jumpCooldown>full</jumpCooldown>
-  			<powerSounds>
-  				<powerSound>droneLaunch</powerSound>
-  			</powerSounds>
-  			<req type="enemy">
-  				<enemyInRoom/>
-  			</req>
-  			<buttonText>TANK</buttonText>
-  			<tooltip>Ready: Spawns a temporary tank drone which can fight and sabotage but not repair or man systems. Lasts 40 seconds.</tooltip>
-  			<cooldownColor r="185" g="185" b="185"/>
-  			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-  			<powerCharges>2</powerCharges>
-  			<initialCharges>2</initialCharges>
-  			<chargesPerJump>1</chargesPerJump>
-  			<spawnCrew>
-  				<number>1</number>
-  				<race>rsa_tank</race>
-  				<lifetime>40</lifetime>
-  				<statBoosts>
-  					<statBoost name="noClone">
-  						<boostType>SET</boostType>
-  						<value>true</value>
-  						<shipTarget>ALL</shipTarget>
-  						<crewTarget>ALL</crewTarget>
-  						<priority>999999</priority>
-  					</statBoost>
-  				</statBoosts>
-  			</spawnCrew>
-  		</powerEffect>
-  	</mod-append:race>
-
-  	<mod-append:race name="rsa_tank">
-  		<maxHealth>70</maxHealth>
-  		<noSlot>true</noSlot>
-  		<damageMultiplier>2.2</damageMultiplier>
-  		<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
-  		<moveSpeedMultiplier>2.0</moveSpeedMultiplier>
-  		<resistsMindControl>true</resistsMindControl>	<!-- CURA event -->
-  		<canMan>false</canMan>
-  		<canRepair>false</canRepair>
-  		<noClone>true</noClone>
-  		<canBurn>false</canBurn>
-  		<canSuffocate>false</canSuffocate>
-  		<deathSounds>
-			<deathSound>technicianDroneDeath</deathSound>
-  		</deathSounds>
-  		<powerEffect>
-  			<cooldown>0</cooldown>
-  			<jumpCooldown>full</jumpCooldown>
-  			<buttonText>EXPIRATION</buttonText>
-  			<tooltip>You shouldn't see this. Shows how long is left in its lifespan.</tooltip>
-  			<cooldownColor r="185" g="185" b="185"/>
-  			<activateWhenReady>true</activateWhenReady>
-  			<temporaryEffect>
-  				<duration>40</duration>
-  				<cooldownColor r="185" g="185" b="185"/>
-  				<powerSounds>
-  					<powerSound>shieldsDown</powerSound>
-  				</powerSounds>
-  			</temporaryEffect>
-  		</powerEffect>
-  	</mod-append:race>
-
-  	<!--//////////////// MANTIS /////////////////////-->
-
-  	<mod-append:race name="mantis_freebusiness">
-  		<maxHealth>100</maxHealth>
-  		<repairSpeed>0.5</repairSpeed>
-  		<moveSpeedMultiplier>1.3</moveSpeedMultiplier>
-  		<damageMultiplier>1.2</damageMultiplier>
-  		<animBase>mantis</animBase>
-  		<deathSounds>
-  			<deathSound>mantisDeath</deathSound>
-  		</deathSounds>
-  		<shootingSounds>
-  			<shootingSound>mantisSpit1</shootingSound>
-  			<shootingSound>mantisSpit2</shootingSound>
-  			<shootingSound>mantisSpit3</shootingSound>
-  		</shootingSounds>
-  		<powerEffect>
-  			<cooldown>17</cooldown>
-  			<jumpCooldown>full</jumpCooldown>
-  			<powerSounds>
-  				<finishSound>mantisSplat1</finishSound>
-  				<finishSound>mantisSplat2</finishSound>
-  				<finishSound>mantisSplat3</finishSound>
-  			</powerSounds>
-  			<req type="enemy">
-  				<minHealth>10</minHealth>
-  				<enemyInRoom/>
-  			</req>
-  			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-  			<buttonText>PHEROMONE</buttonText>
-  			<tooltip>Ready: Increase movement speed to 3x and crew damage to 2.2x for 7 seconds. Does NOT increase damage taken from hazards.</tooltip>
-  			<cooldownColor r="171" g="223" b="255"/>
-  			<temporaryEffect>
-  				<duration>7</duration>
-  				<cooldownColor r="215" g="126" b="195"/>
-  				<finishSounds>
-  					<finishSound>mantisSplat1</finishSound>
-  					<finishSound>mantisSplat2</finishSound>
-  					<finishSound>mantisSplat3</finishSound>
-  				</finishSounds>
-  				<effectAnim>pheromones_f</effectAnim>
-  				<moveSpeedMultiplier>3</moveSpeedMultiplier>
-  				<damageMultiplier>2.2</damageMultiplier>
-  			</temporaryEffect>
-  		</powerEffect>
-  	</mod-append:race>
-
-  	<mod-append:race name="mantis_rsa">
-  		<maxHealth>100</maxHealth>
-  		<repairSpeed>1.5</repairSpeed>
-  		<moveSpeedMultiplier>1.3</moveSpeedMultiplier>
-  		<damageMultiplier>0.6</damageMultiplier>
-  		<animBase>mantis</animBase>
-  		<deathSounds>
-  			<deathSound>mantisDeath</deathSound>
-  		</deathSounds>
-  		<shootingSounds>
-  			<shootingSound>mantisSpit1</shootingSound>
-  			<shootingSound>mantisSpit2</shootingSound>
-  			<shootingSound>mantisSpit3</shootingSound>
-  		</shootingSounds>
-  		<powerEffect>
-  			<cooldown>17</cooldown>
-  			<jumpCooldown>full</jumpCooldown>
-  			<powerSounds>
-  				<finishSound>mantisSplat1</finishSound>
-  				<finishSound>mantisSplat2</finishSound>
-  				<finishSound>mantisSplat3</finishSound>
-  			</powerSounds>
-  			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-  			<buttonText>PHEROMONE?</buttonText>
-  			<tooltip>Ready: Increase repair speed to 2.2x for 7 seconds. Does NOT increase damage taken from hazards.</tooltip>
-  			<cooldownColor r="171" g="223" b="255"/>
-  			<temporaryEffect>
-  				<duration>7</duration>
-  				<cooldownColor r="215" g="126" b="195"/>
-  				<finishSounds>
-  					<finishSound>mantisSplat1</finishSound>
-  					<finishSound>mantisSplat2</finishSound>
-  					<finishSound>mantisSplat3</finishSound>
-  				</finishSounds>
-  				<effectAnim>pheromones_f</effectAnim>
-  				<repairSpeed>2.2</repairSpeed>
-  			</temporaryEffect>
-  		</powerEffect>
-  	</mod-append:race>
-
-  	<!--//////////////// GENERIC CREW JANK /////////////////////-->
-
-  	<mod-append:race name="tcc_generic_crewjank">
-    	<maxHealth>0</maxHealth>
-    	<repairSpeed>0</repairSpeed>
-    	<canFight>false</canFight>
-    	<canRepair>false</canRepair>
-    	<canSabotage>false</canSabotage>
-    	<canSuffocate>false</canSuffocate>
-    	<fireDamageMultiplier>0</fireDamageMultiplier>
-    	<resistsMindControl>true</resistsMindControl>
-    	<canMan>false</canMan>
-    	<noClone>true</noClone>
-    	<canTeleport>false</canTeleport>
-    	<noSlot>true</noSlot>
-    	<noAI>true</noAI>
-    	<controllable>false</controllable>
-    	<selectable>false</selectable>
-    	<canPhaseThroughDoors>true</canPhaseThroughDoors>
-    	<moveSpeedMultiplier>0.00</moveSpeedMultiplier>
-    	<sabotageSpeedMultiplier>0.0</sabotageSpeedMultiplier>
-    	<damageMultiplier>0</damageMultiplier>
-    	<damageTakenMultiplier>0.0</damageTakenMultiplier>
-    	<animBase>mantis</animBase>
-    	<deathSounds>
-    		<deathSound>silence</deathSound>
-    	</deathSounds>
-    	<shootingSounds>
-    		<shootingSound>mantisSpit1</shootingSound>
-    		<shootingSound>mantisSpit2</shootingSound>
-    		<shootingSound>mantisSpit3</shootingSound>
-    	</shootingSounds>
-    </mod-append:race>
-
-    <!--////////////////BIRBIIBIBIBIBRIBBIB/////////////////////-->
-
-    <mod-append:race name="avali">
-    	<maxHealth>70</maxHealth>
-    	<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
-    	<repairSpeed>1.2</repairSpeed>
-    	<fireRepairMultiplier>0.5</fireRepairMultiplier>
-    	<damageMultiplier>0.8</damageMultiplier>
-    	<fireDamageMultiplier>2</fireDamageMultiplier>
-    	<passiveStatBoosts>
-    		<statBoost name="maxHealth">
-    			<boostType>FLAT</boostType>
-    			<amount>10</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="maxHealth">
-    			<boostType>FLAT</boostType>
-    			<amount>5</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.10</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.05</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="repairSpeed">
-    			<boostType>FLAT</boostType>
-    			<amount>0.15</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="repairSpeed">
-    			<boostType>FLAT</boostType>
-    			<amount>0.1</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    	</passiveStatBoosts>
-    	<animBase>human</animBase>
-    	<deathSounds>
-    		<deathSound>death1</deathSound>
-    		<deathSound>death2</deathSound>
-    	</deathSounds>
-    	<deathSounds>
-    		<deathSound>death1</deathSound>
-    		<deathSound>death2</deathSound>
-    	</deathSounds>
-    </mod-append:race>
-
-
-    <mod-append:race name="avali_illuminant">
-    	<maxHealth>90</maxHealth>
-    	<moveSpeedMultiplier>2</moveSpeedMultiplier>
-    	<repairSpeed>1.2</repairSpeed>
-    	<fireRepairMultiplier>0.8</fireRepairMultiplier>
-    	<damageMultiplier>1</damageMultiplier>
-    	<fireDamageMultiplier>1.5</fireDamageMultiplier>
-    	<damageTakenMultiplier>0.9</damageTakenMultiplier>
-    	<passiveStatBoosts>
-    		<statBoost name="maxHealth">
-    			<boostType>FLAT</boostType>
-    			<amount>10</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="maxHealth">
-    			<boostType>FLAT</boostType>
-    			<amount>10</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.15</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.1</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageTakenMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>-0.1</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageTakenMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>-0.05</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="moveSpeedMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.5</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    	</passiveStatBoosts>
-    	<animBase>human</animBase>
-    	<deathSounds>
-    		<deathSound>death1</deathSound>
-    		<deathSound>death2</deathSound>
-    	</deathSounds>
-    	<deathSounds>
-    		<deathSound>death1</deathSound>
-    		<deathSound>death2</deathSound>
-    	</deathSounds>
-    </mod-append:race>
-
-    <mod-append:race name="avali_technician">
-    	<maxHealth>70</maxHealth>
-    	<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
-    	<repairSpeed>1.5</repairSpeed>
-    	<fireRepairMultiplier>0.8</fireRepairMultiplier>
-    	<damageMultiplier>0.7</damageMultiplier>
-    	<fireDamageMultiplier>1.4</fireDamageMultiplier>
-    	<suffocationModifier>0.8</suffocationModifier>
-    	<passiveStatBoosts>
-    		<statBoost name="fireRepairMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.1</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="fireRepairMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.1</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="repairSpeed">
-    			<boostType>FLAT</boostType>
-    			<amount>0.2</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="repairSpeed">
-    			<boostType>FLAT</boostType>
-    			<amount>0.2</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="fireDamageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>-0.2</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="fireDamageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>-0.2</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="suffocationModifier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.1</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="suffocationModifier">
-    			<boostType>FLAT</boostType>
-    			<amount>-0.15</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    	</passiveStatBoosts>
-    </mod-append:race>
-
-	<mod-append:race name="unique_skygirr">
-    	<maxHealth>90</maxHealth>
-    	<moveSpeedMultiplier>2</moveSpeedMultiplier>
-    	<repairSpeed>1.5</repairSpeed>
-    	<fireRepairMultiplier>0.8</fireRepairMultiplier>
-    	<damageMultiplier>1</damageMultiplier>
-    	<fireDamageMultiplier>1</fireDamageMultiplier>
-    	<damageTakenMultiplier>0.9</damageTakenMultiplier>
-    	<passiveStatBoosts>
-    		<statBoost name="maxHealth">
-    			<boostType>FLAT</boostType>
-    			<amount>10</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="maxHealth">
-    			<boostType>FLAT</boostType>
-    			<amount>10</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.15</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.1</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageTakenMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>-0.1</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageTakenMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>-0.05</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="moveSpeedMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.5</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    	</passiveStatBoosts>
-    	<animBase>human</animBase>
-    	<deathSounds>
-    		<deathSound>death1</deathSound>
-    		<deathSound>death2</deathSound>
-    	</deathSounds>
-    	<deathSounds>
-    		<deathSound>death1</deathSound>
-    		<deathSound>death2</deathSound>
-    	</deathSounds>
-		<powerEffect>
-			<cooldown>20</cooldown>
-			<jumpCooldown>full</jumpCooldown>
-			<powerCharges>1</powerCharges>
-			<chargesPerJump>1</chargesPerJump>
-			<powerSounds>
-				<powerSound>explosionShell</powerSound>
-			</powerSounds>
-			<req type="enemy">
-				<systemInRoom damaged="true"/>
-				<playerShip/> <!--enemy ship-->
-			</req>
-			<sysDamage>-5</sysDamage>
-			<damage>-1</damage>
-			<effectAnim>tele_effect</effectAnim>
-			<animFrame>4</animFrame>
+	<mod-append:race name="rc_ld"> <!--USED FOR A WEAPON-->
+		<controllable>true</controllable>
+		<maxHealth>15</maxHealth>
+		<canFight>false</canFight>
+		<canRepair>false</canRepair>
+		<canMan>false</canMan>
+		<canSabotage>false</canSabotage>
+		<canBurn>false</canBurn>
+		<canSuffocate>false</canSuffocate>
+		<stunMultiplier>0</stunMultiplier>
+		<noSlot>true</noSlot>
+		<hasDeathExplosion>true</hasDeathExplosion>
+		<deathSounds>
+			<deathSound>boomerDeath</deathSound>
+		</deathSounds>
+		<deathEffect>
+			<persDamage>3</persDamage>
+			<sysDamage>1</sysDamage>
 			<friendlyFire>true</friendlyFire>
 			<shipFriendlyFire>true</shipFriendlyFire>
-			<buttonText>E-REPAIR</buttonText>
-			<tooltip>Ready: Repair 5 system and 1 hull damage.</tooltip>
-			<cooldownColor r="202" g="79" b="226"/>
-			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-		</powerEffect>
-    </mod-append:race>	 
+		</deathEffect>
+		<passiveStatBoosts>     
+			<statBoost name="trueHealAmount"> <!--prevents teleporting back-->
+				<boostType>FLAT</boostType>
+				<amount>-999</amount>
+				<affectsSelf>true</affectsSelf>
+				<shipTarget>PLAYER_SHIP</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>9999</priority>
+				<whiteList>
+					<rc_ld/>
+				</whiteList>
+			</statBoost>
+		</passiveStatBoosts>
+	</mod-append:race>
 
-	<mod-append:race name="polyester">
-    	<maxHealth>50</maxHealth>
-    	<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
-    	<repairSpeed>1.2</repairSpeed>
-    	<fireRepairMultiplier>0.5</fireRepairMultiplier>
-    	<damageMultiplier>0.8</damageMultiplier>
-    	<fireDamageMultiplier>2</fireDamageMultiplier>
-    	<passiveStatBoosts>
-    		<statBoost name="maxHealth">
-    			<boostType>FLAT</boostType>
-    			<amount>10</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="maxHealth">
-    			<boostType>FLAT</boostType>
-    			<amount>5</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.10</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="damageMultiplier">
-    			<boostType>FLAT</boostType>
-    			<amount>0.05</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="repairSpeed">
-    			<boostType>FLAT</boostType>
-    			<amount>0.15</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="repairSpeed">
-    			<boostType>FLAT</boostType>
-    			<amount>0.1</amount>
-    			<shipTarget>CURRENT_ALL</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<priority>0</priority>
-    			<whiteList>
-    				<avali />
-    				<avali_illuminant />
-    				<tori />
-    				<technician />
-					<polyester />
-    			</whiteList>
-    		</statBoost>
-    	</passiveStatBoosts>
-    	<animBase>human</animBase>
-    	<deathSounds>
-    		<deathSound>death1</deathSound>
-    		<deathSound>death2</deathSound>
-    	</deathSounds>
-    	<deathSounds>
-    		<deathSound>death1</deathSound>
-    		<deathSound>death2</deathSound>
-    	</deathSounds>
-    </mod-append:race>
-
-    <!--/////// SAVIORS //////-->
-
-    <mod-append:race name="saviors">
-    		<maxHealth>125</maxHealth>
-    		<controllable>true</controllable>
-    		<canBurn>false</canBurn>
-    		<canSuffocate>false</canSuffocate>
-    		<fireDamageMultiplier>0</fireDamageMultiplier>
-    		<moveSpeedMultiplier>1</moveSpeedMultiplier>
-    		<damageMultiplier>0.9</damageMultiplier>
-    		<suffocationModifier>0</suffocationModifier>
-    		<passiveHealAmount>4</passiveHealAmount>
-    		<passiveHealDelay>1</passiveHealDelay>
-    		<isTelepathic>true</isTelepathic>
-    		<resistsMindControl>true</resistsMindControl>
-    		<detectsLifeforms>true</detectsLifeforms>
-    		<animBase>rock</animBase>
-    		<defaultSkillLevel>1</defaultSkillLevel>
-    		<cloneLoseSkills>false</cloneLoseSkills>
-    		<skills>
-    			<piloting req="999"/>
-    			<engines req="999"/>
-    			<shields req="999"/>
-    			<weapons req="999"/>
-    			<repair req="999"/>
-    			<combat req="999"/>
-    		</skills>
-    		<deathSounds>
-    			<deathSound>avatarDeath1</deathSound>
-    			<deathSound>avatarDeath2</deathSound>
-    			<deathSound>avatarDeath3</deathSound>
-    			<deathSound>avatarDeath4</deathSound>
-    		</deathSounds>
-    		<repairSounds animSoundFrame="-1">
-    			<repairSound>shrikeRepair</repairSound>
-    		</repairSounds>
-    		<powerEffect>
-    			<cooldown>10</cooldown>
-    			<jumpCooldown>continue</jumpCooldown>
-    			<req>
-    				<aiDisabled/>
-    			</req>
-    			<buttonText>LIBERATE</buttonText>
-    			<tooltip>Toggle liberated mode. The Cognitive will not be controllable but will gain massive boosts to all of its stats. Cannot be changed back until next jump.</tooltip>
-    			<cooldownColor r="255" g="255" b="255"/>
-    			<transformRace>saviorsa</transformRace>
-    		</powerEffect>
-    </mod-append:race>
-
-    <mod-append:race name="saviorsa"> <!-- Automated, do not sell? -->
-    	<maxHealth>100</maxHealth>
-    	<controllable>false</controllable>
-    	<selectable>true</selectable>
-    	<canBurn>false</canBurn>
-    	<canSuffocate>false</canSuffocate>
-    	<fireDamageMultiplier>0</fireDamageMultiplier>
-    	<moveSpeedMultiplier>2.5</moveSpeedMultiplier>
-    	<damageMultiplier>1.1</damageMultiplier>
-    	<repairSpeed>3</repairSpeed>
-    	<suffocationModifier>0</suffocationModifier>
-    	<passiveHealAmount>1.3</passiveHealAmount>
-    	<passiveHealDelay>0</passiveHealDelay>
-    	<healSpeed>1.0</healSpeed>
-    	<isTelepathic>true</isTelepathic>
-    	<resistsMindControl>true</resistsMindControl>
-    	<detectsLifeforms>true</detectsLifeforms>
-    	<animBase>rock</animBase>
-    	<defaultSkillLevel>1</defaultSkillLevel>
-    	<cloneLoseSkills>false</cloneLoseSkills>
-    	<skills>
-    		<piloting req="999"/>
-    		<engines req="999"/>
-    		<shields req="999"/>
-    		<weapons req="999"/>
-    		<repair req="999"/>
-    		<combat req="999"/>
-    	</skills>
-    	<deathSounds>
-    		<deathSound>avatarDeath1</deathSound>
-    		<deathSound>avatarDeath2</deathSound>
-    		<deathSound>avatarDeath3</deathSound>
-    		<deathSound>avatarDeath4</deathSound>
-    	</deathSounds>
-    	<repairSounds animSoundFrame="-1">
-    		<repairSound>shrikeRepair</repairSound>
-    	</repairSounds>
-    	<powerEffect>
-    		<cooldown>999</cooldown>
-    		<jumpCooldown>full</jumpCooldown>
-    		<req>
-    			<aiDisabled/>
-    		</req>
-    		<buttonText>CONTROL</buttonText>
-    		<tooltip>Toggle control mode. You will assume full control over the Cognitive, but it will lose its boosted stats. Can only be changed back one per jump.</tooltip>
-    		<cooldownColor r="255" g="255" b="255"/>
-    		<transformRace>saviors</transformRace>
-    	</powerEffect>
-    </mod-append:race>
-
-    <!--/////// LEGION AVATAR //////-->
-
-    <mod-append:race name="avatarlegion">
-    		<maxHealth>150</maxHealth>
-    		<controllable>true</controllable>
-    		<canBurn>true</canBurn>
-    		<canSuffocate>false</canSuffocate>
-    		<fireDamageMultiplier>1</fireDamageMultiplier>
-    		<moveSpeedMultiplier>1.7</moveSpeedMultiplier>
-    		<damageMultiplier>2.7</damageMultiplier>
-    		<repairSpeed>2</repairSpeed>
-    		<suffocationModifier>0</suffocationModifier>
-    		<passiveHealAmount>10</passiveHealAmount>
-    		<passiveHealDelay>10</passiveHealDelay>
-    		<resistsMindControl>true</resistsMindControl>
-    		<animBase>rock</animBase>
-    		<defaultSkillLevel>2</defaultSkillLevel>
-    		<cloneLoseSkills>false</cloneLoseSkills>
-    		<skills>
-    			<piloting req="999"/>
-    			<engines req="999"/>
-    			<shields req="999"/>
-    			<weapons req="999"/>
-    			<repair req="999"/>
-    			<combat req="999"/>
-    		</skills>
-    		<deathSounds>
-    			<deathSound>avatarDeath1</deathSound>
-    			<deathSound>avatarDeath2</deathSound>
-    			<deathSound>avatarDeath3</deathSound>
-    			<deathSound>avatarDeath4</deathSound>
-    		</deathSounds>
-    		<repairSounds animSoundFrame="-1">
-    			<repairSound>shrikeRepair</repairSound>
-    		</repairSounds>
-    		<powerEffect>
-    			<cooldown>25</cooldown>
-    			<jumpCooldown>continue</jumpCooldown>
-    			<req>
-    				<aiDisabled/>
-    			</req>
-    			<buttonText>LIBERATE</buttonText>
-    			<tooltip>Every 25 seconds, the cognitive breaks free from its shackles and runs rampant.</tooltip>
-    			<cooldownColor r="226" g="40" b="0"/>
-    			<activateWhenReady>true</activateWhenReady>
-    			<transformRace>avatarlegiona</transformRace>
-    		</powerEffect>
-    </mod-append:race>
-
-    <mod-append:race name="avatarlegiona"> <!--automated-->
-    	<maxHealth>150</maxHealth>
-    	<controllable>false</controllable>
-    	<selectable>true</selectable>
-    	<canBurn>true</canBurn>
-    	<canSuffocate>false</canSuffocate>
-    	<fireDamageMultiplier>1</fireDamageMultiplier>
-    	<moveSpeedMultiplier>1.7</moveSpeedMultiplier>
-    	<damageMultiplier>2.7</damageMultiplier>
-    	<repairSpeed>2</repairSpeed>
-    	<suffocationModifier>0</suffocationModifier>
-    	<passiveHealAmount>10</passiveHealAmount>
-    	<passiveHealDelay>25</passiveHealDelay>
-    	<healSpeed>1</healSpeed>
-    	<resistsMindControl>true</resistsMindControl>
-    	<animBase>rock</animBase>
-    	<defaultSkillLevel>2</defaultSkillLevel>
-    	<cloneLoseSkills>false</cloneLoseSkills>
-    	<skills>
-    		<piloting req="999"/>
-    		<engines req="999"/>
-    		<shields req="999"/>
-    		<weapons req="999"/>
-    		<repair req="999"/>
-    		<combat req="999"/>
-    	</skills>
-    	<deathSounds>
-    		<deathSound>avatarDeath1</deathSound>
-    		<deathSound>avatarDeath2</deathSound>
-    		<deathSound>avatarDeath3</deathSound>
-    		<deathSound>avatarDeath4</deathSound>
-    	</deathSounds>
-    	<repairSounds animSoundFrame="-1">
-    		<repairSound>shrikeRepair</repairSound>
-    	</repairSounds>
-    	<powerEffect>
-    		<cooldown>25</cooldown>
-    		<jumpCooldown>continue</jumpCooldown>
-    		<req>
-    			<aiDisabled/>
-    		</req>
-    		<buttonText>CONTROL</buttonText>
-    		<tooltip>Every 25 seconds, the cognitive breaks free from its shackles and runs rampant.</tooltip>
-    		<cooldownColor r="226" g="40" b="0"/>
-    		<activateWhenReady>true</activateWhenReady>
-    		<transformRace>avatarlegion</transformRace>
-    	</powerEffect>
-    </mod-append:race>
-
-    <mod-append:race name="void_drain">
-    	<maxHealth>100</maxHealth>
-    	<repairSpeed>0</repairSpeed>
-    	<canFight>false</canFight>
-    	<canRepair>false</canRepair>
-    	<canSabotage>false</canSabotage>
-    	<canSuffocate>false</canSuffocate>
-    	<fireDamageMultiplier>0</fireDamageMultiplier>
-    	<canMan>false</canMan>
-    	<noClone>true</noClone>
-    	<noSlot>true</noSlot>
-    	<noAi>true</noAi>
-    	<controllable>false</controllable>
-    	<canTeleport>false</canTeleport>
-    	<resistsMindControl>true</resistsMindControl>
-    	<selectable>false</selectable>
-    	<canPhaseThroughDoors>true</canPhaseThroughDoors>
-    	<moveSpeedMultiplier>0.00</moveSpeedMultiplier>
-    	<sabotageSpeedMultiplier>0.0</sabotageSpeedMultiplier>
-    	<damageMultiplier>0</damageMultiplier>
-    	<damageTakenMultiplier>0.0</damageTakenMultiplier>
-    	<animBase>mantis</animBase>
-    	<deathSounds>
-    		<deathSound>energyDeath</deathSound>
-    	</deathSounds>
-    	<shootingSounds>
-    		<shootingSound>mantisSpit1</shootingSound>
-    		<shootingSound>mantisSpit2</shootingSound>
-    		<shootingSound>mantisSpit3</shootingSound>
-    	</shootingSounds>
-    	<passiveStatBoosts>
-    		<statBoost name="powerDrain">
-    			<boostType>FLAT</boostType>
-    			<amount>1</amount>
-    			<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
-    			<crewTarget>ALLIES</crewTarget>
-    			<priority>0</priority>
-    			<affectsSelf>true</affectsSelf>
-    			<whiteList>
-    				<void_drain/>
-    			</whiteList>
-    		</statBoost>
-    		<statBoost name="trueHealAmount">
-    			<boostType>FLAT</boostType>
-    			<amount>-20</amount>
-    			<shipTarget>CURRENT_ROOM</shipTarget>
-    			<crewTarget>ENEMIES</crewTarget>
-    			<droneTarget>DRONES</droneTarget>
-    			<affectsSelf>false</affectsSelf>
-    			<maxStacks>1</maxStacks>
-    		</statBoost>
-    	</passiveStatBoosts>
-    </mod-append:race>
-
-    <!--/////// RC LD BOMB DRONE //////-->  
-    <mod-append:race name="rc_ld">
-      <controllable>true</controllable>
-      <maxHealth>15</maxHealth>
-      <canFight>false</canFight>
-      <canRepair>false</canRepair>
-      <canMan>false</canMan>
-      <canSabotage>false</canSabotage>
-      <canBurn>false</canBurn>
-      <canSuffocate>false</canSuffocate>
-      <stunMultiplier>0</stunMultiplier>
-      <noSlot>true</noSlot>
-      <hasDeathExplosion>true</hasDeathExplosion>
-      <deathSounds>
-        <deathSound>boomerDeath</deathSound>
-      </deathSounds>
-      <deathEffect>
-        <persDamage>3</persDamage>
-        <sysDamage>1</sysDamage>
-        <friendlyFire>true</friendlyFire>
-        <shipFriendlyFire>true</shipFriendlyFire>
-      </deathEffect>
-      <passiveStatBoosts>     
-      	<statBoost name="trueHealAmount"> <!--prevents teleporting back-->
-					<boostType>FLAT</boostType>
-					<amount>-999</amount>
-					<affectsSelf>true</affectsSelf>
-					<shipTarget>PLAYER_SHIP</shipTarget>
-					<crewTarget>ALL</crewTarget>
-					<priority>9999</priority>
-					<whiteList>
-						<rc_ld/>
-					</whiteList>
-        </statBoost>
-      </passiveStatBoosts>
-    </mod-append:race>
+</mod:findlike>
 
 
 
-  </mod:findLike>
+<mod:findLike type="reqs">
+	<mod:findName name="LIST_UPG_ALL">
+		<mod-append:name>UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER</mod-append:name>
+		<mod-append:name>TC_CLONEBAY_NOLOSS</mod-append:name>
+		<mod-append:name>CREW_UPGRADER</mod-append:name>
+	</mod:findName>
+</mod:findLike>
 
-	<!--
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	AUGMENTS
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
+<!--AUGMENTS-->
 <!--/////////////////////////////////////////////CUSTOM INTERNAL UPGRADES//////////////////////////////////////////////////////////-->
 
-<aug name="TC_CLONEBAY_NOLOSS">
-	<statboost>
+<augments>
+	<aug name="TC_CLONEBAY_NOLOSS">
 		<statBoost name="cloneLoseSkills">
-		<boostType>SET</boostType>
-		<value>false</value>
-		<shipTarget>ALL</shipTarget>
-		<crewTarget>ALLIES</crewTarget>
-		<priority>999</priority>
-	</statBoost>
-</aug>
+			<boostType>SET</boostType>
+			<value>false</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+		</statBoost>
+	</aug>
 
-<aug name="UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER">
-	<statBoost name="damageMultiplier">
-		<boostType>MULT</boostType>
-		<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
-		<crewTarget>ALLIES</crewTarget>
-		<droneTarget>CREW</droneTarget>
-		<amount>1.25</amount>
-		<priority>0</priority>
-		<systemPowerDependency>
-			<teleporter />
-		</systemPowerDependency>
-		<systemPowerScaling>
-			<noSys>0</noSys>
-			<noPwr>0</noPwr>
-			<onePwr>1</onePwr>
-		</systemPowerScaling>
-	</statBoost>
-	
-	<statBoost name="sabotageSpeedMultiplier">
-		<boostType>MULT</boostType>
-		<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
-		<crewTarget>ALLIES</crewTarget>
-		<droneTarget>CREW</droneTarget>
-		<amount>1.35</amount>
-		<priority>0</priority>
-		<systemPowerDependency>
-			<teleporter />
-		</systemPowerDependency>
-		<systemPowerScaling>
-			<noSys>0</noSys>
-			<noPwr>0</noPwr>
-			<onePwr>1</onePwr>
-		</systemPowerScaling>
-	</statBoost>
-</aug>
+	<aug name="UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER">
+		<statBoost name="damageMultiplier">
+			<boostType>MULT</boostType>
+			<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<amount>1.25</amount>
+			<priority>0</priority>
+			<systemPowerDependency>
+				<teleporter />
+			</systemPowerDependency>
+			<systemPowerScaling>
+				<noSys>0</noSys>
+				<noPwr>0</noPwr>
+				<onePwr>1</onePwr>
+			</systemPowerScaling>
+		</statBoost>
+		
+		<statBoost name="sabotageSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<amount>1.35</amount>
+			<priority>0</priority>
+			<systemPowerDependency>
+				<teleporter />
+			</systemPowerDependency>
+			<systemPowerScaling>
+				<noSys>0</noSys>
+				<noPwr>0</noPwr>
+				<onePwr>1</onePwr>
+			</systemPowerScaling>
+		</statBoost>
+	</aug>
 
-	<augments>
-		<aug name="ANTI_ANAEROBIC_GRID">
-  		<statBoosts>
-  			<statBoost name="trueHealAmount">
-  				<boostType>FLAT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ENEMIES</crewTarget>
-  				<droneTarget>CREW</droneTarget>
-  				<whiteList>
-  					<engi_separatist_nano/>
-  					<orchid_chieftain/>
-  					<blueprintList load="LIST_CREW_GHOST"/>
-  					<blueprintList load="LIST_CREW_LANIUS"/>
-  					<blueprintList load="LIST_CREW_ANCIENT"/>
-  					<blueprintList load="LIST_CREW_SCRAPPER"/>
-  					<blueprintList load="LIST_CREW_MORPH"/>
-  				</whiteList>
-  				<amount>-2</amount>
-  				<priority>0</priority>
-  				<systemPowerDependency>
-  					<oxygen/>
-  				</systemPowerDependency>
-  				<systemPowerScaling>
-  						<noSys>0</noSys>
-  						<noPwr>2</noPwr>
-  						<onePwr>3</onePwr>
-  						<twoPwr>4</twoPwr>
-  						<threePwr>5</threePwr>
-  						<fourPwr>6</fourPwr>
-  						<fivePwr>7</fivePwr>
-  						<sixPwr>8</sixPwr>
-  						<sevenPwr>9</sevenPwr>
-  						<eightPwr>10</eightPwr>
-  						<ninePwr>11</ninePwr>
-  						<tenPwr>12</tenPwr>
-  						<elevenPwr>13</elevenPwr>
-  						<twelvePwr>14</twelvePwr>
-  						<thirteenPwr>15</thirteenPwr>
-  						<fourteenPwr>16</fourteenPwr>
-  						<fifteenPwr>17</fifteenPwr>
-  						<sixteenPwr>18</sixteenPwr>
-  						<seventeenPwr>19</seventeenPwr>
-  						<eighteenPwr>20</eighteenPwr>
-  						<nineteenPwr>21</nineteenPwr>
-  						<twentyPwr>22</twentyPwr>
-  						<twentyonePwr>23</twentyonePwr>
-  						<twentytwoPwr>24</twentytwoPwr>
-  						<twentythreePwr>25</twentythreePwr>
-  						<twentyfourPwr>26</twentyfourPwr>
-  						<twentyfivePwr>27</twentyfivePwr>
-  						<twentysixPwr>28</twentysixPwr>
-  						<twentysevenPwr>29</twentysevenPwr>
-  						<twentyeightPwr>30</twentyeightPwr>
-  						<twentyninePwr>31</twentyninePwr>
-  						<thirtyPwr>32</thirtyPwr>
-  				</systemPowerScaling>
-  			</statBoost>
-  		</statBoosts>
-    </aug>
+	<aug name="CREW_UPGRADER">
+		<statBoosts>
+			<statBoost name="damageMultiplier">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.01</amount>
+				<priority>0</priority>
+				<systemPowerDependency>
+					<teleporter />
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0</noSys>
+					<noPwr>0</noPwr>
+					<onePwr>1</onePwr>
+					<twoPwr>2</twoPwr>
+					<threePwr>3</threePwr>
+					<fourPwr>4</fourPwr>
+					<fivePwr>5</fivePwr>
+				</systemPowerScaling>
+			</statBoost>
+			
+			<statBoost name="sabotageSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.01</amount>
+				<priority>0</priority>
+				<systemPowerDependency>
+					<teleporter />
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0</noSys>
+					<noPwr>0</noPwr>
+					<onePwr>1</onePwr>
+					<twoPwr>2</twoPwr>
+					<threePwr>3</threePwr>
+					<fourPwr>4</fourPwr>
+					<fivePwr>5</fivePwr>
+				</systemPowerScaling>
+			</statBoost>
+			
+			<statBoost name="maxHealth">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.01</amount>
+				<priority>0</priority>
+				<systemPowerDependency>
+					<teleporter />
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0</noSys>
+					<noPwr>0</noPwr>
+					<onePwr>1</onePwr>
+					<twoPwr>2</twoPwr>
+					<threePwr>3</threePwr>
+					<fourPwr>4</fourPwr>
+					<fivePwr>5</fivePwr>
+				</systemPowerScaling>
+			</statBoost>
 
-  	<aug name="SALVAGE_ARRAY">
-  	   	<function name="REPAIR_ARM" value="0.1" useForReqs="false" warning="false"/>
-  		<function name="SCRAP_COLLECTOR" value="0.3" useForReqs="false"/>
-  	</aug>
+			<statBoost name="healSpeed">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.01</amount>
+				<priority>0</priority>
+				<systemPowerDependency>
+					<teleporter />
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0</noSys>
+					<noPwr>0</noPwr>
+					<onePwr>1</onePwr>
+					<twoPwr>2</twoPwr>
+					<threePwr>3</threePwr>
+					<fourPwr>4</fourPwr>
+					<fivePwr>5</fivePwr>
+				</systemPowerScaling>
+			</statBoost>
+			
+			<statBoost name="trueHealAmount">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.01</amount>
+				<priority>0</priority>
+				<systemPowerDependency>
+					<teleporter />
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0</noSys>
+					<noPwr>0</noPwr>
+					<onePwr>1</onePwr>
+					<twoPwr>2</twoPwr>
+					<threePwr>3</threePwr>
+					<fourPwr>4</fourPwr>
+					<fivePwr>5</fivePwr>
+				</systemPowerScaling>
+			</statBoost>
+			
+			<statBoost name="repairSpeed">
+				<boostType>MULT</boostType>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<amount>1.01</amount>
+				<priority>0</priority>
+				<systemPowerDependency>
+					<teleporter />
+				</systemPowerDependency>
+				<systemPowerScaling>
+					<noSys>0</noSys>
+					<noPwr>0</noPwr>
+					<onePwr>1</onePwr>
+					<twoPwr>2</twoPwr>
+					<threePwr>3</threePwr>
+					<fourPwr>4</fourPwr>
+					<fivePwr>5</fivePwr>
+				</systemPowerScaling>
+			</statBoost>
+		</statBoosts>
+	</aug>
 
-  	<aug name="MERCURY_GEL">
-  		<function name="SLUG_GEL" value="0.50" useForReqs="false"/>
-
-  		<statBoosts>
-  			<statBoost name="healAmount">
-  				<boostType>FLAT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<droneTarget>CREW</droneTarget>
-  				<amount>1.6</amount>
-  				<priority>0</priority>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
-
-	
 	<!--//////////////////CREW UPGRADER LAB UPGRADES//////////////-->
-	
+
 <aug name="LAB_CREW_UPGRADER_HEALTH">
 	<statboosts>
 		<statBoost name="maxHealth">
@@ -6447,10 +2778,10 @@ SPEED          Changes gamespeed
 	</statBoost>
 </aug>
 	
-<aug name="LAB_SCRAPPER_STRAP_TELEPORTERS_TO_THEM">
+<aug name="LAB_SCRAPPER_STRAP_TELEPORTERS_TO_THEM"> <!--NEEDS FINISHED-->
 </aug>
 	
-<aug name="LAB_SCRAPPER_METALLIC_SIPHON">
+<aug name="LAB_SCRAPPER_METALLIC_SIPHON"> <!--NEEDS FINISHED-->
 	<statBoost name="powerEffect">
 		<boostType>FLAT</boostType>
 		<shipTarget>ALL</shipTarget>
@@ -6470,593 +2801,173 @@ SPEED          Changes gamespeed
 </aug>
 	
 
-    <!--//////////////////PROTOGEN LAB UPGRADES//////////////-->
+<!--//////////////////PROTOGEN LAB UPGRADES//////////////--> <!--KEEP AND REWORK; NEED TO CREATE STORAGE EVENTS FOR-->
 
-  	<aug name="LAB_PROTOGEN_AWARENESS">
-  		<statBoosts>
-  			<statBoost name="cloneLoseSkills">
-  				<boostType>SET</boostType>
-  				<value>true</value>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>
-  			<statBoost name="isTelepathic">
-  				<boostType>SET</boostType>
-  				<value>true</value>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>
-  			<statBoost name="resistsMindControl">
-  				<boostType>SET</boostType>
-  				<value>true</value>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
+<aug name="LAB_PROTOGEN_AWARENESS">
+	<statBoosts>
+		<statBoost name="cloneLoseSkills">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+		<statBoost name="isTelepathic">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+		<statBoost name="resistsMindControl">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+	</statBoosts>
+</aug>
 
-  	<aug name="LAB_PROTOGEN_BOOP">
-  		<statBoosts>
-  			<statBoost name="powerEffect">
-  				<boostType>SET</boostType>
-  				<powerEffect>
-  					<cooldown>25</cooldown>
-  					<jumpCooldown>full</jumpCooldown>
-  					<buttonText>Boop</buttonText>
-  					<tooltip>Ready: Multiply the movement speed and damage of all allied crew in the same room by 1.5 for 10 seconds.</tooltip>
-  					<cooldownColor r="100" g="187" b="130"/>
-  					<temporaryEffect>
-  						<duration>10</duration>
-  						<cooldownColor r="80" g="230" b="110"/>
-  						<statBoosts>
-  							<statBoost name="moveSpeedMultiplier">
-  								<boostType>MULT</boostType>
-  								<amount>1.5</amount>
-  								<shipTarget>CURRENT_ROOM</shipTarget>
-  								<crewTarget>ALLIES</crewTarget>
-  								<affectsSelf>true</affectsSelf>
-  							</statBoost>
-  							<statBoost name="damageMultiplier">
-  								<boostType>MULT</boostType>
-  								<amount>1.5</amount>
-  								<shipTarget>CURRENT_ROOM</shipTarget>
-  								<crewTarget>ALLIES</crewTarget>
-  								<affectsSelf>true</affectsSelf>
-  								<boostAnim>pheromones_f</boostAnim>
-  							</statBoost>
-  						</statBoosts>
-  					</temporaryEffect>
-  					<powerSounds>
-  						<powerSound>batteryStart</powerSound>
-  					</powerSounds>
-  				</powerEffect>
+<aug name="LAB_PROTOGEN_BOOP">
+	<statBoosts>
+		<statBoost name="powerEffect">
+			<boostType>SET</boostType>
+			<powerEffect>
+				<cooldown>25</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<buttonText>Boop</buttonText>
+				<tooltip>Ready: Multiply the movement speed and damage of all allied crew in the same room by 1.5 for 10 seconds.</tooltip>
+				<cooldownColor r="100" g="187" b="130"/>
+				<temporaryEffect>
+					<duration>10</duration>
+					<cooldownColor r="80" g="230" b="110"/>
+					<statBoosts>
+						<statBoost name="moveSpeedMultiplier">
+							<boostType>MULT</boostType>
+							<amount>1.5</amount>
+							<shipTarget>CURRENT_ROOM</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>true</affectsSelf>
+						</statBoost>
+						<statBoost name="damageMultiplier">
+							<boostType>MULT</boostType>
+							<amount>1.5</amount>
+							<shipTarget>CURRENT_ROOM</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>true</affectsSelf>
+							<boostAnim>pheromones_f</boostAnim>
+						</statBoost>
+					</statBoosts>
+				</temporaryEffect>
+				<powerSounds>
+					<powerSound>batteryStart</powerSound>
+				</powerSounds>
+			</powerEffect>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+	</statBoosts>
+</aug>
+	
+<aug name="LAB_PROTOGEN_OXYGEN">
+	<statBoosts>
+		<statBoost name="canSuffocate">
+			<boostType>SET</boostType>
+			<value>false</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+	</statBoosts>
+</aug>
 
-  				<shipTarget>ALL</shipTarget>
-          <crewTarget>ALLIES</crewTarget>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
-  	<aug name="LAB_PROTOGEN_OXYGEN">
-  		<statBoosts>
-  			<statBoost name="canSuffocate">
-  				<boostType>SET</boostType>
-  				<value>false</value>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
+<aug name="LAB_PROTOGEN_SIPHONS">
+	<statBoosts>
+		<statBoost name="powerDrain">
+			<boostType>FLAT</boostType>
+			<amount>1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+		<!--<statBoost name="powerDrainFriendly">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>-->
+	<!--PLACEHOLDER BUFF-->
+		<statBoost name="maxHealth">
+			<boostType>MULT</boostType>
+			<amount>999</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+			<systemRoomTarget>ALL</systemRoomTarget>
+			<systemList>
+				<all/>
+			</systemList>
+		</statBoost>
 
-  	<aug name="LAB_PROTOGEN_SIPHONS">
-  		<statBoosts>
-  			<statBoost name="powerDrain">
-  				<boostType>FLAT</boostType>
-  				<amount>1</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>
-  			<!--<statBoost name="powerDrainFriendly">
-  				<boostType>SET</boostType>
-  				<value>true</value>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>-->
-        <!--PLACEHOLDER BUFF-->
-  			<statBoost name="maxHealth">
-  				<boostType>MULT</boostType>
-  				<amount>999</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  				<systemRoomTarget>ALL</systemRoomTarget>
-  				<systemList>
-  					<all/>
-  				</systemList>
-  			</statBoost>
+	</statBoosts>
+</aug>
 
-  		</statBoosts>
-  	</aug>
-
-  	<aug name="LAB_PROTOGEN_HEAVY">
-  		<statBoosts>
-  				<statBoost name="damageTakenMultiplier">
-  					<boostType>MULT</boostType>
-  					<amount>0.7</amount>
-  					<shipTarget>ALL</shipTarget>
-  					<crewTarget>ALLIES</crewTarget>
-  					<priority>999</priority>
-  					<whiteList load="LIST_CREW_PROTOGEN"/>
-  				</statBoost>
-  				<statBoost name="moveSpeedMultiplier">
-  					<boostType>MULT</boostType>
-  					<amount>0.66</amount>
-  					<shipTarget>ALL</shipTarget>
-  					<crewTarget>ALLIES</crewTarget>
-  					<priority>999</priority>
-  					<whiteList load="LIST_CREW_PROTOGEN"/>
-  				</statBoost>
-  			</statBoosts>
-  	</aug>
+<aug name="LAB_PROTOGEN_HEAVY">
+	<statBoosts>
+		<statBoost name="damageTakenMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.7</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.66</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>999</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+	</statBoosts>
+</aug>
 
 
-  	<aug name="LAB_PROTOGEN_TEAMWORK">
-  		<statBoosts>
-  			<statBoost name="statBoost">
+<aug name="LAB_PROTOGEN_TEAMWORK">
+	<statBoosts>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>1.15</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+		<statBoost name="damageMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.15</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_PROTOGEN"/>
+		</statBoost>
+	</statBoosts>
+</aug>
+</augments>
 
-  					<statBoost name="repairSpeed">
-                      <boostType>MULT</boostType>
-                      <amount>1.15</amount>
-                      <shipTarget>CURRENT_ROOM</shipTarget>
-                      <crewTarget>ALLIES</crewTarget>
-                      <affectsSelf>false</affectsSelf>
-                      <priority>0</priority>
-  										<whiteList load="LIST_CREW_PROTOGEN"/>
-          				</statBoost>
-
-  				<shipTarget>ALL</shipTarget>
-          <crewTarget>ALLIES</crewTarget>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>
-  			<statBoost name="statBoost">
-
-  								<statBoost name="damageMultiplier">
-                      <boostType>MULT</boostType>
-                      <amount>1.15</amount>
-                      <shipTarget>CURRENT_ROOM</shipTarget>
-                      <crewTarget>ALLIES</crewTarget>
-                      <affectsSelf>false</affectsSelf>
-                      <priority>0</priority>
-  										<whiteList load="LIST_CREW_PROTOGEN"/>
-          				</statBoost>
-
-  				<shipTarget>ALL</shipTarget>
-          <crewTarget>ALLIES</crewTarget>
-  				<whiteList load="LIST_CREW_PROTOGEN"/>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
-
-    <!--//////////////////AVALI LAB UPGRADES//////////////-->
-
-  	<aug name="LAB_AVALI_FLAMECLOAKS">
-  		<statBoosts>
-  			<statBoost name="fireDamageMultiplier">
-  				<boostType>MULT</boostType>
-  				<amount>0.65</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="fireRepairMultiplier">
-  				<boostType>MULT</boostType>
-  				<amount>1.8</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
-
-  	<aug name="LAB_AVALI_INSTALLED">
-  		<statBoosts>
-  			<statBoost name="fireDamageMultiplier">
-  				<boostType>MULT</boostType>
-  				<amount>1.0</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
-
-  	<aug name="LAB_AVALI_DENSEFLUFF">
-  		<statBoosts>
-  			<statBoost name="fireDamageMultiplier">
-  				<boostType>MULT</boostType>
-  				<amount>1.50</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</statBoosts>
-  		<statBoost name="moveSpeedMultiplier">
-  			<boostType>MULT</boostType>
-  			<amount>0.7</amount>
-  			<shipTarget>ALL</shipTarget>
-  			<crewTarget>ALLIES</crewTarget>
-  			<priority>999</priority>
-  			<whiteList>
-  				<avali />
-  				<avali_illuminant />
-  				<tori />
-  				<technician />
-				<polyester />
-  			</whiteList>
-  		</statBoost>
-  		<statBoost name="damageTakenMultiplier">
-  			<boostType>MULT</boostType>
-  			<amount>0.8</amount>
-  			<shipTarget>ALL</shipTarget>
-  			<crewTarget>ALLIES</crewTarget>
-  			<priority>999</priority>
-  			<whiteList>
-  				<avali />
-  				<avali_illuminant />
-  				<tori />
-  				<technician />
-				<polyester />
-  			</whiteList>
-  		</statBoost>
-  	</aug>
-
-  	<aug name="EX_LAB_AVALI_NOCLONEXP">
-  		<statBoosts>
-  			<statBoost name="fireDamageMultiplier">
-  				<boostType>MULT</boostType>
-  				<amount>0.70</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-				    <polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="suffocationModifier">
-  				<boostType>MULT</boostType>
-  				<amount>0.70</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="stunMultiplier">
-  				<boostType>MULT</boostType>
-  				<amount>0.70</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="cloneLoseSkills">
-  				<boostType>SET</boostType>
-  				<value>false</value>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>999</priority>
-  				<whiteList>
-  					<avali />
-  					<avali_illuminant />
-  					<tori />
-  					<technician />
-					<polyester />
-  				</whiteList>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
-
-  	<aug name="LAB_AVALI_NOCLONEXP">
-  		<statBoosts>
-  			<statBoost name="statBoost">
-  				<statBoost name="damageMultiplier">
-  					<boostType>FLAT</boostType>
-  					<amount>0.10</amount>
-  					<shipTarget>CURRENT_ROOM</shipTarget>
-  					<crewTarget>ALLIES</crewTarget>
-  					<affectsSelf>false</affectsSelf>
-  					<priority>0</priority>
-  					<whiteList>
-  						<avali />
-  						<avali_illuminant />
-  						<tori />
-  						<technician />
-						<polyester />
-  					</whiteList>
-  				</statBoost>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="statBoost">
-  				<statBoost name="damageMultiplier">
-  					<boostType>FLAT</boostType>
-  					<amount>0.05</amount>
-  					<shipTarget>CURRENT_ALL</shipTarget>
-  					<crewTarget>ALLIES</crewTarget>
-  					<affectsSelf>false</affectsSelf>
-  					<priority>0</priority>
-  					<whiteList>
-  						<avali />
-  						<avali_illuminant />
-  						<tori />
-  						<technician />
-						<polyester />
-  					</whiteList>
-  				</statBoost>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="damageMultiplier">
-  				<boostType>FLAT</boostType>
-  				<amount>-0.4</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="statBoost">
-  				<statBoost name="maxHealth">
-  					<boostType>FLAT</boostType>
-  					<amount>10</amount>
-  					<shipTarget>CURRENT_ROOM</shipTarget>
-  					<crewTarget>ALLIES</crewTarget>
-  					<affectsSelf>false</affectsSelf>
-  					<priority>0</priority>
-  					<whiteList>
-  						<avali />
-  						<avali_illuminant />
-  						<tori />
-  						<technician />
-						<polyester />
-  					</whiteList>
-  				</statBoost>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="statBoost">
-  				<statBoost name="maxHealth">
-  					<boostType>FLAT</boostType>
-  					<amount>5</amount>
-  					<shipTarget>CURRENT_ALL</shipTarget>
-  					<crewTarget>ALLIES</crewTarget>
-  					<affectsSelf>false</affectsSelf>
-  					<priority>0</priority>
-  					<whiteList>
-  						<avali />
-  						<avali_illuminant />
-  						<tori />
-  						<technician />
-						<polyester />
-  					</whiteList>
-  				</statBoost>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="maxHealth">
-  				<boostType>FLAT</boostType>
-  				<amount>-35</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="statBoost">
-  				<statBoost name="repairSpeed">
-  					<boostType>FLAT</boostType>
-  					<amount>0.15</amount>
-  					<shipTarget>CURRENT_ROOM</shipTarget>
-  					<crewTarget>ALLIES</crewTarget>
-  					<affectsSelf>false</affectsSelf>
-  					<priority>0</priority>
-  					<whiteList>
-  						<avali />
-  						<avali_illuminant />
-  						<tori />
-  						<technician />
-						<polyester />
-  					</whiteList>
-  				</statBoost>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="statBoost">
-  				<statBoost name="repairSpeed">
-  					<boostType>FLAT</boostType>
-  					<amount>0.10</amount>
-  					<shipTarget>CURRENT_ALL</shipTarget>
-  					<crewTarget>ALLIES</crewTarget>
-  					<affectsSelf>false</affectsSelf>
-  					<priority>0</priority>
-  					<whiteList>
-  						<avali />
-  						<avali_illuminant />
-  						<tori />
-  						<technician />
-						<polyester />
-  					</whiteList>
-  				</statBoost>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  			<statBoost name="repairSpeed">
-  				<boostType>FLAT</boostType>
-  				<amount>-0.6</amount>
-  				<shipTarget>ALL</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<affectsSelf>false</affectsSelf>
-  				<priority>0</priority>
-  				<whiteList>
-  					<avali />
-  				</whiteList>
-  			</statBoost>
-  		</statBoosts>
-  	</aug>
-
-  	<aug name="SAVIOR_SHIELD">
-  		<function name="SHIELD_RECHARGE" value="0.15" useForReqs="false" warning="false"/>
-  		<superShield>
-  			<value>5</value>
-  			<color r="125" g="147" b="255" a="1.0"/>
-  			<shieldImage>ship/enemy_shields_white.png</shieldImage>
-  		</superShield>
-  				<statBoosts>
-  			<statBoost name="passiveHealAmount">
-  				<boostType>FLAT</boostType>
-  				<amount>2</amount>
-  				<shipTarget>ORIGINAL_OTHER_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>0</priority>
-  			</statBoost>
-
-  			<statBoost name="passiveHealAmount">
-  				<boostType>FLAT</boostType>
-  				<amount>8</amount>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ALLIES</crewTarget>
-  				<priority>0</priority>
-  			</statBoost>
-  						<statBoost name="trueHealAmount">
-  				<boostType>FLAT</boostType>
-  				<shipTarget>ORIGINAL_SHIP</shipTarget>
-  				<crewTarget>ENEMIES</crewTarget>
-  				<droneTarget>ALL</droneTarget>
-  				<amount>-4</amount>
-  				<priority>0</priority>
-  				<systemPowerDependency>
-  					<sensors/>
-  				</systemPowerDependency>
-  				<systemPowerScaling>
-  					<noSys>0</noSys>
-  					<noPwr>0</noPwr>
-  					<onePwr>1</onePwr>
-  					<twoPwr>1.3</twoPwr>
-  					<threePwr>1.7</threePwr>
-  					<fourPwr>2</fourPwr>
-  				</systemPowerScaling>
-  			</statBoost>
-  				</statBoosts>
-  	</aug>
-
-  	<aug name="REGEN_SHIELD">
-  		<function name="SHIELD_RECHARGE" value="1000" useForReqs="false" warning="false"/>
-  		<superShield>
-  			<value>1</value>
-  			<color r="255" g="0" b="106" a="1.0"/>
-  			<shieldImage>ship/enemy_shields_white.png</shieldImage>
-  		</superShield>
-  	</aug>
-
-  	<aug name="FALSE_SHIELD">
-  			<function name="WEAPON_PREIGNITE" value="1" useForReqs="false"/>
-  			<function name="AUTO_COOLDOWN" value="-0.1" useForReqs="false"/>
-  			<superShield>
-  				<value>5</value>
-  				<color r="226" g="40" b="0" a="1.0"/>
-  				<shieldImage>ship/enemy_shields_white.png</shieldImage>
-  			</superShield>
-  	</aug>
-
-  	<aug name="LEGION_LOADER">
-  			<function name="AUTO_COOLDOWN" value="0.20" useForReqs="false" warning="false"/>
-  			<function name="SHIELD_RECHARGE" value="0.20" useForReqs="false" warning="false"/>
-  			<function name="FTL_BOOSTER" value="0.20" useForReqs="true" warning="false"/>
-  	</aug>
-
-		<aug name="BEAM_ARMOR">
-			<crystalShard weapon="FOCUS_1_LEAH_VENGEANCE" value="1" stackable="false"/>
-		</aug>
-
-	</augments>
 	<mod:findLike type="events">
 		<mod:findName name="LIST_CHECK_AUGMENTS">
 			<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
@@ -7081,59 +2992,6 @@ SPEED          Changes gamespeed
   	<bossShip>TC_TRASH_COMPACTOR5</bossShip>
   	<bossShip>TC_TRASH_COMPACTOR6</bossShip>
   	<bossShip>TC_TRASH_MINER</bossShip>
-  	<bossShip>RSA_DROPSHIP</bossShip>
 	</events>
 
-	<!--
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	SURGE
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-	<surgeDrones name="FLAK_CREATE">
-		<!--EASY-->
-		<drone difficulty="0" name="DEFENSE_1" count="40"/>
-		<!--MEDIUM-->
-		<drone difficulty="1" name="DEFENSE_1" count="40"/>
-		<!--HARD-->
-		<drone difficulty="2" name="DEFENSE_1" count="40"/>
-	</surgeDrones>
-
-
-	<!--
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	LAB AUGMENTS & VARIABLES
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-  <!--vars-->
-	<events>
-		<variable name="tcc_labs_robotto_installed" op="set" val="0"/>
-		<variable name="tcc_labs_scrapper_installed" op="set" val="0"/>
-	</events>
-
-	<!--augments-->
-	<mod:findLike type="augments">
-
-		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE1">
-
-		</mod-append:aug>
-		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE2">
-
-		</mod-append:aug>
-		<mod-append:aug name="LAB_TCC_ROBOTTO_UPGRADE3">
-
-		</mod-append:aug>
-		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE1">
-
-		</mod-append:aug>
-		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE2">
-
-		</mod-append:aug>
-		<mod-append:aug name="LAB_TCC_SCRAPPER_UPGRADE3">
-
-		</mod-append:aug>
-	</mod:findLike>
 </FTL>

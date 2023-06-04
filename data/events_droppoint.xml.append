@@ -52,11 +52,5 @@
     </choice>
 </event>
 
-<mod:findName type="event" name="START_BEACON_PRESELECT">
-    <mod-append:choice req="FALSE_SHIELD" max_group="600" hidden="true">
-	    <text>Activate your shield's Prototype Aether Batteries. (Energy Shield Recharge)</text>
-		<event load="FALSE_SHIELD_TRACKER"/>
-	</mod-append:choice>
-</mod:findName>
 
 </FTL>

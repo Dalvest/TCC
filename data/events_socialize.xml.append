@@ -1,25 +1,16 @@
 <FTL>
 
-<!--> todo list:
-<<<<<<< Updated upstream
+<!-- todo list:
+ Updated upstream
 	<mod-append:name>trash_eater</mod-append:name>				status: done
     <mod-append:name>protogen_tracker</mod-append:name>			status: done
     <mod-append:name>primagen_raptor</mod-append:name>			status: not started
     <mod-append:name>clonefail_lancer</mod-append:name>			status: not started
-    <mod-append:name>unique_kora</mod-append:name>				status: not started
     <mod-append:name>sergal_cheese</mod-append:name>			status: not started
-    <mod-append:name>unique_black_rose</mod-append:name>		status: not started
-    <mod-append:name>unique_leah_mfk</mod-append:name>			status: not started
-    <mod-append:name>unique_skygirr</mod-append:name>			status: done
-
 	not crucial as of now:
 	<mod-append:name>protogen_pete</mod-append:name>			status: not started
-	<mod-append:name>polyester</mod-append:name>				status: not started
 	<mod-append:name>protogen_space_scavenger</mod-append:name>	status: not started
-
->>>>>>> Stashed changes
-<-->
-
+-->
 <!--
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -315,152 +306,21 @@ The Mantis looks confident. Probably feeling that he's asserted his dominance.
 																							   W/P.E.T.E.
 ********************************************************************************************************************************************************************************************************************************************
 -->
+
 <event name="SOCIALIZE_TRACKER_PETE_1" unique="true">
-	<text>You find Tracker talking about piloting with P.E.T.E.;
-"You scallywag call yeself a pilot?" P.E.T.E. proclaims.
-"I'm a professional pilot, hostge taker, ship repair aficionade AND i take bribes! What do you have to say to that?"
-"A true pilot respects thy ship and is loyal to ye hearties, not thy booty, you scurvy dog."
-"Yeah, but... You gotta be a professional, you get what I'm laying down?"
-"Professionals 'ave standards, no pray, no pay, and dead men tell no tales."
-<choice hidden="true">
-	<text>Best to leave them be.</text>
-	<event>
-		<text>Walking away, you're pretty sure they haven't even noticed you, but their discussion can still be heard to halfway across the ship, the silence that followed persumably filled by internal joy of the rest of the crew.</text>
-	</event>
-</choice>
-	</text>
-</event>
-
-<!-- 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-									
-									AVALI
-									
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
--->
-
-<!-- 
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
-									SKYGIRR
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
--->
-
-<event name="SOCIALIZE_SKYGIRR_LIST">
-	<metaVariable name="prof_socialization" op="add" val="1"/>
-	<queueEvent>STORAGE_CHECK_CREW</queueEvent>
-	<loadEventList seeded="true" default="SOCIALIZE_SKYGIRR_NOTHING">
-		<event name="SOCIALIZE_SKYGIRR_GENERIC_1"/>
-		<event name="SOCIALIZE_SKYGIRR_GENERIC_2"/>
-		<event name="SOCIALIZE_SKYGIRR_GENERIC_3"/>
-		<event name="SOCIALIZE_SKYGIRR_GENERIC_4"/>
-		<event name="SOCIALIZE_SKYGIRR_GENERIC_5"/>
-	</loadEventList>
-</event>
-<event name="SOCIALIZE_SKYGIRR_NOTHING">
-	<text>You find Skygirr tinkering with what looks to be some very illegal and dangerous equipment. Given her tinkering's explosive tendencies you figure it might be best to not distract the engineer.</text>
-</event>
-
-<!-- 
-********************************************************************************************************************************************************************************************************************************************
-																							   GENERIC                                                                                         
-********************************************************************************************************************************************************************************************************************************************
--->
-
-<event name="SOCIALIZE_SKYGIRR_GENERIC_1" unique="true">
-	<text>You catch Skygirr getting a little... intimate... with some weapons equipment. You're fairly certain she noticed you, but doesn't appear to react, or stop. You swiftly leave the room, you did not want to witness whatever that was.</text>
-</event>
-<event name="SOCIALIZE_SKYGIRR_GENERIC_2" unique="true">
-	<text>Skygirr walks up to you and hands you an active missile they've put together, they seem pleased, even while you ensure to not make any sudden movements with this newly created explosive.</text>
-</event>
-<event name="SOCIALIZE_SKYGIRR_GENERIC_3" unique="true">
-	<text>You ask Skygirr where she found such a knack for handling less than stable equipment, she seems smug as she responds: 
-"It's a little risky, but it makes me feel alive! I've always loved the spectacle of these sorts of things, explosions, hails of bullets, fire, they're all so cool. So I've spent a lot of time working with stuff that can be the flashiest, sometimes it blows up in my face, sometimes it blows up at my enemies, it's about balance really."
-You don't get much insight into how she actually handles this type of equipment, but she's pleased with her answer nonetheless.</text>
-</event>
-<event name="SOCIALIZE_SKYGIRR_GENERIC_4" unique="true">
-	<text>Skygirr comes up to you, unusually concerned looking. "Captain, do you ever feel thoughts that dwell in the deep void of your mind? Like they're clawing their way in from somewhere else, maybe sometime else, even. I am having thoughts of things that don't exist." In an unusual display of seriousness, the Avali waits for a response.</text>
+	<text>You find Tracker talking about piloting with P.E.T.E.
+	"You scallywag call yeself a pilot?" P.E.T.E. proclaims.
+	"I'm a professional pilot, hostge taker, ship repair aficionade AND i take bribes! What do you have to say to that?"
+	"A true pilot respects thy ship and is loyal to ye hearties, not thy booty, you scurvy dog."
+	"Yeah, but... You gotta be a professional, you get what I'm laying down?"
+	"Professionals 'ave standards, no pray, no pay, and dead men tell no tales."</text>
 	<choice hidden="true">
-		<text>What are these about?</text>
+		<text>Best to leave them be.</text>
 		<event>
-			<text>You inquire on the specifics of her thoughts. "I'm not sure, they're such a fleeting feeling... Like people that don't exist, places that don't exist, at least, not here. Maybe they exist elsewhere? Perhaps the thoughts are coming in from other universes where they do, other dimensions, even." *She shakes her head, regaining some composure: "I'll never really know, maybe you will. Sometimes you feel so familiar, even though we've only met recently." She wanders off, still unusually reserved.</text>
+			<text>Walking away, you're pretty sure they haven't even noticed you, but their discussion can still be heard to halfway across the ship, the silence that followed persumably filled by internal joy of the rest of the crew.</text>
 		</event>
 	</choice>
-	<choice hidden="true">
-		<text>Oh, all the time.</text>
-		<event>
-			<text>You explain that you too have such thoughts, she seems only slightly relieved. "So that makes two of us? I guess that's company. Maybe I'll find out what they are about one day." She wanders off, still unusually reserved.</text>
-		</event>
-	</choice>
-	<choice hidden="true">
-		<text>You might need some rest.</text>
-		<event>
-			<text>She rubs her head, sighing. "You're right, it's probably just a lack of sleep. I'll go have some rest." She wanders off, still unusually reserved.</text>
-		</event>
-	</choice>
-</event>
-<event name="SOCIALIZE_SKYGIRR_GENERIC_5" unique="true">
-	<text>SKYGIRR has spilled a box of Earth-standard pistol ammunition all over the floor. It'll take some time for her to finish cleaning the resulting mess, although you muse she's after the propellent still inside the casings.</text>
-</event>
 
-<!--
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-									UNDEFINED CATAGORY?
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
--->
-
-<!-- 
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
-									BLACK ROSE
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
-[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
--->
-
-<event name="SOCIALIZE_BLACK_ROSE_LIST">
-	<metaVariable name="prof_socialization" op="add" val="1"/>
-	<queueEvent>STORAGE_CHECK_CREW</queueEvent>
-	<loadEventList seeded="true" default="SOCIALIZE_BLACK_ROSE_NOTHING">
-		<event name="SOCIALIZE_BLACK_ROSE_GENERIC_1"/>
-		<event name="SOCIALIZE_BLACK_ROSE_GENERIC_2"/>
-		<event name="SOCIALIZE_BLACK_ROSE_GENERIC_3"/>
-	</loadEventList>
-</event>
-<event name="SOCIALIZE_BLACK_ROSE_NOTHING">
-	<text>You see BLK-R053, currently idle, as a representatoin of a cat made from ascii art snoozes on the screen that normally displays her face.</text>
-</event>
-
-<!-- 
-********************************************************************************************************************************************************************************************************************************************
-																							   GENERIC                                                                                         
-********************************************************************************************************************************************************************************************************************************************
--->
-
-<event name="SOCIALIZE_BLACK_ROSE_GENERIC_1" unique="true">
-	<text>Rose is standing in front of a reflective surface, talking to seemingly nobody. "Hello, dear traveler, my name is BLK-R053. I am 'Percentage'% please to make your acquaintance."
-She keeps repeating this to herself, with only an ever so slight change in her tone of voice with every new attempt.</text>
-</event>
-<event name="SOCIALIZE_BLACK_ROSE_GENERIC_2" unique="true">
-	<text>You find Rose at work, mumbling the three laws of robotics to herself, already displaying 'XD' when vocalising the first, and straight up not able to completely say the second.</text>
-</event>
-<event name="SOCIALIZE_BLACK_ROSE_GENERIC_3" unique="true">
-	<text>Rose notices as you walk by. "The door was malfunctioning, so I went and spoke to the mainframe. Let's just say he won't be... living anymore."
-She glances over at the doorway she stood next to, a smiley face displaying on the screen she has for a face. "You are not just a regular morron. You were designed to be a morron."</text>
 </event>
 
 </FTL>

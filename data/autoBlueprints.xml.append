@@ -31,17 +31,6 @@
 	<mod-append:name>clonefail_lancer</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
 	<mod-append:name>sergal</mod-append:name>
-	<mod-append:name>unique_kora</mod-append:name>
-	<mod-append:name>avali</mod-append:name>
-	<mod-append:name>robottos</mod-append:name>
-	<mod-append:name>robottos_gunner</mod-append:name>
-	<mod-append:name>robottos_machinist</mod-append:name>
-	<mod-append:name>robottos_researcher</mod-append:name>
-	<mod-append:name>robottos_police</mod-append:name>
-	<mod-append:name>mantis_rsa</mod-append:name>
-	<mod-append:name>mantis_freebusiness</mod-append:name>
-	<mod-append:name>cheetah</mod-append:name>
-	<mod-append:name>unique_black_rose</mod-append:name>
 	<mod-append:name>rosegold_scrapper</mod-append:name>
 	<mod-append:name>scrapper_defender_mk2</mod-append:name>
 	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
@@ -58,6 +47,12 @@
 	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
 	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
 	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 </mod:findName>
 
 <!--/////// SCRAPPERS //////-->
@@ -88,6 +83,9 @@
 	<name>adamantine_scrapper_heavy_soldier</name>
 	<name>golden_scrapper_defender</name>
 	<name>rosegold_scrapper_scavenger</name>
+	<name>adamantine_scrapper_heavy_soldier_mk2</name>
+	<name>golden_scrapper_defender_mk2</name>
+	<name>rosegold_scrapper_scavenger_mk2</name>
 </blueprintList>
 
 <blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL_1">
@@ -263,30 +261,9 @@
 	<name>scrapper_medic</name>
 </blueprintList>
 
-<!--/////// LITERALLY ALL OF THE BIRDS //////-->
-
-<blueprintList name="LIST_CHECKCREW_AVALI">
-	<name>avali</name>
-</blueprintList>
-
-<!--/////// HUMANS ///////-->
-
-<mod:findName type="blueprintList" name="LIST_CREW_HUMAN">
-	<mod-append:name>unique_kora</mod-append:name>
-	<mod-append:name>kiviekith</mod-append:name>
-	<mod-append:name>rsa_technician</mod-append:name>
-	<mod-append:name>unique_leah_mfk</mod-append:name>
-	<mod-append:name>human_phoenix</mod-append:name>
-	<mod-append:name>human_hazmat</mod-append:name>
-</mod:findName>
-
 <!--/////// ELITES ///////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE">
-	<mod-append:name>human_hazmat</mod-append:name>
-	<mod-append:name>human_phoenix</mod-append:name>
-	<mod-append:name>saviors</mod-append:name>
-	<mod-append:name>avatarlegion</mod-append:name>
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
@@ -294,54 +271,16 @@
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
 	<mod-append:name>scrapper_defender_mk2</mod-append:name>
-	<mod-append:name>unique_black_rose</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 </mod:findName>
-
-<!--/////// FEDERATION ///////-->
-
-<mod:findName type="blueprintList" name="LIST_CREW_FEDERATION">
-	<mod-append:name>human_hazmat</mod-append:name>
-	<mod-append:name>human_phoenix</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_SOLDIER">
-	<mod-append:name>human_phoenix</mod-append:name>
-</mod:findName>
-
-<!--/////// TABAXI ZONE //////-->
-
-<blueprintList name="LIST_CREW_TABAXI">
-	<name>cheetah</name>
-</blueprintList>
-
-<!--/////// MANTIS ZONE //////-->
-
-<mod:findName type="blueprintList" name="LIST_CREW_MANTIS">
-	<mod-append:name>mantis_rsa</mod-append:name>
-	<mod-append:name>mantis_freebusiness</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_HIVE">
-	<mod-append:name>mantis_rsa</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_FREEMAN">
-	<mod-append:name>mantis_freebusiness</mod-append:name>
-</mod:findName>
-
-<blueprintList name="BLUELIST_MANTIS_DUMB">
-	<name>mantis</name>
-	<name>mantis_free</name>
-	<name>mantis_warlord</name>
-	<name>mantis_suzerain</name>
-	<name>unique_kaz</name> <!--sorry, Kaz-->
-</blueprintList>
-
-<!--mantis_rsa isn't here because it's for an RSA event-->
-<blueprintList name="BLUELIST_MANTIS_SMART">
-	<name>mantis_bishop</name>
-	<name>unique_freddy</name>
-</blueprintList>
 
 <!--/////// LANIUS //////-->
 
@@ -369,6 +308,15 @@
 	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
 	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 </mod:findName>
 
 <!--/////// PROTOGENS //////-->
@@ -387,52 +335,6 @@
 	<name>sergal_cheese</name>
 </blueprintList>
 
-<!--/////// RSA CREW //////-->
-<blueprintList name="LIST_CREW_RSA">
-	<name>sergal_cheese</name>
-	<name>mantis_rsa</name>
-	<name>kiviekith</name>
-	<name>rsa_technician</name>
-	<name>unique_black_rose</name>
-</blueprintList>
-
-<!--/////// AVALI //////-->
-
-<blueprintList name="LIST_CREW_AVALI">
-	<name>avali</name>
-	<name>avali_illuminant</name>
-	<name>avali_technician</name>
-	<name>unique_skygirr</name>
-</blueprintList>
-
-<!--/////// KIVIES //////-->
-
-<blueprintList name="LIST_CREW_KIVIE">
-	<name>kiviekith</name>
-</blueprintList>
-
-<!--/////// LEAH //////-->
-
-<blueprintList name="LIST_CREW_LEAH">
-	<name>unique_leah_mfk</name>
-</blueprintList>
-
-<!--/////// ROBOTTOS //////-->
-
-<blueprintList name="LIST_CREW_ROBOTTOS">
-	<name>robottos</name>
-	<name>robottos_gunner</name>
-	<name>robottos_machinist</name>
-	<name>robottos_researcher</name>
-	<name>robottos_police</name>
-</blueprintList>
-
-<!--/////// MANTIS ///////-->
-
-<mod:findName type="blueprintList" name="LIST_CHECKCREW_MANTIS">
-	<mod-append:name>mantis_rsa</mod-append:name>
-	<mod-append:name>mantis_freebusiness</mod-append:name>
-</mod:findName>
 
 <!--/////// LANIUS //////-->
 
@@ -449,35 +351,19 @@
 	<mod-append:name>scrapper_defender_mk2</mod-append:name>
 	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
 	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 </mod:findName>
 
-<!--//////// HUMANS /////////-->
-
-<mod:findName type="blueprintList" name="LIST_CHECKCREW_HUMAN">
-	<mod-append:name>unique_kora</mod-append:name>
-	<mod-append:name>rsa_technician</mod-append:name>
-	<mod-append:name>unique_leah_mfk</mod-append:name>
-	<mod-append:name>human_phoenix</mod-append:name>
-	<mod-append:name>human_hazmat</mod-append:name>
-</mod:findName>
 
 <!--/////// IT'S MORPHIN' TIME ///////-->
-
-<mod:findName type="blueprintList" name="LIST_CREW_MORPH_FREEMANTIS">
-	<mod-append:name>mantis_freebusiness</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_MORPH_MANTIS">
-	<mod-append:name>mantis_rsa</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_MORPH_HUMAN">
-	<mod-append:name>unique_kora</mod-append:name>
-	<mod-append:name>rsa_technician</mod-append:name>
-	<mod-append:name>unique_leah_mfk</mod-append:name>
-	<mod-append:name>human_phoenix</mod-append:name>
-	<mod-append:name>human_hazmat</mod-append:name>
-</mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_MORPH_LANIUS">
 	<mod-append:name>trash_eater</mod-append:name>
@@ -492,12 +378,17 @@
 	<mod-append:name>scrapper_defender_mk2</mod-append:name>
 	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
 	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="LIST_CREW_MORPH_COGNITIVE">
-	<mod-append:name>saviors</mod-append:name>
-	<mod-append:name>saviorsa</mod-append:name>
-</mod:findName>
 
 <!--/////// UNIQUES //////-->
 
@@ -506,11 +397,7 @@
 	<mod-append:name>protogen_tracker</mod-append:name>
 	<mod-append:name>primagen_raptor</mod-append:name>
 	<mod-append:name>clonefail_lancer</mod-append:name>
-	<mod-append:name>unique_leah_mfk</mod-append:name>
-	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
-	<mod-append:name>unique_black_rose</mod-append:name>
-	<mod-append:name>unique_skygirr</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
@@ -518,45 +405,12 @@
 	<mod-append:name>protogen_tracker</mod-append:name>
 	<mod-append:name>primagen_raptor</mod-append:name>
 	<mod-append:name>clonefail_lancer</mod-append:name>
-	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>sergal_cheese</mod-append:name>
-	<mod-append:name>unique_black_rose</mod-append:name>
-	<mod-append:name>unique_leah_mfk</mod-append:name>
-	<mod-append:name>unique_skygirr</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
-	<mod-append:name>trash_eater</mod-append:name>
-	<mod-append:name>unique_leah_mfk</mod-append:name>
-	<mod-append:name>unique_kora</mod-append:name>
-	<mod-append:name>unique_black_rose</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_COGNITIVE">
-	<mod-append:name>saviors</mod-append:name>
-	<mod-append:name>saviorsa</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_RCOGNITIVE">
-	<mod-append:name>saviors</mod-append:name>
-	<mod-append:name>saviorsa</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_COGNITIVE_ALL">
-	<mod-append:name>saviors</mod-append:name>
-	<mod-append:name>saviorsa</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="LIST_CREW_ANCIENT_ALL">
-	<mod-append:name>saviors</mod-append:name>
-	<mod-append:name>saviorsa</mod-append:name>
-</mod:findName>
 
 <!--/////// SHELL GAS IMMUNE CREW //////-->
 <mod:findName type="blueprintList" name="LIST_CREW_GAS">
-	<mod-append:name>saviors</mod-append:name>
-	<mod-append:name>saviorsa</mod-append:name>
-	
 	<mod-append:name>scrapper</mod-append:name>
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
@@ -564,20 +418,20 @@
 	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
-	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>rosegold_scrapper</mod-append:name>
 	<mod-append:name>scrapper_defender_mk2</mod-append:name>
-	<mod-append:name>robottos</mod-append:name>
-	<mod-append:name>robottos_gunner</mod-append:name>
-	<mod-append:name>robottos_machinist</mod-append:name>
-	<mod-append:name>robottos_researcher</mod-append:name>
-	<mod-append:name>robottos_police</mod-append:name>
-	
-	<mod-append:name>unique_black_rose</mod-append:name>
-	<mod-append:name>rc_ld</mod-append:name>
-	<mod-append:name>robo_mant</mod-append:name>
-	<mod-append:name>silica</mod-append:name>
-	
+	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
+	<mod-append:name>trash_eater</mod-append:name>
 </mod:findName>
 
 <!--///////////////////////////////
@@ -726,12 +580,6 @@
 	<mod-append:name>DLX_MOLOT</mod-append:name>
 </mod:findName>
 
-<!--
-<blueprintList name="LIST_NON_RARITY_0_THINGS"> (Just here for reference)
-	Nothing, sctually
-</blueprintList>
--->
-
 <!--/////// BOMB SHOTGUN ZONE //////-->
 
 <blueprintList name="LIST_BOMB_SHOTGUNS">
@@ -865,16 +713,6 @@
 	<name>TC_BOMB_SHOTGUN_1_ENEMY</name>
 	<name>TC_BOMB_SHOTGUN_2_ENEMY</name>
 	<name>TC_BOMB_SHOTGUN_3_ENEMY</name>
-</blueprintList>
-
-<!-- Duplicates are for increasing the chance to appear -->
-
-<blueprintList name="SHOP_RSA_ITEM_CREW">
-	<name>mantis_rsa</name>
-	<name>mantis_rsa</name>
-	<name>kiviekith</name>
-	<name>kiviekith</name>
-	<name>rsa_technician</name>
 </blueprintList>
 
 <!--/////// STORE LISTS //////-->
@@ -1164,12 +1002,10 @@
 
 <mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
 	<mod-append:name>CATALYZER</mod-append:name>
-	<mod-append:name>FOCUS_1_LEAH_VENGEANCE</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
 	<mod-append:name>CATALYZER</mod-append:name>
-	<mod-append:name>FOCUS_1_LEAH_VENGEANCE</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HEAVY">
@@ -1202,7 +1038,6 @@
 	<mod-append:name>RSA_TAGGER</mod-append:name>
 	<mod-append:name>RSA_AVENGER_ARTILLERY</mod-append:name>
 	<mod-append:name>SUPERNOVA_CATALYZER</mod-append:name>
-	<mod-append:name>FOCUS_1_LEAH_VENGEANCE</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
@@ -1230,14 +1065,6 @@
 
 <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_CRYSTAL">
 	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_ARMOR">
-	<mod-append:name>ADVANCED_SCRAP</mod-append:name>
-</mod:findName>
-
-<mod:findName type="blueprintList" name="BLUELIST_ARM">
-	<mod-append:name>SALVAGE_ARRAY</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="BLUELIST_MINING">
@@ -1676,207 +1503,6 @@
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
-<!--///////////////////// KIVIE STUFF /////////////////-->
-
-<shipBlueprint name="KIVIE_FIGHTER" layout="KIVIE_FIGHTER" img="KIVIE_FIGHTER">
-	<class>Kivie Fighter</class>
-	<minSector>2</minSector>
-	<maxSector>5</maxSector>
-	<systemList>
-		<clonebay power="1" max="2" room="5" start="true" />
-		<engines power="2" max="4" room="2" start="true" />
-		<hacking power="1" max="2" room="7" start="false" />
-		<mind power="1" max="2" room="9" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="6" room="3" start="true" />
-		<weapons power="2" max="6" room="8" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="0" count="0" />
-	<health amount="7" />
-	<maxPower amount="15" />
-	<crewCount amount="2" max="4" class="kiviekith" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="KIVIE_FIGHTER_ENGI" layout="KIVIE_FIGHTER" img="KIVIE_FIGHTER">
-	<class>Kivie Fighter</class>
-	<minSector>2</minSector>
-	<maxSector>5</maxSector>
-	<systemList>
-		<clonebay power="1" max="2" room="5" start="true" />
-		<engines power="2" max="4" room="2" start="true" />
-		<hacking power="1" max="2" room="7" start="false" />
-		<mind power="1" max="2" room="9" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="6" room="3" start="true" />
-		<weapons power="2" max="6" room="8" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="0" count="0" />
-	<health amount="7" />
-	<maxPower amount="15" />
-	<crewCount amount="2" max="4" class="kiviekith" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="KIVIE_BOMBER" layout="KIVIE_BOMBER" img="KIVIE_BOMBER">
-	<class>Kivie Bomber</class>
-	<minSector>4</minSector>
-	<maxSector>7</maxSector>
-	<systemList>
-		<clonebay power="1" max="1" room="10" start="true" />
-		<doors power="2" max="2" room="1" start="true" />
-		<engines power="2" max="3" room="4" start="true" />
-		<hacking power="1" max="1" room="12" start="false" />
-		<medbay power="1" max="1" room="10" start="true" />
-		<mind power="1" max="1" room="12" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="4" max="6" room="3" start="true" />
-		<teleporter power="1" max="2" room="11" start="false" />
-		<weapons power="4" max="6" room="7" start="true" />
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="10" count="3" load="LIST_WEAPONS_OUTCAST" />
-	<droneList drones="5" count="0" />
-	<health amount="15" />
-	<maxPower amount="15" />
-	<crewCount amount="3" max="5" class="kiviekith" />
-	<boardingAI>invasion</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="KIVIE_BOMBER_SPIDER" layout="KIVIE_BOMBER_SPIDER" img="KIVIE_BOMBER_SPIDER">
-	<class>Kivie Bomber</class>
-	<minSector>4</minSector>
-	<maxSector>7</maxSector>
-	<systemList>
-		<clonebay power="1" max="1" room="10" start="true" />
-		<doors power="1" max="1" room="1" start="true" />
-		<engines power="2" max="3" room="4" start="true" />
-		<hacking power="1" max="1" room="12" start="false" />
-		<medbay power="1" max="1" room="10" start="true" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="2" max="4" room="3" start="true" />
-		<teleporter power="1" max="2" room="11" start="true" />
-		<weapons power="4" max="6" room="7" start="true" />
-	</systemList>
-	<weaponSlots>2</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="6" count="2" load="LIST_WEAPONS_OUTCAST" />
-	<droneList drones="5" count="0" />
-	<health amount="15" />
-	<maxPower amount="15" />
-	<crewCount amount="4" max="7" class="spider_hatch" />
-	<boardingAI>invasion</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="KIVIE_SCOUT" layout="KIVIE_SCOUT" img="KIVIE_SCOUT">
-	<class>Kivie Scout</class>
-	<minSector>1</minSector>
-	<maxSector>4</maxSector>
-	<systemList>
-		<engines power="1" max="2" room="3" start="true" />
-		<hacking power="1" max="1" room="7" start="false" />
-		<mind power="1" max="1" room="7" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="1" max="1" room="0" start="true" />
-		<shields power="2" max="4" room="2" start="true" />
-		<weapons power="2" max="3" room="1" start="true" />
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="5" count="0" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="0" count="0" />
-	<health amount="6" />
-	<maxPower amount="10" />
-	<crewCount amount="2" max="2" class="kiviekith" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="KIVIE_SCOUT_ENGI" layout="KIVIE_SCOUT" img="KIVIE_SCOUT">
-	<class>Kivie Scout</class>
-	<minSector>1</minSector>
-	<maxSector>4</maxSector>
-	<systemList>
-		<engines power="1" max="2" room="3" start="true" />
-		<hacking power="1" max="1" room="7" start="false" />
-		<mind power="1" max="1" room="7" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="1" max="1" room="0" start="true" />
-		<shields power="2" max="4" room="2" start="true" />
-		<weapons power="2" max="3" room="1" start="true" />
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="5" count="0" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="0" count="0" />
-	<health amount="6" />
-	<maxPower amount="10" />
-	<crewCount amount="2" max="2" class="kiviekith" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="KIVIE_FIGHTER_PIRATE" layout="KIVIE_FIGHTER_PIRATE" img="KIVIE_FIGHTER_PIRATE">
-	<class>Kivie Fighter</class>
-	<minSector>2</minSector>
-	<maxSector>6</maxSector>
-	<systemList>
-		<clonebay power="1" max="2" room="5" start="true" />
-		<doors power="2" max="2" room="7" start="true" />
-		<engines power="2" max="4" room="2" start="true" />
-		<hacking power="1" max="2" room="9" start="false" />
-		<medbay power="1" max="1" room="5" start="true" />
-		<mind power="1" max="2" room="9" start="false" />
-		<oxygen power="1" max="1" room="6" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="6" room="3" start="true" />
-		<weapons power="2" max="6" room="8" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="5" count="4" load="LIST_WEAPONS_REBEL" />
-	<droneList drones="0" count="0" />
-	<health amount="7" />
-	<maxPower amount="15" />
-	<crewCount amount="1" max="2" class="mantis" />
-	<crewCount amount="1" max="2" class="slug" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="KIVIE_AUTO" layout="KIVIE_AUTO" img="KIVIE_AUTO">
-	<class>Kivie Auto</class>
-	<minSector>1</minSector>
-	<maxSector>4</maxSector>
-	<systemList>
-		<doors power="1" max="1" room="5" start="true" />
-		<drones power="2" max="2" room="4" start="false" />
-		<engines power="1" max="3" room="3" start="true" />
-		<hacking power="1" max="1" room="4" start="false" />
-		<pilot power="1" max="1" room="1" start="true" />
-		<shields power="2" max="4" room="2" start="true" />
-		<weapons power="2" max="4" room="0" start="true" />
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>1</droneSlots>
-	<weaponList missiles="5" count="3" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="3" count="1" load="MV_DRONES_COMBAT" />
-	<health amount="7" />
-	<maxPower amount="15" />
-	<boardingAI>sabotage</boardingAI>
-	<aug name="NO_GHOST" />
-</shipBlueprint>
-
-<!--///////////////////// TC 3 /////////////////-->
-
 <shipBlueprint name="TC_SCRAPPER_CORVETTE" layout="ars_corvette" img="ars_corvette">
 	<class>Scrapper Corvette</class>
 	<minSector>2</minSector>
@@ -1969,238 +1595,3 @@
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
-<!--///////////////////// KM QUEST ENEMIES /////////////////-->
-
-<shipBlueprint name="SYLVAN_LODGE" layout="ars_lodge" img="ars_lodge">
-	<class>Militarized Hotel Station</class>
-	<minSector>2</minSector>
-	<maxSector>6</maxSector>
-	<systemList>
-		<battery power="2" max="2" room="19" start="true" />
-		<cloaking power="1" max="1" room="7" start="true" />
-		<doors power="2" max="3" room="3" start="true" />
-		<drones power="4" max="5" room="9" start="true" />
-		<hacking power="1" max="3" room="7" start="true" />
-		<medbay power="1" max="3" room="16" start="true" />
-		<mind power="1" max="3" room="10" start="true" />
-		<oxygen power="2" max="3" room="6" start="true" />
-		<sensors power="2" max="3" room="1" start="true" />
-		<shields power="4" max="8" room="5" start="true" />
-		<teleporter power="1" max="3" room="8" start="true" />
-		<weapons power="4" max="6" room="4" start="true" />
-	</systemList>
-	<weaponSlots>0</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="4" count="0" load="LIST_WEAPONS_NEWGEN" />
-	<droneList drones="4" count="0" load="MV_DRONES_COMBAT" />
-	<health amount="20" />
-	<maxPower amount="10" />
-	<crewCount amount="1" max="1" class="unique_sylvan" />
-	<crewCount amount="4" max="7" class="slug_saboteur" />
-	<boardingAI>sabotage</boardingAI>
-	<aug name="CREW_OXYGEN" />
-</shipBlueprint>
-
-<shipBlueprint name="TC_RENTAFLAGSHIP" layout="tc_rentaflagship" img="tc_rentaflagship">
-	<class>Rent-A-Flagship</class>
-	<minSector>2</minSector>
-	<maxSector>6</maxSector>
-	<systemList>
-		<doors power="2" max="3" room="20" start="true" />
-		<drones power="1" max="2" room="5" start="true" />
-		<engines power="2" max="5" room="7" start="true" />
-		<hacking power="1" max="3" room="3" start="true" />
-		<medbay power="2" max="2" room="14" start="true" />
-		<mind power="1" max="2" room="6" start="true" />
-		<oxygen power="2" max="2" room="21" start="true" />
-		<pilot power="1" max="3" room="0" start="true" />
-		<sensors power="1" max="3" room="9" start="true" />
-		<shields power="2" max="6" room="13" start="true" />
-		<teleporter power="2" max="2" room="18" start="true" />
-		<weapons power="3" max="6" room="12" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="12" count="4">
-		<weapon name="TC_BOMB_SHOTGUN_3" />
-		<weapon name="TC_BOMB_SHOTGUN_FREE" />
-	</weaponList>
-	<droneList drones="4" count="0" />
-	<health amount="16" />
-	<maxPower amount="10" />
-	<crewCount amount="5" max="8" class="slug_hektar" />
-	<boardingAI>sabotage</boardingAI>
-	<aug name="HEKTAR_GEL" />
-</shipBlueprint>
-
-<shipBlueprint name="AVALI_SKIRMISHER" layout="avali_illuminate_skirmisher" img="avali_illuminate_skirmisher">
-	<class>Avali Skirmisher</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<cloaking power="1" max="3" room="2" start="true" />
-		<drones power="1" max="6" room="6" start="false" />
-		<engines power="1" max="2" room="1" start="true" />
-		<oxygen power="1" max="1" room="5" start="true" />
-		<pilot power="1" max="3" room="0" start="true" />
-		<shields power="2" max="7" room="3" start="false" />
-		<weapons power="2" max="7" room="4" start="true" />
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="7" count="3" load="LIST_WEAPONS_AVALI" />
-	<droneList drones="7" count="2" load="LIST_DRONES_AVALI" />
-	<crewCount amount="2" max="4" class="avali" />
-	<health amount="6" />
-	<maxPower amount="10" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="ARS_FED_AUTOSHIP" layout="ars_fed_autoship" img="ars_fed_autoship">
-	<class>Instant Noodle Auto-Merchant</class>
-	<minSector>1</minSector>
-	<maxSector>4</maxSector>
-	<systemList>
-		<doors power="2" max="2" room="2" start="true" />
-		<engines power="2" max="4" room="1" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="2" max="4" room="6" start="true" />
-		<weapons power="2" max="4" room="5" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="9" count="4" load="LIST_WEAPONS_AUTO" />
-	<droneList drones="3" count="0" />
-	<health amount="11" />
-	<maxPower amount="6" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="RSA_ASSAULT" layout="rsa_assault" img="rsa_assault">
-	<class>RSA Assault</class>
-	<minSector>2</minSector>
-	<maxSector>7</maxSector>
-	<systemList>
-		<doors power="1" max="1" room="9" start="false" />
-		<drones power="1" max="1" room="5" start="false" />
-		<engines power="1" max="1" room="3" start="true" />
-		<medbay power="1" max="2" room="1" start="false" />
-		<oxygen power="1" max="1" room="7" start="true" />
-		<pilot power="1" max="3" room="0" start="true" />
-		<shields power="2" max="8" room="2" start="true" />
-		<weapons power="1" max="1" room="6" start="true" />
-	</systemList>
-	<weaponSlots>3</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="12" count="3" load="LIST_WEAPONS_RSA" />
-	<droneList drones="5" count="2" load="LIST_DRONES_ENEMY_COMBAT_BORING" />
-	<health amount="11" />
-	<maxPower amount="8" />
-	<crewCount amount="1" max="2" class="kiviekith" />
-	<crewCount amount="2" max="3" class="mantis_rsa" />
-	<crewCount amount="0" max="1" class="protogen" />
-	<crewCount amount="0" max="1" class="random" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-
-<shipBlueprint name="RSA_DROPSHIP" layout="rsa_dropship" img="rsa_dropship">
-	<class>RSA Dropship</class>
-	<minSector>1</minSector>
-	<maxSector>5</maxSector>
-	<systemList>
-		<artillery power="2" max="4" room="20" start="true" weapon="RSA_AVENGER_ARTILLERY" />
-		<battery power="1" max="2" room="22" start="false" />
-		<doors power="1" max="2" room="8" start="true" />
-		<drones power="2" max="4" room="12" start="true" />
-		<engines power="4" max="6" room="17" start="true" />
-		<hacking power="1" max="1" room="11" start="false" />
-		<medbay power="1" max="2" room="13" start="true" />
-		<mind power="1" max="2" room="23" start="false" />
-		<oxygen power="1" max="2" room="3" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="4" room="6" start="true" />
-		<teleporter power="1" max="2" room="14" start="true" />
-		<weapons power="1" max="1" room="24" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>4</droneSlots>
-	<weaponList missiles="15" count="4" load="LIST_WEAPONS_RSA" />
-	<droneList drones="15" count="4">
-	</droneList>
-	<crewCount amount="1" max="3" class="mantis_rsa" />
-	<crewCount amount="1" max="2" class="rsa_technician" />
-	<crewCount amount="1" max="2" class="kiviekith" />
-	<health amount="12" />
-	<maxPower amount="10" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="MU_BOSS_ENGINEER_C" layout="MU_BOSS_ENGINEER_C" img="MU_BOSS_ENGINEER_C">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<clonebay power="3" max="3" room="3" start="true" />
-		<doors power="3" max="3" room="25" start="true" />
-		<drones power="10" max="10" room="9" start="true" />
-		<engines power="2" max="2" room="14" start="true" />
-		<oxygen power="2" max="2" room="18" start="true" />
-		<pilot power="3" max="3" room="0" start="true" />
-		<shields power="3" max="9" room="13" start="true" />
-		<weapons power="4" max="4" room="10" start="true" />
-	</systemList>
-	<weaponSlots>2</weaponSlots>
-	<droneSlots>5</droneSlots>
-	<weaponList missiles="0" count="2">
-		<weapon name="LASER_BURST_3" />
-		<weapon name="ION_STUN_2" />
-	</weaponList>
-	<droneList drones="20" count="4">
-		<drone name="ION_1_AMP2_ENEMY" />
-		<drone name="HELLRAISER_HULL" />
-		<drone name="BATTLETOG2_DEFEND" />
-		<drone name="REPAIR" />
-	</droneList>
-	<crewCount amount="1" max="1" class="technomanning" />
-	<health amount="15" />
-	<maxPower amount="30" />
-	<boardingAI>sabotage</boardingAI>
-	<aug name="EX_DRONE_SPEED" />
-</shipBlueprint>
-
-<!--ECHELON-->
-<shipBlueprint name="ECHELON_MEETUP_MERCHANT" layout="echelon_merchant" img="echelon merchant">
-	<class>Echelon(tm) Merchant ship</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<artillery power="3" max="4" room="8" start="true" weapon="ARTILLERY_MILITIAGUNBOAT_C" />
-		<cloaking power="3" max="3" room="12" start="true" />
-		<clonebay power="3" max="3" room="7" start="true" />
-		<doors power="2" max="2" room="11" start="true" />
-		<drones power="6" max="6" room="5" start="true" />
-		<engines power="5" max="5" room="1" start="true" />
-		<hacking power="3" max="3" room="10" start="true" />
-		<mind power="3" max="3" room="9" start="true" />
-		<oxygen power="2" max="2" room="2" start="true" />
-		<pilot power="2" max="3" room="0" start="true" />
-		<shields power="8" max="8" room="4" start="true" />
-		<teleporter power="3" max="3" room="6" start="true" />
-		<weapons power="8" max="8" room="13" start="true" />
-	</systemList>
-	<weaponSlots>0</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="0" count="0" />
-	<droneList drones="0" count="0" />
-	<health amount="15" />
-	<maxPower amount="30" />
-	<crewCount amount="1" max="1" class="engi_defender" />
-	<crewCount amount="2" max="2" class="human_soldier" />
-	<crewCount amount="1" max="1" class="orchid_chieftain" />
-	<crewCount amount="2" max="2" class="zoltan_peacekeeper" />
-	<boardingAI>invasion</boardingAI>
-	<aug name="BACKUP_DNA" />
-	<aug name="UPG_WEAPONS_PERFORMANCE" />
-	<aug name="UPG_TECH_SEALANT" />
-</shipBlueprint>
