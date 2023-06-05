@@ -7,5 +7,9 @@ Outpost - Add event that gives a guaranteed weapon on deadcrew
 
 -->
 
+	<event name="TEST_SCRAPPER_FILE">
+		<text>TEST</text>
+		<crewMember amount="1" class="scrapper">Success</crewMember>
+	</event>
 
 </FTL>

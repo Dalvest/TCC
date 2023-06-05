@@ -11,8 +11,9 @@
 
 </FTL>
 
-<FTL><!--appending to Inferno-Core-->
+<FTL>
 	<events>
+		<!--appending to Inferno-Core-->
 		<variable name="tcc_called_compactor" op="set" val="0"/>
 		<variable name="tc_call_marker" op="set" val="0"/>
 		<req name="TCC_CAN_CALL_COMPACTOR" type="all"> <!--LOOK INTO-->
@@ -24,6 +25,18 @@
 		<name>tc_call_marker</name>
 			</req>
 		</req>
+		
+		<!--bosses-->
+		<bossShip>TC_TRASH_COMPACTOR1</bossShip>
+		<bossShip>TC_TRASH_COMPACTOR2</bossShip>
+		<bossShip>TC_TRASH_COMPACTOR3</bossShip>
+		<bossShip>TC_TRASH_COMPACTOR4</bossShip>
+		<bossShip>TC_TRASH_COMPACTOR5</bossShip>
+		<bossShip>TC_TRASH_COMPACTOR6</bossShip>
+		<bossShip>TC_TRASH_MINER</bossShip>
+		
+		<!--scrapper sector events-->
+		<eventFile>scrapper</eventFile>
 	</events>
 </FTL>
 
@@ -2976,23 +2989,6 @@
 			<mod-append:name>AUTOMATED_QUARTERMASTER</mod-append:name>
 		</mod:findName>
 	</mod:findLike>
-
-	<!--
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	BOSSES
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-<events>
-  	<bossShip>TC_TRASH_COMPACTOR1</bossShip>
-  	<bossShip>TC_TRASH_COMPACTOR2</bossShip>
-  	<bossShip>TC_TRASH_COMPACTOR3</bossShip>
-  	<bossShip>TC_TRASH_COMPACTOR4</bossShip>
-  	<bossShip>TC_TRASH_COMPACTOR5</bossShip>
-  	<bossShip>TC_TRASH_COMPACTOR6</bossShip>
-  	<bossShip>TC_TRASH_MINER</bossShip>
-</events>
 	
 <event name="SCRAPPER_OUTPOST">
 	<preventQuest />
@@ -3002,11 +2998,5 @@
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
 	</beaconType>
 </event>
-
-<events>
-	<eventFile>scrapper</eventFile>
-</events>
-
-
 
 </FTL>
