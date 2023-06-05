@@ -5328,6 +5328,16 @@
 	    <stackable>true</stackable>
 	</augBlueprint>
 	
+	<augBlueprint name="CREW_BERSERK_MODULE">
+		<title>Berserker Module</title>
+		<desc>A particulalry advanced module that can be installed to your internal lab and enhances your crews ability to deal damage while also increasing the amount of damage taken.</desc>
+		<cost>120</cost>
+		<rarity>0</rarity>
+		<stackable>true</stackable>
+	</augBlueprint>
+	
+	<!--I'm pretty sure these aren't needed-->
+	
 	<augBlueprint name="CREW_UPGRADER">
 	    <title>Internal Upgrade</title>
 	    <desc>This is an internal Upgrade</desc>
@@ -5417,58 +5427,6 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
-
-	<!--LAB AUGMENTS-->
-
-	<!-- ============== PROTOGEN ============ -->
-	<augBlueprint name="LAB_PROTOGEN_AWARENESS">
-		<title>Unstable Awareness Field</title>
-		<desc>Protogens now lose skills when cloned, but are immune to mind control and can see adjacent rooms, as well as sense lifeforms when sensors are down.</desc>
-		<cost>10</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-
-	<augBlueprint name="LAB_PROTOGEN_BOOP">
-		<title>"Boop" Overdrive</title>
-		<desc>Protogens now gain the ability to "Boop" all allied crew in the current room, boosting their movement speed and combat damage by PLACEHOLDER VALUE.</desc>
-		<cost>10</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-
-	<augBlueprint name="LAB_PROTOGEN_OXYGEN">
-		<title>Internal Oxygen Supply</title>
-		<desc>Protogens no longer require oxygen.</desc>
-		<cost>10</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-
-	<augBlueprint name="LAB_PROTOGEN_SIPHONS">
-		<title>Battery Siphons</title>
-		<desc>Protogens now drain one power fromm all systems, and gain a buff whenever able to do so.</desc>
-		<cost>10</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-
-	<augBlueprint name="LAB_PROTOGEN_HEAVY">
-		<title>Heavy Metal</title>
-		<desc>Protogens now take 0.7x damage from combat, but move at 2/3 their normal speed.</desc>
-		<cost>10</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-
-	<augBlueprint name="LAB_PROTOGEN_TEAMWORK">
-		<title>Teamwork Network</title>
-		<desc>Protogens gain 15% repair speed and combat damage for every other protogen in the room.</desc>
-		<cost>0</cost>
-		<rarity>0</rarity>
-		<stackable>false</stackable>
-	</augBlueprint>
-
 
 
 	<!--QUEST AUGS-->

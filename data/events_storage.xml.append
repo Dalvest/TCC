@@ -52,7 +52,7 @@
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
 	
-	<mod-append:choice req="teleporter" lvl="5" blue="true" hidden="true" hidden="true">
+	<mod-append:choice req="teleporter" lvl="5" blue="true" hidden="true">
 		<text>Adamantine Backup Capacitors [Already Installed]</text>
 		<event load="STORAGE_CHECK_SYSTEM_TELEPORTER"/>
 	</mod-append:choice>
