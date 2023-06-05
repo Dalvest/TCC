@@ -1,0 +1,16 @@
+<mod:findName type="event" name="STORAGE_CHECK_JUKEBOX">
+    <mod-append:choice>
+		<text>TCC: Avali</text>
+		<event>
+			<playMusic>avali</playMusic>
+			<loadEvent>STORAGE_CHECK_JUKEBOX</loadEvent>
+		</event>
+	</mod-append:choice>
+    <mod-append:choice>
+		<text>TCC: Scrapper</text>
+		<event>
+			<playMusic>scrapper</playMusic>
+			<loadEvent>STORAGE_CHECK_JUKEBOX</loadEvent>
+		</event>
+	</mod-append:choice>
+</mod:findName>
