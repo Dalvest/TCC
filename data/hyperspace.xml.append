@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!--<mod:findLike type="version">Adjusts version check, remove later or adjust as necessary, not currently needed.
   <mod:setValue>^1.2.0</mod:setValue>
 </mod:findLike>-->
@@ -9,56 +11,10 @@
     <mod-append:script>data/tcc_scripts/dependency.lua</mod-append:script>
   </mod:findLike>
 
-</FTL>
-
-<FTL>
-<events> <!-- There can only be one of these blocks? - Append all Events data to this tag -->
-
-	<!--appending to Inferno-Core-->
-	<variable name="tcc_called_compactor" op="set" val="0"/>
-	<variable name="tc_call_marker" op="set" val="0"/>
-	<req name="TCC_CAN_CALL_COMPACTOR" type="all"> <!--LOOK INTO-->
-		<req>
-			<name>SCRAP_TRANSMITTER</name>
-		</req>
-		<req lvl="0" max_lvl="0">
-			<name>tcc_called_compactor</name>
-			<name>tc_call_marker</name>
-		</req>
-	</req>
-	
-	<!-- Boss Fights -->
-	<bossShip>TC_TRASH_COMPACTOR1</bossShip>
-	<bossShip>TC_TRASH_COMPACTOR2</bossShip>
-	<bossShip>TC_TRASH_COMPACTOR3</bossShip>
-	<bossShip>TC_TRASH_COMPACTOR4</bossShip>
-	<bossShip>TC_TRASH_COMPACTOR5</bossShip>
-	<bossShip>TC_TRASH_COMPACTOR6</bossShip>
-	<bossShip>TC_TRASH_MINER</bossShip>
-	
-	<!-- Event Files -->
-	<eventFile>scrapper</eventFile>
-</events>
-
-</FTL>
-
-<FTL>
-
-<mod:findLike type="events">
-	<mod:findName type="req" name="FMCORE_LIST_JUMPSPACE_EQUIPMENT">
-		<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
-	</mod:findName>
-</mod:findLike>
-	
-<mod:findLike type="events">
-    <mod:findName type="event" name="START_BEACON">
-      <mod-append:hiddenAug>ADDON_INSTALLED_TCC</mod-append:hiddenAug>
-    </mod:findName>
-</mod:findLike>
 
 
 
-<!--////////////////////////////////////////////////SCRAPPER STORE///////////////////////////////////////////////////////-->
+<!--STORES-->
 
 
 <store>
@@ -174,16 +130,7 @@
 </store>
 
 
-  <!--
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  SHIPS
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <!--SHIPS-->
 
 
 
@@ -314,16 +261,7 @@
 </mod:findLike>
 
 
-  <!--
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  SHIP HANGAR ORDER
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <!--SHIP HANGAR ORDER-->
 
 
 	<mod:findLike type="ships">
@@ -337,18 +275,9 @@
 
 
 
-  <!--
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  CREW
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <!--CREW-->
 
-  <!--///////UNIQUE//////-->
+  <!--UNIQUE-->
 
 <mod:findLike type="crew">
 
@@ -1207,7 +1136,7 @@
 	</statBoost>
 	<statBoost name="moveSpeedMultiplier">
 		<boostType>MULT</boostType>
-		<amount>0.25</amount>
+		<amount>0.35</amount>
 		<shipTarget>CURRENT_ROOM</shipTarget>
 		<crewTarget>ENEMIES</crewTarget>
 		<affectsSelf>false</affectsSelf>
@@ -1215,7 +1144,7 @@
 	</statBoost>
 	<statBoost name="repairSpeed">
 		<boostType>MULT</boostType>
-		<amount>0.25</amount>
+		<amount>0.6</amount>
 		<shipTarget>CURRENT_ROOM</shipTarget>
 		<crewTarget>ENEMIES</crewTarget>
 		<affectsSelf>false</affectsSelf>
@@ -1290,7 +1219,7 @@
 	</statBoost>
 	<statBoost name="moveSpeedMultiplier">
 		<boostType>MULT</boostType>
-		<amount>0.1</amount>
+		<amount>0.2</amount>
 		<shipTarget>CURRENT_ROOM</shipTarget>
 		<crewTarget>ENEMIES</crewTarget>
 		<affectsSelf>false</affectsSelf>
@@ -1298,7 +1227,7 @@
 	</statBoost>
 	<statBoost name="repairSpeed">
 		<boostType>MULT</boostType>
-		<amount>0.1</amount>
+		<amount>0.2</amount>
 		<shipTarget>CURRENT_ROOM</shipTarget>
 		<crewTarget>ENEMIES</crewTarget>
 		<affectsSelf>false</affectsSelf>
@@ -1459,7 +1388,7 @@
 		</statBoost>
 		<statBoost name="moveSpeedMultiplier">
 			<boostType>MULT</boostType>
-			<amount>0.5</amount>
+			<amount>0.4</amount>
 			<shipTarget>CURRENT_ROOM</shipTarget>
 			<crewTarget>ENEMIES</crewTarget>
 			<affectsSelf>false</affectsSelf>
@@ -1565,7 +1494,7 @@
 		</statBoost>
 		<statBoost name="moveSpeedMultiplier">
 			<boostType>MULT</boostType>
-			<amount>0.05</amount>
+			<amount>0.15</amount>
 			<shipTarget>CURRENT_ROOM</shipTarget>
 			<crewTarget>ENEMIES</crewTarget>
 			<affectsSelf>false</affectsSelf>
@@ -1573,7 +1502,7 @@
 		</statBoost>
 		<statBoost name="repairSpeed">
 			<boostType>MULT</boostType>
-			<amount>0.05</amount>
+			<amount>0.15</amount>
 			<shipTarget>CURRENT_ROOM</shipTarget>
 			<crewTarget>ENEMIES</crewTarget>
 			<affectsSelf>false</affectsSelf>
@@ -2981,23 +2910,92 @@
 			</statBoost>
 		</statBoosts>
 	</aug>
+	<!--QUEST/EVENT REWARD AUGMENTS-->
+	
+	<aug name="AUGMENT_SCRAPPER_ARTIFACT_CREW_HEALTH">
+		<statboosts>
+			<statBoost name="maxHealth">
+				<boostType>MULT</boostType>
+				<amount>1.05</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost> 
+		</statboosts>
+	</aug>
+
+	<aug name="SCRAPPER_ARTIFACT_CREW_DAMAGE">
+		<statboosts>
+			<statBoost name="damageMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.03</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost> 
+		</statboosts>
+	</aug>
+
+	<aug name="SCRAPPER_ARTIFACT_CREW_SPEED">
+		<statboosts>
+			<statBoost name="moveSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.05</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost> 
+			<statBoost name="repairSpeed">
+				<boostType>MULT</boostType>
+				<amount>1.05</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost> 
+			<statBoost name="sabotageSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.05</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost> 
+		</statboosts>
+	</aug>
+	
 </augments>
 
-	<mod:findLike type="events">
-		<mod:findName name="LIST_CHECK_AUGMENTS">
-			<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
-			<mod-append:name>COMPACTOR</mod-append:name>
-			<mod-append:name>SCRAP_COMPACTOR</mod-append:name>
-			<mod-append:name>AUTOMATED_QUARTERMASTER</mod-append:name>
-		</mod:findName>
-	</mod:findLike>
 
-	<!--
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	BOSSES
-	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+	<!--EVENTS-->
+	
+<events> <!-- There can only be one of these blocks? - Append all Events data to this tag -->
+
+	<!--appending to Inferno-Core-->
+	<variable name="tcc_called_compactor" op="set" val="0"/>
+	<variable name="tc_call_marker" op="set" val="0"/>
+	<req name="TCC_CAN_CALL_COMPACTOR" type="all"> <!--LOOK INTO-->
+		<req>
+			<name>SCRAP_TRANSMITTER</name>
+		</req>
+		<req lvl="0" max_lvl="0">
+			<name>tcc_called_compactor</name>
+			<name>tc_call_marker</name>
+		</req>
+	</req>
+	
+	<!-- Boss Fights -->
+	<bossShip>TC_TRASH_COMPACTOR1</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR2</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR3</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR4</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR5</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR6</bossShip>
+	<bossShip>TC_TRASH_MINER</bossShip>
+	
+	<!-- Event Files -->
+	<eventFile>scrapper</eventFile>
+</events>
 
 
 <event name="SCRAPPER_OUTPOST">
@@ -3009,7 +3007,67 @@
 	</beaconType>
 </event>
 
+<mod:findLike type="events">
+	<mod:findName name="LIST_CHECK_AUGMENTS">
+		<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
+		<mod-append:name>COMPACTOR</mod-append:name>
+		<mod-append:name>SCRAP_COMPACTOR</mod-append:name>
+		<mod-append:name>AUTOMATED_QUARTERMASTER</mod-append:name>
+	</mod:findName>
+</mod:findLike>
+
+<mod:findLike type="events">
+	<mod:findName type="req" name="FMCORE_LIST_JUMPSPACE_EQUIPMENT">
+		<mod-append:name>SCRAP_TRANSMITTER</mod-append:name>
+	</mod:findName>
+</mod:findLike>
+	
+<mod:findLike type="events">
+    <mod:findName type="event" name="START_BEACON">
+      <mod-append:hiddenAug>ADDON_INSTALLED_TCC</mod-append:hiddenAug>
+    </mod:findName>
+</mod:findLike>
+
 
 
 
 </FTL>
+<!-- Enables command console in game \\ press L to use
+
+EVENT          Run an event.                           Usage: EVENT <event_id>        Example: EVENT FREE_AUG
+LOAD           Loads a ship blueprint.                 Usage: LOAD <ship_id> <str>    Example: LOAD MANTIS_BOMBER 5 (with 5 sector strength)
+ACH            Unlock achievement.                     Usage: ACH <achievement_id>    Example: ACH ACH_SECTOR_8
+SECTOR         Go to sector type.                      Usage: SECTOR <sector_type>    Example: SECTOR PIRATE_SECTOR
+SCRAP          Add scrap.                              Usage: SCRAP <num_to_add>      Example: SCRAP 500
+WEAPON         Add a weapon blueprint.                 Usage: WEAPON <weapon_id>      Example: WEAPON LASER_BURST_1
+SHIP           Unlock a ship.                          Usage: SHIP <ship_id>          Example: SHIP PLAYER_SHIP_MANTIS
+DRONES         Add drone parts.                        Usage: DRONES <num_to_add>     Example: DRONES 50
+DRONE          Add a drone blueprint.                  Usage: DRONE <drone_id>        Example: DRONE COMBAT_2
+FUEL           Add fuel.                               Usage: FUEL <num_to_add>       Example: FUEL 50
+MISSILES       Add missiles.                           Usage: MISSILES <num_to_add>   Example: MISSILES 50
+RICH           Add 80 of each resource and 1999 scrap. Usage: RICH
+GOD            Fully upgrade every system and reactor. Usage: GOD
+DELETE         Destroys enemy ship.                    Usage: DELETE
+SYS            Add a system.                           Usage: SYS <system_name>       Example: SYS cloaking
+AUG            Add an augmentation.                    Usage: AUG <augment_name>      Example: AUG O2_MASKS
+CREW           Add a crew member.                      Usage: CREW [race_name]        Example: CREW slug
+EXIT           Makes your location an exit beacon      Usage: EXIT
+STORE          Creates a store at your location        Usage: STORE [sector]          Example: STORE 3
+KILL           Kills a person on your ship             Usage: KILL <crew_name>        Example: KILL John
+DELETECREW     Kills everyone on the enemy ship        Usage: DELETECREW
+SPEED          Changes gamespeed
+-->
+<!--FOR UNLOCKS:
+variant attribute is what variant you want the unlock method for (a, b or c)
+silent attribute says whether or not it will show up in the top right and if it plays the sound etc
+
+type is the unlock method (0 is beat flagship, 1 is reach sector, 2 is any victory, 3 is other ship unlocks, 4 is for event unlocks) (also i haven't tested beat flagship but reach sector works)
+shipReq is the ship that you have to do it with to unlock it
+value is only used for reach sector right now which says which sector the player has to reach
+
+for the achievement icon that appears on the top right when you unlock the ship, you will need to add an icon in img/achievements 
+it will use whatever the layoutFile is with "_1" put on the end
+so for the engi ship, the layoutFile is mup_engi_b, so the icon would be img/achievements/mup_engi_b_1.png
+
+you can also put multiple unlock methods which will let the player do ANY of them to unlock the ship
+-->

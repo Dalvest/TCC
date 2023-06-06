@@ -1,10 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!--
 <mod:findName type="event" name="START_BEACON_EXPLAIN">
   <mod-append:queueEvent>TRASH_CALL</mod-append:queueEvent>
 </mod:findName>
 -->
 
-<!--This is the story of a man named Stanley-->
+<!--This event file will be used as for misc. events that don't fit into any other event file.-->
 
 <mod:findName type="event" name="ASTEROID_EXPLORE">
 	<mod-append:choice req="TC_DECONSTRUCTOR" hidden="true">

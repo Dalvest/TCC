@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <FTL>
 
 	<augBlueprint name="ADDON_INSTALLED_TCC">
@@ -8,10 +10,10 @@
 		<stackable>false</stackable>
 		<bp>0</bp>
 	</augBlueprint>
-</FTL>
 
 
-<FTL><!--weapons-->
+
+<!--weapons-->
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 	          WEAPON BLUEPRINTS
@@ -5280,10 +5282,7 @@
 		</mod:findLike>
 	</mod:findName>
 	
-</FTL>
-
-
-<FTL><!--Augments-->
+<!--Augments-->
 
 
 	<!--
@@ -5487,9 +5486,7 @@
 	    <stackable>true</stackable>
 	</augBlueprint>
 	
-	</FTL>
-
-<FTL><!--combat drones-->
+<!--combat drones-->
 
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -5725,9 +5722,7 @@
 		<iconImage>flak</iconImage>
 	</weaponBlueprint>
 	
-</FTL>
-
-<FTL><!--ships-->
+<!--ships-->
 
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -6197,9 +6192,7 @@
 		<cloakImage>mup_kestrel_a</cloakImage>
 	</shipBlueprint>
 
-</FTL>
-
-<FTL><!--system stuff-->
+<!--system stuff-->
 
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -6230,9 +6223,7 @@
 	    </mod:findLike>
 	</mod:findName>
 
-</FTL>
-
-<FTL><!--crew-->
+<!--crew-->
 
 	<!--
 	◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
@@ -6691,7 +6682,7 @@
 		<power>1x Repair Speed</power>
 		<power>2x Sabotage Damage</power>
 		<power>1x Move Speed</power>
-		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 75%</power>
+		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 65%</power>
 	</powerList>
 </crewBlueprint>
 
@@ -6714,7 +6705,7 @@
 		<power>1x Repair Speed</power>
 		<power>3x Sabotage Damage</power>
 		<power>1.25x Move Speed</power>
-		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 90%</power>
+		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%</power>
 	</powerList>
 </crewBlueprint>
 
@@ -6761,7 +6752,7 @@
 		<power>[Specialization]1.75x Damage</power>
 		<power>[Specialization]2.0x Sabotage Damage</power>
 		<power>0.5x Move Speed</power>
-		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%</power>
+		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 60%</power>
 		<power>Can create explosions onboard enemy ships, damaging the ship and systems.</power>
 	</powerList>
 </crewBlueprint>
@@ -6785,7 +6776,7 @@
 		<power>[Specialization]2.25x Damage</power>
 		<power>[Specialization]2.5x Sabotage Damage</power>
 		<power>0.5x Move Speed</power>
-		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 95%</power>
+		<power>Nearby enemies all take damage from suffocation and have their movespeed reduced by 85%</power>
 		<power>Can create explosions onboard enemy ships, damaging the ship and systems.</power>
 	</powerList>
 </crewBlueprint>

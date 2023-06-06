@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <FTL>
 
 <eventList name="START_SCRAPPER_LIST">
@@ -117,7 +118,7 @@
 </ship>
 
 <event name="GUARD_SCRAPPER_DESTROY">
-	<text>You have destroyed the Scrapper Vessal. Whatever might have been in their cargo has for certain been destroyed, but you can at least salvage some supplies from the ship.</text>
+	<text>You have destroyed the Scrapper vessel. Whatever might have been in their cargo has for certain been destroyed, but you can at least salvage some supplies from the ship.</text>
 	<autoReward level="high">standard</autoReward>
 	<choice hidden="true">
 		<text>Continue...</text>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <FTL>
 
   <!--///////////////////////////////
@@ -2197,7 +2198,7 @@
 		<text>Transform Golden Scrapper Defender.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_DEFENDER"/>
     </choice>	
-	<choice req="adamantine_scrapper_heavy" lvl="1" blue="false">
+	<choice req="adamantine_scrapper_heavy_soldier" lvl="1" blue="false">
 		<text>Transform Adamantine Scrapper Heavy Soldier.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_HEAVY"/>
 	</choice>
@@ -2209,7 +2210,7 @@
 		<text>Transform Golden Scrapper Defender Mark 2.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_GOLDEN_DEFENDER_MK2"/>
     </choice>	
-	<choice req="adamantine_scrapper_heavy_mk2" lvl="1" blue="false">
+	<choice req="adamantine_scrapper_heavy_soldier_mk2" lvl="1" blue="false">
 		<text>Transform Adamantine Scrapper Heavy Soldier Mark 2.</text>
 		<event load="STORAGE_CHECK_CREW_SCRAPPER_TRANSFORM_ADAMANTINE_HEAVY_MK2"/>
 	</choice>
@@ -3373,7 +3374,7 @@
 		4x Fire Damage
 		1x Oxygen Drain
 		0.5x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 60%
 		Can create explosions onboard enemy ships, damaging the ship and systems.</text>
 	<choice>
       <text>Do it.</text>
@@ -3461,7 +3462,7 @@
 		2x Fire Damage
 		4x Oxygen Drain
 		0.5x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 95%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 85%
 		Can create explosions onboard enemy ships, damaging the ship and systems.</text>
 	<choice>
       <text>Do it.</text>
@@ -3630,7 +3631,7 @@
 		1x Repair Speed
 		2x Sabotage Damage
 		1x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 75%</text>
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 65%</text>
 	<choice>
       <text>Do it.</text>
       <event>
@@ -3714,7 +3715,7 @@
 		1x Repair Speed
 		3x Sabotage Damage
 		1.25x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 90%</text>
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%</text>
 	<choice>
       <text>Do it.</text>
       <event>
@@ -3859,7 +3860,7 @@
 		1x Repair Speed
 		3x Sabotage Damage
 		1.25x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 90%</text>
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%</text>
 	<choice>
       <text>Do it.</text>
       <event>
@@ -3955,7 +3956,7 @@
 		1x Repair Speed
 		2x Sabotage Damage
 		1x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 75%</text>
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 65%</text>
 	<choice>
       <text>Do it.</text>
       <event>
@@ -4003,7 +4004,7 @@
 		1x Repair Speed
 		3x Sabotage Damage
 		1.25x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 90%</text>
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%</text>
 	<choice>
       <text>Do it.</text>
       <event>
@@ -4234,7 +4235,7 @@
 		1x Repair Speed
 		2x Sabotage Damage
 		1x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 75%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 65%
 	</text>
     <choice>
       <text>Do it.</text>
@@ -4321,7 +4322,7 @@
 		1x Repair Speed
 		3x Sabotage Damage
 		1.25x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 90%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%
 	</text>
     <choice>
       <text>Do it.</text>
@@ -4498,7 +4499,7 @@
 		[Specialization]1.75x Damage
 		[Specialization]2.0x Sabotage Damage
 		0.5x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 60%
 		Can create explosions onboard enemy ships, damaging the ship and systems.
 	</text>
     <choice>
@@ -4587,7 +4588,7 @@
 		[Specialization]1.75x Damage
 		[Specialization]2.0x Sabotage Damage
 		0.5x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 60%
 		Can create explosions onboard enemy ships, damaging the ship and systems.
 	</text>
     <choice>
@@ -4677,7 +4678,7 @@
 		2x Fire Damage
 		4x Oxygen Drain
 		0.5x Move Speed
-		Nearby enemies all take damage from suffocation and have their movespeed reduced by 95%
+		Nearby enemies all take damage from suffocation and have their movespeed reduced by 85%
 		Can create explosions onboard enemy ships, damaging the ship and systems.
 	</text>
     <choice>

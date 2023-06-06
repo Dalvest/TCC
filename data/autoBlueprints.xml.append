@@ -8,9 +8,7 @@
 ◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
 -->
 
-	<!--///////////////////////////////
-////////////// CREW ZONE ///////////////
-////////////////////////////////-->
+	<!-- CREW ZONE -->
 
 <!--/////// ALIENS LIST - HIGHLY IMPORTANT //////-->
 
@@ -55,7 +53,7 @@
 	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 </mod:findName>
 
-<!--/////// SCRAPPERS //////-->
+<!--/////// SCRAPPER LIST //////-->
 
 <blueprintList name="LIST_CREW_SCRAPPER">
 	<name>scrapper</name>
@@ -267,7 +265,7 @@
 	<name>scrapper_soldier</name>
 </blueprintList>
 
-<!--/////// ELITES ///////-->
+<!--/////// ELITE LIST ///////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE">
 	<mod-append:name>scrapper_soldier</mod-append:name>
@@ -288,9 +286,52 @@
 	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 </mod:findName>
 
-<!--/////// LANIUS //////-->
+<!--/////// ENGINEER LIST ///////-->
+
+<mod:findName type="blueprintList" name="LIST_CREW_ENGINEER">
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+</mod:findName>
+
+<!--/////// LANIUS LISTS //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>scrapper</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_medic</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CHECKCREW_LANIUS">
 	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>scrapper</mod-append:name>
 	<mod-append:name>scrapper_soldier</mod-append:name>
@@ -340,33 +381,6 @@
 	<name>sergal</name>
 	<name>sergal_cheese</name>
 </blueprintList>
-
-
-<!--/////// LANIUS //////-->
-
-<mod:findName type="blueprintList" name="LIST_CHECKCREW_LANIUS">
-	<mod-append:name>trash_eater</mod-append:name>
-	<mod-append:name>scrapper</mod-append:name>
-	<mod-append:name>scrapper_soldier</mod-append:name>
-	<mod-append:name>scrapper_heavy</mod-append:name>
-	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_medic</mod-append:name>
-	<mod-append:name>scrapper_scavenger</mod-append:name>
-	<mod-append:name>scrapper_defender</mod-append:name>
-	<mod-append:name>rosegold_scrapper</mod-append:name>
-	<mod-append:name>scrapper_defender_mk2</mod-append:name>
-	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
-	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
-	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
-	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
-	<mod-append:name>golden_scrapper_defender</mod-append:name>
-	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
-	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
-	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
-	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
-	<mod-append:name>golden_scrapper_medic</mod-append:name>
-	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
-</mod:findName>
 
 
 <!--/////// IT'S MORPHIN' TIME ///////-->
@@ -1000,6 +1014,7 @@
 	<name>SCRAPPER_ASSAULT</name>
 	<name>SCRAPPER_DROPSHIP</name>
 	<name>SCRAPPER_BATTLESHIP</name>
+	<name>SCRAPPER_HARVESTER</name>
 	<name>SCRAPPER_INSTIGATOR</name>
 	<name>SCRAPPER_MARAUDER</name>
 	<name>SCRAPPER_HARVESTER</name> 
@@ -1535,13 +1550,11 @@
 <!--
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-			ELITE LANIUS SHIPS
-////////////////////////////////////////////////////////////////////////////////////
+			ELITE SCRAPPER SHIPS
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 -->
-<blueprintList name="LIST_SHIPS_LANIUS_ELITE_ALL">
+<blueprintList name="LIST_SHIPS_SCRAPPER_ELITE_ALL">
 	<name>SCRAPPER_SCOUT_ELITE</name>
 	<name>SCRAPPER_FIGHTER_ELITE</name>
 	<name>SCRAPPER_SKIRMISHER_ELITE</name>
@@ -1557,7 +1570,7 @@
 	<name>SCRAPPER_SHUTTLE_ELITE</name>
 	<name>SCRAPPER_GUARD_ELITE</name>
 </blueprintList>
-<blueprintList name="LIST_SHIPS_LANIUS_ELITE_GENERIC">
+<blueprintList name="LIST_SHIPS_SCRAPPER_ELITE_GENERIC">
 	<name>SCRAPPER_SCOUT_ELITE</name>
 	<name>SCRAPPER_FIGHTER_ELITE</name>
 	<name>SCRAPPER_SKIRMISHER_ELITE</name>
@@ -1567,7 +1580,7 @@
 	<name>SCRAPPER_DROPSHIP_ELITE</name>
 	<name>SCRAPPER_SHUTTLE_ELITE</name>
 </blueprintList>
-<blueprintList name="LIST_SHIPS_LANIUS_ELITE_FIGHT">
+<blueprintList name="LIST_SHIPS_SCRAPPER_ELITE_FIGHT">
 	<name>SCRAPPER_SCOUT_ELITE</name>
 	<name>SCRAPPER_FIGHTER_ELITE</name>
 	<name>SCRAPPER_SKIRMISHER_ELITE</name>
@@ -1605,6 +1618,28 @@
 	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<crewCount amount="1" max="1" class="scrapper_defender" />
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="SCRAPPER_SCOUT_ELITE_ARTIFACT" layout="scrapper_scout_b" img="scrapper_scout_b">
+	<class>Artifact Dealer</class>
+	<maxSector>4</maxSector>
+	<systemList>
+		<clonebay power="0" max="3" room="3" start="false" />
+		<doors power="0" max="3" room="0" start="false" />
+		<engines power="0" max="4" room="6" start="false" />
+		<hacking power="0" max="3" room="2" start="false" />
+		<pilot power="1" max="3" room="1" start="true" />
+		<shields power="4" max="6" room="5" start="true" />
+		<weapons power="4" max="8" room="4" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_LANIUS" />
+	<droneList drones="0" count="0" />
+	<health amount="8" />
+	<maxPower amount="11" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" shield="1" weapons="1" repair="1" name="Fiadora" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
