@@ -64,25 +64,6 @@
 	
 	<!--SCRAPPER SECTOR SHIPS-->
 	
-<ship name="SCRAPPER_SHOP" auto_blueprint="SCRAPPER_SHOP">
-	<destroyed load="SCRAPPER_SHOP_DESTROYED" />
-	<deadCrew load="SCRAPPER_SHOP_DEADCREW" />
-</ship>
-
-<ship name="SHIP_SCRAPPER_OUTPOST" auto_blueprint="SCRAPPER_STATION">
-	<destroyed load="SCRAPPER_OUTPOST_DESTROY" />
-	<deadCrew load="SCRAPPER_OUTPOST_DEADCREW" />
-</ship>
-
-<ship name="SHIP_SCRAPPER_SALVAGE_GUARD" auto_blueprint="SCRAPPER_GUARD">
-	<destroyed load="SCRAPPER_SALVAGE_GUARD_DESTROY" />
-	<deadCrew load="SCRAPPER_SALVAGE_GUARD_DEADCREW" />
-</ship>
-
-<ship name="SHIP_SCRAPPER_ARTIFACT_SCOUT" auto_blueprint="SCRAPPER_SCOUT_ELITE_ARTIFACT">
-	<destroyed load="SCRAPPER_ARTIFACT_SCOUT_DESTROY" />
-	<deadCrew load="SCRAPPER_ARTIFACT_SCOUT_DEADCREW" />
-</ship>
 
 
 	

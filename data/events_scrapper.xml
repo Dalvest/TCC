@@ -10,18 +10,19 @@
 	<event load="SCRAPPER_SHIP_GRAVEYARD" /> <!--Scrap and Crew-->
 	<event load="SCRAPPER_FREE_SCRAP" /> <!--Not Unique-->
 	<event load="SCRAPPER_FREE_STUFF" /> <!--Not Unique-->
-	<!--Need to Create 1-2 More Item Only Events-->
+	<event load="SCRAPPER_CONTAINER" />
 </eventList>
 
 <eventList name="CREW_SCRAPPER">
 	<event load="SCRAPPER_SOLDIER_ESCAPE_POD" />
-	<event load="SCRAPPER_CAPTIVE_SCRAPPER" />
-	<!--Need to Create 1-2 More Item Only Events-->
+	<event load="SCRAPPER_BOARDED_SCRAPPER" />
+	<!--Need to Create 1-2 More Crew Only Events-->
 <eventList>
 	
 <eventList name="HOSTILE_SCRAPPER"/>
 	<event load="ENCOUNTER_AUTO_SCRAPPER"/> <!--Not Unique-->
 	<event load="ENCOUNTER_SCRAPPER_HOSTILE"/> <!--Not Unique-->
+	<event load="SCRAPPER_NON_SCRAPPER_HOSTILE"/> <!--Not Unique-->
 	<!--Need to Create 2-4 Unique Combat Events-->
 </eventList>
 
@@ -33,32 +34,427 @@
 <!--Need to Create 2-3 Distress Beacon Events-->
 </eventList>
 
+<!--SCRAPPER SECTOR SHIPS-->
 
+<ship name="SCRAPPER_SHOP" auto_blueprint="SCRAPPER_SHOP">
+	<destroyed load="SCRAPPER_SHOP_DESTROYED" />
+	<deadCrew load="SCRAPPER_SHOP_DEADCREW" />
+</ship>
 
-<!--HOSTILE EVENTS-->
+<ship name="SHIP_SCRAPPER_OUTPOST" auto_blueprint="SCRAPPER_STATION">
+	<destroyed load="SCRAPPER_OUTPOST_DESTROY" />
+	<deadCrew load="SCRAPPER_OUTPOST_DEADCREW" />
+</ship>
+
+<ship name="SHIP_SCRAPPER_SALVAGE_GUARD" auto_blueprint="SCRAPPER_GUARD">
+	<destroyed load="SCRAPPER_SALVAGE_GUARD_DESTROY" />
+	<deadCrew load="SCRAPPER_SALVAGE_GUARD_DEADCREW" />
+</ship>
+
+<ship name="SHIP_SCRAPPER_ARTIFACT_SCOUT" auto_blueprint="SCRAPPER_SCOUT_ELITE_ARTIFACT">
+	<destroyed load="SCRAPPER_ARTIFACT_SCOUT_DESTROY" />
+	<deadCrew load="SCRAPPER_ARTIFACT_SCOUT_DEADCREW" />
+</ship>
 
 <ship name="SHIP_SCRAPPER_ALL" auto_blueprint="LIST_SHIPS_SCRAPPER_ALL">
 	<destroyed load="SCRAPPER_DESTROY" />
 	<deadCrew load="SCRAPPER_DEADCREW" />
 </ship>
 
-<ship name="SHIP_MANTIS_SCRAPPER_CAPTIVE" auto_blueprint="LIST_SHIPS_MANTIS_FIGHT">
-	<destroyed load="MANTIS_SCRAPPER_CAPTIVE_DESTROY" />
-	<deadCrew load="MANTIS_SCRAPPER_CAPTIVE_DEADCREW" />
+<ship name="SHIP_MANTIS_SCRAPPER_BOARDER" auto_blueprint="LIST_SHIPS_MANTIS_FIGHT">
+	<destroyed load="SCRAPPER_MANTIS_BOARDED_DESTROY" />
+	<deadCrew load="SCRAPPER_MANTIS_BOARDED_DEADCREW" />
 </ship>
 
 <ship name="SHIP_SCRAPPER_FIGHT" auto_blueprint="LIST_SHIPS_SCRAPPER_FIGHT">
 	<destroyed load="SCRAPPER_DESTROY" />
 	<deadCrew load="SCRAPPER_DEADCREW" />
+</ship>
 
-<ship name="SHIP_SCRAPPER_ELITE_ALL" auto_blueprint="LIST_SHIPS_SCRAPPER_ELITE_ALL">
+<ship name="SHIP_SCRAPPER_ELITE_FIGHT" auto_blueprint="LIST_SHIPS_SCRAPPER_ELITE_FIGHT">
 	<destroyed load="SCRAPPER_DESTROY" />
 	<deadCrew load="SCRAPPER_DEADCREW" />
 </ship>
 
+<ship name="SHIP_SCRAPPER_ROCK_FIGHT" auto_blueprint="LIST_SHIPS_ROCK_GENERIC">
+	<destroyed load="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY" />
+	<deadCrew load="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW" />
+</ship>
+
+<ship name="SHIP_SCRAPPER_ENGI_FIGHT" auto_blueprint="LIST_SHIPS_ENGI_GENERIC">
+	<destroyed load="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY" />
+	<deadCrew load="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW" />
+</ship>
+
+<ship name="SHIP_SCRAPPER_REBEL_FIGHT" auto_blueprint="LIST_SHIPS_REBEL_FIGHT">
+	<destroyed load="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY" />
+	<deadCrew load="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW" />
+</ship>
+
+<ship name="SHIP_SCRAPPER_MANTIS_FIGHT" auto_blueprint="LIST_SHIPS_MANTIS_FIGHT">
+	<destroyed load="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY" />
+	<deadCrew load="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW" />
+</ship>
+
+<ship name="SHIP_SCRAPPER_ZOLTAN_FIGHT" auto_blueprint="LIST_SHIPS_ZOLTAN_FIGHT">
+	<destroyed load="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY" />
+	<deadCrew load="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW" />
+</ship>
+
+<ship name="SHIP_SCRAPPER_CRYSTAL_FIGHT" auto_blueprint="LIST_SHIPS_CRYSTAL_FIGHT">
+	<destroyed load="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY" />
+	<deadCrew load="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW" />
+</ship>
+
+<!--STARTING EVENT-->
+<eventList name="START_SCRAPPER_LIST">
+	<event load="START_SCRAPPER_NOSHIP" />
+	<event load="START_SCRAPPER_SHIP" />
+</eventList>
+
+<textList name="TEXT_START_SCRAPPER">
+	<text>Welcome to Scrapper space. The scrappers are elusive and don't make a habit of sharing information about their societies among travelers. They simply need scrap.</text>
+	<text>The Scrappers focus on acquiring scrap suggests that they prioritize resource acquisition above all else. Their societies are likely centered around scavenging, with social structures, customs, and hierarchies emerging from the need to efficiently collect and utilize resources. Cooperation and sharing of knowledge among Scrappers might occur within their own communities but may not extend readily to outsiders.</text>
+	<text>Scrappers seem to have a strong sense of self-reliance and resourcefulness, as they must navigate dangerous and unpredictable environments to find valuable scraps. They possess specialized knowledge about identifying and extracting useful materials from various sources, especially wrecked spacecraft and technological remnants.</text>
+</textList>
+
+<event name="START_SCRAPPER_NOSHIP">
+	<preventQuest />
+	<beaconType id="map_icon_start" global="false">
+		<color r="46" g="252" b="51" a="1" />
+	</beaconType>
+	<text load="TEXT_START_SCRAPPER" />
+	<changeBackground>BACK_SECTOR_SCRAPPER</changeBackground>
+	<playSound>lightspeed</playSound>
+	<remove name="HIDDEN DUMMY" />
+	<choice>
+		<text>Continue...</text>
+		<event>
+			<text>The Scrappers seem to be far too pre-occupied with their persual of all things Scrap to post a guard at this beacon.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK" />
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event />
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="START_SCRAPPER_SHIP">
+	<preventQuest />
+	<beaconType id="map_icon_start" global="false">
+		<color r="46" g="252" b="51" a="1" />
+	</beaconType>
+	<text load="TEXT_START_SCRAPPER" />
+	<ship load="SHIP_GUARD_SCRAPPER" hostile="false" />
+	<changeBackground>BACK_SECTOR_SCRAPPER</changeBackground>
+	<playSound>lightspeed</playSound>
+	<remove name="HIDDEN DUMMY" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>It would appear that the Scrappers bothered to post a guard at this beacon. They are not hostile, nor are they readying weapons and indeed after a few moments of silence, they hail you.
+			CAPTAIN! SURELY YOU WILL UNDERSTAND! A TOLL MUST BE COLLECTED! TRANSFER SCRAP OR NO ENTRY!</text>
+			<choice hidden="true">
+				<text>"I ain't paying that."</text>
+				<event>
+					<text>You alert your crew of defensive positions as the Guard powers up their weapons.</text>
+					<ship hostile="true" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK" />
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>That makes sense.</text>
+				<event>
+					<text>You peacefully transfer the scrap to the scrapper, allowing you entrance to the Scrappers Space.</text>
+					<item_modify>
+						<item type="scrap" min="-8" max="-15" />
+					</item_modify>
+				</event>
+			</choice>
+			<choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true" hidden="true">
+				<text>(Scrapper Crew) Your Scrapper insists on speaking to the Guard.</text>
+				<event>
+					<text>Unsure if this is a good idea, but trustful of your crew, you allow them to approach the comm. They animatedely shout at the guard, and with a few moments it seems that insults are being thrown. Insulted, the guard powers up weapons and begins to attack!</text>
+					<ship hostile="true" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK" />
+					</choice>
+				</event>
+			</choice>
+			<choice req="trash_eater" lvl="1" blue="true" hidden="true">
+				<text>(Trash Eater) The Trash Eater insists on speaking to the Guard.</text>
+				<event>
+					<text>The Trash Eater walks up to the Comm and announces his presence onboard the ship. The guard seems to be concerned, alarmed, and even frightened. The Trash Eater insists that they pay him for the right to guard the space and to allow us passage. They i agree, transfering supplies to your ship. The Trash Eater, pleased with himself, enjoys some of the scrap for himself.</text>
+					<item_modify>
+						<item type="scrap" min="7" max="24" />
+						<item type="fuel" min="1" max="5" />
+						<item type="drones" min="1" max="5" />
+						<item type="missiles" min="1" max="5" />
+					</item_modify>
+					<choice>
+						<text>Do something else on board.</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+					<choice>
+						<text>Continue...</text>
+						<event />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="GUARD_SCRAPPER_DESTROY">
+	<text>You have destroyed the Scrapper vessel. Whatever might have been in their cargo has for certain been destroyed, but you can at least salvage some supplies from the ship.</text>
+	<autoReward level="high">standard</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="GUARD_SCRAPPER_FOLLOWUP" />
+	</choice>
+</event>
+
+<event name="GUARD_SCRAPPER_DEADCREW">
+	<text>You have defeated the Scrapper. Without crew on-board to stop you, you can investigate their cargo. You find a weapon to bring back to the ship, and move on to scrap their hull.</text>
+	<autoReward level="high">standard</autoReward>
+	<weapon name="GIFTLIST_RUSTY" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="GUARD_SCRAPPER_FOLLOWUP" />
+	</choice>
+</event>
+
+<event name="GUARD_SCRAPPER_FOLLOWUP">
+	<noQuestText />
+	<text>By killing the Scrapper Guard, you've most certainly made your precenense in this sector known They probably won't be so pleased with you after this.</text>
+	<quest event="REINFORCEMENTS_SCRAPPER" />
+	<choice>
+		<text>Do something onboard the ship.</text>
+		<event load="STORAGE_CHECK" />
+	</choice>
+	<choice>
+		<text>Do nothing.</text>
+		<event />
+	</choice>
+</event>
+
+<event name="REINFORCEMENTS_SCRAPPER">
+	<preventQuest />
+	<text>You warp in to find a rather strong looking Scrapper. They hail you, "YOU KILLED OUR GUARD!! WE WILL KILL YOU!!"</text>
+	<ship load="SHIP_SCRAPPER_ELITE" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+
+<!--HOSTILE EVENTS-->
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE">
+	<event load="SCRAPPER_NON_SCRAPPER_HOSTILE_ENCOUNTER_LIST">
+</event>
+
+<eventList name="SCRAPPER_NON_SCRAPPER_HOSTILE_ENCOUNTER_LIST">
+	<event load="SCRAPPER_NON_SCRAPPER_HOSTILE_REBEL">
+	<event load="SCRAPPER_NON_SCRAPPER_HOSTILE_ENGI">
+	<event load="SCRAPPER_NON_SCRAPPER_HOSTILE_ROCK">
+	<event load="SCRAPPER_NON_SCRAPPER_HOSTILE_MANTIS">
+	<event load="SCRAPPER_NON_SCRAPPER_HOSTILE_ZOLTAN">
+	<event load="SCRAPPER_NON_SCRAPPER_HOSTILE_CRYSTAL">
+</eventlist>
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE_REBEL">
+	<text>You warp in to find a rebel ship waiting at the beacon for any of those foolish to warp to zero! It looks like thats you.</text>
+	<ship load="SHIP_SCRAPPER_REBEL_FIGHT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE_ENGI">
+	<text>You warp in to find an engi ship waiting at the beacon for any of those foolish to warp to zero! It looks like thats you.</text>
+	<ship load="SHIP_SCRAPPER_ENGI_FIGHT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE_ROCK">
+	<text>You warp in to find a rock ship waiting at the beacon for any of those foolish to warp to zero! It looks like thats you.</text>
+	<ship load="SHIP_SCRAPPER_ROCK_FIGHT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE_MANTIS">
+	<text>You warp in to find a mantis ship waiting at the beacon for any of those foolish to warp to zero! It looks like thats you.</text>
+	<ship load="SHIP_SCRAPPER_MANTIS_FIGHT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE_ZOLTAN">
+	<text>You warp in to find a zoltan ship waiting at the beacon for any of those foolish to warp to zero! It looks like thats you.</text>
+	<ship load="SHIP_SCRAPPER_ZOLTAN_FIGHT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE_CRYSTAL">
+	<text>You warp in to find a crystal ship waiting at the beacon for any of those foolish to warp to zero! It looks like thats you.</text>
+	<ship load="SHIP_SCRAPPER_CRYSTAL_FIGHT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY">
+	<text>It would seem you are not the only visitor to Scrapper space. The foreign ship explodes, leaving behind a field of salvage for you to collect.</text>
+	<autoReward level="MED">standard</autoReward>
+	<choice hidden="true">
+	<text>Check the storage.</text>
+	<event load="STORAGE_CHECK" />
+	</choice>
+	<choice hidden="true">
+		<text>Do nothing.</text>
+		<event />
+	</choice>
+</event>
+
+<event name="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW">
+	<text>It would seem you are not the only visitor to Scrapper space. The vessel lies empty, giving you plenty of time to salvage it.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<choice hidden="true">
+	<text>Check the storage.</text>
+	<event load="STORAGE_CHECK" />
+	</choice>
+	<choice hidden="true">
+		<text>Do nothing.</text>
+		<event />
+	</choice>
+</event>
+
+
+<event name="SCRAPPER_BOARDED_SCRAPPER" unique="true">
+	<text>You warp in to find a damaged Scrapper ship being boarded by a Mantis vessel. </text>
+	<ship load="SHIP_MANTIS_SCRAPPER_BOARDER" hostile="false" />
+	<choice hidden="true">
+		<text>Attack the Mantis in an attempt to save the Scrapper!</text>
+		<event>
+			<ship hostile="true"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>This isn't our conflict.</text>
+		<event>
+			<text>This isn't your problem.</text>
+			<choice hidden="true">
+				<text>Check the storage.</text>
+				<event load="STORAGE_CHECK" />
+			</choice>
+			<choice hidden="true">
+				<text>Do nothing.</text>
+				<event />
+			</choice>
+		</event>
+	</choice>
+</event>
+	
+<event name="MANTIS_SCRAPPER_BOARDED_DESTROY">
+	<text>The Mantis ship has been destroyed, allowing you to salvage it and rescuing the assaulted Scrapper ship, who is hailing you.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<choice hidden="true">
+		<text>Answer the hail.</text>
+		<event>
+			<text>"THANK YOU! YOU IMPRESS US! AMARA WISHES TO JOIN YOU!"</text>
+			<choice hidden="true">
+				<text>Accept their offer.</text>
+				<event>
+					<crewMember class="scrapper" name="Amara"/>
+					<choice hidden="true">	
+						<text>Welcome aboard!</text>
+						<event />
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Decline their offer.</text>
+				<event>
+					<text>"THANK YOU AGAIN FOR THE RESCUE!!"</text>
+					<choice hidden="true">
+						<text>Check the storage.</text>
+						<event load="STORAGE_CHECK" />
+					</choice>
+					<choice hidden="true">
+						<text>Do nothing.</text>
+						<event />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="MANTIS_SCRAPPER_BOARDED_DEADCREW">
+	<text>The Mantis ship lies empty, allowing you to salvage it and rescuing the assaulted Scrapper ship, who is hailing you.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<choice hidden="true">
+		<text>Answer the hail.</text>
+		<event>
+			<text>"THANK YOU! YOU IMPRESS US! AMARA WISHES TO JOIN YOU!"</text>
+			<choice hidden="true">
+				<text>Accept their offer.</text>
+				<event>
+					<crewMember class="scrapper" combat="1" name="Amara"/>
+					<choice hidden="true">	
+						<text>Welcome aboard!</text>
+						<event />
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Decline their offer.</text>
+				<event>
+					<text>"THANK YOU AGAIN FOR THE RESCUE!!"</text>
+					<choice hidden="true">
+						<text>Check the storage.</text>
+						<event load="STORAGE_CHECK" />
+					</choice>
+					<choice hidden="true">
+						<text>Do nothing.</text>
+						<event />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
 <event name="ENCOUNTER_SCRAPPER_HOSTILE">
-	<text load="TEXT_ENCOUNTER_SCRAPPER_HOSTILE" />
-	<ship load="SHIP_SCRAPPER_ALL" hostile="true" />
+	<text load="TEXT_SCRAPPER_HOSTILE" />
+	<ship load="SHIP_SCRAPPER_FIGHT" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
@@ -71,6 +467,83 @@
 	<text>You enter the system and find an unusually aggressive Scrapper military vessel has locked onto your ship and is readying its weapons!</text>
 	<text>You find a Scrapper vessel closely orbiting the beacon, likely waiting for easy victims like you!</text>
 </textList>
+
+<event name="SCRAPPER_DESTROY">
+	<text load="TEXT_SCRAPPER_DESTROYED" />
+	<autoReward level="MED">stuff</autoReward>
+</event>
+
+<event name="SCRAPPER_DEADCREW">
+	<text load="TEXT_SCRAPPER_DEADCREW" />
+	<autoReward level="MED">stuff</autoReward>
+</event>
+
+<textList name="TEXT_DESTROYED_SCRAPPER">
+	<text>The Scrapper Ship breaks to pieces and you scrap whatever you can.</text>
+	<text>The Scrapper ship is no more. You scrap what you can.</text>
+	<text>The Scrappers are silent and their ship is in pieces, you scrap what remains.</text>
+	<text>The Scrapper wreckage lies scattered and smouldering. You salvage whatever fragments hold value.</text>
+	<text>Your crew salvages any usable remnants that remain from the the shattered Scrapper vessel.</text>	
+</textList>
+
+<textList name="TEXT_DEADCREW_SCRAPPER">
+	<text>The ship halls, now bloodied, are empty and silent. You take your time as you pick through the vessel.</text>
+	<text>The Scrappers put up a very tough fight but you are tougher.</text>
+	<text>The Scrappers have been killed Your crew strips the remainder of the Scrapper ship.</text>
+	<text>With the Scrappers defeated, your crew efficiently dismantles the remaining parts of their ship.</text>
+	<text>The lifeless bodies of the Scrappers mark their demise as your crew meticulously salvages the remaining Scrapper vessel.</text>
+</textList>
+
+<event name="ENCOUNTER_SCRAPPER_ELITE_HOSTILE">
+	<text load="TEXT_SCRAPPER_ELITE_HOSTILE" />
+	<ship load="SHIP_SCRAPPER_ELITE_FIGHT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+<textList name="TEXT_SCRAPPER_ELITE_HOSTILE">
+	<text>An Elite Scrapper vessel is lurking about in this sector. As soon as it notices you it powers up its weapons!</text>
+	<text>You warp in to find an Elite Scrapper vessel just as it finishes salvaging a wrecked ship; without warning it moves in to attack!</text>
+	<text>You have warped in to find an Elite Scrapper vessel. It seems to simply dislike you as it powers up its weapons to engage.</text>
+	<text>You enter the system and find an unusually aggressive Scrapper military vessel has locked onto your ship and is readying its weapons!</text>
+	<text>You find a Scrapper vessel closely orbiting the beacon, likely waiting for easy victims like you!</text>
+</textList>
+
+<event name="SCRAPPER_ELITE_DESTROY">
+	<text load="TEXT_SCRAPPER_ELITE_DESTROY" />
+	<autoReward level="HIGH">stuff</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="SCRAPPER_ELITE_REWARD" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ELITE_DEADCREW">
+	<text load="TEXT_SCRAPPER_ELITE_DEADCREW" />
+	<autoReward level="HIGH">stuff</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="SCRAPPER_ELITE_REWARD" />
+	</choice>
+</event>
+
+<textList name="TEXT_DESTROYED_SCRAPPER">
+	<text>The Scrapper Ship breaks to pieces and you scrap whatever you can.</text>
+	<text>The Scrapper ship is no more. You scrap what you can.</text>
+	<text>The Scrappers are silent and their ship is in pieces, you scrap what remains.</text>
+	<text>The Scrapper wreckage lies scattered and smouldering. You salvage whatever fragments hold value.</text>
+	<text>Your crew salvages any usable remnants that remain from the the shattered Scrapper vessel.</text>	
+</textList>
+
+<textList name="TEXT_DEAD_CREW_SCRAPPER">
+	<text>The ship halls, now bloodied, are empty and silent. You take your time as you pick through the vessel.</text>
+	<text>The Scrappers put up a very tough fight but you are tougher.</text>
+	<text>The Scrappers have been killed Your crew strips the remainder of the Scrapper ship.</text>
+	<text>With the Scrappers defeated, your crew efficiently dismantles the remaining parts of their ship.</text>
+	<text>The lifeless bodies of the Scrappers mark their demise as your crew meticulously salvages the remaining Scrapper vessel.</text>
+</textList>
+
 
 <event name="ENCOUNTER_AUTO_SCRAPPER">
 	<text load="AUTO_SCRAPPER_FIGHT" />
@@ -131,7 +604,7 @@
     <text>A formidable Scrapper Outpost has taken root in this sector. Could it serve as a covert hub for cutting-edge research or as a strategic military stronghold, concealed from prying eyes?</text>
 </textList>
 
-<event name="SCRAPPER_OUTPOST">
+<event name="SCRAPPER_OUTPOST" unique="true">
 	<text load="TEXT_SCRAPPER_OUTPOST" />
 	<ship load="SHIP_SCRAPPER_OUTPOST" hostile="false" />
 	<changeBackground>BACK_SECTOR_SCRAPPER</changeBackground>
@@ -229,6 +702,32 @@
 				</event>
 			</choice>
 		</event>
+	</choice>
+</event>
+
+<event name="SCRAPPER_OUTPOST_DESTROY">
+	<text>The outpost has been destroyed, likely destroying any data or anything significantly valuable.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<choice hidden="true">
+		<text>Check the storage.</text>
+		<event load="STORAGE_CHECK" />
+	</choice>
+	<choice hidden="true">
+		<text>Do nothing.</text>
+		<event />
+	</choice>
+</event>
+
+<event name="SCRAPPER_OUTPOST_DEADCREW">
+	<text>The outpost lies empty, you are able to strip the entire station.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<choice hidden="true">
+		<text>Check the storage.</text>
+		<event load="STORAGE_CHECK" />
+	</choice>
+	<choice hidden="true">
+		<text>Do nothing.</text>
+		<event />
 	</choice>
 </event>
 
@@ -383,9 +882,7 @@
 	</choice>
 </event>
 
-
-
-<event name="SCRAPPER_FREE_SCRAP" unique="false">
+<event name="SCRAPPER_FREE_SCRAP">
 	<text>There is a recently destroyed ship at this beacon. Upon closer investigation it appears that the ship recently suffered a reactor core meltdown causing the explosion that ripped the hull apart. Unfortunate for the crew that once occupied the ship, but scrap is scrap.</text>
 	<autoReward level="MED">scrap_only</autoReward>
 	<choice hidden="true">
@@ -398,7 +895,7 @@
 	</choice>
 </event>
 
-<event name="SCRAPPER_FREE_STUFF" unique="false">
+<event name="SCRAPPER_FREE_STUFF">
 	<text>You find a derelict vessel floating nearby the beacon that you are able to quickly scrap down for resources.</text>
 	<autoReward level="MED">standard_no_item</autoReward>
 	<choice hidden="true">
@@ -763,23 +1260,47 @@
 	</choice>
 </event>
 
-<event name="SCRAPPER_CAPTIVE_SCRAPPER" unique="true">
-	<text>You warp in to find a damaged Scrapper ship being boarded by a Mantis vessel. </text>
-	<ship load="LIST_SHIPS_MANTIS_FIGHT" hostile="false" />
+<event name="SCRAPPER_CONTAINER" unique="false">
+	<text>You warp in to find a drifting container marked with Scrapper paint and oddly grafted metal jutting from it. It appears to be a lost shipping container.</text>
 	<choice hidden="true">
-		<text>Attack the Mantis in an attempt to save the Scrapper!</text>
+		<text>Open the cache.</text>
+		<event load="SCRAPPER_CONTAINER_OPEN" />
+	</choice>
+	<choice hidden="true" req="LIST_CREW_ROCK" blue="true">
+		<text>(Rock Crew) Smash open the container.</text>
 		<event>
-			<ship hostile="true"/>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event load="COMBAT_CHECK" />
-			</choice>
+			<text>Your rock crew successfully smashes open the container. Inside appears to be a large amount of consumer goods that your crew is able to salvage for scrap, as well as what appears to be a weapon that was being smuggled. It's yours now.</text>
+			<autoReward level="MED">scrap_only</autoReward>
+			<weapon name="GIFTLIST_WEAPON_SCRAPPER" />
+		</event>
+	</choice>
+	<choice hidden="true" req="LIST_CREW_CRYSTAL" blue="true">
+		<text>(Crystal Crew) Smash open the container.</text>
+		<event>
+			<text>Your rock crew successfully smashes open the container. Inside appears to be a large amount of consumer goods that your crew is able to salvage for scrap, as well as what appears to be a weapon that was being smuggled. It's yours now.</text>
+			<autoReward level="MED">scrap_only</autoReward>
+			<weapon name="GIFTLIST_WEAPON_SCRAPPER" />
+		</event>
+	</choice>
+	<choice hidden="true" req="LIST_CREW_SCRAPPER_ELITE" blue="true">
+		<text>(Elite Scrapper Crew) Expertly salvage the container.</text>
+		<event>
+			<text>Your elite scrappers make quick work of the scrapper container. Inside appears to be a large amount of consumer goods that your crew is able to salvage for scrap, as well as what appears to be a weapon that was being smuggled. It's yours now.</text>
+			<autoReward level="MED">scrap_only</autoReward>
+			<weapon name="GIFTLIST_WEAPON_SCRAPPER" />
+		</event>
+	</choice>
+	<choice hidden="true" req="weapons" lvl="8" blue="true">
+		<text>(Adv. Weapons) Blast open the container.</text>
+		<event>
+			<text>Your upgraded weapons make short work of the containers outer shielding, but it seems it was too effective, and everything inside has been completely destroyed. Well, at least its still viable metal that you can scrap, right?</text>
+			<autoReward level="HIGH">scrap_only</autoReward>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>This isn't our conflict.</text>
+		<text>Ignore the container.</text>
 		<event>
-			<text>This isn't your problem.</text>
+			<text>It's better to not risk anything and allow the container to continue drifting through space.</text>
 			<choice hidden="true">
 				<text>Check the storage.</text>
 				<event load="STORAGE_CHECK" />
@@ -792,78 +1313,22 @@
 	</choice>
 </event>
 
-	<destroyed load="MANTIS_SCRAPPER_RESCUE_DESTROY" />
-	<deadCrew load="MANTIS_SCRAPPER_RESCUE_DEADCREW" />
-	
-<event name="MANTIS_SCRAPPER_RESCUE_DESTROY">
-	<text>The Mantis ship has been destroyed, allowing you to salvage it and rescuing the assaulted Scrapper ship, who is hailing you.</text>
-	<autoReward level="HIGH">standard</autoReward>
-	<choice hidden="true">
-		<text>Answer the hail.</text>
-		<event>
-			<text>"THANK YOU! YOU IMPRESS US! AMARA WISHES TO JOIN YOU!"</text>
-			<choice hidden="true">
-				<text>Accept their offer.</text>
-				<event>
-					<crewMember class="scrapper" name="Amara"/>
-					<choice hidden="true">	
-						<text>Welcome aboard!</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-			<choice hidden="true">
-				<text>Decline their offer.</text>
-				<event>
-					<text>"THANK YOU AGAIN FOR THE RESCUE!!"</text>
-					<choice hidden="true">
-						<text>Check the storage.</text>
-						<event load="STORAGE_CHECK" />
-					</choice>
-					<choice hidden="true">
-						<text>Do nothing.</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
-</event>
 
-<event name="MANTIS_SCRAPPER_RESCUE_DEADCREW">
-	<text>The Mantis ship lies empty, allowing you to salvage it and rescuing the assaulted Scrapper ship, who is hailing you.</text>
-	<autoReward level="HIGH">standard</autoReward>
-	<choice hidden="true">
-		<text>Answer the hail.</text>
-		<event>
-			<text>"THANK YOU! YOU IMPRESS US! AMARA WISHES TO JOIN YOU!"</text>
-			<choice hidden="true">
-				<text>Accept their offer.</text>
-				<event>
-					<crewMember class="scrapper" combat="1" name="Amara"/>
-					<choice hidden="true">	
-						<text>Welcome aboard!</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-			<choice hidden="true">
-				<text>Decline their offer.</text>
-				<event>
-					<text>"THANK YOU AGAIN FOR THE RESCUE!!"</text>
-					<choice hidden="true">
-						<text>Check the storage.</text>
-						<event load="STORAGE_CHECK" />
-					</choice>
-					<choice hidden="true">
-						<text>Do nothing.</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
-</event>
+<eventList name="SCRAPPER_CONTAINER_OPEN">
+	<event>
+		<text>No matter how much your crew tries, the containers door won't budge. Even worse, a Scrapper vessel has warped in seemingly to recover the container and notice you messing with it! They move in to attack!</text>
+		<ship load="SHIP_SCRAPPER_FIGHT" hostile="true" />
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+		</choice>
+	</event>
+	<event>
+		<text>Your crew manages to pry the container open. Inside appears to be a large amount of consumer goods that your crew is able to salvage for scrap, as well as what appears to be a weapon that was being smuggled. It's yours now.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+		<weapon name="GIFTLIST_WEAPON_SCRAPPER" />
+	</event>
+</eventList>
 
 <!--These are Events that will appear outside of the Scrapper sectors-->
 
@@ -989,31 +1454,6 @@
 	</choice>
 </event>
 
-<event name="SCRAPPER_OUTPOST_DESTROY">
-	<text>The outpost has been destroyed, likely destroying any data or anything significantly valuable.</text>
-	<autoReward level="HIGH">standard</autoReward>
-	<choice hidden="true">
-		<text>Check the storage.</text>
-		<event load="STORAGE_CHECK" />
-	</choice>
-	<choice hidden="true">
-		<text>Do nothing.</text>
-		<event />
-	</choice>
-</event>
-
-<event name="SCRAPPER_OUTPOST_DEADCREW">
-	<text>The outpost lies empty, you are able to strip the entire station.</text>
-	<autoReward level="HIGH">standard</autoReward>
-	<choice hidden="true">
-		<text>Check the storage.</text>
-		<event load="STORAGE_CHECK" />
-	</choice>
-	<choice hidden="true">
-		<text>Do nothing.</text>
-		<event />
-	</choice>
-</event>
 
 <event name="TC_SCRAPPER_CORVETTE_DESTROYED">
 	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
@@ -1062,32 +1502,166 @@
 		<text>Continue...</text>
 	</choice>
 </event>
+<!--
+	Events with unique environments
+-->
+<eventList name="HAZARD_SCRAPPER">
+	<event load="ENCOUNTER_SCRAPPER_ASTEROID" />
+	<event load="ENCOUNTER_SCRAPPER_SUN" />
+	<event load="ENCOUNTER_SCRAPPER_STORM" />
+</eventList>
 
-<!--Generic Ships-->
-<event name="SCRAPPER_DEADCREW">
-	<text load="TEXT_DEAD_CREW_SCRAPPER" />
-	<autoReward level="HIGH">stuff</autoReward>
+<event name="ENCOUNTER_SCRAPPER_ASTEROID" unique="true">
+	<text>A Scrapper ship is in the system salvaging asteroids. They notice you and power up their weapons.</text>
+	<ship load="SHIP_SCRAPPER_FIGHT" hostile="true" />
+	<environment type="asteroid" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
 </event>
 
-<event name="SCRAPPER_DESTROY">
-	<text load="TEXT_DESTROYED_SCRAPPER" />
-	<autoReward level="MED">stuff</autoReward>
+<event name="ENCOUNTER_SCRAPPER_SUN" unique="true">
+	<text>A Scrapper ship in the system hails you, "HOT! FIRE! HOT HOT HOT! TAMALE HOT!" Before you can parse meaning from this, it powers its weapons</text>
+	<ship load="SHIP_SCRAPPER_FIGHT" hostile="true" />
+	<environment type="sun" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
 </event>
 
-<textList name="TEXT_DESTROYED_SCRAPPER">
-	<text>The Scrapper Ship breaks to pieces and you scrap whatever you can.</text>
-	<text>The Scrapper ship is no more. You scrap what you can.</text>
-	<text>The Scrappers are silent and their ship is in pieces, you scrap what remains.</text>
-	<text>The Scrapper wreckage lies scattered and smouldering. You salvage whatever fragments hold value.</text>
-	<text>Your crew salvages any usable remnants that remain from the the shattered Scrapper vessel.</text>	
-</textList>
+<event name="ENCOUNTER_SCRAPPER_STORM" unique="true">
+	<text>A Scrapper ship has come to this system seeking easy victims in the storm.</text>
+	<ship load="SHIP_SCRAPPER_FIGHT" hostile="true" />
+	<environment type="storm" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
 
-<textList name="TEXT_DEAD_CREW_SCRAPPER">
-	<text>The ship halls, now bloodied, are empty and silent. You take your time as you pick through the vessel.</text>
-	<text>The Scrappers put up a very tough fight but you are tougher.</text>
-	<text>The Scrappers have been killed Your crew strips the remainder of the Scrapper ship.</text>
-	<text>With the Scrappers defeated, your crew efficiently dismantles the remaining parts of their ship.</text>
-	<text>The lifeless bodies of the Scrappers mark their demise as your crew meticulously salvages the remaining Scrapper vessel.</text>
-</textList>
+<!--
+		DISTRESS!!!
+	Events that may have a fight
+
+<eventList name="NEBULA_DISTRESS_GHOST">
+	<event load="NEBULA_GHOST_ESCORT" />
+
+	<event load="NEBULA_VAGABOND_ORCHID" />
+</eventList>
+
+<event name="NEBULA_VAGABOND_ORCHID" unique="true">
+	<text>Looks like an Orchid ship, of all things, is the source of this distress beacon. One of their crew hail you - "Please help! We were sent by the Gathering to negotiate with one of the Goul clans who keep burning our colonies, but our captain was taken hostage and they won't give him back!"</text>	
+	<environment type="nebula" />
+	<distressBeacon />
+	<choice hidden="true">
+		<text>Agree to help.</text>
+		<event>
+			<text>You follow the Orchid ship's directions to a Vagabond war camp populated mostly by Gouls. You request to speak with their leader directly: "Does the life of this frail plant thing concern you to a degree that would drive further ambitions to seek our favor in release? If you wish for this floral being not to suffer any longer, then you must prove your worth and destroy a Dynasty vessel who has been troubling my people."</text>
+			<choice hidden="true">
+				<text>We'll fight the Dynasty ship.</text>
+				<event>
+					<text>The Vagabonds direct you to a Dynasty vessel not too far. Prepare for battle!</text>
+					<ship load="SHIP_VAGABOND_ORCHID_DYNASTY" hostile="true" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK" />
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Refuse - just attack the Vagabonds instead.</text>
+				<event>
+					<text>"Predictable as always! Don't expect the life of this Orchid to persist much longer after this battle!"</text>
+					<ship load="SHIP_VAGABOND_ORCHID_VAGABOND" hostile="true" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK" />
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="LIST_CREW_GOUL">
+				<text>(Goul Crew) Negotiate with them.</text>
+				<event>
+					<text>The two Gouls speak back and forth for some time, but finally reach a consensus. Having frightened them with foreboding warnings of a potential Orchid invasion in collaboration with the Dynasty, the Gouls don't seem eager to keep the Orchid hostage any longer. Once safely returned, the Orchids pay you for your assistance.</text>
+					<autoReward level="LOW">standard</autoReward>
+					<weapon name="GIFTLIST_KERNEL" />
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Decline.</text>
+		<event>
+			<text>You apologize to the Orchids, but these aren't matters for you to get involved in.</text>
+			<choice hidden="true">
+				<text>Check the storage.</text>
+				<event load="STORAGE_CHECK" />
+			</choice>
+			<choice hidden="true">
+				<text>Do nothing.</text>
+				<event />
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_GHOST_ESCORT" unique="true">
+	<text>A poorly-armed civilian ship is emitting the distress beacon. Lost and afraid, they request you escort them to their destination and protect them from the Ghosts.</text>	
+	<environment type="nebula" />
+	<distressBeacon />
+	<ship load="SHIP_CIVILIAN_GENERIC" hostile="false" />
+	<status type="limit" target="enemy" system="teleporter" amount="0" />
+	<choice>
+		<text>Accept.</text>
+		<event>
+			<text>The civilians thank you, and pay you some scrap as a down-payment. They promise there will be more at their final destination.</text>
+			<autoReward level="LOW">standard</autoReward>
+			<quest event="NEBULA_GHOST_ESCORT_DESTINATION" />
+		</event>
+	</choice>
+	<choice>
+		<text>Attack.</text>
+		<event>
+			<text>The civilians are surprised by your sudden hostility, but have no choice but to fight.</text>
+			<ship hostile="true" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="MORALITY_UPDATE_GENERAL_FIGHT" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Refuse.</text>
+		<event>
+			<text>We don't have time to help every civilian dumb enough to wander into the Ghost nebula. You turn down their request and charge the FTL drive.</text>
+			<choice hidden="true">
+				<text>Check the storage.</text>
+				<event load="STORAGE_CHECK" />
+			</choice>
+			<choice hidden="true">
+				<text>Do nothing.</text>
+				<event />
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_GHOST_ESCORT_DESTINATION">
+	<event>
+		<text>You arrive at your destination, but a Ghost ship is already here. You signal for the civilians to stand back while you eliminate the threat.</text>
+		<ship load="SHIP_GHOST_ESCORT" hostile="true" />
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+		</choice>
+	</event>
+	<event load="NEBULA_GHOST_ESCORT_DESTINATION_GOOD" />
+</eventList>
+<event name="NEBULA_GHOST_ESCORT_DESTINATION_GOOD">
+	<text>The civilians thank you for your help, and pay you the rest of the scrap.</text>
+	<autoReward level="MED">scrap_only</autoReward>
+</event>
+-->
 
 </FTL>
