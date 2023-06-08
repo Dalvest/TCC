@@ -5842,6 +5842,71 @@
 		<aug name="COMPACTOR" />
 		<shieldImage>mupc_a55</shieldImage>
 	</shipBlueprint>
+	
+<shipBlueprint name="PLAYER_SHIP_SCRAPPER_CRUISER" layout="scrapper_cruiser" img="scrapper_cruiser">
+	<class id="text_PLAYER_SHIP_SCRAPPER_CRUISER_class">Scrapper Cruiser</class>
+	<name id="text_PLAYER_SHIP_SCRAPPER_CRUISER_name">Onslaught</name>
+	<desc id="text_PLAYER_SHIP_SCRAPPER_CRUISER_desc">A boarding ship.</desc>
+	<unlock id="ship_PLAYER_SHIP_SCRAPPER_CRUISER_unlock"/>
+	<systemList>
+		<artillery power="1" room="8" start="false" weapon="ARTILLERY_FED" img="room_artillery" />
+		<battery power="1" room="13" start="false" img="room_battery" />
+		<cloaking power="1" room="15" start="true" img="room_cloaking" />
+		<clonebay power="1" room="4" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="1" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="1" room="0" start="false" img="room_drones" />
+		<engines power="1" room="6" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="16" start="false" img="room_hacking" />
+		<mind power="1" room="0" start="false" img="room_mind" />
+		<oxygen power="1" room="3" start="false" img="room_oxygen" />
+		<pilot power="1" room="7" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="14" start="true" img="room_sensors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="1" room="2" start="false" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="5" start="true" />
+		<weapons power="1" room="12" start="false" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="EX_ZOLTAN_BYPASS" />
+	<weaponList missiles="0" count="4" />
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+</shipBlueprint>
 
 	<shipBlueprint name="PLAYER_SHIP_SCRAPPER_2" layout="tcp_scrapper_b" img="tcp_scrapper_b">
 		<class>Scrapper Dreadnought</class>
