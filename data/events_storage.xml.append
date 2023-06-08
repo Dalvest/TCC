@@ -48,7 +48,12 @@
 		<event load="STORAGE_CHECK_SYSTEM_CLONEBAY"/>
 	</mod-append:choice>
 	
-	<mod-append:choice req="CREW_UPGRADER" lvl="1" blue="false" hidden="true">
+	<mod-append:choice req="CREW_UPGRADER_MEDBAY" lvl="1" blue="false" hidden="true">
+		<text>Crew Upgrader [Already Installed]</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+	
+	<mod-append:choice req="CREW_UPGRADER_CLONEBAY" lvl="1" blue="false" hidden="true">
 		<text>Crew Upgrader [Already Installed]</text>
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
@@ -82,20 +87,30 @@
 		<event load="STORAGE_CHECK_CLONEBAY_NOLOSS_INSTALL"/>
 	</mod-append:choice>
 	
-	<mod-append:choice req="CREW_UPGRADER" lvl="0"  max_lvl="0" blue="false" hidden="true">
+	<mod-append:choice req="CAN_INSTALL_CREW_UPGRADER_CLONEBAY" lvl="1"  max_lvl="1" blue="false" hidden="true">
 		<text>Crew Upgrader [Cost: 50~, 3{]</text>
-		<event load="STORAGE_CHECK_MEDBAY_CREWUPGRADER_INSTALL"/>
+		<event load="STORAGE_CHECK_MEDBAY_CREWUPGRADER_CLONEBAY_INSTALL"/>
 	</mod-append:choice>
 	
-	<mod-append:choice req="CREW_UPGRADER" lvl="1" blue="false" hidden="true">
+	<mod-append:choice req="CREW_UPGRADER_CLONEBAY" lvl="1" blue="false" hidden="true">
+		<text>Crew Upgrader [Already Installed]</text>
+		<event load="OPTION_INVALID"/>
+	</mod-append:choice>
+	
+	<mod-append:choice req="CAN_INSTALL_CREW_UPGRADER_MEDBAY" lvl="1"  max_lvl="1" blue="false" hidden="true">
+		<text>Crew Upgrader [Cost: 50~, 3{]</text>
+		<event load="STORAGE_CHECK_MEDBAY_CREWUPGRADER_MEDBAY_INSTALL"/>
+	</mod-append:choice>
+	
+	<mod-append:choice req="CREW_UPGRADER_MEDBAY" lvl="1" blue="false" hidden="true">
 		<text>Crew Upgrader [Already Installed]</text>
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
 </mod:findName>  
 
-<event name="STORAGE_CHECK_MEDBAY_CREWUPGRADER_INSTALL">
+<event name="STORAGE_CHECK_MEDBAY_CREWUPGRADER_CLONEBAY_INSTALL">
 	<text>You are about to install the crew upgrader.
-	[Effects: Crew can be upgraded through an additional menu in the lab, also provides a flat 1% increase in all crew stats per powered level of the Clonebay or Medbay.]</text>
+	[Effects: Crew can be upgraded through an additional menu in the lab, also provides a flat 1% increase in all crew stats per powered level of the Clonebay.]</text>
 	<choice req="clonebay" lvl="1" hidden="true">
 		<text>Install the upgrade. [Cost: 50~, 3{]</text>
 		<event>
@@ -106,10 +121,25 @@
 			</item_modify>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="INSTALL_CREWUPGRADER" />
+				<event load="INSTALL_CREWUPGRADER_CLONEBAY" />
 			</choice>
 		</event>
 	</choice>
+	<choice req="pilot" lvl="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
+	</choice>
+</event>
+	
+<event name="INSTALL_CREWUPGRADER_CLONEBAY">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>CREW_UPGRADER_CLONEBAY</hiddenAug>
+	<event load="STORAGE_CHECK_SYSTEM"/>
+</event>
+
+<event name="STORAGE_CHECK_MEDBAY_CREWUPGRADER_MEDBAY_INSTALL">
+	<text>You are about to install the crew upgrader.
+	[Effects: Crew can be upgraded through an additional menu in the lab, also provides a flat 1% increase in all crew stats per powered level of the Medbay.]</text>
 	<choice req="medbay" lvl="1" hidden="true">
 		<text>Install the upgrade. [Cost: 50~, 3{]</text>
 		<event>
@@ -120,7 +150,7 @@
 			</item_modify>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="INSTALL_CREWUPGRADER" />
+				<event load="INSTALL_CREWUPGRADER_MEDBAY" />
 			</choice>
 		</event>
 	</choice>
@@ -130,9 +160,9 @@
 	</choice>
 </event>
 	
-<event name="INSTALL_CREWUPGRADER">
+<event name="INSTALL_CREWUPGRADER_MEDBAY">
 	<variable name="loc_lab_upgrades" op="add" val="1" />
-	<hiddenAug>CREW_UPGRADER</hiddenAug>
+	<hiddenAug>CREW_UPGRADER_MEDBAY</hiddenAug>
 	<event load="STORAGE_CHECK_SYSTEM"/>
 </event>
 
@@ -1169,7 +1199,7 @@
 <event name="SCRAPPER_INSTALL_SYSTEM_TELEPORTER_HEAL">
 	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 40~, 1|]
 	Scrappers are very adept at manipulating teleporter systems. They enjoy integrating their teleporters with technology they find through the multiverse.</text>
-	<choice req="teleporter" lvl="2" blue="false" hidden="true">
+	<choice req="teleporter" lvl="2" max_lvl="3" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 40~, 1{]</text>
 		<event>
 			<text>You install the upgrade.</text>
@@ -1177,7 +1207,6 @@
 				<item type="scrap" min="-40" max="-40" />
 				<item type="fuel" min="-1" max="-1" />
 			</item_modify>
-			<upgrade amount="1" system="teleporter" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="INSTALL_TELEPORTER_HEAL" />
@@ -1693,7 +1722,11 @@
 		<text>Scrapper.</text>
 		<event load="STORAGE_CHECK_LAB_SCRAPPER"/>
 	</mod-append:choice>
-	<mod-append:choice req="CREW_UPGRADER" blue="true" hidden="true">
+	<mod-append:choice req="CREW_UPGRADER_MEDBAY" blue="true" hidden="true">
+		<text>[CREW UPGRADER]</text>
+		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER"/>
+	</mod-append:choice>
+	<mod-append:choice req="CREW_UPGRADER_CLONEBAY" blue="true" hidden="true">
 		<text>[CREW UPGRADER]</text>
 		<event load="STORAGE_CHECK_LAB_CREW_UPGRADER"/>
 	</mod-append:choice>

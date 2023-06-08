@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FTL><!--appending to Inferno-Core (uncomment later)-->
 
+<event name="ENTER_SCRAPPER">
+	<text load="TEXT_LIGHTSPEED" />
+	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="LOAD_ATLAS_MARKER" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="ATLAS_MENU">
+	<mod-append:choice hidden="true" req="SEC SECTOR_SCRAPPER" blue="false">
+		<text>Proceed to the Scrapper Scrapfields.</text>
+		<event load="SCRAPPER_WARP" />
+	</mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="ATLAS_MENU_NOEQUIPMENT">
+	<mod-append:choice req="SEC SECTOR_SCRAPPER" blue="false">
+		<text>Proceed to the Scrapper Scrapfields.</text>
+		<event load="SCRAPPER_WARP"/>
+	</mod-append:choice>
+</mod:findName>
+
+<event name="SCRAPPER_WARP">
+	<text>Name: Scrapper Gathering Point
+	Type: Neutral
+	Unique: False
+	Dominant Faction: Scrapper
+	Rebel Threat Level: Medium
+
+	The Scrappers are an interesting race of what appear to be primarily heavily modified and armored Lanius, though, there is something peculiar about them.</text>
+	<!-- 	<playSound>lightspeed</playSound> -->
+	<choice hidden="true">
+		<text>Exit hyperspeed.</text>
+		<event load="START_SCRAPPER_LIST" />
+	</choice>
+	<choice hidden="true" req="COORDS" blue="false">
+		<text>Reroute.</text>
+		<event load="REROUTE_MENU" />
+	</choice>
+</event>
+
+
 <mod:findName type="event" name="FMCORE_ATLAS_EQUIPMENT">
 	<mod-append:choice req="TCC_CAN_CALL_COMPACTOR" blue="false">
 		<text>Contact the Trash Compactor.</text>
@@ -194,108 +237,5 @@
 	</event>
 
 
-<!--SCRAPPER EVENTS-->
-	
-<event name="ENTER_SCRAPPER">
-	<text load="TEXT_LIGHTSPEED" />
-	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
-	<choice hidden="true">
-		<text>Continue...</text>
-		<event load="LOAD_ATLAS_MARKER" />
-	</choice>
-</event>
-
-<event name="SCRAPPER_WARP">
-	<text>Name: Scrapper Gathering Point
-	Type: Neutral
-	Unique: False
-	Dominant Faction: Scrapper
-	Rebel Threat Level: Medium
-
-	The Scrappers are an interesting race of what appear to be primarily heavily modified and armored Lanius, though, there is something peculiar about them.</text>
-	<!-- 	<playSound>lightspeed</playSound> -->
-	<choice hidden="true">
-		<text>Exit hyperspeed.</text>
-		<event load="START_SCRAPPER_LIST" />
-	</choice>
-	<choice hidden="true" req="COORDS" blue="false">
-		<text>Reroute.</text>
-		<event load="REROUTE_MENU" />
-	</choice>
-</event>
-
-<event name="ENTER_SCRAPPER_UNIQUE">
-	<text load="TEXT_LIGHTSPEED" />
-	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
-	<choice hidden="true">
-		<text>Continue...</text>
-		<event load="LOAD_ATLAS_MARKER" />
-	</choice>
-</event>
-
-<!--
-<!--To do... Create Unique Scrapper sector-->
-<event name="SCRAPPER_UNIQUE_WARP">
-	<text id="atlas_ghost" />
-	<choice hidden="true">
-		<text>Exit hyperspeed.</text>
-		<event load="START_GHOSTWASTE" />
-	</choice>
-	<choice hidden="true" req="COORDS" blue="false">
-		<text>Reroute.</text>
-		<event load="REROUTE_MENU" />
-	</choice>
-</event>
-
-<event name="SCRAPPER_UNIQUE_WARP">
-	<text id="atlas_dynasty" />
-	<choice hidden="true">
-		<text>Exit hyperspeed.</text>
-		<event load="START_DYNCAP" />
-	</choice>
-	<choice hidden="true" req="COORDS" blue="false">
-		<text>Reroute.</text>
-		<event load="REROUTE_MENU" />
-	</choice>
-</event>
-
-<event name="ENTER_SCRAPYARD">
-	<text load="TEXT_LIGHTSPEED" />
-	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
-	<choice hidden="true">
-		<text>Continue...</text>
-		<event load="LOAD_ATLAS_MARKER" />
-	</choice>
-</event>
-
-
-<event name="SCRAPYARD_WARP">
-	<text>Name: Spectral Nebulae
-	Type: Hostile (Nebula)
-	Unique: False
-	Dominant Faction: Spectral Dynasty
-	Rebel Threat Level: High (Auto Fleet)
-
-	Don't expect to see many manned Rebel ships here - the Rebellion's fight against the Ghosts and their Dynasty is almost entirely automated. Unfortunately, the Dynasty seems to hold this invasion against not just the Rebellion, but the Federation as well.</text>
-	<!-- 	<playSound>lightspeed</playSound> -->
-	<choice hidden="true">
-		<text>Exit hyperspeed.</text>
-		<event load="START_DYNASTY" />
-	</choice>
-	<choice hidden="true" req="COORDS" blue="false">
-		<text>Reroute.</text>
-		<event load="REROUTE_MENU" />
-	</choice>
-</event>
-
-<event name="ENTER_SCRAPPER_UNIQUE">
-	<text load="TEXT_LIGHTSPEED" />
-	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
-	<choice hidden="true">
-		<text>Continue...</text>
-		<event load="LOAD_ATLAS_MARKER" />
-	</choice>
-</event>
--->
 	
 </FTL>

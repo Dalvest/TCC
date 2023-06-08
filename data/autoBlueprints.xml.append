@@ -675,7 +675,18 @@
 	<name>TC_BOMB_SHOTGUN_LOCK</name>
 </blueprintList>
 
+<!--THESE NEED WORK-->
+
 <blueprintList name="GIFTLIST_WEAPON_SCRAPPER">
+	<name>TC_BOMB_SHOTGUN_1</name>
+	<name>TC_BOMB_SHOTGUN_2</name>
+	<name>TC_BOMB_SHOTGUN_CHARGE</name>
+	<name>TC_BOMB_SHOTGUN_INSTANT</name>
+	<name>TC_BOMB_SHOTGUN_BREACH</name>
+	<name>TC_BOMB_SHOTGUN_CHAIN</name>
+</blueprintList>
+
+<blueprintList name="GIFTLIST_WEAPON_SCRAPPER_ELITE">
 	<name>TC_BOMB_SHOTGUN_1</name>
 	<name>TC_BOMB_SHOTGUN_2</name>
 	<name>TC_BOMB_SHOTGUN_CHARGE</name>
@@ -1070,9 +1081,9 @@
 	<droneList drones="0" count="2" />
 	<health amount="10" />
 	<maxPower amount="10" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1095,9 +1106,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="11" />
 	<maxPower amount="11" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1121,9 +1132,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="12" />
 	<maxPower amount="12" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1146,9 +1157,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="10" />
 	<maxPower amount="12" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>scrapper_skirmisher_a</cloakImage>
@@ -1174,9 +1185,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="12" />
 	<maxPower amount="12" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>scrapper_ravager_a</cloakImage>
@@ -1204,9 +1215,9 @@
 	<droneList drones="5" count="2" />
 	<health amount="14" />
 	<maxPower amount="12" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>scrapper_bomber_a</cloakImage>
@@ -1229,9 +1240,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="12" />
 	<maxPower amount="10" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1257,9 +1268,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="15" />
 	<maxPower amount="12" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>scrapper_instigator_a</cloakImage>
@@ -1286,9 +1297,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="15" />
 	<maxPower amount="13" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>scrapper_assault_a</cloakImage>
@@ -1314,9 +1325,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="14" />
 	<maxPower amount="11" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1342,9 +1353,9 @@
 	<droneList drones="5" count="0" />
 	<health amount="15" />
 	<maxPower amount="14" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>scrapper_destroyer_a</cloakImage>
@@ -1371,11 +1382,11 @@
 	<droneList drones="0" count="0" />
 	<health amount="16" />
 	<maxPower amount="13" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="3" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
-	<crewCount amount="1" max="2" class="scrapper_defender" />
+	<crewCount amount="1" max="1" class="scrapper_defender" />
 	<crewCount amount="1" max="1" class="scrapper_heavy" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>scrapper_dropship_a</cloakImage>
@@ -1401,10 +1412,11 @@
 	<droneList drones="6" count="0" />
 	<health amount="16" />
 	<maxPower amount="13" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="3" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
@@ -1425,9 +1437,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="11" />
 	<maxPower amount="11" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1451,9 +1463,9 @@
 	<droneList drones="0" count="0" />
 	<health amount="14" />
 	<maxPower amount="11" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="2" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1482,9 +1494,9 @@
 	<maxPower amount="12" />
 	<crewCount amount="1" max="3" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
+	<crewCount amount="1" max="1" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
-	<crewCount amount="1" max="2" class="scrapper_heavy" />
+	<crewCount amount="1" max="1" class="scrapper_heavy" />
 	<boardingAI>sabotage</boardingAI>
 	<cloakImage>scrapper_transport_a</cloakImage>
 </shipBlueprint>
@@ -1504,9 +1516,8 @@
 	<droneList drones="0" count="0" />
 	<health amount="8" />
 	<maxPower amount="8" />
-	<crewCount amount="3" max="5" class="scrapper" />
+	<crewCount amount="1" max="1" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
-	<crewCount amount="1" max="2" class="scrapper_soldier" />
 	<crewCount amount="1" max="1" class="scrapper_engineer" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
@@ -1661,7 +1672,7 @@
 	<droneList drones="0" count="0" />
 	<health amount="8" />
 	<maxPower amount="11" />
-	<crewCount amount="1" max="1" class="scrapper_engineer" shield="1" weapons="1" repair="1" name="Fiadora" />
+	<crewCount amount="1" max="1" class="scrapper_engineer" shield="1" weapons="1" repair="1" name="Theadora" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
@@ -2358,7 +2369,7 @@
 </shipBlueprint>
 <!--///////////////////// SCRAPPER STUFF /////////////////-->
 
-<shipBlueprint name="SCRAPPER_SHOP" layout="SCRAPPER_SHOP" img="SCRAPPER_SHOP">
+<shipBlueprint name="SCRAPPER_SHOP" layout="scrapper_shop" img="scrapper_shop">
 	<class>Scrapper Shopkeeper</class>
 	<minSector>1</minSector>
 	<maxSector>7</maxSector>

@@ -30,21 +30,4 @@
 			</choice>
 		</event>
 	</mod-append:choice>
-	
-	<mod-append:choice req="pilot" max_group="7" hidden="true">
-		<text>I am a playtester and I need resouces please. Will be removed before release.</text>
-		<event>
-			<text>With some extra resources in your storage, you prepare to continue on your mission.</text>
-			<item_modify>
-				<item type="fuel" min="50" max="50" />
-				<item type="scrap" min="5000" max="5000" />
-				<item type="missiles" min="50" max="50" />
-				<item type="drones" min="50" max="50" />
-			</item_modify>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event load="START_BEACON_EXPLAIN_LOAD" />
-			</choice>
-		</event>
-	</mod-append:choice>
 </mod:findName>

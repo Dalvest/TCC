@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FTL>
 
+<mod:findName type="sectorType" name="SECTOR_LIST_GENERIC_HOSTILE">
+	<mod-append:name>SECTOR_SCRAPPER</mod-append:name>
+</mod:findName>
+<mod:findName type="sectorType" name="OVERRIDE_SECTOR_LIST_GENERIC_HOSTILE">
+	<mod-append:name>SECTOR_SCRAPPER</mod-append:name>
+</mod:findName>
+<!--Makes the sector red-->
+<mod:findName type="sectorType" name="HOSTILE">
+	<mod-append:name>SECTOR_SCRAPPER</mod-append:name>
+</mod:findName>	
 
 <sectorDescription name="SECTOR_SCRAPPER" unique="false"> 
 	<nameList>
@@ -34,15 +44,16 @@
 	<startEvent>ENTER_SCRAPPER</startEvent>
 	<exitBeacon event="FINISH_BEACON" nebulaEvent="FINISH_BEACON" rebelEvent="FINISH_BEACON_FLEET_AUTO"/>
 	<rebelBeacon event="FLEET_AUTO" nebulaEvent="FLEET_AUTO"/>
-	<event name="SHIP_SCRAPPER_OUTPOST" min="1" max="1"/>
-	<event name="SCRAPPER_ENCOUNTER_SHOP_LIST" min="1" max="2"/>
+	<event name="SCRAPPER_OUTPOST" min="1" max="1"/>
+	<event name="SCRAPPER_ENCOUNTER_SHOP" min="1" max="1"/>
 	<event name="MV_TRAVELER" min="1" max="1"/>
 	<event name="ITEMS_SCRAPPER" min="1" max="3"/>
 	<event name="HOSTILE_SCRAPPER" min="6" max="6"/>
 	<event name="CREW_SCRAPPER" min="1" max="2"/>
 	<event name="HAZARD_SCRAPPER" min="1" max="3"/>
-	<!--<event name="NEBULA_NEUTRAL_DYNASTY" min="4" max="6"/>
-	<event name="NEBULA_DISTRESS_DYNASTY" min="1" max="2"/>-->
+	<event name="HOSTILE_ELITE_SCRAPPER" min="1" max="2"/>
+	<!--<event name="NEUTRAL_SCRAPPER" min="4" max="6"/>
+	<event name="DISTRESS_SCRAPPER" min="1" max="2"/>-->
 </sectorDescription>
 
 
@@ -50,182 +61,182 @@
 
 <mod:findName type="sectorDescription" name="STANDARD_SPACE">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_FREEMANTIS">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_LANIUS">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_FEDERATION">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ENGI">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ZOLTAN">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ORCHID">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_VAMPWEED">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_CRYSTAL">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_OUTCAST">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_LOSTSUN">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_PIRATE">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_REBEL">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_AUTO">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_MANTIS">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ROCK">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_DUSKBRINGER">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ABANDONED">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_NEBULA">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_SLUG">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_CLAN">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_SHELL">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_MORPH">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_LEECH">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_MONK">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_GHOST">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_DYNASTY">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_COALITION">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ABYSS">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_SLUG_HEKTAR">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ABANDONED_HEKTAR">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_PIRATE_HEKTAR">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_NEBULA_HEKTAR">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ORIGINS">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_AUGMENTED">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_NONSECTOR_LIST" min="0" max="2" priority="5"/>
+
 </mod:findName>
 
 <!--//////////////// SECTOR RARITY STUFF /////////////////-->

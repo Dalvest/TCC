@@ -5337,7 +5337,15 @@
 	
 	<!--I'm pretty sure these aren't needed-->
 	
-	<augBlueprint name="CREW_UPGRADER">
+	<augBlueprint name="CREW_UPGRADER_MEDBAY">
+	    <title>Internal Upgrade</title>
+	    <desc>This is an internal Upgrade</desc>
+	    <cost>0</cost>
+	    <rarity>0</rarity>
+	    <stackable>true</stackable>
+	</augBlueprint>
+	
+	<augBlueprint name="CREW_UPGRADER_CLONEBAY">
 	    <title>Internal Upgrade</title>
 	    <desc>This is an internal Upgrade</desc>
 	    <cost>0</cost>
@@ -5356,6 +5364,31 @@
 	<augBlueprint name="TC_CLONEBAY_NOLOSS">
 	    <title>Internal Upgrade</title>
 	    <desc>This is an internal Upgrade </desc>
+	    <cost>0</cost>
+	    <rarity>0</rarity>
+	    <stackable>true</stackable>
+	</augBlueprint>
+	
+	<augBlueprint name="AUGMENT_SCRAPPER_ARTIFACT_CREW_SPEED">
+		<title>Internal Upgrade</title>
+	    <desc>This is an internal Upgrade</desc>
+	    <cost>0</cost>
+	    <rarity>0</rarity>
+	    <stackable>true</stackable>
+	</augBlueprint>
+	
+	<augBlueprint name="AUGMENT_SCRAPPER_ARTIFACT_CREW_HEALTH">
+		<title>Internal Upgrade</title>
+	    <desc>This is an internal Upgrade</desc>
+	    <cost>0</cost>
+	    <rarity>0</rarity>
+	    <stackable>true</stackable>
+	</augBlueprint>
+	
+	
+	<augBlueprint name="AUGMENT_SCRAPPER_ARTIFACT_CREW_DAMAGE">
+		<title>Internal Upgrade</title>
+	    <desc>This is an internal Upgrade</desc>
 	    <cost>0</cost>
 	    <rarity>0</rarity>
 	    <stackable>true</stackable>
