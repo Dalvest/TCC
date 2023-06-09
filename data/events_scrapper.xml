@@ -109,6 +109,11 @@
 	<deadCrew load="SCRAPPER_ELITE_DEADCREW" />
 </ship>
 
+<ship name="SHIP_SCRAPPER_SLAVER_ELITE_FIGHT" auto_blueprint="LIST_SHIPS_SCRAPPER_SLAVER_ELITE_FIGHT">
+	<destroyed load="SCRAPPER_SLAVER_ELITE_DESTROY" />
+	<deadCrew load="SCRAPPER_SLAVER_ELITE_DEADCREW" />
+</ship>
+
 <ship name="SHIP_SCRAPPER_ROCK_FIGHT" auto_blueprint="LIST_SHIPS_ROCK_GENERIC">
 	<destroyed load="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY" />
 	<deadCrew load="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW" />
@@ -197,11 +202,53 @@
 			<choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true" hidden="true">
 				<text>(Scrapper Crew) Your Scrapper insists on speaking to the Guard.</text>
 				<event>
-					<text>Unsure if this is a good idea, but trustful of your crew, you allow them to approach the comm. They animatedly shout at the guard, and within a few moments it seems that insults are being thrown. Insulted, the guard powers up weapons and begins to attack!</text>
-					<ship hostile="true" />
+					<text>Unsure if this is a good idea, but trustful of your crew, you allow them to approach the comm. "BEHOLD! IT IS I! THE ONE AND ONLY TRASH EATER!! YOU WILL ALLOW THIS SHIP TO PASS WITHOUT ANOTHER QUESTION!" They declared this with confidence and the utmost self-assurance but it's obviously a lie.</text>
 					<choice hidden="true">
 						<text>Continue...</text>
-						<event load="COMBAT_CHECK" />
+						<event>
+							<text>"WHAT?! BOLD LIE! LOWLY SCUM!" The guard did not believe the bluff, as expected of such an obvious lie... Your Scrapper snaps back without thinking, "YOUR MOTHER! DISGUSTING VILE CREATURE! LET US PASS I AM THE EATER OF TRASH!" This is starting to go too far...</text>
+							<choice hidden="true">
+								<text>Interject...</text>
+								<event>
+									<text>You pull your Scrapper back and apologize for the behavior of your crew member. "FINE! FEE IS DOUBLED! RUDE CREW! RUDE CAPTAIN! GET OUT OF OUR FACE!"</text>
+									<choice hidden="true">
+										<text>Pay the fee. [30~]</text>
+										<event>
+											<text>"GOOD RIDDANCE!" The channel is closed. At least the situation was defused.</text>
+											<item_modify>
+												<item type="scrap" min="-30" max="-30" />
+											</item_modify>
+											<choice hidden="true">
+												<text>Continue...</text>
+												<event/>
+											</choice>
+										</event>
+									</choice>
+									<choice hidden="true">
+										<text>Refuse.</text>
+										<event>
+											<text>The channel is cut and the Scrapper vessel powers its weapons.</text>
+											<ship hostile="true" />
+											<choice hidden="true">
+												<text>Continue...</text>
+												<event/>
+											</choice>
+										</event>
+									</choice>
+								</event>
+							</choice>
+							<choice hidden="true">
+								<text>Let's see where this goes...</text>
+								<event>
+									<text>"YOU SMELL OF OLD BREAD!" Your Scrapper makes a follow up jab, the guard snaps back, "HOW DARE YOU! MY MOTHER IS A SAINT!!" This seems to have been the final straw. They cut the transmission and power their weapons!</text.>
+									<ship hostile="true" />
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="COMBAT_CHECK" />
+									</choice>
+								</event>
+							</choice>
+						</event>
 					</choice>
 				</event>
 			</choice>
@@ -660,29 +707,26 @@
 	</choice>
 </event>
 
-
-
 <textList name="TEXT_SCRAPPER_OUTPOST"> 
-    <text>A Scrapper Outpost has been constructed in this sector. A steady flow of activity is coming and going from the station, however, no signals are being publically broadcast, indicating this to be a research or military facility.</text>
-    <text>Within this sector lies a formidable Scrapper Outpost. The constant flurry of activity hints at the outpost's significance, yet the absence of any public broadcasts raises intriguing questions about its true purpose, possibly pointing towards secretive research endeavors or covert military operations.</text>
-    <text>The beacon transmitting the location of the facility is a mystery. The Scrapper Outpost in this region is not boardcasting public signals on it's own, yet it would seem that they are inviting ships in with the beacon transmitting a signal.</text>
-    <text>Amidst this sector, an imposing Scrapper Outpost commands attention, its presence marked by a continuous ebb and flow of activity. The absence of public broadcasts veils the outpost's true nature, leaving room for speculation.</text>
-    <text>A formidable Scrapper Outpost has taken root in this sector. Could it serve as a covert hub for cutting-edge research or as a strategic military stronghold, concealed from prying eyes?</text>
+    <text>Despite the beacon warning visitors away, you warp in to find a Scrapper Outpost has been constructed in this sector. It appears to be well guarded, with a number of ships stationed throughout the system. The beacon seems to be hiding your presence for now, though, that won't last for long.</text>
 </textList>
 
-<event name="SCRAPPER_OUTPOST" unique="true">
+<event name="SCRAPPER_OUTPOST" unique="true"> <!--Future Unlock Quest for a ship-->
 	<text load="TEXT_SCRAPPER_OUTPOST" />
 	<ship load="SHIP_SCRAPPER_OUTPOST" hostile="false" />
 	<changeBackground>BACK_SECTOR_SCRAPPER</changeBackground>
 	<preventQuest />
-	<beaconType id="map_icon_triangle_yellow" global="false">
+	<beaconType id="map_icon_scrapper_warning" global="false">
 		<color r="255" g="0" b="255" a="1" />
+		<unvisitedTooltip>KEEP OUT! WARNING!!</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+		<undiscoveredTooltip>An undiscovered location.</undiscoveredTooltip>
 	</beaconType>
 	<choice hidden="true">
-		<text>Engage the outpost.</text>
+		<text>Move in to engage the outpost!</text>
 		<event>
-			<text>It's better to shoot first and ask questions later.</text>
-			<ship hostile="true" />
+			<text>As you move in to engage the outpost, you notice alarms break out and they ready themselves for battle.</text>
+			<ship load="SHIP_SCRAPPER_OUTPOST" hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK" />
@@ -694,96 +738,136 @@
 		<event>
 			<text>Assuming this is a military facility, it would be heavily armed and very difficult to breach. It would be better to avoid conflict and leave the area.</text>
 			<choice hidden="true">
-				<text>Do something on-board the ship.</text>
-				<event load="STORAGE_CHECK" />
-			</choice>
-			<choice hidden="true">
-				<text>Do nothing.</text>
+				<text>It's time to go.</text>
 				<event />
 			</choice>
 		</event>
 	</choice>
-	<choice hidden="true" req="LIST_SCRAPPER_MILITARY" blue="true">
-		<text>(Military Scrapper) Your scrapper taps your shoulder and requests a word.</text>
-		<event>
-			<text>You see what's up.
-			"THIS STATION IS A MILITARY BASE! SERVED HERE! BELIEVE ARMS MANUFACTURING OR STORAGE! LOTS OF SCRAP! LOTS OF GUARDS!"
-			They should at you with their typical cadance. Knowing that the outpost is indeed a military base is good to know and the appeal of raiding an arms manufactury is tempting. You ask your scrapper what they can do.
-			"POSE AS TRANSFER! RAID THE ARMORY! RETURN! NO ONE WILL NOTICE!!!"</text>
-			<choice hidden="true">
-				<text>You see nothing wrong with this plan at all.</text>
+	<choice hidden="true">
+		<text>Attempt to sneak past the guards and ambush the station.</text>
+		<event load="OUTPOST_SNEAK_CHANCE"/>
+	</choice>
+	<choice req="cloaking" lvl="2" blue="true" hidden="true">
+		<text>(Upgraded Cloak) Use your advanced cloaking device to sneak past the guards to get closer to the outpost undetected.</text>
+			<event>
+			<text>You successfully avoid the outer guards and approach the outpost directly. They have yet to detect you thanks to your cloak. You have a few moments before they detect you.</text>
+			<ship load="SHIP_SCRAPPER_OUTPOST" hostile="false" />
+			<choice req="teleporter" lvl="2" hidden="true">
+				<text>(Teleporter) Send your crew directly on board the outpost to raid and steal anything they can!</text>
 				<event>
-					<text>You approach the outpost and are hailed shortly after turning your ship towards the outpost. You advise them that you are transporting an incoming transfer. They shout something about a requisition number.
-					"#584154!!!" The scrapper shouts over your shoulder before you have a chance to even consider what to do. The voice from the outpost accepts the number, and your scrapper is teleported from the bridge. With the 'Transfer' complete, you return the ship to the beacon, emulating a departure.
-					</text>
+					<text>You teleport your crew to the outpost and they get to work. Within a few moments you notice alert sirens all over the station; it would seem they were caught. "Success. Teleporter system damaged. Please rescue us." Within a moment you teleport them back to the bridge and ready for battle!</text>
+					<status type="limit" target="enemy" system="teleporter" amount="0" />
+					<ship hostile="true" />
 					<choice hidden="true">
-						<text>Continue...</text>
-						<event>
-							<text>A few minutes later you receive a communication from your scrapper indicating that they were successful in raiding the armory and are ready to be extracted. However, they will notice the teleportation, as well as you getting close enough, and also the scrapper who raided their armory is not necessarily the sneakiest.
-							Something tells you this plan was not well thought out, but it is in motion now!
-							You do a flyby of the outpost and beam your scrapper aboard as well as the weapon and scrap they stole.
-							As anticipated, the outpost is now on high alert, and a fight is inevitable.</text>
-							<choice hidden="true">
-								<text>Prepare for battle!</text>
-								<event>
-									<ship hostile="true" />
-									<autoReward level="HIGH">weapon</autoReward>
-									<choice hidden="true">
-										<text>Continue...</text>
-										<event load="COMBAT_CHECK" />
-									</choice>
-								</event>
-							</choice>
-						</event>
+						<text>No time to check the loot right now!</text>
+						<event load="COMBAT_CHECK" />
 					</choice>
 				</event>
 			</choice>
-			<choice hidden="true">
-				<text>This is a bad idea. Shoot them.</text>
+			<choice req="weapons" lvl="2" hidden="true">
+				<text>(Weapon Systems) Ambush the outpost!</text>
 				<event>
-					<text>It's better to shoot first and ask questions later.</text>
+					<function name="WEAPON_PREIGNITE" value="1" useForReqs="false" />
 					<ship hostile="true" />
+					<text>You catch the outpost off guard, allowing you to fully charge your weapons and attack them!</text>
 					<choice hidden="true">
 						<text>Continue...</text>
 						<event load="COMBAT_CHECK" />
 					</choice>
 				</event>
 			</choice>
+		</event>
+	</choice>
+</event>
+
+<eventList name="OUTPOST_SNEAK_CHANCE">
+	<event>
+		<text>You manuever your ship through the system but shortly after you move away from the beacon you are immediately noticed!</text>
+		<ship load="SHIP_SCRAPPER_OUTPOST" hostile="true" />
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+		</choice>
+	</event>
+	<event>
+		<text>You manage to sneak past the outer guards and into a close proximity with the station. They havent detected you, giving you the chance to charge your weapons.</text>
+		<ship load="SHIP_SCRAPPER_OUTPOST" hostile="true" />
+		<function name="WEAPON_PREIGNITE" value="1" useForReqs="false" />
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+		</choice>
+	</event>
+</event>
+
+<event name="SCRAPPER_OUTPOST_DESTROY">
+	<text>The outpost has been destroyed scattering the remainder of the guards. In the wreckage you find an advanced module, though, any valuable data that could have been retreived is destroyed.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<choice hidden="true">
+		<text>Investigate the module you have recovered.</text>
+		<event load="SCRAPPER_OUTPOST_REWARD"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_OUTPOST_DEADCREW">
+	<text>The outpost goes silent, fearful of coming to the same fate, the remainder of the guards scatter. While scrapping the outpost for anything valuable you find a room of computers and download the data available to you. For some reason they contain fleet movement charts of the rebel fleet, allowing you to get an edge. You also find an advanced appearing module.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<reveal_map />
+	<modifyPursuit amount="-2" />
+	<choice hidden="true">
+		<text>Investigate the module you have recovered.</text>
+		<event load="SCRAPPER_OUTPOST_REWARD"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_OUTPOST_REWARD">
+	<text>You have pulled an oddly advanced modification for your onboard crew lab from the outposts research labs. It seems to be an experiemental prototype.</text>
+	<choice hidden="true">
+		<text>Install the module. [+10% to ALL crew stats.]</text>
+		<event>
+			<text>[Prototype Prismatic Crew Augmentors] Increases the following stats of all crew by 10%: Damage, Damage Taken, Health, Repair, Move, Sabotage and Heal Speed.]</text>
 			<choice hidden="true">
-				<text>This is a bad idea. Let's just leave.</text>
+				<text>Confirm...</text>
 				<event>
-					<text>This is a military facility, it's better to leave it be. </text>
+					<text>The Augment has been installed.</text>
+					<hiddenAug>AUGMENT_PROTOTYPE_PRISMATIC_CREW</hiddenAug>
 					<choice hidden="true">
-						<text>Do something on-board the ship.</text>
-						<event load="STORAGE_CHECK" />
+						<text>Time to go.</text>
+						<event />
 					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Scrap the module. [100~]</text>
+				<event>
+					<text>You break the module down to valuable metals.</text>
+					<item_modify>
+						<item type="scrap" min="100" max="100" />
+					</item_modify>
 					<choice hidden="true">
-						<text>Do nothing.</text>
+						<text>Time to go.</text>
 						<event />
 					</choice>
 				</event>
 			</choice>
 		</event>
 	</choice>
-</event>
-
-<event name="SCRAPPER_OUTPOST_DESTROY">
-	<text>The outpost has been destroyed, likely destroying any data or anything significantly valuable.</text>
-	<autoReward level="HIGH">standard</autoReward>
 	<choice hidden="true">
-		<text>Time to go.</text>
-		<event />
+		<text>Scrap the module. [100~]</text>
+		<event>
+			<text>You break the module down to valuable metals.</text>
+			<item_modify>
+				<item type="scrap" min="100" max="100" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Time to go.</text>
+				<event />
+			</choice>
+		</event>
 	</choice>
 </event>
 
-<event name="SCRAPPER_OUTPOST_DEADCREW">
-	<text>The outpost lies empty, you are able to strip the entire station.</text>
-	<autoReward level="HIGH">standard</autoReward>
-	<choice hidden="true">
-		<text>Time to go.</text>
-		<event />
-	</choice>
-</event>
+
 
 <event name="SCRAPPER_SHIP_GRAVEYARD" unique="true">
 	<text>You warp in to find a sprawling graveyard of ships, seemingly from a massive battle that took place an unknown time ago. You notice a number of unarmed scrapper ships roaming around the field picking at the scraps left behind. Not every vessel in the sector, however, is unarmed, as one such vessel approaches you and hails you.</text>
@@ -1196,46 +1280,6 @@
 		</event>
 	</choice>
 </event>
-<!--
-<choice hidden="true">
-		<text>Ask the Scrapper if they would like help... they seem to be in a bit of a desperate situation.</text>
-		<event>
-			<text>"OH! CAN YOU?!" They scream into the comm. "THIS SHIP DOESN'T WORK! ENGINES COMPLETELY BROKEN! COMRADES DEAD FOR MUCH TIME! CAN I COME ABOARD?! I AM VERY SKILLED AT SHIP OPERATIONS!!"</text>
-			<choice hidden="true">
-				<text>We should beam them aboard.</text>
-				<event>
-					<text>Welcome aboard.</text>
-					<crewMember class="scrapper_engineer" shield="1" weapons="1" repair="1">Theadora</crewMember>
-					<event>
-						<text>"OKAY! THANK YOU!!" You may never really get used to how loud Scrappers are.</text>
-						<choice hidden="true">
-							<text>Do something on-board the ship.</text>
-							<event load="STORAGE_CHECK" />
-						</choice>
-						<choice hidden="true">
-							<text>Do nothing.</text>
-							<event />
-						</choice>
-					</event>
-				</event>
-			</choice>
-			<choice hidden="true">
-				<text>Change your mind.</text>
-				<event>
-					<text>"OKAY! THANK YOU FOR YOUR SCRAP!"</text>
-					<choice hidden="true">
-						<text>Do something on-board the ship.</text>
-						<event load="STORAGE_CHECK" />
-					</choice>
-					<choice hidden="true">
-						<text>Do nothing.</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
--->
 
 <event name="SCRAPPER_ARTIFACT_CREW_DAMAGE">
 	<text>"THANK YOU FOR YOUR PATRONAGE! I THINK I WILL BE ABLE TO SURVIVE A LITTLE BIT LONGER NOW!!"
@@ -1333,183 +1377,6 @@
 		<event />
 	</choice>
 </event>
-
-<!--
-
-
-
-
-<event name="SCRAPPER_ARTIFACT_CREW_SPEED">
-
-	<choice hidden="true">
-		<text>Ask the Scrapper if they would like help... they seem to be in a bit of a desperate situation.</text>
-		<event>
-			<text>"OH! CAN YOU?!" They scream into the comm. "THIS SHIP DOESN'T WORK! ENGINES COMPLETELY BROKEN! COMRADES DEAD FOR MUCH TIME! CAN I COME ABOARD?! I AM VERY SKILLED AT SHIP OPERATIONS!!"</text>
-			<choice hidden="true">
-				<text>We should beam them aboard.</text>
-				<event>
-					<text>Welcome aboard.</text>
-					<crewMember class="scrapper_engineer" shield="1" weapons="1" repair="1">Theadora</crewMember>
-					<event>
-						<text>"OKAY! THANK YOU!!" You may never really get used to how loud Scrappers are.</text>
-						<choice hidden="true">
-							<text>Do something on-board the ship.</text>
-							<event load="STORAGE_CHECK" />
-						</choice>
-						<choice hidden="true">
-							<text>Do nothing.</text>
-							<event />
-						</choice>
-					</event>
-				</event>
-			</choice>
-			<choice hidden="true">
-				<text>Change your mind.</text>
-				<event>
-					<text>"OKAY! THANK YOU FOR YOUR SCRAP!"</text>
-					<choice hidden="true">
-						<text>Do something on-board the ship.</text>
-						<event load="STORAGE_CHECK" />
-					</choice>
-					<choice hidden="true">
-						<text>Do nothing.</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
-</event>
-
-<event name="SCRAPPER_ARTIFACT_CREW_DAMAGE">
-	<text>"THANK YOU FOR YOUR PATRONAGE! I THINK WILL BE ABLE TO SURVIVE A LITTLE BIT LONGER NOW!!"
-	
-	
-	[Installed Artifact Effect: All Crew Damage +3%]</text>
-	<hiddenAug>AUGMENT_SCRAPPER_ARTIFACT_CREW_DAMAGE</hiddenAug>
-	<item_modify>
-		<item type="scrap" min="-35" max="-35" />
-		<item type="fuel" min="-1" max="-1" />
-	</item_modify>
-	<choice hidden="true">
-		<text>Ask the Scrapper if they would like help... they seem to be in a bit of a desperate situation.</text>
-		<event>
-			<text>"OH! CAN YOU?!" They scream into the comm. "THIS SHIP DOESN'T WORK! ENGINES COMPLETELY BROKEN! COMRADES DEAD FOR MUCH TIME! CAN I COME ABOARD?! I AM VERY SKILLED AT SHIP OPERATIONS!!"</text>
-			<choice hidden="true">
-				<text>We should beam them aboard.</text>
-				<event>
-					<text>Welcome aboard.</text>
-					<crewMember class="scrapper_engineer" shield="1" weapons="1" repair="1">Theadora</crewMember>
-					<event>
-						<text>"OKAY! THANK YOU!!" You may never really get used to how loud Scrappers are.</text>
-						<choice hidden="true">
-							<text>Do something on-board the ship.</text>
-							<event load="STORAGE_CHECK" />
-						</choice>
-						<choice hidden="true">
-							<text>Do nothing.</text>
-							<event />
-						</choice>
-					</event>
-				</event>
-			</choice>
-			<choice hidden="true">
-				<text>Change your mind.</text>
-				<event>
-					<text>"OKAY! THANK YOU FOR YOUR SCRAP!"</text>
-					<choice hidden="true">
-						<text>Do something on-board the ship.</text>
-						<event load="STORAGE_CHECK" />
-					</choice>
-					<choice hidden="true">
-						<text>Do nothing.</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
-	<choice hidden="true">
-		<text>Thank the Scrapper and be on your way.</text>
-		<event>
-			<choice hidden="true">
-				<text>Do something on-board the ship.</text>
-				<event load="STORAGE_CHECK" />
-			</choice>
-			<choice hidden="true">
-				<text>Do nothing.</text>
-				<event />
-			</choice>
-		</event>
-	</choice>
-</event>
-
-<event name="SCRAPPER_ARTIFACT_CREW_HEALTH">
-	<text>"THANK YOU FOR YOUR PATRONAGE! I THINK WILL BE ABLE TO SURVIVE A LITTLE BIT LONGER NOW!!"
-	
-	
-	[Installed Artifact Effect: All Crew Health +5%]</text>
-	<hiddenAug>AUGMENT_SCRAPPER_ARTIFACT_CREW_HEALTH</hiddenAug>
-	<item_modify>
-		<item type="scrap" min="-35" max="-35" />
-		<item type="fuel" min="-1" max="-1" />
-	</item_modify>
-	<choice hidden="true">
-		<text>Ask the Scrapper if they would like help... they seem to be in a bit of a desperate situation.</text>
-		<event>
-			<text>"OH! CAN YOU?!" They scream into the comm. "THIS SHIP DOESN'T WORK! ENGINES COMPLETELY BROKEN! COMRADES DEAD FOR MUCH TIME! CAN I COME ABOARD?! I AM VERY SKILLED AT SHIP OPERATIONS!!"</text>
-			<choice hidden="true">
-				<text>We should beam them aboard.</text>
-				<event>
-					<text>Welcome aboard.</text>
-					<crewMember class="scrapper_engineer" shield="1" weapons="1" repair="1">Theadora</crewMember>
-					<event>
-						<text>"OKAY! THANK YOU!!" You may never really get used to how loud Scrappers are.</text>
-						<choice hidden="true">
-							<text>Do something on-board the ship.</text>
-							<event load="STORAGE_CHECK" />
-						</choice>
-						<choice hidden="true">
-							<text>Do nothing.</text>
-							<event />
-						</choice>
-					</event>
-				</event>
-			</choice>
-			<choice hidden="true">
-				<text>Change your mind.</text>
-				<event>
-					<text>"OKAY! THANK YOU FOR YOUR SCRAP!"</text>
-					<choice hidden="true">
-						<text>Do something on-board the ship.</text>
-						<event load="STORAGE_CHECK" />
-					</choice>
-					<choice hidden="true">
-						<text>Do nothing.</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-		</event>
-	</choice>
-	<choice hidden="true">
-		<text>Thank the Scrapper and be on your way.</text>
-		<event>
-			<choice hidden="true">
-				<text>Do something on-board the ship.</text>
-				<event load="STORAGE_CHECK" />
-			</choice>
-			<choice hidden="true">
-				<text>Do nothing.</text>
-				<event />
-			</choice>
-		</event>
-	</choice>
-</event>
-
-
-
--->
 
 <event name="SCRAPPER_CONTAINER" unique="false">
 	<text>You warp in to find a drifting container marked with Scrapper paint and oddly grafted metal jutting from it. It appears to be a lost shipping container.</text>
@@ -1610,6 +1477,50 @@
 	</choice>
 </event>
 
+<!--NEUTRAL EVENTS-->
+
+
+<event name="SCRAPPER_SLAVER" unique="true">
+<ship load="SHIP_SLAVER_FORGED"/>
+<text>Shortly after you arrive at the beacon, you notice a slaver advertising their wares. "Cheap workers! Many purposes for them, such as space heaters, welding, and grill!"</text>
+
+	<choice>
+	<text>Save the enslaved Forged!</text>
+		<event>
+		<text>You attack the slavers.</text>
+		<ship hostile="true"/>
+			<choice hidden="true">
+			<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	
+	<choice>
+		<text>Buy one Forged slave.</text>
+		<event>
+			<crewMember amount="1" class="lanius_forged"/>
+			<item_modify>
+				<item max="-20" min="-30" type="scrap"/>
+			</item_modify>
+		</event>
+	</choice>
+
+	<choice hidden="true">
+	<text>Decline and jump away.</text>
+		<event>
+		<text>You don't bother engaging the slaver.</text>
+			<choice>
+			<text>Do something on-board the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+			<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
 
 
 </FTL>

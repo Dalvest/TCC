@@ -2886,7 +2886,7 @@
 		0.75x Move Speed
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [35~]</text>
       <event>
         <text>Your lanius undergoes the transformation...</text>
         <item_modify>
@@ -2912,7 +2912,7 @@
 		0.75x Move Speed
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
@@ -2941,7 +2941,7 @@
 		Cannot Sabotage
 	 </text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
@@ -2971,7 +2971,7 @@
 		Cannot Repair
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
@@ -3000,13 +3000,13 @@
 		0.5x Move Speed
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
-        <text>Your Scrapper undergoes the transformation...</text>
+        <text>Your Scrapper undergoes the augmentation.</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-3" max="-3"/>
-		  <item type="missiles" min="-3" max="-3"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="scrapper_soldier">scrapper_heavy</transformRace>
       </event>
@@ -3031,13 +3031,13 @@
 		Cannot Repair
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
-        <text>Your Scrapper undergoes the transformation...</text>
+        <text>Your Scrapper undergoes the augmentation.</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-3" max="-3"/>
-		  <item type="missiles" min="-3" max="-3"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="scrapper_medic">scrapper_defender</transformRace>
       </event>
@@ -3059,13 +3059,13 @@
 		Cannot Fight
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
-        <text>Your Scrapper undergoes the transformation...</text>
+        <text>Your Scrapper undergoes the augmentation.</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-3" max="-3"/>
-		  <item type="missiles" min="-3" max="-3"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="scrapper_engineer">scrapper_scavenger</transformRace>
       </event>
@@ -3090,13 +3090,13 @@
 		Cannot Repair		
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [100~, 3{, 3}]</text>
       <event>
         <text>Your Scrapper undergoes the augmentation.</text>
         <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
-		  <item type="fuel" min="-1" max="-1"/>
-		  <item type="missiles" min="-1" max="-1"/>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
         <transformRace class="scrapper_defender">scrapper_defender_mk2</transformRace>
       </event>
@@ -3118,13 +3118,13 @@
 		No Combat Damage
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [100~, 3{, 3}]</text>
       <event>
         <text>Your Scrapper undergoes the augmentation.</text>
         <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
-		  <item type="fuel" min="-1" max="-1"/>
-		  <item type="missiles" min="-1" max="-1"/>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
         <transformRace class="scrapper_scavenger">scrapper_scavenger_mk2</transformRace>
       </event>
@@ -3147,13 +3147,13 @@
 		0.5x Move Speed
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [100~, 3{, 3}]</text>
       <event>
         <text>Your Scrapper undergoes the augmentation.</text>
         <item_modify>
-          <item type="scrap" min="-75" max="-75"/>
-		  <item type="fuel" min="-1" max="-1"/>
-		  <item type="missiles" min="-1" max="-1"/>
+          <item type="scrap" min="-100" max="-100"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
         <transformRace class="scrapper_heavy">scrapper_heavy_mk2</transformRace>
       </event>
@@ -3178,12 +3178,13 @@
 		Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%
 	</text>
 	<choice>
-	  <text>Do it.</text>
+	  <text>Do it. [50~, 1{, 1}]</text>
 	  <event>
 		<text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-		  <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+		  <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
 		</item_modify>
 		<transformRace class="scrapper">rosegold_scrapper</transformRace>
 	  </event>
@@ -3207,12 +3208,13 @@
 		Damage from all sources is reduced by 10%
 	 </text>
 	<choice>
-	  <text>Do it.</text>
+	  <text>Do it. [50~, 1{, 1}]</text>
 	  <event>
 		<text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-		  <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+		  <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
 		</item_modify>
 		<transformRace class="scrapper">golden_scrapper</transformRace>
 	  </event>
@@ -3235,12 +3237,13 @@
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 40%
 	</text>
 	<choice>
-	  <text>Do it.</text>
+	  <text>Do it. [50~, 1{, 1}]</text>
 	  <event>
 		<text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-		  <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+		  <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
 		</item_modify>
 		<transformRace class="scrapper">adamantine_scrapper</transformRace>
 	  </event>
@@ -3266,12 +3269,12 @@
 		Resists Mind Control
 		Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="rosegold_scrapper">rosegold_scrapper_engineer</transformRace>
       </event>
@@ -3297,12 +3300,12 @@
 		Damage from all sources is reduced by 10%
 </text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="golden_scrapper">golden_scrapper_medic</transformRace>
       </event>
@@ -3323,12 +3326,12 @@
 		0.75x Move Speed
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 50%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="adamantine_scrapper">adamantine_scrapper_soldier</transformRace>
       </event>
@@ -3352,12 +3355,12 @@
 		Resists Mind Control
 		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 12.5%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="rosegold_scrapper_2">rosegold_scrapper_scavenger</transformRace>
       </event>
@@ -3383,12 +3386,12 @@
 		Provides 1 Power. Drains 1 Power from Enemy Systems
 		Damage from all sources is reduced by 10%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="golden_scrapper_2">golden_scrapper_defender</transformRace>
       </event>
@@ -3410,12 +3413,12 @@
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 60%
 		Can create explosions onboard enemy ships, damaging the ship and systems.</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="adamantine_scrapper_2">adamantine_scrapper_heavy_soldier</transformRace>
       </event>
@@ -3439,12 +3442,12 @@
 		Resists Mind Control
 		Increases nearby crews health, damage and repair speed by 20%. Reduces damage taken of nearby allies by 20%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="rosegold_scrapper_3">rosegold_scrapper_scavenger_mk2</transformRace>
       </event>
@@ -3471,12 +3474,12 @@
 		Damage from all sources is reduced by 20%
 </text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="golden_scrapper_3">golden_scrapper_defender_mk2</transformRace>
       </event>
@@ -3498,12 +3501,12 @@
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 85%
 		Can create explosions onboard enemy ships, damaging the ship and systems.</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
-          <item type="scrap" min="-50" max="-50"/>
-		  <item type="fuel" min="-2" max="-2"/>
+          <item type="scrap" min="-25" max="-25"/>
+		  <item type="fuel" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="adamantine_scrapper_3">adamantine_scrapper_heavy_soldier_mk2</transformRace>
       </event>
@@ -3527,7 +3530,7 @@
 		Resists mindcontrol
 		Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -3555,7 +3558,7 @@
 		Provides 1 Power. Drains 1 Power from Enemy Systems
 		Damage from all sources is reduced by 10%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -3582,7 +3585,7 @@
 		0.75x Move Speed
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 40%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -3611,7 +3614,7 @@
 		Resists mindcontrol
 		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 15%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -3639,7 +3642,7 @@
 		Provides 2 Power. Drains 2 Power from Enemy Systems
 		Damage from all sources is reduced by 20%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -3666,7 +3669,7 @@
 		1x Move Speed
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 65%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -3695,7 +3698,7 @@
 		Resists mindcontrol
 		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 15%</text>
 	<choice>
-      <text>Do it.</text>
+		<text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -3723,7 +3726,7 @@
 		Provides 3 Power. Drains 3 Power from Enemy Systems
 		Damage from all sources is reduced by 20%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -3750,7 +3753,7 @@
 		1.25x Move Speed
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [25~, 1{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
 		<item_modify>
@@ -4214,12 +4217,13 @@
 		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 15%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="rosegold_scrapper">rosegold_scrapper_2</transformRace>
       </event>
@@ -4243,12 +4247,13 @@
 		Damage from all sources is reduced by 20%
 	 </text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="golden_scrapper">golden_scrapper_2</transformRace>
       </event>
@@ -4271,12 +4276,13 @@
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 65%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="adamantine_scrapper">adamantine_scrapper_2</transformRace>
       </event>
@@ -4301,12 +4307,13 @@
 		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 15%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="rosegold_scrapper_2">rosegold_scrapper_3</transformRace>
       </event>
@@ -4330,12 +4337,13 @@
 		Damage from all sources is reduced by 20%
 	 </text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="golden_scrapper_2">golden_scrapper_3</transformRace>
       </event>
@@ -4358,12 +4366,13 @@
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 80%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="adamantine_scrapper_2">adamantine_scrapper_3</transformRace>
       </event>
@@ -4388,12 +4397,13 @@
 		Increases nearby crews health, damage and repair speed by 7.5%. Reduces damage taken of nearby allies by 10%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="scrapper_engineer">rosegold_scrapper_engineer</transformRace>
       </event>
@@ -4419,12 +4429,13 @@
 		[Specialization]Can heal allies for 50 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
 	 </text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="scrapper_medic">golden_scrapper_medic</transformRace>
       </event>
@@ -4446,12 +4457,13 @@
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 50%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="scrapper_soldier">adamantine_scrapper_soldier</transformRace>
       </event>
@@ -4476,12 +4488,13 @@
 		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 12.5%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="scrapper_scavenger">rosegold_scrapper_scavenger</transformRace>
       </event>
@@ -4508,12 +4521,13 @@
 		[Specialization]Can heal allies for 50 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
 	 </text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="scrapper_defender">golden_scrapper_defender</transformRace>
       </event>
@@ -4536,12 +4550,13 @@
 		Can create explosions onboard enemy ships, damaging the ship and systems.
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 1{, 1}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-1" max="-1"/>
+		  <item type="missiles" min="-1" max="-1"/>
         </item_modify>
         <transformRace class="scrapper_heavy">adamantine_scrapper_heavy_soldier</transformRace>
       </event>
@@ -4565,12 +4580,13 @@
 		Increases nearby crews health, damage and repair speed by 10%. Reduces damage taken of nearby allies by 12.5%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="rosegold_scrapper_engineer">rosegold_scrapper_scavenger</transformRace>
       </event>
@@ -4597,12 +4613,13 @@
 		[Specialization]Can heal allies for 50 health at the cost of 50 health. 30 second cooldown. Recovers 1 charge per jump.
 	 </text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="golden_scrapper_medic">golden_scrapper_defender</transformRace>
       </event>
@@ -4625,12 +4642,13 @@
 		Can create explosions onboard enemy ships, damaging the ship and systems.
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [75~, 2{, 2}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
-          <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+          <item type="scrap" min="-75" max="-75"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		  <item type="missiles" min="-2" max="-2"/>
         </item_modify>
         <transformRace class="adamantine_scrapper_soldier">adamantine_scrapper_heavy_soldier</transformRace>
       </event>
@@ -4655,12 +4673,13 @@
 		Increases nearby crews health, damage and repair speed by 20%. Reduces damage taken of nearby allies by 20%
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [100~, 3{, 3}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
           <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
         <transformRace class="rosegold_scrapper_scavenger">rosegold_scrapper_scavenger_mk2</transformRace>
       </event>
@@ -4687,12 +4706,13 @@
 		Damage from all sources is reduced by 20%
 	 </text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [100~, 3{, 3}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
           <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
         <transformRace class="golden_scrapper_defender">golden_scrapper_defender_mk2</transformRace>
       </event>
@@ -4715,12 +4735,13 @@
 		Can create explosions onboard enemy ships, damaging the ship and systems.
 	</text>
     <choice>
-      <text>Do it.</text>
+      <text>Do it. [100~, 3{, 3}]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
         <item_modify>
           <item type="scrap" min="-100" max="-100"/>
-		  <item type="fuel" min="-5" max="-5"/>
+		  <item type="fuel" min="-3" max="-3"/>
+		  <item type="missiles" min="-3" max="-3"/>
         </item_modify>
         <transformRace class="adamantine_scrapper_heavy_soldier">adamantine_scrapper_heavy_soldier_mk2</transformRace>
       </event>
@@ -5162,9 +5183,13 @@
 		Resists Mind Control
 		Increases nearby crews health, damage and repair speed by 20%. Reduces damage taken of nearby allies by 20%</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 2{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
+		<item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		</item_modify>
         <transformRace class="scrapper_scavenger_mk2">rosegold_scrapper_scavenger_mk2</transformRace>
       </event>
     </choice>
@@ -5185,9 +5210,13 @@
 		Nearby enemies all take damage from suffocation and have their movespeed reduced by 95%
 		Can create explosions onboard enemy ships, damaging the ship and systems.</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 2{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
+		<item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		</item_modify>
         <transformRace class="scrapper_heavy_mk2">adamantine_scrapper_heavy_soldier_mk2</transformRace>
       </event>
     </choice>
@@ -5213,9 +5242,13 @@
 		Damage from all sources is reduced by 20%
 	</text>
 	<choice>
-      <text>Do it.</text>
+      <text>Do it. [50~, 2{]</text>
       <event>
         <text>Your Scrapper undergoes the transformation...</text>
+		<item_modify>
+          <item type="scrap" min="-50" max="-50"/>
+		  <item type="fuel" min="-2" max="-2"/>
+		</item_modify>
         <transformRace class="scrapper_defender_mk2">golden_scrapper_defender_mk2</transformRace>
       </event>
     </choice>

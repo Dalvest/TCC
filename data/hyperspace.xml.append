@@ -45,6 +45,15 @@
 			</req>
 		</req>
 		
+		<req name="HAS_TELEPORTER_AND_CLOAK_UPGRADED" type="all">
+			<req lvl="2">
+				<name>teleporter</name>
+			</req>
+			<req lvl="2">
+				<name>cloaking</name>
+			</req>
+		</req>
+		
 		<!--bosses-->
 		<bossShip>TC_TRASH_COMPACTOR1</bossShip>
 		<bossShip>TC_TRASH_COMPACTOR2</bossShip>
@@ -190,12 +199,13 @@
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
 	  <hiddenAug>ADVANCED_SCRAP</hiddenAug>
+	  <!--<hiddenAug>SCRAPPER_ARMORIES_TELEPORTER</hiddenAug>-->
 		  <crew>
-			<scrapper_engineer room="7" name="Emmy" />
-			<scrapper room="5" />
-			<scrapper room="5" />
-			<scrapper room="5"/>
-			<scrapper_soldier room="5"/>
+			<scrapper_engineer room="0" name="Emmy" />
+			<scrapper room="4" />
+			<scrapper room="4" />
+			<scrapper_medic room="4"/>
+			<scrapper_soldier room="4"/>
 		  </crew>
     </mod-append:customShip>
 
@@ -2485,7 +2495,17 @@
 </augments>
 
 <augments>
-	<aug name="CREW_UPGRADER_MEDBAY"> <!--Untested-->
+	<aug name="UPG_SCRAPPER_SUPER_SHIELDS"> <!--Need to create storage event-->
+		<superShield>
+			<add>2</add>
+			<color r="0" g="255" b="6" a="0.8" />
+			<shieldImage>ship/enemy_shields_white.png</shieldImage>
+		</superShield>
+	</aug>
+</augments>
+
+<augments>
+	<aug name="CREW_UPGRADER_MEDBAY"> 
 		<statBoosts>
 			<statBoost name="damageMultiplier">
 				<boostType>MULT</boostType>
@@ -2851,20 +2871,23 @@
 			</statBoost>
 		</statBoosts>
 	</aug>
-
+</augments>
+<augments>
 	<aug name="LAB_SCRAPPER_PRIMARY_INSTALLED"/>
-
+</augments>
+<augments>
 	<aug name="LAB_SCRAPPER_TELEPATHIC_RESISTORS">
 			<statBoost name="resistsMindControl">
 				<boostType>SET</boostType>
 				<value>true</value>
 				<shipTarget>ALL</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
-				<priority>999</priority>
+				<priority>0</priority>
 				<whiteList load="LIST_CREW_SCRAPPER" />
 			</statBoost>
 	</aug>
-		
+</augments>
+<augments>
 	<aug name="LAB_SCRAPPER_DEFENSE_FIELD_GENERATOR">
 		<statBoost name="damageTakenMultiplier">
 			<boostType>MULT</boostType>
@@ -2872,12 +2895,13 @@
 			<value>true</value>
 			<shipTarget>ORIGINAL_SHIP</shipTarget>
 			<crewTarget>ALLIES</crewTarget>
-			<priority>999</priority>
+			<priority>0</priority>
 			<whiteList load="LIST_CREW_SCRAPPER" />
 		</statBoost>
 	</aug>
-	
 </augments>
+
+	
 <!--
 <augments>
 	
@@ -3066,6 +3090,7 @@
 	
 <augments>
 	<aug name="CREW_BERSERK_MODULE">
+	<statBoosts>
 		<statBoost name="damageMultiplier">
 			<boostType>MULT</boostType>
 			<shipTarget>ALL</shipTarget>
@@ -3082,8 +3107,68 @@
 				<amount>1.25</amount>
 				<priority>0</priority>
 			</statBoost>
+	</statBoosts>
 	</aug>
 </augments>
+
+<augments>
+	<aug name="AUGMENT_PROTOTYPE_PRISMATIC_CREW">
+	<statBoosts>
+		<statBoost name="damageMultiplier">
+			<boostType>MULT</boostType>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<amount>1.1</amount>
+			<priority>0</priority>
+		</statBoost>
+		<statBoost name="damageTakenMultiplier">
+			<boostType>MULT</boostType>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<amount>1.1</amount>
+			<priority>0</priority>
+		</statBoost>
+		<statBoost name="maxHealth">
+			<boostType>MULT</boostType>
+			<amount>1.1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost> 
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost> 
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>1.1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost> 
+		<statBoost name="sabotageSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+		</statBoost> 
+		<statBoost name="healSpeed">
+			<boostType>MULT</boostType>
+			<amount>1.1</amount>
+			<affectsSelf>true</affectsSelf>
+			<shipTarget>PLAYER_SHIP</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+		</statBoost>
+	</statBoosts>
+	</aug>
+</augments>
+
 <augments>
 	<aug name="AUGMENT_SCRAPPER_ARTIFACT_CREW_HEALTH">
 		<statBoosts>
@@ -3097,6 +3182,7 @@
 		</statBoosts>
 	</aug>
 </augments>
+
 <augments>
 	<aug name="AUGMENT_SCRAPPER_ARTIFACT_CREW_DAMAGE">
 		<statBoosts>

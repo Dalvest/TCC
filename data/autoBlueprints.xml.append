@@ -1555,21 +1555,21 @@
 <shipBlueprint name="SCRAPPER_STATION" layout="scrapper_station_a" img="scrapper_station_a">
 	<class>Scrapper Station</class>
 	<systemList>
-		<cloaking power="1" max="3" room="5" start="true" />
-		<clonebay power="1" max="3" room="2" start="true" />
-		<doors power="1" max="3" room="4" start="true" />
-		<hacking power="1" max="3" room="8" start="true" />
-		<mind power="1" max="3" room="9" start="true" />
-		<shields power="2" max="10" room="3" start="true" />
-		<teleporter power="1" max="3" room="1" start="true" />
-		<weapons power="2" max="10" room="10" start="true" />
+		<cloaking power="3" max="3" room="5" start="true" />
+		<clonebay power="3" max="3" room="2" start="true" />
+		<doors power="3" max="3" room="4" start="true" />
+		<hacking power="3" max="3" room="8" start="true" />
+		<mind power="3" max="3" room="9" start="true" />
+		<shields power="6" max="6" room="3" start="true" />
+		<teleporter power="3" max="3" room="1" start="true" />
+		<weapons power="6" max="10" room="10" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
+	<droneSlots>2</droneSlots>
 	<weaponList missiles="12" count="4" load="LIST_WEAPONS_LANIUS" />
-	<droneList drones="0" count="0" />
-	<health amount="19" />
-	<maxPower amount="26" />
+	<droneList drones="12" count="2" load="DRONES_COMBAT" />
+	<health amount="22" />
+	<maxPower amount="35" />
 	<crewCount amount="1" max="3" class="scrapper" />
 	<crewCount amount="1" max="1" class="scrapper_medic" />
 	<crewCount amount="1" max="2" class="scrapper_soldier" />

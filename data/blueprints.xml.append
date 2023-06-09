@@ -5327,6 +5327,14 @@
 	    <stackable>true</stackable>
 	</augBlueprint>
 	
+	<augBlueprint name="SCRAPPER_ONBOARD_SCRAP_AUGMENTER">
+		<title>Internal Augment</title>
+		<desc>Converts 10% of all scrap recieved into stats for scrappers? sure.</desc>
+		<cost>120</cost>
+		<rarity>0</rarity>
+		<stackable>true</stackable>
+	</augBlueprint>
+	
 	<augBlueprint name="CREW_BERSERK_MODULE">
 		<title>Berserker Module</title>
 		<desc>A particulalry advanced module that can be installed to your internal lab and enhances your crews ability to deal damage while also increasing the amount of damage taken.</desc>
@@ -5334,64 +5342,29 @@
 		<rarity>0</rarity>
 		<stackable>true</stackable>
 	</augBlueprint>
-	
-	<!--I'm pretty sure these aren't needed-->
-	
-	<augBlueprint name="CREW_UPGRADER_MEDBAY">
-	    <title>Internal Upgrade</title>
-	    <desc>This is an internal Upgrade</desc>
-	    <cost>0</cost>
-	    <rarity>0</rarity>
-	    <stackable>true</stackable>
-	</augBlueprint>
-	
-	<augBlueprint name="CREW_UPGRADER_CLONEBAY">
-	    <title>Internal Upgrade</title>
-	    <desc>This is an internal Upgrade</desc>
-	    <cost>0</cost>
-	    <rarity>0</rarity>
-	    <stackable>true</stackable>
-	</augBlueprint>
-	
-	<augBlueprint name="UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER">
-	    <title>Internal Upgrade</title>
-	    <desc>This is an internal Upgrade </desc>
-	    <cost>0</cost>
-	    <rarity>0</rarity>
-	    <stackable>true</stackable>
-	</augBlueprint>
 
-	<augBlueprint name="TC_CLONEBAY_NOLOSS">
-	    <title>Internal Upgrade</title>
-	    <desc>This is an internal Upgrade </desc>
-	    <cost>0</cost>
-	    <rarity>0</rarity>
-	    <stackable>true</stackable>
+	<augBlueprint name="CREW_ADVANCED_REGENERATION_MODULE">
+		<title>Internal Augment</title>
+		<desc>Gives all crew 1hp/s regen after a 30 second delay.</desc>
+		<cost>120</cost>
+		<rarity>0</rarity>
+		<stackable>true</stackable>
 	</augBlueprint>
 	
-	<augBlueprint name="AUGMENT_SCRAPPER_ARTIFACT_CREW_SPEED">
-		<title>Internal Upgrade</title>
-	    <desc>This is an internal Upgrade</desc>
-	    <cost>0</cost>
-	    <rarity>0</rarity>
-	    <stackable>true</stackable>
+	<augBlueprint name="CREW_ADVANCED_TELEPORTER_BELTS">
+		<title>Internal Augment</title>
+		<desc>Gives all crew the ability to teleport onboard your ship.</desc>
+		<cost>120</cost>
+		<rarity>0</rarity>
+		<stackable>true</stackable>
 	</augBlueprint>
 	
-	<augBlueprint name="AUGMENT_SCRAPPER_ARTIFACT_CREW_HEALTH">
-		<title>Internal Upgrade</title>
-	    <desc>This is an internal Upgrade</desc>
-	    <cost>0</cost>
-	    <rarity>0</rarity>
-	    <stackable>true</stackable>
-	</augBlueprint>
-	
-	
-	<augBlueprint name="AUGMENT_SCRAPPER_ARTIFACT_CREW_DAMAGE">
-		<title>Internal Upgrade</title>
-	    <desc>This is an internal Upgrade</desc>
-	    <cost>0</cost>
-	    <rarity>0</rarity>
-	    <stackable>true</stackable>
+	<augBlueprint name="CREW_ADVANCED_TELEPORTER_BELTS_2">
+		<title>Internal Augment</title>
+		<desc>Gives all crew the ability to teleport on both your own and enemy ships..</desc>
+		<cost>120</cost>
+		<rarity>0</rarity>
+		<stackable>true</stackable>
 	</augBlueprint>
 	
 	
@@ -5847,54 +5820,58 @@
 		<class>Scrapper Cruiser</class>
 		<name>The Onslaught</name>
 		<desc>A terrifying boarding ship. Stripped of weapons, drones, and other essential systems, this ship specializes in the ability to teleport its crew.
-			Starts with Upgraded Cloak, Clonebay and Teleporter. Reduced maximum drone, weapons, and shield systems. 
-		</desc>
+			Starts with Upgraded Cloak, Clonebay and Teleporter. Reduced maximum drone, weapons, and shield systems.</desc>
 		<unlock id="ship_PLAYER_SHIP_SCRAPPER_2_unlock"/>
-		<systemList>
-		<artillery power="1" room="8" start="false" weapon="ARTILLERY_FED" img="room_artillery" />
-		<battery power="1" room="13" start="false" img="room_battery" />
-		<cloaking power="1" room="15" start="true" img="room_cloaking" />
-		<clonebay power="1" room="4" start="true">
+<systemList>
+		<artillery power="1" room="1" start="false" weapon="ARTILLERY_FED" img="room_artillery" />
+		<battery power="1" room="9" start="false" img="room_battery_5" />
+		<cloaking power="2" room="10" start="true" img="room_cloaking" />
+		<clonebay power="2" room="6" start="true">
 			<slot>
 				<number>1</number>
 			</slot>
 		</clonebay>
-		<doors power="1" room="1" start="true" img="room_doors">
+		<doors power="1" room="7" start="true" img="room_doors">
 			<slot>
 				<direction>up</direction>
-				<number>0</number>
+				<number>1</number>
 			</slot>
 		</doors>
-		<drones power="1" max="5" room="0" start="false" img="room_drones" />
-		<engines power="1" room="6" start="true" img="room_engines">
+		<drones power="1" room="16" start="false" img="room_drones" />
+		<engines power="2" room="5" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
 				<number>2</number>
 			</slot>
 		</engines>
-		<hacking power="1" room="16" start="false" img="room_hacking" />
-		<mind power="1" room="0" start="false" img="room_mind" />
-		<oxygen power="1" room="3" start="false" img="room_oxygen" />
-		<pilot power="1" room="7" start="true" img="room_pilot">
+		<hacking power="1" room="14" start="false" img="room_hacking" />
+		<medbay power="1" room="6" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="15" start="false" img="room_mind" />
+		<oxygen power="1" room="8" start="false" img="room_oxygen" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
 			<slot>
 				<direction>right</direction>
 				<number>0</number>
 			</slot>
 		</pilot>
-		<sensors power="1" room="14" start="true" img="room_sensors">
+		<sensors power="1" room="11" start="true" img="room_sensors">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="1" max="6" room="2" start="false" img="room_shields">
+		<shields power="1" room="3" start="false" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
-		<teleporter power="1" room="5" start="true" />
-		<weapons power="1" max="5" room="12" start="false" img="room_weapons">
+		<teleporter power="2" room="4" start="true" />
+		<weapons power="1" room="12" start="false" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
@@ -5906,7 +5883,7 @@
 		<weaponList missiles="4" count="2" />
 		<droneList drones="7" count="2" />
 		<health amount="30" />
-		<maxPower amount="6" />
+		<maxPower amount="8" />
 		<aug name="EX_ZOLTAN_BYPASS" />
 		<shieldImage>mupc_a55</shieldImage>
 		<cloakImage>tcp_scrapper</cloakImage>
