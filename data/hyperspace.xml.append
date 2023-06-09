@@ -56,6 +56,7 @@
 		
 		<!--scrapper sector events-->
 			<eventFile>scrapper</eventFile>
+			<eventFile>imageList</eventFile>
 	</events>
 
 
@@ -142,8 +143,23 @@
 
 <mod:findLike type="ships">
 
+<!--PlaceHolder Ship for later scrapper ships, doesn't appear in lists
+	<mod-append:ship name="PLAYER_SHIP_SCRAPPER_CRUISER" b="false" c="false"/>
+	
+		<mod-append:customShip name="PLAYER_SHIP_SCRAPPER_CRUISER"> 
+		  <crewLimit>8</crewLimit>
+		  <hiddenAug>SHIP_SCRAPPER</hiddenAug>
+		  <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		  <hiddenAug>ADVANCED_SCRAP</hiddenAug>
+		  <crew>
+			<scrapper_engineer room="7" name="Emmy" />
+			<scrapper room="5" />
+			<scrapper room="5" />
+			<scrapper room="5"/>
+		  </crew>
+		</mod-append:customShip>
+	-->
     <!--///////SCRAPPER DREADNOUGHT//////--> <!--KEEP AND REVAMP-->
-
     <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false">
       <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_EATER</arrow>
     	<unlock variant="a" silent="false">
@@ -174,27 +190,15 @@
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
 	  <hiddenAug>ADVANCED_SCRAP</hiddenAug>
-      <crew>
-        <scrapper_engineer room="0" name="Emmy"/>
-        <scrapper_soldier room="1"/>
-        <scrapper room="1"/>
-        <scrapper room="1"/>
-        <scrapper room="1"/>
-      </crew>
+		  <crew>
+			<scrapper_engineer room="7" name="Emmy" />
+			<scrapper room="5" />
+			<scrapper room="5" />
+			<scrapper room="5"/>
+			<scrapper_soldier room="5"/>
+		  </crew>
     </mod-append:customShip>
-	
-	<mod-append:customShip name="PLAYER_SHIP_SCRAPPER_CRUISER"> 
-      <crewLimit>8</crewLimit>
-      <hiddenAug>SHIP_SCRAPPER</hiddenAug>
-      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-	  <hiddenAug>ADVANCED_SCRAP</hiddenAug>
-      <crew>
-        <scrapper_engineer room="7" name="Emmy" />
-        <scrapper room="5" />
-        <scrapper room="5" />
-        <scrapper room="5"/>
-      </crew>
-    </mod-append:customShip>
+
 
     <!--/////// TRASH EATER'S CRUISER //////--> <!--KEEP AND REVAMP-->
 
@@ -289,7 +293,6 @@
 		<mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship> <!--Scrapper Dreadnought-->
 		<mod-append:ship>PLAYER_SHIP_TRASH_EATER</mod-append:ship> <!--TE Cruiser-->
 		<mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship> <!--Kestrel Miner-->
-		<mod-append:ship>PLAYER_SHIP_SCRAPPER_CRUISER</mod-append:ship>
 	</mod:findLike>
 </mod:findLike>
 

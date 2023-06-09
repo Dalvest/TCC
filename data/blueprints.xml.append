@@ -5842,13 +5842,15 @@
 		<aug name="COMPACTOR" />
 		<shieldImage>mupc_a55</shieldImage>
 	</shipBlueprint>
-	
-<shipBlueprint name="PLAYER_SHIP_SCRAPPER_CRUISER" layout="scrapper_cruiser" img="scrapper_cruiser">
-	<class id="text_PLAYER_SHIP_SCRAPPER_CRUISER_class">Scrapper Cruiser</class>
-	<name id="text_PLAYER_SHIP_SCRAPPER_CRUISER_name">Onslaught</name>
-	<desc id="text_PLAYER_SHIP_SCRAPPER_CRUISER_desc">A boarding ship.</desc>
-	<unlock id="ship_PLAYER_SHIP_SCRAPPER_CRUISER_unlock"/>
-	<systemList>
+
+	<shipBlueprint name="PLAYER_SHIP_SCRAPPER_2" layout="tcp_scrapper_b" img="tcp_scrapper_b">
+		<class>Scrapper Cruiser</class>
+		<name>The Onslaught</name>
+		<desc>A terrifying boarding ship. Stripped of weapons, drones, and other essential systems, this ship specializes in the ability to teleport its crew.
+			Starts with Upgraded Cloak, Clonebay and Teleporter. Reduced maximum drone, weapons, and shield systems. 
+		</desc>
+		<unlock id="ship_PLAYER_SHIP_SCRAPPER_2_unlock"/>
+		<systemList>
 		<artillery power="1" room="8" start="false" weapon="ARTILLERY_FED" img="room_artillery" />
 		<battery power="1" room="13" start="false" img="room_battery" />
 		<cloaking power="1" room="15" start="true" img="room_cloaking" />
@@ -5863,7 +5865,7 @@
 				<number>0</number>
 			</slot>
 		</doors>
-		<drones power="1" room="0" start="false" img="room_drones" />
+		<drones power="1" max="5" room="0" start="false" img="room_drones" />
 		<engines power="1" room="6" start="true" img="room_engines">
 			<slot>
 				<direction>down</direction>
@@ -5885,93 +5887,21 @@
 				<number>1</number>
 			</slot>
 		</sensors>
-		<shields power="1" room="2" start="false" img="room_shields">
+		<shields power="1" max="6" room="2" start="false" img="room_shields">
 			<slot>
 				<direction>left</direction>
 				<number>0</number>
 			</slot>
 		</shields>
 		<teleporter power="1" room="5" start="true" />
-		<weapons power="1" room="12" start="false" img="room_weapons">
+		<weapons power="1" max="5" room="12" start="false" img="room_weapons">
 			<slot>
 				<direction>up</direction>
 				<number>1</number>
 			</slot>
 		</weapons>
 	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<aug name="EX_ZOLTAN_BYPASS" />
-	<weaponList missiles="0" count="4" />
-	<droneList drones="0" count="2" />
-	<health amount="30" />
-	<maxPower amount="8" />
-</shipBlueprint>
-
-	<shipBlueprint name="PLAYER_SHIP_SCRAPPER_2" layout="tcp_scrapper_b" img="tcp_scrapper_b">
-		<class>Scrapper Dreadnought</class>
-		<name>Razormind</name>
-		<desc>A terrifying boarding ship. Stripped of weapons, drones, and other essential systems, this ship specializes in the ability to augment and upgrade it's crew.
-			Starts with Upgraded Cloak, Clonebay and Teleporter. Reduced maximum drone, weapons, and shield systems. 
-		</desc>
-		<unlock id="ship_PLAYER_SHIP_SCRAPPER_2_unlock"/>
-		<systemList>
-			<artillery power="1" room="3" start="false" weapon="ARTILLERY_FED" img="invis" />
-			<battery power="1" max="2" room="14" start="false" img="room_battery_scrapper" />
-			<cloaking power="2" room="5" start="true" img="room_cloaking" />
-			<clonebay power="2" room="7" start="true">
-				<slot>
-					<number>3</number>
-				</slot>
-			</clonebay>
-			<doors power="1" room="12" start="true" img="room_doors_5">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</doors>
-			<drones power="2" max="6" room="8" start="false" img="room_drones" />
-			<engines power="2" room="2" start="true" img="room_engines_8">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</engines>
-			<hacking power="1" room="11" start="false" img="room_hacking_8" />
-			<medbay power="2" room="7" start="false" img="room_medbay_3">
-				<slot>
-					<number>3</number>
-				</slot>
-			</medbay>
-			<mind power="1" room="4" start="false" img="room_mind_11" />
-			<oxygen power="1" room="9" start="false" img="room_oxygen" />
-			<pilot power="1" room="0" start="true" img="room_pilot">
-				<slot>
-					<direction>right</direction>
-					<number>1</number>
-				</slot>
-			</pilot>
-			<sensors power="1" room="10" start="true" img="room_sensors">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</sensors>
-			<shields power="2" max="6" room="13" start="false" img="room_shields">
-				<slot>
-					<direction>left</direction>
-					<number>0</number>
-				</slot>
-			</shields>
-			<teleporter power="2" room="1" start="true" />
-			<weapons power="1" max="6" room="6" start="false" img="room_weapons_10">
-				<slot>
-					<direction>up</direction>
-					<number>0</number>
-				</slot>
-			</weapons>
-		</systemList>
-		<weaponSlots>2</weaponSlots>
+		<weaponSlots>4</weaponSlots>
 		<droneSlots>2</droneSlots>
 		<weaponList missiles="4" count="2" />
 		<droneList drones="7" count="2" />
