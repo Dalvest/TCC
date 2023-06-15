@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FTL><!--appending to Inferno-Core (uncomment later)-->
 
+<mod:findName type="event" name="REROUTE_MENU">
+    <mod-append:choice req="coords_scrapper_slaver" lvl="1" max_lvl="1" hidden="true" blue="true">
+		<text>Enter the Slaver Territory.</text>
+		<event load="LIGHTSPEED_SECTOR_WARP_SCRAPPER_SLAVER"/>
+	</mod-append>
+</mod:findName>
+
+<mod:findName type="req" name="COORDS">
+	<mod-append:name>coords_scrapper_slaver</mod-append:name>
+</mod:findName>
+
+<event name="LIGHTSPEED_SECTOR_WARP_SCRAPPER_SLAVER">
+	<text>You are about to reroute. Below is the Atlas entry for this sector.
+	Name: Chain Territory
+	Type: Hostile
+	Dominant Faction: The Chain
+	Rebel Threat Level: Low
+	Locations of Interest: Slaver Fortress
+	
+	A sector completely taken over by the faction of slavers known as The Chain.</text>
+	<choice hidden="true">
+		<text>Continue with the jump.</text>
+		<event>
+			<text>You prepare to jump to the new co-ordinates, and change your flight path accordingly.</text>
+			<variable name="coords_scrapper_slaver" op="set" val="0" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="JUMP_TO_SCRAPPER_SLAVER" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event>
+			<loadEvent>ATLAS_MENU_NOEQUIPMENT</loadEvent>
+		</event>
+	</choice>
+</event>
+
 <event name="ENTER_SCRAPPER">
+	<text load="TEXT_LIGHTSPEED" />
+	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="LOAD_ATLAS_MARKER" />
+	</choice>
+</event>
+
+<event name="ENTER_SCRAPPER_SLAVER">
 	<text load="TEXT_LIGHTSPEED" />
 	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
 	<choice hidden="true">
@@ -15,6 +63,10 @@
 		<text>Proceed to the Scrapper Scrapfields.</text>
 		<event load="SCRAPPER_WARP" />
 	</mod-append:choice>
+	<mod-append:choice req="SEC SECTOR_SCRAPPER_SLAVER" blue="false">
+		<text>Proceed to the The Chains' Territory.</text>
+		<event load="SCRAPPER_SLAVER_WARP"/>
+	</mod-append:choice>
 </mod:findName>
 
 <mod:findName type="event" name="ATLAS_MENU_NOEQUIPMENT">
@@ -22,7 +74,16 @@
 		<text>Proceed to the Scrapper Scrapfields.</text>
 		<event load="SCRAPPER_WARP"/>
 	</mod-append:choice>
+	<mod-append:choice req="SEC SECTOR_SCRAPPER_SLAVER" blue="false">
+		<text>Proceed to the The Chains' Territory.</text>
+		<event load="SCRAPPER_SLAVER_WARP"/>
+	</mod-append:choice>
+	
 </mod:findName>
+
+<event name="JUMP_TO_SCRAPPER_SLAVER">
+	<secretSector>SECTOR_SCRAPPER_SLAVER</secretSector>
+</event>
 
 <event name="SCRAPPER_WARP">
 	<text>Name: Scrapper Gathering Point
@@ -43,6 +104,24 @@
 	</choice>
 </event>
 
+<event name="SCRAPPER_SLAVER_WARP">
+	<text>Name: Chain Territory
+	Type: Hostile
+	Dominant Faction: The Chain
+	Rebel Threat Level: Low
+	Locations of Interest: Slaver Fortress
+	
+	A sector completely taken over by the faction of slavers known as The Chain.</text>
+	<!-- 	<playSound>lightspeed</playSound> -->
+	<choice hidden="true">
+		<text>Exit hyperspeed.</text>
+		<event load="START_SCRAPPER_SLAVER" />
+	</choice>
+	<choice hidden="true" req="COORDS" blue="false">
+		<text>Reroute.</text>
+		<event load="REROUTE_MENU" />
+	</choice>
+</event>
 
 <mod:findName type="event" name="FMCORE_ATLAS_EQUIPMENT">
 	<mod-append:choice req="TCC_CAN_CALL_COMPACTOR" blue="false">
