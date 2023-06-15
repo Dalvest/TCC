@@ -6276,13 +6276,33 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>115 Health</power>
+		<power>[Specialization] 1.75x Damage</power>
+		<power>[Specialization] 2.0x Sabotage Damage</power>
+		<power>[Specialization] Can create explosions onboard enemy ships, damaging the ship and systems.</power>	
+		<power>Cannot Man or Repair Systems</power>
+		<power>150 Health</power>
 		<power>0.5x Fire Damage Taken</power>
-		<power>0.5x Oxygen Drain</power>		
-		<power>0.75x Damage</power>
-		<power>1.5x Repair Speed</power>
-		<power>1.5x Sabotage Damage</power>
-		<power>0.66x Move Speed</power>
+		<power>0.5x Oxygen Drain</power>	
+		<power>0.35x Move Speed</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="scrapper_slave_variasa">
+	<title>Ariaso</title>
+	<short>Ariaso</short>
+	<desc>A Scrapper that was enslaved. The Scrapper Slavers seem to have experimented on them, grafting bits of scrap metal in ways that seemingly don't make sense. The augments seem to be making them miserable and uncomfortable, giving them a form they don't feel comfortable in.</desc>
+	<cost>0</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>[Specialization] 1.75x Damage</power>
+		<power>[Specialization] 2.0x Sabotage Damage</power>
+		<power>[Specialization] Can create explosions onboard enemy ships, damaging the ship and systems.</power>	
+		<power>Cannot Man or Repair Systems</power>
+		<power>150 Health</power>
+		<power>0.5x Fire Damage Taken</power>
+		<power>0.5x Oxygen Drain</power>	
+		<power>0.35x Move Speed</power>
 	</powerList>
 </crewBlueprint>
 

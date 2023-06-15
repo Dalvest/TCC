@@ -63,6 +63,20 @@
 	<event name="DISTRESS_SCRAPPER" min="1" max="2"/>-->
 </sectorDescription>
 
+<sectorDescription name="SECTOR_SCRAPPER_SLAVER" unique="true">
+	<nameList>
+		<name>The Chains' Turf</name>
+	</nameList>
+	<trackList>
+		<track>scrapper</track>
+		<track>deepspace</track>
+		<track>void</track>
+		<track>wasteland</track>
+	</trackList>	
+	<startEvent>ENTER_SCRAPPER_SLAVER</startEvent>
+	<exitBeacon event="FINISH_BEACON" nebulaEvent="FINISH_BEACON" rebelEvent="FINISH_BEACON_FLEET_AUTO"/>
+	<rebelBeacon event="FLEET_AUTO" nebulaEvent="FLEET_AUTO"/>
+</sectorDescription>
 
 <!--//////////////// APPEND SCRAPPER EVENTS TO EXISTING SECTORS /////////////////-->
 

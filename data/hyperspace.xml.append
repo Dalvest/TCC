@@ -54,6 +54,15 @@
 			</req>
 		</req>
 		
+		<req name="HAS_SCRAPPER_SIBLINGS_ONBOARD" type="all">
+			<req lvl="1">
+				<name>scrapper_slave_ariaso</name>
+			</req>
+			<req lvl="1">
+				<name>scrapper_slave_variasa</name>
+			</req>
+		</req>
+		
 		<!--bosses-->
 		<bossShip>TC_TRASH_COMPACTOR1</bossShip>
 		<bossShip>TC_TRASH_COMPACTOR2</bossShip>
@@ -404,28 +413,98 @@
 	</race>
 	
 <race name="scrapper_slave_ariaso">
-	<maxHealth>115</maxHealth>
-	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<maxHealth>150</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
 	<canSuffocate>false</canSuffocate>
-	<repairSpeed>1.5</repairSpeed>
-	<moveSpeedMultiplier>0.66</moveSpeedMultiplier>
-	<fireDamageMultiplier>0.50</fireDamageMultiplier>
-	<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
-	<damageMultiplier>0.75</damageMultiplier>
+	<canRepair>false</canRepair>
+	<canMan>false</canMan>
+	<moveSpeedMultiplier>0.35</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.5</fireDamageMultiplier>
+	<damageMultiplier>1.75</damageMultiplier>
+	<sabotageSpeedMultiplier>2.0</sabotageSpeedMultiplier>
 	<repairSounds>
 		<repairSound>shrikeRepair</repairSound>
 	</repairSounds>
 	<deathSounds>
 		<deathSound>shrikeDeath</deathSound>
 	</deathSounds>
-	<skills>
-		<piloting req="22"/>
-		<engines req="22"/>
-		<shields req="62"/>
-		<weapons req="72"/>
-		<repair req="24"/>
-		<combat req="12"/>
-	</skills>
+	<powerEffect>
+		<cooldown>25</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>lockdown1</powerSound>
+		</powerSounds>
+		<req type="enemy">
+		</req>
+		<powerCharges>1</powerCharges>
+		<initialCharges>1</initialCharges>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<stun>3</stun>
+		<friendlyFire>false</friendlyFire>
+		<shipFriendlyFire>false</shipFriendlyFire>
+		<buttonText>DISPERSE</buttonText>
+		<tooltip>Ready: Deal 1 hull damage, 1 system damage, and stun nearby enemies for 3 seconds.</tooltip>
+		<cooldownColor r="255" g="18" b="0"/>
+		<effectAnim>explosion_random</effectAnim>
+		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+	</powerEffect>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="24"/>
+	<combat req="10"/>
+</skills>
+</race>
+
+	
+<race name="scrapper_slave_variasa">
+	<maxHealth>150</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
+	<canSuffocate>false</canSuffocate>
+	<canRepair>false</canRepair>
+	<canMan>false</canMan>
+	<moveSpeedMultiplier>0.35</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.5</fireDamageMultiplier>
+	<damageMultiplier>1.75</damageMultiplier>
+	<sabotageSpeedMultiplier>2.0</sabotageSpeedMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<powerEffect>
+		<cooldown>25</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>lockdown1</powerSound>
+		</powerSounds>
+		<req type="enemy">
+		</req>
+		<powerCharges>1</powerCharges>
+		<initialCharges>1</initialCharges>
+		<damage>1</damage>
+		<sysDamage>1</sysDamage>
+		<stun>3</stun>
+		<friendlyFire>false</friendlyFire>
+		<shipFriendlyFire>false</shipFriendlyFire>
+		<buttonText>DISPERSE</buttonText>
+		<tooltip>Ready: Deal 1 hull damage, 1 system damage, and stun nearby enemies for 3 seconds.</tooltip>
+		<cooldownColor r="255" g="18" b="0"/>
+		<effectAnim>explosion_random</effectAnim>
+		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+	</powerEffect>
+<skills>
+	<piloting req="22"/>
+	<engines req="22"/>
+	<shields req="62"/>
+	<weapons req="72"/>
+	<repair req="24"/>
+	<combat req="10"/>
+</skills>
 </race>
 
 <race name="scrapper_slave">

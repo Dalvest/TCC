@@ -1593,7 +1593,7 @@
 	<choice>
 		<text>Accept the Scrappers offer.</text>
 		<event>
-			<crewMember amount="1" all_skills="2" class="scrapper_slave_ariaso">Ariaso<crewMember/>
+			<crewMember amount="1" all_skills="2" class="scrapper_slave_ariaso">Ariaso</crewMember>
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="SCRAPPER_SLAVER_SECOND_FOLLOWUP"/>
@@ -1774,10 +1774,11 @@
 			<text>"This is where The Chain hides." "A cowards place to die." "Find them and kill them." "Their station must not be destroyed." "We must confront The Chain directly." "The Captain musn't die." "Lead us there so that we may return to our prior form." 
 			The siblings spoke in tandem, alternating between their lines as if they were in each others minds. They have grown closer to one another...physically closer. Since entering the sector, they have seemingly become magnetically attached to one another.</text>
 			<choice>
-				<text>Ask about the touching...
-	
-	
-	
+				<text>Continue</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
 	<choice hidden="true">
 		<text>Do something on-board the ship.</text>
 		<event load="STORAGE_CHECK" />
@@ -1808,7 +1809,7 @@
 
 <event name="SCRAPPER_SLAVER_NEBULA_DESTROY">
 	<textList load="SCRAPPER_SLAVER_NEBULA_DESTROY_TEXT"/>
-	<autoReward level="high">standard_no_item<autoReward>
+	<autoReward level="high">standard_no_item</autoReward>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event/>
@@ -1817,7 +1818,7 @@
 
 <event name="SCRAPPER_SLAVER_NEBULA_DEADCREW">
 	<textList load="SCRAPPER_SLAVER_NEBULA_DEADCREW_TEXT"/>
-	<autoReward level="high">standard_no_item<autoReward>
+	<autoReward level="high">standard_no_item</autoReward>
 	<choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true" hidden="true">
 		<text>Send your Scrapper out to check the wreckage.</text>
 		<event load="SCRAPPER_SLAVER_NEBULA_EXTRAREWARD_CHANCE"/>
@@ -1838,7 +1839,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>Your Scrapper looks around the Scrapper vessel but were unable to find anything more of value.
+		<text>Your Scrapper looks around the Scrapper vessel but were unable to find anything more of value.</text>
 		<choice hidden="true">
 			<text>Continue...</text>
 			<event/>
