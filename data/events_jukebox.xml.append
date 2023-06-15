@@ -1,0 +1,9 @@
+<mod:findName type="event" name="STORAGE_CHECK_JUKEBOX">
+    <mod-append:choice hidden="true" req="juke_scrapper">
+		<text>TCC: Scrapper</text>
+		<event>
+			<playMusic>scrapper</playMusic>
+			<loadEvent>STORAGE_CHECK_JUKEBOX</loadEvent>
+		</event>
+	</mod-append:choice>
+</mod:findName>

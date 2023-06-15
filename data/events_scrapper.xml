@@ -5,7 +5,7 @@
 	<crewMember amount="1" class="scrapper">Success</crewMember>
 </event>
 	
-
+<!--I will put the * to marked on where I place the morality/notoriety of scrappers and jukebox stuff-->
 	
 <!--SECTOR EVENT LISTS-->
 
@@ -163,6 +163,7 @@
 </textList>
 
 <event name="START_SCRAPPER_SHIP">
+	<metaVariable name="juke_scrapper" op="set" val="1"/> <!--*-->
 	<preventQuest />
 	<beaconType id="map_icon_start" global="true">
 		<color r="46" g="252" b="51" a="1" />
@@ -171,122 +172,92 @@
 	<ship load="SHIP_GUARD_SCRAPPER" hostile="false" />
 	<changeBackground>BACK_SECTOR_SCRAPPER</changeBackground>
 	<playSound>lightspeed</playSound>
+	<choice hidden="true" req="rep_scrapper" lvl="-2147483648" max_lvl="1" max_group="0" blue="false"> <!--*-->
+		<text>Continue...</text>
+		<event load="GUARD_SCRAPPER"/>
+	</choice>
+	<choice hidden="true" req="rep_scrapper" lvl="2" max_lvl="999" max_group="0" blue="false"> <!--*-->
+		<text>Continue...</text>
+		<event load="GUARD_SCRAPPER_CRIMINAL"/>
+	</choice>
+</event>
+
+<event name="GUARD_SCRAPPER_CRIMINAL"> <!--*-->
+	<text>Something seems off here. Usually, the Scrapper wouldn't bat an eye at ships like yours, but now, you catch suspicious chatter on the guard ship.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>It would appear that the Scrappers bothered to post a guard at this beacon. They are not hostile, nor are they readying weapons and indeed after a few moments of silence, they hail you.
-			"CAPTAIN! SURELY YOU WILL UNDERSTAND! A TOLL MUST BE COLLECTED! TRANSFER SCRAP OR NO ENTRY!"</text>
+			<text>It seems your track record has caught up to you. The guard's crew have heard enough of the crimes you've been committing, and they don't intend to let you into the sector!</text>
+			<ship hostile="true"/>
 			<choice hidden="true">
-				<text>"I ain't paying that."</text>
-				<event>
-					<text>You alert your crew of defensive positions as the Guard powers up their weapons.</text>
-					<ship hostile="true" />
-					<choice hidden="true">
-						<text>Continue...</text>
-						<event load="COMBAT_CHECK" />
-					</choice>
-				</event>
-			</choice>
-			<choice hidden="true">
-				<text>That makes sense. [15~]</text>
-				<event>
-					<text>You peacefully transfer the scrap to the scrapper, allowing you entrance to the Scrappers Space.</text>
-					<item_modify>
-						<item type="scrap" min="-15" max="-15" />
-					</item_modify>
-					<choice>
-						<text>Do something else on board.</text>
-						<event load="STORAGE_CHECK"/>
-					</choice>
-					<choice>
-						<text>Continue...</text>
-						<event />
-					</choice>
-				</event>
-			</choice>
-			<choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true" hidden="true">
-				<text>(Scrapper Crew) Your Scrapper insists on speaking to the Guard.</text>
-				<event>
-					<text>Unsure if this is a good idea, but trustful of your crew, you allow them to approach the comm. "BEHOLD! IT IS I! THE ONE AND ONLY TRASH EATER!! YOU WILL ALLOW THIS SHIP TO PASS WITHOUT ANOTHER QUESTION!" They declared this with confidence and the utmost self-assurance but it's obviously a lie.</text>
-					<choice hidden="true">
-						<text>Continue...</text>
-						<event>
-							<text>"WHAT?! BOLD LIE! LOWLY SCUM!" The guard did not believe the bluff, as expected of such an obvious lie... Your Scrapper snaps back without thinking, "YOUR MOTHER! DISGUSTING VILE CREATURE! LET US PASS I AM THE EATER OF TRASH!" This is starting to go too far...</text>
-							<choice hidden="true">
-								<text>Interject...</text>
-								<event>
-									<text>You pull your Scrapper back and apologize for the behavior of your crew member. "FINE! FEE IS DOUBLED! RUDE CREW! RUDE CAPTAIN! GET OUT OF OUR FACE!"</text>
-									<choice hidden="true">
-										<text>Pay the fee. [30~]</text>
-										<event>
-											<text>"GOOD RIDDANCE!" The channel is closed. At least the situation was defused.</text>
-											<item_modify>
-												<item type="scrap" min="-30" max="-30" />
-											</item_modify>
-											<choice hidden="true">
-												<text>Continue...</text>
-												<event/>
-											</choice>
-										</event>
-									</choice>
-									<choice hidden="true">
-										<text>Refuse.</text>
-										<event>
-											<text>The channel is cut and the Scrapper vessel powers its weapons.</text>
-											<ship hostile="true" />
-											<choice hidden="true">
-												<text>Continue...</text>
-												<event/>
-											</choice>
-										</event>
-									</choice>
-								</event>
-							</choice>
-							<choice hidden="true">
-								<text>Let's see where this goes...</text>
-								<event>
-									<text>"YOU SMELL OF OLD BREAD!" Your Scrapper makes a follow up jab, the guard snaps back, "HOW DARE YOU! MY MOTHER IS A SAINT!!" This seems to have been the final straw. They cut the transmission and power their weapons!</text.>
-									<ship hostile="true" />
-									<choice hidden="true">
-										<text>Continue...</text>
-										<event load="COMBAT_CHECK" />
-									</choice>
-								</event>
-							</choice>
-						</event>
-					</choice>
-				</event>
-			</choice>
-			<choice req="trash_eater" lvl="1" blue="true" hidden="true">
-				<text>(Trash Eater) The Trash Eater insists on speaking to the Guard.</text>
-				<event>
-					<text>The Trash Eater walks up to the Comm and announces his presence onboard the ship. The guard seems to be concerned, alarmed, and even frightened. The Trash Eater insists that they pay him for the right to guard the space and to allow us passage. They i agree, transfering supplies to your ship. The Trash Eater, pleased with himself, enjoys some of the scrap for himself.</text>
-					<item_modify>
-						<item type="scrap" min="7" max="24" />
-						<item type="fuel" min="1" max="5" />
-						<item type="drones" min="1" max="5" />
-						<item type="missiles" min="1" max="5" />
-					</item_modify>
-					<choice>
-						<text>Do something else on board.</text>
-						<event load="STORAGE_CHECK"/>
-					</choice>
-					<choice>
-						<text>Continue...</text>
-						<event />
-					</choice>
-				</event>
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
 			</choice>
 		</event>
 	</choice>
 </event>
 
-<event name="SCRAPPER_GUARD_DESTROY">
-	<text>You have destroyed the Scrapper vessel. Whatever might have been in their cargo has for certain been destroyed, but you can at least salvage some supplies from the ship.</text>
-	<autoReward level="high">standard</autoReward>
+<event name="GUARD_SCRAPPER">
+	<text>It would appear that the Scrappers bothered to post a guard at this beacon. They are not hostile, nor are they readying weapons and indeed after a few moments of silence, they hail you.
+	CAPTAIN! SURELY YOU WILL UNDERSTAND! A TOLL MUST BE COLLECTED! TRANSFER SCRAP OR NO ENTRY!</text>
 	<choice hidden="true">
-		<text>Continue...</text>
-		<event load="SCRAPPER_GUARD_FOLLOWUP" />
+		<text>"I ain't paying that."</text>
+		<event>
+			<text>You alert your crew of defensive positions as the Guard powers up their weapons.</text>
+			<ship hostile="true" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>That makes sense.</text>
+		<event>
+			<text>You peacefully transfer the scrap to the scrapper, allowing you entrance to the Scrappers Space.</text>
+			<item_modify>
+					<item type="scrap" min="-8" max="-15" />
+			</item_modify>
+			<choice>
+				<text>Do something else on board.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Continue...</text>
+				<event />
+			</choice>
+		</event>
+	</choice>
+	<choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true" hidden="true">
+		<text>(Scrapper Crew) Your Scrapper insists on speaking to the Guard.</text>
+		<event>
+			<text>Unsure if this is a good idea, but trustful of your crew, you allow them to approach the comm. They animatedely shout at the guard, and with a few moments it seems that insults are being thrown. Insulted, the guard powers up weapons and begins to attack!</text>
+			<ship hostile="true" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="trash_eater" lvl="1" blue="true" hidden="true">
+		<text>(Trash Eater) The Trash Eater insists on speaking to the Guard.</text>
+		<event>
+			<text>The Trash Eater walks up to the Comm and announces his presence onboard the ship. The guard seems to be concerned, alarmed, and even frightened. The Trash Eater insists that they pay him for the right to guard the space and to allow us passage. They i agree, transfering supplies to your ship. The Trash Eater, pleased with himself, enjoys some of the scrap for himself.</text>
+			<item_modify>
+				<item type="scrap" min="7" max="24" />
+				<item type="fuel" min="1" max="5" />
+				<item type="drones" min="1" max="5" />
+				<item type="missiles" min="1" max="5" />
+			</item_modify>
+			<choice>
+				<text>Do something else on board.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Continue...</text>
+				<event />
+			</choice>
+		</event>
 	</choice>
 </event>
 
@@ -656,7 +627,7 @@
 			<boarders min="1" max="1" class="scrapper_heavy" />
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="COMBAT_CHECK" />
+				<event load="MORALITY_UPDATE_SCRAPPER_FIGHT" /> <!--*-->
 			</choice>
 		</event>
 	</choice>
@@ -986,7 +957,7 @@
 			<ship hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="COMBAT_CHECK" />
+				<event load="MORALITY_UPDATE_SCRAPPER_FIGHT" /> <!--*-->
 			</choice>
 		</event>
 	</choice>
@@ -1139,7 +1110,7 @@
 			<ship hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="COMBAT_CHECK" />
+				<event load="MORALITY_UPDATE_SCRAPPER_FIGHT" /> <!--*-->
 			</choice>
 		</event>
 	</choice>
@@ -1482,7 +1453,7 @@
 	</choice>
 </event>
 
-<!--NEUTRAL EVENTS-->
+<!--SLAVER EVENTS-->
 
 
 <event name="SCRAPPER_SLAVER" unique="true">
@@ -1598,7 +1569,7 @@
 		<text>It's beautiful.</text>
 		<event>
 			<text>While admiring the stars and the infinite void, a scrapper vessel enters the system and hails you, its weapons powering up. "YOU MESSED WITH WRONG SCRAPPERS!" It seems that the slavers have found you.</text>
-			<ship load="SHIP_SCRAPPER_SLAVER_FIGHT" hostile="true" />
+			<ship load="SHIP_SCRAPPER_SLAVER_FOLLOWUP_FIGHT" hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK" />
@@ -1607,5 +1578,283 @@
 	</choice>
 </event>
 
+<event name="SCRAPPER_SLAVER_FOLLOWUP_DESTROY">
+	<text>The Slaver's second ship explodes, vaporizing any surviving slaves on-board. You recover a computer terminal from the wreckage that you can peruse for information.</text>
+	<autoReward level="HIGH">stuff</autoReward>
+	<choice hidden="true">
+		<text>Investigate the terminal.</text>
+		<event load="SCRAPPER_SLAVER_SECOND_FOLLOWUP"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_FOLLOWUP_DEADCREW">
+	<text>The Slavers ship lies empty, allowing you to rescue an imprisoned crew member that was forced to work on the ship. "Hello. Thank you for rescuing me." The large scrapper is different than any of the other scrappers you have come across before; this one is quieter... "I am still chained, but I can be of service on-board your ship if you'd allow me; it seems my only purpose is to work..."</text>
+	<autoReward level="HIGH">stuff</autoReward>
+	<choice>
+		<text>Accept the Scrappers offer.</text>
+		<event>
+			<crewMember amount="1" all_skills="2" class="scrapper_slave_ariaso">Ariaso<crewMember/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="SCRAPPER_SLAVER_SECOND_FOLLOWUP"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Decline the Scrappers offer, and insist you drop them off at the nearest starbase.</text>
+		<event load="SCRAPPER_SLAVER_SECOND_FOLLOWUP"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_SECOND_FOLLOWUP">
+	<noQuestText />
+	<text>The terminal contains a large amount of information, including information about the local sector, and charts detailing the rebels movements. Upon further investigation you find what appears to be the location of an outpost belonging to the slavers. You could put a stop to their slave trade.</text>
+	<reveal_map />
+	<modifyPursuit amount="-1" />
+	<quest event="SCRAPPER_SLAVER_OUTPOST" />
+	<choice>
+		<text>Time to go.</text>
+		<event />
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_OUTPOST"> <!--Need to finish-->
+	<quest>
+		<nextSector>false</nextSector>
+		<aggressive>1</aggressive>
+	</quest>
+	<beaconType id="map_icon_slavers" global="true">
+		<color r="255" g="255" b="255" a="1.0" />
+		<unvisitedTooltip>This is where the slaver outpost is.</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+		<undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
+	</beaconType>
+	<text>You have found the location of the slaver outpost. The beacon obscures the stations sensors for the time being.</text>
+	<ship load="SHIP_SCRAPPER_SLAVER_OUTPOST" hostile="false"/>
+	<choice req="cloaking" lvl="4" blue="true">
+		<text>(Advanced Cloak) Sneak closer to the Outpost to gain a strategic advantage.</text>
+
+
+	<choice hidden="true">
+		<text>There's no turning back now... </text>
+		<event load="OPTION_INVALID">
+</event>
+
+<event name="SCRAPPER_SLAVER_OUTPOST_DESTROY">
+	<text>The Outpost explodes, vaporizing any slaves that may have been onboard. Your crew makes quick work of the salvage.</text>
+	<autoReward level="high">standard</autoReward>
+	<choice req="scrapper_slave_ariaso" lvl="1" blue="true" hidden="true">
+		<text>Ariaso looks disturbed...</text>
+		<event>
+			<text>"My sibling... I wish you would not have done that, captain. I will see myself off of this ship at the next opportunity. Thank you."</text>
+			<removeCrew class="scrapper_slave_ariaso">
+				<clone>false</clone>
+			</removeCrew>
+			<choice hidden="true">
+				<text>What's done is done...</text>
+				<event load="SCRAPPER_SLAVER_OUTPOST_EXTRA_REWARD"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="scrapper_slave_ariaso" lvl="0" blue="false" hidden="true">
+		<text>Continue...</text>
+		<event load="SCRAPPER_SLAVER_OUTPOST_EXTRA_REWARD"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_OUTPOST_DEADCREW">
+	<text>The Slaver's outpost lies empty. Your crew finds and rescues a large number of slaves kept here to be sold off into slavery. The ship will be a bit crowded for a bit, until you can get to a federation station to drop them off at... </text>
+	<autoReward level="high">standard</autoReward>
+	<choice req="scrapper_slave_ariaso" lvl="1" blue="true">
+		<text>Ariaso notices a familiar face...</text>
+		<event>
+			<text>"Sibling." They say, approaching one of the Scrapper slaves coming aboard the ship. They come up to one another and embrace one another. This Scrapper seems to have undergone the same augmentations as Ariaso. They respond in a similarly demure manner. "Did not think I would see you again... These traitors... Could never break me." Their embrace lasts quite a while, and at last they turn to you. "I wish to come aboard with my sibling." </text> 
+			<choice hidden="true">
+				<text>Accept their offer.</text>
+				<event>
+					<text>"Thank you for this, captain." Ariaso seems very grateful for your actions here...</text>
+					<crewMember amount="1" all_skills="2" class="scrapper_slave_variasa">Variasa</crewMember>
+					<choice hidden="true">
+						<text>Welcome aboard...</text>
+						<event load="SCRAPPER_SLAVER_OUTPOST_SIBLINGS_FOLLOWUP"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="scrapper_slave_ariaso" lvl="0" max_lvl="0" hidden="true">
+		<text>Continue on to strip the outpost of anything valuable and interesting.</text>
+		<event load="SCRAPPER_SLAVER_OUTPOST_EXTRA_REWARD"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_OUTPOST_SIBLINGS_FOLLOWUP">
+	<text>Ariaso approaches you. "Thank you for saving my sibling. I wish I could repay you in some way other than with my loyalty and my service to your ship." Variasa approaches you as well. "Perhaps I could offer something? While serving aboard the outpost, I secretely gained access to the slavers databases and managed to find coordinates that lead to the home base of the Slaver Faction. Their leader operates out of a station there. Slaying them could scatter the faction and cease slaver activities for quite some time." And not to mention the countless slaves that would be spared from such a horrible fate...</text>
+	<choice>
+		<text>Take the coordinates and prepare to warp directly to the slavers territory. First, you must finish salvaging the outpost.</text>
+		<variable name="coords_scrapper_slaver" op="set" val="1"/>
+		<variable name="coords_scrapper_slaver_now" op="set" val="1"/>
+		<event load="SCRAPPER_SLAVER_OUTPOST_EXTRA_REWARD"/>
+	</choice>
+	<choice>
+		<text>Take the coordinates for later and finish scrapping the station.</text>
+		<variable name="coords_scrapper_slaver" op="set" val="1"/>
+		<event load="SCRAPPER_SLAVER_OUTPOST_EXTRA_REWARD"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_OUTPOST_EXTRA_REWARD">
+	<text>Your crew find a treasure trove of valuable electronics and resources. They also pull a highly advanced crew upgrade for your ship from the wreckage that you can install to your onboard lab.</text>
+	<item_modify>
+		<item type="scrap" min="40" max="75"/>
+		<item type="fuel" min="3" max="6"/>
+		<item type="drones" min="2" max="7"/>
+		<item type="missiles" min="4" max="8"/>
+	</item_modify>
+	<choice req="coords_scrapper_slaver_now" lvl="0" max_lvl="0" hidden="true">
+		<text>Investigate the upgrade technology...</text>
+		<event>
+			<text>[Prototype Personnal Power Augmentors] Converts a small(2%) percentage of crews health and movement speed for the capacity to generate power for the room they're working in. Does not affect crew who cannot man systems or crew that already have the ability to manipulate power systems.</text>
+			<choice hidden="true">
+				<text>Install the upgrade.</text>
+				<event load="INSTALL_CREW_POWER_AUGMENTERS"/>
+			</choice>
+			<choice>
+				<text>Scrap down the module and carry on.</text>
+				<item_modify>
+					<item type="scrap" min="100" max="100"/>
+				</item_modify>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="coords_scrapper_slaver_now" lvl="1" max_lvl="1" hidden="true">
+		<text>Investigate the upgrade technology...</text>
+		<event>
+			<text>[Prototype Personnal Power Augmentors] Converts a small(2%) percentage of crews health and movement speed for the capacity to generate power for the room they're working in. Does not affect crew who cannot man systems or crew that already have the ability to manipulate power systems.</text>
+			<choice hidden="true">
+				<text>Install the upgrade and carry on to Slaver's Territory.</text>
+				<event load="INSTALL_CREW_POWER_AUGMENTERS_ROUTE"/>
+			</choice>
+			<choice>
+				<text>Scrap down the module and carry on to the Slaver's Territory.</text>
+				<item_modify>
+					<item type="scrap" min="100" max="100"/>
+				</item_modify>
+				<variable name="coords_scrapper_slaver_now" op="set" val="0"/> 
+				<event load="JUMP_TO_SCRAPPER_SLAVER"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="INSTALL_CREW_POWER_AUGMENTERS">
+	<hiddenAug name="CREW_POWER_AUGMENTERS"/>
+</event>
+
+<event name="INSTALL_CREW_POWER_AUGMENTERS_ROUTE">
+	<hiddenAug name="CREW_POWER_AUGMENTERS"/>
+	<event load="JUMP_TO_SCRAPPER_SLAVER"/>
+</event>
+
+<!--Scrapper Slaver Sector-->
+
+<event name="START_SCRAPPER_SLAVER">
+	<preventQuest />
+	<beaconType id="map_icon_start" global="true">
+		<color r="46" g="252" b="51" a="1" />
+	</beaconType>
+	<nebulaBeacon>true</nebulaBeacon>
+	<text>You have entered The Chains' territory. There is no guard stationed here to deal with. It would seem that this sector is blanketed in a thick nebula that leaves your sensor blind. A perfect place to hide a shadowy business enterprise.</text>
+	<changeBackground>BACK_SECTOR_SCRAPPER</changeBackground>
+	<playSound>lightspeed</playSound>
+	<choice req="HAS_SCRAPPER_SIBLINGS_ONBOARD" lvl="1" blue="true">
+		<text>The Scrapper Siblings approach the comm...</text>
+		<event>
+			<text>"This is where The Chain hides." "A cowards place to die." "Find them and kill them." "Their station must not be destroyed." "We must confront The Chain directly." "The Captain musn't die." "Lead us there so that we may return to our prior form." 
+			The siblings spoke in tandem, alternating between their lines as if they were in each others minds. They have grown closer to one another...physically closer. Since entering the sector, they have seemingly become magnetically attached to one another.</text>
+			<choice>
+				<text>Ask about the touching...
+	
+	
+	
+	<choice hidden="true">
+		<text>Do something on-board the ship.</text>
+		<event load="STORAGE_CHECK" />
+	</choice>
+	<choice hidden="true">
+		<text>Do nothing.</text>
+		<event />
+	</choice>
+</event>
+
+<textList name="HOSTILE_SCRAPPER_SLAVER_TEXT">
+	<text>You enter the system to find a Scrapper Slaver hiding in the clouds. "FOUND YOU! STOP YOU!" They power weapons!</text>
+	<text>The clouds of the nebula keep all signs of activity hidden from the outside. You find an obscurred Scrapper Slaver hiding amongst the clouds. Prepare for combat!</text>
+	<text>"THE CHAIN WILL NOT BE QUESTIONED! THE CHAIN WILL NOT BE DEFEATED! THE CHAIN IS ABOVE ALL!" There is a broadcast emanating from the clouds, it would seem someone is putting on a rock show for The Chain. You interrupt the gathering.</text>
+	<text>Deep within the nebula, it seems, Scrappers are hidden almost everywhere. They activate their weapons, prepared for a fight!</text>
+	<text>Within the nebula, lies a den of Salvage Scoundrels. One of them breaks off from the group and powers weapons. Prepare yourself for the impending battle!</text>
+</textList>
+
+<event name="HOSTILE_SCRAPPER_SLAVER">
+	<nebulaBeacon>true</nebulaBeacon>
+	<textList load="HOSTILE_SCRAPPER_SLAVER_TEXT"/>
+	<ship load="SHIP_SCRAPPER_SLAVER_NEBULA_FIGHT"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_NEBULA_DESTROY">
+	<textList load="SCRAPPER_SLAVER_NEBULA_DESTROY_TEXT"/>
+	<autoReward level="high">standard_no_item<autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_NEBULA_DEADCREW">
+	<textList load="SCRAPPER_SLAVER_NEBULA_DEADCREW_TEXT"/>
+	<autoReward level="high">standard_no_item<autoReward>
+	<choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true" hidden="true">
+		<text>Send your Scrapper out to check the wreckage.</text>
+		<event load="SCRAPPER_SLAVER_NEBULA_EXTRAREWARD_CHANCE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event/>
+	</choice>
+</event>
+
+<eventList name="SCRAPPER_SLAVER_NEBULA_EXTRAREWARD_CHANCE">
+	<event>
+		<text>Your Scrapper takes a closer look into the computer systems of the vessel and retreived map data for the sector.</text>
+		<reveal_map />
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Your Scrapper looks around the Scrapper vessel but were unable to find anything more of value.
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Your Scrapper finds a locked cache that your crew missed and opens it, finding a weapon that the slavers were smuggling.</text>
+		<weapon name="GIFTLIST_WEAPON_SCRAPPER" />
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event/>
+		</choice>
+</eventList>
+
+
+
 
 </FTL>
+
