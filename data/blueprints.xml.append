@@ -6238,42 +6238,78 @@
 
 	<!--/////// SCRAPPER UNIQUES //////-->
 
-	<crewBlueprint name="trash_eater">
-		<title>Trash Eater</title>
-		<short>T.Eater</short>
-		<desc>The Prince of Lanius has returned to eat again - leading his half-cult half-association of Scrappers, he's on a quest to acquire enough mass to engulf a universe and overthrow the King...</desc>
-		<cost>120</cost>
-		<bp>2</bp>
-		<rarity>0</rarity>
-		<powerList>
-			<power>Max Health is increased to 200</power>
-			<power>Active Ability: Comsumes part of the ship, overhealing the Trash Eater by 50 health while doing one hull damage</power>
-			<power>While ability is active, moves at half speed and does 3x combat damage</power>
-			<power>Does 1.5x sabotage damage</power>
-		</powerList>
-	</crewBlueprint>
+<crewBlueprint name="trash_eater">
+	<title>Trash Eater</title>
+	<short>T.Eater</short>
+	<desc>The Prince of Lanius has returned to eat again - leading his half-cult half-association of Scrappers, he's on a quest to acquire enough mass to engulf a universe and overthrow the King...</desc>
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Max Health is increased to 200</power>
+		<power>Active Ability: Comsumes part of the ship, overhealing the Trash Eater by 50 health while doing one hull damage</power>
+		<power>While ability is active, moves at half speed and does 3x combat damage</power>
+		<power>Does 1.5x sabotage damage</power>
+	</powerList>
+</crewBlueprint>
 
-	<crewBlueprint name="scrapper_zog">
-		<title>Zog</title>
-		<short>Zog</short>
-		<desc>You're not sure why this one is orange; he seems different than the others... more intelligent, too.</desc>
-		<cost>120</cost>
-		<bp>2</bp>
-		<rarity>0</rarity>
-		<powerList>
-			<power>Max Health is increased to 200</power>
-			<power>Active Ability: Comsumes part of the ship, overhealing the Trash Eater by 50 health while doing one hull damage</power>
-			<power>While ability is active, moves at half speed and does 3x combat damage</power>
-			<power>Does 1.5x sabotage damage</power>
-		</powerList>
-	</crewBlueprint>
+<crewBlueprint name="scrapper_zog">
+	<title>Zog</title>
+	<short>Zog</short>
+	<desc>You're not sure why this one is orange; he seems different than the others... more intelligent, too.</desc>
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Max Health is increased to 200</power>
+		<power>Active Ability: Comsumes part of the ship, overhealing the Trash Eater by 50 health while doing one hull damage</power>
+		<power>While ability is active, moves at half speed and does 3x combat damage</power>
+		<power>Does 1.5x sabotage damage</power>
+	</powerList>
+</crewBlueprint>
+	
+<crewBlueprint name="scrapper_slave_ariaso">
+	<title>Ariaso</title>
+	<short>Ariaso</short>
+	<desc>A Scrapper that was enslaved. The Scrapper Slavers seem to have experimented on them, grafting bits of scrap metal in ways that seemingly don't make sense. The augments seem to be making them miserable and uncomfortable, giving them a form they don't feel comfortable in.</desc>
+	<cost>0</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>115 Health</power>
+		<power>0.5x Fire Damage Taken</power>
+		<power>0.5x Oxygen Drain</power>		
+		<power>0.75x Damage</power>
+		<power>1.5x Repair Speed</power>
+		<power>1.5x Sabotage Damage</power>
+		<power>0.66x Move Speed</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="scrapper_slave">
+	<title>Scrapper Slave</title>
+	<short>S. Slave</short>
+	<desc>A Scrapper that was enslaved. Modifications were made to their ankles and neck indicating the precense of bonds grafted directly on to their body. The bonds produce a sense of intense discomfort in the Scrapper as it takes away from their preferred form.</desc>
+	<cost>0</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>115 Health</power>
+		<power>0.5x Fire Damage Taken</power>
+		<power>0.5x Oxygen Drain</power>		
+		<power>0.75x Damage</power>
+		<power>1.5x Repair Speed</power>
+		<power>1.5x Sabotage Damage</power>
+		<power>0.66x Move Speed</power>
+	</powerList>
+</crewBlueprint>
 
 	<!--///////GENERIC - SCRAPPERS - LANIUS//////-->
 
 <crewBlueprint name="scrapper">
 	<title>Scrapper</title>
 	<short>Scrapper</short>
-	<desc>[Tier 1 Scrapper] A Lanius that is a part of the Scrapper faction, extremely adept at both repairing and breaking systems thanks to it's proclivity towards metal.
+	<desc>A Lanius that has become host of the Scrapper. As a result of this fusion they have grafted scrap metal onto themselves to form a more comfortable body.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6294,7 +6330,7 @@
 <crewBlueprint name="scrapper_soldier">
 	<title>Scrapper Soldier</title>
 	<short>S. Soldier</short>
-	<desc>[Tier 1 Scrapper Specialist] A Lanius Scrapper with scythe-like fists to shred through anything in its path. Cannot man or repair systems. Learns combat slightly faster.
+	<desc>[Tier 1 Scrapper Specialist] A Scrapper formed with scythe-like fists that improve their ability to cut through foes, though as a result they cannot man or repair systems. 
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6315,7 +6351,7 @@
 <crewBlueprint name="scrapper_engineer">
 	<title>Scrapper Engineer</title>
 	<short>S. Engineer</short>
-	<desc>[Tier 1 Scrapper Specialist] A Scrapper, given sharp hands that can quickly shape themselves into various tools and a fire-resistant, highly agile body. Learns repair skills slightly faster.
+	<desc>[Tier 1 Scrapper Specialist] A Scrapper, formed with hands that can quickly shape themselves into various tools and a fire-resistant, highly agile body.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6325,7 +6361,7 @@
 	<powerList>
 		<power>[Specialization] 1.0x Move Speed</power>
 		<power>[Specialization] 2.0x Repair Speed</power>
-		<power>[Specialization] Learns all skills faster. Cannot lose skills upon cloning.</power>
+		<power>[Specialization] Learns all skills faster.</power>
 		<power>115 Health</power>
 		<power>0.25x Fire Damage Taken</power>
 		<power>0.5x Oxygen Drain</power>		
@@ -6337,7 +6373,7 @@
 <crewBlueprint name="scrapper_medic">
 	<title>Scrapper Medic</title>
 	<short>S. Medic</short>
-	<desc>[Tier 1 Scrapper Specialist] A Scrapper, given strong legs and a lighter body, and the ability to heal its allies at the cost of it's own health. Very slowly heals itself.
+	<desc>[Tier 1 Scrapper Specialist] A Scrapper, formed with strong legs and a lighter body. They developed the ability to heal its allies at the cost of it's own health, and the power to restore itself.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6360,7 +6396,7 @@
 <crewBlueprint name="scrapper_heavy">
 	<title>Scrapper Heavy Soldier</title>
 	<short>S. Heavy</short>
-	<desc>[Tier 2 Scrapper Specialist] A Scrapper Soldier covered in a thick crust of scrap for protection. Cannot man or repair systems. Can cause breaches and system damage on-board enemy ships.
+	<desc>[Tier 2 Scrapper Specialist] A Scrapper Soldier covered in a thicker coat of scrap for protection and damage capability. Strong enough to cause breaches on-board enemy ships.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6382,7 +6418,7 @@
 <crewBlueprint name="scrapper_heavy_mk2">
 	<title>Scrapper Heavy Soldier Mark 2</title>
 	<short>S. Heavy Mk2</short>
-	<desc>[Tier 3 Scrapper Specialist] A Scrapper Heavy Soldier that's been considerably upgraded..
+	<desc>[Tier 3 Scrapper Specialist] A Scrapper Heavy Soldier that's been upgraded.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6404,7 +6440,7 @@
 <crewBlueprint name="scrapper_scavenger">
 	<title>Scrapper Scavenger</title>
 	<short>S. Scavenger</short>
-	<desc>[Tier 2 Scrapper Specialist] A Scrapper with a unique scrap plating created by the Trash Eater himself. Cannot fight, but can cripple systems.
+	<desc>[Tier 2 Scrapper Specialist] A Scrapper Engineer that's been upgraded with a unique scrap plating created by the Trash Eater. They cannot fight, but can cripple systems.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6425,7 +6461,7 @@
 <crewBlueprint name="scrapper_scavenger_mk2">
 	<title>Scrapper Scavenger Mark 2</title>
 	<short>S. Scavenger Mk2</short>
-	<desc>[Tier 3 Scrapper Specialist] A Scrapper Scavenger that's been considerably upgraded.
+	<desc>[Tier 3 Scrapper Specialist] A Scrapper Scavenger that's been upgraded.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6446,7 +6482,7 @@
 <crewBlueprint name="scrapper_defender">
 	<title>Scrapper Defender</title>
 	<short>S. Defender</short>
-	<desc>[Tier 2 Scrapper Specialist] A Scrapper Medic, given a stronger chest for absorbing damage and layered with additional scrap, creating an effective tank. Reduces all damage taken by allies in the same room.
+	<desc>[Tier 2 Scrapper Specialist] A Scrapper Medic, given a stronger chest for absorbing damage and layered with additional scrap, creating an effective tank. They create a defensive shield that reduces all damage taken by allies in the same room.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>
@@ -6470,7 +6506,7 @@
 <crewBlueprint name="scrapper_defender_mk2">
 	<title>Scrapper Defender Mark 2</title>
 	<short>S. Defender Mk2</short>
-	<desc>[Tier 3 Scrapper Specialist] A Scrapper Defender that's been considerably upgraded.
+	<desc>[Tier 3 Scrapper Specialist] A Scrapper Defender that's been upgraded.
 	[Inherited Scrapper Traits: Higher health but slower move speed. Reduced Fire damage taken and reduced oxygen drain speed. Slower skill learning.]
 	[Inherited Lanius Traits: Immune to suffocation. Drains Oxygen from the room.]
 	</desc>

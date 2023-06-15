@@ -114,6 +114,11 @@
 	<deadCrew load="SCRAPPER_SLAVER_ELITE_DEADCREW" />
 </ship>
 
+<ship name="SHIP_SCRAPPER_SLAVER_FIGHT" auto_blueprint="LIST_SHIPS_SCRAPPER_SLAVER_FIGHT">
+	<destroyed load="SCRAPPER_SLAVER_DESTROY" />
+	<deadCrew load="SCRAPPER_SLAVER_DEADCREW" />
+</ship>
+
 <ship name="SHIP_SCRAPPER_ROCK_FIGHT" auto_blueprint="LIST_SHIPS_ROCK_GENERIC">
 	<destroyed load="SCRAPPER_NON_SCRAPPER_HOSTILE_DESTROY" />
 	<deadCrew load="SCRAPPER_NON_SCRAPPER_HOSTILE_DEADCREW" />
@@ -1481,42 +1486,122 @@
 
 
 <event name="SCRAPPER_SLAVER" unique="true">
-<ship load="SHIP_SLAVER_FORGED"/>
-<text>Shortly after you arrive at the beacon, you notice a slaver advertising their wares. "Cheap workers! Many purposes for them, such as space heaters, welding, and grill!"</text>
-
+	<ship load="SHIP_SCRAPPER_SLAVER_FIGHT"/>
+	<text>You warp in to find a Scrapper vessel advertising the sell of a number of slaves they have in their posession. Scrapper society is largely factionalized, leaving gaps in the protections of individuals like these.
+	YOU THERE! FINE WORKERS FOR YOUR SHIP! SMALL PRICE TO PAY FOR THE BEST!</text>
 	<choice>
-	<text>Save the enslaved Forged!</text>
+		<text>Buy an enslaved Engi. [35~]</text>
 		<event>
-		<text>You attack the slavers.</text>
-		<ship hostile="true"/>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35" />
+			</item_modify>
+			<crewMember amount="1" class="engi"/>
 			<choice hidden="true">
-			<text>Continue...</text>
+				<text>Thank the slavers and be on your way.</text>
+				<event/>
+			</choice>
+			<choice hidden="true">
+				<text>Blast the slaver scum!</text>
 				<event load="COMBAT_CHECK"/>
 			</choice>
 		</event>
 	</choice>
-	
 	<choice>
-		<text>Buy one Forged slave.</text>
+		<text>Buy an enslaved Scrapper. [55~]</text>
 		<event>
-			<crewMember amount="1" class="lanius_forged"/>
 			<item_modify>
-				<item max="-20" min="-30" type="scrap"/>
+				<item type="scrap" min="-55" max="-55" />
 			</item_modify>
+			<crewMember amount="1" class="scrapper_slave"/>
+			<choice hidden="true">
+				<text>Thank the slavers and be on your way.</text>
+				<event/>
+			</choice>
+			<choice hidden="true">
+				<text>Blast the slaver scum!</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
 		</event>
 	</choice>
-
 	<choice hidden="true">
-	<text>Decline and jump away.</text>
+		<text>Save the enslaved crew!</text>
 		<event>
-		<text>You don't bother engaging the slaver.</text>
+			<text>You attack the slavers.</text>
+			<ship hostile="true"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+	<text>Decline.</text>
+		<event>
+		<text>You'd rather not participate in this business.</text>
 			<choice>
-			<text>Do something on-board the ship.</text>
+				<text>Do something on-board the ship.</text>
 				<event load="STORAGE_CHECK"/>
 			</choice>
 			<choice>
-			<text>Do nothing.</text>
+				<text>Do nothing.</text>
 				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+
+
+<event name="SCRAPPER_SLAVER_DESTROY">
+	<text>The Slavers' ship explodes, vaporizing the slaves inside. Liberating them from their chains in one sense, at least.</text>
+	<autoReward level="HIGH">stuff</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="SCRAPPER_SLAVER_FOLLOWUP"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_DEADCREW">
+	<text>The Slavers ship lies empty, allowing you to rescue the imprisoned crew. You promise to drop them off at the next space station. One of them offers to join your crew. "GOOD! HELLO! THANK YOU FOR RESCUE! NASTY BUSINESS! I HOPE I NEVER SEE THESE CLOWNS AGAIN!"</text>
+	<autoReward level="HIGH">stuff</autoReward>
+	<choice>
+		<text>Accept the Scrappers offer.</text>
+		<event>
+			<crewMember amount="1" class="scrapper_slave"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="SCRAPPER_SLAVER_FOLLOWUP"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Decline the Scrappers offer, and insist you drop them off.</text>
+		<event load="SCRAPPER_SLAVER_FOLLOWUP"/>
+	</choice>
+</event>
+
+<event name="SCRAPPER_SLAVER_FOLLOWUP">
+	<noQuestText />
+	<text>The slaver ship seems to have sent out a broadcast to it's comrades. This probably isn't the last time you've seen them.</text>
+	<quest event="REINFORCEMENTS_SCRAPPER_SLAVER" />
+	<choice>
+		<text>Time to go.</text>
+		<event />
+	</choice>
+</event>
+
+<event name="REINFORCEMENTS_SCRAPPER_SLAVER">
+	<preventQuest />
+	<text>You find yourself sitting at the beacon for a few moments, staring out at space, just taking in the beauty.</text>
+	<choice hidden="true">
+		<text>It's beautiful.</text>
+		<event>
+			<text>While admiring the stars and the infinite void, a scrapper vessel enters the system and hails you, its weapons powering up. "YOU MESSED WITH WRONG SCRAPPERS!" It seems that the slavers have found you.</text>
+			<ship load="SHIP_SCRAPPER_SLAVER_FIGHT" hostile="true" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
 			</choice>
 		</event>
 	</choice>

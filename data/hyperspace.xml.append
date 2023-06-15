@@ -311,68 +311,120 @@
   <!--CREW-->
 
   <!--UNIQUE-->
+  
+  
 
 <crew>
     <race name="trash_eater">
-			<maxHealth>200</maxHealth>
-			<controllable>true</controllable>
-			<canSuffocate>false</canSuffocate>
-			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
-			<oxygenChangeSpeed>-0.525</oxygenChangeSpeed>
-			<animBase>lanius</animBase>
-			<essential>9999999</essential>
-			<deathSounds>
-				<deathSound>shrikeDeath</deathSound>
-			</deathSounds>
-			<repairSounds>
-				<repairSound>shrikeRepair</repairSound>
-			</repairSounds>
-			<powerEffect>
-				<cooldown>25</cooldown>
-				<jumpCooldown>full</jumpCooldown>
-				<powerSounds>
-					<powerSound>lockdown1</powerSound>
-					<powerSound>lockdown2</powerSound>
-				</powerSounds>
-				<req type="enemy">
-					<!--<enemyShip/>-->
-					<minHealth>15</minHealth>
-					<maxHealth>25</maxHealth>
-				</req>
-				<damage>1</damage>
-				<persDamage>-1</persDamage>
-				<sysDamage>-1</sysDamage>
-				<breachChance>10</breachChance>
-				<selfHealth>999</selfHealth>
-				<friendlyFire>true</friendlyFire>
-				<shipFriendlyFire>true</shipFriendlyFire>
-				<buttonText>COMPACT</buttonText>
-				<tooltip>Ready: Overheal by 50 health and deal 1 hull damage to the current room while halving movement speed and tripling combat damage for 10 seconds.</tooltip>
-				<cooldownColor r="77" g="20" b="23"/>
-				<effectAnim>explosion_random</effectAnim>
-				<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-				<temporaryEffect>
-					<duration>10</duration>
-					<damageMultiplier>3</damageMultiplier>
-					<moveSpeedMultiplier>0.5</moveSpeedMultiplier>
-					<statBoosts>
-						<statBoost name="maxHealth">
-							<boostType>FLAT</boostType>
-							<amount>50</amount>
-							<shipTarget>ALL</shipTarget><!--set it this way because SELF means it should only ever affect the crew casting the boost anyway-->
-							<crewTarget>SELF</crewTarget>
-							<priority>-100</priority><!--Set this way so the boost is added AFTER all other affects, so it's always +50 hp-->
-							<duration>10</duration>
-						</statBoost>
-					</statBoosts>
-					<cooldownColor r="146" g="74" b="72"/>
-					<finishSounds>
-						<finishSound>mindControlEnd</finishSound>
-					</finishSounds>
-					<animSheet baseVisible="true">trash_eater_glow</animSheet>
-				</temporaryEffect>
-			</powerEffect>
+		<maxHealth>200</maxHealth>
+		<controllable>true</controllable>
+		<canSuffocate>false</canSuffocate>
+		<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+		<oxygenChangeSpeed>-0.525</oxygenChangeSpeed>
+		<animBase>lanius</animBase>
+		<essential>9999999</essential>
+		<deathSounds>
+			<deathSound>shrikeDeath</deathSound>
+		</deathSounds>
+		<repairSounds>
+			<repairSound>shrikeRepair</repairSound>
+		</repairSounds>
+		<powerEffect>
+			<cooldown>25</cooldown>
+			<jumpCooldown>full</jumpCooldown>
+			<powerSounds>
+				<powerSound>lockdown1</powerSound>
+				<powerSound>lockdown2</powerSound>
+			</powerSounds>
+			<req type="enemy">
+				<!--<enemyShip/>-->
+				<minHealth>15</minHealth>
+				<maxHealth>25</maxHealth>
+			</req>
+			<damage>1</damage>
+			<persDamage>-1</persDamage>
+			<sysDamage>-1</sysDamage>
+			<breachChance>10</breachChance>
+			<selfHealth>999</selfHealth>
+			<friendlyFire>true</friendlyFire>
+			<shipFriendlyFire>true</shipFriendlyFire>
+			<buttonText>COMPACT</buttonText>
+			<tooltip>Ready: Overheal by 50 health and deal 1 hull damage to the current room while halving movement speed and tripling combat damage for 10 seconds.</tooltip>
+			<cooldownColor r="77" g="20" b="23"/>
+			<effectAnim>explosion_random</effectAnim>
+			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+			<temporaryEffect>
+				<duration>10</duration>
+				<damageMultiplier>3</damageMultiplier>
+				<moveSpeedMultiplier>0.5</moveSpeedMultiplier>
+				<statBoosts>
+					<statBoost name="maxHealth">
+						<boostType>FLAT</boostType>
+						<amount>50</amount>
+						<shipTarget>ALL</shipTarget><!--set it this way because SELF means it should only ever affect the crew casting the boost anyway-->
+						<crewTarget>SELF</crewTarget>
+						<priority>-100</priority><!--Set this way so the boost is added AFTER all other affects, so it's always +50 hp-->
+						<duration>10</duration>
+					</statBoost>
+				</statBoosts>
+				<cooldownColor r="146" g="74" b="72"/>
+				<finishSounds>
+					<finishSound>mindControlEnd</finishSound>
+				</finishSounds>
+				<animSheet baseVisible="true">trash_eater_glow</animSheet>
+			</temporaryEffect>
+		</powerEffect>
 	</race>
+	
+<race name="scrapper_slave_ariaso">
+	<maxHealth>115</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>1.5</repairSpeed>
+	<moveSpeedMultiplier>0.66</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+	<damageMultiplier>0.75</damageMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
+</race>
+
+<race name="scrapper_slave">
+	<maxHealth>115</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>1.5</repairSpeed>
+	<moveSpeedMultiplier>0.66</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+	<damageMultiplier>0.75</damageMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
+</race>
 
 	<race name="scrapper_zog">
 		<maxHealth>175</maxHealth>
