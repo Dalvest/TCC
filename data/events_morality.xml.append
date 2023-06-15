@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FTL>
+<!--
+<choice hidden="true">
+	<text>Continue...</text>
+	<event load="MORALITY_UPDATE_SCRAPPER"/>
+</choice>
+-->
+<event name="MORALITY_UPDATE_SCRAPPER"> <!--Warcrime without fighting-->
+	<text>[NOTORIETY INCREASED - SCRAPPER]
+	Your actions here, justifiable or not, will not reflect well in the eyes of the Scrapper. Continuously perform actions like this and you might start to see negative reactions from the Scrapper and their allies.</text>
+	<variable name="rep_scrapper" op="add" val="1"/>
+</event>
+<event name="MORALITY_UPDATE_SCRAPPER_FIGHT"> <!--Warcrime with fight-->
+	<text>[NOTORIETY INCREASED - SCRAPPER]
+	Your actions here, justifiable or not, will not reflect well in the eyes of the Scrapper. Continuously perform actions like this and you might start to see negative reactions from the Scrapper and their allies.</text>
+	<variable name="rep_scrapper" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+<event name="MORALITY_REMOVE_SCRAPPER"> <!--Good deeds without fighting-->
+	<text>[NOTORIETY DECREASED - SCRAPPER]
+	You have done a good deed here in the eyes of the Scrapper. If you've gained notoriety from other actions in the past, you're more likely to be forgiven for them.</text>
+	<variable name="rep_scrapper" op="add" val="-1"/>
+</event>
+<event name="MORALITY_REMOVE_SCRAPPER_FIGHT">  <!--Good deeds while fighting-->
+	<text>[NOTORIETY DECREASED - SCRAPPER]
+	You have done a good deed here in the eyes of the Scrapper. If you've gained notoriety from other actions in the past, you're more likely to be forgiven for them.</text>
+	<variable name="rep_scrapper" op="add" val="-1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+</FTL>
