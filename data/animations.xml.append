@@ -294,14 +294,14 @@
 
 <!--////////////////// BOMB FLAK //////////////////-->
 
-<animSheet name="tc_bomb_shotgun_1" w="261" h="36" fw="29" fh="36">weapon_bomb_flak/tc_bomb_shotgun_1.png</animSheet>
+<animSheet name="tc_bomb_shotgun_1" w="352" h="43" fw="32" fh="43">weapon_bomb_flak/tc_bomb_shotgun_1.png</animSheet>
 <weaponAnim name="tc_bomb_shotgun_1">
 	<sheet>tc_bomb_shotgun_1</sheet>
-	<desc length="9" x="0" y="0"/>
+	<desc length="11" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
-	<fireFrame>3</fireFrame>
+	<fireFrame>5</fireFrame>
 	<firePoint  x="14" y="7"/>
-	<mountPoint x="4" y="21"/>
+	<mountPoint x="4" y="31"/>
 	<chargeImage>weapon_bomb_flak/tc_bomb_shotgun_1_glow.png</chargeImage>
 </weaponAnim>
 
