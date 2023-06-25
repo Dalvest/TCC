@@ -4126,8 +4126,8 @@
 		<flavorType>Ion</flavorType>
 		<title>Breach Ion Mini</title>
 		<short>Br. Mini</short>
-		<desc>A simple weapon meant to cause breaches without dealing any damage.</desc>
-		<tooltip>guaranteed breachs, other weapons must be active for this one to function</tooltip>
+		<desc>While seen as underpowered by many, it is seen as an honor and sign of peace compared to anything that more severely damages the hull.</desc>
+		<tooltip>guaranteed to breach, other weapons must be active for this one to function</tooltip>
 		<damage>0</damage>
 		<sysDamage>0</sysDamage>
 		<persDamage>0</persDamage>
@@ -4168,7 +4168,7 @@
 		<flavorType>Ion</flavorType>
 		<title>Breach Ion</title>
 		<short>Br.Ion</short>
-		<desc>A simple weapon meant to stun and cause breaches.</desc>
+		<desc>The default choice for any self respecting Space Scavenger wanting to honor their ship, but not the opponent within.</desc>
 		<tooltip>2 ion damage, high chance to breach</tooltip>
 		<damage>0</damage>
 		<sysDamage>0</sysDamage>
@@ -4210,7 +4210,7 @@
 		<flavorType>Ion</flavorType>
 		<title>Breach Ion Bolt</title>
 		<short>Br. Bolt</short>
-		<desc>An advanced weapon meant to disable systems and breach hulls.</desc>
+		<desc>Seen as cruel by some, this weapon still has a primary target, but can also shut ships down the more 'conventional' way.</desc>
 		<tooltip>1 hull damage, 2 ion damage, high chance to breach</tooltip>
 		<damage>1</damage>
 		<sysDamage>-1</sysDamage>
@@ -4245,6 +4245,48 @@
 		</missSounds>
 		<weaponArt>breach_ion_bolt</weaponArt>
 		<iconImage>breach_ion_bolt</iconImage>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="BREACH_ION_BOLT_MKII">
+		<type>LASER</type>
+		<flavorType>Ion</flavorType>
+		<title>Breach Ion Bolt mkII</title>
+		<short>Br. Bolt II</short>
+		<desc>When asked why, the 'bolt' in the name is a reminder that this once fired those. How it now doesn't is never explained.</desc>
+		<tooltip>2 hull damage, 2 ion damage, high chance to breach</tooltip>
+		<damage>2</damage>
+		<sysDamage>-2</sysDamage>
+		<persDamage>2</persDamage>
+		<tip>tip_ion</tip>
+		<shots>1</shots>
+		<sp>0</sp>
+		<fireChance>0</fireChance>
+		<breachChance>9</breachChance>
+		<cooldown>12</cooldown>
+		<ion>2</ion>
+		<power>3</power>
+		<speed>40</speed>
+		<cost>80</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<image>Breach_Ion_Bolt_mkII</image>
+		<launchSounds>
+			<sound>ionShoot1</sound>
+			<sound>ionShoot2</sound>
+		</launchSounds>
+		<hitShieldSounds>
+			<sound>ionShields1</sound>
+			<sound>ionShields2</sound>
+		</hitShieldSounds>
+		<hitShipSounds>
+	        <sound>ionHit1</sound>
+			<sound>ionHit2</sound>
+	    </hitShipSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>breach_ion_bolt_mkii</weaponArt>
+		<iconImage>breach_ion_bolt_mkii</iconImage>
 	</weaponBlueprint>
 
 	<weaponBlueprint name="BREACH_ION_BEAM_MINI">
