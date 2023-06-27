@@ -715,22 +715,22 @@
 	<chargeImage>weapon_breach_ion/breach_ion_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="breach_ion_bolt" w="261" h="36" fw="29" fh="36">weapon_breach_ion/breach_ion_bolt.png</animSheet>
+<animSheet name="breach_ion_bolt" w="726" h="106" fw="33" fh="106">weapon_breach_ion/breach_ion_bolt.png</animSheet>
 <weaponAnim name="breach_ion_bolt">
 	<sheet>breach_ion_bolt</sheet>
-	<desc length="9" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>3</fireFrame>
+	<desc length="22" x="0" y="0"/>
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>12</fireFrame>
 	<firePoint x="18" y="30" />
 	<mountPoint x="3" y="86" />
 </weaponAnim>
 
-<animSheet name="breach_ion_bolt_mkii" w="261" h="36" fw="29" fh="36">weapon_breach_ion/breach_ion_bolt_mkii.png</animSheet>
+<animSheet name="breach_ion_bolt_mkii" w="726" h="106" fw="33" fh="106">weapon_breach_ion/breach_ion_bolt_mkii.png</animSheet>
 <weaponAnim name="breach_ion_bolt_mkii">
 	<sheet>breach_ion_bolt_mkii</sheet>
-	<desc length="9" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>3</fireFrame>
+	<desc length="22" x="0" y="0"/>
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>12</fireFrame>
 	<firePoint x="18" y="30" />
 	<mountPoint x="3" y="86" />
 </weaponAnim>
@@ -1422,10 +1422,17 @@
 	<time>1</time>
 </anim>
 
-<animSheet name="Breach_Ion_Bolt" w="14" h="12" fw="14" fh="12">projectiles/breach_ion_bolt.png</animSheet>
+<animSheet name="Breach_Ion_Bolt" w="200" h="16" fw="50" fh="16">projectiles/breach_ion_bolt.png</animSheet>
 <anim name="Breach_Ion_Bolt">
 	<sheet>Breach_Ion_Bolt</sheet>
-	<desc length="1" x="0" y="0"/>
+	<desc length="4" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="Breach_Ion_Bolt_mkII" w="200" h="16" fw="50" fh="16">projectiles/breach_ion_bolt_mkii.png</animSheet>
+<anim name="Breach_Ion_Bolt_mkII">
+	<sheet>Breach_Ion_Bolt</sheet>
+	<desc length="4" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
