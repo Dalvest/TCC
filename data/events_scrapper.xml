@@ -74,9 +74,15 @@
 	<deadCrew load="SCRAPPER_OUTPOST_DEADCREW" />
 </ship>
 
-<ship name="SHIP_SCRAPPER_SALVAGE_GUARD" auto_blueprint="SCRAPPER_GUARD">
-	<destroyed load="SCRAPPER_SALVAGE_GUARD_DESTROY" />
-	<deadCrew load="SCRAPPER_SALVAGE_GUARD_DEADCREW" />
+<ship name="SHIP_GUARD_SCRAPPER" auto_blueprint="SCRAPPER_GUARD">
+	<surrender min="999" max="999" load="GUARD_SIGNAL"/> <!--(Hull Point Required To Surrender And Making Sure The Guards Will NEVER Surrender.)-->
+	<destroyed load="SCRAPPER_GUARD_DESTROY"/>
+	<deadCrew load="SCRAPPER_GUARD_DEADCREW"/>
+</ship>
+
+<ship name="SHIP_REINFORCEMENTS_SCRAPPER" auto_blueprint="LIST_SHIPS_SCRAPPER_FIGHT">
+	<destroyed load="DESTROYED_REINFORCEMENTS"/> <!--(Making Dialog While The PBS Is Still Active After Been Defeated Destroyed Tag)-->
+	<deadCrew load="DEADCREW_REINFORCEMENTS"/> <!--(Making Dialog While The PBS Is Still Active After Been Defeated Dead Crew Tag)-->
 </ship>
 
 <ship name="SHIP_SCRAPPER_ARTIFACT_SCOUT" auto_blueprint="SCRAPPER_SCOUT_ELITE_ARTIFACT">
@@ -261,9 +267,17 @@
 	</choice>
 </event>
 
+<event name="SCRAPPER_GUARD_DESTROY"> <!--(It Seems You've Have Forgotten The Destroyed Tag.)-->
+	<text>You have defeated the Scrapper. Whatever might have been in their cargo has for certain been destroyed, but you can at least salvage some supplies from the ship.</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="SCRAPPER_GUARD_FOLLOWUP"/>
+	</choice>
+</event>
 <event name="SCRAPPER_GUARD_DEADCREW">
 	<text>You have defeated the Scrapper. Without crew on-board to stop you, you can investigate their cargo. You find a weapon to bring back to the ship, and move on to scrap their hull.</text>
-	<autoReward level="high">standard</autoReward>
+	<autoReward level="HIGH">standard</autoReward>
 	<weapon name="GIFTLIST_WEAPON_SCRAPPER" />
 	<choice hidden="true">
 		<text>Continue...</text>
@@ -273,8 +287,13 @@
 
 <event name="SCRAPPER_GUARD_FOLLOWUP">
 	<noQuestText />
+	<removeHazards/>
 	<text>By killing the Scrapper Guard, you've most certainly made your presence in this sector known They probably won't be so pleased with you after this.</text>
 	<quest event="REINFORCEMENTS_SCRAPPER" />
+	<choice>
+		<text>Do something onboard the ship first.</text> <!--(The Guards will ALWAYS have "STORAGE_CHECK" after been defeated)-->
+		<event load="STORAGE_CHECK"/>
+	</choice>
 	<choice>
 		<text>Time to go.</text>
 		<event />
@@ -283,8 +302,15 @@
 
 <event name="REINFORCEMENTS_SCRAPPER">
 	<preventQuest />
+	<beaconType id="map_icon_reinforcements" global="true" req="LOOT_COMPASS"> <!--(For Hijacked Frequencies Augments)-->
+		<color r="200" g="55" b="82" a="1"/>
+		<unvisitedTooltip>An unvisited location.</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+		<undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
+	</beaconType>
 	<text>You warp in to find a rather strong looking Scrapper. They hail you, "YOU KILLED OUR GUARD!! WE WILL KILL YOU!!"</text>
-	<ship load="SHIP_SCRAPPER_ELITE_FIGHT" hostile="true" />
+	<ship load="SHIP_REINFORCEMENTS_SCRAPPER" hostile="true" />
+	<environment type="PDS" target="player"/> <!--(Anti-Ship Battery Battle (Or PDS As Multiverse Calls it.) Just Like Any Other Reinforcements Fights)-->
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
