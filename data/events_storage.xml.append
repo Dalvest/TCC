@@ -35,6 +35,11 @@
       </event>
     </mod-append:choice>
 
+    <mod-append:choice req="FUEL_RESERVOIR">
+      <text>(Fuel Reservoir) Create a random 1~10 fuel.</text>
+      <event load="FUEL_RESERVOIR_RANDOM"/>
+    </mod-append:choice>
+
     <!-- Move other menus example options to the bottom -->
     <mod:findWithChildLike type="choice" child-type="text">
       <mod:selector>Nevermind, do something else.</mod:selector>
