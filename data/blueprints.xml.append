@@ -5453,7 +5453,15 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
-	
+		
+	<augBlueprint name="FUEL_RESERVOIR">
+		<title>Fuel Reservoir</title>
+		<desc>Get a random amount of fuel from 1 to 10, usable once per sector.</desc>
+		<cost>90</cost>
+		<rarity>0</rarity>
+		<stackable>false</stackable>
+	</augBlueprint>
+
 	<!--—————————————————————
 	SHIP ATTRIBUTION
 	——————————————————————-->
@@ -7906,9 +7914,7 @@
 		<crewCount amount="3" class="robottos" />
 		<crewCount amount="1" class="robottos_machinist" />
 		<crewCount amount="1" class="robottos_gunner" />
-		<aug name="CRATE_FUEL" />
-		<aug name="CRATE_FUEL" />
-		<aug name="CRATE_FUEL" />
+		<aug name="FUEL_RESERVOIR" />
 		<shieldImage>mup_dusk_a</shieldImage>
 	</shipBlueprint>
 

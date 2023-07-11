@@ -191,3 +191,8 @@
 		<variable name="tc_call_marker" op="set" val="0"/>
 	</event>
 </FTL>
+<FTL>
+	<mod:findName type="event" name="LOAD_ATLAS_MARKER">
+		<mod-append:variable name="tcc_loc_has_fuelreservoir" op="set" val="0"/>
+	</mod:findName>
+</FTL>

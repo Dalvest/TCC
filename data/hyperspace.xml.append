@@ -389,6 +389,604 @@ SPEED          Changes gamespeed
     </mod-append:customStore>
   </mod:findLike>
 
+   <!--///////////////////////////////////////////////WALLACE BEACON STORES/////////////////////////////////////////////////////////-->
+<mod:findLike type="store">
+    <mod:findLike type="customStore"><mod:selector id="STORE_ULTIMATE_SYLVAN" />
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_SHOTGUN_BOMB</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_SHOTGUN_UNSTABLE</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_SHOTGUN_LEAD</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_SHOTGUN_GOLD</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_SHOTGUN_BATTERY</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_SHOTGUN_HELL</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_SCRAPFLAK</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_UNSCRAPFLAK</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_RESCRAPFLAK</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>RC_LD_LAUNCHER</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_RAPTORS_OWN</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOTGUN_BROKEN</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_1</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_2</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_3</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_4</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_BREACH</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_CHAIN</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_CHARGE</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_FREE</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_CONSERVATIVE</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_INSTANT</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_FIRE</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_ION</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_BIO</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BOMB_SHOTGUN_LOCK</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_LASER_MARKSMAN</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_MILITIA_1</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_MILITIA_2</blueprint>
+            </item>
+            <item>
+                <blueprint>MILITIA_TAGGER</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_BURST_1</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_BURST_2</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_VULCAN_CANNON</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_TEAR_GAS</blueprint>
+            </item>
+            <item>
+                <blueprint>ANCIENT_LANCE</blueprint>
+            </item>
+            <item>
+                <blueprint>VOID_LASER3</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>MISSILES_LEGION</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOTGUN_LEGION</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_LASER_LEGION</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>CATALYZER</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_PULSAR</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_PULSAR_SMOL</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>REBEL_DART</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_MFK_BATTERY</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_CLOAKER</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>NOVA_MK1</blueprint>
+            </item>
+            <item>
+                <blueprint>NOVA_MK2</blueprint>
+            </item>
+            <item>
+                <blueprint>NOVA_MK3</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>SUPERNOVA_CATALYZER</blueprint>
+            </item>
+            <item>
+                <blueprint>DLX_MOLOT</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_DEBUFF_SLOW_1</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>RSA_BIOHAZARD</blueprint>
+            </item>
+            <item>
+                <blueprint>RSA_MINICANNON</blueprint>
+            </item>
+            <item>
+                <blueprint>RSA_TAGGER</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_HARMONIZER</blueprint>
+            </item>
+            <item>
+                <blueprint>CRYSTAL_FREEZER</blueprint>
+            </item>
+            <item>
+                <blueprint>CRYS_50CAL</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_FIREWORK_DISPENSER</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_LIGHT_SHOW</blueprint>
+            </item>
+            <item>
+                <blueprint>ION_CHARGER_1</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>BREACH_ION</blueprint>
+            </item>
+            <item>
+                <blueprint>BREACH_ION_BOLT</blueprint>
+            </item>
+            <item>
+                <blueprint>BREACH_ION_BEAM</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_MINIGUN_MK1</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_MINIGUN_MK2</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_MINIGUN_MK3</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_SINEWAVE</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_ESKA</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_TONFA</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>AVALI_HUNTER1</blueprint>
+            </item>
+            <item>
+                <blueprint>AVALI_HUNTER2</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_LASER_CHARGER</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_DECONSTRUCTOR</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_RESOLVER</blueprint>
+            </item>
+            <item>
+                <blueprint>SINGULARITY_PROJECTOR_1</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="WEAPONS">
+            <item>
+                <blueprint>TC_OVERLORD</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_RAPTOR_AUTOCANNON</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_MINELAUNCHER_ANCALAGON</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="AUGMENTS">
+            <item>
+                <blueprint>SAVIOR_SHIELD</blueprint>
+            </item>
+            <item>
+                <blueprint>REGEN_SHIELD</blueprint>
+            </item>
+            <item>
+                <blueprint>FALSE_SHIELD</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="AUGMENTS">
+            <item>
+                <blueprint>LEGION_LOADER</blueprint>
+            </item>
+            <item>
+                <blueprint>BEAM_ARMOR</blueprint>
+            </item>
+            <item>
+                <blueprint>COMPACTOR</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="AUGMENTS">
+            <item>
+                <blueprint>SCRAP_COMPACTOR</blueprint>
+            </item>
+            <item>
+                <blueprint>ADVANCED_SCRAP</blueprint>
+            </item>
+            <item>
+                <blueprint>ANTI_ANAEROBIC_GRID</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="AUGMENTS">
+            <item>
+                <blueprint>SALVAGE_ARRAY</blueprint>
+            </item>
+            <item>
+                <blueprint>MERCURY_GEL</blueprint>
+            </item>
+            <item>
+                <blueprint>NOODLE_RATIONS</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="AUGMENTS">
+            <item>
+                <blueprint>AUTOMATED_QUARTERMASTER</blueprint>
+            </item>
+            <item>
+                <blueprint>LOCKED_SCRAP_ARMOR</blueprint>
+            </item>
+            <item>
+                <blueprint>FLAK_ARMOR</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="AUGMENTS">
+            <item>
+                <blueprint>FUEL_RESERVOIR</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="DRONES">
+            <item>
+                <blueprint>TC_COMBAT_GOLD</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_COMBAT_UNSTABLE</blueprint>
+            </item>
+            <item>
+                <blueprint>TC_COMBAT_HEAVY</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="DRONES">
+            <item>
+                <blueprint>TC_COMBAT_BOMB</blueprint>
+            </item>
+            <item>
+                <blueprint>ROBO_MANT_DEFEND</blueprint>
+            </item>
+            <item>
+                <blueprint>SILICA_BATTLE</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>saviors</blueprint>
+            </item>
+            <item>
+                <blueprint>avatarlegion</blueprint>
+            </item>
+            <item>
+                <blueprint>scrapper</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>scrapper_soldier</blueprint>
+            </item>
+            <item>
+                <blueprint>scrapper_heavy</blueprint>
+            </item>
+            <item>
+                <blueprint>scrapper_heavy_mk2</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>scrapper_engineer</blueprint>
+            </item>
+            <item>
+                <blueprint>scrapper_scavenger</blueprint>
+            </item>
+            <item>
+                <blueprint>scrapper_scavenger_mk2</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>scrapper_defender</blueprint>
+            </item>
+            <item>
+                <blueprint>scrapper_defender_mk2</blueprint>
+            </item>
+            <item>
+                <blueprint>rosegold_scrapper</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>rosegold_scrapper_2</blueprint>
+            </item>
+            <item>
+                <blueprint>rosegold_scrapper_3</blueprint>
+            </item>
+            <item>
+                <blueprint>rosegold_scrapper_engineer</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>rosegold_scrapper_scavenger</blueprint>
+            </item>
+            <item>
+                <blueprint>rosegold_scrapper_scavenger_mk2</blueprint>
+            </item>
+            <item>
+                <blueprint>adamantine_scrapper</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>adamantine_scrapper_2</blueprint>
+            </item>
+            <item>
+                <blueprint>adamantine_scrapper_3</blueprint>
+            </item>
+            <item>
+                <blueprint>adamantine_scrapper_soldier</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>adamantine_scrapper_heavy_soldier</blueprint>
+            </item>
+            <item>
+                <blueprint>adamantine_scrapper_heavy_soldier_mk2</blueprint>
+            </item>
+            <item>
+                <blueprint>golden_scrapper</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>golden_scrapper_2</blueprint>
+            </item>
+            <item>
+                <blueprint>golden_scrapper_3</blueprint>
+            </item>
+            <item>
+                <blueprint>golden_scrapper</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>golden_scrapper_2</blueprint>
+            </item>
+            <item>
+                <blueprint>golden_scrapper_3</blueprint>
+            </item>
+            <item>
+                <blueprint>golden_scrapper_medic</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>golden_scrapper_defender</blueprint>
+            </item>
+            <item>
+                <blueprint>golden_scrapper_defender_mk2</blueprint>
+            </item>
+            <item>
+                <blueprint>human_phoenix</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>human_hazmat</blueprint>
+            </item>
+            <item>
+                <blueprint>kiviekith</blueprint>
+            </item>
+            <item>
+                <blueprint>rsa_technician</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>robottos</blueprint>
+            </item>
+            <item>
+                <blueprint>robottos_machinist</blueprint>
+            </item>
+            <item>
+                <blueprint>robottos_researcher</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>robottos_gunner</blueprint>
+            </item>
+            <item>
+                <blueprint>robottos_police</blueprint>
+            </item>
+            <item>
+                <blueprint>rsa_tank</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>mantis_rsa</blueprint>
+            </item>
+            <item>
+                <blueprint>protogen</blueprint>
+            </item>
+            <item>
+                <blueprint>protogen_space_scavenger</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>sergal</blueprint>
+            </item>
+            <item>
+                <blueprint>cheetah</blueprint>
+            </item>
+            <item>
+                <blueprint>avali</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>avali_illuminant</blueprint>
+            </item>
+            <item>
+                <blueprint>trash_eater</blueprint>
+            </item>
+            <item>
+                <blueprint>scrapper_zog</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>unique_black_rose</blueprint>
+            </item>
+            <item>
+                <blueprint>mantis_freebusiness</blueprint>
+            </item>
+            <item>
+                <blueprint>unique_kora</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+			 <item>
+                <blueprint>protogen_pete</blueprint>
+            </item>
+            <item>
+                <blueprint>protogen_tracker</blueprint>
+            </item>
+            <item>
+                <blueprint>primagen_raptor</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>clonefail_lancer</blueprint>
+            </item>
+			<item>
+                <blueprint>sergal_cheese</blueprint>
+            </item>
+            <item>
+                <blueprint>unique_skygirr</blueprint>
+            </item>
+        </mod-append:category>
+        <mod-append:category type="CREW">
+            <item>
+                <blueprint>polyester</blueprint>
+            </item>
+        </mod-append:category>
+    </mod:findLike>
+</mod:findLike>
 
 <!--////////////////////////////////////////////////SCRAPPER STORE///////////////////////////////////////////////////////-->
 
@@ -1738,6 +2336,35 @@ SPEED          Changes gamespeed
 
 		</mod:findLike>
 	</mod:findLike>
+	
+  <!--
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  Aenwithe's Crewser Compatibility
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  
+  <mod:findLike type="ships" limit="1">
+	<mod:findName type="customShip" name="CREW_SHIP_WITHER">
+		<mod:findLike type="crew">
+			<mod-append:trash_eater room="27" name="Trash Eater"/>
+			<mod-append:scrapper_zog room="27" name="Zog"/>
+			<mod-append:unique_black_rose room="26" name="Black Rose"/>
+			<mod-append:sergal_cheese room="26" name="Cheese"/>
+			<mod-append:protogen_tracker room="23" name="Tracker"/>
+			<mod-append:primagen_raptor room="23" name="Raptor"/>
+			<mod-append:protogen_pete room="15" name="Pete"/>
+			<mod-append:clonefail_lancer room="15" name="Lancer"/>
+			<mod-append:polyester room="24" name="Polyster"/>
+			<mod-append:unique_skygirr room="24" name="Skygirr"/>
+			<mod-append:unique_kora room="25" name="Kora"/>
+		</mod:findLike>
+	</mod:findName>
+  </mod:findLike>
 
 
   <!--
@@ -6225,13 +6852,12 @@ SPEED          Changes gamespeed
 <!--/////////////////////////////////////////////CUSTOM INTERNAL UPGRADES//////////////////////////////////////////////////////////-->
 
 <aug name="TC_CLONEBAY_NOLOSS">
-	<statboost>
-		<statBoost name="cloneLoseSkills">
-		<boostType>SET</boostType>
-		<value>false</value>
-		<shipTarget>ALL</shipTarget>
-		<crewTarget>ALLIES</crewTarget>
-		<priority>999</priority>
+	<statBoost name="cloneLoseSkills">
+	<boostType>SET</boostType>
+	<value>false</value>
+	<shipTarget>ALL</shipTarget>
+	<crewTarget>ALLIES</crewTarget>
+	<priority>999</priority>
 	</statBoost>
 </aug>
 
@@ -6555,6 +7181,7 @@ SPEED          Changes gamespeed
 				<enemyInRoom/>
 				<whitelist load="LIST_CREW_ENGI" />
 			</req>
+		</powerEffect>
 	</statBoost>
 </aug>
 	
@@ -7153,6 +7780,7 @@ SPEED          Changes gamespeed
 			<mod-append:name>SCRAP_COMPACTOR</mod-append:name>
 			<mod-append:name>NOODLE_RATIONS</mod-append:name>
 			<mod-append:name>AUTOMATED_QUARTERMASTER</mod-append:name>
+			<mod-append:name>FUEL_RESERVOIR</mod-append:name>
 		</mod:findName>
 	</mod:findLike>
 
@@ -7270,6 +7898,7 @@ SPEED          Changes gamespeed
 	<events>
 		<variable name="tcc_labs_robotto_installed" op="set" val="0"/>
 		<variable name="tcc_labs_scrapper_installed" op="set" val="0"/>
+		<variable name="tcc_loc_has_fuelreservoir" op="set" val="0"/>
 	</events>
 
 	<!--augments-->
