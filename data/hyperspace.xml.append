@@ -6852,13 +6852,15 @@ SPEED          Changes gamespeed
 <!--/////////////////////////////////////////////CUSTOM INTERNAL UPGRADES//////////////////////////////////////////////////////////-->
 
 <aug name="TC_CLONEBAY_NOLOSS">
-	<statBoost name="cloneLoseSkills">
-	<boostType>SET</boostType>
-	<value>false</value>
-	<shipTarget>ALL</shipTarget>
-	<crewTarget>ALLIES</crewTarget>
-	<priority>999</priority>
-	</statBoost>
+	<statboost>
+		<statBoost name="cloneLoseSkills">
+		<boostType>SET</boostType>
+		<value>false</value>
+		<shipTarget>ALL</shipTarget>
+		<crewTarget>ALLIES</crewTarget>
+		<priority>999</priority>
+		</statBoost>
+	</statboost>
 </aug>
 
 <aug name="UPG_MULTIVERSAL_TELEPORTER_AMPLIFIER">
