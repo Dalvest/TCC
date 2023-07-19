@@ -9415,6 +9415,8 @@
 		<droneList drones="8" count="3">
 			<drone name="DRONE_SHIELD_PLAYER" />
 		</droneList>
+		<health amount="30" />
+		<maxPower amount="6" />
 		<shieldImage>mup_dusk_a</shieldImage>
 		<cloakImage>tcp_milspec</cloakImage>
 	</shipBlueprint>
