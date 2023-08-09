@@ -224,14 +224,6 @@
 			<item_modify>
 					<item type="scrap" min="-8" max="-15" />
 			</item_modify>
-			<choice>
-				<text>Do something else on board.</text>
-				<event load="STORAGE_CHECK"/>
-			</choice>
-			<choice>
-				<text>Continue...</text>
-				<event />
-			</choice>
 		</event>
 	</choice>
 	<choice req="LIST_CREW_SCRAPPER" lvl="1" blue="true" hidden="true">
@@ -255,10 +247,6 @@
 				<item type="drones" min="1" max="5" />
 				<item type="missiles" min="1" max="5" />
 			</item_modify>
-			<choice>
-				<text>Do something else on board.</text>
-				<event load="STORAGE_CHECK"/>
-			</choice>
 			<choice>
 				<text>Continue...</text>
 				<event />
