@@ -13,6 +13,7 @@
         <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
     </beaconType>
     <ship load="TC_TRASH_COMPACTOR1" hostile="false"/>
+	<variable name="tc_trash_met" op="set" val="1"/>
     <choice hidden="true">
         <text>Get closer to the unknown Lanius vessel...</text>
         <event>

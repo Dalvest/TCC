@@ -1658,7 +1658,7 @@
 </mod:findName>
 
 <mod:findName type="event" name="STORAGE_CHECK_JOB_SALVAGE">
-	<mod-append:choice req="tc_scrapper_job" lvl="0" max_lvl="2" blue="false" hidden="true">
+	<mod-append:choice req="TC_SCRAPPER_JOB_REQ" lvl="0" max_lvl="2" blue="false" hidden="true">
 		<text>Send out your Scrappers to look for scrap! [This can be done three times per sector]</text>
 		<event load="STORAGE_CHECK_JOB_SCRAPPER"/>
 	</mod-append:choice>

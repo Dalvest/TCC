@@ -62,6 +62,17 @@ SPEED          Changes gamespeed
       <name>ADVANCED_SCRAP</name>
       <name>trash_eater</name>
     </req>
+	
+    <req name="TC_TRASH_FIRSTMEET" type="any" max_lvl="0">
+      <name>tc_trash_met</name>
+    </req>
+	
+    <req name="TC_SCRAPPER_JOB_REQ" type="sum">
+        <name>tc_scrapper_job</name>
+		<req mult="-999" max_lvl="0">
+			<req type="sum" load="LIST_CREW_SCRAPPER"/>
+		</req>
+    </req>
 
     <!--///////////////AVALI EVENT STUFF/////////-->
     <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
