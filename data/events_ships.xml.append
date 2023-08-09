@@ -35,21 +35,6 @@
 		<destroyed load="TC6_DESTROY"/>
 		<deadCrew load="TC6_CREW"/>
 	</ship>
-	<ship name="TC_SCRAPPER_CORVETTE" auto_blueprint="TC_SCRAPPER_CORVETTE">
-	    <ship hostile="true"/>
-		<destroyed load="TC3_LESSER_DESTROY"/>
-		<deadCrew load="TC3_LESSER_CREW"/>
-	</ship>
-	<ship name="TC_SCRAPPER_HUNTER" auto_blueprint="TC_SCRAPPER_HUNTER">
-	    <ship hostile="true"/>
-		<destroyed load="TC3_LESSER_DESTROY"/>
-		<deadCrew load="TC3_LESSER_CREW"/>
-	</ship>
-	<ship name="TC_SCRAPPER_SUPPORT" auto_blueprint="TC_SCRAPPER_SUPPORT">
-	    <ship hostile="true"/>
-		<destroyed load="TC3_LESSER_DESTROY"/>
-		<deadCrew load="TC3_LESSER_CREW"/>
-	</ship>
 	<ship name="TC_TRASH_MINER_QUEST" auto_blueprint="TC_TRASH_MINER_QUEST">
 	    <ship hostile="true"/>
 		<destroyed load="KM_DESTROY"/>

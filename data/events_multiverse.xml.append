@@ -1833,7 +1833,7 @@ item - scrap + that thing  -->
 	<deadCrew load="TC_SCRAPPER_HUNTER_DEADCREW" />
 </ship>
 
-<ship name="TC_SCRAPPER_CORVETTE" auto_blueprint="TC_SCRAPPER_CORVETTE">
+<ship name="TC_SCRAPPER_SUPPORT" auto_blueprint="TC_SCRAPPER_SUPPORT">
 	<destroyed load="TC_SCRAPPER_SUPPORT_DESTROYED" />
 	<deadCrew load="TC_SCRAPPER_SUPPORT_DEADCREW" />
 </ship>
@@ -1865,6 +1865,7 @@ item - scrap + that thing  -->
 				<event load="COMBAT_CHECK" />
 			</choice>
 		</event>
+	</choice>
 	<choice hidden="true">
 		<text>Hail them and see if they want scrap.</text>
 		<event>
@@ -1931,11 +1932,11 @@ item - scrap + that thing  -->
 										</item_modify>
 										<choice hidden="true">
 											<text>Continue...</text>
-										</choice>
 											<event>
 												<text>"TH@NK Y0U CAPT@IN! W3 C@N OP3RATE 0UR ENGINES AGAIN!! TAKE FANCY M@CHINE WE F!ND"</text>
 												<augment name="CREW_UPGRADER" />
 											</event>
+										</choice>
 									</event>
 							</choice>
 						</event>
@@ -1947,8 +1948,9 @@ item - scrap + that thing  -->
 					<event>
 						<ship hostile="true"/>
 						<choice hidden="true">
-						<text>Continue...</text>
-						<event load="COMBAT_CHECK" />
+							<text>Continue...</text>
+							<event load="COMBAT_CHECK" />
+						</choice>
 					</event>
 			</choice>
 			<choice hidden="true">
@@ -1956,6 +1958,7 @@ item - scrap + that thing  -->
 				<event/>
 			</choice>
 		</event>
+	</choice>
 	<choice hidden="true">
 		<text>Leave them alone.</text>
 		<event/>
@@ -1992,113 +1995,83 @@ item - scrap + that thing  -->
 <event name="SCRAPPER_SCOUT_DESTROYED">
 	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
 </event>
 
 <event name="SCRAPPER_SCOUT_DEADCREW">
 	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
 </event>
 
 <event name="SCRAPPER_BOMBER_DESTROYED">
 	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
 	<autoReward level="HIGH">augment</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
 </event>
 
 <event name="SCRAPPER_BOMBER_DEADCREW">
 	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
 </event>
 
 <event name="SCRAPPER_SHOP_DESTROYED">
 	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
 </event>
 
 <event name="SCRAPPER_SHOP_DEADCREW">
 	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
 </event>
 
 <event name="TC_SCRAPPER_CORVETTE_DESTROYED">
 	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
 	<autoReward level="HIGH">augment</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
 </event>
 
 <event name="TC_SCRAPPER_CORVETTE_DEADCREW">
 	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
 </event>
 
 <event name="TC_SCRAPPER_HUNTER_DESTROYED">
 	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
 	<autoReward level="HIGH">augment</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
 </event>
 
 <event name="TC_SCRAPPER_HUNTER_DEADCREW">
 	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
 </event>
 
 <event name="TC_SCRAPPER_SUPPORT_DESTROYED">
 	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
 	<autoReward level="HIGH">augment</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
 </event>
 
 <event name="TC_SCRAPPER_SUPPORT_DEADCREW">
 	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
 </event>
 
 <event name="SCRAPPER_CRUISER_DESTROYED">
 	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
 	<autoReward level="HIGH">augment</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
 </event>
 
 <event name="SCRAPPER_CRUISER_DEADCREW">
 	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<choice hidden="true">
-		<text>Continue...</text>
-	</choice>
 </event>
 
 
