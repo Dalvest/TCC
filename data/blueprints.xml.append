@@ -9356,7 +9356,7 @@
 			<artillery power="1" room="11" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_3" />
 			<battery power="2" room="2" start="true" img="room_battery_8" />
 			<cloaking power="1" room="3" start="true" img="room_cloaking_11" />
-			<clonebay power="1" room="1" start="false">
+			<clonebay power="1" room="1" start="true">
 				<slot>
 					<number>0</number>
 				</slot>
@@ -9367,15 +9367,15 @@
 					<number>1</number>
 				</slot>
 			</doors>
-			<drones power="2" room="4" start="true" img="room_drones_TCC" />
-			<engines power="3" room="6" start="true" img="room_engines_9">
+			<drones power="2" max="8" room="4" start="true" img="room_drones_TCC" />
+			<engines power="3" max="8" room="6" start="true" img="room_engines_9">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</engines>
 			<hacking power="1" room="13" start="false" img="room_hacking_7" />
-			<medbay power="1" room="1" start="true" img="room_medbay_6_flipped">
+			<medbay power="1" room="1" start="false" img="room_medbay_6_flipped">
 				<slot>
 					<number>1</number>
 				</slot>
@@ -9394,13 +9394,13 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields power="2" room="5" start="false" img="room_shields_7">
+			<shields power="2" max="8" room="5" start="false" img="room_shields_7">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</shields>
-			<weapons power="2" room="9" start="true" img="room_weapons_4">
+			<weapons power="2" max="8" room="9" start="true" img="room_weapons_4">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
