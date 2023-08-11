@@ -65,13 +65,13 @@
 	</mod-append:choice>
 </mod:findName>  
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLONEBAY">
-	<mod-append:choice req="TC_CLONEBAY_NOLOSS" lvl="1" blue="false">
-		<text>Backup Memory Archive[Already Installed]</text>
+	<mod-append:choice req="UPG_TC_CLONEBAY_NOLOSS" lvl="1" max_group="2" blue="false" hidden="true">>
+		<text>Backup Memory Archive. [ALREADY INSTALLED]</text>
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
 	
-	<mod-append:choice req="TC_CLONEBAY_NOLOSS" lvl="0" blue="false">
-		<text>Backup Memory Archive [Cost: 45~]</text>
+	<mod-append:choice req="UPG_TC_CLONEBAY_NOLOSS" lvl="0" max_group="2" blue="false" hidden="true">>
+		<text>Backup Memory Archive. [Cost: 50~]</text>
 		<event load="TC_CLONEBAY_NOLOSS_INSTALL"/>
 	</mod-append:choice>
 </mod:findName>  
@@ -80,7 +80,7 @@
 	<text>You are about to install Backup Memory Archive.
 	[Effects: Crew will not suffer skill loss when cloned.]</text>
 	<choice req="clonebay" lvl="1" max_lvl="4" max_group="0" blue="false" hidden="true">
-		<text>Perform the upgrade. [Cost: 45~]</text>
+		<text>Perform the upgrade. [Cost: 50~]</text>
 		<event>
 			<text>You install the upgrade.</text>
 			<item_modify>
@@ -92,7 +92,18 @@
 			</choice>
 		</event>
 	</choice>
-	<choice req="pilot" lvl="1" max_group="2" blue="false" hidden="true">
+	<choice req="EX_TC_CLONEBAY_NOLOSS" max_group="2" blue="false" hidden="true">
+		<text>Install the External Augment internally.</text>
+		<event>
+			<text>You install the upgrade.</text>
+			<remove name="EX_TC_CLONEBAY_NOLOSS"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_CLONEBAY_NOLOSS"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="3" blue="false" hidden="true">
 		<text>Nevermind.</text>
 		<event load="STORAGE_CHECK_SYSTEM_LOAD" />
 	</choice>
@@ -101,7 +112,6 @@
 		<event load="SCRAPPER_INSTALL_CLONEBAY_NOLOSS"/>
 	</choice>
 </event>
-
 <event name="SCRAPPER_INSTALL_CLONEBAY_NOLOSS">
 	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 35~]</text>
 	<choice req="clonebay" lvl="1" blue="false" hidden="true">
@@ -124,8 +134,7 @@
 </event>
 
 <event name="INSTALL_CLONEBAY_NOLOSS">
-	<hiddenaug>TC_CLONEBAY_NOLOSS</hiddenaug>
-	<event load="STORAGE_CHECK_SYSTEM_LOAD"/>
+	<variable name="loc_internal_upgrades" op="add" val="1"/>
 </event>
 
 <event name="STORAGE_CHECK_SYSTEM_TELEPORTER_MULTIVERSAL">
