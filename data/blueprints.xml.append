@@ -5729,13 +5729,29 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
-
-	<augBlueprint name="FLAK_ARMOR">
-		<title>Flak Plating</title>
-		<desc>This highly unstable plating is actively falling apart. Interesting, eh?</desc>
-		<cost>10</cost>
+	
+	<!--—————————————————————
+	UPGRADE AUGS
+	——————————————————————-->
+	
+	<augBlueprint name="UPG_TC_CLONEBAY_NOLOSS">
+		<title>Backup Memory Archive</title>
+		<desc>Upgrade - Crew will not suffer skill loss when cloned. YOU SHOULD NEVER SEE THIS</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>true</stackable>
+	</augBlueprint>
+	
+	<augBlueprint name="EX_TC_CLONEBAY_NOLOSS"> 
+		<title>Backup Memory Archive [X]</title>
+		<desc>Crew will not suffer skill loss when cloned.
+    
+		[X] - As an external system upgrade, this augment will provide its normal effect but take up an augment slot. Can be converted for free to the internal version under the internal upgrade menu if you have the Clone Bay system.</desc>
+		<cost>45</cost>
+		<bp>8</bp>
 		<rarity>0</rarity>
 		<stackable>false</stackable>
+		<value>0.0</value>
 	</augBlueprint>
 </FTL>
 
