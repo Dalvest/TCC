@@ -65,12 +65,12 @@
 	</mod-append:choice>
 </mod:findName>  
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLONEBAY">
-	<mod-append:choice req="UPG_TC_CLONEBAY_NOLOSS" lvl="1" max_group="2" blue="false" hidden="true">>
+	<mod-append:choice req="UPG_TC_CLONEBAY_NOLOSS" lvl="1" max_group="2" blue="false" hidden="true">
 		<text>Backup Memory Archive. [ALREADY INSTALLED]</text>
 		<event load="OPTION_INVALID"/>
 	</mod-append:choice>
 	
-	<mod-append:choice req="UPG_TC_CLONEBAY_NOLOSS" lvl="0" max_group="2" blue="false" hidden="true">>
+	<mod-append:choice req="UPG_TC_CLONEBAY_NOLOSS" lvl="0" max_group="2" blue="false" hidden="true">
 		<text>Backup Memory Archive. [Cost: 50~]</text>
 		<event load="TC_CLONEBAY_NOLOSS_INSTALL"/>
 	</mod-append:choice>
