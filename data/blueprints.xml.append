@@ -4124,8 +4124,8 @@
 		<flavorType>Ion</flavorType>
 		<title>Breach Ion Mini</title>
 		<short>Br. Mini</short>
-		<desc>A simple weapon meant to cause breaches without dealing any damage.</desc>
-		<tooltip>guaranteed breachs, other weapons must be active for this one to function</tooltip>
+		<desc>While seen as underpowered by many, it is seen as an honor and sign of peace compared to anything that more severely damages the hull.</desc>
+		<tooltip>guaranteed to breach, other weapons must be active for this one to function</tooltip>
 		<damage>0</damage>
 		<sysDamage>0</sysDamage>
 		<persDamage>0</persDamage>
@@ -4166,7 +4166,7 @@
 		<flavorType>Ion</flavorType>
 		<title>Breach Ion</title>
 		<short>Br.Ion</short>
-		<desc>A simple weapon meant to stun and cause breaches.</desc>
+		<desc>The default choice for any self respecting Space Scavenger wanting to honor their ship, but not the opponent within.</desc>
 		<tooltip>2 ion damage, high chance to breach</tooltip>
 		<damage>0</damage>
 		<sysDamage>0</sysDamage>
@@ -4208,7 +4208,7 @@
 		<flavorType>Ion</flavorType>
 		<title>Breach Ion Bolt</title>
 		<short>Br. Bolt</short>
-		<desc>An advanced weapon meant to disable systems and breach hulls.</desc>
+		<desc>Seen as cruel by some, this weapon still has a primary target, but can also shut ships down the more 'conventional' way.</desc>
 		<tooltip>1 hull damage, 2 ion damage, high chance to breach</tooltip>
 		<damage>1</damage>
 		<sysDamage>-1</sysDamage>
@@ -4243,6 +4243,48 @@
 		</missSounds>
 		<weaponArt>breach_ion_bolt</weaponArt>
 		<iconImage>breach_ion_bolt</iconImage>
+	</weaponBlueprint>
+
+	<weaponBlueprint name="BREACH_ION_BOLT_MKII">
+		<type>LASER</type>
+		<flavorType>Ion</flavorType>
+		<title>Breach Ion Bolt mkII</title>
+		<short>Br. Bolt II</short>
+		<desc>When asked why, the 'bolt' in the name is a reminder that this once fired those. How it now doesn't is never explained.</desc>
+		<tooltip>2 hull damage, 2 ion damage, high chance to breach</tooltip>
+		<damage>2</damage>
+		<sysDamage>-2</sysDamage>
+		<persDamage>2</persDamage>
+		<tip>tip_ion</tip>
+		<shots>1</shots>
+		<sp>0</sp>
+		<fireChance>0</fireChance>
+		<breachChance>9</breachChance>
+		<cooldown>12</cooldown>
+		<ion>2</ion>
+		<power>3</power>
+		<speed>40</speed>
+		<cost>80</cost>
+		<bp>2</bp>
+		<rarity>0</rarity>
+		<image>Breach_Ion_Bolt_mkII</image>
+		<launchSounds>
+			<sound>ionShoot1</sound>
+			<sound>ionShoot2</sound>
+		</launchSounds>
+		<hitShieldSounds>
+			<sound>ionShields1</sound>
+			<sound>ionShields2</sound>
+		</hitShieldSounds>
+		<hitShipSounds>
+	        <sound>ionHit1</sound>
+			<sound>ionHit2</sound>
+	    </hitShipSounds>
+		<missSounds>
+			<sound>miss</sound>
+		</missSounds>
+		<weaponArt>breach_ion_bolt_mkii</weaponArt>
+		<iconImage>breach_ion_bolt_mkii</iconImage>
 	</weaponBlueprint>
 
 	<weaponBlueprint name="BREACH_ION_BEAM_MINI">
@@ -5729,13 +5771,29 @@
 		<rarity>0</rarity>
 		<stackable>false</stackable>
 	</augBlueprint>
-
-	<augBlueprint name="FLAK_ARMOR">
-		<title>Flak Plating</title>
-		<desc>This highly unstable plating is actively falling apart. Interesting, eh?</desc>
-		<cost>10</cost>
+	
+	<!--—————————————————————
+	UPGRADE AUGS
+	——————————————————————-->
+	
+	<augBlueprint name="UPG_TC_CLONEBAY_NOLOSS">
+		<title>Backup Memory Archive</title>
+		<desc>Upgrade - Crew will not suffer skill loss when cloned. YOU SHOULD NEVER SEE THIS</desc>
+		<cost>0</cost>
+		<rarity>0</rarity>
+		<stackable>true</stackable>
+	</augBlueprint>
+	
+	<augBlueprint name="EX_TC_CLONEBAY_NOLOSS"> 
+		<title>Backup Memory Archive [X]</title>
+		<desc>Crew will not suffer skill loss when cloned.
+    
+		[X] - As an external system upgrade, this augment will provide its normal effect but take up an augment slot. Can be converted for free to the internal version under the internal upgrade menu if you have the Clone Bay system.</desc>
+		<cost>45</cost>
+		<bp>8</bp>
 		<rarity>0</rarity>
 		<stackable>false</stackable>
+		<value>0.0</value>
 	</augBlueprint>
 </FTL>
 
@@ -9356,7 +9414,7 @@
 			<artillery power="1" room="11" start="true" weapon="ARTILLERY_FLAK" img="room_artillery_3" />
 			<battery power="2" room="2" start="true" img="room_battery_8" />
 			<cloaking power="1" room="3" start="true" img="room_cloaking_11" />
-			<clonebay power="1" room="1" start="false">
+			<clonebay power="1" room="1" start="true">
 				<slot>
 					<number>0</number>
 				</slot>
@@ -9367,15 +9425,15 @@
 					<number>1</number>
 				</slot>
 			</doors>
-			<drones power="2" room="4" start="true" img="room_drones_TCC" />
-			<engines power="3" room="6" start="true" img="room_engines_9">
+			<drones power="2" max="8" room="4" start="true" img="room_drones_TCC" />
+			<engines power="3" max="8" room="6" start="true" img="room_engines_9">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</engines>
 			<hacking power="1" room="13" start="false" img="room_hacking_7" />
-			<medbay power="1" room="1" start="true" img="room_medbay_6_flipped">
+			<medbay power="1" room="1" start="false" img="room_medbay_6_flipped">
 				<slot>
 					<number>1</number>
 				</slot>
@@ -9394,13 +9452,13 @@
 					<number>1</number>
 				</slot>
 			</sensors>
-			<shields power="2" room="5" start="false" img="room_shields_7">
+			<shields power="2" max="8" room="5" start="false" img="room_shields_7">
 				<slot>
 					<direction>up</direction>
 					<number>1</number>
 				</slot>
 			</shields>
-			<weapons power="2" room="9" start="true" img="room_weapons_4">
+			<weapons power="2" max="8" room="9" start="true" img="room_weapons_4">
 				<slot>
 					<direction>up</direction>
 					<number>0</number>
