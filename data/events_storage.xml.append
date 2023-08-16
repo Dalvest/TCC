@@ -1254,7 +1254,7 @@
 
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLOAK_FIRE">
 	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
-		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 105~, 5{, 1|]</text>
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 45~, 4{, 2|]</text>
 		<event load="SCRAPPER_INSTALL_SYSTEM_CLOAK_FIRE"/>
 	</mod-append:choice>
 </mod:findName>	
@@ -1262,7 +1262,7 @@
 <event name="SCRAPPER_INSTALL_SYSTEM_CLOAK_FIRE">
 	<text>Scrappers like to think they know how to handle Cloaking technology, and they are pretty good at it, all things considered. Let's hope you don't regret letting them tamper with things?</text>
 	<choice req="cloaking" lvl="1" max_lvl="2" blue="false" hidden="true">
-		<text>Perform the upgrade. [Cost: 55~, 4}, 2{]</text>
+		<text>Perform the upgrade. [Cost: 45~, 4}, 2{]</text>
 		<event>
 			<text>You install the upgrade.</text>
 			<item_modify>
