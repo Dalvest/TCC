@@ -1439,7 +1439,7 @@
 	<text>Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
 	This talent does not seem to be consistent, however.</text>
 	<choice req="clonebay" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Perform the upgrade. [Cost: 10~]</text>
+		<text>Perform the upgrade. [Cost: 35~, 2{]</text>
 		<event>
 			<text>You install the upgrade.</text>
 			<item_modify>
