@@ -845,17 +845,17 @@
 
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_MIND_IMMUNITY">
 	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
-		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 2{]</text>
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 2}]</text>
 		<event load="SCRAPPER_INSTALL_MIND_IMMUNITY"/>
 	</mod-append:choice>
 </mod:findName>	
 
 <event name="SCRAPPER_INSTALL_MIND_IMMUNITY">
-	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 2{]
+	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 55~, 2}]
 	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
 	This talent does not seem to be consistent, however.</text>
 	<choice req="mind" lvl="3" blue="false" hidden="true">
-		<text>Perform the upgrade. [Cost: 55~, 2{]</text>
+		<text>Perform the upgrade. [Cost: 55~, 2}]</text>
 		<event>
 			<text>You install the upgrade.</text>
 			<item_modify>
@@ -1263,7 +1263,7 @@
 
 <mod:findName type="event" name="STORAGE_CHECK_SYSTEM_CLOAK_FIRE">
 	<mod-append:choice req="LIST_CREW_SCRAPPER" lvl="1" max_group="3" blue="true">
-		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 45~, 4{, 2|]</text>
+		<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 45~, 4}, 2{]</text>
 		<event load="SCRAPPER_INSTALL_SYSTEM_CLOAK_FIRE"/>
 	</mod-append:choice>
 </mod:findName>	
