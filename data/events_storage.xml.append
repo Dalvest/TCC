@@ -1086,7 +1086,7 @@
 			<upgrade amount="1" system="teleporter" />
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="INSTALL_DRONE_SPEED" />
+				<event load="STORAGE_CHECK_SYSTEM_LOAD" />
 			</choice>
 		</event>
 	</choice>
@@ -1119,7 +1119,6 @@
 				<item type="scrap" min="-40" max="-40" />
 				<item type="fuel" min="-1" max="-1" />
 			</item_modify>
-			<upgrade amount="1" system="teleporter" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="INSTALL_TELEPORTER_HEAL" />
