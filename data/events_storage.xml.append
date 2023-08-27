@@ -889,7 +889,7 @@
 	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 50~, 1|]
 	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
 	This talent does not seem to be consistent, however.</text>
-	<choice req="hack" lvl="1" blue="false" hidden="true">
+	<choice req="hacking" lvl="1" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 50~, 1|]</text>
 		<event>
 			<text>You install the upgrade.</text>
@@ -920,7 +920,7 @@
 	<text>Your scrappers can install this upgrade for a reduced cost. [Cost: 20~]
 	Scrappers seem to be very capable of integrating themselves and their scrap into their ships, allowing them to excel at installing and maintaining ship upgrades.
 	This talent does not seem to be consistent, however.</text>
-	<choice req="hack" lvl="1" blue="false" hidden="true">
+	<choice req="hacking" lvl="1" blue="false" hidden="true">
 		<text>Perform the upgrade. [Cost: 20~]</text>
 		<event>
 			<text>You install the upgrade.</text>
