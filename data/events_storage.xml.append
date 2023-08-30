@@ -566,7 +566,7 @@
 			</choice>
 		</event>
 	</choice>
-	<choice req="engines" lvl="0" max_lvl="3" blue="false">
+	<choice req="engines" lvl="0" max_lvl="3" blue="false" hidden="true">
 		<text>This upgrade is unavailable. You need engines level 4.</text>
 		<event load="OPTION_INVALID" />
 	</choice>
@@ -600,7 +600,7 @@
 			</choice>
 		</event>
 	</choice>
-	<choice req="engines" lvl="0" max_lvl="3" blue="false">
+	<choice req="engines" lvl="0" max_lvl="3" blue="false" hidden="true">
 		<text>This upgrade is unavailable. You need engines level 4.</text>
 		<event load="OPTION_INVALID" />
 	</choice>
