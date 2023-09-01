@@ -192,7 +192,55 @@
 	</event>
 </FTL>
 <FTL>
+
+<!--Augment Variable Reset-->
 	<mod:findName type="event" name="LOAD_ATLAS_MARKER">
 		<mod-append:variable name="tcc_loc_has_fuelreservoir" op="set" val="0"/>
 	</mod:findName>
+	
+<!--Avali Sector-->
+<event name="ENTER_AVALI">
+	<text load="TEXT_LIGHTSPEED" />
+	<img back="BACKGROUND_LIGHTSPEED" planet="NONE" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="LOAD_ATLAS_MARKER" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="ATLAS_MENU">
+	<mod-append:choice hidden="true" req="SEC SECTOR_AVALI" blue="false">
+		<text>Proceed to the Avali Sector.</text>
+		<event load="AVALI_WARP" />
+	</mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="ATLAS_MENU_NOEQUIPMENT">
+	<mod-append:choice req="SEC SECTOR_AVALI" blue="false">
+		<text>Proceed to the Avali Sector.</text>
+		<event load="AVALI_WARP"/>
+	</mod-append:choice>
+</mod:findName>
+
+<event name="AVALI_WARP">
+	<text>Name: Avali Homeworlds Sector
+	Type: Friendly
+	Unique: False
+	Dominant Faction: Avali Illuminate
+	Rebel Threat Level: Medium
+	
+	The Illuminate represents the single largest and most powerful Avali faction encompassing almost half of the species population and spanning numerous systems It's far from galactic, though its leaders would like to make you think it is. While primarily populated by Avalis, this Avali sector has become the sanctuary for Protogen refugees during recent times.
+	
+	[Need to change since i'm not a writer.]</text>
+	<!-- 	<playSound>lightspeed</playSound> -->
+	<choice hidden="true">
+		<text>Exit hyperspeed.</text>
+		<event load="START_AVALI" />
+	</choice>
+	<choice hidden="true" req="COORDS" blue="false">
+		<text>Reroute.</text>
+		<event load="REROUTE_MENU" />
+	</choice>
+</event>
+
 </FTL>
