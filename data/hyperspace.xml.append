@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!--<mod:findLike type="version">Adjusts version check, remove later or adjust as necessary, not currently needed.
   <mod:setValue>^1.2.0</mod:setValue>
 </mod:findLike>-->
@@ -94,8 +96,9 @@ SPEED          Changes gamespeed
     <bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
     <!--sector stuff-->
     <eventFile>avali</eventFile>
-	  <eventFile>rsa</eventFile>
+	<eventFile>rsa</eventFile>
     <eventFile>echelon</eventFile>
+	<eventFile>worldfeeder</eventFile>
   </events>
 
      <!--//////////////////////////////////////////////////////////STORES/////////////////////////////////////////////////////////-->
@@ -741,11 +744,6 @@ SPEED          Changes gamespeed
                 <blueprint>LOCKED_SCRAP_ARMOR</blueprint>
             </item>
             <item>
-                <blueprint>FLAK_ARMOR</blueprint>
-            </item>
-        </mod-append:category>
-        <mod-append:category type="AUGMENTS">
-            <item>
                 <blueprint>FUEL_RESERVOIR</blueprint>
             </item>
         </mod-append:category>
@@ -1114,6 +1112,170 @@ SPEED          Changes gamespeed
 	</customStore>
 </store>
 
+<!--////////////////////////////////////////////////AVALI STORE///////////////////////////////////////////////////////-->
+
+<store>
+	<customStore id="STORE_AVALI_NORMAL">
+	        <hullRepair>
+			<price min="2" max="4"/>
+			<sectorScaled/>
+		</hullRepair>
+		<resource>
+			<type>fuel</type>
+			<count min="5" max="10"/>
+		</resource>
+		<resource>
+			<type>missiles</type>
+			<count min="3" max="7"/>
+		</resource>
+		<resource>
+			<type>drones</type>
+			<count min="6" max="11"/>
+		</resource>
+		<category type="WEAPONS" group="1">
+            <customTitle>WEAPONS OF THE DAY [33% OFF]</customTitle>
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item>
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item>
+			<chance>50</chance>
+			<groupChance>50</groupChance>
+        </category>
+		<category type="DRONES" group="1">
+            <customTitle>DRONES OF THE DAY [33% OFF]</customTitle>
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+				<blueprint>LIST_WEAPONS_AVALI</blueprint>
+			</item>
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+				<blueprint>LIST_WEAPONS_AVALI</blueprint>
+			</item> 
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+				<blueprint>LIST_WEAPONS_AVALI</blueprint>
+			</item>
+			<chance>25</chance>
+			<groupChance>15</groupChance>
+        </category>
+		<category type="AUGMENTS" group="1">
+            <customTitle>AUGMENTS OF THE DAY [33% OFF]</customTitle>
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<item>
+                <modifier flat="false">0.66</modifier> 
+                <price>-1</price>
+				<mysteryItem>true</mysteryItem>
+            </item> 
+			<chance>25</chance>
+			<groupChance>35</groupChance>
+        </category>
+		<category type="WEAPONS">
+			<item>
+				<blueprint>GIFTLIST_AVALI</blueprint>
+				<modifier min="1" max="1" flat="false" />
+				<price>-1</price>
+			</item>
+            <item>
+				<blueprint>LIST_WEAPONS_AVALI</blueprint>
+			</item>
+            <item>
+				<blueprint>LIST_WEAPONS_AVALI</blueprint>
+			</item>
+			<chance>100</chance>
+        </category>
+		<category type="DRONES" group="0">
+            <item>
+				<blueprint>LIST_DRONES_AVALI</blueprint>
+			</item>
+            <item>
+				<blueprint>LIST_DRONES_AVALI</blueprint>
+			</item>
+            <item>
+				<blueprint>LIST_DRONES_AVALI</blueprint>
+			</item>
+			<chance>65</chance>
+			<groupChance>50</groupChance>
+        </category>
+		<category type="AUGMENTS" group="0">
+            <item/>
+            <item/>
+            <item/>
+			<chance>65</chance>
+			<groupChance>50</groupChance>
+        </category>
+		<category type="CREW">
+			<customTitle>DECKHANDS</customTitle>
+		    <allowDuplicates/>
+			<item>
+				<blueprint>LIST_AVALI_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_AVALI_STORE</blueprint>
+			</item>
+			<item>
+				<blueprint>LIST_AVALI_STORE</blueprint>
+			</item>
+			<chance>100</chance>
+        </category>
+		<category type="SYSTEMS">
+            <customTitle>ESSENTIAL SYSTEMS</customTitle>
+			<guaranteedSystems>
+                <weapons/>
+				<shields/>
+				<oxygen/>
+            </guaranteedSystems>
+			<item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_ESSENTIAL</blueprint>
+            </item>
+			<chance>100</chance>
+        </category>
+		<category type="SYSTEMS">
+			<customTitle>AUXILIARY SYSTEMS</customTitle>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+            <item>
+                <blueprint>SHOP_ITEM_SYSTEMS_BONUS</blueprint>
+            </item>
+			<chance>65</chance>
+        </category>
+	</customStore>
+</store>
 
   <!--
   ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1615,7 +1777,6 @@ SPEED          Changes gamespeed
         <type>3</type>
         <shipReq>CREW_SHIP_SLOT1_2</shipReq>
       </unlock>
-
       <unlock variant="b" silent="false">
         <type>1</type>
         <shipReq>PLAYER_SHIP_POTENTIAL</shipReq>
@@ -7909,16 +8070,9 @@ SPEED          Changes gamespeed
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
-	LAB AUGMENTS & VARIABLES
+	LAB AUGMENTS
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-  <!--vars-->
-	<events>
-		<variable name="tcc_labs_robotto_installed" op="set" val="0"/>
-		<variable name="tcc_labs_scrapper_installed" op="set" val="0"/>
-		<variable name="tcc_loc_has_fuelreservoir" op="set" val="0"/>
-	</events>
 
 	<!--augments-->
 	<mod:findLike type="augments">
@@ -7956,5 +8110,60 @@ SPEED          Changes gamespeed
 	<loadEvent>STORAGE_CHECK_SYSTEM</loadEvent>
     </event>
 </events>
+
+  <!--
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  VARIABLES OF MUSIC AND REPUTATION AND MUSIC ACHIEVEMENTS POPUP
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+	
+	<events>
+	<!--Lab Vars-->
+		<variable name="tcc_labs_robotto_installed" op="set" val="0"/>
+		<variable name="tcc_labs_scrapper_installed" op="set" val="0"/>
+	<!--Event vars-->
+		<variable name="tcc_loc_has_fuelreservoir" op="set" val="0"/>
+	<!--Reputation-->
+		<variable name="rep_avali" op="set" val="0"/> <!--Morality/Notoriety For Avali.-->
+	<!--Music-->
+		<metaVariable name="juke_avali" op="set" val="0"/> <!--The switch for unlocking the avali music from jukebox.-->
+		<metaVariable name="juke_scrapper" op="set" val="0"/> <!--The switch for unlocking the scrapper music from jukebox.-->
+	</events>
+	
+<achievements>
+	<achievement name="MUSIC_AVALI">
+		<name>Avali</name>
+		<description>Music Unlocked.</description>
+		<header>Music Unlocked!</header>
+		<icon>music_unlocked</icon>
+		<variable name="juke_avali" amount="1"/>
+		<multiDifficulty>false</multiDifficulty>
+	</achievement>
+	<achievement name="MUSIC_SCRAPPER">
+		<name>Scrapper</name>
+		<description>Music Unlocked.</description>
+		<header>Music Unlocked!</header>
+		<icon>music_unlocked</icon>
+		<variable name="juke_scrapper" amount="1"/>
+		<multiDifficulty>false</multiDifficulty>
+	</achievement>
+</achievements>
+
+<<mod:findLike type="victories">
+	<mod-append:worldfeeder>
+		<name>\1 World Feeder Ending</name>
+		<description>Defeat the World Feeder with any layout of the \1</description>
+		<icon>S_WF</icon>
+		<secretName>\1 ????? Ending</secretName>
+		<secretDescription>Destroy the big Lanius organism with any layout of the \1</secretDescription>
+		<secretIcon>S_secret</secretIcon>
+	</mod-append:worldfeeder>
+</mod:findLike>
 
 </FTL>
