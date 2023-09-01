@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event name="TEST_WORLDFEEDER_ENDING">
+    <text>You Win</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<win ach="worldfeeder" creditsText="credit_victory_worldfeeder" text="The Test Is Success." creditsBackground="VICTORY_TRUE"/>
+		</event>
+	</choice>
+</event>
