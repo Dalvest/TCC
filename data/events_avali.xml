@@ -1,56 +1,935 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FTL>
+	<!--Most Of The Dialog Needs Better Writing Since I'm Not A Writer But I Tried My Best. - Mr.[REDACTED] 3:29-->
+	<!--[Avali=Militia %] [Protogen/Refugee=Civilian ^] [Hybrid Enemy=Coalition &] [Rogue=Pirate *]-->
 	<!--normal events-->
-	<eventList name="AVALI_EVENT_QUEST" unused="true"></eventList>
-	<eventList name="AVALI_EVENT_HOSTILE" unused="true">
+	<eventList name="AVALI_EVENT_STORES"> <!--(Completed)-->
+		<event load="AVALI_INSTANT_ISSUES" />
+		<event load="AVALI_TOWN_CONVENTION" />
+		<event load="AVALI_STORE_EVENT_FIRE" />
+		<event load="AVALI_STORE_BAZAAR" />
+	</eventList>
+	<eventList name="AVALI_EVENT_DISTRESS">
+		<event load="AVALI_DISTRESS_PARASITE" />
+		<event load="AVALI_DISTRESS_PACK_TRAP" />
+		<event load="AVALI_DISTRESS_REFUGEE_HOSTAGE" />
+		<event load="AVALI_DISTRESS_ANTI_FURRY" />
+	</eventList>
+	<eventList name="AVALI_EVENT_HOSTILE">
 		<event load="AVALI_REBEL_LIST" />
+		<event load="AVALI_HYBRID_LIST" />
+		<event load="AVALI_ROGUE_LIST"/>
 		<event load="ENCOUNTER_PIRATE" />
 		<event load="ENCOUNTER_PIRATE" />
 	</eventList>
-
-	<eventList name="AVALI_EVENT_NEUTRAL"></eventList>
+	<eventList name="AVALI_EVENT_ITEMS">
+		<event load="AVALI_TRAINING_PACK" />
+		<event load="AVALI_WHAT_PROTOGEN" />
+		<event load="AVALI_BOMB_SHOTGUN" />
+		<event load="AVALI_EXCAVATION" />
+		<event load="AVALI_ART_CONTEST" />
+		<event load="AVALI_STATION_PARASITE" />
+		<event load="AVALI_RESEARCH_GUN" />
+		<event load="AVALI_PROTOGEN_GIFT"/>
+		<event load="AVALI_QUARANTINE_CREW" />
+		<event load="AVALI_MERCENARY_ROGUE" />
+		<event load="AVALI_ILLUMINANT_SUPPLY" />
+		<event load="AVALI_PROTOGEN_REFUGEE" />
+	</eventList>
+	<eventList name="AVALI_EVENT_QUEST">
+		<event load="AVALI_VACCINE_DELIVER" />
+		<event load="AVALI_PROTOGEN_BETRAYAL" />
+		<event load="AVALI_ROGUE_UPRISING" />
+		<event load="AVALI_FINDING_PACK" />
+		<event load="AVALI_SHIP_HUNT" />
+	</eventList>
 	<eventList name="AVALI_EVENT_NEUTRAL">
-		<event load="INSTANT_ISSUES" />
-	</eventList>	
-
+		<event load="AVALI_MEDICINE_ARGUMENT" />
+		<event load="AVALI_LOSTSUN_TEACH" />
+		<event load="AVALI_PROTOGEN_FREEM_PROBLEM" />
+		<event load="AVALI_CUTE_CONTEST" />
+		<event load="AVALI_BIRD_NEST" />
+		<event load="AVALI_PROTOGEN_MANIC" />
+		<event load="AVALI_ILLUMINANT_COLONIZATION" />
+		<event load="AVALI_ASB_CONSTRUCTION" />
+		<event load="AVALI_ENGI_FIGHT" />
+		<event load="AVALI_ILLUMINANT_BOARDCAST" />
+		<event load="AVALI_PROTOGEN_CRIMINAL" />
+		<event load="AVALI_ROGUE_LIQUID_RANSOM" />
+	</eventList>
+	<eventList name="AVALI_EVENT_EMPTY"> <!--(Completed)-->
+		<event load="AVALI_ABANDONED" />
+		<event load="AVALI_EMPTY_STAR" />
+	</eventList>
 	<eventList name="AVALI_REBEL_LIST">
 		<event load="ENCOUNTER_REBEL_AVALI" />
-		<event load="ENCOUNTER_REBEL" />
 		<event load="ENCOUNTER_REBEL_AVALI" />
-		<event load="ENCOUNTER_REBEL" />
 		<event load="ENCOUNTER_REBEL_SPY" />
+		<event load="ENCOUNTER_REBEL" />
+		<event load="ENCOUNTER_REBEL" />
+	</eventList>
+	<eventList name="AVALI_HYBRID_LIST">
+		<event load="ENCOUNTER_SCRAPPER_AVALI" />
+		<event load="ENCOUNTER_SCRAPPER_AVALI" />
+		<event load="ENCOUNTER_SCRAPPER_PROTOGEN" />
+		<event load="ENCOUNTER_SCRAPPER_PROTOGEN" />
+	</eventList>
+	<eventList name="AVALI_ROGUE_LIST">
+		<event load="ENCOUNTER_ROGUE_AVALI" />
+		<event load="ENCOUNTER_ROGUE_AVALI" />
+		<event load="ENCOUNTER_ROGUE_PROTOGEN" />
+		<event load="ENCOUNTER_ROGUE_PROTOGEN" />
+	</eventList>
+	<eventList name="EXIT_LIST_AVALI">
+		<event load="ENCOUNTER_SCRAPPER_AVALI" />
+		<event load="ENCOUNTER_ROGUE_AVALI" />
+		<event load="AVALI_CUTE_CONTEST" />
+		<event load="AVALI_PROTOGEN_GIFT"/>
+		<event load="AVALI_PROTOGEN_CRIMINAL" />
 	</eventList>
 
-	<event name="ENCOUNTER_REBEL_AVALI">
-		<text load="TEXT_ENCOUNTER_REBEL_AVALI" />
-		<ship load="SHIP_REBEL_FIGHT" hostile="true" />
+	<!--\\\\\\\\\\\\\\\\\\\\AVALI MORALITY\\\\\\\\\\\\\\\\\\\\-->
+<event name="MORALITY_UPDATE_AVALI">
+	<text>[NOTORIETY INCREASED - AVALI]
+	Your actions here, justifiable or not, will not reflect well in the eyes of the Avali Illuminant or its citizens. Continuously perform actions like this and you might start to see negative reactions from the Avali Illuminant and its allies.</text>
+	<variable name="rep_avali" op="add" val="1"/>
+</event>
+<event name="MORALITY_UPDATE_AVALI_FIGHT">
+	<text>[NOTORIETY INCREASED - AVALI]
+	Your actions here, justifiable or not, will not reflect well in the eyes of the Avali Illuminant or its citizens. Continuously perform actions like this and you might start to see negative reactions from the Avali Illuminant and its allies.</text>
+	<variable name="rep_avali" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+<event name="MORALITY_REMOVE_AVALI">
+	<text>[NOTORIETY DECREASED - AVALI]
+	You have done a good deed here in the eyes of the galaxy. If you've gained notoriety from other actions in the past, you're more likely to be forgiven for them.</text>
+	<variable name="rep_avali" op="add" val="-1"/>
+</event>
+<event name="MORALITY_REMOVE_AVALI_FIGHT">
+	<text>[NOTORIETY DECREASED - AVALI]
+	You have done a good deed here in the eyes of the galaxy. If you've gained notoriety from other actions in the past, you're more likely to be forgiven for them.</text>
+	<variable name="rep_avali" op="add" val="-1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+	<!--\\\\\\\\\\\\\\\\\\\\AVALI SECTOR SHIPS\\\\\\\\\\\\\\\\\\\\-->
+
+	<!--AVALI EVENT STORES SHIPS-->
+	<ship name="ARS_FED_AUTOSHIP" auto_blueprint="ARS_FED_AUTOSHIP">
+		<destroyed load="DESTROYED_AUTO_DAMAGED" />
+	</ship>
+
+	<!--AVALI EVENT DISTRESS SHIPS-->
+	
+	<!--AVALI EVENT NEUTRAL SHIPS-->
+	<ship name="AVALI_CUTE_CONTEST_AVALI_CHOICE" auto_blueprint="LIST_SHIPS_SEPARATIST_FIGHT"> <!--%-->
+		<destroyed load="SEPERATIST_SEPERATIST_CHOICE_WIN"/>
+		<deadCrew load="SEPERATIST_SEPERATIST_CHOICE_WIN"/>
+	</ship>
+	
+	<ship name="AVALI_CUTE_CONTEST_PROTOGEN_CHOICE" auto_blueprint="LIST_SHIPS_ENGI_FIGHT">
+		<destroyed load="AVALI_CUTE_CONTEST_PROTOGEN_CHOICE_WIN"/>
+		<deadCrew load="AVALI_CUTE_CONTEST_PROTOGEN_CHOICE_WIN"/>
+	</ship>
+
+	<!--AVALI EVENT QUEST SHIPS-->
+	
+	<!--AVALI HOSTILE SHIPS-->
+	
+	<!--AVALI GUARD SHIPS-->
+	<ship name="SHIP_GUARD_AVALI" auto_blueprint="MU_MILITIA_GUARD">
+		<surrender min="2" max="6" load="GUARD_SIGNAL"/>
+		<destroyed load="GUARD_AVALI_DESTROY"/>
+		<deadCrew load="GUARD_AVALI_DEADCREW"/>
+	</ship>
+
+	<ship name="SHIP_AVALI_REINFORCEMENTS" auto_blueprint="LIST_SHIPS_MILITIA_FIGHT"> <!--%-->
+		<destroyed load="DESTROYED_REINFORCEMENTS"/>
+		<deadCrew load="DEADCREW_REINFORCEMENTS"/>
+	</ship>
+
+	<!--AVALI_EVENT_STORES-->
+	<textList name="TEXT_START_AVALI">
+	<text>You have arrived in Avali space. This may be a sector full of refugees, but it is bound to attract plenty of Scrappers and Pirates too.</text>
+	<text>You have arrived in Avali space. There's been recently a case of a Scrapper parasitic infection taking over small communities, but they're usually willing to help.</text>
+	<text>You have arrived in Avali space. Technology has been the center of the Avali race's government for a long time, and they tend to value their databases over their own families.</text>
+	</textList>
+	
+<event name="START_AVALI">
+	<metaVariable name="juke_avali" op="set" val="1"/>
+	<preventQuest/>
+	<beaconType id="map_icon_start" global="false">
+		<color r="46" g="252" b="51" a="1"/>
+	</beaconType>
+	<text load="TEXT_START_AVALI"/>
+	<changeBackground>TCC_BACK_SECTOR_AVALI</changeBackground>
+	<playSound>lightspeed</playSound>
+	<ship load="SHIP_GUARD_MILITIA" hostile="false"/> <!--Will Be Militia For Now-->
+	<remove name="HIDDEN DUMMY"/>
+	<choice hidden="true" req="rep_avali" lvl="-2147483648" max_lvl="1" max_group="0" blue="false">
+		<text>Continue...</text>
+		<event load="GUARD_AVALI"/>
+	</choice>
+	<choice hidden="true" req="rep_avali" lvl="2" max_lvl="999" max_group="0" blue="false">
+		<text>Continue...</text>
+		<event load="GUARD_AVALI_CRIMINAL"/>
+	</choice>
+</event>
+<event name="GUARD_AVALI_CRIMINAL">
+	<text>Something seems off here. Usually, the Avali wouldn't bat an eye at ships like yours, but now, you catch suspicious chatter on the guard ship.</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>It seems your track record has caught up to you. The guard's crew have heard enough of the crimes you've been committing, and they don't intend to let you into the sector!</text>
+			<ship hostile="true"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="GUARD_AVALI">
+	<text>While the Avali are typically peaceful, they have a low tolerance for intruders in their sectors. You are fortunate that the guard doesn't see you as an intruder and allows you to pass unnoticed.</text>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<choice>
+		<text>Ignore the guard.</text>
+		<event>
+			<text>You now have some time to do something on the ship.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Contact the guard.</text>
+		<event load="GUARD_AVALI_INTERACT"/>
+	</choice>
+	<choice>
+		<text>Attack the guard.</text>
+		<event>
+			<text id="text_guard_attack"/>
+			<ship hostile="true"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<textList name="TEXT_GUARD_AVALI_CONTACT">
+	<text>"You came to visit our humble sector? Well, welcome renegade; I hope you be careful about the parasite in our sector.", The Avali captain greets you and is now waiting for your response.</text>
+	<text>"*hums to self*", the Avali captain humming to itself while waiting for your response.</text>
+	<text>"Hmm? Sorry, I was checking the records. Now, do you want anything?", The Avali is now waiting for a response.</text>
+</textList>
+<event name="GUARD_AVALI_INTERACT">
+	<text load="TEXT_GUARD_AVALI_CONTACT"/>
+	<choice hidden="true">
+		<text>Request supplies.</text>
+		<event load="GUARD_AVALI_REQUEST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Demand supplies.</text>
+		<event load="GUARD_AVALI_DEMAND"/>
+	</choice>
+	<choice req="weapons" lvl="5" hidden="true">
+		<text>(Upg. Weapons) Threaten the guard.</text>
+		<event load="GUARD_AVALI_THREATEN"/>
+	</choice>
+	<choice req="avali" hidden="true">
+		<text>(Avali Crew) Request assistance.</text>
+		<event>
+			<text>"I hope these supplies will assist you in your journey, fellow Avali."</text>
+			<autoReward level="LOW">stuff</autoReward>
+		</event>
+	</choice>
+	<choice req="protogen" hidden="true">
+		<text>(Protogen Crew) Request assistance.</text>
+		<event>
+			<text>"Here are some supplies to help you on your journey. Stay safe out there."</text>
+			<autoReward level="LOW">stuff</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Change your mind and leave the guard alone.</text>
+		<event>
+			<text>You apologize and end comms. The guard makes no attempts to communicate further.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<eventList name="GUARD_AVALI_REQUEST">
+	<event>
+		<text>"I apologize, but our supplies are limited and we must prioritize the needs of our own people first."</text>
+	</event>
+	<event>
+		<text>"Here, take these supplies. May they aid you in your journey."</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+</eventList>
+<eventList name="GUARD_AVALI_DEMAND">
+	<event>
+		<text>The Avali seem to have taken offense to your demands, and have decided to fight back with their weapons.</text>
+		<ship hostile="true"/>
 		<choice hidden="true">
 			<text>Continue...</text>
-			<event load="COMBAT_CHECK" />
+			<event load="COMBAT_CHECK"/>
 		</choice>
 	</event>
-	<!--has some generic ones in it too because i dont want half of the rebel fights to be the same two lines-->
-	<textList name="TEXT_ENCOUNTER_REBEL_AVALI">
-		<text>The Rebel ship at this beacon hails, "Finally, a break from grinding those bird freaks into paste. I much prefer federation filth!"</text>
-		<text>Almost as soon as your ship slows to sublight, you receive a hail from a Rebel ship. "You're the merc that the feds hired! I thought I was stuck in this awful sector forever, time to score a promotion!"</text>
-		<!--seperation comment-->
-		<text>By the time you notice the Rebel ship behind the beacon, it's too late to avoid a fight.</text>
-		<text>A Rebel ship hails. "We did not fight a war to let a single Federation ship shatter our dreams of a better galaxy!" He locks weapons.</text>
-		<text>A Rebel ship approaches cautiously. "Personally," says the captain, "I'd have stuck with the Federation. But I'm a soldier, sir, and I'm no use without a war to fight. Raise your shields!"</text>
-		<text>You're hailed by a Rebel ship: "When the rebellion is complete you'll see the safer world we provide. Well, you won't, but you get the point." They arm weapons.</text>
-	</textList>
-	<!--homeworlds events-->
-	<eventList name="AVALI_EVENT_HOMEWORLDS_IMPORTANT" unused="true"></eventList>
-	<eventList name="AVALI_EVENT_HOMEWORLDS_QUEST" unused="true"></eventList>
-	<eventList name="AVALI_EVENT_HOMEWORLDS_HOSTILE" unused="true">
-		<event load="AVALI_REBEL_LIST" />
-		<event load="ENCOUNTER_PIRATE" />
-		<event load="AVALI_ARGUMENT" />
+	<event>
+		<text>Reluctantly, the Avali transfer over some supplies, not wanting to battle you.</text><!--Need Better Dialog-->
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+</eventList>
+<eventList name="GUARD_AVALI_THREATEN">
+	<event>
+		<text>The Avali guard stands their ground and readies their weapon, refusing to back down in the face of your threats.</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+	</event>
+	<event>
+		<text>Reluctantly, the Avali transfer over some supplies, not wanting to battle you.</text><!--Need Better Dialog-->
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event>
+		<text>Reluctantly, the Avali transfer over some supplies, not wanting to battle you.</text><!--Need Better Dialog-->
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+</eventList>
+
+	<event name="GUARD_AVALI_DESTROY">
+		<text>You have defeated the Avali guard. Whatever might have been in their cargo has for certain been destroyed, but you can at least salvage some supplies from the ship.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="GUARD_AVALI_FOLLOWUP"/>
+		</choice>
+	</event>
+
+	<event name="GUARD_AVALI_DEADCREW">
+		<text>You have defeated the Avali guard. Without crew on-board to stop you, you can investigate their cargo. You find a drone to bring back to the ship, and move on to scrap their hull.</text>
+		<autoReward level="MED">standard</autoReward>
+		<weapon name="GIFTLIST_AVALI"/>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="GUARD_AVALI_FOLLOWUP"/>
+		</choice>
+	</event>
+
+	<event name="GUARD_AVALI_FOLLOWUP">
+		<noQuestText/>
+		<removeHazards/>
+		<text>By killing the Avali guard, you have no doubt caused them to dispatch reinforcements to track you down. Watch your step as you explore the sector.</text>
+		<quest event="REINFORCEMENTS_AVALI"/>
+		<choice>
+			<text>Do something onboard the ship.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+		<choice>
+			<text>Do nothing.</text>
+			<event/>
+		</choice>
+	</event>
+	
+	<event name="REINFORCEMENTS_AVALI">
+		<preventQuest/>
+		<beaconType id="map_icon_reinforcements" global="true" req="LOOT_COMPASS">
+			<color r="200" g="55" b="82" a="1"/>
+			<unvisitedTooltip>An unvisited location.</unvisitedTooltip>
+			<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+			<undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
+		</beaconType>
+		<text>You notice an Avali ship tailing you at this beacon. Regardless of how hard you try to shake them, they won't back down. This must be one of the ships dispatched to hunt you down after killing the guard. Hurry to the combat stations!</text> <!--Need Rewrite-->
+		<ship load="SHIP_AVALI_REINFORCEMENTS" hostile="true"/>
+		<environment type="PDS" target="player"/>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+	</event>
+	
+	<!--AVALI_EVENT_STORES-->
+	<event name="AVALI_INSTANT_ISSUES">
+	<preventQuest/>
+        <text>You're hailed by an Avali Autoship trying to sell you insta-noodles... It's strange, considering the fact that the auto-ship seems to be of a military type. It's also malfunctioning, seemingly trying to power up weapons.</text>
+        <ship load="ARS_FED_AUTOSHIP" hostile="false"/>
+        <choice hidden="true" req="LIST_CREW_PROTOGEN">
+            <text>(Protogen Crew) Have your protogen fix the Autoship.</text>
+            <event>
+                <text>Your Protogen manages to fix the malfunctioning Autoship and makes it dispense Noodle Rations everywhere. It also allows you to access its store interface.</text>
+                <store>STORE_NOODLE</store>
+                <augment name="NOODLE_RATIONS"/>
+            </event>
+        </choice>
+        <choice hidden="true" req="LIST_CREW_RSA">
+            <text>(RSA Crew) Have your RSA crew fix the auto-ship.</text>
+            <event>
+                <text>Your RSA member uses their years of experience to fix the malfunctioning Autoship and makes it dispense Noodle Rations everywhere. It also allows you to access its store interface.</text>
+                <store>STORE_NOODLE</store>
+                <augment name="NOODLE_RATIONS"/>
+            </event>
+        </choice>
+        <choice hidden="true" req="LIST_CREW_ENGI">
+            <text>(Engi Crew) Have your Engi crew fix the auto-ship.</text>
+            <event>
+                <text>Your Engi fixes the malfunctioning Autoship with ease and makes it dispense Noodle Rations. It also allows you to access its store interface.</text>
+                <store>STORE_NOODLE</store>
+                <augment name="NOODLE_RATIONS"/>
+            </event>
+        </choice>
+        <choice hidden="true" req="LIST_CREW_AVALI">
+            <text>(Avali Crew) Have your Avali crew fix the auto-ship.</text>
+            <event>
+                <text>Your Avali explains that they have seen an automated merchant like this before and tries to fix the malfunctioning Autoship. It didn't exactly work, though...</text>
+                <autoReward level="LOW">standard</autoReward>
+            </event>
+        </choice>
+        <choice hidden="true">
+            <text>Try to fix the auto-ship.</text>
+            <event>
+                <text>The auto-ship dispenses several piles of noodle rations before self-destructing. You're still not sure what happened, but at least you can loot the broken Autoship...</text>
+                <augment name="NOODLE_RATIONS"/>
+                <autoReward level="LOW">standard</autoReward>
+            </event>
+        </choice>
+        <choice>
+            <text>Ignore the Autoship.</text>
+            <event>
+				<text>You ignore the Autoship and fly away.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+			</event>
+        </choice>
+    </event>
+
+	<event nane="AVALI_TOWN_CONVENTION" unique="true">
+	<preventQuest/>
+	<beaconType id="map_icon_store_generic" global="false">
+		<color r="215" g="255" b="200" a="1"/>
+	</beaconType>
+	<text>You spot a large planet populated by a variety of Avalis and Protogens. It seems they have set up a small arsenal of the day market and a convention of some kind is going on. You can buy discounted arsenal or go to the convention to convince them and offer to hire a crew.</text>
+	<img planet="PLANET_POPULATED"/>
+	<ship load="SHIP_CIVILIAN_STATION" hostile="false"/> <!--Will Be Civilian Station For Now-->
+	<choice hidden="true">
+		<text>Go to a convention and hire a crew.</text>
+		<event>
+			<text>It appears you have convinced one Protogen and one Avali to be your crewmembers on your Multiverse vessel, but you can only choose one of them.</text>
+			<choice>
+			<text>Hire a Protogen crewmember.</text>
+				<event>
+					<crewMember amount="1" class="protogen"/>
+					<item_modify>
+						<item type="scrap" min="-45" max="-30"/>
+					</item_modify>
+				</event>
+			</choice>
+			<choice>
+				<text>Hire an Avali crewmember.</text>
+				<event>
+					<crewMember amount="1" class="avali"/>
+					<item_modify>
+						<item type="scrap" min="-35" max="-20"/>
+					</item_modify>
+				</event>
+			</choice>
+			<choice>
+			<text>We don't have scrap.</text>
+				<event>
+					<text>You apologise to the crew that you have no scrap to spare.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event/>
+					</choice>		
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Shop into the arsenal market.</text>
+		<event load="STORE_LOAD_AVALI"/>
+	</choice>
+	<choice hidden="true">
+		<text>Attack the outpost!</text>
+		<event>
+			<text>There's not much that can be said here to justify your actions, so why bother? Let's keep it short - these Avalis are going to die and there's little they can do about it.</text>
+			<ship hostile="true"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="MORALITY_UPDATE_AVALI_FIGHT"/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+	
+	<event name="AVALI_STORE_EVENT_FIRE" unique="true">
+	<preventQuest/>
+	<beaconType id="map_icon_store_avali" global="false">
+		<color r="215" g="255" b="200" a="1"/>
+	</beaconType>
+	<text>As soon as you arrive at the nearby planet, you notice huge billows of smoke coming from a good half of the nearby market. An Avali merchant hails you, looking fairly panicked. "What do you wish to buy? If you wish to buy... and don't worry about the fire. It'll be no big deal."</text>
+	<img planet="PLANET_POPULATED"/>
+	<choice hidden="true">
+		<text>Take a look at the market.</text>
+		<event load="AVALI_STOREEVENT_FIRE_SHOP"/>
+	</choice>
+	<choice hidden="true">
+		<text>Offer to help with the fire.</text>
+		<event>
+			<text>"Oh... that's been ablaze for days. We've done all we can to supress it with what we have... which isn't much..."</text>
+			<choice req="FIRE_EXTINGUISHERS" hidden="true">
+				<text>(Extinguishers) Use the suppressors.</text>
+				<event>
+					<text>Fortunately, your tech proves to be opportune in this situation. You manage to keep the fire contained to a smaller area of the market so the Avali can take care of it. They pay you in thanks, and of course the marketplace is still open to be visited.</text>
+					<autoReward level="HIGH">standard</autoReward>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="STORE_LOAD_AVALI"/>
+					</choice>
+				</event>
+			</choice>
+			<choice req="BLUELIST_CREW_NOFIRE" hidden="true">
+				<text>(Fireproof Crew) Send in your crew.</text>
+				<event>
+					<text>Fortunately, your crew proves to be opportune in this situation. You manage to keep the fire contained to a smaller area of the market so the Avali can take care of it. They pay you in thanks, and of course the marketplace is still open to be visited.</text>
+					<autoReward level="HIGH">standard</autoReward>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="STORE_LOAD_AVALI"/>
+					</choice>
+				</event>
+			</choice>
+			<choice req="REPAIR" hidden="true">
+				<text>(Repair Drone) Send in your drone.</text>
+				<event>
+					<text>Fortunately, your drone proves to be opportune in this situation. You manage to keep the fire contained to a smaller area of the market so the Avali can take care of it. They pay you in thanks, and of course the marketplace is still open to be visited.</text>
+					<autoReward level="HIGH">standard</autoReward>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="STORE_LOAD_AVALI"/>
+					</choice>
+				</event>
+			</choice>
+			<choice req="orchid" hidden="true">
+				<text>(Orchid Crew) Send in your Orchid crew to put out the fire.</text>
+				<event>
+					<text>You wait for a while, but your Orchid crew never returns. You receive another hail; "It uh... looks like your friend just walked into the blaze and died within seconds. I'm sorry, best I can offer is a small consolation."</text>
+					<autoReward level="LOW">standard</autoReward>
+					<removeCrew class="orchid">
+						<clone>true</clone>
+						<text>Fortunately, the Clone Bay has already revived your floral friend. Whether he'll stay a friend is debatable, because he's currently scowling at you for your stupidity.</text>
+					</removeCrew>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="STORE_LOAD_AVALI"/>
+					</choice>
+				</event>
+			</choice>
+			<choice req="orchid_chieftain" hidden="true">
+				<text>(Chieftain Crew) Send in your Orchid crew to put out the fire.</text>
+				<event>
+					<text>You wait for a while, but your Orchid crew never returns. You receive another hail; "It uh... looks like your friend just walked into the blaze and died within seconds. I'm sorry, best I can offer is a small consolation."</text>
+					<autoReward level="HIGH">standard</autoReward>
+					<removeCrew class="orchid_chieftain">
+						<clone>true</clone>
+						<text>Fortunately, the Clone Bay has already revived your floral friend. Whether he'll stay a friend is debatable, because he's currently scowling at you for your stupidity.</text>
+					</removeCrew>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="STORE_LOAD_AVALI"/>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Nevermind, we'll just stick to shopping.</text>
+				<event load="AVALI_STOREEVENT_FIRE_SHOP"/>
+			</choice>
+			<choice hidden="true">
+				<text>Nevermind, we'll just leave.</text>
+				<event>
+					<text>Looks like you can't help after all. Best to stay out of this.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Leave.</text>
+		<event>
+			<text>Docking with a burning marketplace doesn't sound like a good idea for anyone who doesn't like being on fire.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+	
+	<eventList name="AVALI_STOREEVENT_FIRE_SHOP">
+	<event>
+		<text>Nervously, you land as far away from the fire as possible and visit the store. Fortunately, when you return the fire has been contained to only two-thirds of the market place and your ship is fine.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="STORE_LOAD_AVALI"/>
+		</choice>
+	</event>
+	<event>
+		<text>Nervously, you land as far away from the fire as possible and visit the store. However, when you return you see the landing pad has caught ablaze! Running through the fire, you make your way back onto the ship, but a portion of it has already caught fire!</text>
+		<damage amount="3" effect="fire" system="room"/>
+		<damage amount="0" effect="fire" system="room"/>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="STORE_LOAD_AVALI"/>
+		</choice>
+	</event>
 	</eventList>
-	<eventList name="AVALI_EVENT_HOMEWORLDS_NEUTRAL" unused="true">
-		<event load="AVALI_LOSTSUN_TEACH" />
+	
+	<event name="STORE_LOAD_AVALI">
+	<store>STORE_AVALI_NORMAL</store>
+	<text>Before you shop, you still have some time to do something else aboard the ship.</text>
+	<choice>
+		<text>Do something onboard the ship.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	<choice>
+		<text>Do nothing.</text>
+		<event/>
+	</choice>
+	</event>
+
+	<event nane="AVALI_STORE_BAZAAR" unique="true">
+	
+	<!--AVALI_EVENT_DISTRESS-->
+
+	<event name="AVALI_DISTRESS_PARASITE" unique="true">
+	<distressBeacon/>
+	<text>You find a nearby Avali community where the scrapper parasite has spread virulently and wreaked havoc over their own settlement for scrap to survive. A riot has started while they are setting up a quarantine to contain it.</text>
+	<choice hidden="true">
+		<text>Send in your crew to help control the crowds.</text>
+		<event load="DISTRESS_AVALI_PARASITE_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore their request and move on.</text>
+		<event>
+			<text>Unfortunately your mission is too important and you're not willing to risk your crew. You prepare to move on.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="engi">
+		<text>(Engi Crew) Send your Engi to calm down the infected.</text>
+		<event>
+			<text>With no fear of catching the parasite, your Engi crewmember helps reassure and organize the infected colony. Calmed by its extensive knowledge of Avali physiology, the infected submit to quarantine in the hopes that a cure can be found soon. The colony leaders offer a reward for helping to prevent an ugly incident.</text>
+			<autoReward level="MED">stuff</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="medbay" lvl="2">
+		<text>(Adv. Medbay) Use your Medbay to help synthesize a cure.</text>
+		<event>
+			<text>Your military-grade medical computers are easily able to isolate the cause of the parasite, some of the grafts and scraps had caused the infection. You are quickly able to inform the colony's leaders of your success in reverse engineering a cure.</text> <!--Need Rewrite-->
+			<choice hidden="true">
+				<text id="continue"/>
+				<event>
+					<text>"Thank you so much! We don't have the funds to hire outside help and it would have taken our staff weeks to figure that out. Here, take this as payment!"</text>
+					<autoReward level="MED">stuff</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true" req="UPG_MEDBAY_NANO">
+				<text>(Med-Bots) Use the Nano med-bots to accelerate the dispersal of the cure.</text>
+				<event>
+					<text>You reconfigure your ship's Nano dispersal system. In a matter of minutes all of the workers are cured. The leaders can hardly believe what you have achieved. They offer you what they can as payment.</text>
+					<autoReward level="HIGH">weapon</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true" req="EX_MEDBAY_NANO">
+				<text>(Med-Bots [X]) Use the Nano med-bots to accelerate the dispersal of the cure.</text>
+				<event>
+					<text>You reconfigure your ship's Nano dispersal system. In a matter of minutes all of the workers are cured. The leaders can hardly believe what you have achieved. They offer you what they can as payment.</text>
+					<autoReward level="HIGH">weapon</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	</event>
+
+	<eventList name="DISTRESS_AVALI_PARASITE_LIST">
+	<event>
+		<text>Your crew tries to keep the crowds in line, but the scene quickly turns ugly. Half-crazed with fear, the infected grab their sword and push back at your crew, forcing them to retreat hastily. They barely get away without injury, but the same can't be said for the colony's leaders. You quickly leave.</text>
+	</event>
+	<event>
+		<text>With the visible threat of your weapons, the infected become subdued enough for you to set up a rudimentary quarantine. However before you leave, one of your crew presents signs of infection. You have no choice but to leave them on the station in the hopes that they discover a cure quickly. You leave before more crew succumb.</text>
+		<removeCrew>
+			<clone>false</clone>
+			<text>As your crewman is still alive and working towards a cure, it would be against Federation regulation to create a clone to continue with you on your journey.</text>
+		</removeCrew>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
 	</eventList>
+
+    <event name="AVALI_DISTRESS_STATION_TRAP" unique="true">
+	<distressBeacon/>
+	<text>You arrive at the distress beacon at the Avali station, and as you enter the station, some of the doors are locked. The station hail you at the comms that some doors have been malfunctioning for quite a while. You want to rescue them but this is shady but you think they will likely starve soon.</text>
+	<choice hidden="true">
+		<text>Send in your crew to help pry open the doors.</text>
+		<event load="DISTRESS_AVALI_STATION_TRAP_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore the stations.</text>
+		<event>
+			<text>You ignore the station.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+
+	
+	<!--AVALI_EVENT_ITEMS-->
+	<event name="AVALI_QUARANTINE_CREW">
+	<text>Scans reveal evidence of adjacent damaged settlements. A colony leader hails you for taking one of the non-infected citizens, as they had lost all hope of recovering their settlement because almost all of them have been infected with the scrapper parasite and there's nothing they can do about it.</text>
+	<choice>
+		<text>Welcome them aboard.</text>
+		<event>
+			<text>You pick up the new crew in a safe landing position and welcome them aboard.</text>
+			<crewMember amount="1" class="avali" />
+		</event>
+	</choice>
+	<choice>
+		<text>Decline.</text>
+		<event>
+			<text>You apologise to the colony leader and say that you don't need any new crew. While you are waiting to charge the FTL drive, Do you want to do something onboard the ship?</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+
+	<event name="AVALI_PROTOGEN_REFUGEE">
+	<text>Scans reveal evidence of adjacent damaged settlements. A colony leader hails you for taking one of the non-infected citizens, as they had lost all hope of recovering their settlement because almost all of them have been infected with the scrapper parasite and there's nothing they can do about it.</text>
+	<choice>
+		<text>Ask where they're headed.</text>
+		<event>
+			<text>You ignore the station.</text>
+			<choice>
+				<text>Offer the ship some of your fuel.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Wish them luck and continue on your way.</text>
+				<event>
+					<text>You wave goodbye to the refugees and continue on your journey.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Wish them luck and continue on your way.</text>
+		<event>
+			<text>You wave goodbye to the refugees and continue on your journey.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Attack them.</text>
+		<event>
+			<text>You pick up the new crew in a safe landing position and welcome them aboard.</text>
+			<crewMember amount="1" class="avali" />
+		</event>
+	</choice>
+	</event>
+	<!--AVALI_EVENT_NEUTRAL-->
+	<event name="AVALI_MEDICINE_ARGUMENT" unique="true">
+		<text>When you jump to this beacon, you are imediately greeted by two ships at a standstill. On your left, a Multiverse Renegade of Engineer design with major hull damage sits with its weapons powered. On the other side, an Illuminant vessel waits with drones powered. Upon your entrance to the beacon, they both hail you at the same time.</text>
+		<choice>
+			<text>Listen.</text>
+			<event>
+				<text>The Engineer ship is the first to speak. An Engineer with a helmet inscribed with the letter M appears on the screen and begins explaining himself. "Hey, you're a Federation vessel, right? These Avalis are selling an unliscensed medication to the civilians. You need to stop them! These pills have unnatural side effects, like nothing I've ever seen! Please destroy them before the pills--" The Illuminant cuts him off. "Hey, shut up! I have all the liscensing i need to sell my medication! And it's not like the side effects are hidden, it's right there on the label!" Both ships go silent, waiting for you to pick a side.</text>
+				<choice>
+				<text>Side with the Multiverse Renegade.</text>
+				<event>
+					<text>The engineer is pleased, and states: "Thanks, I don't think I could've taken much more of a beating from those drones. Speaking of which-" The Illuminant is already attacking you!</text>
+					<ship load="LIST_SHIPS_MILITIA_GENERIC" hostile="true" /> <!--Militia %-->
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK" />
+					</choice>
+				</event>
+			</choice>
+				<choice>
+					<text>Side with the Avali Elite.</text>
+					<event>
+						<text>The Avali is delighted upon your support. "Wow, thanks! I'll give you a free sample after this if you beat him. Uh, watch out--" The Illuminant is interrupted by the Engineer, who shouts "Do you realize how many innocent civilians you're poisoning?" before charging his weapons.</text>
+						<ship load="MU_BOSS_ENGINEER_C" hostile="true" />
+						<choice>
+							<text>Continue...</text>
+							<event load="COMBAT_CHECK" />
+						</choice>
+					</event>
+				</choice>
+				<choice>
+					<text>Mute them both and do something onboard the ship.</text>
+					<event>
+						<text>You have *far* better things to be doing.</text>
+						<choice>
+							<text>Do something on-board the ship.</text>
+							<event load="STORAGE_CHECK" />
+						</choice>
+						<choice>
+							<text>Do nothing.</text>
+							<event />
+						</choice>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Nope, not dealing with this.</text>
+			<event>
+				<text>You have much better things to be doing.</text>
+				<choice>
+					<text>Do something on-board the ship.</text>
+					<event load="STORAGE_CHECK" />
+				</choice>
+				<choice>
+					<text>Do nothing.</text>
+					<event />
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<ship name="MU_BOSS_ENGINEER_C" auto_blueprint="MU_BOSS_ENGINEER_C">
+		<destroyed load="DESTROYED_ENGINEER_RENEGADE" />
+		<deadCrew load="DEAD_CREW_ENGINEER_RENEGADE" />
+	</ship>
+
+	<ship name="MU_AVALI_MEDICAL_SHIP" auto_blueprint="MU_BOSS_ENGINEER_C">
+		<destroyed load="DESTROYED_AVALI_MEDICAL_SHIP" />
+		<deadCrew load="DEAD_CREW_AVALI_MEDICAL_SHIP" />
+	</ship>
+
+	<event name="DESTROYED_ENGINEER_RENEGADE">
+		<text>One last explosion marks the engineer's fate, as his ship breaks apart. You quickly collect what remains.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice>
+			<text>Contact the Avali.</text>
+			<event load="AVALI_MEDICINE_ARGUMENT_CONTACT_ILLUMINANT" />
+		</choice>
+	</event>
+
+	<event name="DEAD_CREW_ENGINEER_RENEGADE">
+		<text>The mighty cruiser vessel's engines stutter to a halt, as the last lifeform reading fades away. While scrapping the hull, you find a functional drone schematic, it may have failed its old master, but hopefully it'll serve you better.</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<drone name="LIST_DRONES_MADOK" />
+		<choice>
+			<text>Contact the Avali.</text>
+			<event load="AVALI_MEDICINE_ARGUMENT_CONTACT_ILLUMINANT" />
+		</choice>
+	</event>
+
+	<event name="AVALI_MEDICINE_ARGUMENT_CONTACT_ILLUMINANT">
+		<text>The Illuminant hails you: "Thanks for the help, I would've been toast if I had to fight him any longer. Here, a sample of the medicine I was selling, as a sign of my appreciation!" Upon reading the label, you are sickened to discover the side effects of these pills include "Turning into Avali". Did you pick the right side here...?</text>
+		<choice hidden="true">
+			<text>Accept.</text>
+			<event>
+				<text>The Illuminant transfers the pills to you, and gives you a friendly wave before jumping away. (event unfinished, no pills yet, take consolation prize)</text>
+				<transformRace>avali</transformRace>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>No, these are awful.</text>
+			<event>
+				<text>"Oh, really? Well, if you aren't taking them, I guess you're just a traveller. But... if you're a traveller, that means you can take me to more sectors to sell my medication!" Before you can protest, the Illuminant is already abandoning her ship to join your crew.</text>
+				<crewMember amount="1" class="avali">Robin</crewMember>
+			</event>
+		</choice>
+	</event>
+
+	<event load="AVALI_WHAT_PROTOGEN" >
+	</event>
+	
+	<event load="AVALI_ASB_CONSTRUCTION" >
+	</event>
+	
 	<event name="AVALI_LOSTSUN_TEACH" unique="true">
 		<text>text</text>
 		<choice>
@@ -181,159 +1060,317 @@
 			</event>
 		</choice>
 	</event>
-	<event name="AVALI_ARGUMENT" unique="true">
-		<text>When you jump to this beacon, you are imediately greeted by two ships at a standstill. On your left, a Multiverse Renegade of Engineer design with major hull damage sits with its weapons powered. On the other side, an Illuminant vessel waits with drones powered. Upon your entrance to the beacon, they both hail you at the same time.</text>
-		<choice>
-			<text>Listen.</text>
-			<event>
-				<text>The Engineer ship is the first to speak. An Engineer with a helmet inscribed with the letter M appears on the screen and begins explaining himself. "Hey, you're a Federation vessel, right? These Avalis are selling an unliscensed medication to the civilians. You need to stop them! These pills have unnatural side effects, like nothing I've ever seen! Please destroy them before the pills--" The Illuminant cuts him off. "Hey, shut up! I have all the liscensing i need to sell my medication! And it's not like the side effects are hidden, it's right there on the label!" Both ships go silent, waiting for you to pick a side.</text>
-				<!--<choice> TBA
-				<text>Side with the Multiverse Renegade.</text>
-				<event>
-					<text>The engineer is pleased, and states: "Thanks, I don't think I could've taken much more of a beating from those drones. Speaking of which-" The Illuminant is already attacking you!</text>
-					<ship load="(event ship ID)" hostile="true" />
-					<choice>
-						<text>Continue...</text>
-						<event load="COMBAT_CHECK" />
+	
+	<event name="AVALI_PROTOGEN_FREEM_PROBLEM" unique="true">
+	<text>You arrive just in time to see an unusually well-armed Free mantis ship destroying a small protogen ship. A teleporter signal is detected...intruder on deck!</text>
+	<choice>
+		<text>Continue...</text>
+		<event>
+			<text>A Protogen in a charred uniform has teleported onto the deck. He begs for sanctuary from the Free mantis, explaining they've been having serious problems with the Free mantis clan, and offers to serve in exchange for your protection. The Free mantis have already traced the teleporter signal and are offering a deal in exchange for the prisoner. You tried to reason with the Free Mantis about what they did, but it refused to elaborate on how and why.</text>
+			<choice hidden="true">
+				<text>Side with the fugitive and fight the Free mantis ship.</text>
+					<event>
+						<text>The Protogen expresses his thanks and prepares to help you fight his pursuer.</text>
+						<ship load="SHIP_FREEMANTIS_FIGHT" hostile="true"/>
+						<crewMember amount="1" class="protogen"/>	
+						<choice hidden="true">
+							<text>Continue...</text>
+						<event load="MORALITY_UPDATE_FREEMANTIS_FIGHT"/>
 					</choice>
 				</event>
-			</choice>-->
-				<choice>
-					<text>Side with the Avali Elite.</text>
-					<event>
-						<text>The Avali is delighted upon your support. "Wow, thanks! I'll give you a free sample after this if you beat him. Uh, watch out--" The Illuminant is interrupted by the Engineer, who shouts "Do you realize how many innocent civilians you're poisoning?" before charging his weapons.</text>
-						<ship load="MU_BOSS_ENGINEER_C" hostile="true" />
-						<choice>
-							<text>Continue...</text>
-							<event load="COMBAT_CHECK" />
-						</choice>
-					</event>
-				</choice>
-				<choice>
-					<text>Mute them both and do something onboard the ship.</text>
-					<event>
-						<text>You have *far* better things to be doing.</text>
-						<choice>
-							<text>Do something on-board the ship.</text>
-							<event load="STORAGE_CHECK" />
-						</choice>
-						<choice>
-							<text>Do nothing.</text>
-							<event />
-						</choice>
-					</event>
-				</choice>
+			</choice>
+			<choice hidden="true">
+				<text>Agree to offer up the Protogen in exchange for a bounty.</text>
+				<event load="AVALI_PROTOGEN_FREEM_PROBLEM_REJECT"/>
+			</choice>
+			<choice hidden="true" req="mind">
+				<text>(Mind Control) Ensure the Protogen is passive before you make a decision.</text>
+				<event>
+					<text>Thanks to the Protogen's simple mind, it is quickly subdued by the effects of your mind control.</text>
+					<choice hidden="true">
+						<text>Side with the fugitive and fight the Free mantis ship.</text>	
+						<event>
+							<text>The Protogen expresses his thanks and prepares to help you fight his pursuer. You redirect the mind control from the Mantis and prepare to fight.</text>
+							<ship load="SHIP_FREEMANTIS_FIGHT" hostile="true"/>
+							<crewMember amount="1" class="protogen"/>	
+							<choice hidden="true">
+								<text>Continue...</text>
+							<event load="MORALITY_UPDATE_FREEMANTIS_FIGHT"/>
+							</choice>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>Agree to offer up the Protogen in exchange for a bounty.</text>
+						<event load="AVALI_PROTOGEN_FREEM_PROBLEM_REJECT_SAFE"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	</event>
+	<eventList name="AVALI_PROTOGEN_FREEM_PROBLEM_REJECT">
+	<event>
+		<text>The Free mantis captain is delighted, and quickly arranges for the transfer of the prisoner.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>Fury sparks in the eyes of the Protogen. He won't go easily, and he shot your crew before he could be captured.</text>
+		<autoReward level="MED">standard</autoReward>
+			<removeCrew>
+				<clone>true</clone>
+				<text>Luckily your crew is already being cloned and is revived a short time later.</text>
+			</removeCrew>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event/>
+		</choice>
+	</event>
+	</eventList>
+	<eventList name="AVALI_PROTOGEN_FREEM_PROBLEM_REJECT_SAFE">
+	<event>
+		<text>The Free mantis captain is delighted, and quickly arranges for the transfer of the prisoner.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>Fury sparks in the eyes of the Protogen, but because of the mind control, he is barely able to shoot your crew before he collapses.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	</eventList>
+	
+	<event name="AVALI_CUTE_CONTEST" unique="true">
+	<text>You hear two ships, one is avali and one is the protogen, arguing on who is much cuter.</text>
+	<choice hidden="true">
+		<text>Hail the ships.</text>
+		<event>
+			<text>The Harmony Engi tell you that they have been trying to convince the Separatists to come back to the Harmony and once again embrace sameness. The Separatists refuse, wanting to live their lives in peace.</text>
+			<choice hidden="true">
+				<text>Side with the Harmony.</text>
+				<event>
+					<text>Neither ship seems particularly disturbed at you getting involved, and the Separatist continues to fight as if nothing had changed.</text>
+					<ship load="AVALI_CUTE_CONTEST_AVALI_CHOICE" hostile="true"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Side with the Separatist.</text>
+				<event>
+					<text>"Impossible. Failure to honor truce. Federation has broken promise. Fight imminent."</text>
+					<ship load="AVALI_CUTE_CONTEST_PROTOGEN_CHOICE" hostile="true"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Fly away.</text>
+		<event>
+			<text>You can hear the shots of the two ships echoing through your comms until you're a safe distance away.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+	<event name="AVALI_CUTE_CONTEST_AVALI_CHOICE_WIN">
+	<text>"Success achieved. Gratitude is ours. Accept [Drone] as reward." The Engi ship jumps away, accepting the fate of the Separatist ship as necessary.</text>
+	<autoReward level="MED">standard</autoReward>
+	<crewMember amount="1" class="avali" />
+	</event>
+	<event name="AVALI_CUTE_CONTEST_PROTOGEN_CHOICE_WIN">
+	<text>"An unfortunate death. We wish the Harmony would leave this sector. Still, I thank you Federation. Perhaps if I take refuge on your ship, I will be safe from their scouts."</text>
+	<autoReward level="MED">standard</autoReward>
+	<crewMember amount="1" class="protogen" />
+	</event>
+
+	<event name="AVALI_PROTOGEN_MANIC" unique="true">
+		<text>You get hailed by a manic protogen raving about the legendary Tracker the Protogen - you attempt to disconnect but immediately get attacked by said protogen ship.</text>
+		<choice hidden="true">
+			<text>Prepare to fight.</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+		<choice hidden="true" req="protogen_tracker">
+			<text>(TRACKER) Show the "Legendary" Protogen.</text>
+			<event>
+				<text>Your crew determines he has some kind of mind erosion, not uncommon for elderly Zoltan as their hard-light forms start to deteriorate. They manage to talk some sense into the Zoltan, and convince him to stand down while they take a look at his situation. They manage to patch him up, and in return he joins your crew.</text>
+				<achievement silent="false">TCC_PROTOGEN_SKILL_ISSUE</achievement>
+				<crewMember amount="1" class="zoltan"/>
 			</event>
 		</choice>
-		<choice>
-			<text>Nope, not dealing with this.</text>
+		<choice hidden="true">
+			<text>Ignore them.</text>
 			<event>
-				<text>You have much better things to be doing.</text>
+				<text>You've barely started your journey, and you don't intend to dedicate time to listen to the ramblings of a grumpy Zoltan elder.</text>
 				<choice>
-					<text>Do something on-board the ship.</text>
-					<event load="STORAGE_CHECK" />
+					<text>Do something onboard the ship.</text>
+					<event load="STORAGE_CHECK"/>
 				</choice>
 				<choice>
 					<text>Do nothing.</text>
-					<event />
+					<event/>
 				</choice>
 			</event>
 		</choice>
 	</event>
 
-	<ship name="MU_BOSS_ENGINEER_C" auto_blueprint="MU_BOSS_ENGINEER_C">
-		<destroyed load="DESTROYED_ENGINEER_RENEGADE" />
-		<deadCrew load="DEAD_CREW_ENGINEER_RENEGADE" />
-	</ship>
+	<!--AVALI_EVENT_EMPTY-->
+	<event name="AVALI_ABANDONED">
+	<text load="AVALI_ABANDONED_TEXT"/>
+	<choice>
+		<text>Do something onboard the ship.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	<choice>
+		<text>Do nothing.</text>
+		<event/>
+	</choice>
 
-	<ship name="ARS_FED_AUTOSHIP" auto_blueprint="ARS_FED_AUTOSHIP">
-		<destroyed load="DESTROYED_AUTO_DAMAGED" />
-	</ship>
-
-	<event name="DESTROYED_ENGINEER_RENEGADE">
-		<text>One last explosion marks the engineer's fate, as his ship breaks apart. You quickly collect what remains.</text>
-		<autoReward level="MED">standard</autoReward>
-		<choice>
-			<text>Contact the Avali.</text>
-			<event load="AVALI_ARGUMENT_CONTACT_ILLUMINANT" />
-		</choice>
 	</event>
+	<textList name="AVALI_ABANDONED_TEXT">
+	<text>The charts indicate this was the location of a small skirmish over an Avali facility on a nearby moon. Oddly, scans pick up no signs of debris from either the battle or the station. Yet another area sucked dry by either Scrappers or scavengers</text>
+	<text>Scans show no signs of any ships or settlements nearby. You have no way of knowing if the area was always uninhabited or if it was simply erased by Scrappers or scavengers.</text>
+	<text>This beacon is void of Scrappers, Protogens, Avalis, pirates, or any other ship for that matter.</text>
+	<text>In the nearby, completely destroyed settlement, scans reveal no signs of life. The corpses showed signs of scrapper parasite and grafted scrap, and their bodies had been grafted and destroyed all the buildings in the settlement completely.</text>
+	<text>The demolished and remaining parts of an Avali settlement suggest either a scrapper parasite infection or a skirmish either by pirate or rebel forces. Either way, the beacon is now empty.</text>
+	</textList>
+	
+	<event name="AVALI_EMPTY_STAR">
+	<text load="AVALI_EMPTY_STAR_TEXT"/>
+	<choice>
+		<text>Do something onboard the ship.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	<choice>
+		<text>Do nothing.</text>
+		<event/>
+	</choice>
 
-	<event name="DEAD_CREW_ENGINEER_RENEGADE">
-		<text>The mighty cruiser vessel's engines stutter to a halt, as the last lifeform reading fades away. While scrapping the hull, you find a functional drone schematic, it may have failed its old master, but hopefully it'll serve you better.</text>
-		<autoReward level="HIGH">standard</autoReward>
-		<drone name="LIST_DRONES_MADOK" />
-		<choice>
-			<text>Contact the Avali.</text>
-			<event load="AVALI_ARGUMENT_CONTACT_ILLUMINANT" />
-		</choice>
 	</event>
-
-	<event name="AVALI_ARGUMENT_CONTACT_ILLUMINANT">
-		<text>The Illuminant hails you: "Thanks for the help, I would've been toast if I had to fight him any longer. Here, a sample of the medicine I was selling, as a sign of my appreciation!" Upon reading the label, you are sickened to discover the side effects of these pills include "Turning into Avali". Did you pick the right side here...?</text>
+	<textList name="AVALI_EMPTY_STAR_TEXT">
+	<text back="BG_DARK" planet="NONE">The beacon is empty, devoid of life. There are no signs of stars or planets either; there is nothing but you and this beacon.</text>
+	<text back="BG_DARK" planet="NONE">The beacon is located far away from systems populated by Avali. devoid of any stars or planets.</text>
+	<text back="BG_DARK" planet="NONE">[This Dialog Is Empty For Now Until Either You Or I Think Of A New Dialog]</text>
+	</textList>
+	
+	<event name="AVALI_STATION_PARASITE" unique="true">
+	<text>You arrive near a damaged and dilapidated Avali settlement. The life scanners on the ship picked up a group of avali that seem to be contaminated with a scrapper parasite.</text>
+	<choice hidden="true" req="LIST_CHECK_ANY_CREW" lvl="1" blue="false">
+		<text>Board the settlement and look for survivors.</text>
+		<event load="AVALI_STATION_PARASITE_LIST"/>
+	</choice>
+	<choice hidden="true" req="LIST_CHECK_ANY_CREW" lvl="0" max_lvl="0" blue="false">
+		<text>The AI advises against boarding without any reinforcements aboard your ship.</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true">
+		<text>Scrap some of the debris.</text>
+		<event>
+			<text>While waiting for the FTL drive to charge, you skirt around the edge of the settlement and collect some scrap.</text>
+			<autoReward level="RANDOM">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="LIST_CREW_SLUG">
+		<text>(Slug Crew) Your Slug senses lifeforms aboard the ship, none of them look promising.</text>
+		<event>
+			<text>Following your Slug's advice, you decide to avoid the settlement. While waiting for the FTL drive to charge, you skirt around the edge of the settlement and collect some scrap.</text>
+			<autoReward level="RANDOM">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="BLUELIST_CREW_SNAIL">
+		<text>(Telepathic Shell) Your Shell senses lifeforms aboard the ship, none of them look promising.</text>
+		<event>
+			<text>Following your Shell's advice, you decide to avoid the settlement. While waiting for the FTL drive to charge, you skirt around the edge of the settlement and collect some scrap.</text>
+			<autoReward level="RANDOM">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="LIFE_SCANNER">
+		<text>(Lifeform Scanners) Run scans on the settlement.</text>
+		<event>
+			<text>Scans show quite the depressing scene inside. Most of the packs have shown signs of parasites. It's best not to go anywhere near the settlement and just scrap the hull instead.</text>
+			<autoReward level="RANDOM">scrap_only</autoReward>
+		</event>
+	</choice>
+	</event>
+	
+	<eventList name="AVALI_STATION_PARASITE_LIST">
+	<event>
+		<text>All around you is the pack of Avali, which has been infected by the parasite. The life sign readings must have been malfunctioning because you really doubt anything could be alive in here. You quickly return to the ship.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>A pack of Avalis is scattered across the settlement, dismantling the structures for scrap. You find the source of the signal, a lone survivor that locked themselves in a storage closet. You quickly retreat with them in tow back to the ship, and hope they can recover enough to be of some use.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+		<crewMember amount="1" class="avali"/>
+	</event>
+	<event>	
+		<text>All around you is the pack of Avali, which has been infected by the parasite. Suddenly, the parasite caught one of the crew members, causing them to experience hallucinations and develop an urge to consume scraps. You pull back to the ship, but it looks like your infected crewmember is now at your tail, wanting to dismantle your ship for scrap.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
 		<choice hidden="true">
-			<text>Accept.</text>
+			<text>Continue...</text>
 			<event>
-				<text>The Illuminant transfers the pills to you, and gives you a friendly wave before jumping away. (event unfinished, no pills yet, take consolation prize)</text>
-				<autoReward level="LOW">standard</autoReward>
+				<text>You shoot the leg of an infected crewmember and leave it behind, not wanting to endanger your ship or the rest of the crew. Knowing the truth of this, you hurry back to the ship.</text>
+				<removeCrew>
+					<clone>false</clone>
+					<text>You stop your crew's clone from forming, knowing that the parasite would follow into his next life.</text>
+				</removeCrew>
 			</event>
 		</choice>
-		<choice hidden="true">
-			<text>No, these are awful.</text>
+		<choice hidden="true" req="medbay" lvl="2">
+			<text>(Improved Medbay) Try to cure the parasite.</text>
 			<event>
-				<text>"Oh, really? Well, if you aren't taking them, I guess you're just a traveller. But... if you're a traveller, that means you can take me to more sectors to sell my medication!" Before you can protest, the Illuminant is already abandoning her ship to join your crew.</text>
-				<crewMember amount="1" class="avali">Robin</crewMember>
+				<text>Your advanced medical suite is able to isolate the cause of the problem and administer an antidote. That was a close one.</text>
 			</event>
 		</choice>
 	</event>
+	</eventList>
 
-	<event name="INSTANT_ISSUES">
-        <text>You're hailed by a Federation Autoship trying to sell you insta-noodles... It's strange, considering the fact that the auto-ship seems to be of a military type. It's also malfunctioning, seemingly trying to power up weapons.</text>
-        <ship load="ARS_FED_AUTOSHIP" hostile="false"/>
-        <choice hidden="true" req="LIST_CREW_PROTOGEN">
-            <text>(Protogen Crew) Have your protogen fix the Autoship.</text>
-            <event>
-                <text>Your Protogen manages to fix the malfunctioning Autoship and makes it dispense Noodle Rations everywhere. It also allows you to access its store interface.</text>
-                <store>STORE_NOODLE</store>
-                <augment name="NOODLE_RATIONS"/>
-            </event>
-        </choice>
-        <choice hidden="true" req="LIST_CREW_RSA">
-            <text>(RSA Crew) Have your RSA crew fix the auto-ship.</text>
-            <event>
-                <text>Your RSA member uses their years of experience to fix the malfunctioning Autoship and makes it dispense Noodle Rations everywhere. It also allows you to access its store interface.</text>
-                <store>STORE_NOODLE</store>
-                <augment name="NOODLE_RATIONS"/>
-            </event>
-        </choice>
-        <choice hidden="true" req="LIST_CREW_ENGI">
-            <text>(Engi Crew) Have your Engi crew fix the auto-ship.</text>
-            <event>
-                <text>Your Engi fixes the malfunctioning Autoship with ease and makes it dispense Noodle Rations. It also allows you to access its store interface.</text>
-                <store>STORE_NOODLE</store>
-                <augment name="NOODLE_RATIONS"/>
-            </event>
-        </choice>
-        <choice hidden="true" req="LIST_CREW_AVALI">
-            <text>(Avali Crew) Have your Avali crew fix the auto-ship.</text>
-            <event>
-                <text>Your Avali explains that they have seen an automated merchant like this before and tries to fix the malfunctioning Autoship. It didn't exactly work, though...</text>
-                <autoReward level="LOW">standard</autoReward>
-            </event>
-        </choice>
-        <choice hidden="true">
-            <text>Try to fix the auto-ship.</text>
-            <event>
-                <text>The auto-ship dispenses several piles of noodle rations before self-destructing. You're still not sure what happened, but at least you can loot the broken Autoship...</text>
-                <augment name="NOODLE_RATIONS"/>
-                <autoReward level="LOW">standard</autoReward>
-            </event>
-        </choice>
-        <choice>
-            <text>Ignore the Autoship.</text>
-            <event/>
-        </choice>
-    </event>
+	<!--has some generic ones in it too because i dont want half of the rebel fights to be the same two lines-->
+	<textList name="TEXT_ENCOUNTER_REBEL_AVALI">
+		<text>The Rebel ship at this beacon hails, "Finally, a break from grinding those bird freaks into paste. I much prefer federation filth!"</text>
+		<text>Almost as soon as your ship slows to sublight, you receive a hail from a Rebel ship. "You're the merc that the feds hired! I thought I was stuck in this awful sector forever, time to score a promotion!"</text>
+		<!--seperation comment-->
+		<text>By the time you notice the Rebel ship behind the beacon, it's too late to avoid a fight.</text>
+		<text>A Rebel ship hails. "We did not fight a war to let a single Federation ship shatter our dreams of a better galaxy!" He locks weapons.</text>
+		<text>A Rebel ship approaches cautiously. "Personally," says the captain, "I'd have stuck with the Federation. But I'm a soldier, sir, and I'm no use without a war to fight. Raise your shields!"</text>
+		<text>You're hailed by a Rebel ship: "When the rebellion is complete you'll see the safer world we provide. Well, you won't, but you get the point." They arm weapons.</text>
+	</textList>
+	
+	<!--homeworlds events-->
+	<!--<eventList name="AVALI_EVENT_HOMEWORLDS_IMPORTANT" unused="true"></eventList>
+	<eventList name="AVALI_EVENT_HOMEWORLDS_QUEST" unused="true"></eventList>
+	<eventList name="AVALI_EVENT_HOMEWORLDS_HOSTILE" unused="true">
+		<event load="AVALI_REBEL_LIST" />
+		<event load="ENCOUNTER_PIRATE" />
+		<event load="AVALI_MEDICINE_ARGUMENT" />
+	</eventList>
+	<eventList name="AVALI_EVENT_HOMEWORLDS_NEUTRAL" unused="true">
+		<event load="AVALI_LOSTSUN_TEACH" />
+	</eventList>-->
+
+	<event name="FINISH_BEACON_AVALI">
+	<text>You've arrived at the Long-Range Beacon. When the FTL Drive is charged you can jump to the next Sector.</text>
+	<choice hidden="true">
+		<text>Explore.</text>
+		<event load="EXIT_LIST_AVALI"/>
+	</choice>
+	<choice hidden="true">
+		<text>Check the storage.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	<choice hidden="true">
+		<text>Do nothing.</text>
+		<event/>
+	</choice>
+	</event>
 
 </FTL>
-
