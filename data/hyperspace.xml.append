@@ -5770,6 +5770,7 @@ SPEED          Changes gamespeed
 
   	<mod-append:race name="rsa_tank">
   		<maxHealth>70</maxHealth>
+		<noWarning>true</noWarning>
   		<noSlot>true</noSlot>
   		<damageMultiplier>2.2</damageMultiplier>
   		<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
@@ -5890,6 +5891,7 @@ SPEED          Changes gamespeed
   	<!--//////////////// GENERIC CREW JANK /////////////////////-->
 
   	<mod-append:race name="tcc_generic_crewjank">
+	<noWarning>true</noWarning>
     	<maxHealth>0</maxHealth>
     	<repairSpeed>0</repairSpeed>
     	<canFight>false</canFight>
@@ -6749,6 +6751,7 @@ SPEED          Changes gamespeed
     </mod-append:race>
 
     <mod-append:race name="void_drain">
+	<noWarning>true</noWarning>
     	<maxHealth>100</maxHealth>
     	<repairSpeed>0</repairSpeed>
     	<canFight>false</canFight>
@@ -6804,6 +6807,7 @@ SPEED          Changes gamespeed
 
     <!--/////// RC LD BOMB DRONE //////-->  
     <mod-append:race name="rc_ld">
+      <noWarning>true</noWarning>
       <controllable>true</controllable>
       <maxHealth>15</maxHealth>
       <canFight>false</canFight>
