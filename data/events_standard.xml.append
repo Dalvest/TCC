@@ -336,6 +336,9 @@
 </event>
 
 <event name="STOREEVENT_RSA_BOMB_FLAKS">
+	<beaconType id="map_icon_store_rsa" global="false">
+		<color r="175" g="80" b="20" a="1.0"/>
+	</beaconType>
 	<text>As soon as you enter the beacon, you're hailed by an RSA Mantis ship nearby: "I welcome you to our bomb flak store! Here, we selling many bomb flaks! ...And other things, because no one is buying them necause theg are thinking they are filthy minelaunchers! They are not!"</text>
 	<ship load="RSA_BOMB_FLAK_MANT" hostile="false"/>
 	<choice req="BLUELIST_MANTIS_DUMB">
