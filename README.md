@@ -1,7 +1,7 @@
 # TCC
 
 Trash Compactor Collection Add-On for the popular game FTL: Multiverse.
-Current Version: 1.2.1 
+Current Version: 1.3.1 
 
 # DEVELOPERS
 
@@ -47,6 +47,107 @@ NEW SECTORS AND EVENTS
 
 
 # CHANGELOG
+
+## Update 1.3.1
+
+- Adjusted Elemental B
+- Adjusted the Superboss
+- Added playable Superboss
+- Made Omega Flak less laggy
+- Added Avali Drone (Sprite by R4V3)
+- Added Super Unstable Flak (Not sprited yet)
+- Added Linked Elemental Flaks (TODO)
+- Added Techlance B (Sprite Unfinished)
+
+- Nerfed Echalon event
+- Fixed some lists
+- Fixed Prismatic Plating
+- Fixed Heavy Scrappers doing double system damage
+- Fixed boarders getting kidnapped in the merged fight
+- Fixed Sharpened Teeth giving infinite scrap and hull when combined with Repair Arm (TODO)
+- Fixed Scrapper Boon not working
+- Fixed Adamantine power surge
+- Various bugfixes
+
+### Trash Compactor Collection V1.3 - Elemental Update
+New Features:
+- Added a second Trash Compactor questline permanently unlocked after completing the first one! (You will need to re-beat the first questline once)
+- Added an achievement
+- Added an infographic about the scrapper upgrades
+- Added 5 new playable ship layouts
+- New weapons/drones/augments/crew
+- New items in the Compactor (requires completion of the second quest)
+- Changed Zog
+- The TC fights now use the Avali Battle theme created by Maddie Doktor
+- Added the Corrosus unlock event
+- Added random Scrapper encounters
+- Added an optional superboss (Its extremely hard)
+
+Changes:
+- Rebalanced some fights
+- Rebalanced some playable ships
+- Rebalanced some weapons
+- The Crewsers are now unlocked normally
+- You can now recycle the Recycler Bomb Flak
+- Some TCC crew can appear on enemy ships
+- Removed Instant Flair
+
+- The initial TC meeting now gives resources as well as the scrap transmitter
+- Gave the TC quests higher priority (they are now quest immune, fleet immune, and will try to spawn in the same sector)
+- Advanced Scrap Processor is now unlocked after completing TC Quest 1 and Elemental Scrappers are unlocked after completing TC Quest 2
+- Purchasing/upgrading Scrappers is significantly cheaper
+- Reworked Scrapper lab upgrades
+- You can now see some enemies before choosing to engage
+- The Trash Meet event stops showing up you if you ignore it for long enough
+
+Fixes:
+- Removed TCC equipment from the FR Commonwealth sector
+- Fixed many, many bugs in the scrapper upgrade menu
+- Fixed Scrappers having off center animations
+- Fixed Scrapper Defenders increasing the amount of damage crew take
+- Other various fixes
+
+### Update 1.2.7:
+- Fixed TRC unintentionally being a dependency (oops)
+
+### Update 1.2.6:
+- Fixed TC3 not having enough weapons power
+- Fixed a bunch of incorrect sector ID's and added more crew to some sector pools, the following races are more likely to be found:
+    Super Elite Federation Phoenix Squad Operator
+    Elite Federation Scientist
+    Kivie
+    Elite RSA Technician
+    Sentient
+    Sentient Machinist
+    Sentient Researcher
+    Elite Sentient Gunner
+    Elite Sentient Law Enforcement Scout
+    Elite RSA Hive Mantis
+    Protogen
+    Elite Protogen Space Scavenger
+    Sergal
+    Cheetah
+    Avali
+    Elite Avali Illuminant
+- Increased cooldowns on all bomb flaks and added them to stores
+
+### Update 1.2.5:
+- Fixed the missing shield images on all the playable ships
+
+### Update 1.2.4:
+- Fixed Auto Gunboat B missing some doors
+- Gave energy shield bypass to the fourth, fifth, and sixth Trash Compactor encounters
+- Fixed being unable to salvage with scrappers or Trash Eater after doing a regular salvage
+- Re-added addon icon
+- Added the scrapper boon
+- Added 3 achievements
+
+### Update 1.2.3:
+- Buffed the fifth and sixth Trash Compactor fights
+
+### Update 1.2.2:
+- Fixed base MV ships having level 20 weapon systems
+- Fixed FTLman crying in pain every time the addon was patched
 
 ### Update 1.2.1
 - Updated for Multiverse 5.5
