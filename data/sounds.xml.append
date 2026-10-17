@@ -70,6 +70,7 @@
 <!--///////////////////// RC LD BOMB DRONE DEATH  //////////////////////////-->
 <boomerDeath volume="8">aliens/tcc_sfx_boomer_death.ogg</boomerDeath>
 
+<tc_you_win volume="10">weapons/tc_you_win.ogg</tc_you_win>
 
 <!--///////////////////// MUSIC //////////////////////////-->
 
@@ -84,4 +85,12 @@
 		<explore>tc_MUS_AvaliEXPLORE.ogg</explore>
 		<combat>tc_MUS_AvaliBATTLE.ogg</combat>
 	</track>
+</music>
+
+<music>
+    <track>
+        <name>tc_fight</name>
+        <explore>tc_MUS_AvaliEXPLORE.ogg</explore>
+		<combat>tc_MUS_AvaliBATTLE.ogg</combat>
+    </track>
 </music>

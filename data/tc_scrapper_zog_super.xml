@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+<img x="-53" y="-90" w="561" h="602" />
+<offsets>
+	<floor x="280" y="301" />
+	<cloak x="0" y="0" />
+</offsets>
+<weaponMounts>
+	<mount x="80" y="130" rotate="false" mirror="true" gib="-1" slide="left" />
+	<mount x="480" y="130" rotate="false" mirror="false" gib="-1" slide="right" />
+	<mount x="50" y="225" rotate="false" mirror="true" gib="-1" slide="left" />
+	<mount x="510" y="225" rotate="false" mirror="false" gib="-1" slide="right" />
+	<mount x="180" y="95" rotate="false" mirror="false" gib="-1" slide="left" />
+	<mount x="380" y="95" rotate="false" mirror="true" gib="-1" slide="right" />
+	<mount x="155" y="60" rotate="false" mirror="true" gib="-1" slide="left" />
+	<mount x="410" y="60" rotate="false" mirror="false" gib="-1" slide="right" />
+	<mount x="255" y="135" rotate="false" mirror="false" gib="-1" slide="up" />
+</weaponMounts>
+<thrusters sync="true">
+    <thruster x="0" y="0">zog_boss_prismatic_overlay</thruster>
+</thrusters>
+<explosion />
+

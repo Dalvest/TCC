@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FTL>
+
+<!--Addon Icon picture path is the following img/addons/[lowercase event name without the ADDON_ prefix] with either the _on.png or _select2.png suffix.
+example: 
+img/addons/trc_on.png
+img/addons/trc_select2.png
+-->
+<event name="ADDON_TCC"> <!--Put the _DISABLED suffix to ensure that the icon gets clobbered by the non disabled version if it exist-->
+	<!--Text shown when hovering the icon-->
+	<hover-text>TRASH COMPACTOR COLLECTION 
+	Click to see more info.</hover-text>
+	
+	<!--Event text shown when selecting the icon-->
+	<text>TRASH COMPACTOR COLLECTION
+	Currently developed by Zuggo. 
+
+	Previously developed by Zuggo, Dalvest, Enchanter, Cryntolov, Ashley, NitronEXE, LandGreen, Choosechee, ConMan, Kommandant_Julk, Vertaalfout, Pedrosian96
+
+NEW WEAPONS
+    Singularity Projectors, big gatling guns, Flaks of all kinds, sizes and shapes and so much more!
+
+NEW SHIPS
+    Featuring the Scrapper Lanius ship line as well as Protogen Project, Avali, RECLAIM and SALVAGE, Echelon Shipyards and MORE!
+    Also featuring the Extraelite packs - hunt down specific targets with specific, high-powered setups!
+
+NEW RACES
+    Lanius Scrappers, Protogens, Avali, Sergals, Sentient Robots, Kivies and Tabaxis join the fight!
+
+NEW EVENTS
+    Trash Compactor Questline!</text>	
+</event>
+
+</FTL>

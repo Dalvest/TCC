@@ -53,189 +53,76 @@
 
 <!--//////////////// APPEND TCC EVENTS TO EXISTENT SECTORS /////////////////-->
 
-<mod:findName type="sectorDescription" name="STANDARD_SPACE">
+<mod:findLike type="sectorDescription">
 	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
+</mod:findLike>
 
 <mod:findName type="sectorDescription" name="SECTOR_FREEMANTIS">
 	<mod-append:priorityEvent name="FREEMANTIS_BOMB_FLAKS" min="0" max="1" priority="7"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_LANIUS">
+<mod:findName type="sectorDescription" name="SECTOR_LANIUS_UNIQUE">
 	<mod-append:priorityEvent name="SCRAPPER_SLAVES" min="1" max="1" priority="3"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_FEDERATION">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_ENGI">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+	<mod-append:priorityEvent name="SCRAPPER_ENCOUNTER_LIST" min="1" max="1" priority="1"/>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_SEPARATIST">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_ZOLTAN">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_ORCHID">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_VAMPWEED">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_CRYSTAL">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_OUTCAST">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_LOSTSUN">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_PIRATE">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_REBEL">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_AUTO">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_MANTIS">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+<mod:findName type="sectorDescription" name="SECTOR_HIVE">
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ROCK">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC">
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_DUSKBRINGER">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+<mod:findName type="sectorDescription" name="SECTOR_UNEXPLORED_GENERIC">
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ABANDONED">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_NEBULA">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_SLUG">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_CLAN">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_SHELL">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_MORPH">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_LEECH">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_MONK">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_GHOST">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+<mod:findName type="sectorDescription" name="SECTOR_VAGABOND">
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_DYNASTY">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_COALITION">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_ABYSS">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_SLUG_HEKTAR">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_ABANDONED_HEKTAR">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC_HEKTAR">
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_PIRATE_HEKTAR">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_NEBULA_HEKTAR">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_ORIGINS">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_AUGMENTED">
-	<mod-append:priorityEvent name="TRASH_MEET" min="1" max="1" priority="3" req="TC_TRASH_FIRSTMEET"/>
-	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="2" priority="1"/>
+<mod:findName type="sectorDescription" name="SECRET_AUGMENTED">
+	<mod-append:Event name="SCRAPPER_ENCOUNTER_LIST" min="0" max="1" priority="1"/>
 </mod:findName>
 
 <!--//////////////// SECTOR RARITY STUFF /////////////////-->
 
-<mod:findName type="sectorDescription" name="SECTOR_CIVILIAN">
+<mod:findName type="sectorDescription" name="STANDARD_SPACE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="avali" rarity="3" />
+		<mod-append:blueprint name="protogen" rarity="3" />
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_UNION">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="TC_MILITIA_1" rarity="4" />
 		<mod-append:blueprint name="TC_MILITIA_2" rarity="5" />
@@ -253,13 +140,14 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="4" />
 		<mod-append:blueprint name="TC_ESKA" rarity="5" />
 		<mod-append:blueprint name="TC_TONFA" rarity="5" />
-		<mod-append:blueprint name="avali" rarity="5" />
-		<mod-append:blueprint name="protogen" rarity="5" />
-		<mod-append:blueprint name="robottos" rarity="5" />
+		<mod-append:blueprint name="avali" rarity="3" />
+		<mod-append:blueprint name="protogen" rarity="3" />
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_CIVILIAN_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_UNION_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="TC_MILITIA_1" rarity="3" />
 		<mod-append:blueprint name="TC_MILITIA_2" rarity="4" />
@@ -278,13 +166,16 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="4" />
 		<mod-append:blueprint name="TC_ESKA" rarity="4" />
 		<mod-append:blueprint name="TC_TONFA" rarity="4" />
-		<mod-append:blueprint name="avali" rarity="5" />
-		<mod-append:blueprint name="protogen" rarity="5" />
-		<mod-append:blueprint name="robottos" rarity="5" />
+		<mod-append:blueprint name="avali" rarity="3" />
+		<mod-append:blueprint name="avali_illuminant" rarity="5" />
+		<mod-append:blueprint name="protogen" rarity="3" />
+		<mod-append:blueprint name="protogen_space_scavenger" rarity="4" />
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_MILITIA">
+<mod:findName type="sectorDescription" name="SECTOR_MILITIA_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="TC_MILITIA_1" rarity="3" />
 		<mod-append:blueprint name="TC_MILITIA_2" rarity="4" />
@@ -303,8 +194,18 @@
 		<mod-append:blueprint name="TC_TEAR_GAS" rarity="3" />
 		<mod-append:blueprint name="TC_ESKA" rarity="4" />
 		<mod-append:blueprint name="TC_TONFA" rarity="4" />
-		<mod-append:blueprint name="avali" rarity="5" />
-		<mod-append:blueprint name="robottos" rarity="5" />
+		<mod-append:blueprint name="avali" rarity="3" />
+		<mod-append:blueprint name="avali_illuminant" rarity="5" />
+		<mod-append:blueprint name="protogen" rarity="3" />
+		<mod-append:blueprint name="protogen_space_scavenger" rarity="4" />
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="robottos_researcher" rarity="4" />
+		<mod-append:blueprint name="robottos_machinist" rarity="4" />
+		<mod-append:blueprint name="robottos_gunner" rarity="5" />
+		<mod-append:blueprint name="robottos_police" rarity="5" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
+		<mod-append:blueprint name="human_phoenix" rarity="5" />
+		<mod-append:blueprint name="human_hazmat" rarity="4" />
 	</mod:findLike>
 </mod:findName>
 
@@ -315,13 +216,37 @@
 		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
 		<mod-append:blueprint name="human_phoenix" rarity="5" />
 		<mod-append:blueprint name="human_hazmat" rarity="4" />
-		<mod-append:blueprint name="avali" rarity="5" />
-		<mod-append:blueprint name="protogen" rarity="5" />
+		<mod-append:blueprint name="avali" rarity="3" />
+		<mod-append:blueprint name="protogen" rarity="3" />
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
 	</mod:findLike>
 	<mod-append:priorityEvent name="ECHELON_MERCHANT_MEETUP" min="1" max="1" priority="1" req="tc_found_echelon" lvl="0" max_lvl="0"/>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ENGI_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_FEDERATION_UNIQUE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_MINIGUN_MK1" rarity="3" />
+		<mod-append:blueprint name="TC_MINIGUN_MK2" rarity="4" />
+		<mod-append:blueprint name="TC_MINIGUN_MK3" rarity="5" />
+		<mod-append:blueprint name="human_phoenix" rarity="5" />
+		<mod-append:blueprint name="human_hazmat" rarity="4" />
+		<mod-append:blueprint name="avali" rarity="3" />
+		<mod-append:blueprint name="avali_illuminant" rarity="5" />
+		<mod-append:blueprint name="protogen" rarity="3" />
+		<mod-append:blueprint name="protogen_space_scavenger" rarity="4" />
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="robottos_researcher" rarity="4" />
+		<mod-append:blueprint name="robottos_machinist" rarity="4" />
+		<mod-append:blueprint name="robottos_gunner" rarity="5" />
+		<mod-append:blueprint name="robottos_police" rarity="5" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
+		<mod-append:blueprint name="sergal" rarity="4" />
+	</mod:findLike>
+	<mod-append:priorityEvent name="ECHELON_MERCHANT_MEETUP" min="1" max="1" priority="1" req="tc_found_echelon" lvl="0" max_lvl="0"/>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_HARMONY_UNIQUE">
 	<mod-append:priorityEvent name="ECHELON_MERCHANT_MEETUP" min="1" max="1" priority="1" req="tc_found_echelon" lvl="0" max_lvl="0"/>
 </mod:findName>
 
@@ -363,6 +288,11 @@
 		<mod-append:blueprint name="NOVA_MK2" rarity="5" />
 		<mod-append:blueprint name="NOVA_MK3" rarity="5" />
 		<!--<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="5" />-->
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="robottos_researcher" rarity="4" />
+		<mod-append:blueprint name="robottos_machinist" rarity="4" />
+		<mod-append:blueprint name="robottos_gunner" rarity="5" />
+		<mod-append:blueprint name="robottos_police" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -374,10 +304,15 @@
 		<mod-append:blueprint name="NOVA_MK2" rarity="4" />
 		<mod-append:blueprint name="NOVA_MK3" rarity="5" />
 		<!--<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="5" />-->
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="robottos_researcher" rarity="4" />
+		<mod-append:blueprint name="robottos_machinist" rarity="4" />
+		<mod-append:blueprint name="robottos_gunner" rarity="5" />
+		<mod-append:blueprint name="robottos_police" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_JERRY">
+<mod:findName type="sectorDescription" name="SECRET_JERRY">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="REBEL_DART" rarity="2" />
 		<mod-append:blueprint name="TC_CLOAKER" rarity="2" />
@@ -388,20 +323,104 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ABANDONED">
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC">
 	<mod:findLike type="rarityList">
-		<mod-append:blueprint name="scrapper" rarity="4" />
+		<mod-append:blueprint name="scrapper" rarity="3" />
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_LANIUS">
+<mod:findName type="sectorDescription" name="SECTOR_LANIUS_UNIQUE">
 	<mod:findLike type="rarityList">
-		<mod-append:blueprint name="scrapper" rarity="4" />
+		<mod-append:blueprint name="scrapper" rarity="3" />
 		<mod-append:blueprint name="scrapper_soldier" rarity="4" />
 		<mod-append:blueprint name="scrapper_engineer" rarity="4" />
 		<mod-append:blueprint name="scrapper_speed" rarity="4" />
 		<mod-append:blueprint name="scrapper_defender" rarity="4" />
 		<mod-append:blueprint name="scrapper_heavy" rarity="5" />
+		<mod-append:blueprint name="protogen" rarity="3" />
+		<mod-append:blueprint name="protogen_space_scavenger" rarity="4" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_PIRATE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="robottos_researcher" rarity="4" />
+		<mod-append:blueprint name="robottos_machinist" rarity="4" />
+		<mod-append:blueprint name="robottos_gunner" rarity="5" />
+		<mod-append:blueprint name="robottos_police" rarity="5" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
+		<mod-append:blueprint name="sergal" rarity="4" />
+		<mod-append:blueprint name="kiviekith" rarity="3" />
+		<mod-append:blueprint name="rsa_technician" rarity="5" />
+		<mod-append:blueprint name="mantis_rsa" rarity="3" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_PIRATE_UNIQUE">
+	<mod-append:priorityEvent name="BLACK_ROSE_ENCOUNTER" min="1" max="1" priority="3"/>
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="robottos_researcher" rarity="4" />
+		<mod-append:blueprint name="robottos_machinist" rarity="4" />
+		<mod-append:blueprint name="robottos_gunner" rarity="5" />
+		<mod-append:blueprint name="robottos_police" rarity="5" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
+		<mod-append:blueprint name="sergal" rarity="4" />
+		<mod-append:blueprint name="kiviekith" rarity="3" />
+		<mod-append:blueprint name="rsa_technician" rarity="4" />
+		<mod-append:blueprint name="mantis_rsa" rarity="3" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_PIRATE_HEKTAR">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="robottos" rarity="3" />
+		<mod-append:blueprint name="robottos_researcher" rarity="4" />
+		<mod-append:blueprint name="robottos_machinist" rarity="4" />
+		<mod-append:blueprint name="robottos_gunner" rarity="5" />
+		<mod-append:blueprint name="robottos_police" rarity="5" />
+		<mod-append:blueprint name="cheetah" rarity="4" />
+		<mod-append:blueprint name="sergal" rarity="4" />
+		<mod-append:blueprint name="kiviekith" rarity="3" />
+		<mod-append:blueprint name="rsa_technician" rarity="5" />
+		<mod-append:blueprint name="mantis_rsa" rarity="3" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_HIVE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="mantis_rsa" rarity="2" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_HIVE_UNIQUE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="mantis_rsa" rarity="2" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_IMPERIAL">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_LOCK" rarity="4" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_IMPERIAL_UNIQUE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_LOCK" rarity="4" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECRET_ORIGINS">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_LOCK" rarity="4" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECRET_ORIGINS_RUWEN">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_LOCK" rarity="4" />
 	</mod:findLike>
 </mod:findName>
 
@@ -422,6 +441,9 @@
 		<mod-append:blueprint name="CATALYZER" rarity="0" />
 		<mod-append:blueprint name="NOODLE_RATIONS" rarity="0" />
 		<mod-append:blueprint name="scrapper" rarity="0" />
+		<mod-append:blueprint name="scrapper_soldier" rarity="0" />
+		<mod-append:blueprint name="scrapper_engineer" rarity="0" />
+		<mod-append:blueprint name="scrapper_medic" rarity="0" />
 		<mod-append:blueprint name="kiviekith" rarity="0" />
 		<mod-append:blueprint name="rsa_technician" rarity="0" />
 		<mod-append:blueprint name="robottos" rarity="0" />
@@ -430,6 +452,20 @@
 		<mod-append:blueprint name="protogen_space_scavenger" rarity="0" />
 		<mod-append:blueprint name="avali" rarity="0" />
 		<mod-append:blueprint name="sergal" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_1" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_2" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_3" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_4" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_BREACH" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CHAIN" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CHARGE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_FREE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CONSERVATIVE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_INSTANT" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_FIRE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_ION" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_BIO" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_LOCK" rarity="0" />
 	</mod:findLike>
 </mod:findName>
 
@@ -450,6 +486,9 @@
 		<mod-append:blueprint name="CATALYZER" rarity="0" />
 		<mod-append:blueprint name="NOODLE_RATIONS" rarity="0" />
 		<mod-append:blueprint name="scrapper" rarity="0" />
+		<mod-append:blueprint name="scrapper_soldier" rarity="0" />
+		<mod-append:blueprint name="scrapper_engineer" rarity="0" />
+		<mod-append:blueprint name="scrapper_medic" rarity="0" />
 		<mod-append:blueprint name="kiviekith" rarity="0" />
 		<mod-append:blueprint name="rsa_technician" rarity="0" />
 		<mod-append:blueprint name="robottos" rarity="0" />
@@ -458,6 +497,86 @@
 		<mod-append:blueprint name="protogen_space_scavenger" rarity="0" />
 		<mod-append:blueprint name="avali" rarity="0" />
 		<mod-append:blueprint name="sergal" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_1" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_2" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_3" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_4" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_BREACH" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CHAIN" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CHARGE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_FREE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CONSERVATIVE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_INSTANT" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_FIRE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_ION" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_BIO" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_LOCK" rarity="0" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECRET_SYLVAN">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="human_phoenix" rarity="4" />
+		<mod-append:blueprint name="human_hazmat" rarity="3" />
+		<mod-append:blueprint name="avali" rarity="2" />
+		<mod-append:blueprint name="avali_illuminant" rarity="3" />
+		<mod-append:blueprint name="protogen" rarity="2" />
+		<mod-append:blueprint name="protogen_space_scavenger" rarity="3" />
+		<mod-append:blueprint name="robottos" rarity="2" />
+		<mod-append:blueprint name="robottos_researcher" rarity="3" />
+		<mod-append:blueprint name="robottos_machinist" rarity="3" />
+		<mod-append:blueprint name="robottos_gunner" rarity="4" />
+		<mod-append:blueprint name="robottos_police" rarity="4" />
+		<mod-append:blueprint name="cheetah" rarity="3" />
+		<mod-append:blueprint name="sergal" rarity="3" />
+		<mod-append:blueprint name="kiviekith" rarity="2" />
+		<mod-append:blueprint name="rsa_technician" rarity="4" />
+		<mod-append:blueprint name="mantis_rsa" rarity="2" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECRET_FR_COMMONWEALTH">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="TC_LIGHT_SHOW" rarity="0" />
+		<mod-append:blueprint name="RSA_MINICANNON" rarity="0" />
+		<mod-append:blueprint name="RSA_TAGGER" rarity="0" />
+		<mod-append:blueprint name="TC_DECONSTRUCTOR" rarity="0" />
+		<mod-append:blueprint name="TC_RESOLVER" rarity="0" />
+		<mod-append:blueprint name="TC_SINEWAVE" rarity="0" />
+		<mod-append:blueprint name="RSA_BIOHAZARD" rarity="0" />
+		<mod-append:blueprint name="SINGULARITY_PROJECTOR_1" rarity="0" />
+		<mod-append:blueprint name="NOVA_MK1" rarity="0" />
+		<mod-append:blueprint name="NOVA_MK2" rarity="0" />
+		<mod-append:blueprint name="NOVA_MK3" rarity="0" />
+		<mod-append:blueprint name="SUPERNOVA_CATALYZER" rarity="0" />
+		<mod-append:blueprint name="CATALYZER" rarity="0" />
+		<mod-append:blueprint name="NOODLE_RATIONS" rarity="0" />
+		<mod-append:blueprint name="scrapper" rarity="0" />
+		<mod-append:blueprint name="scrapper_soldier" rarity="0" />
+		<mod-append:blueprint name="scrapper_engineer" rarity="0" />
+		<mod-append:blueprint name="scrapper_medic" rarity="0" />
+		<mod-append:blueprint name="kiviekith" rarity="0" />
+		<mod-append:blueprint name="rsa_technician" rarity="0" />
+		<mod-append:blueprint name="robottos" rarity="0" />
+		<mod-append:blueprint name="mantis_rsa" rarity="0" />
+		<mod-append:blueprint name="protogen" rarity="0" />
+		<mod-append:blueprint name="protogen_space_scavenger" rarity="0" />
+		<mod-append:blueprint name="avali" rarity="0" />
+		<mod-append:blueprint name="sergal" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_1" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_2" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_3" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_4" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_BREACH" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CHAIN" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CHARGE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_FREE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_CONSERVATIVE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_INSTANT" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_FIRE" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_ION" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_BIO" rarity="0" />
+		<mod-append:blueprint name="TC_BOMB_SHOTGUN_LOCK" rarity="0" />
 	</mod:findLike>
 </mod:findName>
 

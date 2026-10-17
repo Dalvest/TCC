@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+<img x="-122" y="-53" w="602" h="561" />
+<offsets>
+	<floor x="116" y="47" />
+	<cloak x="-4" y="0" />
+</offsets>
+<weaponMounts>
+	<mount x="472" y="83" rotate="true" mirror="true" gib="-1" slide="up" />
+	<mount x="482" y="473" rotate="true" mirror="false" gib="-1" slide="down" />
+	<mount x="377" y="53" rotate="true" mirror="true" gib="-1" slide="up" />
+	<mount x="377" y="508" rotate="true" mirror="false" gib="-1" slide="down" />
+	<mount x="537" y="148" rotate="true" mirror="true" gib="-1" slide="up" />
+	<mount x="537" y="413" rotate="true" mirror="false" gib="-1" slide="down" />
+	<mount x="457" y="256" rotate="true" mirror="false" gib="-1" slide="right" />
+</weaponMounts>
+<thrusters sync="true">
+    <thruster x="21" y="-20">tcp_zog_super_prismatic_overlay</thruster>
+</thrusters>
+<explosion />
+

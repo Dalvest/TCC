@@ -20,8 +20,11 @@ DELETECREW     Kills everyone on the enemy ship        Usage: DELETECREW
 SPEED          Changes gamespeed
 -->
 <FTL>
+	<multiShipFix enabled="true"/>
+
   <mod:findLike type="scripts">
     <mod-append:script>data/tcc_scripts/dependency.lua</mod-append:script>
+	<mod-append:script>data/tcc_scripts/augments.lua</mod-append:script>
   </mod:findLike>
 </FTL>
 <FTL><!--appending to Inferno-Core-->
@@ -63,8 +66,13 @@ SPEED          Changes gamespeed
       <name>trash_eater</name>
     </req>
 	
-    <req name="TC_TRASH_FIRSTMEET" type="any" max_lvl="0">
-      <name>tc_trash_met</name>
+    <req name="TC_TRASH_FIRSTMEET" type="all">
+		<req lvl="0" max_lvl="0">
+			<name>tc_trash_met</name>
+		</req>
+		<req lvl="0" max_lvl="1">
+			<name>loc_sector_count</name>
+		</req>
     </req>
 	
     <req name="TC_SCRAPPER_JOB_REQ" type="sum">
@@ -75,7 +83,7 @@ SPEED          Changes gamespeed
     </req>
 
     <!--///////////////AVALI EVENT STUFF/////////-->
-    <event name="INSTALL_LAB_AVALI_DENSEFLUFF">
+    <!--<event name="INSTALL_LAB_AVALI_DENSEFLUFF">
       <hiddenAug>LAB_AVALI_DENSEFLUFF</hiddenAug>
       <hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
       <loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
@@ -87,11 +95,10 @@ SPEED          Changes gamespeed
     </event>
     <event name="INSTALL_LAB_AVALI_CYBERNETIC">
       <!--pardon the naming scheme, enhanced cybernetics used to be a lab, and no clone XP was an exclusive aug to avali C, but now its external enhanced cybernetics-->
-      <hiddenAug>LAB_AVALI_NOCLONEXP</hiddenAug>
+      <!--<hiddenAug>LAB_AVALI_NOCLONEXP</hiddenAug>
       <hiddenAug>LAB_AVALI_INSTALLED</hiddenAug>
       <loadEvent>STORAGE_CHECK_LAB_AVALI</loadEvent>
-    </event>
-    <bossShip yOffset="90">MU_BOSS_ENGINEER_C</bossShip>
+    </event>-->
     <!--sector stuff-->
     <eventFile>avali</eventFile>
 	  <eventFile>rsa</eventFile>
@@ -955,7 +962,7 @@ SPEED          Changes gamespeed
                 <blueprint>trash_eater</blueprint>
             </item>
             <item>
-                <blueprint>scrapper_zog</blueprint>
+                <blueprint>unique_zog</blueprint>
             </item>
         </mod-append:category>
         <mod-append:category type="CREW">
@@ -1012,17 +1019,17 @@ SPEED          Changes gamespeed
 		<category type="WEAPONS">
 			<customTitle>WEAPONS</customTitle>
 			<item>
-				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
 				<modifier min="1" max="1" flat="false" />
 				<price>-1</price>
 			</item>
 			<item>
-				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
 				<modifier min="1" max="1" flat="false" />
 				<price>-1</price>
 			</item>
 			<item>
-				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
 				<modifier min="1" max="1" flat="false" />
 				<price>-1</price>
 			</item>
@@ -1068,17 +1075,17 @@ SPEED          Changes gamespeed
 		<category type="WEAPONS">
 			<customTitle>WEAPONS(COD3 '5CR@P' ACC3PTED!)</customTitle>
 			<item>
-				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
 				<modifier min="0.7" max="0.7" flat="false" />
 				<price>-1</price>
 			</item>
 			<item>
-				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
 				<modifier min="0.7" max="0.7" flat="false" />
 				<price>-1</price>
 			</item>
 			<item>
-				<blueprint>LIST_BOMB_SHOTGUNS</blueprint>
+				<blueprint>LIST_BOMB_SHOTGUNS_NORMAL</blueprint>
 				<modifier min="0.7" max="0.7" flat="false" />
 				<price>-1</price>
 			</item>
@@ -1134,9 +1141,8 @@ SPEED          Changes gamespeed
 
     <!--///////SCRAPPER DREADNOUGHT//////-->
 
-    <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="false">
-      <arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">PLAYER_SHIP_TRASH_EATER</arrow>
-    	<unlock variant="a" silent="false">
+    <mod-append:ship name="PLAYER_SHIP_SCRAPPER" b="true" c="true">
+	 	<unlock variant="a" silent="false">
     	   <type>4</type>
     	</unlock>
     	<unlock variant="b" silent="false">
@@ -1144,11 +1150,19 @@ SPEED          Changes gamespeed
     	   <shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
     	   <value>5</value>
     	</unlock>
-
+		<unlock variant="c" silent="false">
+            <type>2</type>
+            <shipReq>PLAYER_SHIP_SCRAPPER</shipReq>
+        </unlock>
+		<unlock variant="c" silent="false">
+            <type>1</type>
+            <shipReq>PLAYER_SHIP_SCRAPPER_2</shipReq>
+            <value>5</value>
+        </unlock>
     </mod-append:ship>
 
     <mod-append:customShip name="PLAYER_SHIP_SCRAPPER">
-      <crewLimit>8</crewLimit>
+      <crewLimit>12</crewLimit>
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
 	  <hiddenAug>ADVANCED_SCRAP</hiddenAug>
@@ -1174,25 +1188,215 @@ SPEED          Changes gamespeed
       </crew>
     </mod-append:customShip>
 
+	<mod-append:customShip name="PLAYER_SHIP_SCRAPPER_3">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_SCRAPPER</hiddenAug>
+		<crewLimit>12</crewLimit>
+		<crew>
+			<scrapper_scavenger_mk2 room="0"/>
+			<scrapper_scavenger room="1"/>
+			<scrapper_scavenger room="6"/>
+			<scrapper_scavenger room="2"/>
+		</crew>
+	</mod-append:customShip>
+
     <!--/////// TRASH EATER'S CRUISER //////-->
 
-    <mod-append:ship name="PLAYER_SHIP_TRASH_EATER" b="false" c="false">
-
+    <mod-append:ship name="PLAYER_SHIP_TRASH_EATER" b="true" c="false">
+		<splitVictoryAchievement>true</splitVictoryAchievement>
+		<splitUnlockQuestAchievement>true</splitUnlockQuestAchievement>
 		<unlock variant="a" silent="false">
-			<type>5</type>
-      <victories>
-        <victory>PLAYER_SHIP_SCRAPPER</victory>
-      </victories>
-		</unlock>
-
+            <type>4</type>
+        </unlock>
+		<unlock variant="b" silent="false">
+            <type>4</type>
+        </unlock>
     </mod-append:ship>
 
     <mod-append:customShip name="PLAYER_SHIP_TRASH_EATER">
       <crewLimit>20</crewLimit>
       <hiddenAug>SHIP_SCRAPPER</hiddenAug>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <customReactor maxLevel="50"/>
+      <customReactor maxLevel="30"/>
     </mod-append:customShip>
+	<mod-append:customShip name="PLAYER_SHIP_TRASH_EATER_2">
+      <crewLimit>20</crewLimit>
+      <hiddenAug>SHIP_SCRAPPER</hiddenAug>
+      <hiddenAug>FOR_MULTIVERSE</hiddenAug>
+	  <rooms>
+			<room id="0">
+				<roomAnim renderLayer="0">prismatic_1x1</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="1">
+				<roomAnim renderLayer="0">prismatic_2x3</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="10">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="14">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="15">
+				<roomAnim renderLayer="0">prismatic_3x1</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="16">
+				<roomAnim renderLayer="0">prismatic_3x1</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+		</rooms>
+    </mod-append:customShip>
+	<!--/////// ELEMENTAL SCRAPPERS //////-->
+
+	<mod-append:ship name="PLAYER_SHIP_ELEMENTAL" a="true" b="true" c="true">
+		<unlock variant="a" silent="false">
+    	   <type>4</type>
+    	</unlock>
+    	<unlock variant="b" silent="false">
+    	   <type>1</type>
+    	   <shipReq>PLAYER_SHIP_ELEMENTAL</shipReq>
+    	   <value>5</value>
+    	</unlock>
+		<unlock variant="c" silent="false">
+            <type>2</type>
+            <shipReq>PLAYER_SHIP_ELEMENTAL</shipReq>
+        </unlock>
+		<unlock variant="c" silent="false">
+            <type>1</type>
+            <shipReq>PLAYER_SHIP_ELEMENTAL_2</shipReq>
+            <value>5</value>
+        </unlock>
+	</mod-append:ship>
+	<mod-append:customShip name="PLAYER_SHIP_ELEMENTAL">
+		<crewLimit>12</crewLimit>
+		<hiddenAug>SHIP_SCRAPPER</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crew>
+			<rosegold_scrapper room="4"/>
+			<rosegold_scrapper_scavenger room="0"/>
+			<rosegold_scrapper_2 room="1"/>
+		</crew>
+	</mod-append:customShip>
+	<mod-append:customShip name="PLAYER_SHIP_ELEMENTAL_2">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_SCRAPPER</hiddenAug>
+		<crewLimit>12</crewLimit>
+		<customReactor maxLevel="10"/>
+		<crew>
+			<golden_scrapper room="0"/>
+			<golden_scrapper room="9"/>
+			<golden_scrapper_defender room="2"/>
+			<golden_scrapper_medic room="4"/>
+		</crew>
+	</mod-append:customShip>
+	<mod-append:customShip name="PLAYER_SHIP_ELEMENTAL_3">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_SCRAPPER</hiddenAug>
+		<crewLimit>12</crewLimit>
+		<crew>
+			<adamantine_scrapper room="0"/>
+			<adamantine_scrapper room="6"/>
+			<adamantine_scrapper_soldier room="1"/>
+			<adamantine_scrapper_soldier room="1"/>
+			<adamantine_scrapper_heavy_soldier room="1"/>
+		</crew>
+	</mod-append:customShip>
+
+	<mod-append:ship name="PLAYER_SHIP_ZOG_SUPER" a="true" b="false" c="false" >
+		<unlock variant="a" silent="false">
+            <type>4</type>
+        </unlock>
+		<unlock variant="a" silent="false">
+            <type>5</type>
+            <victories>
+				<victory>PLAYER_SHIP_SCRAPPER</victory>
+				<victory>PLAYER_SHIP_SCRAPPER_2</victory>
+				<victory>PLAYER_SHIP_SCRAPPER_3</victory>
+				<victory>PLAYER_SHIP_ELEMENTAL</victory>
+				<victory>PLAYER_SHIP_ELEMENTAL_2</victory>
+				<victory>PLAYER_SHIP_ELEMENTAL_3</victory>
+				<victory>PLAYER_SHIP_TRASH_EATER</victory>
+				<victory>PLAYER_SHIP_TRASH_EATER_2</victory>
+			</victories>
+		</unlock>
+	</mod-append:ship>
+	<mod-append:customShip name="PLAYER_SHIP_ZOG_SUPER">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_SCRAPPER</hiddenAug>
+		<crewLimit>50</crewLimit>
+		<systemLimit>12</systemLimit>
+		<!--<crew>
+			<unique_zog room="0" name="Zog"/>
+			<unique_zog room="14" name="Zog"/>
+			<unique_zog room="15" name="Zog"/>
+			<trash_eater room="1" name="Trash Eater"/>
+			<trash_eater room="1" name="Trash Eater"/>
+			<trash_eater room="6" name="Trash Eater"/>
+			<trash_eater room="7" name="Trash Eater"/>
+		</crew>-->
+		<rooms>
+			<room id="0">
+				<roomAnim renderLayer="0">prismatic_1x1</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="1">
+				<roomAnim renderLayer="0">prismatic_2x3</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="2">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="3">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="4">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="5">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="10">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="11">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="12">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="13">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="18">
+				<roomAnim renderLayer="0">prismatic_2x1</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="19">
+				<roomAnim renderLayer="0">prismatic_2x1</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="20">
+				<roomAnim renderLayer="0">prismatic_1x3</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="23">
+				<roomAnim renderLayer="0">prismatic_1x1</roomAnim>
+				<roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+		</rooms>
+	</mod-append:customShip>
 
     <!--///////KESTREL MINER//////-->
 
@@ -1311,7 +1515,7 @@ SPEED          Changes gamespeed
 		  <unique_skygirr room="14" name="Skygirr" />
 		  <protogen_tracker room="1" name="Tracker" />
 		  <cheetah room="12" name="Raul" />
-		  <scrapper_zog room="21" name="Zog" />
+		  <scrapper_scavenger_mk2 room="21"/>
 		</crew>
 	  </mod-append:customShip>
 
@@ -1322,23 +1526,26 @@ SPEED          Changes gamespeed
   			<type>3</type>
   			<otherUnlocks>
     			<ship>PLAYER_SHIP_SCRAPPER</ship>
-          <ship>PLAYER_SHIP_SCRAPPER_2</ship>
-          <ship>PLAYER_SHIP_TRASH_EATER</ship>
-    			<ship>PLAYER_SHIP_TRASH_MINER</ship>
-          <ship>PLAYER_SHIP_TRASH_MINER_2</ship>
-          <ship>PLAYER_SHIP_TRASH_MINER_3</ship>
-    			<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
-    			<ship>PLAYER_SHIP_ECHO</ship>
-          <ship>PLAYER_SHIP_ECHO_2</ship>
+          		<ship>PLAYER_SHIP_SCRAPPER_2</ship>
+				<ship>PLAYER_SHIP_SCRAPPER_3</ship>
+				<ship>PLAYER_SHIP_ELEMENTAL</ship>
+				<ship>PLAYER_SHIP_ELEMENTAL_2</ship>
+				<ship>PLAYER_SHIP_ELEMENTAL_3</ship>
   			</otherUnlocks>
   		</unlock>
   		<unlock variant="b" silent="false">
-        <type>5</type>
-        <victories>
-          <victory>PLAYER_SHIP_EXTRAELITE</victory>
-        </victories>
+        	<type>3</type>
+  			<otherUnlocks>
+    			<ship>PLAYER_SHIP_TRASH_MINER</ship>
+          		<ship>PLAYER_SHIP_TRASH_MINER_2</ship>
+          		<ship>PLAYER_SHIP_TRASH_MINER_3</ship>
+    			<ship>PLAYER_SHIP_TRASH_REACTOR</ship>
+				<ship>PLAYER_SHIP_TRASH_REACTOR_2</ship>
+    			<ship>PLAYER_SHIP_ECHO</ship>
+          		<ship>PLAYER_SHIP_ECHO_2</ship>
+  			</otherUnlocks>
   		</unlock>
-  		</mod-append:ship>
+  	</mod-append:ship>
 
   		<mod-append:customShip name="PLAYER_SHIP_EXTRAELITE">
   		<crewLimit>20</crewLimit>
@@ -1415,7 +1622,7 @@ SPEED          Changes gamespeed
   	</mod-append:ship>
 
   	<mod-append:customShip name="PLAYER_SHIP_TC_CONSTRUCTION">
-  		<hiddenAug>SHIP_CIVILIAN</hiddenAug>
+  		<hiddenAug>SHIP_UNION</hiddenAug>
   		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
   		<crewLimit>11</crewLimit>
   		<crew>
@@ -1426,7 +1633,7 @@ SPEED          Changes gamespeed
 
 	<!--/////// TECHLANCE //////-->
 
-	<mod-append:ship name="PLAYER_SHIP_TECHLANCE" b="false" c="false">
+	<mod-append:ship name="PLAYER_SHIP_TECHLANCE" b="true" c="false">
 
 		<unlock variant="a" silent="false">
 			<type>5</type>
@@ -1445,6 +1652,12 @@ SPEED          Changes gamespeed
 	</mod-append:ship>
 
 	<mod-append:customShip name="PLAYER_SHIP_TECHLANCE">
+		<hiddenAug>SHIP_RSA</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>8</crewLimit>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="PLAYER_SHIP_TECHLANCE_2">
 		<hiddenAug>SHIP_RSA</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crewLimit>8</crewLimit>
@@ -1485,7 +1698,7 @@ SPEED          Changes gamespeed
     <mod-append:customShip name="PLAYER_SHIP_SDM">
       <crewLimit>9</crewLimit>
       <hiddenAug>FOR_MULTIVERSE</hiddenAug>
-      <hiddenAug>SHIP_CIVILIAN</hiddenAug>
+      <hiddenAug>SHIP_UNION</hiddenAug>
       <crew>
         <human_phoenix room="6" name="Echo-Cap" />
         <human_soldier room="4" name="Echo-1" />
@@ -2244,6 +2457,7 @@ SPEED          Changes gamespeed
       <shipIcons>
         <shipIcon>icon_threat</shipIcon>
         <shipIcon>icon_no2</shipIcon>
+	  	<shipIcon>icon_invasion</shipIcon>
       </shipIcons>
       <noFuelStalemate/>
       <autoShipForce>false</autoShipForce>
@@ -2252,6 +2466,7 @@ SPEED          Changes gamespeed
       <shipIcons>
         <shipIcon>icon_threat</shipIcon>
         <shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
       </shipIcons>
       <noFuelStalemate/>
       <autoShipForce>false</autoShipForce>
@@ -2260,9 +2475,188 @@ SPEED          Changes gamespeed
       <shipIcons>
         <shipIcon>icon_threat</shipIcon>
         <shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
       </shipIcons>
       <noFuelStalemate/>
       <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+	<mod-append:customShip name="TC_TRASH_COMPACTOR_ROSEGOLD">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+	<mod-append:customShip name="TC_TRASH_COMPACTOR_GOLDEN">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+	<mod-append:customShip name="TC_TRASH_COMPACTOR_ADAMANTINE">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+	<mod-append:customShip name="TC_TRASH_COMPACTOR_MERGED_AG">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+		<shipIcon>icon_surge</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+	<mod-append:customShip name="TC_TRASH_COMPACTOR_MERGED_GR">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+		<shipIcon>icon_surge</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+	<mod-append:customShip name="TC_TRASH_COMPACTOR_MERGED_RA">
+      <shipIcons>
+        <shipIcon>icon_threat</shipIcon>
+        <shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+		<shipIcon>icon_surge</shipIcon>
+      </shipIcons>
+      <noFuelStalemate/>
+      <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+	<mod-append:customShip name="TC_SCRAPPER_ZOG">
+		<shipIcons>
+			<shipIcon>icon_majorthreat</shipIcon>
+			<shipIcon>icon_no2</shipIcon>
+			<shipIcon>icon_invasion</shipIcon>
+			<shipIcon>icon_prismatic</shipIcon>
+			<shipIcon>icon_surge</shipIcon>
+		</shipIcons>
+		<noFuelStalemate/>
+		<autoShipForce>false</autoShipForce>
+		<crew>
+			<unique_zog room="0" name="Zog"/>
+		</crew>
+		<rooms>
+			<room id="0">
+				<roomAnim renderLayer="0">prismatic_1x1</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="2">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="3">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="4">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="5">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+		</rooms>
+    </mod-append:customShip>
+	<mod-append:customShip name="TC_SCRAPPER_ZOG_SUPER">
+		<shipIcons>
+			<shipIcon>icon_majorthreat</shipIcon>
+			<shipIcon>icon_no2</shipIcon>
+			<shipIcon>icon_invasion</shipIcon>
+			<shipIcon>icon_prismatic</shipIcon>
+		</shipIcons>
+		<noFuelStalemate/>
+		<autoShipForce>false</autoShipForce>
+		<crew>
+			<unique_zog room="0" name="Zog"/>
+			<unique_zog room="14" name="Zog"/>
+			<unique_zog room="15" name="Zog"/>
+			<trash_eater room="1" name="Trash Eater"/>
+			<trash_eater room="1" name="Trash Eater"/>
+			<trash_eater room="6" name="Trash Eater"/>
+			<trash_eater room="7" name="Trash Eater"/>
+		</crew>
+		<rooms>
+			<room id="0">
+				<roomAnim renderLayer="0">prismatic_1x1</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="1">
+				<roomAnim renderLayer="0">prismatic_3x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="2">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="3">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="4">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="5">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="10">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="11">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="12">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="13">
+				<roomAnim renderLayer="0">prismatic_2x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<!--<room id="16">
+				<roomAnim renderLayer="0">prismatic_1x3</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="17">
+				<roomAnim renderLayer="0">prismatic_1x3</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>-->
+			<room id="18">
+				<roomAnim renderLayer="0">prismatic_1x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="19">
+				<roomAnim renderLayer="0">prismatic_1x2</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="20">
+				<roomAnim renderLayer="0">prismatic_3x1</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+			<room id="23">
+				<roomAnim renderLayer="0">prismatic_1x1</roomAnim>
+                <roomAnim renderLayer="3">prismatic_icon</roomAnim>
+			</room>
+		</rooms>
     </mod-append:customShip>
 
   	<mod-append:customShip name="RSA_DROPSHIP">
@@ -2295,8 +2689,8 @@ SPEED          Changes gamespeed
 
 			<!--Page 1--> <!-- Line 1 - Scrappers; Line 2 - The Trash Ships -->
 			<mod-append:ship>PLAYER_SHIP_SCRAPPER</mod-append:ship> <!--Scrapper Dreadnought-->
-			<mod-append:ship>PLAYER_SHIP_TRASH_EATER</mod-append:ship> <!--TE Cruiser-->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_ELEMENTAL</mod-append:ship> <!--Elemental Scrappers-->
+			<mod-append:ship>PLAYER_SHIP_TRASH_EATER</mod-append:ship> <!--Crewsers-->
 			<mod-append:empty/>
 			<mod-append:empty/>
 			<mod-append:ship>PLAYER_SHIP_ECHO</mod-append:ship> <!-- Echo 1-Liner -->
@@ -2304,7 +2698,7 @@ SPEED          Changes gamespeed
 			<mod-append:ship>PLAYER_SHIP_TRASH_MINER</mod-append:ship> <!--Kestrel Miner-->
 
 			<mod-append:ship>PLAYER_SHIP_EXTRAELITE</mod-append:ship> <!--The Extraelites-->
-			<mod-append:empty/>
+			<mod-append:ship>PLAYER_SHIP_ZOG_SUPER</mod-append:ship> <!--Superboss-->
 
 			<!--Page 2--> <!-- Line 1 - RECLAIM and SALVAGE ASSOCIATION; Line 2 - Echelon Shipyards -->
 			<mod-append:ship>PLAYER_SHIP_CORROSUS</mod-append:ship> <!--CorroSUS-->
@@ -2363,7 +2757,7 @@ SPEED          Changes gamespeed
 	<mod:findName type="customShip" name="CREW_SHIP_WITHER">
 		<mod:findLike type="crew">
 			<mod-append:trash_eater room="27" name="Trash Eater"/>
-			<mod-append:scrapper_zog room="27" name="Zog"/>
+			<mod-append:unique_zog room="27" name="Zog"/>
 			<mod-append:unique_black_rose room="26" name="Black Rose"/>
 			<mod-append:sergal_cheese room="26" name="Cheese"/>
 			<mod-append:protogen_tracker room="23" name="Tracker"/>
@@ -2400,7 +2794,7 @@ SPEED          Changes gamespeed
 			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
 			<oxygenChangeSpeed>-0.525</oxygenChangeSpeed>
 			<animBase>lanius</animBase>
-			<essential>9999999</essential>
+			<essential>1</essential>
 			<deathSounds>
 				<deathSound>shrikeDeath</deathSound>
 			</deathSounds>
@@ -2463,6 +2857,113 @@ SPEED          Changes gamespeed
 			<fireDamageMultiplier>0.75</fireDamageMultiplier>
 			<damageMultiplier>2</damageMultiplier>
 			<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+			<repairSounds>
+				<repairSound>shrikeRepair</repairSound>
+			</repairSounds>
+			<deathSounds>
+				<deathSound>shrikeDeath</deathSound>
+			</deathSounds>
+		</mod-append:race>
+
+		<mod-append:race name="unique_zog">
+			<essential>1</essential>
+			<maxHealth>225</maxHealth>
+			<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+			<canSuffocate>false</canSuffocate>
+			<repairSpeed>1.25</repairSpeed>
+			<moveSpeedMultiplier>1</moveSpeedMultiplier>
+			<fireDamageMultiplier>0.75</fireDamageMultiplier>
+			<damageMultiplier>1</damageMultiplier>
+			<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+			<passiveStatBoosts>  
+				<statBoost name="oxygenChangeSpeed">
+					<boostType>MULT</boostType>
+					<amount>1</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+					<priority>0</priority>
+					<boostAnim>zog_bubble</boostAnim>
+				</statBoost>
+			</passiveStatBoosts>
+			<powerEffect>
+				<cooldown>15</cooldown>
+				<jumpCooldown>full</jumpCooldown>
+				<powerSounds>
+					<powerSound>healBomb</powerSound>
+				</powerSounds>
+				<req type="player">
+					<minHealth>101</minHealth>
+				</req>
+				<friendlyFire>true</friendlyFire>
+				<shipFriendlyFire>true</shipFriendlyFire>
+				<buttonText>ENHANCE</buttonText>
+				<tooltip>Ready: Consumes 100 hp, temporarily buffing all allied scrappers while weaking Zog.</tooltip>
+				<cooldownColor r="0" g="183" b="255"/>
+				<effectAnim>explosion_big1_heal</effectAnim>
+				<selfHealth>-100</selfHealth>
+				<temporaryEffect>
+					<duration>15</duration>
+					<damageMultiplier>0.5</damageMultiplier>
+					<moveSpeedMultiplier>0.5</moveSpeedMultiplier>
+					<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
+					<statBoosts>
+						<statBoost name="moveSpeedMultiplier">
+							<boostType>MULT</boostType>
+							<amount>2</amount>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>false</affectsSelf>
+							<whiteList load="LIST_CREW_SCRAPPER"/>
+							<boostAnim>zog_buff</boostAnim>
+						</statBoost>
+						<statBoost name="repairSpeed">
+							<boostType>MULT</boostType>
+							<amount>1.5</amount>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>false</affectsSelf>
+							<whiteList load="LIST_CREW_SCRAPPER"/>
+						</statBoost>
+						<statBoost name="maxHealth">
+							<boostType>MULT</boostType>
+							<amount>1.1</amount>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>false</affectsSelf>
+							<whiteList load="LIST_CREW_SCRAPPER"/>
+						</statBoost>
+						<statBoost name="damageMultiplier">
+							<boostType>MULT</boostType>
+							<amount>1.1</amount>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>false</affectsSelf>
+							<whiteList load="LIST_CREW_SCRAPPER"/>
+						</statBoost>
+						<statBoost name="damageTakenMultiplier">
+							<boostType>MULT</boostType>
+							<amount>0.9</amount>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>false</affectsSelf>
+							<whiteList load="LIST_CREW_SCRAPPER"/>
+						</statBoost>
+						<statBoost name="passiveHealAmount">
+							<boostType>FLAT</boostType>
+							<amount>1</amount>
+							<shipTarget>ALL</shipTarget>
+							<crewTarget>ALLIES</crewTarget>
+							<affectsSelf>false</affectsSelf>
+							<whiteList load="LIST_CREW_SCRAPPER"/>
+						</statBoost>
+					</statBoosts>
+					<cooldownColor r="146" g="74" b="72"/>
+					<finishSounds>
+						<finishSound>mindControlEnd</finishSound>
+					</finishSounds>
+				</temporaryEffect>
+			</powerEffect>
 			<repairSounds>
 				<repairSound>shrikeRepair</repairSound>
 			</repairSounds>
@@ -2861,7 +3362,7 @@ SPEED          Changes gamespeed
 </mod-append:race>
 
 <mod-append:race name="golden_scrapper">
-	<maxHealth>100</maxHealth>
+	<maxHealth>125</maxHealth>
 	<repairSpeed>1.5</repairSpeed>
 	<fireRepairMultiplier>1.5</fireRepairMultiplier>
 	<canSuffocate>false</canSuffocate>
@@ -2870,11 +3371,11 @@ SPEED          Changes gamespeed
 	<damageMultiplier>1.25</damageMultiplier>
 	<damageTakenMultiplier>0.9</damageTakenMultiplier>
 	<suffocationModifier>0</suffocationModifier>
-	<oxygenChangeSpeed>-0.5</oxygenChangeSpeed>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
 	<isAnaerobic>true</isAnaerobic>
 	<animBase>anaerobic</animBase>
 	<bonusPower>1</bonusPower>
-	<powerDrain>1</powerdrain>
+	<powerDrain>1</powerDrain>
 	<deathSounds>
 		<deathSound>ancientDeath</deathSound>
 	</deathSounds>
@@ -2892,7 +3393,7 @@ SPEED          Changes gamespeed
 </mod-append:race>
 	
 <mod-append:race name="golden_scrapper_2">
-	<maxHealth>125</maxHealth>
+	<maxHealth>150</maxHealth>
 	<repairSpeed>2</repairSpeed>
 	<fireRepairMultiplier>2</fireRepairMultiplier>
 	<canSuffocate>false</canSuffocate>
@@ -2901,11 +3402,11 @@ SPEED          Changes gamespeed
 	<damageMultiplier>1.5</damageMultiplier>
 	<damageTakenMultiplier>0.85</damageTakenMultiplier>
 	<suffocationModifier>0</suffocationModifier>
-	<oxygenChangeSpeed>-0.5</oxygenChangeSpeed>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
 	<isAnaerobic>true</isAnaerobic>
 	<animBase>anaerobic</animBase>
 	<bonusPower>2</bonusPower>
-	<powerDrain>2</powerdrain>
+	<powerDrain>2</powerDrain>
 	<deathSounds>
 		<deathSound>ancientDeath</deathSound>
 	</deathSounds>
@@ -2923,7 +3424,7 @@ SPEED          Changes gamespeed
 </mod-append:race>
 	
 <mod-append:race name="golden_scrapper_3">
-	<maxHealth>150</maxHealth>
+	<maxHealth>200</maxHealth>
 	<repairSpeed>2.5</repairSpeed>
 	<fireRepairMultiplier>2.5</fireRepairMultiplier>
 	<canSuffocate>false</canSuffocate>
@@ -2933,11 +3434,11 @@ SPEED          Changes gamespeed
 	<damageMultiplier>2</damageMultiplier>
 	<damageTakenMultiplier>0.8</damageTakenMultiplier>
 	<suffocationModifier>0</suffocationModifier>
-	<oxygenChangeSpeed>-0.5</oxygenChangeSpeed>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed>
 	<isAnaerobic>true</isAnaerobic>
 	<animBase>anaerobic</animBase>
 	<bonusPower>3</bonusPower>
-	<powerDrain>3</powerdrain>
+	<powerDrain>3</powerDrain>
 	<deathSounds>
 		<deathSound>ancientDeath</deathSound>
 	</deathSounds>
@@ -2963,11 +3464,11 @@ SPEED          Changes gamespeed
 	<fireDamageMultiplier>0.5</fireDamageMultiplier>
 	<damageMultiplier>1</damageMultiplier>
 	<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
-	<animBase>lanius</animbase>
+	<animBase>lanius</animBase>
 	<passiveHealAmount>4</passiveHealAmount>
 	<passiveHealDelay>15</passiveHealDelay>
 	<bonusPower>1</bonusPower>
-	<powerDrain>1</powerdrain>
+	<powerDrain>1</powerDrain>
 	<damageTakenMultiplier>0.9</damageTakenMultiplier>
 	<repairSounds>
 		<repairSound>shrikeRepair</repairSound>
@@ -2987,7 +3488,7 @@ SPEED          Changes gamespeed
 		<chargesPerJump>1</chargesPerJump>
 		<req type="player">
 			<friendlyInRoom/>
-			<minHealth>51</maxHealth>
+			<minHealth>51</minHealth>
 		</req>
 		<friendlyFire>true</friendlyFire>
 		<shipFriendlyFire>true</shipFriendlyFire>
@@ -3018,11 +3519,11 @@ SPEED          Changes gamespeed
 	<fireDamageMultiplier>0.5</fireDamageMultiplier>
 	<damageMultiplier>1</damageMultiplier>
 	<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
-	<animBase>lanius</animbase>
+	<animBase>lanius</animBase>
 	<passiveHealAmount>4</passiveHealAmount>
 	<passiveHealDelay>15</passiveHealDelay>
 	<bonusPower>1</bonusPower>
-	<powerDrain>1</powerdrain>
+	<powerDrain>1</powerDrain>
 	<damageTakenMultiplier>0.9</damageTakenMultiplier>
 	<repairSounds>
 		<repairSound>shrikeRepair</repairSound>
@@ -3030,6 +3531,16 @@ SPEED          Changes gamespeed
 	<deathSounds>
 		<deathSound>shrikeDeath</deathSound>
 	</deathSounds>
+	<passiveStatBoosts>
+		<statBoost name="allDamageTakenMultiplier">
+			<boostType>SET</boostType>
+			<amount>0.8</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<priority>0</priority>
+		</statBoost>
+	</passiveStatBoosts>
 	<powerEffect>
 		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 		<cooldown>45</cooldown>
@@ -3042,7 +3553,7 @@ SPEED          Changes gamespeed
 		<chargesPerJump>1</chargesPerJump>
 		<req type="player">
 			<friendlyInRoom/>
-			<minHealth>51</maxHealth>
+			<minHealth>76</minHealth>
 		</req>
 		<friendlyFire>true</friendlyFire>
 		<shipFriendlyFire>true</shipFriendlyFire>
@@ -3073,11 +3584,11 @@ SPEED          Changes gamespeed
 	<fireDamageMultiplier>0.5</fireDamageMultiplier>
 	<damageMultiplier>1.25</damageMultiplier>
 	<sabotageSpeedMultiplier>1</sabotageSpeedMultiplier>
-	<animBase>lanius</animbase>
+	<animBase>lanius</animBase>
 	<passiveHealAmount>6</passiveHealAmount>
 	<passiveHealDelay>10</passiveHealDelay>
 	<bonusPower>2</bonusPower>
-	<powerDrain>2</powerdrain>
+	<powerDrain>2</powerDrain>
 	<damageTakenMultiplier>0.8</damageTakenMultiplier>
 	<repairSounds>
 		<repairSound>shrikeRepair</repairSound>
@@ -3085,6 +3596,16 @@ SPEED          Changes gamespeed
 	<deathSounds>
 		<deathSound>shrikeDeath</deathSound>
 	</deathSounds>
+	<passiveStatBoosts>
+		<statBoost name="allDamageTakenMultiplier">
+			<boostType>SET</boostType>
+			<amount>0.8</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<priority>0</priority>
+		</statBoost>
+	</passiveStatBoosts>
 	<powerEffect>
 		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 		<cooldown>30</cooldown>
@@ -3097,7 +3618,7 @@ SPEED          Changes gamespeed
 		<chargesPerJump>1</chargesPerJump>
 		<req type="player">
 			<friendlyInRoom/>
-			<minHealth>51</maxHealth>
+			<minHealth>76</minHealth>
 		</req>
 		<friendlyFire>true</friendlyFire>
 		<shipFriendlyFire>true</shipFriendlyFire>
@@ -3527,21 +4048,17 @@ SPEED          Changes gamespeed
 		<powerSounds>
 			<powerSound>lockdown1</powerSound>
 		</powerSounds>
-		<req type="enemy">
-		</req>
 		<powerCharges>1</powerCharges>
 		<initialCharges>1</initialCharges>
 		<damage>1</damage>
-		<sysDamage>1</sysDamage>
 		<stun>3</stun>
 		<friendlyFire>false</friendlyFire>
-		<shipFriendlyFire>false</shipFriendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
 		<buttonText>DISPERSE</buttonText>
 		<tooltip>[COOLDOWN: 25s]
 		Deal 1 hull damage, 1 system damage, and stun nearby enemies for 3 seconds.</tooltip>
 		<cooldownColor r="255" g="18" b="0"/>
 		<effectAnim>explosion_random</effectAnim>
-		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 	</powerEffect>
 	<deathSounds>
 		<deathSound>ancientDeath</deathSound>
@@ -3633,21 +4150,17 @@ SPEED          Changes gamespeed
 		<powerSounds>
 			<powerSound>lockdown1</powerSound>
 		</powerSounds>
-		<req type="enemy">
-		</req>
 		<powerCharges>1</powerCharges>
 		<initialCharges>1</initialCharges>
 		<damage>2</damage>
-		<sysDamage>2</sysDamage>
 		<stun>6</stun>
 		<friendlyFire>false</friendlyFire>
-		<shipFriendlyFire>false</shipFriendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
 		<buttonText>DISPERSE</buttonText>
 		<tooltip>[COOLDOWN: 25s]
 		Deal 2 hull damage, 2 system damage, and stun nearby enemies for 6 seconds.</tooltip>
 		<cooldownColor r="255" g="18" b="0"/>
 		<effectAnim>explosion_random</effectAnim>
-		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 	</powerEffect>
 	<deathSounds>
 		<deathSound>ancientDeath</deathSound>
@@ -3663,6 +4176,422 @@ SPEED          Changes gamespeed
 		<repair req="24"/>
 		<combat req="10"/>
 	</skills>	
+</mod-append:race>
+
+<mod-append:race name="jadesteel_scrapper">
+	<maxHealth>125</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>1.5</repairSpeed>
+	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+	<damageMultiplier>0.75</damageMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
+	<powerEffect>
+		<cooldown>25</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>healBomb</powerSound>
+		</powerSounds>
+		<friendlyFire>true</friendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
+		<buttonText>UNLEASH</buttonText>
+		<tooltip>Ready: Becomes uncontrollable but greatly boosts stats for 15 seconds.</tooltip>
+		<cooldownColor r="0" g="255" b="0"/>
+		<effectAnim>explosion_big1_heal</effectAnim>
+		<temporaryEffect>
+			<duration>15</duration>
+			<statBoosts>
+				<statBoost name="controllable">
+					<boostType>SET</boostType>
+					<value>false</value>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="moveSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="sabotageSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="allDamageTakenMultiplier">
+					<boostType>MULT</boostType>
+					<amount>0.5</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+			</statBoosts>
+			<cooldownColor r="0" g="255" b="0"/>
+			<finishSounds>
+				<finishSound>mindControlEnd</finishSound>
+			</finishSounds>
+		</temporaryEffect>
+	</powerEffect>
+</mod-append:race>
+
+<mod-append:race name="jadesteel_scrapper_2">
+	<maxHealth>150</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>2</repairSpeed>
+	<moveSpeedMultiplier>3</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+	<damageMultiplier>2</damageMultiplier>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
+	<powerEffect>
+		<cooldown>25</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>healBomb</powerSound>
+		</powerSounds>
+		<friendlyFire>true</friendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
+		<buttonText>UNLEASH</buttonText>
+		<tooltip>Ready: Becomes uncontrollable but greatly boosts stats for 15 seconds.</tooltip>
+		<cooldownColor r="0" g="255" b="0"/>
+		<effectAnim>explosion_big1_heal</effectAnim>
+		<temporaryEffect>
+			<duration>15</duration>
+			<statBoosts>
+				<statBoost name="controllable">
+					<boostType>SET</boostType>
+					<value>false</value>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="moveSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="sabotageSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="allDamageTakenMultiplier">
+					<boostType>MULT</boostType>
+					<amount>0.5</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+			</statBoosts>
+			<cooldownColor r="0" g="255" b="0"/>
+			<finishSounds>
+				<finishSound>mindControlEnd</finishSound>
+			</finishSounds>
+		</temporaryEffect>
+	</powerEffect>
+</mod-append:race>
+
+<mod-append:race name="jadesteel_scrapper_3">
+	<maxHealth>200</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>3</repairSpeed>
+	<moveSpeedMultiplier>4</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>3</sabotageSpeedMultiplier>
+	<damageMultiplier>3</damageMultiplier>
+	<shootTimer min="750" max="750"/>
+    <punchTimer min="750" max="750"/>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
+	<powerEffect>
+		<cooldown>25</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>healBomb</powerSound>
+		</powerSounds>
+		<friendlyFire>true</friendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
+		<buttonText>UNLEASH</buttonText>
+		<tooltip>Ready: Becomes uncontrollable but greatly boosts stats for 15 seconds.</tooltip>
+		<cooldownColor r="0" g="255" b="0"/>
+		<effectAnim>explosion_big1_heal</effectAnim>
+		<temporaryEffect>
+			<duration>15</duration>
+			<statBoosts>
+				<statBoost name="controllable">
+					<boostType>SET</boostType>
+					<value>false</value>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="moveSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="sabotageSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="allDamageTakenMultiplier">
+					<boostType>MULT</boostType>
+					<amount>0.5</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+			</statBoosts>
+			<cooldownColor r="0" g="255" b="0"/>
+			<finishSounds>
+				<finishSound>mindControlEnd</finishSound>
+			</finishSounds>
+		</temporaryEffect>
+	</powerEffect>
+</mod-append:race>
+
+<mod-append:race name="jadesteel_scrapper_4">
+	<maxHealth>250</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>4</repairSpeed>
+	<moveSpeedMultiplier>5</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>4</sabotageSpeedMultiplier>
+	<damageMultiplier>4</damageMultiplier>
+	<shootTimer min="500" max="500"/>
+    <punchTimer min="500" max="500"/>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
+	<powerEffect>
+		<cooldown>25</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>healBomb</powerSound>
+		</powerSounds>
+		<friendlyFire>true</friendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
+		<buttonText>UNLEASH</buttonText>
+		<tooltip>Ready: Becomes uncontrollable but greatly boosts stats for 15 seconds.</tooltip>
+		<cooldownColor r="0" g="255" b="0"/>
+		<effectAnim>explosion_big1_heal</effectAnim>
+		<temporaryEffect>
+			<duration>15</duration>
+			<statBoosts>
+				<statBoost name="controllable">
+					<boostType>SET</boostType>
+					<value>false</value>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="moveSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="sabotageSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="allDamageTakenMultiplier">
+					<boostType>MULT</boostType>
+					<amount>0.5</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+			</statBoosts>
+			<cooldownColor r="0" g="255" b="0"/>
+			<finishSounds>
+				<finishSound>mindControlEnd</finishSound>
+			</finishSounds>
+		</temporaryEffect>
+	</powerEffect>
+</mod-append:race>
+
+<mod-append:race name="jadesteel_scrapper_5">
+	<maxHealth>300</maxHealth>
+	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
+	<canSuffocate>false</canSuffocate>
+	<repairSpeed>5</repairSpeed>
+	<moveSpeedMultiplier>6</moveSpeedMultiplier>
+	<fireDamageMultiplier>0.50</fireDamageMultiplier>
+	<sabotageSpeedMultiplier>5</sabotageSpeedMultiplier>
+	<damageMultiplier>5</damageMultiplier>
+	<shootTimer min="250" max="250"/>
+    <punchTimer min="250" max="250"/>
+	<repairSounds>
+		<repairSound>shrikeRepair</repairSound>
+	</repairSounds>
+	<deathSounds>
+		<deathSound>shrikeDeath</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="22"/>
+		<engines req="22"/>
+		<shields req="62"/>
+		<weapons req="72"/>
+		<repair req="24"/>
+		<combat req="12"/>
+	</skills>
+	<powerEffect>
+		<cooldown>25</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<powerSounds>
+			<powerSound>healBomb</powerSound>
+		</powerSounds>
+		<friendlyFire>true</friendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
+		<buttonText>UNLEASH</buttonText>
+		<tooltip>Ready: Becomes uncontrollable but greatly boosts stats for 15 seconds.</tooltip>
+		<cooldownColor r="0" g="255" b="0"/>
+		<effectAnim>explosion_big1_heal</effectAnim>
+		<temporaryEffect>
+			<duration>15</duration>
+			<statBoosts>
+				<statBoost name="controllable">
+					<boostType>SET</boostType>
+					<value>false</value>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="moveSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="sabotageSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>MULT</boostType>
+					<amount>2</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+				<statBoost name="allDamageTakenMultiplier">
+					<boostType>MULT</boostType>
+					<amount>0.5</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>SELF</crewTarget>
+					<affectsSelf>true</affectsSelf>
+				</statBoost>
+			</statBoosts>
+			<cooldownColor r="0" g="255" b="0"/>
+			<finishSounds>
+				<finishSound>mindControlEnd</finishSound>
+			</finishSounds>
+		</temporaryEffect>
+	</powerEffect>
 </mod-append:race>
 
 <mod-append:race name="scrapper">
@@ -3738,20 +4667,16 @@ SPEED          Changes gamespeed
 		<powerSounds>
 			<powerSound>lockdown1</powerSound>
 		</powerSounds>
-		<req type="enemy">
-		</req>
 		<powerCharges>1</powerCharges>
 		<initialCharges>1</initialCharges>
 		<damage>1</damage>
-		<sysDamage>1</sysDamage>
 		<stun>3</stun>
 		<friendlyFire>false</friendlyFire>
-		<shipFriendlyFire>false</shipFriendlyFire>
+		<shipFriendlyFire>true</shipFriendlyFire>
 		<buttonText>DISPERSE</buttonText>
 		<tooltip>Ready: Deal 1 hull damage, 1 system damage, and stun nearby enemies for 3 seconds.</tooltip>
 		<cooldownColor r="255" g="18" b="0"/>
 		<effectAnim>explosion_random</effectAnim>
-		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 	</powerEffect>
 <skills>
 	<piloting req="22"/>
@@ -3810,19 +4735,16 @@ SPEED          Changes gamespeed
 	<powerSounds>
 		<powerSound>lockdown1</powerSound>
 	</powerSounds>
-	<req type="enemy"></req>
 	<powerCharges>1</powerCharges>
 	<initialCharges>1</initialCharges>
 	<damage>2</damage>
-	<sysDamage>2</sysDamage>
 	<stun>6</stun>
 	<friendlyFire>false</friendlyFire>
-	<shipFriendlyFire>false</shipFriendlyFire>
+	<shipFriendlyFire>true</shipFriendlyFire>
 	<buttonText>DISPERSE</buttonText>
 	<tooltip>Ready: Deal 2 hull damage, 2 system damage, and stun nearby enemies for 6 seconds.</tooltip>
 	<cooldownColor r="255" g="18" b="0"/>
 	<effectAnim>explosion_random</effectAnim>
-	<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 </powerEffect>
 <skills>
 	<piloting req="22"/>
@@ -3843,7 +4765,7 @@ SPEED          Changes gamespeed
 	<fireDamageMultiplier>0.5</fireDamageMultiplier>
 	<damageMultiplier>0.5</damageMultiplier>
 	<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
-	<animBase>lanius</animbase>
+	<animBase>lanius</animBase>
 	<passiveHealAmount>2</passiveHealAmount>
 	<passiveHealDelay>15</passiveHealDelay>
 	<repairSounds>
@@ -3864,7 +4786,7 @@ SPEED          Changes gamespeed
 		<chargesPerJump>1</chargesPerJump>
 		<req type="player">
 			<friendlyInRoom/>
-			<minHealth>51</maxHealth>
+			<minHealth>51</minHealth>
 		</req>
 		<friendlyFire>true</friendlyFire>
 		<shipFriendlyFire>true</shipFriendlyFire>
@@ -3890,7 +4812,7 @@ SPEED          Changes gamespeed
 	<maxHealth>200</maxHealth>
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 	<canSuffocate>false</canSuffocate>
-	<canRepair>false</canrepair>
+	<canRepair>false</canRepair>
 	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
 	<fireDamageMultiplier>0.50</fireDamageMultiplier>
 	<damageMultiplier>0.75</damageMultiplier>
@@ -3898,8 +4820,8 @@ SPEED          Changes gamespeed
 	<passiveHealAmount>4</passiveHealAmount>
 	<passiveHealDelay>15</passiveHealDelay>
 	<passiveStatBoosts>
-		<statBoost name="damageTakenMultiplier">
-			<boostType>FLAT</boostType>
+		<statBoost name="allDamageTakenMultiplier">
+			<boostType>SET</boostType>
 			<amount>0.8</amount>
 			<shipTarget>CURRENT_ROOM</shipTarget>
 			<crewTarget>ALLIES</crewTarget>
@@ -3925,7 +4847,7 @@ SPEED          Changes gamespeed
 		<chargesPerJump>1</chargesPerJump>
 		<req type="player">
 			<friendlyInRoom/>
-			<minHealth>51</maxHealth>
+			<minHealth>76</minHealth>
 		</req>
 		<friendlyFire>true</friendlyFire>
 		<shipFriendlyFire>true</shipFriendlyFire>
@@ -3951,7 +4873,7 @@ SPEED          Changes gamespeed
 	<maxHealth>200</maxHealth>
 	<oxygenChangeSpeed>-0.39375</oxygenChangeSpeed> <!--Normal lanius are -0.525 -->
 	<canSuffocate>false</canSuffocate>
-	<canRepair>false</canrepair>
+	<canRepair>false</canRepair>
 	<moveSpeedMultiplier>0.75</moveSpeedMultiplier>
 	<fireDamageMultiplier>0.50</fireDamageMultiplier>
 	<damageMultiplier>0.5</damageMultiplier>
@@ -3959,9 +4881,9 @@ SPEED          Changes gamespeed
 	<passiveHealDelay>15</passiveHealDelay>
 	<sabotageSpeedMultiplier>0.5</sabotageSpeedMultiplier>
 	<passiveStatBoosts>
-		<statBoost name="damageTakenMultiplier">
-			<boostType>FLAT</boostType>
-			<amount>0.7</amount>
+		<statBoost name="allDamageTakenMultiplier">
+			<boostType>SET</boostType>
+			<amount>0.8</amount>
 			<shipTarget>CURRENT_ROOM</shipTarget>
 			<crewTarget>ALLIES</crewTarget>
 			<affectsSelf>true</affectsSelf>
@@ -3980,7 +4902,7 @@ SPEED          Changes gamespeed
 		<chargesPerJump>1</chargesPerJump>
 		<req type="player">
 			<friendlyInRoom/>
-			<minHealth>51</maxHealth>
+			<minHealth>76</minHealth>
 		</req>
 		<friendlyFire>true</friendlyFire>
 		<shipFriendlyFire>true</shipFriendlyFire>
@@ -4496,7 +5418,7 @@ SPEED          Changes gamespeed
 				<temporaryEffect>
 					<duration>3</duration>
 					<cooldownColor r="120" g="20" b="255"/>
-					<animSheet baseVisible="true">kora_glow</animSheet>
+					<animSheet baseVisible="true">unique_kora_glow</animSheet>
 					<finishSounds enemy="true">
 							<finishSound>decloak</finishSound>
 					</finishSounds>
@@ -5782,7 +6704,7 @@ SPEED          Changes gamespeed
   		<canBurn>false</canBurn>
   		<canSuffocate>false</canSuffocate>
   		<deathSounds>
-			<deathSound>technicianDroneDeath</deathSound>
+			<deathSound>sysExplosion</deathSound>
   		</deathSounds>
   		<powerEffect>
   			<cooldown>0</cooldown>
@@ -6930,6 +7852,7 @@ SPEED          Changes gamespeed
   	</aug>
 
   	<aug name="MERCURY_GEL">
+		<locked/>
   		<function name="SLUG_GEL" value="0.50" useForReqs="false"/>
 
   		<statBoosts>
@@ -7122,6 +8045,258 @@ SPEED          Changes gamespeed
 </aug>
 
 	<!--//////////////////SCRAPPER LAB UPGRADES//////////////-->
+
+
+	<aug name="LAB_SCRAPPER_TOXIC_METAL">
+    	<statBoosts>
+			<statBoost name="statBoost">
+				<statBoost name="trueHealAmount">
+					<boostType>FLAT</boostType>
+					<amount>-4</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ENEMIES</crewTarget>
+					<droneTarget>ALL</droneTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<boostAnim>salt_particles</boostAnim>
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+				<whiteList load="LIST_CREW_SCRAPPER"/>
+			</statBoost>
+			<statBoost name="canFight">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList load="LIST_CREW_SCRAPPER"/>
+			</statBoost>
+		</statBoosts>
+    </aug>
+
+	<aug name="EX_LAB_SCRAPPER_TOXIC_METAL">
+    	<statBoosts>
+			<statBoost name="statBoost">
+				<statBoost name="trueHealAmount">
+					<boostType>FLAT</boostType>
+					<amount>-4</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ENEMIES</crewTarget>
+					<droneTarget>ALL</droneTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<boostAnim>salt_particles</boostAnim>
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+				<whiteList load="LIST_CREW_SCRAPPER"/>
+			</statBoost>
+			<statBoost name="canFight">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList load="LIST_CREW_SCRAPPER"/>
+			</statBoost>
+		</statBoosts>
+    </aug>
+
+	<aug name="LAB_SCRAPPER_SOLIDIFIED_SCRAP">
+		<statBoosts>
+			<statBoost name="maxHealth">
+				<boostType>MULT</boostType>
+				<amount>1.2</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList load="LIST_CREW_SCRAPPER" />
+			</statBoost>
+			<statBoost name="damageMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.2</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList load="LIST_CREW_SCRAPPER" />
+			</statBoost>
+			<statBoost name="repairSpeed">
+				<boostType>MULT</boostType>
+				<amount>1.2</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList load="LIST_CREW_SCRAPPER" />
+			</statBoost>
+			<statBoost name="sabotageSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>1.2</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList load="LIST_CREW_SCRAPPER" />
+			</statBoost>
+		</statBoosts>
+	</aug>
+
+	<aug name="LAB_SCRAPPER_SHARPENED_TEETH">
+		<statBoosts>
+			<statBoost name="powerEffect">
+				<boostType>ADD</boostType>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>CURRENT_ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList load="LIST_CREW_SCRAPPER" />
+				<powerEffect>
+					<cooldown>5</cooldown>
+					<jumpCooldown>full</jumpCooldown>
+					<powerSounds>
+						<powerSound>lockdown1</powerSound>
+						<powerSound>lockdown2</powerSound>
+					</powerSounds>
+					<buttonText>TEAR</buttonText>
+					<tooltip>[COOLDOWN:5s]
+						Rip off a piece of the hull, doing 1 damage and gaining 2 scrap.</tooltip>
+					<cooldownColor r="74" g="138" b="240"/>
+					<effectAnim>explosion_random</effectAnim>
+					<powerCharges>3</powerCharges>
+					<initialCharges>3</initialCharges>
+					<damage>1</damage>
+					<sysDamage>-1</sysDamage>
+					<breachChance>10</breachChance>
+					<friendlyFire>true</friendlyFire>
+					<shipFriendlyFire>true</shipFriendlyFire>
+					<event load="LAB_SCRAPPER_SHARPENED_TEETH_GAIN"/>
+				</powerEffect>
+			</statBoost>
+		</statBoosts>
+	</aug>
+
+	<aug name="LAB_SCRAPPER_DEFENDER_SCRAP_SHIELDING">
+    	<statBoosts>
+			<statBoost name="statBoost">
+				<statBoost name="allDamageTakenMultiplier">
+					<boostType>SET</boostType>
+					<amount>0.2</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>true</affectsSelf>
+					<priority>0</priority>
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+				<whiteList>
+					<scrapper_defender/>
+					<scrapper_defender_mk2/>
+					<golden_scrapper_defender/>
+					<golden_scrapper_defender_mk2/>
+				</whiteList>
+			</statBoost>
+			<statBoost name="moveSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0.20</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<affectsSelf>true</affectsSelf>
+				<priority>0</priority>
+				<whiteList>
+					<scrapper_defender/>
+					<scrapper_defender_mk2/>
+					<golden_scrapper_defender/>
+					<golden_scrapper_defender_mk2/>
+				</whiteList>
+			</statBoost>
+		</statBoosts>
+    </aug>
+
+	<aug name="LAB_SCRAPPER_HEAVY_EXPLOSIVE_ENHANCEMENTS">
+    	<statBoosts>
+			<statBoost name="canFight">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList>
+					<scrapper_heavy/>
+					<scrapper_heavy_mk2/>
+					<adamantine_scrapper_heavy_soldier/>
+					<adamantine_scrapper_heavy_soldier_mk2/>
+				</whiteList>
+			</statBoost>
+			<statBoost name="powerEffect">
+				<boostType>SET</boostType>
+				<powerEffect>
+					<cooldown>25</cooldown>
+					<jumpCooldown>full</jumpCooldown>
+					<powerSounds>
+						<powerSound>lockdown1</powerSound>
+					</powerSounds>
+					<powerCharges>1</powerCharges>
+					<initialCharges>1</initialCharges>
+					<damage>3</damage>
+					<stun>9</stun>
+					<friendlyFire>false</friendlyFire>
+					<shipFriendlyFire>true</shipFriendlyFire>
+					<buttonText>DISPERSE</buttonText>
+					<tooltip>Ready: Deal 3 hull damage, 3 system damage, and stun nearby enemies for 9 seconds.</tooltip>
+					<cooldownColor r="255" g="18" b="0"/>
+					<effectAnim>explosion_random</effectAnim>
+				</powerEffect>
+				<shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+				<whiteList>
+					<scrapper_heavy/>
+					<adamantine_scrapper_heavy_soldier/>
+				</whiteList>
+			</statBoost>
+			<statBoost name="powerEffect">
+				<boostType>SET</boostType>
+				<powerEffect>
+					<cooldown>25</cooldown>
+					<jumpCooldown>full</jumpCooldown>
+					<powerSounds>
+						<powerSound>lockdown1</powerSound>
+					</powerSounds>
+					<powerCharges>1</powerCharges>
+					<initialCharges>1</initialCharges>
+					<damage>6</damage>
+					<stun>18</stun>
+					<friendlyFire>false</friendlyFire>
+					<shipFriendlyFire>true</shipFriendlyFire>
+					<buttonText>DISPERSE</buttonText>
+					<tooltip>Ready: Deal 6 hull damage, 6 system damage, and stun nearby enemies for 18 seconds.</tooltip>
+					<cooldownColor r="255" g="18" b="0"/>
+					<effectAnim>explosion_random</effectAnim>
+				</powerEffect>
+				<shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+				<whiteList>
+					<scrapper_heavy_mk2/>
+					<adamantine_scrapper_heavy_soldier_mk2/>
+				</whiteList>
+			</statBoost>
+		</statBoosts>
+    </aug>
+
+	<aug name="LAB_SCRAPPER_SCAVENGER_SUPER_SPEED">
+    	<statBoosts>
+			<statBoost name="moveSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>2</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+				<whiteList>
+					<scrapper_scavenger/>
+					<scrapper_scavenger_mk2/>
+					<rosegold_scrapper_scavenger/>
+					<rosegold_scrapper_scavenger_mk2/>
+				</whiteList>
+			</statBoost>
+		</statBoosts>
+    </aug>
 	
 <aug name="LAB_SCRAPPER_BOARDING_GEAR">
 	<statBoosts>
@@ -7197,7 +8372,7 @@ SPEED          Changes gamespeed
 		<whiteList load="LIST_CREW_SCRAPPER" />
 		<powerEffect>
 			<cooldown>5</cooldown>
-			<jumpCooldown>continue</jumpcooldown>
+			<jumpCooldown>continue</jumpCooldown>
 			<healAmount>15</healAmount>
 			<persDamage>1</persDamage>
 			<req type="enemy">
@@ -7722,6 +8897,7 @@ SPEED          Changes gamespeed
   	</aug>
 
   	<aug name="SAVIOR_SHIELD">
+		<locked/>
   		<function name="SHIELD_RECHARGE" value="0.15" useForReqs="false" warning="false"/>
   		<superShield>
   			<value>5</value>
@@ -7767,6 +8943,7 @@ SPEED          Changes gamespeed
   	</aug>
 
   	<aug name="REGEN_SHIELD">
+		<locked/>
   		<function name="SHIELD_RECHARGE" value="1000" useForReqs="false" warning="false"/>
   		<superShield>
   			<value>1</value>
@@ -7776,6 +8953,7 @@ SPEED          Changes gamespeed
   	</aug>
 
   	<aug name="FALSE_SHIELD">
+		<locked/>
   			<function name="WEAPON_PREIGNITE" value="1" useForReqs="false"/>
   			<function name="AUTO_COOLDOWN" value="-0.1" useForReqs="false"/>
   			<superShield>
@@ -7794,7 +8972,301 @@ SPEED          Changes gamespeed
 		<aug name="BEAM_ARMOR">
 			<crystalShard weapon="FOCUS_1_LEAH_VENGEANCE" value="1" stackable="false"/>
 		</aug>
+	
+	<aug name="ZOG_PRISMATIC_ROOMS">
+		<statBoosts>
+			<statBoost name="damageTakenMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0.50</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<priority>999</priority>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<pilot/>
+					<shields/>
+					<medbay/>
+					<drones/>
+					<mind/>
+				</systemList>
+			</statBoost>
+			<statBoost name="passiveHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>5</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<pilot/>
+					<shields/>
+					<medbay/>
+					<drones/>
+					<mind/>
+				</systemList>
+			</statBoost>
+			<statBoost name="resistsMindControl">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<pilot/>
+					<shields/>
+					<medbay/>
+					<drones/>
+					<mind/>
+				</systemList>
+			</statBoost>
+		</statBoosts>
+    </aug>
 
+	<aug name="ZOG_PRISMATIC_ROOMS_SUPER">
+		<statBoosts>
+			<statBoost name="damageTakenMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0.50</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<priority>999</priority>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<all/>
+				</systemList>
+			</statBoost>
+			<statBoost name="passiveHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>5</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<all/>
+				</systemList>
+			</statBoost>
+			<statBoost name="resistsMindControl">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<all/>
+				</systemList>
+			</statBoost>
+		</statBoosts>
+    </aug>
+
+	<aug name="ROSEGOLD_PLATING">
+		<locked/>
+		<statBoosts>
+			<statBoost name="powerEffect">
+				<boostType>ADD</boostType>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>CURRENT_ALLIES</crewTarget>
+                <extraConditions type="and">
+                    <mindControlled>true</mindControlled>
+	            </extraConditions>
+				<droneTarget>CREW</droneTarget>
+				<priority>1000</priority>
+				<powerEffect>
+					<cooldown>1</cooldown>
+					<powerSounds>
+						<powerSound>killswitch</powerSound>
+					</powerSounds>
+					<req>
+						<aiDisabled/>
+					</req>
+					<jumpCooldown>reset</jumpCooldown>
+					<buttonText>DELETE</buttonText>
+					<tooltip>[COOLDOWN:N/A]
+						Kill currently mind controlled target.</tooltip>
+					<cooldownColor r="200" g="200" b="200"/>
+					<selfHealth>-99999</selfHealth>
+				</powerEffect>
+			</statBoost>
+			<statBoost name="statBoost">
+				<statBoost name="resistsMindControl">
+					<boostType>SET</boostType>
+					<value>false</value>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>CURRENT_ENEMIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+			</statBoost>
+			<statBoost name="resistsMindControl">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<affectsSelf>false</affectsSelf>
+				<priority>0</priority>
+			</statBoost>
+		</statBoosts>
+    </aug>
+
+	<aug name="GOLDEN_PLATING">
+		<locked/>
+		<statBoosts>
+			<statBoost name="bonusPower">
+				<boostType>MULT</boostType>
+				<amount>4</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost>
+			<statBoost name="powerDrain">
+				<boostType>MULT</boostType>
+				<amount>4</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>0</priority>
+			</statBoost>
+		</statBoosts>
+    </aug>
+
+	<aug name="ADAMANTINE_PLATING">
+		<locked/>
+		<statBoosts>
+			<statBoost name="isAnaerobic">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<priority>0</priority>
+			</statBoost>
+			<statBoost name="canSuffocate">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<priority>0</priority>
+			</statBoost>
+			<statBoost name="suffocationModifier">
+				<boostType>SET</boostType>
+				<amount>1.6</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<priority>0</priority>
+				<maxStacks>1</maxStacks>
+				<blackList load="LIST_CREW_SHELL"/>
+			</statBoost>
+			<statBoost name="moveSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0.25</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<maxStacks>1</maxStacks>
+			</statBoost>
+			<statBoost name="repairSpeed">
+				<boostType>MULT</boostType>
+				<amount>0.25</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<maxStacks>1</maxStacks>
+			</statBoost>
+			<statBoost name="suffocationModifier">
+				<boostType>MULT</boostType>
+				<amount>1.4</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<maxStacks>1</maxStacks>
+				<whiteList load="LIST_CREW_SHELL"/>
+			</statBoost>
+		</statBoosts>
+    </aug>
+
+	<aug name="PRISMATIC_PLATING">
+		<locked/>
+		<!--<statBoosts>
+			<statBoost name="damageTakenMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0.50</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<priority>999</priority>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<weapons/>
+					<doors/>
+					<sensors/>
+					<drones/>
+					<pilot/>
+					<teleporter/>
+				</systemList>
+			</statBoost>
+			<statBoost name="passiveHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>5</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<weapons/>
+					<doors/>
+					<sensors/>
+					<drones/>
+					<pilot/>
+					<teleporter/>
+				</systemList>
+			</statBoost>
+			<statBoost name="resistsMindControl">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<weapons/>
+					<doors/>
+					<sensors/>
+					<drones/>
+					<pilot/>
+					<teleporter/>
+				</systemList>
+			</statBoost>
+			<statBoost name="teleportMove">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<systemRoomTarget>ALL</systemRoomTarget>
+				<systemList>
+					<weapons/>
+					<doors/>
+					<sensors/>
+					<drones/>
+					<pilot/>
+					<teleporter/>
+				</systemList>
+			</statBoost>
+		</statBoosts>-->
+    </aug>
+
+	<aug name="SCRAP_DUPLICATOR">
+		<function name="SCRAP_COLLECTOR" value="0.30" useForReqs="false"/>
+	</aug>
+
+	<aug name="SENTIENT_CONSTRUCTOR">
+		<locked/>
+    </aug>
+
+	<aug name="BOON_TCC_SCRAPPER">
+		<function name="SCRAP_COLLECTOR" value="0.05" useForReqs="false"/>
+	</aug>
 	</augments>
 	<mod:findLike type="events">
 		<mod:findName name="LIST_CHECK_AUGMENTS">
@@ -7804,6 +9276,8 @@ SPEED          Changes gamespeed
 			<mod-append:name>NOODLE_RATIONS</mod-append:name>
 			<mod-append:name>AUTOMATED_QUARTERMASTER</mod-append:name>
 			<mod-append:name>FUEL_RESERVOIR</mod-append:name>
+			<mod-append:name>PRISMATIC_PLATING</mod-append:name>
+			<mod-append:name>SENTIENT_CONSTRUCTOR</mod-append:name>
 		</mod:findName>
 	</mod:findLike>
 
@@ -7821,9 +9295,29 @@ SPEED          Changes gamespeed
   	<bossShip>TC_TRASH_COMPACTOR4</bossShip>
   	<bossShip>TC_TRASH_COMPACTOR5</bossShip>
   	<bossShip>TC_TRASH_COMPACTOR6</bossShip>
-  	<bossShip>TC_TRASH_MINER</bossShip>
-  	<bossShip>RSA_DROPSHIP</bossShip>
+  	<bossShip yOffset="30">TC_TRASH_MINER</bossShip>
+  	<bossShip yOffset="50">RSA_DROPSHIP</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR_ROSEGOLD</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR_GOLDEN</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR_ADAMANTINE</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR_MERGED_AG</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR_MERGED_GR</bossShip>
+	<bossShip>TC_TRASH_COMPACTOR_MERGED_RA</bossShip>
+	<bossShip>TC_SCRAPPER_ZOG</bossShip>
+	<bossShip>TC_SCRAPPER_ZOG_SUPER</bossShip>
 	</events>
+
+	<mod:findLike type="boss" limit="1">
+		<mod-append:surgeBarrage name="ROSEGOLD_SURGE">
+			<weapon name="ROSEGOLD_SURGE_WEAPON" count="7"/>
+		</mod-append:surgeBarrage>
+		<mod-append:surgeBarrage name="GOLDEN_SURGE">
+			<weapon name="GOLDEN_SURGE_WEAPON" count="1"/>
+		</mod-append:surgeBarrage>
+		<mod-append:surgeDrones name="ADAMANTINE_SURGE">
+			<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE" count="3"/>
+		</mod-append:surgeDrones>
+	</mod:findLike>
 
 	<!--
 	///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -7922,6 +9416,38 @@ SPEED          Changes gamespeed
 		<variable name="tcc_labs_robotto_installed" op="set" val="0"/>
 		<variable name="tcc_labs_scrapper_installed" op="set" val="0"/>
 		<variable name="tcc_loc_has_fuelreservoir" op="set" val="0"/>
+		<metaVariable name="prof_z_boon_tcc_scrapper" op="set" val="0"/>
+		<variable name="ach_boon_tcc_scrapper" op="set" val="0"/>
+		<metaVariable name="tc_quest_completed" op="set" val="0"/>
+		<metaVariable name="tc_quest2_completed" op="set" val="0"/>
+		<variable name="tc_rosegold_defeated" op="set" val="0"/>
+		<variable name="tc_golden_defeated" op="set" val="0"/>
+		<variable name="tc_adamantine_defeated" op="set" val="0"/>
+		<variable name="tc_zog_met" op="set" val="0"/>
+		<variable name="tc_scrapper_job" op="set" val="0"/>
+		<variable name="tc_trash_met" op="set" val="0"/>
+
+		<req name="ALL_ELEMENTS_DEFEATED" type="all">
+			<req lvl="1">
+				<name>tc_rosegold_defeated</name>
+			</req>
+			<req lvl="1">
+				<name>tc_golden_defeated</name>
+			</req>
+			<req lvl="1">
+				<name>tc_adamantine_defeated</name>
+			</req>
+			<req lvl="0" max_lvl="0">
+				<name>tc_zog_met</name>
+			</req>
+		</req>
+
+		<req name="SOLIDIFIED_SCRAP_ASP" type="all">
+			<name>LAB_SCRAPPER_SOLIDIFIED_SCRAP</name>
+			<req lvl="1">
+				<name>tc_quest_completed</name>
+			</req>
+		</req>
 	</events>
 
 	<!--augments-->
@@ -7960,5 +9486,72 @@ SPEED          Changes gamespeed
 	<loadEvent>STORAGE_CHECK_SYSTEM</loadEvent>
     </event>
 </events>
+
+	<!--
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	ACHIEVEMENTS
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<mod:findLike type="achievements" limit="1">
+	<mod-append:page>
+		<section text="Trash Compactor Collection" hidden="false">
+			<achievement name="ACH_TCC_TRASH_EATER">
+				<name>Forgotten Prince</name>
+				<secretDescription>???</secretDescription>
+				<description>Recruit the Trash Eater.</description>
+				<icon>ach_tcc_trash_eater</icon>
+				<lockImage>ach_locked</lockImage>
+				<multiDifficulty>false</multiDifficulty>
+			</achievement>
+			<achievement name="ACH_TCC_TC6DEFEAT">
+				<name>Scrapped</name>
+				<secretDescription>Complete the first Trash Compactor questline.</secretDescription>
+				<description>Defeat the final Trash Compactor.</description>
+				<icon>ach_tcc_tc6defeat</icon>
+				<lockImage>ach_locked</lockImage>
+				<multiDifficulty>false</multiDifficulty>
+			</achievement>
+			<achievement name="ACH_TCC_ZOGDEFEAT">
+				<name>The Architect</name>
+				<secretDescription>Complete the second Trash Compactor questline.</secretDescription>
+				<description>Defeat The Architect.</description>
+				<icon>ach_tcc_zogdefeat</icon>
+				<lockImage>ach_locked</lockImage>
+				<multiDifficulty>false</multiDifficulty>
+			</achievement>
+			<achievement name="ACH_BOON_TCC_SCRAPPER">
+				<name>Boon of Scrapping</name>
+				<secretDescription>Receive the Boon of Scrapping from Thest.</secretDescription>
+				<description>Show a scrapper crew to Thest. 
+				While in effect, gain 5% more scrap.</description>
+				<icon>ach_boon_tcc_scrapper</icon>
+				<lockImage>ach_locked</lockImage>
+				<multiDifficulty>false</multiDifficulty>
+			</achievement>
+		</section>
+	</mod-append:page>
+</mod:findLike>
+
+<mod:findLike type="events">
+	<mod:findName name="ANY_BOON">
+		<mod-append:name>prof_z_boon_tcc_scrapper</mod-append:name>
+	</mod:findName>
+	<mod:findName name="ALL_BOON">
+		<mod-append:name>prof_z_boon_tcc_scrapper</mod-append:name>
+	</mod:findName>
+</mod:findLike>
+
+<mod:findLike type="ships" limit="1">
+  <mod:findLike type="shipIcons" limit="1">
+	<mod-append:shipIcon>
+        <name>icon_prismatic</name>
+        <tooltip>PRISMATIC ROOMS:
+This enemy has one or more Prismatic rooms, marked by the prismatic rainbow and P icon in the top left. Crew in Prismatic rooms are resistant to mind control, take 50% less damage, and heal 5hp/s</tooltip>
+    </mod-append:shipIcon>
+  </mod:findLike>
+</mod:findLike>
+
 
 </FTL>

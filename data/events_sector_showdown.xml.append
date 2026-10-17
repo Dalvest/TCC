@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	
+<mod:findName type="event" name="TRUE_VICTORY_CREW">
+    <mod-append:choice req="unique_leah_mfk" max_group="600" hidden="true">
+		<text>Ask Leah about this.</text>
+		<event load="TRUE_VICTORY_CREW_LEAH"/>
+	</mod-append:choice>
+	<mod-append:choice req="protogen_tracker" max_group="601" hidden="true">
+		<text>Ask TRACKER about this.</text>
+		<event load="TRUE_VICTORY_CREW_TRACKER"/>
+	</mod-append:choice>
+	<mod-append:choice req="SHIP_FLAGSHIP" max_group="602" hidden="true">
+		<text>Ask the Flagship about this.</text>
+		<event load="TRUE_VICTORY_CREW_FLAGSHIP"/>
+	</mod-append:choice>
+	<mod-append:choice req="trash_eater" max_group="603" hidden="true">
+		<text>Ask the Trash Eater about this.</text>
+		<event load="TRUE_VICTORY_CREW_TRASH"/>
+	</mod-append:choice>
+	<mod-append:choice req="unique_zog" max_group="604" hidden="true">
+		<text>Ask the The Architect about this.</text>
+		<event load="TRUE_VICTORY_CREW_ZOG"/>
+	</mod-append:choice>
+</mod:findName>
+
+<event name="TRUE_VICTORY_CREW_LEAH">
+	<text>"We've been through a lot together, haven't we?" Leah turns away from you and looks out at the wreckage of the flagship. "I don't think Wither has the right idea. Sure, multiverse drives are dangerous, but look at us! Think of how many amazing movie-like rivalries we'll be ruining if we detonate that bomb! If we exist then there's plenty more out there." Leah pauses before turning back to you, "Out of all the infinite rivalries in the universe, this one is special, you're not just any old bitch, you're MY beyatch."</text>
+	<unlockCustomShip>PLAYER_SHIP_NEWTONBEAMA_3</unlockCustomShip>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="TRUE_VICTORY_LOAD"/>
+	</choice>
+</event>
+
+<event name="TRUE_VICTORY_CREW_FLAGSHIP">
+	<text>As soon as the words escape you, you immediately wonder why you just asked the ship, an innanimate object, about this all-powerful device. Just as you're about to leave the helm, the comms blink to life, an unintelligible garble of noise erupting from it. Shortly thereafter, it stops, notifying you that "you" have just uploaded blueprints for a Cruiser. You'll never know what it might be, should you detonate the Paragon.</text>
+	<unlockCustomShip>PLAYER_SHIP_SAVIOR_3</unlockCustomShip>
+	<choice hidden="true">
+		<text>Continue..?</text>
+		<event load="TRUE_VICTORY_LOAD"/>
+	</choice>
+</event>
+
+<event name="TRUE_VICTORY_CREW_TRACKER">
+	<text>"We did it." says Tracker, seemingly extremely content. "The Protogen Project has kicked the Rebellion's royally blasted behind big-time - and it was about time we did. Let's go get a good look at the wreckage. I want to take as many trophies as we can fit in the hold."</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="TRUE_VICTORY_LOAD"/>
+	</choice>
+</event>
+
+<event name="TRUE_VICTORY_CREW_TRASH">
+	<text>"THIS IS NOT THE END... THIS IS NOT THE END... SOMETHING GREATER LURKS IN THE SHADOWS..." the Trash Eater seems shaken. But what could possibly be worse than this?</text>
+	<unlockCustomShip silent="false">PLAYER_SHIP_TRASH_EATER</unlockCustomShip>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="TRUE_VICTORY_LOAD"/>
+	</choice>
+</event>
+
+<event name="TRUE_VICTORY_CREW_ZOG">
+	<text>"In our victory here, I see that my creations have serviced both you and myself wonderfully. May your next act, whatever it may be, act as the capstone to my magnum opus."</text>
+	<!--<text>"Well this is certainly a dilemma, one that I have no interest in. Do what you will, the outcome doesn't matter to me."</text>-->
+	<unlockCustomShip silent="false">PLAYER_SHIP_TRASH_EATER_2</unlockCustomShip>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="TRUE_VICTORY_LOAD"/>
+	</choice>
+</event>

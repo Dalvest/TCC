@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+<img x="-197" y="-110" w="742" h="605" />
+<offsets>
+	<floor x="191" y="104" />
+	<cloak x="0" y="0" />
+</offsets>
+<weaponMounts>
+	<mount x="550" y="283" rotate="true" mirror="true" gib="-1" slide="right" />
+	<mount x="550" y="321" rotate="true" mirror="false" gib="-1" slide="right" />
+	<mount x="634" y="228" rotate="true" mirror="false" gib="-1" slide="down" />
+	<mount x="632" y="378" rotate="true" mirror="true" gib="-1" slide="up" />
+</weaponMounts>
+<thrusters sync="true">
+    <thruster x="0" y="0">tcp_trash_eater_b_prismatic_overlay</thruster>
+</thrusters>
+<explosion />
+

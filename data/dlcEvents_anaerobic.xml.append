@@ -8,7 +8,7 @@
 		<event>
 			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
 			<item_modify>
-				<item type="scrap" min="-35" max="-45"/>
+				<item type="scrap" min="-25" max="-35"/>
 			</item_modify>
 			<crewMember amount="1" class="scrapper_soldier"/>
 		</event>
@@ -18,19 +18,39 @@
 		<event>
 			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
 			<item_modify>
-				<item type="scrap" min="-35" max="-45"/>
+				<item type="scrap" min="-25" max="-35"/>
 			</item_modify>
 			<crewMember amount="1" class="scrapper_engineer"/>
 		</event>
 	</choice>
 	<choice>
-		<text>Buy a Scrapper Speedster.</text>
+		<text>Buy a Scrapper Medic.</text>
+		<event>
+			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-35"/>
+			</item_modify>
+			<crewMember amount="1" class="scrapper_medic"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Heavy Scrapper.</text>
 		<event>
 			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
 			<item_modify>
 				<item type="scrap" min="-35" max="-45"/>
 			</item_modify>
-			<crewMember amount="1" class="scrapper_speed"/>
+			<crewMember amount="1" class="scrapper_heavy"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Buy a Scrapper Scavenger.</text>
+		<event>
+			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-45"/>
+			</item_modify>
+			<crewMember amount="1" class="scrapper_scavenger"/>
 		</event>
 	</choice>
 	<choice>
@@ -41,16 +61,6 @@
 				<item type="scrap" min="-35" max="-45"/>
 			</item_modify>
 			<crewMember amount="1" class="scrapper_defender"/>
-		</event>
-	</choice>
-	<choice>
-		<text>Buy a Heavy Scrapper.</text>
-		<event>
-			<text>You send over the scrap, and the Welders send over a pod. Inside the pod is the Scrapper you requested. You free them from their restraints, and then leave.</text>
-			<item_modify>
-				<item type="scrap" min="-55" max="-65"/>
-			</item_modify>
-			<crewMember amount="1" class="scrapper_heavy"/>
 		</event>
 	</choice>
 	<choice>

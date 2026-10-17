@@ -10,12 +10,13 @@
 				<text>Yes, why?</text>
 				<event>
 					<text>"Finally! We've been taking way too much time looking for you!" the ship's teleporter system immediately beams you loads of supplies and their crew come to patch you up.</text>
-					<item_modify>
+					<!--<item_modify>
 						<item type="scrap" min="100" max="100"/>
 						<item type="fuel" min="10" max="10"/>
 						<item type="missiles" min="10" max="10"/>
 						<item type="drones" min="10" max="10"/>
-					</item_modify>
+					</item_modify>-->
+					<autoReward level="HIGH">standard_no_item</autoReward>
           			<damage amount="-15"/>
 					<choice>
 						<text>Sweet!</text>

@@ -1,0 +1,7 @@
+<FTL>
+    <mod:findName type="event" name="BOON_SELECT">
+        <mod:findLike type="loadEventList">
+            <mod-append:event name="BOON_SELECT_TCC_SCRAPPER" req="prof_z_boon_tcc_scrapper" />
+        </mod:findLike>
+    </mod:findName>
+</FTL>

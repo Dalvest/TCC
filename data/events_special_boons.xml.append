@@ -1,0 +1,12 @@
+<FTL>
+    <event name="BOON_SELECT_TCC_SCRAPPER">
+        <text>From nowhere, you hear a voice speaking to you. "The Boon... of Scrapping. You will gain a... 5% increase in scrap gains. You may... thank the previous challenger. Or maybe you... do not? Who can say..."</text>
+        <hiddenAug>BOON_TCC_SCRAPPER</hiddenAug>
+        <choice hidden="true">
+            <text>Continue...</text>
+            <event>
+                <loadEvent>BOON_SELECT_CONTINUE</loadEvent>
+            </event>
+        </choice>
+    </event>
+</FTL>

@@ -1,9 +1,13 @@
 # TCC
 
 Trash Compactor Collection Add-On for the popular game FTL: Multiverse.
-Current Version: 1.2 BETA
+Current Version: 1.2.1 
 
 # DEVELOPERS
+
+Current Contributor: Zuggo
+
+Past Contributors:
 
 Lead Devs: Dalvest, Zuggo
 
@@ -26,8 +30,6 @@ We also ported several ships to Hyperspace + MV, such as the Potential and Stalw
 
 FTL: Multiverse (and by extension Hyperspace) is absolutely necessary for this mod to run! Load it as your first mod.
 
-We RECOMMEND that you get Inferno-Core and load it BEFORE the TCC. We also recommend Forgemaster, Go Ballistic and Generated Gibs (loaded AFTER the TCC).
-
 # DESCRIPTION
 
 NEW WEAPONS
@@ -43,16 +45,13 @@ NEW RACES
 NEW SECTORS AND EVENTS
     Avali Collective Sector (Avali and Protogen friendly sector) coming really soon!
 
-# HOW TO INSTALL
-
-1.  Make sure you have the latest FTL Multiverse version
-2.  Make sure you have the latest Hyperspace .dll and lua .dll taken from the FTL Multiverse discord (#hyperspace-betas channel)
-(OPTIONAL) If you have Forgemaster and/or Inferno-Core, please patch them before the TCC!
-3.  Compress the 4 folders (audio/,img/,data/ and mod-appendix/) into a zip file then rename the extension to .ftl (not necessary if you're using a pre-compiled version)
-4.  Place it in your mods/ folder and patch it using Slipstream. Make sure the load order is correct (first MV, then Forgemaster and Inferno-Core IF you have them, then the TCC, then other mods you might have).
-5.  Have fun (this is mandatory)
 
 # CHANGELOG
+
+### Update 1.2.1
+- Updated for Multiverse 5.5
+- Removed Inferno Core warning
+- Removed the requirement to modify scrappers
 
 ###  Update 1.2
 - Updated for the latest version of MV

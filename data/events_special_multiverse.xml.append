@@ -1,0 +1,3249 @@
+<FTL>
+<!--<autoReward level=<LOW/MED/HIGH/RANDOM>> tag </autoreward>
+where tag is
+standard  - which is scrap + 2 resources (possible a weapon)
+stuff     - less scrap, mostly resources (intended for surrenders)
+fuel 
+missiles 
+droneparts  - scrap + that resource
+fuel_only 
+missiles_only 
+droneparts_only - self explanatory
+weapon 
+augment 
+drone 
+item - scrap + that thing  -->
+	<!--
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+          TRASH COMPACTOR SUMMON EVENT
+◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘
+	-->
+
+	<event name="SUMMON_TC_STORAGE">
+		<text>Contact the Trash Compactor? (WARNING - HIGH RISK, HIGH REWARD)</text>
+		<choice req="TC_DEAD" lvl="0" max_group="3" hidden="false" blue="false">
+			<text>Yes. (Recommended Sector: 1+)</text>
+			<event>
+			<text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location. </text>
+				<item_modify>
+					<item type="scrap" min="-10" max="-10"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC1"/>
+			</event>
+		</choice>
+		<choice req="TC_DEAD" lvl="1" max_group="3" hidden="false" blue="false">
+			<text>Yes. (Recommended Sector: 2+)</text>
+			<event>
+				<text>You use some fuel and a long range transmission missile as well as your scrap. Shortly after, your map recieves coordinates of a ship's location - most likely the Scrappers from earlier. What do they want from you? </text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-20"/>
+					<item type="fuel" min="-1" max="-1"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC2"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="2" max_group="3" hidden="false" blue="false">
+			<text>Yes. (Recommended Sector: 4+)</text>
+			<event>
+			<text>You send out a heavy cargo drone with the scrap. There must be more of these Scrappers, because you received another signal! Prey for you to hunt... </text>
+				<item_modify>
+					<item type="scrap" min="-15" max="-15"/>
+					<item type="fuel" min="-1" max="-1"/>
+					<item type="drones" min="-1" max="-1"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC3"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="3" max_group="3" hidden="false" blue="false">
+			<text>Yes. (Recommended Sector: 5+)</text>
+			<event>
+			<text>You teleport as much as scrap as you can using the transmitter. The same song and dance as before - signal, Scrappers, murder. Fun. </text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-20"/>
+					<item type="fuel" min="-1" max="-1"/>
+					<item type="drones" min="-2" max="-2"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC4"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="4" max_group="3" hidden="false" blue="false">
+			<text>Yes. (Recommended Sector: 6+)</text>
+			<event>
+			<text>You manage to create and fully fuel a scrap transport pod, attracting the attention of a heavily armed, highly dangerous Scrapper ship. </text>
+				<item_modify>
+					<item type="scrap" min="-30" max="-30"/>
+					<item type="fuel" min="-1" max="-1"/>
+					<item type="drones" min="-2" max="-2"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC5"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="5" max_group="3" hidden="false" blue="false">
+			<text>Yes. (Recommended Sector: 8+)</text>
+			<event>
+			<text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location - most likely the Scrapper ship from earlier. </text>
+				<item_modify>
+					<item type="scrap" min="-40" max="-40"/>
+					<item type="fuel" min="-1" max="-1"/>
+					<item type="drones" min="-3" max="-3"/>
+				</item_modify>
+				<quest event="ENCOUNTER_TC6"/>
+			</event>
+		</choice>
+		<choice  req="TC_DEAD" lvl="6" max_group="3" hidden="false" blue="false">
+			<text>Yes.</text>
+			<event>
+			<text>You send out a signal displaying the scrap using the transmitter.
+				But nobody came.</text>
+				<choice>
+					<text>Continue...</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="tc_quest_completed" lvl="1" max_group="4" hidden="false" blue="true">
+			<text>Send out a signal using multiversal frequencies.</text>
+			<event>
+			<text>Which signal do you want to send out? 
+			(These enemies are very strong and are more focused on boarding. Reccomended to be fought in S5+)</text>
+				<choice req="tc_rosegold_defeated" lvl="0" max_lvl="0" blue="false">
+					<text>A Rosegold one. (Recommended Sector: 6+)</text>
+					<event>
+						<text>You teleport the materials using the transmitter. Now we wait. </text>
+						<item_modify>
+							<item type="scrap" min="-30" max="-30"/>
+							<item type="drones" min="-3" max="-3"/>
+						</item_modify>
+						<quest event="ENCOUNTER_TC_ROSEGOLD"/>
+					</event>
+				</choice>
+				<choice req="tc_rosegold_defeated" lvl="1" hidden="true" blue="false">
+					<text>You have defeated the Rosegold Trash Compactor.</text>
+					<event load="OPTION_INVALID"/>
+				</choice>
+				<choice req="tc_golden_defeated" lvl="0" max_lvl="0" blue="false">
+					<text>A Golden one. (Recommended Sector: 6+)</text>
+					<event>
+						<text>You teleport the materials using the transmitter. Now we wait. </text>
+						<item_modify>
+							<item type="scrap" min="-30" max="-30"/>
+							<item type="fuel" min="-3" max="-3"/>
+						</item_modify>
+						<quest event="ENCOUNTER_TC_GOLDEN"/>
+					</event>
+				</choice>
+				<choice req="tc_golden_defeated" lvl="1" hidden="true" blue="false">
+					<text>You have defeated the Golden Trash Compactor.</text>
+					<event load="OPTION_INVALID"/>
+				</choice>
+				<choice req="tc_adamantine_defeated" lvl="0" max_lvl="0" blue="false">
+					<text>An Adamantine one. (Recommended Sector: 6+)</text>
+					<event>
+						<text>You teleport the materials using the transmitter. Now we wait. </text>
+						<item_modify>
+							<item type="scrap" min="-30" max="-30"/>
+							<item type="missiles" min="-3" max="-3"/>
+						</item_modify>
+						<quest event="ENCOUNTER_TC_ADAMANTINE"/>
+					</event>
+				</choice>
+				<choice req="tc_adamantine_defeated" lvl="1" hidden="true" blue="false">
+					<text>You have defeated the Adamantine Trash Compactor.</text>
+					<event load="OPTION_INVALID"/>
+				</choice>
+				<choice req="ALL_ELEMENTS_DEFEATED" blue="true">
+					<text>???</text>
+					<event>
+						<text>You didn't even transmit anything but a signal appears on your map. Guess we know what to do now.</text>
+						<quest event="ENCOUNTER_TC_ZOG"/>
+					</event>
+				</choice>
+				<choice>
+					<text>Nevermind.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice  req="tc_zog_met" lvl="2" max_lvl="2" max_group="5" hidden="false" blue="true">
+			<text>Contact The Architect. (Recommended Sector: 8+)</text>
+			<event>
+			<text>You send out a signal displaying the scrap using the transmitter. Shortly after, your map recieves coordinates of a ship's location. Here we go.</text>
+				<quest event="ENCOUNTER_TC_ZOG_FIGHT"/>
+			</event>
+		</choice>
+		<choice  req="tc_quest2_completed" lvl="1" max_group="6" hidden="false" blue="true">
+			<text>Fight the superboss.</text>
+			<event>
+				<text>This is an entirely optional incredibly hard boss that wasn't designed to be beatable. I don't even know if it's possible to beat. Pressing continue will send you straight into the fight.
+
+				You have been warned.</text>
+				<choice>
+					<text>Continue.</text>
+					<event load="ENCOUNTER_TC_ZOG_SUPER"/>
+				</choice>
+				<choice>
+					<text>Nevermind.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<!--
+		<choice req="pilot" lvl="1" max_group="4" hidden="false" blue="true">
+			<text>There's a rotary phone hanging on the side of the machine...</text>
+			<event>
+			<text>...so you pick the receiver up. It seems that you didn't have to dial anything. A rough, metallic voice picks up. "Hey. You're an. Uhm." Papers are being flipped next to the other line's receiver. "Right. Sorry. Renegade. My name's TRACKER, I'm a... freelancer. I need your help. Come and meet me." The receiver is filled with static again. He hung up.</text>
+				<quest event="KM_QUEST_1"/>
+			</event>
+		</choice>
+		-->
+		<choice>
+			<text>Nevermind.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+	</event>
+
+<!--//////////////////////////////////////////////////////////TC IS DOWN/////////////////////////////////////////////////////////-->
+
+	<FTL> <!--DESTROYED-->
+	<event name="TC1_DESTROY">
+		<text>Who even were these guys? You blew them all to pieces by baiting them with scrap, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else...
+			While searching through the remains of the ship, you find a dying member of its crew, clutching an intact weapon it seemingly stripped from right from the hull. It seems like they're nibbling on it.
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_BOMB"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="1" max="6"/>
+						<item type="scrap" min="1" max="15"/>
+						<item type="drones" min="1" max="6"/>
+						<item type="missiles" min="1" max="6"/>
+					</item_modify>
+				</event>
+		</choice>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC1_DEAD</hiddenAug>
+	</event>
+
+	<event name="TC1_CREW">
+		<text>Who even were these guys? The crew is all dead, and yet, you have a feeling this is not over yet... Perhaps there's more of them somewhere else...
+			While searching through the remains of the ship, you find a dying member of its crew, clutching an intact weapon it seemingly stripped from right from the hull. It seems like they're nibbling on it.
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_BOMB"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="1" max="6"/>
+						<item type="scrap" min="1" max="15"/>
+						<item type="drones" min="1" max="6"/>
+						<item type="missiles" min="1" max="6"/>
+					</item_modify>
+				</event>
+		</choice>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC1_DEAD</hiddenAug>
+	</event>
+
+	<event name="TC2_DESTROY">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes.
+			While searching through the remains of the ship, you find another dying member of its crew, this one with a red cross on their head, leaned over a dead scrapper, seemingly chewing on something.
+			You thought it was eating the crew member, but you notice it clutching an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_UNSTABLE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_medic"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="1" max="25"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC2_DEAD</hiddenAug>
+	</event>
+
+	<event name="TC2_CREW">
+		<text>You take great pride in each victory, but this one feels better than most - the Lanius were openly opposed to the Federation and they were formidable foes.
+			While searching through the remains of the ship, you find another dying member of its crew, this one with a red cross on their head, leaned over a dead scrapper, seemingly chewing on something.
+			You thought it was eating the crew member, but you notice it clutching an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_UNSTABLE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_medic"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="10" max="25"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC2_DEAD</hiddenAug>
+	</event>
+
+	<event name="TC3_DESTROY">
+		<text>The Trash Compactor has been defeated yet again, leaving the small fleet to scatter helplessly. In the wreckage, you find a seemingly advanced piece of equipment that easily integrates itself in your systems. You notice additional options in your onboard lab.
+			While searching through the remains of the ship, you find yet another dying member of its crew, this one looks much larger than the last two you found. You're not shocked to find them nervously eating an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_LEAD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_heavy"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="25" max="45"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC3_DEAD</hiddenAug>
+		<hiddenAug>ADVANCED_SCRAP</hiddenAug>
+	</event>
+
+	<event name="TC3_LESSER_DESTROY">
+		<text>The Fleet ship lays broken before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials. 
+			In the wreckage, you find a seemingly advanced piece of equipment that easily integrates itself in your systems. You notice additional options in your onboard lab.
+			While searching through the remains of the ship, you find yet another dying member of its crew, this one looks much larger than the last two you found. You're not shocked to find them nervously eating an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.		
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_LEAD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_heavy"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="25" max="45"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC3_DEAD</hiddenAug>
+		<hiddenAug>ADVANCED_SCRAP</hiddenAug>
+	</event>
+
+	<event name="TC3_CREW">
+		<text>The Fleet ship lays broken before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials.
+			In the wreckage, you find a seemingly advanced piece of equipment that easily integrates itself in your systems. You notice additional options in your onboard lab.
+			While searching through the remains of the ship, you find yet another dying member of its crew, this one looks much larger than the last two you found. You're not shocked to find them nervously eating an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.		
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_LEAD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_heavy"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="25" max="45"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC3_DEAD</hiddenAug>
+		<hiddenAug>ADVANCED_SCRAP</hiddenAug>
+	</event>
+
+	<event name="TC3_LESSER_CREW">
+		<text>The Fleet ship lays broken before your ship. With the other ships scattering in panic, you can now quickly scan the remains and get a few materials.
+			In the wreckage, you find a seemingly advanced piece of equipment that easily integrates itself in your systems. You notice additional options in your onboard lab.
+			While searching through the remains of the ship, you find yet another dying member of its crew, this one looks much larger than the last two you found. You're not shocked to find them nervously eating an advanced flak cannon. 
+			You can snatch the weapon from them, take them both with you, or leave them to die.		
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_LEAD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="scrapper_heavy"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="3" max="9"/>
+						<item type="scrap" min="25" max="45"/>
+						<item type="drones" min="3" max="9"/>
+						<item type="missiles" min="3" max="9"/>
+					</item_modify>
+				</event>
+		</choice>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC3_DEAD</hiddenAug>
+		<hiddenAug>ADVANCED_SCRAP</hiddenAug>
+	</event>
+
+	<event name="TC4_DESTROY">
+		<text>The Scrapper's ship is now torn to shreds and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!".
+			While searching through the wreckage of the ship, you find a wounded Trash Eater clutching an advanced Flak Cannon. You're familiar with how wounded scrappers will eat weapons to survive, but the Trash Eater just holds it, staring at you.
+			You can offer him a position on your ship though it may cost you.
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SCRAPFLAK"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Offer the Trash Eater a position on your crew.</text>
+			<event>
+				<text>You promise the Trash Eater additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they consume the Flak Cannon, chuckling to themselves.</text>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+				<achievement silent="false">ACH_TCC_TRASH_EATER</achievement>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded Trash Eater watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="6" max="12"/>
+						<item type="scrap" min="50" max="75"/>
+						<item type="drones" min="6" max="12"/>
+						<item type="missiles" min="6" max="12"/>
+					</item_modify>
+				</event>
+		</choice>
+		<unlockCustomShip>PLAYER_SHIP_TRASH_MINER</unlockCustomShip>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC4_DEAD</hiddenAug>
+	</event>
+
+	<event name="TC4_CREW">
+		<text>The Scrapper's ship is now silent and the Kestrel Miner hails you. "That's fantastic, we always appreciate help! CHEEESE! BEAM THEM, uhhhhh... THE BLUEPRINTS FOR OUR SHIP! AND THAT GARBAGE WEAPON THAT LANCER MADE!".
+			While searching through the empty halls of the ship, you find a wounded Trash Eater clutching an advanced Flak Cannon. You're familiar with how wounded scrappers will eat weapons to survive, but the Trash Eater just holds it, staring at you.
+			You can offer him a position on your ship though it may cost you.
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SCRAPFLAK"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Offer the Trash Eater a position on your crew.</text>
+			<event>
+				<text>You promise the Trash Eater additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they consume the Flak Cannon, chuckling to themselves.</text>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+				<achievement silent="false">ACH_TCC_TRASH_EATER</achievement>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded Trash Eater watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="6" max="12"/>
+						<item type="scrap" min="50" max="75"/>
+						<item type="drones" min="6" max="12"/>
+						<item type="missiles" min="6" max="12"/>
+					</item_modify>
+				</event>
+		</choice>
+		<unlockCustomShip>PLAYER_SHIP_TRASH_MINER</unlockCustomShip>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC4_DEAD</hiddenAug>
+	</event>
+
+	<event name="TCM_DESTROY">
+		<text>The Kestrel Miner is now in pieces. Whatever the crew's motivations or allegiances are, they're stardust now. The Trash Compactor hails you and, surprsingly enough, gives you a reward of your choice. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<playMusic/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC4_DEAD</hiddenAug>
+		<choice>
+			<text>Request a golden weapon.</text>
+			<event>
+				<text>You got a weapon - and it's made out of gold!
+					The Trash Eater from this universe is impressed with your performance, and joins your crew.
+				</text>
+				<weapon name="TC_SHOTGUN_GOLD"/>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+				<achievement silent="false">ACH_TCC_TRASH_EATER</achievement>
+			</event>
+		</choice>
+			<choice>
+				<text>Request a golden drone.</text>
+				<event>
+					<text>You got a drone - and it's made out of gold!
+						The Trash Eater from this universe is impressed with your performance, and joins your crew.
+					</text>
+					<drone name="TC_COMBAT_GOLD"/>
+					<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+					<achievement silent="false">ACH_TCC_TRASH_EATER</achievement>
+				</event>
+		</choice>
+	</event>
+
+	<event name="TCM_CREW">
+		<text>The Kestrel Miner is now silent, and so is the abomination they carried on-board. Whatever the crew's motivations or allegiances are, they're stardust now. The Trash Compactor hails you and, surprsingly enough, gives you a reward of your choice. </text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<playMusic/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC4_DEAD</hiddenAug>
+		<choice>
+			<text>Request a golden weapon.</text>
+			<event>
+				<text>You got a weapon - and it's made out of gold!
+					The Trash Eater from this universe is impressed with your performance, and joins your crew.
+				</text>
+				<weapon name="TC_SHOTGUN_GOLD"/>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+				<achievement silent="false">ACH_TCC_TRASH_EATER</achievement>
+			</event>
+		</choice>
+		<choice>
+			<text>Request a golden drone.</text>
+			<event>
+				<text>You got a drone - and it's made out of gold!
+					The Trash Eater from this universe is impressed with your performance, and joins your crew.
+				</text>
+				<drone name="TC_COMBAT_GOLD"/>
+				<crewMember amount="1" class="trash_eater" all_skills="1">Trash Eater</crewMember>
+				<achievement silent="false">ACH_TCC_TRASH_EATER</achievement>
+			</event>
+		</choice>
+	</event>
+
+	<event name="TC5_DESTROY">
+		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. 
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_BATTERY"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC5_DEAD</hiddenAug>
+	</event>
+
+	<event  name="TC5_CREW">
+		<text>We crushed them again and again, and yet they still come back. The next one is the hardest, and the last. Let's finish this. 
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<weapon name="TC_SHOTGUN_BATTERY"/>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC5_DEAD</hiddenAug>
+	</event>
+
+	<event name="TC6_DESTROY">
+		<text>The Trash Compactor has been laid to rest amongst the stars; the wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect!
+		
+		[Advanced Scrap Processor permanently unlocked! You can find it in the Scrapper lab]</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<augment name="COMPACTOR"/>
+		<unlockCustomShip>PLAYER_SHIP_SCRAPPER</unlockCustomShip>
+		<achievement silent="false">ACH_TCC_TC6DEFEAT</achievement>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC6_DEAD</hiddenAug>
+		<metaVariable name="tc_quest_completed" op="set" val="1"/>
+		<choice>
+			<text>Continue...</text>
+			<event load="TC_QUEST2_INTRO"/>
+		</choice>
+	</event>
+	
+	<event name="TC6_CREW">
+		<text>The Trash Compactor is now empty, forever. The wreckage floating around your ship also also had a strange device and some ship blueprints for you to collect! 
+		
+		[Advanced Scrap Processor permanently unlocked! You can find it in the Scrapper lab]
+		</text>
+		<playMusic/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<augment name="COMPACTOR"/>
+		<unlockCustomShip>PLAYER_SHIP_SCRAPPER</unlockCustomShip>
+		<achievement silent="false">ACH_TCC_TC6DEFEAT</achievement>
+		<hiddenAug>TC_DEAD</hiddenAug>
+		<hiddenAug>TC6_DEAD</hiddenAug>
+		<metaVariable name="tc_quest_completed" op="set" val="1"/>
+		<choice>
+			<text>Continue...</text>
+			<event load="TC_QUEST2_INTRO"/>
+		</choice>
+	</event>
+
+	<event name="TC_QUEST2_INTRO">
+		<text>Suddenly, your transmitter begins beeping and whirring violently, the sounds accelerating faster and faster until they cut off without warning. You move to inspect it and find a note which reads, "There's more. Your transmitter can now broadcast multiversal frequencies to those who listen."</text>
+	</event>
+
+	<event name="DESTROYED_BLACK_ROSE_ENCOUNTER">
+		<text>The Corrosus is gone - amidst the sea of corrugated metal, you manage to salvage a strange machine.</text>
+		<autoReward level="MED">stuff</autoReward>
+		<augment name="AUTOMATED_QUARTERMASTER"/>
+	</event>
+
+	<event name="DEAD_CREW_BLACK_ROSE_ENCOUNTER">
+		<text>The Corrosus is now silent - amidst the sea of corrugated metal, you manage to salvage a strange machine.</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<augment name="AUTOMATED_QUARTERMASTER"/>
+	</event>
+
+
+
+	<event name="KM_DESTROY">
+		<text>You've destroyed the bigger ship... and you got their stuff. Let's hope this was worth it. </text>
+		<autoReward level="MED">stuff</autoReward>
+		<playMusic/>
+		<choice>
+		<text>coolio</text>
+		<event>
+			<text>Thats all folks!</text>
+			<event/>
+		</event>
+		</choice>
+	</event>
+
+	<event name="KM_CREW">
+		<text>You've emptied the bigger ship... and you got their stuff. It reeks of malformed corpses. Let's hope this was worth it.</text>
+		<autoReward level="HIGH">stuff</autoReward>
+		<playMusic/>
+		<choice>
+		<text>K then</text>
+		<event>
+			<text>PERHAOPS</text>
+			<event/>
+		</event>
+		</choice>
+	</event>
+	</FTL>
+
+<!--///////////////////////////////////////FLAK MAKING///////////////////////////////////////////////////////////////-->
+
+	<FTL> <!--GET FLAKS-->
+	<event name="FLAK_FORGE_VANILLA">
+	<text>What Flak weapon do you want to print?</text>
+
+	<choice hidden="false" blue="false">
+		<text>Flak I</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-40" max="-40"/>
+				</item_modify>
+			<weapon name="SHOTGUN_1"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Flak II</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-65" max="-65"/>
+				</item_modify>
+			<weapon name="SHOTGUN_2"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Flak III</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+				</item_modify>
+			<weapon name="SHOTGUN_3"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Flak IV</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<weapon name="SHOTGUN_4"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Chain Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-75" max="-75"/>
+				</item_modify>
+			<weapon name="SHOTGUN_CHAIN"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Charge Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<weapon name="SHOTGUN_CHARGE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Pre-Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<weapon name="SHOTGUN_INSTANT"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Fire Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-70" max="-70"/>
+				</item_modify>
+			<weapon name="SHOTGUN_FIRE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Ion Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-70" max="-70"/>
+				</item_modify>
+			<weapon name="SHOTGUN_ION"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Toxic Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-70" max="-70"/>
+				</item_modify>
+			<weapon name="SHOTGUN_TOXIC"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Toggle Fire Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-125" max="-125"/>
+				</item_modify>
+			<weapon name="SHOTGUN_TOGGLE_FIRE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Toggle Ion Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-125" max="-125"/>
+				</item_modify>
+			<weapon name="SHOTGUN_TOGGLE_ION"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Toggle Toxic Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-125" max="-125"/>
+				</item_modify>
+			<weapon name="SHOTGUN_TOGGLE_TOXIC"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Crystal Scatter Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-70" max="-70"/>
+				</item_modify>
+			<weapon name="CRYSTAL_SHOTGUN"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Elite Crystal Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-90" max="-90"/>
+				</item_modify>
+			<weapon name="CRYSTAL_SHOTGUN_RED"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	</event>
+
+	<event name="FLAK_FORGE_CUSTOM">
+	<text>Choose flak:</text>
+
+	<choice hidden="false" blue="false">
+		<text>High-Explosive</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_BOMB"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Unstable</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_UNSTABLE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Lead</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-55" max="-55"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_LEAD"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Gold</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-85" max="-85"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_GOLD"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Battery</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_BATTERY"/>
+		</event>
+	</choice>
+
+	<!--<choice hidden="false" blue="true">
+		<text>OMEGA</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-400" max="-400"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_OMEGA"/>
+		</event>
+	</choice>-->
+
+	<choice hidden="false" blue="true">
+		<text>Flakking Hell</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<weapon name="TC_SHOTGUN_HELL"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>RC-LD Launcher Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+				</item_modify>
+			<weapon name="RC_LD_LAUNCHER"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	</event>
+	</FTL>
+
+	<FTL>
+
+<event name="FLAK_FORGE_BOMB">
+	<text>What Bomb Flak weapon do you want to print?</text>
+
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak I</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_1"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak II</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-75" max="-75"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_2"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak III</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-90" max="-90"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_3"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak IV</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-110" max="-110"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_4"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Breach Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_BREACH"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Chain Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_CHAIN"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Bomb Flak Charger</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-75" max="-75"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_CHARGE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Recycler Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-52" max="-52"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_FREE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Conservative Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_CONSERVATIVE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Pre-emptive Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-70" max="-70"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_INSTANT"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Fire Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_FIRE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Ion Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_ION"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Rad Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_BIO"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="false">
+		<text>Lockdown Bomb Flak</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-75" max="-75"/>
+			</item_modify>
+			<weapon name="TC_BOMB_SHOTGUN_LOCK"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+</event>
+
+<event name="FLAK_FORGE_DRONE">
+	<text>Choose flak:</text>
+
+	<choice hidden="false" blue="false">
+		<text>Amp</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-40" max="-40"/>
+				</item_modify>
+			<drone name="FLAK_1_AMP2"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Gold</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<drone name="TC_COMBAT_GOLD"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Unstable</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-80" max="-80"/>
+				</item_modify>
+			<drone name="TC_COMBAT_UNSTABLE"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Heavy</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-60" max="-60"/>
+				</item_modify>
+			<drone name="TC_COMBAT_HEAVY"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Bomb</text>
+		<event>
+			<text>Done!</text>
+			<item_modify>
+					<item type="scrap" min="-100" max="-100"/>
+				</item_modify>
+			<drone name="TC_COMBAT_BOMB"/>
+		</event>
+	</choice>
+
+	<choice hidden="false" blue="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	</event>
+
+	<event name="FLAK_FORGE_ELEMENTAL">
+		<text>Choose flak:</text>
+		<choice>
+			<text>Rosegold Battery</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-75" max="-75"/>
+					</item_modify>
+				<weapon name="TC_SHOTGUN_BATTERY_ROSEGOLD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Rosegold Drone</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-50" max="-50"/>
+					</item_modify>
+				<drone name="TC_COMBAT_ROSEGOLD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Rosegold Unstable Drone</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-40" max="-40"/>
+					</item_modify>
+				<drone name="TC_COMBAT_UNSTABLE_ROSEGOLD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Golden Ion</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-95" max="-95"/>
+					</item_modify>
+				<weapon name="TC_SHOTGUN_GOLD_ION"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Golden Hacking</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-95" max="-95"/>
+					</item_modify>
+				<weapon name="TC_SHOTGUN_GOLD_HACK"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Adamantine</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-70" max="-70"/>
+					</item_modify>
+				<weapon name="TC_SHOTGUN_ADAMANTINE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Adamantine Unstable Drone</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-60" max="-60"/>
+					</item_modify>
+				<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Nevermind.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+	</event>
+
+	<event name="FLAK_FORGE_ZOG">
+		<text>Choose flak:</text>
+		<choice>
+			<text>Omega Amalgam</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-300" max="-300"/>
+					</item_modify>
+				<weapon name="TC_SHOTGUN_OMEGA"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Midnight Prismatic</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-130" max="-130"/>
+					</item_modify>
+				<weapon name="TC_SHOTGUN_MIDNIGHT"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Elemental Toggle</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-90" max="-90"/>
+					</item_modify>
+				<weapon name="TC_SHOTGUN_TOGGLE_ROSEGOLD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Super Unstable</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-100" max="-100"/>
+					</item_modify>
+				<weapon name="TC_SHOTGUN_SUPER_UNSTABLE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Scrapper Synthesiser</text>
+			<event>
+				<text>Done!</text>
+				<item_modify>
+						<item type="scrap" min="-100" max="-100"/>
+					</item_modify>
+				<drone name="TC_DRONE_SCRAPPER_SYNTHESISER"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Nevermind.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+	</event>
+	</FTL>
+
+
+	<event name="AUTOMATED_QUARTERMASTER_CHOICE">
+		<text>PICK A/////FIREARM////QUALITY_MERCHANDISE////GREAT CHOICES////
+		ALL WEAPONS ARE FRESH AND HOT////INSERT YOUR SCRAP IN THE RECEPTACLE AND TURN THE SAFETY CRANK 274° COUNTER-CLOCKWISE////
+		ch33s3W4sH3r3////RSA FOREVER
+		...SELECT YOUR WEAPON FROM THE LIST OF PRESET .GCODE FILES...
+		</text>
+
+		<choice hidden="false" blue="false">
+			<text>MILITIA TAGGER</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-50" max="-50"/>
+					</item_modify>
+				<weapon name="MILITIA_TAGGER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>ALTERNATE VER. -> RSA TAGGER</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-50" max="-50"/>
+					</item_modify>
+				<weapon name="RSA_TAGGER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>MILITIA FLAK ONE</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-50" max="-50"/>
+					</item_modify>
+				<weapon name="TC_MILITIA_1"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>MILITIA FLAK TWO</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-75" max="-75"/>
+					</item_modify>
+				<weapon name="TC_MILITIA_2"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>MINIGUN MARK ONE</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-40" max="-40"/>
+					</item_modify>
+				<weapon name="TC_MINIGUN_MK1"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>MINIGUN MARK TWO</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-55" max="-55"/>
+					</item_modify>
+				<weapon name="TC_MINIGUN_MK2"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>MINIGUN MARK THREE</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-85" max="-85"/>
+					</item_modify>
+				<weapon name="TC_MINIGUN_MK3"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>LASER CENTRIFUGE</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-55" max="-55"/>
+					</item_modify>
+				<weapon name="TC_LASER_CHARGER"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>LEGION LASER</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-60" max="-60"/>
+					</item_modify>
+				<weapon name="TC_LASER_LEGION"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>MARKSMAN LASER</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-45" max="-45"/>
+					</item_modify>
+				<weapon name="TC_LASER_MARKSMAN"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>VULCAN ROTARY AUTOCANNON</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-60" max="-60"/>
+					</item_modify>
+				<weapon name="TC_VULCAN_CANNON"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>BURST LASER EPSILON</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-30" max="-30"/>
+					</item_modify>
+				<weapon name="TC_BURST_1"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>BURST LASER SIGMA</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-50" max="-50"/>
+					</item_modify>
+				<weapon name="TC_BURST_2"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>ESKA BEAM</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-55" max="-55"/>
+					</item_modify>
+				<weapon name="TC_ESKA"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>RSA MINICANNON</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-20" max="-20"/>
+					</item_modify>
+				<weapon name="RSA_MINICANNON"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="false">
+			<text>TONFA ION BEAM</text>
+			<event>
+				<text>The machine takes your scrap, moves it through several compartments, whirs loudly and presents you your new weapon...</text>
+				<item_modify>
+						<item type="scrap" min="-50" max="-50"/>
+					</item_modify>
+				<weapon name="TC_TONFA"/>
+			</event>
+		</choice>
+
+		<choice hidden="false" blue="true">
+			<text>////CANCEL TRANSACTION////</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+	</event>
+
+	<event name="FUEL_RESERVOIR_RANDOM">
+		<text>Create a random 1 to 10 fuel?</text>
+		<choice hidden="true" req="tcc_loc_has_fuelreservoir" lvl="0" max_group="0" blue="false">
+			<text>Create a random 1 to 10 fuel. We'll only be able to do this once per sector.</text>
+			<event load="STORAGE_CHECK_JOB_FUEL_RESERVOIR_RANDOM"/>
+		</choice>
+		<choice hidden="true" req="tcc_loc_has_fuelreservoir" lvl="1" max_group="0" blue="false">
+			<text>You've already created the fuel in this sector.</text>
+			<event load="OPTION_INVALID"/> 
+		</choice>
+		<choice hidden="true" req="pilot" lvl="1" max_group="2" blue="false">
+			<text>Nevermind.</text>
+			<event load="STORAGE_CHECK_JOB_LOAD"/>
+		</choice>
+	</event>
+
+	<eventList name="STORAGE_CHECK_JOB_FUEL_RESERVOIR_RANDOM">
+		<event load="FUEL_RESERVOIR_RANDOM_LOW"/>
+		<event load="FUEL_RESERVOIR_RANDOM_LOW"/>
+		<event load="FUEL_RESERVOIR_RANDOM_LOW"/>
+		<event load="FUEL_RESERVOIR_RANDOM_LOW"/>
+		<event load="FUEL_RESERVOIR_RANDOM_MED"/>
+		<event load="FUEL_RESERVOIR_RANDOM_MED"/>
+		<event load="FUEL_RESERVOIR_RANDOM_MED"/>
+		<event load="FUEL_RESERVOIR_RANDOM_HIGH"/>
+		<event load="FUEL_RESERVOIR_RANDOM_HIGH"/>
+		<event load="FUEL_RESERVOIR_RANDOM_FULL"/>
+	</eventList>
+
+	<event name="FUEL_RESERVOIR_RANDOM_LOW">
+		<text>The fuel reservoir has created a canister filled with small amounts of fuel.</text>
+		<item_modify>
+			<item type="fuel" min="1" max="3"/>
+		</item_modify>
+		<variable name="tcc_loc_has_fuelreservoir" op="set" val="1"/>
+	</event>
+
+	<event name="FUEL_RESERVOIR_RANDOM_MED">
+		<text>The fuel reservoir has created a canister filled with medium amounts of fuel.</text>
+		<item_modify>
+			<item type="fuel" min="4" max="6"/>
+		</item_modify>
+		<variable name="tcc_loc_has_fuelreservoir" op="set" val="1"/>
+	</event>
+
+	<event name="FUEL_RESERVOIR_RANDOM_HIGH">
+		<text>The fuel reservoir has created a canister filled with large amounts of fuel.</text>
+		<item_modify>
+			<item type="fuel" min="7" max="9"/>
+		</item_modify>
+		<variable name="tcc_loc_has_fuelreservoir" op="set" val="1"/>
+	</event>
+
+	<event name="FUEL_RESERVOIR_RANDOM_FULL">
+		<text>The fuel reservoir has created a canister filled with full amounts of fuel.</text>
+		<item_modify>
+			<item type="fuel" min="10" max="10"/>
+		</item_modify>
+		<variable name="tcc_loc_has_fuelreservoir" op="set" val="1"/>
+	</event>
+
+	<FTL>
+	<eventList name="SCRAP_COMPACT">
+		<event load="SCRAP_COMPACT_FAIL"/>
+		<event load="SCRAP_COMPACT_FAIL"/>
+		<event load="SCRAP_COMPACT_FAIL"/>
+		<event load="SCRAP_COMPACT_SUCCESS"/>
+		<event load="SCRAP_COMPACT_SUCCESS"/>
+		<event load="SCRAP_COMPACT_SUCCESS_BETTER"/>
+		<event load="SCRAP_COMPACT_SUCCESS_BETTER2"/>
+	</eventList>
+
+	<event name="SCRAP_COMPACT_FAIL">
+	<text>You attempt to configure the machine in order to create something useful, but after a few minutes of bootlooping, it seems all you've made is a protogen figurine. Or in other words, scrap.</text>
+	<item_modify>
+		<item type="scrap" min="25" max="35"/>
+	</item_modify>
+	</event>
+
+	<event name="SCRAP_COMPACT_SUCCESS">
+	<text>You fire up the machine. After some complicated troubleshooting and every single screen on it turning blue, you manage to get it to create something. A Flak II! How... competent.</text>
+	<weapon name="SHOTGUN_2"/>
+	</event>
+
+	<event name="SCRAP_COMPACT_SUCCESS_BETTER">
+	<text>You've created... something hellish. The Compactor is visbily smoking. Let's get the enemy ships on fire too.</text>
+	<weapon name="TC_SHOTGUN_HELL"/>
+	</event>
+
+	<event name="SCRAP_COMPACT_SUCCESS_BETTER2">
+	<text>The Compactor throws up several errors at you, most of them being 719: MATERIAL INCORRECT. A loud ping signals that something has indeed been created though...</text>
+	<weapon name="TC_SCRAPFLAK"/>
+	</event>
+	</FTL>
+
+<!--/////////////////////////////////////////ENCOUNTER TEXT//////////////////////////////////////////////-->
+
+<event name="ENCOUNTER_TC1">
+	<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+<text>You've arrived at the coordinates, only to be met with the same Lanius ship from before. This looks like a trap, but they aren't attacking you, nor are their weapons on... yet.</text>
+<beaconType id="map_icon_trash" global="true">
+	<color r="110" g="32" b="9" a="1.0"/>
+	<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+	<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+</beaconType>
+<ship load="TC_TRASH_COMPACTOR1" hostile="false"/>
+<choice req="TC1_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+	<text>Attempt to hail them.</text>
+	<event>
+		<text>The strange lanius ship descends in your view, scoops up the scrap you sent them and attacks!</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text>Prepare for battle!</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+	</event>
+</choice>
+<choice req="TC1_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+	<text>Weird deja vu, but you feel like you've done this all before.</text>
+	<event load="OPTION_INVALID"/>
+</choice>
+<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+	<text>Attempt to sneak away from the Lanius.</text>
+	<event>
+		<text>You manage to leave succesfully, with the opportunity of doing something on-board.</text>
+		<choice>
+			<text>Do something onboard the ship.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+		<choice>
+			<text>Do nothing.</text>
+			<event/>
+		</choice>
+	</event>
+</choice>
+</event>
+
+<event name="ENCOUNTER_TC2">
+	<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+<text>You've arrived at the new coordinates. It's a ship similar to the one from earlier. It is unclear if they're the same guys from before, or if they just came out of another universe...</text>
+<beaconType id="map_icon_trash" global="true">
+	<color r="110" g="32" b="9" a="1.0"/>
+	<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+	<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+</beaconType>
+<ship load="TC_TRASH_COMPACTOR2" hostile="false"/>
+<choice req="TC2_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+	<text>Attack them.</text>
+	<event>
+	<text>The strange lanius ship descends in your view and powers up weapons.</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text>Prepare for battle.</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+	</event>
+</choice>
+<choice req="TC2_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+	<text>They're gone. Right? ...right?</text>
+	<event load="OPTION_INVALID"/>
+</choice>
+<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+	<text>Not every fight is our fight.</text>
+	<event>
+		<text>You manage to sneak away by distracting the Scrappers - it seems the old "Rusting locomotives in your area" method still works.</text>
+		<choice>
+			<text>Do something onboard the ship.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+		<choice>
+			<text>Do nothing.</text>
+			<event/>
+		</choice>
+	</event>
+</choice>
+</event>
+
+<!--
+<event name="ENCOUNTER_TC3">
+	<text>Hold on, we just killed these guys. How and why are they back? They... they seem to have learned from the previous engagements, as this time they've got you cornered.</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+    </beaconType>
+	<choice req="TC3_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+		<text>Attack.</text>
+		<event>
+			<text>The Trash Compactor was waiting for you, seemingly having anticipated your movements. Let's end this. Again.</text>
+			<ship load="TC_TRASH_COMPACTOR3" hostile="true"/>
+			<choice hidden="true">
+				<text>Prepare for battle.</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC3_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+		<text>Weird deja vu, but you feel like you've done this all before.</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+		<text>Nope. Nope. Nope. Nope.</text>
+		<event>
+			<text>Why are these guys coming back? Well... we won't.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+-->
+
+<event name="ENCOUNTER_TC3">
+	<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+	<text>Arriving at the beacon, you are met by four entire ships, all of them readying weapons against you. You won't be able to manuever away without fighting at least one ship.</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+  </beaconType>
+	<choice req="TC3_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+		<text>Get closer...</text>
+		<event>
+			<text>The four ships have you cornered - who will you attack?</text>
+			<choice>
+				<text>Attack the Corvette ship. </text>
+				<event>
+					<text>The Corvette starts powering up its weapons, detaches from the Trash fleet and takes position to fire at your ship!</text>
+					<ship load="TC_SCRAPPER_CORVETTE" hostile="true"/>
+					<choice hidden="true">
+						<text>Prepare for battle.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Attack the Hunter ship. </text>
+				<event>
+					<text>The Hunter acquires teleporter lock-on to your ship. Get ready for intruders!</text>
+					<ship load="TC_SCRAPPER_HUNTER" hostile="true"/>
+					<choice hidden="true">
+						<text>Prepare for battle.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Attack the Support ship. </text>
+				<event>
+					<text>The Support ship maneuvers itself close to your ship and powers up its drones!</text>
+					<ship load="TC_SCRAPPER_SUPPORT" hostile="true"/>
+					<choice hidden="true">
+						<text>Prepare for battle.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Ignore the lesser ships and attack the Trash Compactor itself. </text>
+				<event>
+					<text>The Trash Compactor was waiting for you, seemingly having anticipated your movements. You get a garbled, badly translated hail from them: "WE not sAme UN1verse. We smMORTer thAn oTher SCrappErS, wE k1Ll uNiversE and PREZent to leader FOR eat. STANd in the w4y, Y0u, die...". These guys aren't gonna talk it out, though, as they already powered up weapons!</text>
+					<ship load="TC_TRASH_COMPACTOR3" hostile="true"/>
+					<choice hidden="true">
+						<text>Let's end this. Again.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC3_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+		<text>The rest of the fleet scatters seeing the carnage you've inflicted. You're safe, for now...</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="cloaking" lvl="3" max_group="998" blue="true" hidden="true">
+		<text>(Upgraded Cloaking) Sneak away.</text>
+		<event>
+			<text>Somehow, despite being cornered by them, your advanced Cloaking lets you disappear and manuever right between the enemy ships. You could probably do something at the beacon without being detected.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC3_DEAD" lvl="1" hidden="true" blue="false" max_group="998"> <!--prevents the failsafe to force you to select the invalid option-->
+		<text>We have nothing to do here...</text>
+		<event />
+	</choice>
+</event>
+
+<event name="ENCOUNTER_TC4">
+	<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+	<text>Hey, there's a second ship here. And it's not hostile. In fact, it's not even a Scrapper. It's a scavenger of some kind, judging by their terribly damaged and dirty hull. Clearly painted as a garbage disposal ship -  but it's way too well-armed to actually be one.</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+    </beaconType>
+	<choice req="TC4_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+		<text>Try to intervene.</text>
+		<event>
+			<text>You receive a transmission from the Kestrel. A protogen appears on the communications console. "I'm TRACKER, Federation pilot. Pleased to meet you and everything. These bast- I mean, rude fellows are trying to kill us, and I don't know how much longer we'll hold. Help. I will make sure you get proper compens-CHEESE WE LOST THE LEFT AFTERBURNER, GET TO FIXING IT NOW!"</text>
+			<choice>
+				<text>Help TRACKER!</text>
+				<event>
+					<text>The strange lanius ship descends in your view once again (how does it keep coming back?) and prepares to end you once and for all. Despite being hit, TRACKER's ship is still in the fight too! Things are getting serious.</text>
+					<ship load="TC_TRASH_COMPACTOR4" hostile="true"/>
+					<playMusic>tc_fight</playMusic>
+					<environment type="PDS" target="enemy"/>
+					<choice hidden="true">
+						<text>Let's do this.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice>
+				<text>Help the Scrappers!</text>
+				<event>
+					<text>"Hey, what have WE done to deserve this? Ah, right, I remember now. So be it." As the protogen closes the communication and powers up all of his ship's weapons, you prepare to fight them.</text>
+					<ship load="TC_TRASH_MINER" hostile="true"/>
+					<playMusic>tc_fight</playMusic>
+					<choice hidden="true">
+						<text>Let's hope the Scrapper don't attack us after this.</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC4_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+		<text>The Scrap Transmitter's lights flicker wildly. It seems that it's receiving a massive signal... It was a trap all along. It's acting as a multiversal lure, trying to bring even more Scrappers on your location... Interesting, maybe the hunters will soon become the hunted.</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+		<text>Let's blow this popsicle stand.</text>
+		<event>
+			<text>It seems that TRACKER is... dealing with the problem, somehow. You manage to leave them fight.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+
+<event name="ENCOUNTER_TC5">
+	<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+	<text>This one's stronger. Faster. Better. Shiny, even. Let's reduce them to dust.</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+    </beaconType>
+	<ship load="TC_TRASH_COMPACTOR5" hostile="false"/>
+	<choice req="TC5_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+		<text>Attack.</text>
+		<event>
+			<text>We've got lock-on, fire up all weapons!</text>
+			<ship hostile="true"/>
+			<playMusic>tc_fight</playMusic>
+			<choice hidden="true">
+				<text>Attack!</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="TC5_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+		<text>The Scrap Transmitter is audibly groaning, like a ship being torn apart. You've heard a lot of that recently. Maybe you can set one last trap...</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+		<text>This one's different - common logic dictates that it's stronger. Let's run.</text>
+		<event>
+			<text>Somehow, you manage to sneak away. Or perhaps it's sparing you? Strange... You don't have too much time to dwell on it, however.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	</event>
+
+	<event name="ENCOUNTER_TC6">
+		<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+		<text>This is the first Trash Compactor. The prince of the Scrappers, the Trash Eater, is here. His conquest to take over the world starts with your ship. Let's make sure his plans crash and burn.</text>
+		<beaconType id="map_icon_trash" global="true">
+			<color r="110" g="32" b="9" a="1.0"/>
+			<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+			<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+			<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+		</beaconType>
+		<ship load="TC_TRASH_COMPACTOR6" hostile="false"/>
+		<choice req="TC6_DEAD" lvl="0" hidden="true" blue="false" max_group="0">
+			<text>Attack.</text>
+			<event>
+				<text>The Universe 0 version of the Scrapper ship is the strongest enemy you've faced so far. You will not survive. Good luck.</text>
+				<ship hostile="true"/>
+				<playMusic>tc_fight</playMusic>
+				<choice hidden="true">
+					<text>...</text>
+					<event load="COMBAT_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="TC6_DEAD" lvl="1" hidden="true" blue="false" max_group="0">
+			<text>This is over. Finally. The last Scrapper is fully silent. You feel as if you've saved plenty of renegades from these guys. You're not sure what their plan was - if they even had a plan in the first place.</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+			<text>We can't do this.</text>
+			<event>
+				<text>You manage to leave; you're not exactly sure how.</text>
+				<choice>
+					<text>Do something onboard the ship.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+				<choice>
+					<text>Do nothing.</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+
+	<ship name="TC_TRASH_COMPACTOR_ROSEGOLD" auto_blueprint="TC_TRASH_COMPACTOR_ROSEGOLD">
+	    <ship hostile="true"/>
+		<destroyed load="TC_ROSEGOLD_DESTROY"/>
+		<deadCrew load="TC_ROSEGOLD_DESTROY"/>
+	</ship>
+
+	<event name="ENCOUNTER_TC_ROSEGOLD">
+		<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+		<text>You've arrived at the coordinates and see yet another Scrapper ship. This one is different, your sensors detect weird readings.</text>
+		<beaconType id="map_icon_trash" global="true">
+			<color r="254" g="190" b="242" a="1"/>
+			<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+			<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+			<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+		</beaconType>
+		<ship load="TC_TRASH_COMPACTOR_ROSEGOLD" hostile="false"/>
+		<choice req="tc_rosegold_defeated" lvl="0" hidden="true" blue="false" max_group="0">
+			<text>Hail them.</text>
+			<event>
+				<text>They transmit a message. Then they send it again. And again. The same signal repeats endlessly, echoing across every channel on your ship. The message contains only two words, "J0In US". As the message continues to loop, the Scrapper ship powers on it's weapons.</text>
+				<ship hostile="true"/>
+				<playMusic>tc_fight</playMusic>
+				<choice hidden="true">
+					<text>Prepare for battle!</text>
+					<event load="COMBAT_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="tc_rosegold_defeated" lvl="1" hidden="true" blue="false" max_group="0">
+			<text>No do-overs.</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+			<text>Attempt to sneak away from the Scrapper.</text>
+			<event>
+				<text>You manage to leave succesfully, with the opportunity of doing something on-board.</text>
+				<choice>
+					<text>Do something onboard the ship.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+				<choice>
+					<text>Do nothing.</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<event name="TC_ROSEGOLD_DESTROY">
+		<text>The rosegold ship has been defeated.
+			While searching through the remains of the ship, you find a dying member of its crew, clutching an intact weapon it seemingly stripped from right from the hull. It seems like they're nibbling on it.
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
+		<playMusic/>
+		<variable name="tc_rosegold_defeated" op="set" val="1"/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_BATTERY_ROSEGOLD"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="rosegold_scrapper_scavenger_mk2"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="5" max="10"/>
+						<item type="scrap" min="25" max="75"/>
+						<item type="drones" min="5" max="10"/>
+						<item type="missiles" min="5" max="10"/>
+					</item_modify>
+				</event>
+		</choice>
+	</event>
+
+	<ship name="TC_TRASH_COMPACTOR_GOLDEN" auto_blueprint="TC_TRASH_COMPACTOR_GOLDEN">
+	    <ship hostile="true"/>
+		<destroyed load="TC_GOLDEN_DESTROY"/>
+		<deadCrew load="TC_GOLDEN_DESTROY"/>
+	</ship>
+
+	<event name="ENCOUNTER_TC_GOLDEN">
+		<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+		<text>You've arrived at the coordinates and see yet another Scrapper ship. This one is different, your sensors detect weird readings.</text>
+		<beaconType id="map_icon_trash" global="true">
+			<color r="255" g="255" b="0" a="1"/>
+			<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+			<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+			<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+		</beaconType>
+		<ship load="TC_TRASH_COMPACTOR_GOLDEN" hostile="false"/>
+		<choice req="tc_golden_defeated" lvl="0" hidden="true" blue="false" max_group="0">
+			<text>Hail them.</text>
+			<event>
+				<text>They transmit a message. Then they send it again. And again. The same signal repeats endlessly, echoing across every channel on your ship. The message contains only two words, "W3 Pr0TEcT". As the message continues to loop, the Scrapper ship powers on it's weapons.</text>
+				<ship hostile="true"/>
+				<playMusic>tc_fight</playMusic>
+				<choice hidden="true">
+					<text>Prepare for battle!</text>
+					<event load="COMBAT_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="tc_golden_defeated" lvl="1" hidden="true" blue="false" max_group="0">
+			<text>No do-overs.</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+			<text>Attempt to sneak away from the Scrapper.</text>
+			<event>
+				<text>You manage to leave succesfully, with the opportunity of doing something on-board.</text>
+				<choice>
+					<text>Do something onboard the ship.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+				<choice>
+					<text>Do nothing.</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<event name="TC_GOLDEN_DESTROY">
+		<text>The golden ship has been defeated.
+			While searching through the remains of the ship, you find a dying member of its crew, clutching an intact weapon it seemingly stripped from right from the hull. It seems like they're nibbling on it.
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
+		<playMusic/>
+		<variable name="tc_golden_defeated" op="set" val="1"/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<weapon name="TC_SHOTGUN_GOLD_HACK"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="golden_scrapper_defender_mk2"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="5" max="10"/>
+						<item type="scrap" min="25" max="75"/>
+						<item type="drones" min="5" max="10"/>
+						<item type="missiles" min="5" max="10"/>
+					</item_modify>
+				</event>
+		</choice>
+	</event>
+
+	<ship name="TC_TRASH_COMPACTOR_ADAMANTINE" auto_blueprint="TC_TRASH_COMPACTOR_ADAMANTINE">
+	    <ship hostile="true"/>
+		<destroyed load="TC_ADAMANTINE_DESTROY"/>
+		<deadCrew load="TC_ADAMANTINE_DESTROY"/>
+	</ship>
+
+	<event name="ENCOUNTER_TC_ADAMANTINE">
+		<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+		<text>You've arrived at the coordinates and see yet another Scrapper ship. This one is different, your sensors detect weird readings.</text>
+		<beaconType id="map_icon_trash" global="true">
+			<color r="174" g="0" b="44" a="1"/>
+			<unvisitedTooltip>C0ME aND GET It</unvisitedTooltip>
+			<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+			<undiscoveredTooltip>W3 ArE HeRE StILL</undiscoveredTooltip>
+		</beaconType>
+		<ship load="TC_TRASH_COMPACTOR_ADAMANTINE" hostile="false"/>
+		<choice req="tc_adamantine_defeated" lvl="0" hidden="true" blue="false" max_group="0">
+			<text>Hail them.</text>
+			<event>
+				<text>They transmit a message. Then they send it again. And again. The same signal repeats endlessly, echoing across every channel on your ship. The message contains only two words, "Y0uR D3StRuCt1oN". As the message continues to loop, the Scrapper ship powers on it's weapons.</text>
+				<ship hostile="true"/>
+				<playMusic>tc_fight</playMusic>
+				<choice hidden="true">
+					<text>Prepare for battle!</text>
+					<event load="COMBAT_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice req="tc_adamantine_defeated" lvl="1" hidden="true" blue="false" max_group="0">
+			<text>No do-overs.</text>
+			<event load="OPTION_INVALID"/>
+		</choice>
+		<choice req="pilot" lvl="1" max_group="998" blue="false" hidden="true">
+			<text>Attempt to sneak away from the Scrapper.</text>
+			<event>
+				<text>You manage to leave succesfully, with the opportunity of doing something on-board.</text>
+				<choice>
+					<text>Do something onboard the ship.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+				<choice>
+					<text>Do nothing.</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<event name="TC_ADAMANTINE_DESTROY">
+		<text>The adamantine ship has been defeated.
+			While searching through the remains of the ship, you find a dying member of its crew, clutching an intact weapon it seemingly stripped from right from the hull. It seems like they're nibbling on it.
+			You can snatch the weapon from them, take them both with you, or leave them to die.
+		</text>
+		<playMusic/>
+		<variable name="tc_adamantine_defeated" op="set" val="1"/>
+		<autoReward level="HIGH">stuff</autoReward>
+		<choice>
+			<text>Snatch the weapon.</text>
+			<event>
+				<text>You chose to take the functional weapon, leaving the crew member to its fate.</text>
+				<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Allow the crew member to eat the weapon.</text>
+			<event>
+				<text>You promise the scrapper additional scrap for work and a home onboard a non-destroyed ship. After beaming aboard, they quickly finish the weapon, revitalizing themselves.</text>
+				<crewMember amount="1" class="adamantine_scrapper_heavy_soldier_mk2"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Spend some extra time salvaging.</text>
+				<event>
+					<text>You instead spend some extra time salvaging and beam away without looking back.
+						The wounded scrapper watches you beam away, who knows if it will live or die floating forever, lost in space wreckage. How rude. 
+					</text>
+					<item_modify>
+						<item type="fuel" min="5" max="10"/>
+						<item type="scrap" min="25" max="75"/>
+						<item type="drones" min="5" max="10"/>
+						<item type="missiles" min="5" max="10"/>
+					</item_modify>
+				</event>
+		</choice>
+	</event>
+
+	<ship name="TC_TRASH_COMPACTOR_ZOG_FIRST" auto_blueprint="TC_SCRAPPER_ZOG">
+	    <ship hostile="true"/>
+		<destroyed load="TC_ZOG_SKIP"/>
+		<deadCrew load="TC_ZOG_SKIP"/>
+	</ship>
+
+	<event name="TC_ZOG_SKIP">
+		<text>How the hell did you do that.</text>
+	</event>
+	
+	<event name="ENCOUNTER_TC_ZOG">
+		<preventQuest/>
+	<preventFleet/>
+	<aggressive>2</aggressive>
+		<text>Your systems go on high alert as your arrival is met with a massive Lanius ship, its weapons raised and charging!</text>
+		<beaconType text="YOUR DESTINATION" global="true">
+			<color r="255" g="255" b="255" a="1"/>
+			<unvisitedTooltip>I am waiting.</unvisitedTooltip>
+			<visitedTooltip>We are finished.</visitedTooltip>
+			<undiscoveredTooltip>I am waiting.</undiscoveredTooltip>
+		</beaconType>
+		<variable name="tc_zog_met" op="set" val="1"/>
+		<ship load="TC_TRASH_COMPACTOR_ZOG_FIRST" hostile="true"/>
+		<status type="limit" target="enemy" system="teleporter" amount="0"/>
+		<status type="limit" target="enemy" system="cloaking" amount="0"/>
+		<status type="limit" target="enemy" system="mind" amount="0"/>
+		<status type="limit" target="enemy" system="drones" amount="0"/>
+		<triggeredEvent event="ENCOUNTER_TC_ZOG_CONTINUE" time="4" clearOnJump="true"/>
+		<playMusic>tc_fight</playMusic>
+		<choice>
+			<text>No time to prepare!</text>
+			<event/>
+		</choice>
+	</event>
+
+	<event name="ENCOUNTER_TC_ZOG_CONTINUE">
+		<ship hostile="false"/>
+		<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		<status type="clear" target="enemy" system="cloaking" amount="100"/>
+		<status type="clear" target="enemy" system="mind" amount="100"/>
+		<status type="clear" target="enemy" system="drones" amount="100"/>
+		<text>The Lanius' offensive systems all power down in an instant, and you're met with a hail. On screen comes a featureless Lanius, covered by a shimmering prismatic bubble. 
+"Apologies, I'm merely fascinated by first impressions." Its body flexes in manner similar to chuckling, as it logs something into its console.</text>
+		<choice>
+			<text>What? You did all that just to get a reaction out of me?</text>
+			<event>
+				<text>As best as you can tell, a bemused expression encroaches the lanius' lack of a face. "To a degree... yes, though the exact reasons are a touch more esoteric..." It paces around their helm for a moment, before jerking their attention back to you.
+"Right, my manners, I've misplaced them." They give a small bow before standing upright, arms spread wide in an assumedly welcoming gesture. "I am The Architect, creator and caretaker of the Scrappers." Their arms fall to their sides, posture relaxing. 
+"They are as aged as the Lanius, and have grown quite varied across the Multiverse." A fleet of Scrapper Cruisers blip into view, behind the Architect's. </text>
+				<choice>
+					<text>So... why am I here?</text>
+					<event>
+						<text>"Succinctly, your exceptional capabilities. Your victories against my older creations are no small feat, even with the assistance of compatriots."</text>
+						<choice>
+							<text>Do you mean the Trash Compactor?</text>
+							<event>
+								<text>"Indeed. My more recent creations, the Elemental Scrappers, were an escalation worth testing against you. Granted, most are overly narrow in scope, yet I see such merit in perfecting a purpose. What do you see in them?"</text>
+								<choice>
+									<text>Elegance, if I had to put it into one word.</text>
+									<event>
+										<text>They bask in the moment, proud of such high praise for their work. "You elate me so, thank you."</text>
+										<choice>
+											<text>Continue...</text>
+											<event load="ENCOUNTER_TC_ZOG_CHOICE"/>
+										</choice>
+									</event>
+								</choice>
+								<choice>
+									<text>Most are good, but some could definitely do with some work.</text>
+									<event>
+										<text>"I appreciate the earnesty, as perfection does not come without error."</text>
+										<choice>
+											<text>Continue...</text>
+											<event load="ENCOUNTER_TC_ZOG_CHOICE"/>
+										</choice>
+									</event>
+								</choice>
+								<choice>
+									<text>I've seen better.</text>
+									<event>
+										<text>"... Duly noted..."</text>
+										<choice>
+											<text>Continue...</text>
+											<event load="ENCOUNTER_TC_ZOG_CHOICE"/>
+										</choice>
+									</event>
+								</choice>
+							</event>
+						</choice>
+					</event>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<ship name="TC_TRASH_COMPACTOR_MERGED_AG" auto_blueprint="TC_TRASH_COMPACTOR_MERGED_AG">
+	    <ship hostile="true"/>
+		<destroyed load="TC_MERGED_DESTROY"/>
+		<deadCrew load="TC_MERGED_DESTROY"/>
+	</ship>
+
+	<ship name="TC_TRASH_COMPACTOR_MERGED_GR" auto_blueprint="TC_TRASH_COMPACTOR_MERGED_GR">
+	    <ship hostile="true"/>
+		<destroyed load="TC_MERGED_DESTROY"/>
+		<deadCrew load="TC_MERGED_DESTROY"/>
+	</ship>
+
+	<ship name="TC_TRASH_COMPACTOR_MERGED_RA" auto_blueprint="TC_TRASH_COMPACTOR_MERGED_RA">
+	    <ship hostile="true"/>
+		<destroyed load="TC_MERGED_DESTROY"/>
+		<deadCrew load="TC_MERGED_DESTROY"/>
+	</ship>
+
+	<event name="ENCOUNTER_TC_ZOG_CHOICE">
+		<text>Righting themselves, the Architect refocuses on you once more. "In any case, I've one more design of my creation in need of a proper test. Yes, there is indeed a reward awaiting you, should you succeed. Would you honor me so?"</text>
+		<choice>
+			<text>Agree.</text>
+			<event>
+				<text>"Which pairing intrigues you most?"</text>
+				<choice>
+					<text>Adamantine + Golden.</text>
+					<event>
+						<text>The Architect's ship moves away to a safer distance and one of the Scrapper ships moves to engage.</text>
+						<ship load="TC_TRASH_COMPACTOR_MERGED_AG" hostile="true"/>
+						<triggeredEvent event="POWER_SURGE_ROSEGOLD" loops="999999999" thisFight="true" time="20">
+							<warningMessage id="warning_power_surge_rosegold" x="692" y="84" time="5.0" r="255" g="181" b="225" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+						</triggeredEvent>
+						<choice>
+							<text>Continue...</text>
+							<event load="COMBAT_CHECK"/>
+						</choice>
+					</event>
+				</choice>
+				<choice>
+					<text>Golden + Rosegold.</text>
+					<event>
+						<text>The Architect's ship moves away to a safer distance and one of the Scrapper ships in the distance moves to engage.</text>
+						<ship load="TC_TRASH_COMPACTOR_MERGED_GR" hostile="true"/>
+						<triggeredEvent event="POWER_SURGE_ADAMANTINE" loops="999999999" thisFight="true" time="20">
+							<warningMessage id="warning_power_surge_adamantine" x="692" y="84" time="5.0" r="120" g="36" b="65" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+						</triggeredEvent>
+						<choice>
+							<text>Continue...</text>
+							<event load="COMBAT_CHECK"/>
+						</choice>
+					</event>
+				</choice>
+				<choice>
+					<text>Rosegold + Adamantine.</text>
+					<event>
+						<text>The Architect's ship moves away to a safer distance and one of the Scrapper ships in the distance moves to engage.</text>
+						<ship load="TC_TRASH_COMPACTOR_MERGED_RA" hostile="true"/>
+						<triggeredEvent event="POWER_SURGE_GOLDEN" loops="999999999" thisFight="true" time="20">
+							<warningMessage id="warning_power_surge_golden" x="692" y="84" time="5.0" r="255" g="201" b="5" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+						</triggeredEvent>
+						<choice>
+							<text>Continue...</text>
+							<event load="COMBAT_CHECK"/>
+						</choice>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Decline.</text>
+			<event>
+				<text>You're met with a long pause, and a creeping sense of disappointment. A low nod escapes the Architect. "Very well. That will be the end of our interactions." Their ship jumps away, the fleet of Scrappers soon following after.</text>
+				<instantEscape/>
+				<choice hidden="true">
+					<text>Do something onboard the ship.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+				<choice hidden="true">
+					<text>Do nothing.</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<event name="TC_MERGED_DESTROY">
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+		<playMusic/>
+		<recallBoarders force="true"/>
+		<text>As the Scrapper splits into debris, the Architect's vessel emerges. "A wonderfully executed battle, congratulations. As promised, your reward." </text>
+		<choice>
+			<text>That's it? Just one last fight and we're done?</text>
+			<event>
+				<text>The Architect pauses in their tracks, facing you once more. A suggestion of confusion upon their blank visage is met with an inquisitively raised hand. "I had not expected such gumption from you, yet perhaps that much should have been readily apparent. Your attempts to even reach me in such a way is already extraordinary on its own..." 
+They mumble to themselves, pacing back and forth as they ponder your response. All at once, it dawns on them.
+"Ah. You desire challenge, do you not? And perhaps further reward for such monumental effort?"</text>
+				<choice>
+					<text>Send me your strongest.</text>
+					<event>
+						<instantEscape/>
+						<variable name="tc_zog_met" op="set" val="2"/>
+						<text>They give that same chuckle-like gesture, stance postured for dramatics. "I shall do you one better. Me. I am to be your final opponent, with no quarter given." They relax, just a touch. "I have never truly tested my own design's efficacy. This would be a grand experiment for both of us. I trust you will have no difficulty finding me once more. I'll be waiting." 
+The Architect's ship jumps away. Their vessel leaves a quickly fading shimmer in the space it once occupied.</text>
+					</event>
+				</choice>
+				<choice>
+					<text>On second thought, I'm good. </text>
+					<event>
+						<instantEscape/>
+						<text>The Architect nods. "Very well. You've performed more than admirably so far. I shant take more of your time. I wish you well with your mission." The Architect's ship jumps away. Their vessel leaves a quickly fading shimmer in the space it once occupied.</text>
+					</event>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<ship name="TC_TRASH_COMPACTOR_ZOG" auto_blueprint="TC_SCRAPPER_ZOG">
+	    <ship hostile="true"/>
+		<destroyed load="TC_ZOG_DESTROY"/>
+		<deadCrew load="TC_ZOG_DESTROY"/>
+	</ship>
+
+	<event name="ENCOUNTER_TC_ZOG_FIGHT">
+		<preventQuest/>
+		<preventFleet/>
+		<aggressive>2</aggressive>
+		<beaconType text="ZOG" global="true">
+			<color r="255" g="255" b="255" a="1"/>
+			<unvisitedTooltip>I am waiting.</unvisitedTooltip>
+			<visitedTooltip>We are finished.</visitedTooltip>
+			<undiscoveredTooltip>I am waiting.</undiscoveredTooltip>
+		</beaconType>
+		<loadEventList seeded="false" first="true">
+			<event name="ENCOUNTER_TC_ZOG_FIGHT_YES" req="tc_zog_met" lvl="2" max_lvl="2"/>
+			<event name="ENCOUNTER_TC_ZOG_FIGHT_NO"/>
+		</loadEventList>
+	</event>
+
+	<event name="ENCOUNTER_TC_ZOG_FIGHT_NO">
+		<text>There's nothing left to do.</text>
+		<choice hidden="true">
+			<text>Do something onboard the ship.</text>
+			<event load="STORAGE_CHECK"/>
+		</choice>
+		<choice hidden="true">
+			<text>Do nothing.</text>
+			<event/>
+		</choice>
+	</event>
+
+	<event name="ENCOUNTER_TC_ZOG_FIGHT_YES">
+		<preventQuest/>
+		<preventFleet/>
+		<aggressive>2</aggressive>
+		<text>Your arrival is met with a hail from the Architect. "Greetings. Are you prepared?"</text>
+		<beaconType text="ZOG" global="true">
+			<color r="255" g="255" b="255" a="1"/>
+			<unvisitedTooltip>I am waiting.</unvisitedTooltip>
+			<visitedTooltip>We are finished.</visitedTooltip>
+			<undiscoveredTooltip>I am waiting.</undiscoveredTooltip>
+		</beaconType>
+		<ship load="TC_TRASH_COMPACTOR_ZOG" hostile="false"/>
+		<choice>
+			<text>Yes.</text>
+			<event>
+				<text>"Let us begin, then."</text>
+				<ship hostile="true"/>
+				<triggeredEvent event="ROSEGOLD_SURGE_SPAWNER_INSTANT" time="15" clearOnJump="true"/>
+				<triggeredEvent event="ROSEGOLD_SURGE_SPAWNER" time="20" clearOnJump="true"/>
+				<triggeredEvent event="GOLDEN_SURGE_SPAWNER_INSTANT" time="35" clearOnJump="true"/>
+				<triggeredEvent event="GOLDEN_SURGE_SPAWNER" time="40" clearOnJump="true"/>
+				<triggeredEvent event="ADAMANTINE_SURGE_SPAWNER_INSTANT" time="55" clearOnJump="true"/>
+				<triggeredEvent event="ADAMANTINE_SURGE_SPAWNER" time="60" clearOnJump="true"/>
+				<playMusic>tc_fight</playMusic>
+				<choice>
+					<text>Continue...</text>
+					<event load="COMBAT_CHECK"/>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>No.</text>
+			<event>
+				<text>"Another time, then." They jump away.</text>
+				<instantEscape/>
+				<choice hidden="true">
+					<text>Do something onboard the ship.</text>
+					<event load="STORAGE_CHECK"/>
+				</choice>
+				<choice hidden="true">
+					<text>Do nothing.</text>
+					<event/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<event name="ROSEGOLD_SURGE_SPAWNER">
+		<triggeredEvent event="POWER_SURGE_ROSEGOLD" loops="999999999" thisFight="true" time="60">
+			<warningMessage id="warning_power_surge_rosegold" x="692" y="84" time="5.0" r="255" g="181" b="225" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+		</triggeredEvent>
+	</event>
+
+	<event name="ROSEGOLD_SURGE_SPAWNER_INSTANT">
+		<triggeredEvent event="POWER_SURGE_ROSEGOLD_INSTANT" thisFight="true" time="5">
+			<warningMessage id="warning_power_surge_rosegold" x="692" y="84" time="5.0" r="255" g="181" b="225" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+		</triggeredEvent>
+	</event>
+
+	<event name="POWER_SURGE_ROSEGOLD">
+		<superBarrage player="false" name="ROSEGOLD_SURGE"/>
+	</event>
+
+	<event name="POWER_SURGE_ROSEGOLD_INSTANT">
+		<superBarrage player="false" name="ROSEGOLD_SURGE"/>
+	</event>
+
+	<event name="GOLDEN_SURGE_SPAWNER">
+		<triggeredEvent event="POWER_SURGE_GOLDEN" loops="999999999" thisFight="true" time="60">
+			<warningMessage id="warning_power_surge_golden" x="692" y="84" time="5.0" r="255" g="201" b="5" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+		</triggeredEvent>
+	</event>
+
+	<event name="GOLDEN_SURGE_SPAWNER_INSTANT">
+		<triggeredEvent event="POWER_SURGE_GOLDEN_INSTANT" thisFight="true" time="5">
+			<warningMessage id="warning_power_surge_golden" x="692" y="84" time="5.0" r="255" g="201" b="5" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+		</triggeredEvent>
+	</event>
+
+	<event name="POWER_SURGE_GOLDEN">
+		<superBarrage player="false" name="GOLDEN_SURGE"/>
+	</event>
+	
+	<event name="POWER_SURGE_GOLDEN_INSTANT">
+		<superBarrage player="false" name="GOLDEN_SURGE"/>
+	</event>
+
+	<event name="ADAMANTINE_SURGE_SPAWNER">
+		<triggeredEvent event="POWER_SURGE_ADAMANTINE" loops="999999999" thisFight="true" time="60">
+			<warningMessage id="warning_power_surge_adamantine" x="692" y="84" time="5.0" r="120" g="36" b="65" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+		</triggeredEvent>
+	</event>
+
+	<event name="ADAMANTINE_SURGE_SPAWNER_INSTANT">
+		<triggeredEvent event="POWER_SURGE_ADAMANTINE_INSTANT" thisFight="true" time="5">
+			<warningMessage id="warning_power_surge_adamantine" x="692" y="84" time="5.0" r="120" g="36" b="65" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+		</triggeredEvent>
+	</event>
+
+	<event name="POWER_SURGE_ADAMANTINE">
+		<superDrones player="false" name="ADAMANTINE_SURGE"/>
+	</event>
+
+	<event name="POWER_SURGE_ADAMANTINE_INSTANT">
+		<superDrones player="false" name="ADAMANTINE_SURGE"/>
+	</event>
+
+	<event name="TC_ZOG_DESTROY">
+		<text>As the Architect's ship shatters into countless shards, you hear them teleport beside you. "Wonderful! Truly, wonderfully done! I could not execute a better performance myself." You catch them staring out towards the wreckage of their cruiser. 
+"Much as I adored my design, its destruction only shows its imperfection. Now I've the perfect opportunity to perfect it." You catch what might be a smile on their faceless face. They shake their head a touch, turning to you.
+"Right, your reward! I would hope that you find the selections on offer sufficient for your purposes. Though, if you'd kindly, only take one." </text>
+		<metaVariable name="tc_quest2_completed" op="set" val="1"/>
+		<variable name="tc_zog_met" op="set" val="3"/>
+		<playMusic/>
+		<choice>
+			<text>Omega Amalgam Flak.</text>
+			<event>
+				<text>"It's a miracle this weapon doesn't tear itself apart while firing. If memory serves me, its constructed of... platinum, iridium, and osmium, as you might call them."</text>
+				<weapon name="TC_SHOTGUN_OMEGA"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="TC_ZOG_ACCOMPANY"/>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Midnight Prismatic Flak.</text>
+			<event>
+				<text>"Many disparate ideas fueled this weapon, and I simply couldn't decide on just one."</text>
+				<weapon name="TC_SHOTGUN_MIDNIGHT"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="TC_ZOG_ACCOMPANY"/>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Elemental Toggle Flak.</text>
+			<event>
+				<text>"The Toggle Flak is already a joy to behold, yet I saw to it that it should reach even higher potentials."</text>
+				<weapon name="TC_SHOTGUN_TOGGLE_ROSEGOLD"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="TC_ZOG_ACCOMPANY"/>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Super Unstable Flak.</text>
+			<event>
+				<text>"A modification I made to an Unstable Flak, to determine if speed or accuracy was more effective."</text>
+				<weapon name="TC_SHOTGUN_SUPER_UNSTABLE"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="TC_ZOG_ACCOMPANY"/>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Scrapper Synthesiser.</text>
+			<event>
+				<text>"My creations are quite adept at self replication, as you've no doubt seen. Though, a helping hand is always appreciated."</text>
+				<drone name="TC_DRONE_SCRAPPER_SYNTHESISER"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="TC_ZOG_ACCOMPANY"/>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Scrap Duplicator.</text>
+			<event>
+				<text>"A touch blasé, but I can respect the desire for scrap."</text>
+				<augment name="SCRAP_DUPLICATOR"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="TC_ZOG_ACCOMPANY"/>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>Jadesteel Scrapper.</text>
+			<event>
+				<text>"A Scrapper with limitless potential. I've never had the opportunity to see them at their highest."</text>
+				<crewMember amount="1" class="jadesteel_scrapper"/>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="TC_ZOG_ACCOMPANY"/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+
+	<event name="TC_ZOG_ACCOMPANY">
+		<text>"What good is an additional field test without proper documentation? I will accompany you for as long as I am able, so that I may see it to its end."
+		
+			[Elemental Scrapper enhancements permanently unlocked! You can find it in the Scrapper lab.]
+			[More blueprints available in the Compactor!]
+		</text>
+		<crewMember amount="1" class="unique_zog" all_skills="2">Zog</crewMember>
+		<jumpEvent name="ZOG_CHECK">ZOG_CHECKER</jumpEvent>
+		<unlockCustomShip>PLAYER_SHIP_ELEMENTAL</unlockCustomShip>
+		<achievement silent="false">ACH_TCC_ZOGDEFEAT</achievement>
+		<choice>
+			<text>Continue...</text>
+			<event/>
+		</choice>
+	</event>
+		
+	<event name="ZOG_CHECKER">
+		<loadEventList seeded="false" first="true">
+			<event name="ZOG_HAPPY" req="unique_zog"/>
+			<event name="ZOG_MAD"/>
+		</loadEventList>
+	</event>
+
+	<event name="ZOG_HAPPY"/>
+
+	<event name="ZOG_MAD">
+		<text>What the hell I just got here why'd you dismiss me.</text>
+	</event>
+
+	<ship name="TC_TRASH_COMPACTOR_ZOG_SUPER" auto_blueprint="TC_SCRAPPER_ZOG_SUPER">
+	    <ship hostile="true"/>
+		<destroyed load="TC_ZOG_SUPER_DESTROY"/>
+		<deadCrew load="TC_ZOG_SUPER_DESTROY"/>
+	</ship>
+
+	<event name="ENCOUNTER_TC_ZOG_SUPER">
+		<text>Good Luck.</text>
+		<ship load="TC_TRASH_COMPACTOR_ZOG_SUPER" hostile="true"/>
+		<playMusic>tc_fight</playMusic>
+		<choice>
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK"/>
+		</choice>
+	</event>
+
+	<event name="TC_ZOG_SUPER_DESTROY">
+		<text>What the fuck.</text>
+		<unlockCustomShip>PLAYER_SHIP_ZOG_SUPER</unlockCustomShip>
+		<playMusic/>
+		<weapon name="TC_YOU_WIN"/>
+	</event>
+
+<event name="KM_QUEST_1">
+	<text>TRACKER is here - he seems busy, though. "Oh hi, you again... Please, uh, help me."</text>
+	<beaconType id="map_icon_trash" global="true">
+        <color r="110" g="32" b="9" a="1.0"/>
+        <unvisitedTooltip>HELP PLEASE.</unvisitedTooltip>
+        <visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+        <undiscoveredTooltip>HELP PLEASE.</undiscoveredTooltip>
+    </beaconType>
+	<choice>
+		<text>HElb Garbage Compactr</text>
+		<event>
+			<text>ggg</text>
+			<ship load="TC_TRASH_MINER_QUEST" hostile="true"/>
+			<choice hidden="true">
+				<text>ok</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>nah bro im out</text>
+		<event>
+			<text>Tsure i guess1</text>
+			<choice hidden="true">
+				<text>ok</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<ship name="SCRAPPER_SCOUT" auto_blueprint="SCRAPPER_SCOUT">
+	<destroyed load="SCRAPPER_SCOUT_DESTROYED" />
+	<deadCrew load="SCRAPPER_SCOUT_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_BOMBER" auto_blueprint="SCRAPPER_BOMBER">
+	<destroyed load="SCRAPPER_BOMBER_DESTROYED" />
+	<deadCrew load="SCRAPPER_BOMBER_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_SHOP" auto_blueprint="TC_SCRAPPER_SUPPORT">
+	<destroyed load="SCRAPPER_SHOP_DESTROYED" />
+	<deadCrew load="SCRAPPER_SHOP_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_CRUISER" auto_blueprint="SCRAPPER_CRUISER">
+	<destroyed load="SCRAPPER_CRUISER_DESTROYED" />
+	<deadCrew load="SCRAPPER_CRUISER_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_CORVETTE" auto_blueprint="TC_SCRAPPER_CORVETTE">
+	<destroyed load="SCRAPPER_DESTROYED" />
+	<deadCrew load="SCRAPPER_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_HUNTER" auto_blueprint="TC_SCRAPPER_HUNTER">
+	<destroyed load="SCRAPPER_DESTROYED" />
+	<deadCrew load="SCRAPPER_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_SUPPORT" auto_blueprint="TC_SCRAPPER_SUPPORT">
+	<destroyed load="SCRAPPER_DESTROYED" />
+	<deadCrew load="SCRAPPER_DEADCREW" />
+</ship>
+
+<ship name="SCRAPPER_BASHER" auto_blueprint="TC_SCRAPPER_BASHER">
+	<destroyed load="SCRAPPER_DESTROYED" />
+	<deadCrew load="SCRAPPER_DEADCREW" />
+</ship>
+
+<ship name="TC_SCRAPPER_CORVETTE" auto_blueprint="TC_SCRAPPER_CORVETTE">
+	<destroyed load="TC_SCRAPPER_CORVETTE_DESTROYED" />
+	<deadCrew load="TC_SCRAPPER_CORVETTE_DEADCREW" />
+</ship>
+
+<ship name="TC_SCRAPPER_HUNTER" auto_blueprint="TC_SCRAPPER_HUNTER">
+	<destroyed load="TC_SCRAPPER_HUNTER_DESTROYED" />
+	<deadCrew load="TC_SCRAPPER_HUNTER_DEADCREW" />
+</ship>
+
+<ship name="TC_SCRAPPER_SUPPORT" auto_blueprint="TC_SCRAPPER_SUPPORT">
+	<destroyed load="TC_SCRAPPER_SUPPORT_DESTROYED" />
+	<deadCrew load="TC_SCRAPPER_SUPPORT_DEADCREW" />
+</ship>
+
+
+
+<event name="SCRAPPER_ENCOUNTER_LIST">
+	<loadEventList first="false" generate="true">
+		<event name="SCRAPPER_ENCOUNTER_SHOP"/>
+		<!--<event name="SCRAPPER_ENCOUNTER_BOMBER"/>-->
+		<event name="SCRAPPER_ENCOUNTER_SUPPORT"/>
+		<event name="SCRAPPER_ENCOUNTER_HUNTER"/>
+		<event name="SCRAPPER_ENCOUNTER_CORVETTE"/>
+		<event name="SCRAPPER_ENCOUNTER_BASHER"/>
+		<!--<event name="SCRAPPER_ENCOUNTER_SCOUT"/>-->
+		<!--<event name="SCRAPPER_ENCOUNTER_CRUISER"/>-->
+	</loadEventList>
+</event>
+
+
+<event name="SCRAPPER_ENCOUNTER_SHOP">
+	<text>A scrapper vessel is in this sector. It's broadcasting a signal simply asking for scrap. Perhaps they mean to trade?</text>
+	<ship load="SCRAPPER_SHOP" hostile="false" />
+	<choice hidden="true">
+		<text>Attack them!</text>
+		<event>
+			<text>"3XCUSE M3!?!"</text>
+			<text>It seems a boarding party has entered your ship. Maybe they had a super shield bypass?</text>
+			<ship hostile="true"/>
+			<boarders min="2" max="2" class="scrapper_soldier" />
+			<boarders min="1" max="1" class="scrapper_medic" />
+			<boarders min="1" max="1" class="scrapper_heavy" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Hail them and see if they want scrap.</text>
+		<event>
+			<text>"W3 NEED SCRAP!" </text>
+			<store>SCRAPPER_NORMAL_STORE</store>
+		</event>
+	</choice>
+	<choice req="LIST_CREW_SCRAPPER" blue="true" hidden="true">
+		<text>Your scrapper waves his hands and sends a signal to the scrapper ship; "C0UPON COD3!!!" They type in a short code and you notice the store prices drop!</text>
+		<event>
+			<text>"W3 NEED SCRAP!" </text>
+			<store>SCRAPPER_NORMAL_STORE_DISCOUNT</store>
+		</event>
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_BOMBER">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="SCRAPPER_BOMBER" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_CRUISER">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="SCRAPPER_CRUISER" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_SUPPORT">
+	<text>A scrapper support ship is in this sector. It seems to not notice you, or it does and it does not care.</text>
+	<ship load="SCRAPPER_SUPPORT" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack the ship before it gets any bright ideas.</text>
+		<event>
+			<text>The ship powers up it's weapons.</text>
+			<ship hostile="true"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="LIST_CREW_SCRAPPER" blue="true" hidden="true">
+		<text>Consult your scrapper.</text>
+		<event>
+			<text>Your scrapper advises you that the support ship seems to be lost. It is supposed to be with others, as part of a fleet, but this one is alone. They may need help but may find themselves unable to ask. 
+			Your scrapper tells you that it would be good to hail them, as scrappers typically only care about 1 thing and are generally not overly hostile to aliens or humans.</text>
+			<choice hidden="true" blue="true">
+				<text>Hail the scrapper support ship and offer assistance.</text>
+				<event>
+					<text>The Scrapper captain responds to you with a bit of a flustered tone, "HAPPY T0 S33 FL3SHY C@PTA!N WE ARE IN NEED 0F R3PA!RS!! C@N Y0U SPARE SCR@P!!???"
+				It seems that the scrapper does indeed only have 1 thing on its mind.</text>
+					<choice>
+						<text>Transfer some scrap to help facilitate their repairs.</text>
+						<event>
+							<text>You send over the scrap...</text>
+							<item_modify> 
+								<item type="scrap" min="-35" max="-35"/>
+							</item_modify>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="SCRAPPER_ENCOUNTER_SUPPORT_CHEK"/>
+							</choice>
+						</event>
+					</choice>
+					<choice req="LIST_CREW_SCRAPPER" blue="true">
+						<text>Get your Scrapper to transfer some scrap to help facilitate their repairs.</text>
+						<event>
+							<text>You send over the scrap...</text>
+							<item_modify> 
+								<item type="scrap" min="-35" max="-35"/>
+							</item_modify>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>"TH@NK Y0U CAPT@IN! W3 C@N OP3RATE 0UR ENGINES AGAIN!! TAKE FANCY M@CHINE WE F!ND"</text>
+									<augment name="CREW_UPGRADER" />
+								</event>
+							</choice>
+						</event>
+					</choice>
+					<choice>
+						<text>It could be a trap, leave.</text>
+						<event>
+							<text>You pull away from the Scrapper ship and it makes no move to stop you.</text>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Order your crew to prepare for battle!</text>
+					<event>
+						<text>You power up your weapons.</text>
+						<ship hostile="true"/>
+						<choice hidden="true">
+							<text>Continue...</text>
+							<event load="COMBAT_CHECK" />
+						</choice>
+					</event>
+			</choice>
+			<choice hidden="true">
+				<text>Leave them alone.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Leave them alone.</text>
+		<event/>
+	</choice>
+</event>
+
+<eventList name="SCRAPPER_ENCOUNTER_SUPPORT_CHEK">
+	<event>
+		<text>"TH@NK Y0U CAPT@IN! W3 C@N OP3RATE 0UR ENGINES AGAIN!! TAKE FANCY M@CHINE WE F!ND"</text>
+		<augment name="CREW_UPGRADER" />
+	</event>
+	<event>
+		<text>The Scrapper ship takes your scrap and procedes to power up it's weapons!</text>
+		<ship hostile="true"/>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+		</choice>
+	</event>
+</eventList>
+
+<event name="SCRAPPER_ENCOUNTER_HUNTER">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="SCRAPPER_HUNTER" hostile="true"/>
+		<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_CORVETTE">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="SCRAPPER_CORVETTE" hostile="true"/>
+		<choice hidden="true">
+		<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_ENCOUNTER_SCOUT">
+	<text>A scrapper vessel is in this sector. It gives you no warning before powering it's weapons. It hails you, screaming something about scrap.</text>
+	<ship load="SCRAPPER_SCOUT" hostile="true" />
+	<choice hidden="true">
+		<text>Continue...</text>
+			<event load="COMBAT_CHECK" />
+	</choice>
+</event>
+
+<event name="SCRAPPER_SCOUT_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+<event name="SCRAPPER_SCOUT_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+<event name="SCRAPPER_BOMBER_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+</event>
+
+<event name="SCRAPPER_BOMBER_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+<event name="SCRAPPER_SHOP_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+<event name="SCRAPPER_SHOP_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+<event name="TC_SCRAPPER_CORVETTE_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
+</event>
+
+<event name="TC_SCRAPPER_CORVETTE_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
+</event>
+
+<event name="TC_SCRAPPER_HUNTER_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
+</event>
+
+<event name="TC_SCRAPPER_HUNTER_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
+</event>
+
+<event name="TC_SCRAPPER_SUPPORT_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
+</event>
+
+<event name="TC_SCRAPPER_SUPPORT_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<hiddenAug>TC_DEAD</hiddenAug>
+	<hiddenAug>TC3_DEAD</hiddenAug>
+</event>
+
+<event name="SCRAPPER_CRUISER_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+</event>
+
+<event name="SCRAPPER_CRUISER_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+<event name="SCRAPPER_DESTROYED">
+	<text>The scrapper vessel explodes leaving behind a large amount of scrap.</text>
+	<autoReward level="HIGH">augment</autoReward>
+</event>
+
+<event name="SCRAPPER_DEADCREW">
+	<text>The scrapper vessel is empty, giving you ample time to scrap the ship.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+
+		<mod:findName type="event" name="SYLVAN_ROYAL_NORMAL">
+<mod:findLike type="choice" start="0" limit="1">
+<mod:findLike type="event">
+<mod-append:choice req="LIST_CREW_LEAH" blue="true">
+    <text>Have Leah stand next to you while you respond to her hail.</text>
+	<event load="SYLVAN_ROYAL_LEAH_DIALOGUE"/>
+</mod-append:choice>
+</mod:findLike>
+</mod:findLike>
+</mod:findName>
+
+<event name="SYLVAN_ROYAL_LEAH_DIALOGUE">
+    <text>"No way. No way you did this. No way you found... ANOTHER LEAH? What about us? What about our rivalry, the most legendary rivalry to ever exist, and you found ANOTHER me? I thought we had something special, we've fought each other so many times, had so many amazing moments and you... you... you cheat on me!" Leah slams her fist down onto the table and leaps from her seat. "No more games captain, our rivalry is over, and only one of us is going to make it out of here alive. Ooh, but what if we both died at the same time, wouldn't that make for such a cool and epic mo-" You close communications and begin to charge your weapons.</text>
+	<ship hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+<mod:findName type="event" name="THE_JUDGES_ZOLTAN">
+    <mod-append:choice req="LIST_CREW_SCRAPPER" blue="false">
+        <text>Present a Scrapper.</text>
+		<event>
+			<text>"The... hoarders of the Lanius. Their greed for... scrap has changed them. To invite one upon your ship is... surprising. Yes, I am... impressed. Well done, traveler. Expect... rewards before your next journey."</text>
+			<achievement silent="false">ACH_BOON_TCC_SCRAPPER</achievement>
+			<metaVariable name="prof_z_boon_tcc_scrapper" op="set" val="1"/>
+            <variable name="ach_boon_tcc_scrapper" op="set" val="1"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="THE_JUDGES_ZOLTAN_ADVICE"/>
+			</choice>
+		</event>
+    </mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="THE_JUDGES_VARIABLE_CLEAR">
+    <mod-append:metaVariable name="prof_z_boon_tcc_scrapper" op="set" val="0"/>
+</mod:findName>
+
+
+<event name="HELL">
+	<environment type="sun"/>
+	<environment type="asteroid"/>
+	<environment type="pulsar"/>
+	<environment type="PDS" target="player"/>
+	<triggeredEvent name="BLUE_GIANT" event="BLUE_GIANT_FLARE" seeded="true" thisFight="false" clearOnJump="true" loops="999999999" minTime="24.0" maxTime="30.0">
+		<warningMessage id="warning_solar_flare" x="825" y="30" time="5.0" centerText="true" flash="true" sound="environWarning" useWarningLine="false"/>
+	</triggeredEvent>
+	<triggeredEvent name="GRAVASTAR" event="GRAVITY_SURGE" seeded="true" thisFight="false" clearOnJump="true" loops="999999999" minTime="18.0" maxTime="24.0">
+		<warningMessage id="warning_gravity_wave" x="825" y="30" time="5.0" centerText="true" flash="true" sound="environWarning" useWarningLine="false"/>
+	</triggeredEvent>
+	<variable name="loc_environment_gravity" op="set" val="1"/>
+    <variable name="loc_environment_blue_giant" op="set" val="1"/>
+</event>
+</FTL>

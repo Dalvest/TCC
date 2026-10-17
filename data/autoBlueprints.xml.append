@@ -69,10 +69,10 @@
 	<name>scrapper_engineer</name>
 	<name>scrapper_medic</name>
 	<name>scrapper_scavenger</name>
+	<name>scrapper_scavenger_mk2</name>
 	<name>scrapper_defender</name>
 	<name>scrapper_defender_mk2</name>
 	<name>scrapper_heavy_mk2</name>
-	<name>scrapper_scavenger_mk2</name>
 	<name>rosegold_scrapper</name>
 	<name>rosegold_scrapper_2</name>
 	<name>rosegold_scrapper_3</name>
@@ -88,9 +88,48 @@
 	<name>adamantine_scrapper_heavy_soldier</name>
 	<name>golden_scrapper_defender</name>
 	<name>rosegold_scrapper_scavenger</name>
+	<name>rosegold_scrapper_scavenger_mk2</name>
+	<name>adamantine_scrapper_heavy_soldier_mk2</name>
+	<name>golden_scrapper_defender_mk2</name>
+	<name>trash_eater</name>
+	<name>unique_zog</name>
+	<name>jadesteel_scrapper</name>
+	<name>jadesteel_scrapper_2</name>
+	<name>jadesteel_scrapper_3</name>
+	<name>jadesteel_scrapper_4</name>
+	<name>jadesteel_scrapper_5</name>
 </blueprintList>
 
-
+<blueprintList name="LIST_CREW_SCRAPPER_SYNTHESISER">
+	<name>scrapper</name>
+	<name>scrapper_soldier</name>
+	<name>scrapper_heavy</name>
+	<name>scrapper_engineer</name>
+	<name>scrapper_medic</name>
+	<name>scrapper_scavenger</name>
+	<name>scrapper_scavenger_mk2</name>
+	<name>scrapper_defender</name>
+	<name>scrapper_defender_mk2</name>
+	<name>scrapper_heavy_mk2</name>
+	<name>rosegold_scrapper</name>
+	<name>rosegold_scrapper_2</name>
+	<name>rosegold_scrapper_3</name>
+	<name>golden_scrapper</name>
+	<name>golden_scrapper_2</name>
+	<name>golden_scrapper_3</name>
+	<name>adamantine_scrapper</name>
+	<name>adamantine_scrapper_2</name>
+	<name>adamantine_scrapper_3</name>
+	<name>adamantine_scrapper_soldier</name>
+	<name>golden_scrapper_medic</name>
+	<name>rosegold_scrapper_engineer</name>
+	<name>adamantine_scrapper_heavy_soldier</name>
+	<name>golden_scrapper_defender</name>
+	<name>rosegold_scrapper_scavenger</name>
+	<name>rosegold_scrapper_scavenger_mk2</name>
+	<name>adamantine_scrapper_heavy_soldier_mk2</name>
+	<name>golden_scrapper_defender_mk2</name>
+</blueprintList>
 
 <blueprintList name="LIST_ELEMENTAL_SCRAPPER_LEVEL_1">
 	<name>rosegold_scrapper</name>
@@ -131,6 +170,18 @@
 	<name>rosegold_scrapper_scavenger_mk2</name>
 </blueprintList>
 
+<blueprintList name="LIST_ELEMENTAL_SCRAPPER_BASE">
+	<name>rosegold_scrapper</name>
+	<name>adamantine_scrapper</name>
+	<name>golden_scrapper</name>
+	<name>rosegold_scrapper_2</name>
+	<name>adamantine_scrapper_2</name>
+	<name>golden_scrapper_2</name>
+	<name>rosegold_scrapper_3</name>
+	<name>adamantine_scrapper_3</name>
+	<name>golden_scrapper_3</name>
+</blueprintList>
+
 <blueprintList name="LIST_ELEMENTAL_SCRAPPER_BASE_ALL">
 	<name>rosegold_scrapper</name>
 	<name>adamantine_scrapper</name>
@@ -141,6 +192,15 @@
 	<name>rosegold_scrapper_3</name>
 	<name>adamantine_scrapper_3</name>
 	<name>golden_scrapper_3</name>
+	<name>rosegold_scrapper_engineer</name>
+	<name>rosegold_scrapper_scavenger</name>
+	<name>rosegold_scrapper_scavenger_mk2</name>
+	<name>golden_scrapper_medic</name>
+	<name>golden_scrapper_defender</name>
+	<name>golden_scrapper_defender_mk2</name>
+	<name>adamantine_scrapper_soldier</name>
+	<name>adamantine_scrapper_heavy_soldier</name>
+	<name>adamantine_scrapper_heavy_soldier_mk2</name>
 </blueprintList>
 
 <blueprintList name="LIST_ELEMENTAL_SCRAPPER_BASE_UPGRADEABLE">
@@ -168,6 +228,13 @@
 	<name>adamantine_scrapper</name>
 	<name>adamantine_scrapper_2</name>
 	<name>adamantine_scrapper_3</name>
+</blueprintList>
+
+<blueprintList name="LIST_ELEMENTAL_JADESTEEL_UPGRADABLE">
+	<name>jadesteel_scrapper</name>
+	<name>jadesteel_scrapper_2</name>
+	<name>jadesteel_scrapper_3</name>
+	<name>jadesteel_scrapper_4</name>
 </blueprintList>
 
 
@@ -219,6 +286,9 @@
 	<name>scrapper_scavenger</name>
 	<name>scrapper_defender</name>
 	<name>scrapper_heavy</name>
+	<name>scrapper_scavenger_mk2</name>
+	<name>scrapper_defender_mk2</name>
+	<name>scrapper_heavy_mk2</name>
 </blueprintList>
 
 
@@ -255,6 +325,7 @@
 	<name>scrapper_engineer</name>
 	<name>scrapper_medic</name>
 </blueprintList>
+
 
 <!--/////// LITERALLY ALL OF THE BIRDS //////-->
 
@@ -295,6 +366,31 @@
 <mod:findName type="blueprintList" name="LIST_CREW_FEDERATION">
 	<mod-append:name>human_hazmat</mod-append:name>
 	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>protogen</mod-append:name>
+	<mod-append:name>protogen_space_scavenger</mod-append:name>
+	<mod-append:name>avali</mod-append:name>
+	<mod-append:name>avali_illuminant</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_FEDERATION_RANDOM">
+	<mod-append:name>protogen</mod-append:name>
+	<mod-append:name>avali</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_FEDERATION_ELITE_RANDOM">
+	<mod-append:name>human_hazmat</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+	<mod-append:name>avali_illuminant</mod-append:name>
+	<mod-append:name>protogen_space_scavenger</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MILITIA_ELITE_RANDOM">
+	<mod-append:name>human_hazmat</mod-append:name>
+	<mod-append:name>human_phoenix</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_PIRATE_ELITE_RANDOM">
+	<mod-append:name>mantis_rsa</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_SOLDIER">
@@ -339,17 +435,16 @@
 <!--/////// LANIUS //////-->
 
 <mod:findName type="blueprintList" name="LIST_CREW_LANIUS">
-	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>scrapper</mod-append:name>
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
 	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
 	<mod-append:name>scrapper_defender_mk2</mod-append:name>
 	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
-	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
 	<mod-append:name>rosegold_scrapper</mod-append:name>
 	<mod-append:name>rosegold_scrapper_2</mod-append:name>
 	<mod-append:name>rosegold_scrapper_3</mod-append:name>
@@ -360,8 +455,21 @@
 	<mod-append:name>adamantine_scrapper_2</mod-append:name>
 	<mod-append:name>adamantine_scrapper_3</mod-append:name>
 	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
-	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
 	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>unique_zog</mod-append:name>
+	<mod-append:name>jadesteel_scrapper</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_2</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_3</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_4</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_5</mod-append:name>
 </mod:findName>
 
 <!--/////// PROTOGENS //////-->
@@ -430,18 +538,42 @@
 <!--/////// LANIUS //////-->
 
 <mod:findName type="blueprintList" name="LIST_CHECKCREW_LANIUS">
-	<mod-append:name>trash_eater</mod-append:name>
 	<mod-append:name>scrapper</mod-append:name>
 	<mod-append:name>scrapper_soldier</mod-append:name>
 	<mod-append:name>scrapper_heavy</mod-append:name>
 	<mod-append:name>scrapper_engineer</mod-append:name>
 	<mod-append:name>scrapper_medic</mod-append:name>
 	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
 	<mod-append:name>scrapper_defender</mod-append:name>
-	<mod-append:name>rosegold_scrapper</mod-append:name>
 	<mod-append:name>scrapper_defender_mk2</mod-append:name>
 	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
-	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>unique_zog</mod-append:name>
+	<mod-append:name>unique_zog</mod-append:name>
+	<mod-append:name>jadesteel_scrapper</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_2</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_3</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_4</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_5</mod-append:name>
 </mod:findName>
 
 <!--//////// HUMANS /////////-->
@@ -504,6 +636,7 @@
 	<mod-append:name>sergal_cheese</mod-append:name>
 	<mod-append:name>unique_black_rose</mod-append:name>
 	<mod-append:name>unique_skygirr</mod-append:name>
+	<mod-append:name>unique_zog</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
@@ -516,10 +649,12 @@
 	<mod-append:name>unique_black_rose</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>unique_skygirr</mod-append:name>
+	<mod-append:name>unique_zog</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
 	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>unique_zog</mod-append:name>
 	<mod-append:name>unique_leah_mfk</mod-append:name>
 	<mod-append:name>unique_kora</mod-append:name>
 	<mod-append:name>unique_black_rose</mod-append:name>
@@ -550,16 +685,6 @@
 	<mod-append:name>saviors</mod-append:name>
 	<mod-append:name>saviorsa</mod-append:name>
 	
-	<mod-append:name>scrapper</mod-append:name>
-	<mod-append:name>scrapper_soldier</mod-append:name>
-	<mod-append:name>scrapper_heavy</mod-append:name>
-	<mod-append:name>scrapper_engineer</mod-append:name>
-	<mod-append:name>scrapper_medic</mod-append:name>
-	<mod-append:name>scrapper_scavenger</mod-append:name>
-	<mod-append:name>scrapper_defender</mod-append:name>
-	<mod-append:name>trash_eater</mod-append:name>
-	<mod-append:name>rosegold_scrapper</mod-append:name>
-	<mod-append:name>scrapper_defender_mk2</mod-append:name>
 	<mod-append:name>robottos</mod-append:name>
 	<mod-append:name>robottos_gunner</mod-append:name>
 	<mod-append:name>robottos_machinist</mod-append:name>
@@ -571,6 +696,42 @@
 	<mod-append:name>robo_mant</mod-append:name>
 	<mod-append:name>silica</mod-append:name>
 	
+	<mod-append:name>scrapper</mod-append:name>
+	<mod-append:name>scrapper_soldier</mod-append:name>
+	<mod-append:name>scrapper_heavy</mod-append:name>
+	<mod-append:name>scrapper_engineer</mod-append:name>
+	<mod-append:name>scrapper_medic</mod-append:name>
+	<mod-append:name>scrapper_scavenger</mod-append:name>
+	<mod-append:name>scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>scrapper_defender</mod-append:name>
+	<mod-append:name>scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>scrapper_heavy_mk2</mod-append:name>
+	<mod-append:name>rosegold_scrapper</mod-append:name>
+	<mod-append:name>rosegold_scrapper_2</mod-append:name>
+	<mod-append:name>rosegold_scrapper_3</mod-append:name>
+	<mod-append:name>golden_scrapper</mod-append:name>
+	<mod-append:name>golden_scrapper_2</mod-append:name>
+	<mod-append:name>golden_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper</mod-append:name>
+	<mod-append:name>adamantine_scrapper_2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_3</mod-append:name>
+	<mod-append:name>adamantine_scrapper_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_medic</mod-append:name>
+	<mod-append:name>rosegold_scrapper_engineer</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier</mod-append:name>
+	<mod-append:name>golden_scrapper_defender</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger</mod-append:name>
+	<mod-append:name>rosegold_scrapper_scavenger_mk2</mod-append:name>
+	<mod-append:name>adamantine_scrapper_heavy_soldier_mk2</mod-append:name>
+	<mod-append:name>golden_scrapper_defender_mk2</mod-append:name>
+	<mod-append:name>trash_eater</mod-append:name>
+	<mod-append:name>unique_zog</mod-append:name>
+	<mod-append:name>unique_zog</mod-append:name>
+	<mod-append:name>jadesteel_scrapper</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_2</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_3</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_4</mod-append:name>
+	<mod-append:name>jadesteel_scrapper_5</mod-append:name>
 </mod:findName>
 
 <!--///////////////////////////////
@@ -689,14 +850,14 @@
 	<mod-append:name>TC_DECONSTRUCTOR</mod-append:name>
 	<mod-append:name>TC_RESOLVER</mod-append:name>
 	<mod-append:name>TC_SINEWAVE</mod-append:name>
-	<mod-append:name>CRYSTAL_FREEZER</mod-append:name>
+	<!--<mod-append:name>CRYSTAL_FREEZER</mod-append:name>-->
 	<mod-append:name>TC_RESCRAPFLAK</mod-append:name>
 	<mod-append:name>TC_UNSCRAPFLAK</mod-append:name>
 	<mod-append:name>TC_SCRAPFLAK</mod-append:name>
 	<mod-append:name>TC_CLOAKER</mod-append:name>
-	<mod-append:name>TC_MFK_BATTERY</mod-append:name>
+	<!--<mod-append:name>TC_MFK_BATTERY</mod-append:name>-->
 	<mod-append:name>RSA_BIOHAZARD</mod-append:name>
-	<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>
+	<!--<mod-append:name>SINGULARITY_PROJECTOR_1</mod-append:name>-->
 	<mod-append:name>TC_LASER_CHARGER</mod-append:name>
 	<mod-append:name>TC_MINIGUN_MK1</mod-append:name>
 	<mod-append:name>TC_MINIGUN_MK2</mod-append:name>
@@ -717,6 +878,15 @@
 	<mod-append:name>TC_TONFA</mod-append:name>
 	<mod-append:name>RC_LD_LAUNCHER</mod-append:name>
 	<mod-append:name>DLX_MOLOT</mod-append:name>
+
+	<mod-append:name>TC_SHOTGUN_OMEGA</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_MIDNIGHT</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_TOGGLE_ROSEGOLD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_GOLD_ION</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_GOLD_HACK</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_SUPER_UNSTABLE</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_BATTERY_ROSEGOLD</mod-append:name>
+	<mod-append:name>TC_SHOTGUN_ADAMANTINE</mod-append:name>	
 </mod:findName>
 
 <!--
@@ -958,6 +1128,11 @@
 	<mod-append:name>SILICA_BATTLE</mod-append:name>
 	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
 	<mod-append:name>SILICA_BOARDER</mod-append:name>
+
+	<mod-append:name>TC_COMBAT_ROSEGOLD</mod-append:name>
+	<mod-append:name>TC_COMBAT_UNSTABLE_ADAMANTINE</mod-append:name>
+	<mod-append:name>TC_COMBAT_UNSTABLE_ROSEGOLD</mod-append:name>
+	<mod-append:name>TC_DRONE_SCRAPPER_SYNTHESISER</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
@@ -966,6 +1141,11 @@
 	<mod-append:name>TC_COMBAT_HEAVY</mod-append:name>
 	<mod-append:name>ROBO_MANT_BOARDER</mod-append:name>
 	<mod-append:name>SILICA_BOARDER</mod-append:name>
+
+	<mod-append:name>TC_COMBAT_ROSEGOLD</mod-append:name>
+	<mod-append:name>TC_COMBAT_UNSTABLE_ADAMANTINE</mod-append:name>
+	<mod-append:name>TC_COMBAT_UNSTABLE_ROSEGOLD</mod-append:name>
+	<mod-append:name>TC_DRONE_SCRAPPER_SYNTHESISER</mod-append:name>
 </mod:findName>
 
 	<!--///////////////////////////////
@@ -1011,11 +1191,11 @@
 	<mod-append:name>REBEL_DART</mod-append:name>
 </mod:findName>
 
-<mod:findName type="blueprintList" name="SHOP_MANTIS_ITEM_WEAPONS_BOMB">
+<!--<mod:findName type="blueprintList" name="SHOP_MANTIS_ITEM_WEAPONS_BOMB">
 	<mod-append:name>TC_BOMB_SHOTGUN_1</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_2</mod-append:name>
 	<mod-append:name>TC_BOMB_SHOTGUN_3</mod-append:name>
-</mod:findName>
+</mod:findName>-->
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_MANTIS">
 	<mod-append:name>TC_BOMB_SHOTGUN_1_ENEMY</mod-append:name>
@@ -1064,6 +1244,10 @@
 <!--////////// BLUE LISTS AND THE LIKE //////////-->
 
 <mod:findName type="blueprintList" name="LIST_CHECK_WEAPONS">
+	<mod-append:name>TC_BOMB_SHOTGUN_FREE</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CHECK_RECYCLER">
 	<mod-append:name>TC_BOMB_SHOTGUN_FREE</mod-append:name>
 </mod:findName>
 
@@ -1261,8 +1445,6 @@
 
 <shipBlueprint name="TC_TRASH_COMPACTOR1" layout="tc_trash_compactor1" img="tc_trash_compactor1">
 	<class>Trash Compactor</class>
-	<minSector>1</minSector>
-	<maxSector>1</maxSector>
 	<systemList>
 		<clonebay power="1" max="1" room="4" start="true" />
 		<doors power="1" max="1" room="6" start="true" />
@@ -1277,8 +1459,8 @@
 		<weapon name="TC_SHOTGUN_BOMB" />
 	</weaponList>
 	<droneList drones="0" count="0" />
-	<health amount="5" />
-	<maxPower amount="30" />
+	<health amount="10" />
+	<maxPower amount="7" />
 	<crew>
 		<scrapper room="3"/>
 		<scrapper room="11"/>
@@ -1291,10 +1473,7 @@
 
 <shipBlueprint name="TC_TRASH_COMPACTOR2" layout="tc_trash_compactor1" img="tc_trash_compactor1">
 	<class>Trash Compactor</class>
-	<minSector>1</minSector>
-	<maxSector>1</maxSector>
 	<systemList>
-		<cloaking power="1" max="1" room="7" start="true" />
 		<clonebay power="1" max="2" room="4" start="true" />
 		<doors power="2" max="2" room="6" start="true" />
 		<engines power="1" max="2" room="3" start="true" />
@@ -1309,8 +1488,8 @@
 		<weapon name="TC_SHOTGUN_BOMB" />
 	</weaponList>
 	<droneList drones="0" count="0" />
-	<health amount="7" />
-	<maxPower amount="31" />
+	<health amount="12" />
+	<maxPower amount="11" />
 	<crew>
 		<scrapper_engineer room="3"/>
 		<scrapper_medic room="5"/>
@@ -1324,8 +1503,6 @@
 
 <shipBlueprint name="TC_TRASH_COMPACTOR3" layout="tc_trash_compactor1" img="tc_trash_compactor1">
 	<class>Trash Compactor</class>
-	<minSector>1</minSector>
-	<maxSector>1</maxSector>
 	<systemList>
 		<cloaking power="1" max="1" room="7" start="true" />
 		<clonebay power="1" max="2" room="4" start="true" />
@@ -1334,7 +1511,7 @@
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
 		<teleporter power="1" max="1" room="9" start="true" />
-		<weapons power="5" max="7" room="11" start="true" />
+		<weapons power="5" max="8" room="11" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>0</droneSlots>
@@ -1344,9 +1521,8 @@
 		<weapon name="TC_SHOTGUN_BOMB" />
 	</weaponList>
 	<droneList drones="0" count="0" />
-	<health amount="9" />
-	<maxPower amount="31" />
-	<crewLimit>9</crewLimit>
+	<health amount="14" />
+	<maxPower amount="15" />
 	<crew>
 		<scrapper_engineer room="3"/>
 		<scrapper_engineer room="5"/>
@@ -1363,13 +1539,11 @@
 
 <shipBlueprint name="TC_TRASH_COMPACTOR4" layout="tc_trash_compactor1" img="tc_trash_compactor1">
 	<class>Trash Compactor</class>
-	<minSector>1</minSector>
-	<maxSector>1</maxSector>
 	<systemList>
-		<cloaking power="1" max="2" room="7" start="true" />
+		<cloaking power="1" max="1" room="7" start="true" />
 		<clonebay power="1" max="2" room="4" start="true" />
 		<doors power="2" max="2" room="6" start="true" />
-		<engines power="1" max="3" room="3" start="true" />
+		<engines power="1" max="2" room="3" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
 		<teleporter power="1" max="1" room="9" start="true" />
@@ -1382,54 +1556,53 @@
 		<weapon name="TC_BOMB_SHOTGUN_3" />
 	</weaponList>
 	<droneList drones="0" count="0" />
-	<health amount="11" />
-	<maxPower amount="60" />
-	<crewLimit>12</crewLimit>
+	<health amount="16" />
+	<maxPower amount="15" />
 	<crew>
-		<scrapper_heavy room="12"/>
-		<scrapper_medic room="13"/>
+		<scrapper_heavy room="9"/>
+		<scrapper_medic room="9"/>
 		<scrapper_heavy room="5"/>
 		<scrapper_engineer room="3"/>
 		<scrapper_scavenger room="7"/>
 		<scrapper_engineer room="12"/>
 
-        <trash_eater room="7" name="Trash Eater"/>
+        <trash_eater room="9" name="Trash Eater"/>
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
 	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_COMPACTOR5" layout="tc_trash_compactor1" img="tc_trash_compactor5">
 	<class>(Shiny) Trash Compactor</class>
-	<minSector>1</minSector>
-	<maxSector>1</maxSector>
 	<systemList>
-		<cloaking power="1" max="2" room="7" start="true" />
+		<cloaking power="1" max="1" room="7" start="true" />
 		<clonebay power="1" max="2" room="4" start="true" />
 		<doors power="3" max="3" room="6" start="true" />
 		<drones power="2" max="2" room="10" start="true" />
 		<engines power="1" max="3" room="3" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="4" max="10" room="5" start="true" />
-		<teleporter power="2" max="3" room="9" start="true" />
-		<weapons power="6" max="6" room="11" start="true" />
+		<teleporter power="2" max="2" room="9" start="true" />
+		<weapons power="8" max="8" room="11" start="true" />
 	</systemList>
 	<weaponSlots>6</weaponSlots>
 	<droneSlots>1</droneSlots>
 	<weaponList missiles="21" count="6">
 		<weapon name="TC_SHOTGUN_BOMB" />
 		<weapon name="TC_SHOTGUN_GOLD" />
+		<weapon name="TC_BOMB_SHOTGUN_CHARGE_ENEMY" />
+		<weapon name="TC_BOMB_SHOTGUN_INSTANT" />
 	</weaponList>
-	<droneList drones="999" count="1">
+	<droneList drones="10" count="1">
 		<drone name="TC_COMBAT_UNSTABLE" />
 	</droneList>
-	<health amount="13" />
-	<maxPower amount="60" />
-	<crewLimit>14</crewLimit>
+	<health amount="18" />
+	<maxPower amount="24" />
 	<crew>
 		<scrapper_heavy room="12"/>
-		<scrapper_medic room="13"/>
+		<scrapper_medic room="9"/>
 		<scrapper_medic room="10"/>
 		<scrapper_engineer room="10"/>
 
@@ -1437,48 +1610,49 @@
 		<scrapper_engineer room="3"/>
 		<scrapper_engineer room="5"/>
 
-        <trash_eater room="7" name="Trash Eater"/>
-		<scrapper_scavenger room="7"/>
+        <trash_eater room="9" name="Trash Eater"/>
+		<scrapper_scavenger room="9"/>
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
 	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_COMPACTOR6" layout="tc_trash_compactor1" img="tc_trash_compactor6">
 	<class>Universe 0 Trash Compactor</class>
-	<minSector>1</minSector>
-	<maxSector>1</maxSector>
 	<systemList>
-		<cloaking power="1" max="3" room="7" start="true" />
-		<clonebay power="1" max="3" room="4" start="true" />
+		<cloaking power="1" max="1" room="7" start="true" />
+		<clonebay power="1" max="2" room="4" start="true" />
 		<doors power="3" max="3" room="6" start="true" />
-		<drones power="3" max="3" room="10" start="true" />
-		<engines power="1" max="4" room="3" start="true" />
+		<drones power="6" max="6" room="10" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
 		<pilot power="3" max="3" room="0" start="true" />
 		<shields power="4" max="10" room="5" start="true" />
-		<teleporter power="3" max="3" room="9" start="true" />
-		<weapons power="6" max="6" room="11" start="true" />
+		<teleporter power="2" max="2" room="9" start="true" />
+		<weapons power="9" max="9" room="11" start="true" />
 	</systemList>
 	<weaponSlots>8</weaponSlots>
 	<droneSlots>2</droneSlots>
-	<weaponList missiles="0" count="8">
-		<weapon name="TC_BOMB_SHOTGUN_4" />
+	<weaponList missiles="25" count="8">
+		<weapon name="TC_BOMB_SHOTGUN_INSTANT" />
+		<weapon name="TC_BOMB_SHOTGUN_2" />
 		<weapon name="TC_SHOTGUN_BOMB" />
 		<weapon name="TC_SHOTGUN_UNSTABLE" />
+		<weapon name="TC_SHOTGUN_GOLD" />
 	</weaponList>
-	<droneList drones="999" count="2">
+	<droneList drones="15" count="2">
 		<drone name="TC_COMBAT_GOLD" />
+		<drone name="TC_COMBAT_UNSTABLE" />
 	</droneList>
-	<health amount="15" />
-	<maxPower amount="60" />
-	<crewLimit>16</crewLimit>
+	<health amount="20" />
+	<maxPower amount="30" />
 	<crew>
 		<scrapper_engineer room="12"/>
-		<scrapper_soldier room="10"/>
+		<scrapper_soldier room="9"/>
 		<scrapper_medic room="10"/>
 
-		<scrapper_scavenger room="8"/>
+		<scrapper_scavenger room="9"/>
 		<scrapper_soldier room="3"/>
 		<scrapper_defender room="5"/>
 
@@ -1486,10 +1660,398 @@
 		<scrapper_heavy_mk2 room="6"/>
 		<scrapper_heavy_mk2 room="1"/>
 
-        <trash_eater room="7" name="Trash Eater"/>
+        <trash_eater room="9" name="Trash Eater"/>
     </crew>
 	<crewCount amount="1" max="1" class="scrapper_scavenger" />
 	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
+	<cloakImage>tc_trash_compactor1</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR_ROSEGOLD" layout="tc_trash_compactor1" img="tc_trash_compactor_rosegold">
+	<class>Rosegold Trash Compactor</class>
+	<systemList>
+		<clonebay power="1" max="1" room="4" start="true" />
+		<doors power="3" max="3" room="6" start="true" />
+		<drones power="3" max="3" room="10" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<mind power="3" max="3" room="13" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="2" max="2" room="9" start="true" />
+		<weapons power="5" max="5" room="11" start="true" />
+	</systemList>
+	<weaponSlots>8</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="8">
+		<weapon name="TC_SHOTGUN_BATTERY_ROSEGOLD" />
+		<weapon name="TC_SHOTGUN_LEAD" />
+	</weaponList>
+	<droneList drones="0" count="2"/>
+	<health amount="20" />
+	<maxPower amount="23" />
+	<crew>
+		<rosegold_scrapper room="9"/>
+		<rosegold_scrapper_2 room="9"/>
+		<rosegold_scrapper_scavenger room="9"/>
+		<rosegold_scrapper_3 room="5"/>
+		<rosegold_scrapper_engineer room="0"/>
+		<rosegold_scrapper_scavenger room="13"/>
+		<rosegold_scrapper_engineer room="3"/>
+    </crew>
+	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
+	<cloakImage>tc_trash_compactor1</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR_GOLDEN" layout="tc_trash_compactor1" img="tc_trash_compactor_golden">
+	<class>Golden Trash Compactor</class>
+	<systemList>
+		<clonebay power="1" max="1" room="4" start="true" />
+		<doors power="3" max="3" room="6" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<hacking power="3" max="3" room="12" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="2" max="2" room="9" start="true" />
+		<weapons power="6" max="6" room="11" start="true" />
+	</systemList>
+	<weaponSlots>8</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="8">
+		<weapon name="TC_SHOTGUN_GOLD_HACK" />
+		<weapon name="TC_SHOTGUN_GOLD" />
+	</weaponList>
+	<droneList drones="0" count="0"/>
+	<health amount="20" />
+	<maxPower amount="21" />
+	<crew>
+		<golden_scrapper room="3"/>
+		<golden_scrapper_2 room="9"/>
+		<golden_scrapper_medic room="9"/>
+		<golden_scrapper_defender room="0"/>
+		<golden_scrapper_defender_mk2 room="9"/>
+		<golden_scrapper_3/>
+		<golden_scrapper_medic/>
+    </crew>
+	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
+	<cloakImage>tc_trash_compactor1</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR_ADAMANTINE" layout="tc_trash_compactor1" img="tc_trash_compactor_adamantine">
+	<class>Adamantine Trash Compactor</class>
+	<systemList>
+		<cloaking power="2" max="2" room="7" start="true" />
+		<clonebay power="1" max="1" room="4" start="true" />
+		<doors power="3" max="3" room="6" start="true" />
+		<drones power="4" max="4" room="10" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="2" max="2" room="9" start="true" />
+		<weapons power="2" max="2" room="11" start="true" />
+	</systemList>
+	<weaponSlots>8</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="8">
+		<weapon name="TC_SHOTGUN_UNSTABLE" />
+	</weaponList>
+	<droneList drones="15" count="2">
+		<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE" />
+		<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="24" />
+	<crew>
+		<adamantine_scrapper room="9"/>
+		<adamantine_scrapper_2 room="3"/>
+		<adamantine_scrapper_soldier room="9"/>
+		<adamantine_scrapper_soldier room="10"/>
+		<adamantine_scrapper_heavy_soldier room="9"/>
+		<adamantine_scrapper_heavy_soldier_mk2/>
+		<adamantine_scrapper_3 room="0"/>
+    </crew>
+	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
+	<cloakImage>tc_trash_compactor1</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="TC_SCRAPPER_ZOG" layout="tc_scrapper_zog" img="tc_scrapper_zog">
+	<class>The Architect</class>
+	<systemList>
+		<artillery power="3" max="3" room="18" start="true" weapon="TC_SHOTGUN_BATTERY_ROSEGOLD" />
+		<artillery power="3" max="3" room="19" start="true" weapon="TC_SHOTGUN_GOLD_ION" />
+		<battery power="2" max="2" room="11" start="true" />
+		<cloaking power="2" max="2" room="10" start="true" />
+		<drones power="4" max="4" room="4" start="true" />
+		<engines power="2" max="2" room="20" start="true" />
+		<medbay power="4" max="4" room="5" start="true" />
+		<mind power="3" max="3" room="3" start="true" />
+		<pilot power="2" max="2" room="0" start="true" />
+		<shields power="10" max="10" room="2" start="true" />
+		<teleporter power="1" max="1" room="1" start="true" />
+	</systemList>
+	<weaponSlots>0</weaponSlots>
+	<droneSlots>1</droneSlots>
+	<weaponList missiles="0" count="0" />
+	<droneList drones="20" count="1">
+		<drone name="TC_COMBAT_UNSTABLE_ROSEGOLD" />
+		<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE" />
+	</droneList>
+	<health amount="50" />
+	<maxPower amount="37" />
+	<crew>
+		<rosegold_scrapper_scavenger_mk2 room="1"/>
+		<golden_scrapper_defender_mk2 room="1"/>
+		<adamantine_scrapper_heavy_soldier_mk2 room="1"/>
+
+		<rosegold_scrapper_engineer room="20"/>
+
+		<rosegold_scrapper room="7"/>
+		<rosegold_scrapper_engineer room="7"/>
+		<rosegold_scrapper_3 room="11"/>
+		<rosegold_scrapper_scavenger room="12"/>
+		<rosegold_scrapper_engineer room="3"/>
+		<rosegold_scrapper_2 room="19"/>
+		<rosegold_scrapper room="13"/>
+
+		<golden_scrapper room="2"/>
+		<golden_scrapper_defender room="6"/>
+		<golden_scrapper_2 room="13"/>
+		<golden_scrapper_3 room="18"/>
+		<golden_scrapper_medic room="16"/>
+		<golden_scrapper_defender room="10"/>
+		
+		<adamantine_scrapper room="5"/>
+		<adamantine_scrapper_2 room="8"/>
+		<adamantine_scrapper_3 room="9"/>
+		<adamantine_scrapper_soldier room="4"/>
+		<adamantine_scrapper_heavy_soldier room="4"/>
+    </crew>
+	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_MEDBAY_NANO" />
+	<aug name="UPG_TECH_BYPASS" />
+	<aug name="ZOG_PRISMATIC_ROOMS" />
+	<cloakImage>tc_scrapper_zog</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="TC_SCRAPPER_ZOG_SUPER" layout="tc_scrapper_zog_super" img="tc_scrapper_zog">
+	<class>Scrapper Superboss</class>
+	<systemList>
+		<artillery power="3" max="3" room="18" start="true" weapon="TC_SHOTGUN_TOGGLE_GOLDEN" />
+		<artillery power="3" max="3" room="19" start="true" weapon="TC_SHOTGUN_TOGGLE_ROSEGOLD" />
+		<artillery power="3" max="3" room="23" start="true" weapon="TC_SHOTGUN_TOGGLE_ADAMANTINE" />
+		<battery power="2" max="2" room="11" start="true" />
+		<cloaking power="2" max="2" room="10" start="true" />
+		<!--<doors power="3" max="3" room="16" start="true" />-->
+		<drones power="7" max="7" room="4" start="true" />
+		<engines power="4" max="4" room="20" start="true" />
+		<hacking power="3" max="3" room="13" start="true" />
+		<!--<medbay power="4" max="4" room="5" start="true" />-->
+		<temporal power="3" max="3" room="5" start="true" />
+		<mind power="3" max="3" room="3" start="true" />
+		<pilot power="3" max="3" room="0" start="true" />
+		<shields power="10" max="10" room="2" start="true" />
+		<teleporter power="3" max="3" room="1" start="true" />
+		<!--<temporal power="3" max="3" room="17" start="true" />-->
+		<weapons power="14" max="14" room="12" start="true" />
+	</systemList>
+	<weaponSlots>6</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="40" count="6">
+		<weapon name="TC_SHOTGUN_OMEGA" />
+		<weapon name="TC_SHOTGUN_MIDNIGHT" />
+		<weapon name="TC_SHOTGUN_LEAD" />
+		<weapon name="TC_SHOTGUN_SUPER_UNSTABLE_ENEMY" />
+		<!--<weapon name="TC_BOMB_SHOTGUN_FIRE_ENEMY" />
+		<weapon name="TC_BOMB_SHOTGUN_LOCK_ENEMY" />-->
+	</weaponList>
+	<droneList drones="20" count="3">
+		<drone name="TC_COMBAT_UNSTABLE_ROSEGOLD" />
+		<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE" />
+		<drone name="TC_DRONE_SCRAPPER_SYNTHESISER" />
+	</droneList>
+	<health amount="80" />
+	<maxPower amount="77" />
+	<crew>
+		<rosegold_scrapper_scavenger_mk2 room="1"/>
+		<golden_scrapper_defender_mk2 room="1"/>
+		<adamantine_scrapper_heavy_soldier_mk2 room="1"/>
+		<jadesteel_scrapper_4 room="1"/>
+
+		<rosegold_scrapper_engineer room="20"/>
+
+		<rosegold_scrapper room="7"/>
+		<rosegold_scrapper_engineer room="7"/>
+		<rosegold_scrapper_3 room="11"/>
+		<rosegold_scrapper_scavenger room="12"/>
+		<rosegold_scrapper_engineer room="3"/>
+		<rosegold_scrapper_2 room="19"/>
+		<rosegold_scrapper room="13"/>
+
+		<golden_scrapper room="2"/>
+		<golden_scrapper_defender room="6"/>
+		<golden_scrapper_2 room="13"/>
+		<golden_scrapper_3 room="18"/>
+		<golden_scrapper_medic room="16"/>
+		<golden_scrapper_defender room="10"/>
+		
+		<adamantine_scrapper room="5"/>
+		<adamantine_scrapper_2 room="8"/>
+		<adamantine_scrapper_3 room="9"/>
+		<adamantine_scrapper_soldier room="4"/>
+		<adamantine_scrapper_heavy_soldier room="4"/>
+
+		<jadesteel_scrapper_5 room="13"/>
+		<jadesteel_scrapper_3 room="11"/>
+		<jadesteel_scrapper_2 room="12"/>
+		<jadesteel_scrapper room="6"/>
+    </crew>
+	<boardingAI>invasion</boardingAI>
+	<!--<aug name="UPG_MEDBAY_NANO" />-->
+	<aug name="UPG_TECH_BYPASS" />
+	<!--<aug name="ZOG_PRISMATIC_ROOMS_SUPER" />-->
+	<cloakImage>tc_scrapper_zog</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR_MERGED_AG" layout="tc_trash_compactor1" img="tc_merged_ag">
+	<class>Merged Trash Compactor</class>
+	<systemList>
+		<cloaking power="1" max="1" room="7" start="true" />
+		<clonebay power="1" max="1" room="4" start="true" />
+		<doors power="3" max="3" room="6" start="true" />
+		<drones power="4" max="4" room="10" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<hacking power="3" max="3" room="12" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="2" max="2" room="9" start="true" />
+		<weapons power="5" max="5" room="11" start="true" />
+	</systemList>
+	<weaponSlots>8</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="8">
+		<weapon name="TC_SHOTGUN_GOLD_HACK" />
+		<weapon name="TC_SHOTGUN_UNSTABLE" />
+	</weaponList>
+	<droneList drones="15" count="2">
+		<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE" />
+		<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="27" />
+	<crew>
+		<golden_scrapper/>
+		<golden_scrapper_2/>
+		<golden_scrapper_3/>
+		<golden_scrapper_medic room="9"/>
+		<golden_scrapper_defender/>
+		<golden_scrapper_defender_mk2  room="9"/>
+		<golden_scrapper_defender_mk2/>
+
+		<adamantine_scrapper/>
+		<adamantine_scrapper_2/>
+		<adamantine_scrapper_3 room="0"/>
+		<adamantine_scrapper_soldier  room="9"/>
+		<adamantine_scrapper_heavy_soldier/>
+		<adamantine_scrapper_heavy_soldier_mk2  room="9"/>
+		<adamantine_scrapper_heavy_soldier_mk2/>
+    </crew>
+	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
+	<cloakImage>tc_trash_compactor1</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR_MERGED_GR" layout="tc_trash_compactor1" img="tc_merged_gr">
+	<class>Merged Trash Compactor</class>
+	<systemList>
+		<clonebay power="1" max="1" room="4" start="true" />
+		<doors power="3" max="3" room="6" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<mind power="3" max="3" room="13" start="true" />
+		<hacking power="3" max="3" room="12" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="2" max="2" room="9" start="true" />
+		<weapons power="3" max="3" room="11" start="true" />
+	</systemList>
+	<weaponSlots>8</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="8">
+		<weapon name="TC_SHOTGUN_BATTERY_ROSEGOLD" />
+		<weapon name="TC_SHOTGUN_GOLD_ION" />
+	</weaponList>
+	<droneList drones="0" count="2"/>
+	<health amount="20" />
+	<maxPower amount="21" />
+	<crew>
+		<rosegold_scrapper/>
+		<rosegold_scrapper_2/>
+		<rosegold_scrapper_3/>
+		<rosegold_scrapper_engineer room="9"/>
+		<rosegold_scrapper_scavenger/>
+		<rosegold_scrapper_scavenger_mk2 room="9"/>
+		<rosegold_scrapper_scavenger_mk2/>
+	
+		<golden_scrapper/>
+		<golden_scrapper_2/>
+		<golden_scrapper_3 room="0"/>
+		<golden_scrapper_medic room="9"/>
+		<golden_scrapper_defender/>
+		<golden_scrapper_defender_mk2 room="9"/>
+		<golden_scrapper_defender_mk2/>
+    </crew>
+	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
+	<cloakImage>tc_trash_compactor1</cloakImage>
+</shipBlueprint>
+
+<shipBlueprint name="TC_TRASH_COMPACTOR_MERGED_RA" layout="tc_trash_compactor1" img="tc_merged_ra">
+	<class>Merged Trash Compactor</class>
+	<systemList>
+		<cloaking power="1" max="1" room="7" start="true" />
+		<clonebay power="1" max="1" room="4" start="true" />
+		<doors power="3" max="3" room="6" start="true" />
+		<drones power="5" max="5" room="10" start="true" />
+		<engines power="1" max="3" room="3" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<mind power="3" max="3" room="13" start="true" />
+		<shields power="4" max="10" room="5" start="true" />
+		<teleporter power="2" max="2" room="9" start="true" />
+		<weapons power="1" max="1" room="11" start="true" />
+	</systemList>
+	<weaponSlots>8</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="8">
+		<weapon name="TC_SHOTGUN_BATTERY_ROSEGOLD" />
+		<weapon name="TC_SHOTGUN_BATTERY_ROSEGOLD" />
+	</weaponList>
+	<droneList drones="15" count="2">
+		<drone name="TC_COMBAT_UNSTABLE_ADAMANTINE" />
+		<drone name="TC_COMBAT_UNSTABLE" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="23" />
+	<crew>
+		<rosegold_scrapper/>
+		<rosegold_scrapper_2/>
+		<rosegold_scrapper_3/>
+		<rosegold_scrapper_engineer room="9"/>
+		<rosegold_scrapper_scavenger/>
+		<rosegold_scrapper_scavenger_mk2  room="9"/>
+		<rosegold_scrapper_scavenger_mk2/>
+
+		<adamantine_scrapper/>
+		<adamantine_scrapper_2/>
+		<adamantine_scrapper_3 room="0"/>
+		<adamantine_scrapper_soldier  room="9"/>
+		<adamantine_scrapper_heavy_soldier/>
+		<adamantine_scrapper_heavy_soldier_mk2  room="9"/>
+		<adamantine_scrapper_heavy_soldier_mk2/>
+    </crew>
+	<boardingAI>invasion</boardingAI>
+	<aug name="UPG_TECH_BYPASS" />
 	<cloakImage>tc_trash_compactor1</cloakImage>
 </shipBlueprint>
 
@@ -1497,8 +2059,6 @@
 
 <shipBlueprint name="TC_TRASH_MINER" layout="tc_trash_miner" img="tc_trash_miner">
 	<class>TRACKER's Garbage Compactor</class>
-	<minSector>1</minSector>
-	<maxSector>1</maxSector>
 	<systemList>
 		<artillery power="2" max="4" room="10" start="true" weapon="ARTILLERY_FLAK" />
 		<battery power="1" max="1" room="1" start="true" />
@@ -1520,7 +2080,7 @@
 	</weaponList>
 	<droneList drones="0" count="0" />
 	<health amount="11" />
-	<maxPower amount="30" />
+	<maxPower amount="31" />
 	<crew>
             <primagen_raptor room="5" name="RAPTOR" />
             <protogen_tracker room="0" name="TRACKER" />
@@ -1529,13 +2089,11 @@
 	</crew>
 	<boardingAI>sabotage</boardingAI>
 	<forceAutoShip>false</forceAutoShip>
-	<cloakImage>mt_boss_kestrel</cloakImage>
+	<cloakImage>tc_trash_miner</cloakImage>
 </shipBlueprint>
 
 <shipBlueprint name="TC_TRASH_MINER_QUEST" layout="tc_trash_miner" img="tc_trash_miner">
 	<class>TRACKER's Garbage Compactor</class>
-	<minSector>1</minSector>
-	<maxSector>1</maxSector>
 	<systemList>
 		<artillery power="2" max="4" room="10" start="true" weapon="ARTILLERY_FLAK" />
 		<battery power="1" max="1" room="1" start="true" />
@@ -1557,7 +2115,7 @@
 	</weaponList>
 	<droneList drones="0" count="0" />
 	<health amount="11" />
-	<maxPower amount="30" />
+	<maxPower amount="22" />
 	<crew>
             <primagen_raptor room="5" name="RAPTOR" />
             <protogen_tracker room="0" name="TRACKER" />
@@ -1572,8 +2130,6 @@
 
 <shipBlueprint name="SCRAPPER_SCOUT" layout="SCRAPPER_SCOUT" img="SCRAPPER_SCOUT">
 	<class>Scrapper Scout</class>
-	<minSector>1</minSector>
-	<maxSector>7</maxSector>
 	<systemList>
 		<clonebay power="1" max="2" room="5" start="true" />
 		<engines power="2" max="4" room="2" start="true" />
@@ -1675,7 +2231,7 @@
 	<weaponList missiles="5" count="4" load="LIST_WEAPONS_AUTO" />
 	<droneList drones="0" count="0" />
 	<health amount="15" />
-	<maxPower amount="15" />
+	<maxPower amount="11" />
 	<crewCount amount="2" max="3" class="scrapper" />
 	<crewcount amount="1" max="1" class="adamantine_scrapper"/>
 	<crewcount amount="2" max="2" class="scrapper_heavy"/>
@@ -2112,34 +2668,36 @@
 
 <shipBlueprint name="RSA_DROPSHIP" layout="rsa_dropship" img="rsa_dropship">
 	<class>RSA Dropship</class>
-	<minSector>1</minSector>
-	<maxSector>5</maxSector>
 	<systemList>
 		<artillery power="2" max="4" room="20" start="true" weapon="RSA_AVENGER_ARTILLERY" />
 		<battery power="1" max="2" room="22" start="false" />
 		<doors power="1" max="2" room="8" start="true" />
 		<drones power="2" max="4" room="12" start="true" />
 		<engines power="4" max="6" room="17" start="true" />
-		<hacking power="1" max="1" room="11" start="false" />
+		<hacking power="1" max="2" room="11" start="false" />
 		<medbay power="1" max="2" room="13" start="true" />
 		<mind power="1" max="2" room="23" start="false" />
 		<oxygen power="1" max="2" room="3" start="true" />
 		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="4" room="6" start="true" />
+		<shields power="2" max="10" room="6" start="true" />
 		<teleporter power="1" max="2" room="14" start="true" />
-		<weapons power="1" max="1" room="24" start="true" />
+		<weapons power="7" max="7" room="24" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
-	<weaponList missiles="15" count="4" load="LIST_WEAPONS_RSA" />
+	<weaponList missiles="15" count="4">
+		<weapon name="LIST_WEAPONS_RSA"/>
+		<weapon name="RSA_TAGGER"/>
+		<weapon name="RSA_MINICANNON"/>
+	</weaponList>
 	<droneList drones="15" count="4">
 		<drone name="SILICA_BOARDER" />
 	</droneList>
 	<crewCount amount="1" max="3" class="mantis_rsa" />
-	<crewCount amount="1" max="2" class="rsa_technician" />
-	<crewCount amount="1" max="2" class="kiviekith" />
-	<health amount="12" />
-	<maxPower amount="10" />
+	<crewCount amount="2" max="3" class="rsa_technician" />
+	<crewCount amount="2" max="2" class="kiviekith" />
+	<health amount="20" />
+	<maxPower amount="25" />
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
