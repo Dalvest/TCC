@@ -9553,5 +9553,23 @@ This enemy has one or more Prismatic rooms, marked by the prismatic rainbow and 
   </mod:findLike>
 </mod:findLike>
 
+<mod:findLike type="events">
+	<mod:findName type="req" name="BLUELIST_CREW_NO2">
+		<mod-append:name>robottos</mod-append:name>
+		<mod-append:name>robottos_machinist</mod-append:name>
+		<mod-append:name>robottos_researcher</mod-append:name>
+		<mod-append:name>robottos_gunner</mod-append:name>
+		<mod-append:name>robottos_police</mod-append:name>
+		<mod-append:name>unique_black_rose</mod-append:name>
+	</mod:findName>
+	<mod:findName type="req" name="BLUELIST_CREW_NO2_CONSTANT">
+		<mod-append:name>robottos</mod-append:name>
+		<mod-append:name>robottos_machinist</mod-append:name>
+		<mod-append:name>robottos_researcher</mod-append:name>
+		<mod-append:name>robottos_gunner</mod-append:name>
+		<mod-append:name>robottos_police</mod-append:name>
+		<mod-append:name>unique_black_rose</mod-append:name>
+	</mod:findName>
+</mod:findLike>
 
 </FTL>
